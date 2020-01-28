@@ -45,7 +45,6 @@ message RedvoxPacket1000 {
     double best_latency_us = 29;                        // The best latency as determined from the synch params
     double best_offset_us = 30;                         // The best offset as determined from the synch params
 
-
     // Channels
     MicrophoneChannel microphone_channel = 32;          // The microphone channel
     SingleChannel barometer_channel = 33;               // The barometer channel
