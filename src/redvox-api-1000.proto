@@ -2,6 +2,19 @@ syntax = "proto3";
 
 // Message type for encoding API 1000 RedVox packets.
 message RedvoxPacket1000 {
+    enum NetworkType {
+        WIFI = 0;
+        CELLULAR = 1;
+        NONE = 2;
+    }
+
+    enum OsType {
+        ANDROID = 0;
+        IOS = 1;
+        LINUX = 2;
+        WINDOWS = 3;
+    }
+
     // API Version
     uint32 api = 1;                                     // The API version, should always be 1000
 
@@ -15,12 +28,12 @@ message RedvoxPacket1000 {
     string device_uuid = 6;                             // The app provided UUID
     string device_make = 7;                             // Make of the device
     string device_model = 8;                            // Model of the device
-    string device_os = 9;                               // OS of the device
+    OsType device_os = 9;                               // OS of the device
     string device_os_version = 10;                      // OS version of the device
     string device_app_version = 11;                     // App version on the device
     double device_temp_c = 12;                          // Temperature of the device in degrees centigrade
     double device_battery_percent = 13;                 // Device battery level as a percentage between 0% and 100%
-    string network_type = 14;                           // Type of network connection (WiFi, cellular, etc)
+    NetworkType network_type = 14;                      // Type of network connection
     double network_strength = 15;                       // A value representing the strength of the newtwork connection
 
     // Packet information
@@ -98,6 +111,13 @@ message XyzChannel {
 
 // Message type for the location channel
 message LocationChannel {
+    enum LocationProvider {
+        NONE = 0;
+        USER = 1;
+        GPS = 2;
+        NETWORK = 3;
+    }
+
     string sensor_description = 1;                      // The name or description of the sensor
     double mean_sample_rate_hz = 2;                     // The mean sample rate in Hz
     repeated double sample_ts_us = 3;                   // A list of timestamps, one for each sample
@@ -106,13 +126,15 @@ message LocationChannel {
     repeated double altitude_samples = 6;               // A list of altitude samples
     repeated double speed_samples = 7;                  // A list of speed samples
     repeated double accuracy_Samples = 8;               // A list of accuracy samples
-    SummaryStatistics sample_rate_statistics = 9;       // Statistics for sample timestamps
-    SummaryStatistics latitude_sample_statistics = 10;  // Statistics for latitude samples
-    SummaryStatistics longitude_sample_statistics = 11; // Statistics for longitude samples
-    SummaryStatistics altitude_sample_statistics = 12;  // Statistics for altitude samples
-    SummaryStatistics speed_sample_statistics = 13;     // Statistics for speed samples
-    SummaryStatistics accuracy_sample_statistics = 14;  // Statistics for accuracy samples
-    map<string, string> metadata = 15;                  // A map from string to string for including untyped metadata
+    bool location_enabled = 9;                          // Is location enabled by the app
+    LocationProvider location_provider = 10;            // Location provider enumeration
+    SummaryStatistics sample_rate_statistics = 11;      // Statistics for sample timestamps
+    SummaryStatistics latitude_sample_statistics = 12;  // Statistics for latitude samples
+    SummaryStatistics longitude_sample_statistics = 13; // Statistics for longitude samples
+    SummaryStatistics altitude_sample_statistics = 14;  // Statistics for altitude samples
+    SummaryStatistics speed_sample_statistics = 15;     // Statistics for speed samples
+    SummaryStatistics accuracy_sample_statistics = 16;  // Statistics for accuracy samples
+    map<string, string> metadata = 17;                  // A map from string to string for including untyped metadata
 }
 
 // Message type for summary statistics
@@ -125,4 +147,5 @@ message SummaryStatistics {
     double min = 6;                                     // The minimum value
     double max = 7;                                     // The maximum value
     double range = 8;                                   // The range of the values
+    map<string, string> metadata = 9;                  // A map from string to string for including untyped metadata
 }
