@@ -12,6 +12,7 @@ goog.provide('proto.SummaryStatistics');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
+goog.require('jspb.Map');
 goog.require('jspb.Message');
 
 /**
@@ -74,7 +75,8 @@ proto.SummaryStatistics.toObject = function(includeInstance, msg) {
     variance: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 0.0),
     min: jspb.Message.getFloatingPointFieldWithDefault(msg, 6, 0.0),
     max: jspb.Message.getFloatingPointFieldWithDefault(msg, 7, 0.0),
-    range: jspb.Message.getFloatingPointFieldWithDefault(msg, 8, 0.0)
+    range: jspb.Message.getFloatingPointFieldWithDefault(msg, 8, 0.0),
+    metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
   if (includeInstance) {
@@ -142,6 +144,12 @@ proto.SummaryStatistics.deserializeBinaryFromReader = function(msg, reader) {
     case 8:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setRange(value);
+      break;
+    case 9:
+      var value = msg.getMetadataMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
+         });
       break;
     default:
       reader.skipField();
@@ -227,6 +235,10 @@ proto.SummaryStatistics.serializeBinaryToWriter = function(message, writer) {
       8,
       f
     );
+  }
+  f = message.getMetadataMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(9, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -373,5 +385,27 @@ proto.SummaryStatistics.prototype.getRange = function() {
 proto.SummaryStatistics.prototype.setRange = function(value) {
   return jspb.Message.setProto3FloatField(this, 8, value);
 };
+
+
+/**
+ * map<string, string> metadata = 9;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
+ */
+proto.SummaryStatistics.prototype.getMetadataMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 9, opt_noLazyCreate,
+      null));
+};
+
+
+/**
+ * Clears values from the map. The map will be non-null.
+ * @return {!proto.SummaryStatistics} returns this
+ */
+proto.SummaryStatistics.prototype.clearMetadataMap = function() {
+  this.getMetadataMap().clear();
+  return this;};
 
 

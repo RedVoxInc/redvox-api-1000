@@ -35,6 +35,74 @@ CF_EXTERN_C_BEGIN
 
 NS_ASSUME_NONNULL_BEGIN
 
+#pragma mark - Enum RedvoxPacket1000_NetworkType
+
+typedef GPB_ENUM(RedvoxPacket1000_NetworkType) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  RedvoxPacket1000_NetworkType_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  RedvoxPacket1000_NetworkType_Wifi = 0,
+  RedvoxPacket1000_NetworkType_Cellular = 1,
+  RedvoxPacket1000_NetworkType_None = 2,
+};
+
+GPBEnumDescriptor *RedvoxPacket1000_NetworkType_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL RedvoxPacket1000_NetworkType_IsValidValue(int32_t value);
+
+#pragma mark - Enum RedvoxPacket1000_OsType
+
+typedef GPB_ENUM(RedvoxPacket1000_OsType) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  RedvoxPacket1000_OsType_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  RedvoxPacket1000_OsType_Android = 0,
+  RedvoxPacket1000_OsType_Ios = 1,
+  RedvoxPacket1000_OsType_Linux = 2,
+  RedvoxPacket1000_OsType_Windows = 3,
+};
+
+GPBEnumDescriptor *RedvoxPacket1000_OsType_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL RedvoxPacket1000_OsType_IsValidValue(int32_t value);
+
+#pragma mark - Enum LocationChannel_LocationProvider
+
+typedef GPB_ENUM(LocationChannel_LocationProvider) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  LocationChannel_LocationProvider_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  LocationChannel_LocationProvider_None = 0,
+  LocationChannel_LocationProvider_User = 1,
+  LocationChannel_LocationProvider_Gps = 2,
+  LocationChannel_LocationProvider_Network = 3,
+};
+
+GPBEnumDescriptor *LocationChannel_LocationProvider_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL LocationChannel_LocationProvider_IsValidValue(int32_t value);
+
 #pragma mark - RedvoxApi1000Root
 
 /**
@@ -81,18 +149,19 @@ typedef GPB_ENUM(RedvoxPacket1000_FieldNumber) {
   RedvoxPacket1000_FieldNumber_PacketEndTsUsWall = 26,
   RedvoxPacket1000_FieldNumber_PacketEndTsUsMach = 27,
   RedvoxPacket1000_FieldNumber_ServerAcquisitionArrivalTsUs = 28,
-  RedvoxPacket1000_FieldNumber_BestLatencyUs = 29,
-  RedvoxPacket1000_FieldNumber_BestOffsetUs = 30,
-  RedvoxPacket1000_FieldNumber_SynchParamsArray = 31,
-  RedvoxPacket1000_FieldNumber_MicrophoneChannel = 32,
-  RedvoxPacket1000_FieldNumber_BarometerChannel = 33,
-  RedvoxPacket1000_FieldNumber_LocationChannel = 34,
-  RedvoxPacket1000_FieldNumber_AccelerometerChannel = 35,
-  RedvoxPacket1000_FieldNumber_GyroscopeChannel = 36,
-  RedvoxPacket1000_FieldNumber_MagnetometerChannel = 37,
-  RedvoxPacket1000_FieldNumber_LightChannel = 38,
-  RedvoxPacket1000_FieldNumber_InfraredChannel = 39,
-  RedvoxPacket1000_FieldNumber_Metadata = 40,
+  RedvoxPacket1000_FieldNumber_AppStartTsUsMach = 29,
+  RedvoxPacket1000_FieldNumber_SynchParamsArray = 30,
+  RedvoxPacket1000_FieldNumber_BestLatencyUs = 31,
+  RedvoxPacket1000_FieldNumber_BestOffsetUs = 32,
+  RedvoxPacket1000_FieldNumber_MicrophoneChannel = 33,
+  RedvoxPacket1000_FieldNumber_BarometerChannel = 34,
+  RedvoxPacket1000_FieldNumber_LocationChannel = 35,
+  RedvoxPacket1000_FieldNumber_AccelerometerChannel = 36,
+  RedvoxPacket1000_FieldNumber_GyroscopeChannel = 37,
+  RedvoxPacket1000_FieldNumber_MagnetometerChannel = 38,
+  RedvoxPacket1000_FieldNumber_LightChannel = 39,
+  RedvoxPacket1000_FieldNumber_InfraredChannel = 40,
+  RedvoxPacket1000_FieldNumber_Metadata = 41,
 };
 
 /**
@@ -125,7 +194,7 @@ typedef GPB_ENUM(RedvoxPacket1000_FieldNumber) {
 @property(nonatomic, readwrite, copy, null_resettable) NSString *deviceModel;
 
 /** OS of the device */
-@property(nonatomic, readwrite, copy, null_resettable) NSString *deviceOs;
+@property(nonatomic, readwrite) RedvoxPacket1000_OsType deviceOs;
 
 /** OS version of the device */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *deviceOsVersion;
@@ -139,8 +208,8 @@ typedef GPB_ENUM(RedvoxPacket1000_FieldNumber) {
 /** Device battery level as a percentage between 0% and 100% */
 @property(nonatomic, readwrite) double deviceBatteryPercent;
 
-/** Type of network connection (WiFi, cellular, etc) */
-@property(nonatomic, readwrite, copy, null_resettable) NSString *networkType;
+/** Type of network connection */
+@property(nonatomic, readwrite) RedvoxPacket1000_NetworkType networkType;
 
 /** A value representing the strength of the newtwork connection */
 @property(nonatomic, readwrite) double networkStrength;
@@ -183,6 +252,9 @@ typedef GPB_ENUM(RedvoxPacket1000_FieldNumber) {
 
 /** Timestamp that the packet arrived at the acquisition server */
 @property(nonatomic, readwrite) double serverAcquisitionArrivalTsUs;
+
+/** The start of the app as machine time */
+@property(nonatomic, readwrite) double appStartTsUsMach;
 
 /** An array of synchronization params from the synch server */
 @property(nonatomic, readwrite, strong, null_resettable) GPBDoubleArray *synchParamsArray;
@@ -241,6 +313,30 @@ typedef GPB_ENUM(RedvoxPacket1000_FieldNumber) {
 @property(nonatomic, readonly) NSUInteger metadata_Count;
 
 @end
+
+/**
+ * Fetches the raw value of a @c RedvoxPacket1000's @c deviceOs property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacket1000_DeviceOs_RawValue(RedvoxPacket1000 *message);
+/**
+ * Sets the raw value of an @c RedvoxPacket1000's @c deviceOs property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacket1000_DeviceOs_RawValue(RedvoxPacket1000 *message, int32_t value);
+
+/**
+ * Fetches the raw value of a @c RedvoxPacket1000's @c networkType property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacket1000_NetworkType_RawValue(RedvoxPacket1000 *message);
+/**
+ * Sets the raw value of an @c RedvoxPacket1000's @c networkType property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacket1000_NetworkType_RawValue(RedvoxPacket1000 *message, int32_t value);
 
 #pragma mark - MicrophoneChannel
 
@@ -419,13 +515,15 @@ typedef GPB_ENUM(LocationChannel_FieldNumber) {
   LocationChannel_FieldNumber_AltitudeSamplesArray = 6,
   LocationChannel_FieldNumber_SpeedSamplesArray = 7,
   LocationChannel_FieldNumber_AccuracySamplesArray = 8,
-  LocationChannel_FieldNumber_SampleRateStatistics = 9,
-  LocationChannel_FieldNumber_LatitudeSampleStatistics = 10,
-  LocationChannel_FieldNumber_LongitudeSampleStatistics = 11,
-  LocationChannel_FieldNumber_AltitudeSampleStatistics = 12,
-  LocationChannel_FieldNumber_SpeedSampleStatistics = 13,
-  LocationChannel_FieldNumber_AccuracySampleStatistics = 14,
-  LocationChannel_FieldNumber_Metadata = 15,
+  LocationChannel_FieldNumber_LocationEnabled = 9,
+  LocationChannel_FieldNumber_LocationProvider = 10,
+  LocationChannel_FieldNumber_SampleRateStatistics = 11,
+  LocationChannel_FieldNumber_LatitudeSampleStatistics = 12,
+  LocationChannel_FieldNumber_LongitudeSampleStatistics = 13,
+  LocationChannel_FieldNumber_AltitudeSampleStatistics = 14,
+  LocationChannel_FieldNumber_SpeedSampleStatistics = 15,
+  LocationChannel_FieldNumber_AccuracySampleStatistics = 16,
+  LocationChannel_FieldNumber_Metadata = 17,
 };
 
 /**
@@ -469,6 +567,12 @@ typedef GPB_ENUM(LocationChannel_FieldNumber) {
 /** The number of items in @c accuracySamplesArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger accuracySamplesArray_Count;
 
+/** Is location enabled by the app */
+@property(nonatomic, readwrite) BOOL locationEnabled;
+
+/** Location provider enumeration */
+@property(nonatomic, readwrite) LocationChannel_LocationProvider locationProvider;
+
 /** Statistics for sample timestamps */
 @property(nonatomic, readwrite, strong, null_resettable) SummaryStatistics *sampleRateStatistics;
 /** Test to see if @c sampleRateStatistics has been set. */
@@ -506,6 +610,18 @@ typedef GPB_ENUM(LocationChannel_FieldNumber) {
 
 @end
 
+/**
+ * Fetches the raw value of a @c LocationChannel's @c locationProvider property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t LocationChannel_LocationProvider_RawValue(LocationChannel *message);
+/**
+ * Sets the raw value of an @c LocationChannel's @c locationProvider property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetLocationChannel_LocationProvider_RawValue(LocationChannel *message, int32_t value);
+
 #pragma mark - SummaryStatistics
 
 typedef GPB_ENUM(SummaryStatistics_FieldNumber) {
@@ -517,6 +633,7 @@ typedef GPB_ENUM(SummaryStatistics_FieldNumber) {
   SummaryStatistics_FieldNumber_Min = 6,
   SummaryStatistics_FieldNumber_Max = 7,
   SummaryStatistics_FieldNumber_Range = 8,
+  SummaryStatistics_FieldNumber_Metadata = 9,
 };
 
 /**
@@ -547,6 +664,11 @@ typedef GPB_ENUM(SummaryStatistics_FieldNumber) {
 
 /** The range of the values */
 @property(nonatomic, readwrite) double range;
+
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
 
 @end
 

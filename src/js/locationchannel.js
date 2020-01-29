@@ -9,6 +9,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 goog.provide('proto.LocationChannel');
+goog.provide('proto.LocationChannel.LocationProvider');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -84,6 +85,8 @@ proto.LocationChannel.toObject = function(includeInstance, msg) {
     altitudeSamplesList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 6)) == null ? undefined : f,
     speedSamplesList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 7)) == null ? undefined : f,
     accuracySamplesList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 8)) == null ? undefined : f,
+    locationEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 9, false),
+    locationProvider: jspb.Message.getFieldWithDefault(msg, 10, 0),
     sampleRateStatistics: (f = msg.getSampleRateStatistics()) && proto.SummaryStatistics.toObject(includeInstance, f),
     latitudeSampleStatistics: (f = msg.getLatitudeSampleStatistics()) && proto.SummaryStatistics.toObject(includeInstance, f),
     longitudeSampleStatistics: (f = msg.getLongitudeSampleStatistics()) && proto.SummaryStatistics.toObject(includeInstance, f),
@@ -160,36 +163,44 @@ proto.LocationChannel.deserializeBinaryFromReader = function(msg, reader) {
       msg.setAccuracySamplesList(value);
       break;
     case 9:
-      var value = new proto.SummaryStatistics;
-      reader.readMessage(value,proto.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setSampleRateStatistics(value);
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setLocationEnabled(value);
       break;
     case 10:
-      var value = new proto.SummaryStatistics;
-      reader.readMessage(value,proto.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setLatitudeSampleStatistics(value);
+      var value = /** @type {!proto.LocationChannel.LocationProvider} */ (reader.readEnum());
+      msg.setLocationProvider(value);
       break;
     case 11:
       var value = new proto.SummaryStatistics;
       reader.readMessage(value,proto.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setLongitudeSampleStatistics(value);
+      msg.setSampleRateStatistics(value);
       break;
     case 12:
       var value = new proto.SummaryStatistics;
       reader.readMessage(value,proto.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setAltitudeSampleStatistics(value);
+      msg.setLatitudeSampleStatistics(value);
       break;
     case 13:
       var value = new proto.SummaryStatistics;
       reader.readMessage(value,proto.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setSpeedSampleStatistics(value);
+      msg.setLongitudeSampleStatistics(value);
       break;
     case 14:
       var value = new proto.SummaryStatistics;
       reader.readMessage(value,proto.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setAccuracySampleStatistics(value);
+      msg.setAltitudeSampleStatistics(value);
       break;
     case 15:
+      var value = new proto.SummaryStatistics;
+      reader.readMessage(value,proto.SummaryStatistics.deserializeBinaryFromReader);
+      msg.setSpeedSampleStatistics(value);
+      break;
+    case 16:
+      var value = new proto.SummaryStatistics;
+      reader.readMessage(value,proto.SummaryStatistics.deserializeBinaryFromReader);
+      msg.setAccuracySampleStatistics(value);
+      break;
+    case 17:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
@@ -280,23 +291,21 @@ proto.LocationChannel.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getSampleRateStatistics();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getLocationEnabled();
+  if (f) {
+    writer.writeBool(
       9,
-      f,
-      proto.SummaryStatistics.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getLatitudeSampleStatistics();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getLocationProvider();
+  if (f !== 0.0) {
+    writer.writeEnum(
       10,
-      f,
-      proto.SummaryStatistics.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getLongitudeSampleStatistics();
+  f = message.getSampleRateStatistics();
   if (f != null) {
     writer.writeMessage(
       11,
@@ -304,7 +313,7 @@ proto.LocationChannel.serializeBinaryToWriter = function(message, writer) {
       proto.SummaryStatistics.serializeBinaryToWriter
     );
   }
-  f = message.getAltitudeSampleStatistics();
+  f = message.getLatitudeSampleStatistics();
   if (f != null) {
     writer.writeMessage(
       12,
@@ -312,7 +321,7 @@ proto.LocationChannel.serializeBinaryToWriter = function(message, writer) {
       proto.SummaryStatistics.serializeBinaryToWriter
     );
   }
-  f = message.getSpeedSampleStatistics();
+  f = message.getLongitudeSampleStatistics();
   if (f != null) {
     writer.writeMessage(
       13,
@@ -320,7 +329,7 @@ proto.LocationChannel.serializeBinaryToWriter = function(message, writer) {
       proto.SummaryStatistics.serializeBinaryToWriter
     );
   }
-  f = message.getAccuracySampleStatistics();
+  f = message.getAltitudeSampleStatistics();
   if (f != null) {
     writer.writeMessage(
       14,
@@ -328,12 +337,38 @@ proto.LocationChannel.serializeBinaryToWriter = function(message, writer) {
       proto.SummaryStatistics.serializeBinaryToWriter
     );
   }
+  f = message.getSpeedSampleStatistics();
+  if (f != null) {
+    writer.writeMessage(
+      15,
+      f,
+      proto.SummaryStatistics.serializeBinaryToWriter
+    );
+  }
+  f = message.getAccuracySampleStatistics();
+  if (f != null) {
+    writer.writeMessage(
+      16,
+      f,
+      proto.SummaryStatistics.serializeBinaryToWriter
+    );
+  }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(15, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(17, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
+
+/**
+ * @enum {number}
+ */
+proto.LocationChannel.LocationProvider = {
+  NONE: 0,
+  USER: 1,
+  GPS: 2,
+  NETWORK: 3
+};
 
 /**
  * optional string sensor_description = 1;
@@ -594,12 +629,48 @@ proto.LocationChannel.prototype.clearAccuracySamplesList = function() {
 
 
 /**
- * optional SummaryStatistics sample_rate_statistics = 9;
+ * optional bool location_enabled = 9;
+ * @return {boolean}
+ */
+proto.LocationChannel.prototype.getLocationEnabled = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 9, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.LocationChannel} returns this
+ */
+proto.LocationChannel.prototype.setLocationEnabled = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 9, value);
+};
+
+
+/**
+ * optional LocationProvider location_provider = 10;
+ * @return {!proto.LocationChannel.LocationProvider}
+ */
+proto.LocationChannel.prototype.getLocationProvider = function() {
+  return /** @type {!proto.LocationChannel.LocationProvider} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
+};
+
+
+/**
+ * @param {!proto.LocationChannel.LocationProvider} value
+ * @return {!proto.LocationChannel} returns this
+ */
+proto.LocationChannel.prototype.setLocationProvider = function(value) {
+  return jspb.Message.setProto3EnumField(this, 10, value);
+};
+
+
+/**
+ * optional SummaryStatistics sample_rate_statistics = 11;
  * @return {?proto.SummaryStatistics}
  */
 proto.LocationChannel.prototype.getSampleRateStatistics = function() {
   return /** @type{?proto.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.SummaryStatistics, 9));
+    jspb.Message.getWrapperField(this, proto.SummaryStatistics, 11));
 };
 
 
@@ -608,7 +679,7 @@ proto.LocationChannel.prototype.getSampleRateStatistics = function() {
  * @return {!proto.LocationChannel} returns this
 */
 proto.LocationChannel.prototype.setSampleRateStatistics = function(value) {
-  return jspb.Message.setWrapperField(this, 9, value);
+  return jspb.Message.setWrapperField(this, 11, value);
 };
 
 
@@ -626,17 +697,17 @@ proto.LocationChannel.prototype.clearSampleRateStatistics = function() {
  * @return {boolean}
  */
 proto.LocationChannel.prototype.hasSampleRateStatistics = function() {
-  return jspb.Message.getField(this, 9) != null;
+  return jspb.Message.getField(this, 11) != null;
 };
 
 
 /**
- * optional SummaryStatistics latitude_sample_statistics = 10;
+ * optional SummaryStatistics latitude_sample_statistics = 12;
  * @return {?proto.SummaryStatistics}
  */
 proto.LocationChannel.prototype.getLatitudeSampleStatistics = function() {
   return /** @type{?proto.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.SummaryStatistics, 10));
+    jspb.Message.getWrapperField(this, proto.SummaryStatistics, 12));
 };
 
 
@@ -645,7 +716,7 @@ proto.LocationChannel.prototype.getLatitudeSampleStatistics = function() {
  * @return {!proto.LocationChannel} returns this
 */
 proto.LocationChannel.prototype.setLatitudeSampleStatistics = function(value) {
-  return jspb.Message.setWrapperField(this, 10, value);
+  return jspb.Message.setWrapperField(this, 12, value);
 };
 
 
@@ -663,17 +734,17 @@ proto.LocationChannel.prototype.clearLatitudeSampleStatistics = function() {
  * @return {boolean}
  */
 proto.LocationChannel.prototype.hasLatitudeSampleStatistics = function() {
-  return jspb.Message.getField(this, 10) != null;
+  return jspb.Message.getField(this, 12) != null;
 };
 
 
 /**
- * optional SummaryStatistics longitude_sample_statistics = 11;
+ * optional SummaryStatistics longitude_sample_statistics = 13;
  * @return {?proto.SummaryStatistics}
  */
 proto.LocationChannel.prototype.getLongitudeSampleStatistics = function() {
   return /** @type{?proto.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.SummaryStatistics, 11));
+    jspb.Message.getWrapperField(this, proto.SummaryStatistics, 13));
 };
 
 
@@ -682,7 +753,7 @@ proto.LocationChannel.prototype.getLongitudeSampleStatistics = function() {
  * @return {!proto.LocationChannel} returns this
 */
 proto.LocationChannel.prototype.setLongitudeSampleStatistics = function(value) {
-  return jspb.Message.setWrapperField(this, 11, value);
+  return jspb.Message.setWrapperField(this, 13, value);
 };
 
 
@@ -700,17 +771,17 @@ proto.LocationChannel.prototype.clearLongitudeSampleStatistics = function() {
  * @return {boolean}
  */
 proto.LocationChannel.prototype.hasLongitudeSampleStatistics = function() {
-  return jspb.Message.getField(this, 11) != null;
+  return jspb.Message.getField(this, 13) != null;
 };
 
 
 /**
- * optional SummaryStatistics altitude_sample_statistics = 12;
+ * optional SummaryStatistics altitude_sample_statistics = 14;
  * @return {?proto.SummaryStatistics}
  */
 proto.LocationChannel.prototype.getAltitudeSampleStatistics = function() {
   return /** @type{?proto.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.SummaryStatistics, 12));
+    jspb.Message.getWrapperField(this, proto.SummaryStatistics, 14));
 };
 
 
@@ -719,7 +790,7 @@ proto.LocationChannel.prototype.getAltitudeSampleStatistics = function() {
  * @return {!proto.LocationChannel} returns this
 */
 proto.LocationChannel.prototype.setAltitudeSampleStatistics = function(value) {
-  return jspb.Message.setWrapperField(this, 12, value);
+  return jspb.Message.setWrapperField(this, 14, value);
 };
 
 
@@ -737,17 +808,17 @@ proto.LocationChannel.prototype.clearAltitudeSampleStatistics = function() {
  * @return {boolean}
  */
 proto.LocationChannel.prototype.hasAltitudeSampleStatistics = function() {
-  return jspb.Message.getField(this, 12) != null;
+  return jspb.Message.getField(this, 14) != null;
 };
 
 
 /**
- * optional SummaryStatistics speed_sample_statistics = 13;
+ * optional SummaryStatistics speed_sample_statistics = 15;
  * @return {?proto.SummaryStatistics}
  */
 proto.LocationChannel.prototype.getSpeedSampleStatistics = function() {
   return /** @type{?proto.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.SummaryStatistics, 13));
+    jspb.Message.getWrapperField(this, proto.SummaryStatistics, 15));
 };
 
 
@@ -756,7 +827,7 @@ proto.LocationChannel.prototype.getSpeedSampleStatistics = function() {
  * @return {!proto.LocationChannel} returns this
 */
 proto.LocationChannel.prototype.setSpeedSampleStatistics = function(value) {
-  return jspb.Message.setWrapperField(this, 13, value);
+  return jspb.Message.setWrapperField(this, 15, value);
 };
 
 
@@ -774,17 +845,17 @@ proto.LocationChannel.prototype.clearSpeedSampleStatistics = function() {
  * @return {boolean}
  */
 proto.LocationChannel.prototype.hasSpeedSampleStatistics = function() {
-  return jspb.Message.getField(this, 13) != null;
+  return jspb.Message.getField(this, 15) != null;
 };
 
 
 /**
- * optional SummaryStatistics accuracy_sample_statistics = 14;
+ * optional SummaryStatistics accuracy_sample_statistics = 16;
  * @return {?proto.SummaryStatistics}
  */
 proto.LocationChannel.prototype.getAccuracySampleStatistics = function() {
   return /** @type{?proto.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.SummaryStatistics, 14));
+    jspb.Message.getWrapperField(this, proto.SummaryStatistics, 16));
 };
 
 
@@ -793,7 +864,7 @@ proto.LocationChannel.prototype.getAccuracySampleStatistics = function() {
  * @return {!proto.LocationChannel} returns this
 */
 proto.LocationChannel.prototype.setAccuracySampleStatistics = function(value) {
-  return jspb.Message.setWrapperField(this, 14, value);
+  return jspb.Message.setWrapperField(this, 16, value);
 };
 
 
@@ -811,19 +882,19 @@ proto.LocationChannel.prototype.clearAccuracySampleStatistics = function() {
  * @return {boolean}
  */
 proto.LocationChannel.prototype.hasAccuracySampleStatistics = function() {
-  return jspb.Message.getField(this, 14) != null;
+  return jspb.Message.getField(this, 16) != null;
 };
 
 
 /**
- * map<string, string> metadata = 15;
+ * map<string, string> metadata = 17;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.LocationChannel.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 15, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 17, opt_noLazyCreate,
       null));
 };
 

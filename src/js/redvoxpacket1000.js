@@ -9,6 +9,8 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 goog.provide('proto.RedvoxPacket1000');
+goog.provide('proto.RedvoxPacket1000.NetworkType');
+goog.provide('proto.RedvoxPacket1000.OsType');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -46,7 +48,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.RedvoxPacket1000.repeatedFields_ = [31];
+proto.RedvoxPacket1000.repeatedFields_ = [30];
 
 
 
@@ -87,12 +89,12 @@ proto.RedvoxPacket1000.toObject = function(includeInstance, msg) {
     deviceUuid: jspb.Message.getFieldWithDefault(msg, 6, ""),
     deviceMake: jspb.Message.getFieldWithDefault(msg, 7, ""),
     deviceModel: jspb.Message.getFieldWithDefault(msg, 8, ""),
-    deviceOs: jspb.Message.getFieldWithDefault(msg, 9, ""),
+    deviceOs: jspb.Message.getFieldWithDefault(msg, 9, 0),
     deviceOsVersion: jspb.Message.getFieldWithDefault(msg, 10, ""),
     deviceAppVersion: jspb.Message.getFieldWithDefault(msg, 11, ""),
     deviceTempC: jspb.Message.getFloatingPointFieldWithDefault(msg, 12, 0.0),
     deviceBatteryPercent: jspb.Message.getFloatingPointFieldWithDefault(msg, 13, 0.0),
-    networkType: jspb.Message.getFieldWithDefault(msg, 14, ""),
+    networkType: jspb.Message.getFieldWithDefault(msg, 14, 0),
     networkStrength: jspb.Message.getFloatingPointFieldWithDefault(msg, 15, 0.0),
     isBackfilled: jspb.Message.getBooleanFieldWithDefault(msg, 16, false),
     isPrivate: jspb.Message.getBooleanFieldWithDefault(msg, 17, false),
@@ -107,9 +109,10 @@ proto.RedvoxPacket1000.toObject = function(includeInstance, msg) {
     packetEndTsUsWall: jspb.Message.getFloatingPointFieldWithDefault(msg, 26, 0.0),
     packetEndTsUsMach: jspb.Message.getFloatingPointFieldWithDefault(msg, 27, 0.0),
     serverAcquisitionArrivalTsUs: jspb.Message.getFloatingPointFieldWithDefault(msg, 28, 0.0),
-    synchParamsList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 31)) == null ? undefined : f,
-    bestLatencyUs: jspb.Message.getFloatingPointFieldWithDefault(msg, 29, 0.0),
-    bestOffsetUs: jspb.Message.getFloatingPointFieldWithDefault(msg, 30, 0.0),
+    appStartTsUsMach: jspb.Message.getFloatingPointFieldWithDefault(msg, 29, 0.0),
+    synchParamsList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 30)) == null ? undefined : f,
+    bestLatencyUs: jspb.Message.getFloatingPointFieldWithDefault(msg, 31, 0.0),
+    bestOffsetUs: jspb.Message.getFloatingPointFieldWithDefault(msg, 32, 0.0),
     microphoneChannel: (f = msg.getMicrophoneChannel()) && proto.MicrophoneChannel.toObject(includeInstance, f),
     barometerChannel: (f = msg.getBarometerChannel()) && proto.SingleChannel.toObject(includeInstance, f),
     locationChannel: (f = msg.getLocationChannel()) && proto.LocationChannel.toObject(includeInstance, f),
@@ -188,7 +191,7 @@ proto.RedvoxPacket1000.deserializeBinaryFromReader = function(msg, reader) {
       msg.setDeviceModel(value);
       break;
     case 9:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {!proto.RedvoxPacket1000.OsType} */ (reader.readEnum());
       msg.setDeviceOs(value);
       break;
     case 10:
@@ -208,7 +211,7 @@ proto.RedvoxPacket1000.deserializeBinaryFromReader = function(msg, reader) {
       msg.setDeviceBatteryPercent(value);
       break;
     case 14:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {!proto.RedvoxPacket1000.NetworkType} */ (reader.readEnum());
       msg.setNetworkType(value);
       break;
     case 15:
@@ -267,59 +270,63 @@ proto.RedvoxPacket1000.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {number} */ (reader.readDouble());
       msg.setServerAcquisitionArrivalTsUs(value);
       break;
-    case 31:
+    case 29:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setAppStartTsUsMach(value);
+      break;
+    case 30:
       var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
       msg.setSynchParamsList(value);
       break;
-    case 29:
+    case 31:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setBestLatencyUs(value);
       break;
-    case 30:
+    case 32:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setBestOffsetUs(value);
       break;
-    case 32:
+    case 33:
       var value = new proto.MicrophoneChannel;
       reader.readMessage(value,proto.MicrophoneChannel.deserializeBinaryFromReader);
       msg.setMicrophoneChannel(value);
       break;
-    case 33:
+    case 34:
       var value = new proto.SingleChannel;
       reader.readMessage(value,proto.SingleChannel.deserializeBinaryFromReader);
       msg.setBarometerChannel(value);
       break;
-    case 34:
+    case 35:
       var value = new proto.LocationChannel;
       reader.readMessage(value,proto.LocationChannel.deserializeBinaryFromReader);
       msg.setLocationChannel(value);
       break;
-    case 35:
+    case 36:
       var value = new proto.XyzChannel;
       reader.readMessage(value,proto.XyzChannel.deserializeBinaryFromReader);
       msg.setAccelerometerChannel(value);
       break;
-    case 36:
+    case 37:
       var value = new proto.XyzChannel;
       reader.readMessage(value,proto.XyzChannel.deserializeBinaryFromReader);
       msg.setGyroscopeChannel(value);
       break;
-    case 37:
+    case 38:
       var value = new proto.XyzChannel;
       reader.readMessage(value,proto.XyzChannel.deserializeBinaryFromReader);
       msg.setMagnetometerChannel(value);
       break;
-    case 38:
+    case 39:
       var value = new proto.SingleChannel;
       reader.readMessage(value,proto.SingleChannel.deserializeBinaryFromReader);
       msg.setLightChannel(value);
       break;
-    case 39:
+    case 40:
       var value = new proto.SingleChannel;
       reader.readMessage(value,proto.SingleChannel.deserializeBinaryFromReader);
       msg.setInfraredChannel(value);
       break;
-    case 40:
+    case 41:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
@@ -411,8 +418,8 @@ proto.RedvoxPacket1000.serializeBinaryToWriter = function(message, writer) {
     );
   }
   f = message.getDeviceOs();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f !== 0.0) {
+    writer.writeEnum(
       9,
       f
     );
@@ -446,8 +453,8 @@ proto.RedvoxPacket1000.serializeBinaryToWriter = function(message, writer) {
     );
   }
   f = message.getNetworkType();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f !== 0.0) {
+    writer.writeEnum(
       14,
       f
     );
@@ -550,31 +557,38 @@ proto.RedvoxPacket1000.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getSynchParamsList();
-  if (f.length > 0) {
-    writer.writePackedDouble(
-      31,
-      f
-    );
-  }
-  f = message.getBestLatencyUs();
+  f = message.getAppStartTsUsMach();
   if (f !== 0.0) {
     writer.writeDouble(
       29,
       f
     );
   }
+  f = message.getSynchParamsList();
+  if (f.length > 0) {
+    writer.writePackedDouble(
+      30,
+      f
+    );
+  }
+  f = message.getBestLatencyUs();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      31,
+      f
+    );
+  }
   f = message.getBestOffsetUs();
   if (f !== 0.0) {
     writer.writeDouble(
-      30,
+      32,
       f
     );
   }
   f = message.getMicrophoneChannel();
   if (f != null) {
     writer.writeMessage(
-      32,
+      33,
       f,
       proto.MicrophoneChannel.serializeBinaryToWriter
     );
@@ -582,7 +596,7 @@ proto.RedvoxPacket1000.serializeBinaryToWriter = function(message, writer) {
   f = message.getBarometerChannel();
   if (f != null) {
     writer.writeMessage(
-      33,
+      34,
       f,
       proto.SingleChannel.serializeBinaryToWriter
     );
@@ -590,7 +604,7 @@ proto.RedvoxPacket1000.serializeBinaryToWriter = function(message, writer) {
   f = message.getLocationChannel();
   if (f != null) {
     writer.writeMessage(
-      34,
+      35,
       f,
       proto.LocationChannel.serializeBinaryToWriter
     );
@@ -598,7 +612,7 @@ proto.RedvoxPacket1000.serializeBinaryToWriter = function(message, writer) {
   f = message.getAccelerometerChannel();
   if (f != null) {
     writer.writeMessage(
-      35,
+      36,
       f,
       proto.XyzChannel.serializeBinaryToWriter
     );
@@ -606,7 +620,7 @@ proto.RedvoxPacket1000.serializeBinaryToWriter = function(message, writer) {
   f = message.getGyroscopeChannel();
   if (f != null) {
     writer.writeMessage(
-      36,
+      37,
       f,
       proto.XyzChannel.serializeBinaryToWriter
     );
@@ -614,7 +628,7 @@ proto.RedvoxPacket1000.serializeBinaryToWriter = function(message, writer) {
   f = message.getMagnetometerChannel();
   if (f != null) {
     writer.writeMessage(
-      37,
+      38,
       f,
       proto.XyzChannel.serializeBinaryToWriter
     );
@@ -622,7 +636,7 @@ proto.RedvoxPacket1000.serializeBinaryToWriter = function(message, writer) {
   f = message.getLightChannel();
   if (f != null) {
     writer.writeMessage(
-      38,
+      39,
       f,
       proto.SingleChannel.serializeBinaryToWriter
     );
@@ -630,17 +644,36 @@ proto.RedvoxPacket1000.serializeBinaryToWriter = function(message, writer) {
   f = message.getInfraredChannel();
   if (f != null) {
     writer.writeMessage(
-      39,
+      40,
       f,
       proto.SingleChannel.serializeBinaryToWriter
     );
   }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(40, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(41, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
+
+/**
+ * @enum {number}
+ */
+proto.RedvoxPacket1000.NetworkType = {
+  WIFI: 0,
+  CELLULAR: 1,
+  NONE: 2
+};
+
+/**
+ * @enum {number}
+ */
+proto.RedvoxPacket1000.OsType = {
+  ANDROID: 0,
+  IOS: 1,
+  LINUX: 2,
+  WINDOWS: 3
+};
 
 /**
  * optional uint32 api = 1;
@@ -787,20 +820,20 @@ proto.RedvoxPacket1000.prototype.setDeviceModel = function(value) {
 
 
 /**
- * optional string device_os = 9;
- * @return {string}
+ * optional OsType device_os = 9;
+ * @return {!proto.RedvoxPacket1000.OsType}
  */
 proto.RedvoxPacket1000.prototype.getDeviceOs = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+  return /** @type {!proto.RedvoxPacket1000.OsType} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
 };
 
 
 /**
- * @param {string} value
+ * @param {!proto.RedvoxPacket1000.OsType} value
  * @return {!proto.RedvoxPacket1000} returns this
  */
 proto.RedvoxPacket1000.prototype.setDeviceOs = function(value) {
-  return jspb.Message.setProto3StringField(this, 9, value);
+  return jspb.Message.setProto3EnumField(this, 9, value);
 };
 
 
@@ -877,20 +910,20 @@ proto.RedvoxPacket1000.prototype.setDeviceBatteryPercent = function(value) {
 
 
 /**
- * optional string network_type = 14;
- * @return {string}
+ * optional NetworkType network_type = 14;
+ * @return {!proto.RedvoxPacket1000.NetworkType}
  */
 proto.RedvoxPacket1000.prototype.getNetworkType = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
+  return /** @type {!proto.RedvoxPacket1000.NetworkType} */ (jspb.Message.getFieldWithDefault(this, 14, 0));
 };
 
 
 /**
- * @param {string} value
+ * @param {!proto.RedvoxPacket1000.NetworkType} value
  * @return {!proto.RedvoxPacket1000} returns this
  */
 proto.RedvoxPacket1000.prototype.setNetworkType = function(value) {
-  return jspb.Message.setProto3StringField(this, 14, value);
+  return jspb.Message.setProto3EnumField(this, 14, value);
 };
 
 
@@ -1147,11 +1180,29 @@ proto.RedvoxPacket1000.prototype.setServerAcquisitionArrivalTsUs = function(valu
 
 
 /**
- * repeated double synch_params = 31;
+ * optional double app_start_ts_us_mach = 29;
+ * @return {number}
+ */
+proto.RedvoxPacket1000.prototype.getAppStartTsUsMach = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 29, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.RedvoxPacket1000} returns this
+ */
+proto.RedvoxPacket1000.prototype.setAppStartTsUsMach = function(value) {
+  return jspb.Message.setProto3FloatField(this, 29, value);
+};
+
+
+/**
+ * repeated double synch_params = 30;
  * @return {!Array<number>}
  */
 proto.RedvoxPacket1000.prototype.getSynchParamsList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 31));
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 30));
 };
 
 
@@ -1160,7 +1211,7 @@ proto.RedvoxPacket1000.prototype.getSynchParamsList = function() {
  * @return {!proto.RedvoxPacket1000} returns this
  */
 proto.RedvoxPacket1000.prototype.setSynchParamsList = function(value) {
-  return jspb.Message.setField(this, 31, value || []);
+  return jspb.Message.setField(this, 30, value || []);
 };
 
 
@@ -1170,7 +1221,7 @@ proto.RedvoxPacket1000.prototype.setSynchParamsList = function(value) {
  * @return {!proto.RedvoxPacket1000} returns this
  */
 proto.RedvoxPacket1000.prototype.addSynchParams = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 31, value, opt_index);
+  return jspb.Message.addToRepeatedField(this, 30, value, opt_index);
 };
 
 
@@ -1184,11 +1235,11 @@ proto.RedvoxPacket1000.prototype.clearSynchParamsList = function() {
 
 
 /**
- * optional double best_latency_us = 29;
+ * optional double best_latency_us = 31;
  * @return {number}
  */
 proto.RedvoxPacket1000.prototype.getBestLatencyUs = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 29, 0.0));
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 31, 0.0));
 };
 
 
@@ -1197,16 +1248,16 @@ proto.RedvoxPacket1000.prototype.getBestLatencyUs = function() {
  * @return {!proto.RedvoxPacket1000} returns this
  */
 proto.RedvoxPacket1000.prototype.setBestLatencyUs = function(value) {
-  return jspb.Message.setProto3FloatField(this, 29, value);
+  return jspb.Message.setProto3FloatField(this, 31, value);
 };
 
 
 /**
- * optional double best_offset_us = 30;
+ * optional double best_offset_us = 32;
  * @return {number}
  */
 proto.RedvoxPacket1000.prototype.getBestOffsetUs = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 30, 0.0));
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 32, 0.0));
 };
 
 
@@ -1215,17 +1266,17 @@ proto.RedvoxPacket1000.prototype.getBestOffsetUs = function() {
  * @return {!proto.RedvoxPacket1000} returns this
  */
 proto.RedvoxPacket1000.prototype.setBestOffsetUs = function(value) {
-  return jspb.Message.setProto3FloatField(this, 30, value);
+  return jspb.Message.setProto3FloatField(this, 32, value);
 };
 
 
 /**
- * optional MicrophoneChannel microphone_channel = 32;
+ * optional MicrophoneChannel microphone_channel = 33;
  * @return {?proto.MicrophoneChannel}
  */
 proto.RedvoxPacket1000.prototype.getMicrophoneChannel = function() {
   return /** @type{?proto.MicrophoneChannel} */ (
-    jspb.Message.getWrapperField(this, proto.MicrophoneChannel, 32));
+    jspb.Message.getWrapperField(this, proto.MicrophoneChannel, 33));
 };
 
 
@@ -1234,7 +1285,7 @@ proto.RedvoxPacket1000.prototype.getMicrophoneChannel = function() {
  * @return {!proto.RedvoxPacket1000} returns this
 */
 proto.RedvoxPacket1000.prototype.setMicrophoneChannel = function(value) {
-  return jspb.Message.setWrapperField(this, 32, value);
+  return jspb.Message.setWrapperField(this, 33, value);
 };
 
 
@@ -1252,17 +1303,17 @@ proto.RedvoxPacket1000.prototype.clearMicrophoneChannel = function() {
  * @return {boolean}
  */
 proto.RedvoxPacket1000.prototype.hasMicrophoneChannel = function() {
-  return jspb.Message.getField(this, 32) != null;
+  return jspb.Message.getField(this, 33) != null;
 };
 
 
 /**
- * optional SingleChannel barometer_channel = 33;
+ * optional SingleChannel barometer_channel = 34;
  * @return {?proto.SingleChannel}
  */
 proto.RedvoxPacket1000.prototype.getBarometerChannel = function() {
   return /** @type{?proto.SingleChannel} */ (
-    jspb.Message.getWrapperField(this, proto.SingleChannel, 33));
+    jspb.Message.getWrapperField(this, proto.SingleChannel, 34));
 };
 
 
@@ -1271,7 +1322,7 @@ proto.RedvoxPacket1000.prototype.getBarometerChannel = function() {
  * @return {!proto.RedvoxPacket1000} returns this
 */
 proto.RedvoxPacket1000.prototype.setBarometerChannel = function(value) {
-  return jspb.Message.setWrapperField(this, 33, value);
+  return jspb.Message.setWrapperField(this, 34, value);
 };
 
 
@@ -1289,17 +1340,17 @@ proto.RedvoxPacket1000.prototype.clearBarometerChannel = function() {
  * @return {boolean}
  */
 proto.RedvoxPacket1000.prototype.hasBarometerChannel = function() {
-  return jspb.Message.getField(this, 33) != null;
+  return jspb.Message.getField(this, 34) != null;
 };
 
 
 /**
- * optional LocationChannel location_channel = 34;
+ * optional LocationChannel location_channel = 35;
  * @return {?proto.LocationChannel}
  */
 proto.RedvoxPacket1000.prototype.getLocationChannel = function() {
   return /** @type{?proto.LocationChannel} */ (
-    jspb.Message.getWrapperField(this, proto.LocationChannel, 34));
+    jspb.Message.getWrapperField(this, proto.LocationChannel, 35));
 };
 
 
@@ -1308,7 +1359,7 @@ proto.RedvoxPacket1000.prototype.getLocationChannel = function() {
  * @return {!proto.RedvoxPacket1000} returns this
 */
 proto.RedvoxPacket1000.prototype.setLocationChannel = function(value) {
-  return jspb.Message.setWrapperField(this, 34, value);
+  return jspb.Message.setWrapperField(this, 35, value);
 };
 
 
@@ -1326,17 +1377,17 @@ proto.RedvoxPacket1000.prototype.clearLocationChannel = function() {
  * @return {boolean}
  */
 proto.RedvoxPacket1000.prototype.hasLocationChannel = function() {
-  return jspb.Message.getField(this, 34) != null;
+  return jspb.Message.getField(this, 35) != null;
 };
 
 
 /**
- * optional XyzChannel accelerometer_channel = 35;
+ * optional XyzChannel accelerometer_channel = 36;
  * @return {?proto.XyzChannel}
  */
 proto.RedvoxPacket1000.prototype.getAccelerometerChannel = function() {
   return /** @type{?proto.XyzChannel} */ (
-    jspb.Message.getWrapperField(this, proto.XyzChannel, 35));
+    jspb.Message.getWrapperField(this, proto.XyzChannel, 36));
 };
 
 
@@ -1345,7 +1396,7 @@ proto.RedvoxPacket1000.prototype.getAccelerometerChannel = function() {
  * @return {!proto.RedvoxPacket1000} returns this
 */
 proto.RedvoxPacket1000.prototype.setAccelerometerChannel = function(value) {
-  return jspb.Message.setWrapperField(this, 35, value);
+  return jspb.Message.setWrapperField(this, 36, value);
 };
 
 
@@ -1363,17 +1414,17 @@ proto.RedvoxPacket1000.prototype.clearAccelerometerChannel = function() {
  * @return {boolean}
  */
 proto.RedvoxPacket1000.prototype.hasAccelerometerChannel = function() {
-  return jspb.Message.getField(this, 35) != null;
+  return jspb.Message.getField(this, 36) != null;
 };
 
 
 /**
- * optional XyzChannel gyroscope_channel = 36;
+ * optional XyzChannel gyroscope_channel = 37;
  * @return {?proto.XyzChannel}
  */
 proto.RedvoxPacket1000.prototype.getGyroscopeChannel = function() {
   return /** @type{?proto.XyzChannel} */ (
-    jspb.Message.getWrapperField(this, proto.XyzChannel, 36));
+    jspb.Message.getWrapperField(this, proto.XyzChannel, 37));
 };
 
 
@@ -1382,7 +1433,7 @@ proto.RedvoxPacket1000.prototype.getGyroscopeChannel = function() {
  * @return {!proto.RedvoxPacket1000} returns this
 */
 proto.RedvoxPacket1000.prototype.setGyroscopeChannel = function(value) {
-  return jspb.Message.setWrapperField(this, 36, value);
+  return jspb.Message.setWrapperField(this, 37, value);
 };
 
 
@@ -1400,17 +1451,17 @@ proto.RedvoxPacket1000.prototype.clearGyroscopeChannel = function() {
  * @return {boolean}
  */
 proto.RedvoxPacket1000.prototype.hasGyroscopeChannel = function() {
-  return jspb.Message.getField(this, 36) != null;
+  return jspb.Message.getField(this, 37) != null;
 };
 
 
 /**
- * optional XyzChannel magnetometer_channel = 37;
+ * optional XyzChannel magnetometer_channel = 38;
  * @return {?proto.XyzChannel}
  */
 proto.RedvoxPacket1000.prototype.getMagnetometerChannel = function() {
   return /** @type{?proto.XyzChannel} */ (
-    jspb.Message.getWrapperField(this, proto.XyzChannel, 37));
+    jspb.Message.getWrapperField(this, proto.XyzChannel, 38));
 };
 
 
@@ -1419,7 +1470,7 @@ proto.RedvoxPacket1000.prototype.getMagnetometerChannel = function() {
  * @return {!proto.RedvoxPacket1000} returns this
 */
 proto.RedvoxPacket1000.prototype.setMagnetometerChannel = function(value) {
-  return jspb.Message.setWrapperField(this, 37, value);
+  return jspb.Message.setWrapperField(this, 38, value);
 };
 
 
@@ -1437,17 +1488,17 @@ proto.RedvoxPacket1000.prototype.clearMagnetometerChannel = function() {
  * @return {boolean}
  */
 proto.RedvoxPacket1000.prototype.hasMagnetometerChannel = function() {
-  return jspb.Message.getField(this, 37) != null;
+  return jspb.Message.getField(this, 38) != null;
 };
 
 
 /**
- * optional SingleChannel light_channel = 38;
+ * optional SingleChannel light_channel = 39;
  * @return {?proto.SingleChannel}
  */
 proto.RedvoxPacket1000.prototype.getLightChannel = function() {
   return /** @type{?proto.SingleChannel} */ (
-    jspb.Message.getWrapperField(this, proto.SingleChannel, 38));
+    jspb.Message.getWrapperField(this, proto.SingleChannel, 39));
 };
 
 
@@ -1456,7 +1507,7 @@ proto.RedvoxPacket1000.prototype.getLightChannel = function() {
  * @return {!proto.RedvoxPacket1000} returns this
 */
 proto.RedvoxPacket1000.prototype.setLightChannel = function(value) {
-  return jspb.Message.setWrapperField(this, 38, value);
+  return jspb.Message.setWrapperField(this, 39, value);
 };
 
 
@@ -1474,17 +1525,17 @@ proto.RedvoxPacket1000.prototype.clearLightChannel = function() {
  * @return {boolean}
  */
 proto.RedvoxPacket1000.prototype.hasLightChannel = function() {
-  return jspb.Message.getField(this, 38) != null;
+  return jspb.Message.getField(this, 39) != null;
 };
 
 
 /**
- * optional SingleChannel infrared_channel = 39;
+ * optional SingleChannel infrared_channel = 40;
  * @return {?proto.SingleChannel}
  */
 proto.RedvoxPacket1000.prototype.getInfraredChannel = function() {
   return /** @type{?proto.SingleChannel} */ (
-    jspb.Message.getWrapperField(this, proto.SingleChannel, 39));
+    jspb.Message.getWrapperField(this, proto.SingleChannel, 40));
 };
 
 
@@ -1493,7 +1544,7 @@ proto.RedvoxPacket1000.prototype.getInfraredChannel = function() {
  * @return {!proto.RedvoxPacket1000} returns this
 */
 proto.RedvoxPacket1000.prototype.setInfraredChannel = function(value) {
-  return jspb.Message.setWrapperField(this, 39, value);
+  return jspb.Message.setWrapperField(this, 40, value);
 };
 
 
@@ -1511,19 +1562,19 @@ proto.RedvoxPacket1000.prototype.clearInfraredChannel = function() {
  * @return {boolean}
  */
 proto.RedvoxPacket1000.prototype.hasInfraredChannel = function() {
-  return jspb.Message.getField(this, 39) != null;
+  return jspb.Message.getField(this, 40) != null;
 };
 
 
 /**
- * map<string, string> metadata = 40;
+ * map<string, string> metadata = 41;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.RedvoxPacket1000.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 40, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 41, opt_noLazyCreate,
       null));
 };
 

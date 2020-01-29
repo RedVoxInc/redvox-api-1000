@@ -13,6 +13,8 @@
  #import "GPBProtocolBuffers_RuntimeSupport.h"
 #endif
 
+#import <stdatomic.h>
+
 #import "src/RedvoxApi1000.pbobjc.h"
 // @@protoc_insertion_point(imports)
 
@@ -74,6 +76,7 @@ static GPBFileDescriptor *RedvoxApi1000Root_FileDescriptor(void) {
 @dynamic packetEndTsUsWall;
 @dynamic packetEndTsUsMach;
 @dynamic serverAcquisitionArrivalTsUs;
+@dynamic appStartTsUsMach;
 @dynamic synchParamsArray, synchParamsArray_Count;
 @dynamic bestLatencyUs;
 @dynamic bestOffsetUs;
@@ -90,6 +93,8 @@ static GPBFileDescriptor *RedvoxApi1000Root_FileDescriptor(void) {
 typedef struct RedvoxPacket1000__storage_ {
   uint32_t _has_storage_[2];
   uint32_t api;
+  RedvoxPacket1000_OsType deviceOs;
+  RedvoxPacket1000_NetworkType networkType;
   NSString *authEmail;
   NSString *authToken;
   NSString *firebaseToken;
@@ -97,10 +102,8 @@ typedef struct RedvoxPacket1000__storage_ {
   NSString *deviceUuid;
   NSString *deviceMake;
   NSString *deviceModel;
-  NSString *deviceOs;
   NSString *deviceOsVersion;
   NSString *deviceAppVersion;
-  NSString *networkType;
   NSString *authServer;
   NSString *synchServer;
   NSString *acquisitionServer;
@@ -124,6 +127,7 @@ typedef struct RedvoxPacket1000__storage_ {
   double packetEndTsUsWall;
   double packetEndTsUsMach;
   double serverAcquisitionArrivalTsUs;
+  double appStartTsUsMach;
   double bestLatencyUs;
   double bestOffsetUs;
 } RedvoxPacket1000__storage_;
@@ -208,12 +212,12 @@ typedef struct RedvoxPacket1000__storage_ {
       },
       {
         .name = "deviceOs",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_OsType_EnumDescriptor,
         .number = RedvoxPacket1000_FieldNumber_DeviceOs,
         .hasIndex = 8,
         .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, deviceOs),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
         .name = "deviceOsVersion",
@@ -253,12 +257,12 @@ typedef struct RedvoxPacket1000__storage_ {
       },
       {
         .name = "networkType",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_NetworkType_EnumDescriptor,
         .number = RedvoxPacket1000_FieldNumber_NetworkType,
         .hasIndex = 13,
         .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, networkType),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
         .name = "networkStrength",
@@ -387,20 +391,11 @@ typedef struct RedvoxPacket1000__storage_ {
         .dataType = GPBDataTypeDouble,
       },
       {
-        .name = "bestLatencyUs",
+        .name = "appStartTsUsMach",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_FieldNumber_BestLatencyUs,
+        .number = RedvoxPacket1000_FieldNumber_AppStartTsUsMach,
         .hasIndex = 31,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, bestLatencyUs),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeDouble,
-      },
-      {
-        .name = "bestOffsetUs",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_FieldNumber_BestOffsetUs,
-        .hasIndex = 32,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, bestOffsetUs),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, appStartTsUsMach),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
@@ -414,10 +409,28 @@ typedef struct RedvoxPacket1000__storage_ {
         .dataType = GPBDataTypeDouble,
       },
       {
+        .name = "bestLatencyUs",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_FieldNumber_BestLatencyUs,
+        .hasIndex = 32,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, bestLatencyUs),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "bestOffsetUs",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_FieldNumber_BestOffsetUs,
+        .hasIndex = 33,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, bestOffsetUs),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
         .name = "microphoneChannel",
         .dataTypeSpecific.className = GPBStringifySymbol(MicrophoneChannel),
         .number = RedvoxPacket1000_FieldNumber_MicrophoneChannel,
-        .hasIndex = 33,
+        .hasIndex = 34,
         .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, microphoneChannel),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -426,7 +439,7 @@ typedef struct RedvoxPacket1000__storage_ {
         .name = "barometerChannel",
         .dataTypeSpecific.className = GPBStringifySymbol(SingleChannel),
         .number = RedvoxPacket1000_FieldNumber_BarometerChannel,
-        .hasIndex = 34,
+        .hasIndex = 35,
         .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, barometerChannel),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -435,7 +448,7 @@ typedef struct RedvoxPacket1000__storage_ {
         .name = "locationChannel",
         .dataTypeSpecific.className = GPBStringifySymbol(LocationChannel),
         .number = RedvoxPacket1000_FieldNumber_LocationChannel,
-        .hasIndex = 35,
+        .hasIndex = 36,
         .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, locationChannel),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -444,7 +457,7 @@ typedef struct RedvoxPacket1000__storage_ {
         .name = "accelerometerChannel",
         .dataTypeSpecific.className = GPBStringifySymbol(XyzChannel),
         .number = RedvoxPacket1000_FieldNumber_AccelerometerChannel,
-        .hasIndex = 36,
+        .hasIndex = 37,
         .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, accelerometerChannel),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -453,7 +466,7 @@ typedef struct RedvoxPacket1000__storage_ {
         .name = "gyroscopeChannel",
         .dataTypeSpecific.className = GPBStringifySymbol(XyzChannel),
         .number = RedvoxPacket1000_FieldNumber_GyroscopeChannel,
-        .hasIndex = 37,
+        .hasIndex = 38,
         .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, gyroscopeChannel),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -462,7 +475,7 @@ typedef struct RedvoxPacket1000__storage_ {
         .name = "magnetometerChannel",
         .dataTypeSpecific.className = GPBStringifySymbol(XyzChannel),
         .number = RedvoxPacket1000_FieldNumber_MagnetometerChannel,
-        .hasIndex = 38,
+        .hasIndex = 39,
         .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, magnetometerChannel),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -471,7 +484,7 @@ typedef struct RedvoxPacket1000__storage_ {
         .name = "lightChannel",
         .dataTypeSpecific.className = GPBStringifySymbol(SingleChannel),
         .number = RedvoxPacket1000_FieldNumber_LightChannel,
-        .hasIndex = 39,
+        .hasIndex = 40,
         .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, lightChannel),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -480,7 +493,7 @@ typedef struct RedvoxPacket1000__storage_ {
         .name = "infraredChannel",
         .dataTypeSpecific.className = GPBStringifySymbol(SingleChannel),
         .number = RedvoxPacket1000_FieldNumber_InfraredChannel,
-        .hasIndex = 40,
+        .hasIndex = 41,
         .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, infraredChannel),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -512,6 +525,106 @@ typedef struct RedvoxPacket1000__storage_ {
 }
 
 @end
+
+int32_t RedvoxPacket1000_DeviceOs_RawValue(RedvoxPacket1000 *message) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000 descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_FieldNumber_DeviceOs];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetRedvoxPacket1000_DeviceOs_RawValue(RedvoxPacket1000 *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000 descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_FieldNumber_DeviceOs];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
+
+int32_t RedvoxPacket1000_NetworkType_RawValue(RedvoxPacket1000 *message) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000 descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_FieldNumber_NetworkType];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetRedvoxPacket1000_NetworkType_RawValue(RedvoxPacket1000 *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000 descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_FieldNumber_NetworkType];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
+
+#pragma mark - Enum RedvoxPacket1000_NetworkType
+
+GPBEnumDescriptor *RedvoxPacket1000_NetworkType_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "Wifi\000Cellular\000None\000";
+    static const int32_t values[] = {
+        RedvoxPacket1000_NetworkType_Wifi,
+        RedvoxPacket1000_NetworkType_Cellular,
+        RedvoxPacket1000_NetworkType_None,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_NetworkType)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:RedvoxPacket1000_NetworkType_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL RedvoxPacket1000_NetworkType_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case RedvoxPacket1000_NetworkType_Wifi:
+    case RedvoxPacket1000_NetworkType_Cellular:
+    case RedvoxPacket1000_NetworkType_None:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
+#pragma mark - Enum RedvoxPacket1000_OsType
+
+GPBEnumDescriptor *RedvoxPacket1000_OsType_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "Android\000Ios\000Linux\000Windows\000";
+    static const int32_t values[] = {
+        RedvoxPacket1000_OsType_Android,
+        RedvoxPacket1000_OsType_Ios,
+        RedvoxPacket1000_OsType_Linux,
+        RedvoxPacket1000_OsType_Windows,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_OsType)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:RedvoxPacket1000_OsType_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL RedvoxPacket1000_OsType_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case RedvoxPacket1000_OsType_Android:
+    case RedvoxPacket1000_OsType_Ios:
+    case RedvoxPacket1000_OsType_Linux:
+    case RedvoxPacket1000_OsType_Windows:
+      return YES;
+    default:
+      return NO;
+  }
+}
 
 #pragma mark - MicrophoneChannel
 
@@ -891,6 +1004,8 @@ typedef struct XyzChannel__storage_ {
 @dynamic altitudeSamplesArray, altitudeSamplesArray_Count;
 @dynamic speedSamplesArray, speedSamplesArray_Count;
 @dynamic accuracySamplesArray, accuracySamplesArray_Count;
+@dynamic locationEnabled;
+@dynamic locationProvider;
 @dynamic hasSampleRateStatistics, sampleRateStatistics;
 @dynamic hasLatitudeSampleStatistics, latitudeSampleStatistics;
 @dynamic hasLongitudeSampleStatistics, longitudeSampleStatistics;
@@ -901,6 +1016,7 @@ typedef struct XyzChannel__storage_ {
 
 typedef struct LocationChannel__storage_ {
   uint32_t _has_storage_[1];
+  LocationChannel_LocationProvider locationProvider;
   NSString *sensorDescription;
   GPBDoubleArray *sampleTsUsArray;
   GPBDoubleArray *latitudeSamplesArray;
@@ -997,10 +1113,28 @@ typedef struct LocationChannel__storage_ {
         .dataType = GPBDataTypeDouble,
       },
       {
+        .name = "locationEnabled",
+        .dataTypeSpecific.className = NULL,
+        .number = LocationChannel_FieldNumber_LocationEnabled,
+        .hasIndex = 2,
+        .offset = 3,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "locationProvider",
+        .dataTypeSpecific.enumDescFunc = LocationChannel_LocationProvider_EnumDescriptor,
+        .number = LocationChannel_FieldNumber_LocationProvider,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(LocationChannel__storage_, locationProvider),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
         .name = "sampleRateStatistics",
         .dataTypeSpecific.className = GPBStringifySymbol(SummaryStatistics),
         .number = LocationChannel_FieldNumber_SampleRateStatistics,
-        .hasIndex = 2,
+        .hasIndex = 5,
         .offset = (uint32_t)offsetof(LocationChannel__storage_, sampleRateStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -1009,7 +1143,7 @@ typedef struct LocationChannel__storage_ {
         .name = "latitudeSampleStatistics",
         .dataTypeSpecific.className = GPBStringifySymbol(SummaryStatistics),
         .number = LocationChannel_FieldNumber_LatitudeSampleStatistics,
-        .hasIndex = 3,
+        .hasIndex = 6,
         .offset = (uint32_t)offsetof(LocationChannel__storage_, latitudeSampleStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -1018,7 +1152,7 @@ typedef struct LocationChannel__storage_ {
         .name = "longitudeSampleStatistics",
         .dataTypeSpecific.className = GPBStringifySymbol(SummaryStatistics),
         .number = LocationChannel_FieldNumber_LongitudeSampleStatistics,
-        .hasIndex = 4,
+        .hasIndex = 7,
         .offset = (uint32_t)offsetof(LocationChannel__storage_, longitudeSampleStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -1027,7 +1161,7 @@ typedef struct LocationChannel__storage_ {
         .name = "altitudeSampleStatistics",
         .dataTypeSpecific.className = GPBStringifySymbol(SummaryStatistics),
         .number = LocationChannel_FieldNumber_AltitudeSampleStatistics,
-        .hasIndex = 5,
+        .hasIndex = 8,
         .offset = (uint32_t)offsetof(LocationChannel__storage_, altitudeSampleStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -1036,7 +1170,7 @@ typedef struct LocationChannel__storage_ {
         .name = "speedSampleStatistics",
         .dataTypeSpecific.className = GPBStringifySymbol(SummaryStatistics),
         .number = LocationChannel_FieldNumber_SpeedSampleStatistics,
-        .hasIndex = 6,
+        .hasIndex = 9,
         .offset = (uint32_t)offsetof(LocationChannel__storage_, speedSampleStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -1045,7 +1179,7 @@ typedef struct LocationChannel__storage_ {
         .name = "accuracySampleStatistics",
         .dataTypeSpecific.className = GPBStringifySymbol(SummaryStatistics),
         .number = LocationChannel_FieldNumber_AccuracySampleStatistics,
-        .hasIndex = 7,
+        .hasIndex = 10,
         .offset = (uint32_t)offsetof(LocationChannel__storage_, accuracySampleStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -1083,6 +1217,57 @@ typedef struct LocationChannel__storage_ {
 
 @end
 
+int32_t LocationChannel_LocationProvider_RawValue(LocationChannel *message) {
+  GPBDescriptor *descriptor = [LocationChannel descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:LocationChannel_FieldNumber_LocationProvider];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetLocationChannel_LocationProvider_RawValue(LocationChannel *message, int32_t value) {
+  GPBDescriptor *descriptor = [LocationChannel descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:LocationChannel_FieldNumber_LocationProvider];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
+
+#pragma mark - Enum LocationChannel_LocationProvider
+
+GPBEnumDescriptor *LocationChannel_LocationProvider_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "None\000User\000Gps\000Network\000";
+    static const int32_t values[] = {
+        LocationChannel_LocationProvider_None,
+        LocationChannel_LocationProvider_User,
+        LocationChannel_LocationProvider_Gps,
+        LocationChannel_LocationProvider_Network,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(LocationChannel_LocationProvider)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:LocationChannel_LocationProvider_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL LocationChannel_LocationProvider_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case LocationChannel_LocationProvider_None:
+    case LocationChannel_LocationProvider_User:
+    case LocationChannel_LocationProvider_Gps:
+    case LocationChannel_LocationProvider_Network:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
 #pragma mark - SummaryStatistics
 
 @implementation SummaryStatistics
@@ -1095,9 +1280,11 @@ typedef struct LocationChannel__storage_ {
 @dynamic min;
 @dynamic max;
 @dynamic range;
+@dynamic metadata, metadata_Count;
 
 typedef struct SummaryStatistics__storage_ {
   uint32_t _has_storage_[1];
+  NSMutableDictionary *metadata;
   double count;
   double mean;
   double median;
@@ -1185,6 +1372,15 @@ typedef struct SummaryStatistics__storage_ {
         .offset = (uint32_t)offsetof(SummaryStatistics__storage_, range),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "metadata",
+        .dataTypeSpecific.className = NULL,
+        .number = SummaryStatistics_FieldNumber_Metadata,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(SummaryStatistics__storage_, metadata),
+        .flags = GPBFieldMapKeyString,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
