@@ -8,7 +8,7 @@
 #endif
 
 #if GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS
- #import <protobuf/GPBProtocolBuffers.h>
+ #import <Protobuf/GPBProtocolBuffers.h>
 #else
  #import "GPBProtocolBuffers.h"
 #endif
@@ -137,15 +137,15 @@ typedef GPB_ENUM(RedvoxPacket1000_FieldNumber) {
   RedvoxPacket1000_FieldNumber_DeviceTempC = 12,
   RedvoxPacket1000_FieldNumber_DeviceBatteryPercent = 13,
   RedvoxPacket1000_FieldNumber_NetworkType = 14,
-  RedvoxPacket1000_FieldNumber_NetworkStrength = 15,
+  RedvoxPacket1000_FieldNumber_NetworkStrengthDb = 15,
   RedvoxPacket1000_FieldNumber_IsBackfilled = 16,
   RedvoxPacket1000_FieldNumber_IsPrivate = 17,
   RedvoxPacket1000_FieldNumber_IsMicScrambled = 18,
   RedvoxPacket1000_FieldNumber_UncompressedSizeBytes = 19,
   RedvoxPacket1000_FieldNumber_CompressedSizeBytes = 20,
-  RedvoxPacket1000_FieldNumber_AuthServer = 21,
-  RedvoxPacket1000_FieldNumber_SynchServer = 22,
-  RedvoxPacket1000_FieldNumber_AcquisitionServer = 23,
+  RedvoxPacket1000_FieldNumber_AuthServerURL = 21,
+  RedvoxPacket1000_FieldNumber_SynchServerURL = 22,
+  RedvoxPacket1000_FieldNumber_AcquisitionServerURL = 23,
   RedvoxPacket1000_FieldNumber_PacketStartTsUsWall = 24,
   RedvoxPacket1000_FieldNumber_PacketStartTsUsMach = 25,
   RedvoxPacket1000_FieldNumber_PacketEndTsUsWall = 26,
@@ -213,8 +213,8 @@ typedef GPB_ENUM(RedvoxPacket1000_FieldNumber) {
 /** Type of network connection */
 @property(nonatomic, readwrite) RedvoxPacket1000_NetworkType networkType;
 
-/** A value representing the strength of the newtwork connection */
-@property(nonatomic, readwrite) double networkStrength;
+/** A value representing the strength of the network connection */
+@property(nonatomic, readwrite) double networkStrengthDb;
 
 /** Packet information */
 @property(nonatomic, readwrite) BOOL isBackfilled;
@@ -232,13 +232,13 @@ typedef GPB_ENUM(RedvoxPacket1000_FieldNumber) {
 @property(nonatomic, readwrite) double compressedSizeBytes;
 
 /** Server information */
-@property(nonatomic, readwrite, copy, null_resettable) NSString *authServer;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *authServerURL;
 
 /** URL of server used for time synchronization */
-@property(nonatomic, readwrite, copy, null_resettable) NSString *synchServer;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *synchServerURL;
 
 /** URL or server used for data acquisition */
-@property(nonatomic, readwrite, copy, null_resettable) NSString *acquisitionServer;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *acquisitionServerURL;
 
 /** Timing */
 @property(nonatomic, readwrite) double packetStartTsUsWall;

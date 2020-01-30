@@ -8,7 +8,7 @@
 #endif
 
 #if GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS
- #import <protobuf/GPBProtocolBuffers_RuntimeSupport.h>
+ #import <Protobuf/GPBProtocolBuffers_RuntimeSupport.h>
 #else
  #import "GPBProtocolBuffers_RuntimeSupport.h"
 #endif
@@ -62,15 +62,15 @@ static GPBFileDescriptor *RedvoxApi1000Root_FileDescriptor(void) {
 @dynamic deviceTempC;
 @dynamic deviceBatteryPercent;
 @dynamic networkType;
-@dynamic networkStrength;
+@dynamic networkStrengthDb;
 @dynamic isBackfilled;
 @dynamic isPrivate;
 @dynamic isMicScrambled;
 @dynamic uncompressedSizeBytes;
 @dynamic compressedSizeBytes;
-@dynamic authServer;
-@dynamic synchServer;
-@dynamic acquisitionServer;
+@dynamic authServerURL;
+@dynamic synchServerURL;
+@dynamic acquisitionServerURL;
 @dynamic packetStartTsUsWall;
 @dynamic packetStartTsUsMach;
 @dynamic packetEndTsUsWall;
@@ -104,9 +104,9 @@ typedef struct RedvoxPacket1000__storage_ {
   NSString *deviceModel;
   NSString *deviceOsVersion;
   NSString *deviceAppVersion;
-  NSString *authServer;
-  NSString *synchServer;
-  NSString *acquisitionServer;
+  NSString *authServerURL;
+  NSString *synchServerURL;
+  NSString *acquisitionServerURL;
   GPBDoubleArray *synchParamsArray;
   MicrophoneChannel *microphoneChannel;
   SingleChannel *barometerChannel;
@@ -119,7 +119,7 @@ typedef struct RedvoxPacket1000__storage_ {
   NSMutableDictionary *metadata;
   double deviceTempC;
   double deviceBatteryPercent;
-  double networkStrength;
+  double networkStrengthDb;
   double uncompressedSizeBytes;
   double compressedSizeBytes;
   double packetStartTsUsWall;
@@ -265,11 +265,11 @@ typedef struct RedvoxPacket1000__storage_ {
         .dataType = GPBDataTypeEnum,
       },
       {
-        .name = "networkStrength",
+        .name = "networkStrengthDb",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_FieldNumber_NetworkStrength,
+        .number = RedvoxPacket1000_FieldNumber_NetworkStrengthDb,
         .hasIndex = 14,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, networkStrength),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, networkStrengthDb),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
@@ -319,30 +319,30 @@ typedef struct RedvoxPacket1000__storage_ {
         .dataType = GPBDataTypeDouble,
       },
       {
-        .name = "authServer",
+        .name = "authServerURL",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_FieldNumber_AuthServer,
+        .number = RedvoxPacket1000_FieldNumber_AuthServerURL,
         .hasIndex = 23,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, authServer),
-        .flags = GPBFieldOptional,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, authServerURL),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeString,
       },
       {
-        .name = "synchServer",
+        .name = "synchServerURL",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_FieldNumber_SynchServer,
+        .number = RedvoxPacket1000_FieldNumber_SynchServerURL,
         .hasIndex = 24,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, synchServer),
-        .flags = GPBFieldOptional,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, synchServerURL),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeString,
       },
       {
-        .name = "acquisitionServer",
+        .name = "acquisitionServerURL",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_FieldNumber_AcquisitionServer,
+        .number = RedvoxPacket1000_FieldNumber_AcquisitionServerURL,
         .hasIndex = 25,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, acquisitionServer),
-        .flags = GPBFieldOptional,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, acquisitionServerURL),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeString,
       },
       {
@@ -516,9 +516,12 @@ typedef struct RedvoxPacket1000__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacket1000__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    #if defined(DEBUG) && DEBUG
-      NSAssert(descriptor == nil, @"Startup recursed!");
-    #endif  // DEBUG
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\003\025\004\246\241!!\000\026\005\246\241!!\000\027\013\246\241!!\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -716,9 +719,7 @@ typedef struct MicrophoneChannel__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(MicrophoneChannel__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    #if defined(DEBUG) && DEBUG
-      NSAssert(descriptor == nil, @"Startup recursed!");
-    #endif  // DEBUG
+    NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -827,9 +828,7 @@ typedef struct SingleChannel__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(SingleChannel__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    #if defined(DEBUG) && DEBUG
-      NSAssert(descriptor == nil, @"Startup recursed!");
-    #endif  // DEBUG
+    NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -982,9 +981,7 @@ typedef struct XyzChannel__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(XyzChannel__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    #if defined(DEBUG) && DEBUG
-      NSAssert(descriptor == nil, @"Startup recursed!");
-    #endif  // DEBUG
+    NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -1227,9 +1224,7 @@ typedef struct LocationChannel__storage_ {
         "\001\010\000accuracy_Samples\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    #if defined(DEBUG) && DEBUG
-      NSAssert(descriptor == nil, @"Startup recursed!");
-    #endif  // DEBUG
+    NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -1411,9 +1406,7 @@ typedef struct SummaryStatistics__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(SummaryStatistics__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    #if defined(DEBUG) && DEBUG
-      NSAssert(descriptor == nil, @"Startup recursed!");
-    #endif  // DEBUG
+    NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
   return descriptor;
