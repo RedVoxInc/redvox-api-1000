@@ -1183,6 +1183,10 @@ public final class RedvoxApi1000 {
     }
 
     /**
+     * <pre>
+     * An enumeration for type safe network types
+     * </pre>
+     *
      * Protobuf enum {@code RedvoxPacket1000.NetworkType}
      */
     public enum NetworkType
@@ -1296,6 +1300,10 @@ public final class RedvoxApi1000 {
     }
 
     /**
+     * <pre>
+     * An enumeration for type sage OS types
+     * </pre>
+     *
      * Protobuf enum {@code RedvoxPacket1000.OsType}
      */
     public enum OsType
@@ -14416,20 +14424,40 @@ public final class RedvoxApi1000 {
 
     /**
      * <pre>
-     * Is location enabled by the app
+     * Have location permissions been granted by the user?
      * </pre>
      *
-     * <code>bool location_enabled = 9;</code>
-     * @return The locationEnabled.
+     * <code>bool location_permissions_granted = 9;</code>
+     * @return The locationPermissionsGranted.
      */
-    boolean getLocationEnabled();
+    boolean getLocationPermissionsGranted();
+
+    /**
+     * <pre>
+     * Has location services been requested by the user?
+     * </pre>
+     *
+     * <code>bool location_services_requested = 10;</code>
+     * @return The locationServicesRequested.
+     */
+    boolean getLocationServicesRequested();
+
+    /**
+     * <pre>
+     * Are location services enabled and working?
+     * </pre>
+     *
+     * <code>bool location_services_enabled = 11;</code>
+     * @return The locationServicesEnabled.
+     */
+    boolean getLocationServicesEnabled();
 
     /**
      * <pre>
      * Location provider enumeration
      * </pre>
      *
-     * <code>.LocationChannel.LocationProvider location_provider = 10;</code>
+     * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
      * @return The enum numeric value on the wire for locationProvider.
      */
     int getLocationProviderValue();
@@ -14438,7 +14466,7 @@ public final class RedvoxApi1000 {
      * Location provider enumeration
      * </pre>
      *
-     * <code>.LocationChannel.LocationProvider location_provider = 10;</code>
+     * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
      * @return The locationProvider.
      */
     RedvoxApi1000.LocationChannel.LocationProvider getLocationProvider();
@@ -14448,7 +14476,7 @@ public final class RedvoxApi1000 {
      * Statistics for sample timestamps
      * </pre>
      *
-     * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+     * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
      * @return Whether the sampleRateStatistics field is set.
      */
     boolean hasSampleRateStatistics();
@@ -14457,7 +14485,7 @@ public final class RedvoxApi1000 {
      * Statistics for sample timestamps
      * </pre>
      *
-     * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+     * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
      * @return The sampleRateStatistics.
      */
     RedvoxApi1000.SummaryStatistics getSampleRateStatistics();
@@ -14466,7 +14494,7 @@ public final class RedvoxApi1000 {
      * Statistics for sample timestamps
      * </pre>
      *
-     * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+     * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
      */
     RedvoxApi1000.SummaryStatisticsOrBuilder getSampleRateStatisticsOrBuilder();
 
@@ -14475,7 +14503,7 @@ public final class RedvoxApi1000 {
      * Statistics for latitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+     * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
      * @return Whether the latitudeSampleStatistics field is set.
      */
     boolean hasLatitudeSampleStatistics();
@@ -14484,7 +14512,7 @@ public final class RedvoxApi1000 {
      * Statistics for latitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+     * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
      * @return The latitudeSampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getLatitudeSampleStatistics();
@@ -14493,7 +14521,7 @@ public final class RedvoxApi1000 {
      * Statistics for latitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+     * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
      */
     RedvoxApi1000.SummaryStatisticsOrBuilder getLatitudeSampleStatisticsOrBuilder();
 
@@ -14502,7 +14530,7 @@ public final class RedvoxApi1000 {
      * Statistics for longitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+     * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
      * @return Whether the longitudeSampleStatistics field is set.
      */
     boolean hasLongitudeSampleStatistics();
@@ -14511,7 +14539,7 @@ public final class RedvoxApi1000 {
      * Statistics for longitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+     * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
      * @return The longitudeSampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getLongitudeSampleStatistics();
@@ -14520,7 +14548,7 @@ public final class RedvoxApi1000 {
      * Statistics for longitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+     * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
      */
     RedvoxApi1000.SummaryStatisticsOrBuilder getLongitudeSampleStatisticsOrBuilder();
 
@@ -14529,7 +14557,7 @@ public final class RedvoxApi1000 {
      * Statistics for altitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+     * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
      * @return Whether the altitudeSampleStatistics field is set.
      */
     boolean hasAltitudeSampleStatistics();
@@ -14538,7 +14566,7 @@ public final class RedvoxApi1000 {
      * Statistics for altitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+     * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
      * @return The altitudeSampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getAltitudeSampleStatistics();
@@ -14547,7 +14575,7 @@ public final class RedvoxApi1000 {
      * Statistics for altitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+     * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
      */
     RedvoxApi1000.SummaryStatisticsOrBuilder getAltitudeSampleStatisticsOrBuilder();
 
@@ -14556,7 +14584,7 @@ public final class RedvoxApi1000 {
      * Statistics for speed samples
      * </pre>
      *
-     * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+     * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
      * @return Whether the speedSampleStatistics field is set.
      */
     boolean hasSpeedSampleStatistics();
@@ -14565,7 +14593,7 @@ public final class RedvoxApi1000 {
      * Statistics for speed samples
      * </pre>
      *
-     * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+     * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
      * @return The speedSampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getSpeedSampleStatistics();
@@ -14574,7 +14602,7 @@ public final class RedvoxApi1000 {
      * Statistics for speed samples
      * </pre>
      *
-     * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+     * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
      */
     RedvoxApi1000.SummaryStatisticsOrBuilder getSpeedSampleStatisticsOrBuilder();
 
@@ -14583,7 +14611,7 @@ public final class RedvoxApi1000 {
      * Statistics for accuracy samples
      * </pre>
      *
-     * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+     * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
      * @return Whether the accuracySampleStatistics field is set.
      */
     boolean hasAccuracySampleStatistics();
@@ -14592,7 +14620,7 @@ public final class RedvoxApi1000 {
      * Statistics for accuracy samples
      * </pre>
      *
-     * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+     * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
      * @return The accuracySampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getAccuracySampleStatistics();
@@ -14601,7 +14629,7 @@ public final class RedvoxApi1000 {
      * Statistics for accuracy samples
      * </pre>
      *
-     * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+     * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
      */
     RedvoxApi1000.SummaryStatisticsOrBuilder getAccuracySampleStatisticsOrBuilder();
 
@@ -14610,7 +14638,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 17;</code>
+     * <code>map&lt;string, string&gt; metadata = 19;</code>
      */
     int getMetadataCount();
     /**
@@ -14618,7 +14646,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 17;</code>
+     * <code>map&lt;string, string&gt; metadata = 19;</code>
      */
     boolean containsMetadata(
         java.lang.String key);
@@ -14633,7 +14661,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 17;</code>
+     * <code>map&lt;string, string&gt; metadata = 19;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getMetadataMap();
@@ -14642,7 +14670,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 17;</code>
+     * <code>map&lt;string, string&gt; metadata = 19;</code>
      */
 
     java.lang.String getMetadataOrDefault(
@@ -14653,7 +14681,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 17;</code>
+     * <code>map&lt;string, string&gt; metadata = 19;</code>
      */
 
     java.lang.String getMetadataOrThrow(
@@ -14856,16 +14884,26 @@ public final class RedvoxApi1000 {
             }
             case 72: {
 
-              locationEnabled_ = input.readBool();
+              locationPermissionsGranted_ = input.readBool();
               break;
             }
             case 80: {
+
+              locationServicesRequested_ = input.readBool();
+              break;
+            }
+            case 88: {
+
+              locationServicesEnabled_ = input.readBool();
+              break;
+            }
+            case 96: {
               int rawValue = input.readEnum();
 
               locationProvider_ = rawValue;
               break;
             }
-            case 90: {
+            case 106: {
               RedvoxApi1000.SummaryStatistics.Builder subBuilder = null;
               if (sampleRateStatistics_ != null) {
                 subBuilder = sampleRateStatistics_.toBuilder();
@@ -14878,7 +14916,7 @@ public final class RedvoxApi1000 {
 
               break;
             }
-            case 98: {
+            case 114: {
               RedvoxApi1000.SummaryStatistics.Builder subBuilder = null;
               if (latitudeSampleStatistics_ != null) {
                 subBuilder = latitudeSampleStatistics_.toBuilder();
@@ -14891,7 +14929,7 @@ public final class RedvoxApi1000 {
 
               break;
             }
-            case 106: {
+            case 122: {
               RedvoxApi1000.SummaryStatistics.Builder subBuilder = null;
               if (longitudeSampleStatistics_ != null) {
                 subBuilder = longitudeSampleStatistics_.toBuilder();
@@ -14904,7 +14942,7 @@ public final class RedvoxApi1000 {
 
               break;
             }
-            case 114: {
+            case 130: {
               RedvoxApi1000.SummaryStatistics.Builder subBuilder = null;
               if (altitudeSampleStatistics_ != null) {
                 subBuilder = altitudeSampleStatistics_.toBuilder();
@@ -14917,7 +14955,7 @@ public final class RedvoxApi1000 {
 
               break;
             }
-            case 122: {
+            case 138: {
               RedvoxApi1000.SummaryStatistics.Builder subBuilder = null;
               if (speedSampleStatistics_ != null) {
                 subBuilder = speedSampleStatistics_.toBuilder();
@@ -14930,7 +14968,7 @@ public final class RedvoxApi1000 {
 
               break;
             }
-            case 130: {
+            case 146: {
               RedvoxApi1000.SummaryStatistics.Builder subBuilder = null;
               if (accuracySampleStatistics_ != null) {
                 subBuilder = accuracySampleStatistics_.toBuilder();
@@ -14943,7 +14981,7 @@ public final class RedvoxApi1000 {
 
               break;
             }
-            case 138: {
+            case 154: {
               if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 metadata_ = com.google.protobuf.MapField.newMapField(
                     MetadataDefaultEntryHolder.defaultEntry);
@@ -15003,7 +15041,7 @@ public final class RedvoxApi1000 {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 17:
+        case 19:
           return internalGetMetadata();
         default:
           throw new RuntimeException(
@@ -15432,28 +15470,56 @@ public final class RedvoxApi1000 {
     }
     private int accuracySamplesMemoizedSerializedSize = -1;
 
-    public static final int LOCATION_ENABLED_FIELD_NUMBER = 9;
-    private boolean locationEnabled_;
+    public static final int LOCATION_PERMISSIONS_GRANTED_FIELD_NUMBER = 9;
+    private boolean locationPermissionsGranted_;
     /**
      * <pre>
-     * Is location enabled by the app
+     * Have location permissions been granted by the user?
      * </pre>
      *
-     * <code>bool location_enabled = 9;</code>
-     * @return The locationEnabled.
+     * <code>bool location_permissions_granted = 9;</code>
+     * @return The locationPermissionsGranted.
      */
-    public boolean getLocationEnabled() {
-      return locationEnabled_;
+    public boolean getLocationPermissionsGranted() {
+      return locationPermissionsGranted_;
     }
 
-    public static final int LOCATION_PROVIDER_FIELD_NUMBER = 10;
+    public static final int LOCATION_SERVICES_REQUESTED_FIELD_NUMBER = 10;
+    private boolean locationServicesRequested_;
+    /**
+     * <pre>
+     * Has location services been requested by the user?
+     * </pre>
+     *
+     * <code>bool location_services_requested = 10;</code>
+     * @return The locationServicesRequested.
+     */
+    public boolean getLocationServicesRequested() {
+      return locationServicesRequested_;
+    }
+
+    public static final int LOCATION_SERVICES_ENABLED_FIELD_NUMBER = 11;
+    private boolean locationServicesEnabled_;
+    /**
+     * <pre>
+     * Are location services enabled and working?
+     * </pre>
+     *
+     * <code>bool location_services_enabled = 11;</code>
+     * @return The locationServicesEnabled.
+     */
+    public boolean getLocationServicesEnabled() {
+      return locationServicesEnabled_;
+    }
+
+    public static final int LOCATION_PROVIDER_FIELD_NUMBER = 12;
     private int locationProvider_;
     /**
      * <pre>
      * Location provider enumeration
      * </pre>
      *
-     * <code>.LocationChannel.LocationProvider location_provider = 10;</code>
+     * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
      * @return The enum numeric value on the wire for locationProvider.
      */
     public int getLocationProviderValue() {
@@ -15464,7 +15530,7 @@ public final class RedvoxApi1000 {
      * Location provider enumeration
      * </pre>
      *
-     * <code>.LocationChannel.LocationProvider location_provider = 10;</code>
+     * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
      * @return The locationProvider.
      */
     public RedvoxApi1000.LocationChannel.LocationProvider getLocationProvider() {
@@ -15473,14 +15539,14 @@ public final class RedvoxApi1000 {
       return result == null ? RedvoxApi1000.LocationChannel.LocationProvider.UNRECOGNIZED : result;
     }
 
-    public static final int SAMPLE_RATE_STATISTICS_FIELD_NUMBER = 11;
+    public static final int SAMPLE_RATE_STATISTICS_FIELD_NUMBER = 13;
     private RedvoxApi1000.SummaryStatistics sampleRateStatistics_;
     /**
      * <pre>
      * Statistics for sample timestamps
      * </pre>
      *
-     * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+     * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
      * @return Whether the sampleRateStatistics field is set.
      */
     public boolean hasSampleRateStatistics() {
@@ -15491,7 +15557,7 @@ public final class RedvoxApi1000 {
      * Statistics for sample timestamps
      * </pre>
      *
-     * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+     * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
      * @return The sampleRateStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getSampleRateStatistics() {
@@ -15502,20 +15568,20 @@ public final class RedvoxApi1000 {
      * Statistics for sample timestamps
      * </pre>
      *
-     * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+     * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
      */
     public RedvoxApi1000.SummaryStatisticsOrBuilder getSampleRateStatisticsOrBuilder() {
       return getSampleRateStatistics();
     }
 
-    public static final int LATITUDE_SAMPLE_STATISTICS_FIELD_NUMBER = 12;
+    public static final int LATITUDE_SAMPLE_STATISTICS_FIELD_NUMBER = 14;
     private RedvoxApi1000.SummaryStatistics latitudeSampleStatistics_;
     /**
      * <pre>
      * Statistics for latitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+     * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
      * @return Whether the latitudeSampleStatistics field is set.
      */
     public boolean hasLatitudeSampleStatistics() {
@@ -15526,7 +15592,7 @@ public final class RedvoxApi1000 {
      * Statistics for latitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+     * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
      * @return The latitudeSampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getLatitudeSampleStatistics() {
@@ -15537,20 +15603,20 @@ public final class RedvoxApi1000 {
      * Statistics for latitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+     * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
      */
     public RedvoxApi1000.SummaryStatisticsOrBuilder getLatitudeSampleStatisticsOrBuilder() {
       return getLatitudeSampleStatistics();
     }
 
-    public static final int LONGITUDE_SAMPLE_STATISTICS_FIELD_NUMBER = 13;
+    public static final int LONGITUDE_SAMPLE_STATISTICS_FIELD_NUMBER = 15;
     private RedvoxApi1000.SummaryStatistics longitudeSampleStatistics_;
     /**
      * <pre>
      * Statistics for longitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+     * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
      * @return Whether the longitudeSampleStatistics field is set.
      */
     public boolean hasLongitudeSampleStatistics() {
@@ -15561,7 +15627,7 @@ public final class RedvoxApi1000 {
      * Statistics for longitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+     * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
      * @return The longitudeSampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getLongitudeSampleStatistics() {
@@ -15572,20 +15638,20 @@ public final class RedvoxApi1000 {
      * Statistics for longitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+     * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
      */
     public RedvoxApi1000.SummaryStatisticsOrBuilder getLongitudeSampleStatisticsOrBuilder() {
       return getLongitudeSampleStatistics();
     }
 
-    public static final int ALTITUDE_SAMPLE_STATISTICS_FIELD_NUMBER = 14;
+    public static final int ALTITUDE_SAMPLE_STATISTICS_FIELD_NUMBER = 16;
     private RedvoxApi1000.SummaryStatistics altitudeSampleStatistics_;
     /**
      * <pre>
      * Statistics for altitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+     * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
      * @return Whether the altitudeSampleStatistics field is set.
      */
     public boolean hasAltitudeSampleStatistics() {
@@ -15596,7 +15662,7 @@ public final class RedvoxApi1000 {
      * Statistics for altitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+     * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
      * @return The altitudeSampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getAltitudeSampleStatistics() {
@@ -15607,20 +15673,20 @@ public final class RedvoxApi1000 {
      * Statistics for altitude samples
      * </pre>
      *
-     * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+     * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
      */
     public RedvoxApi1000.SummaryStatisticsOrBuilder getAltitudeSampleStatisticsOrBuilder() {
       return getAltitudeSampleStatistics();
     }
 
-    public static final int SPEED_SAMPLE_STATISTICS_FIELD_NUMBER = 15;
+    public static final int SPEED_SAMPLE_STATISTICS_FIELD_NUMBER = 17;
     private RedvoxApi1000.SummaryStatistics speedSampleStatistics_;
     /**
      * <pre>
      * Statistics for speed samples
      * </pre>
      *
-     * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+     * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
      * @return Whether the speedSampleStatistics field is set.
      */
     public boolean hasSpeedSampleStatistics() {
@@ -15631,7 +15697,7 @@ public final class RedvoxApi1000 {
      * Statistics for speed samples
      * </pre>
      *
-     * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+     * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
      * @return The speedSampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getSpeedSampleStatistics() {
@@ -15642,20 +15708,20 @@ public final class RedvoxApi1000 {
      * Statistics for speed samples
      * </pre>
      *
-     * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+     * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
      */
     public RedvoxApi1000.SummaryStatisticsOrBuilder getSpeedSampleStatisticsOrBuilder() {
       return getSpeedSampleStatistics();
     }
 
-    public static final int ACCURACY_SAMPLE_STATISTICS_FIELD_NUMBER = 16;
+    public static final int ACCURACY_SAMPLE_STATISTICS_FIELD_NUMBER = 18;
     private RedvoxApi1000.SummaryStatistics accuracySampleStatistics_;
     /**
      * <pre>
      * Statistics for accuracy samples
      * </pre>
      *
-     * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+     * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
      * @return Whether the accuracySampleStatistics field is set.
      */
     public boolean hasAccuracySampleStatistics() {
@@ -15666,7 +15732,7 @@ public final class RedvoxApi1000 {
      * Statistics for accuracy samples
      * </pre>
      *
-     * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+     * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
      * @return The accuracySampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getAccuracySampleStatistics() {
@@ -15677,13 +15743,13 @@ public final class RedvoxApi1000 {
      * Statistics for accuracy samples
      * </pre>
      *
-     * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+     * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
      */
     public RedvoxApi1000.SummaryStatisticsOrBuilder getAccuracySampleStatisticsOrBuilder() {
       return getAccuracySampleStatistics();
     }
 
-    public static final int METADATA_FIELD_NUMBER = 17;
+    public static final int METADATA_FIELD_NUMBER = 19;
     private static final class MetadataDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.String, java.lang.String> defaultEntry =
@@ -15714,7 +15780,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 17;</code>
+     * <code>map&lt;string, string&gt; metadata = 19;</code>
      */
 
     public boolean containsMetadata(
@@ -15734,7 +15800,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 17;</code>
+     * <code>map&lt;string, string&gt; metadata = 19;</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -15745,7 +15811,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 17;</code>
+     * <code>map&lt;string, string&gt; metadata = 19;</code>
      */
 
     public java.lang.String getMetadataOrDefault(
@@ -15761,7 +15827,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 17;</code>
+     * <code>map&lt;string, string&gt; metadata = 19;</code>
      */
 
     public java.lang.String getMetadataOrThrow(
@@ -15838,36 +15904,42 @@ public final class RedvoxApi1000 {
       for (int i = 0; i < accuracySamples_.size(); i++) {
         output.writeDoubleNoTag(accuracySamples_.getDouble(i));
       }
-      if (locationEnabled_ != false) {
-        output.writeBool(9, locationEnabled_);
+      if (locationPermissionsGranted_ != false) {
+        output.writeBool(9, locationPermissionsGranted_);
+      }
+      if (locationServicesRequested_ != false) {
+        output.writeBool(10, locationServicesRequested_);
+      }
+      if (locationServicesEnabled_ != false) {
+        output.writeBool(11, locationServicesEnabled_);
       }
       if (locationProvider_ != RedvoxApi1000.LocationChannel.LocationProvider.NONE.getNumber()) {
-        output.writeEnum(10, locationProvider_);
+        output.writeEnum(12, locationProvider_);
       }
       if (sampleRateStatistics_ != null) {
-        output.writeMessage(11, getSampleRateStatistics());
+        output.writeMessage(13, getSampleRateStatistics());
       }
       if (latitudeSampleStatistics_ != null) {
-        output.writeMessage(12, getLatitudeSampleStatistics());
+        output.writeMessage(14, getLatitudeSampleStatistics());
       }
       if (longitudeSampleStatistics_ != null) {
-        output.writeMessage(13, getLongitudeSampleStatistics());
+        output.writeMessage(15, getLongitudeSampleStatistics());
       }
       if (altitudeSampleStatistics_ != null) {
-        output.writeMessage(14, getAltitudeSampleStatistics());
+        output.writeMessage(16, getAltitudeSampleStatistics());
       }
       if (speedSampleStatistics_ != null) {
-        output.writeMessage(15, getSpeedSampleStatistics());
+        output.writeMessage(17, getSpeedSampleStatistics());
       }
       if (accuracySampleStatistics_ != null) {
-        output.writeMessage(16, getAccuracySampleStatistics());
+        output.writeMessage(18, getAccuracySampleStatistics());
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
           internalGetMetadata(),
           MetadataDefaultEntryHolder.defaultEntry,
-          17);
+          19);
       unknownFields.writeTo(output);
     }
 
@@ -15950,37 +16022,45 @@ public final class RedvoxApi1000 {
         }
         accuracySamplesMemoizedSerializedSize = dataSize;
       }
-      if (locationEnabled_ != false) {
+      if (locationPermissionsGranted_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(9, locationEnabled_);
+          .computeBoolSize(9, locationPermissionsGranted_);
+      }
+      if (locationServicesRequested_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, locationServicesRequested_);
+      }
+      if (locationServicesEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, locationServicesEnabled_);
       }
       if (locationProvider_ != RedvoxApi1000.LocationChannel.LocationProvider.NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(10, locationProvider_);
+          .computeEnumSize(12, locationProvider_);
       }
       if (sampleRateStatistics_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getSampleRateStatistics());
+          .computeMessageSize(13, getSampleRateStatistics());
       }
       if (latitudeSampleStatistics_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getLatitudeSampleStatistics());
+          .computeMessageSize(14, getLatitudeSampleStatistics());
       }
       if (longitudeSampleStatistics_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, getLongitudeSampleStatistics());
+          .computeMessageSize(15, getLongitudeSampleStatistics());
       }
       if (altitudeSampleStatistics_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, getAltitudeSampleStatistics());
+          .computeMessageSize(16, getAltitudeSampleStatistics());
       }
       if (speedSampleStatistics_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getSpeedSampleStatistics());
+          .computeMessageSize(17, getSpeedSampleStatistics());
       }
       if (accuracySampleStatistics_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(16, getAccuracySampleStatistics());
+          .computeMessageSize(18, getAccuracySampleStatistics());
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetMetadata().getMap().entrySet()) {
@@ -15990,7 +16070,7 @@ public final class RedvoxApi1000 {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(17, metadata__);
+            .computeMessageSize(19, metadata__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -16024,8 +16104,12 @@ public final class RedvoxApi1000 {
           .equals(other.getSpeedSamplesList())) return false;
       if (!getAccuracySamplesList()
           .equals(other.getAccuracySamplesList())) return false;
-      if (getLocationEnabled()
-          != other.getLocationEnabled()) return false;
+      if (getLocationPermissionsGranted()
+          != other.getLocationPermissionsGranted()) return false;
+      if (getLocationServicesRequested()
+          != other.getLocationServicesRequested()) return false;
+      if (getLocationServicesEnabled()
+          != other.getLocationServicesEnabled()) return false;
       if (locationProvider_ != other.locationProvider_) return false;
       if (hasSampleRateStatistics() != other.hasSampleRateStatistics()) return false;
       if (hasSampleRateStatistics()) {
@@ -16099,9 +16183,15 @@ public final class RedvoxApi1000 {
         hash = (37 * hash) + ACCURACY_SAMPLES_FIELD_NUMBER;
         hash = (53 * hash) + getAccuracySamplesList().hashCode();
       }
-      hash = (37 * hash) + LOCATION_ENABLED_FIELD_NUMBER;
+      hash = (37 * hash) + LOCATION_PERMISSIONS_GRANTED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getLocationEnabled());
+          getLocationPermissionsGranted());
+      hash = (37 * hash) + LOCATION_SERVICES_REQUESTED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLocationServicesRequested());
+      hash = (37 * hash) + LOCATION_SERVICES_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLocationServicesEnabled());
       hash = (37 * hash) + LOCATION_PROVIDER_FIELD_NUMBER;
       hash = (53 * hash) + locationProvider_;
       if (hasSampleRateStatistics()) {
@@ -16247,7 +16337,7 @@ public final class RedvoxApi1000 {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 17:
+          case 19:
             return internalGetMetadata();
           default:
             throw new RuntimeException(
@@ -16258,7 +16348,7 @@ public final class RedvoxApi1000 {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 17:
+          case 19:
             return internalGetMutableMetadata();
           default:
             throw new RuntimeException(
@@ -16307,7 +16397,11 @@ public final class RedvoxApi1000 {
         bitField0_ = (bitField0_ & ~0x00000010);
         accuracySamples_ = emptyDoubleList();
         bitField0_ = (bitField0_ & ~0x00000020);
-        locationEnabled_ = false;
+        locationPermissionsGranted_ = false;
+
+        locationServicesRequested_ = false;
+
+        locationServicesEnabled_ = false;
 
         locationProvider_ = 0;
 
@@ -16407,7 +16501,9 @@ public final class RedvoxApi1000 {
           bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.accuracySamples_ = accuracySamples_;
-        result.locationEnabled_ = locationEnabled_;
+        result.locationPermissionsGranted_ = locationPermissionsGranted_;
+        result.locationServicesRequested_ = locationServicesRequested_;
+        result.locationServicesEnabled_ = locationServicesEnabled_;
         result.locationProvider_ = locationProvider_;
         if (sampleRateStatisticsBuilder_ == null) {
           result.sampleRateStatistics_ = sampleRateStatistics_;
@@ -16556,8 +16652,14 @@ public final class RedvoxApi1000 {
           }
           onChanged();
         }
-        if (other.getLocationEnabled() != false) {
-          setLocationEnabled(other.getLocationEnabled());
+        if (other.getLocationPermissionsGranted() != false) {
+          setLocationPermissionsGranted(other.getLocationPermissionsGranted());
+        }
+        if (other.getLocationServicesRequested() != false) {
+          setLocationServicesRequested(other.getLocationServicesRequested());
+        }
+        if (other.getLocationServicesEnabled() != false) {
+          setLocationServicesEnabled(other.getLocationServicesEnabled());
         }
         if (other.locationProvider_ != 0) {
           setLocationProviderValue(other.getLocationProviderValue());
@@ -17392,44 +17494,128 @@ public final class RedvoxApi1000 {
         return this;
       }
 
-      private boolean locationEnabled_ ;
+      private boolean locationPermissionsGranted_ ;
       /**
        * <pre>
-       * Is location enabled by the app
+       * Have location permissions been granted by the user?
        * </pre>
        *
-       * <code>bool location_enabled = 9;</code>
-       * @return The locationEnabled.
+       * <code>bool location_permissions_granted = 9;</code>
+       * @return The locationPermissionsGranted.
        */
-      public boolean getLocationEnabled() {
-        return locationEnabled_;
+      public boolean getLocationPermissionsGranted() {
+        return locationPermissionsGranted_;
       }
       /**
        * <pre>
-       * Is location enabled by the app
+       * Have location permissions been granted by the user?
        * </pre>
        *
-       * <code>bool location_enabled = 9;</code>
-       * @param value The locationEnabled to set.
+       * <code>bool location_permissions_granted = 9;</code>
+       * @param value The locationPermissionsGranted to set.
        * @return This builder for chaining.
        */
-      public Builder setLocationEnabled(boolean value) {
+      public Builder setLocationPermissionsGranted(boolean value) {
         
-        locationEnabled_ = value;
+        locationPermissionsGranted_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Is location enabled by the app
+       * Have location permissions been granted by the user?
        * </pre>
        *
-       * <code>bool location_enabled = 9;</code>
+       * <code>bool location_permissions_granted = 9;</code>
        * @return This builder for chaining.
        */
-      public Builder clearLocationEnabled() {
+      public Builder clearLocationPermissionsGranted() {
         
-        locationEnabled_ = false;
+        locationPermissionsGranted_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean locationServicesRequested_ ;
+      /**
+       * <pre>
+       * Has location services been requested by the user?
+       * </pre>
+       *
+       * <code>bool location_services_requested = 10;</code>
+       * @return The locationServicesRequested.
+       */
+      public boolean getLocationServicesRequested() {
+        return locationServicesRequested_;
+      }
+      /**
+       * <pre>
+       * Has location services been requested by the user?
+       * </pre>
+       *
+       * <code>bool location_services_requested = 10;</code>
+       * @param value The locationServicesRequested to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationServicesRequested(boolean value) {
+        
+        locationServicesRequested_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Has location services been requested by the user?
+       * </pre>
+       *
+       * <code>bool location_services_requested = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocationServicesRequested() {
+        
+        locationServicesRequested_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean locationServicesEnabled_ ;
+      /**
+       * <pre>
+       * Are location services enabled and working?
+       * </pre>
+       *
+       * <code>bool location_services_enabled = 11;</code>
+       * @return The locationServicesEnabled.
+       */
+      public boolean getLocationServicesEnabled() {
+        return locationServicesEnabled_;
+      }
+      /**
+       * <pre>
+       * Are location services enabled and working?
+       * </pre>
+       *
+       * <code>bool location_services_enabled = 11;</code>
+       * @param value The locationServicesEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationServicesEnabled(boolean value) {
+        
+        locationServicesEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Are location services enabled and working?
+       * </pre>
+       *
+       * <code>bool location_services_enabled = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocationServicesEnabled() {
+        
+        locationServicesEnabled_ = false;
         onChanged();
         return this;
       }
@@ -17440,7 +17626,7 @@ public final class RedvoxApi1000 {
        * Location provider enumeration
        * </pre>
        *
-       * <code>.LocationChannel.LocationProvider location_provider = 10;</code>
+       * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
        * @return The enum numeric value on the wire for locationProvider.
        */
       public int getLocationProviderValue() {
@@ -17451,7 +17637,7 @@ public final class RedvoxApi1000 {
        * Location provider enumeration
        * </pre>
        *
-       * <code>.LocationChannel.LocationProvider location_provider = 10;</code>
+       * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
        * @param value The enum numeric value on the wire for locationProvider to set.
        * @return This builder for chaining.
        */
@@ -17465,7 +17651,7 @@ public final class RedvoxApi1000 {
        * Location provider enumeration
        * </pre>
        *
-       * <code>.LocationChannel.LocationProvider location_provider = 10;</code>
+       * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
        * @return The locationProvider.
        */
       public RedvoxApi1000.LocationChannel.LocationProvider getLocationProvider() {
@@ -17478,7 +17664,7 @@ public final class RedvoxApi1000 {
        * Location provider enumeration
        * </pre>
        *
-       * <code>.LocationChannel.LocationProvider location_provider = 10;</code>
+       * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
        * @param value The locationProvider to set.
        * @return This builder for chaining.
        */
@@ -17496,7 +17682,7 @@ public final class RedvoxApi1000 {
        * Location provider enumeration
        * </pre>
        *
-       * <code>.LocationChannel.LocationProvider location_provider = 10;</code>
+       * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearLocationProvider() {
@@ -17514,7 +17700,7 @@ public final class RedvoxApi1000 {
        * Statistics for sample timestamps
        * </pre>
        *
-       * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+       * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
        * @return Whether the sampleRateStatistics field is set.
        */
       public boolean hasSampleRateStatistics() {
@@ -17525,7 +17711,7 @@ public final class RedvoxApi1000 {
        * Statistics for sample timestamps
        * </pre>
        *
-       * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+       * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
        * @return The sampleRateStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getSampleRateStatistics() {
@@ -17540,7 +17726,7 @@ public final class RedvoxApi1000 {
        * Statistics for sample timestamps
        * </pre>
        *
-       * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+       * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
        */
       public Builder setSampleRateStatistics(RedvoxApi1000.SummaryStatistics value) {
         if (sampleRateStatisticsBuilder_ == null) {
@@ -17560,7 +17746,7 @@ public final class RedvoxApi1000 {
        * Statistics for sample timestamps
        * </pre>
        *
-       * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+       * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
        */
       public Builder setSampleRateStatistics(
           RedvoxApi1000.SummaryStatistics.Builder builderForValue) {
@@ -17578,7 +17764,7 @@ public final class RedvoxApi1000 {
        * Statistics for sample timestamps
        * </pre>
        *
-       * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+       * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
        */
       public Builder mergeSampleRateStatistics(RedvoxApi1000.SummaryStatistics value) {
         if (sampleRateStatisticsBuilder_ == null) {
@@ -17600,7 +17786,7 @@ public final class RedvoxApi1000 {
        * Statistics for sample timestamps
        * </pre>
        *
-       * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+       * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
        */
       public Builder clearSampleRateStatistics() {
         if (sampleRateStatisticsBuilder_ == null) {
@@ -17618,7 +17804,7 @@ public final class RedvoxApi1000 {
        * Statistics for sample timestamps
        * </pre>
        *
-       * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+       * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
        */
       public RedvoxApi1000.SummaryStatistics.Builder getSampleRateStatisticsBuilder() {
         
@@ -17630,7 +17816,7 @@ public final class RedvoxApi1000 {
        * Statistics for sample timestamps
        * </pre>
        *
-       * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+       * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
        */
       public RedvoxApi1000.SummaryStatisticsOrBuilder getSampleRateStatisticsOrBuilder() {
         if (sampleRateStatisticsBuilder_ != null) {
@@ -17645,7 +17831,7 @@ public final class RedvoxApi1000 {
        * Statistics for sample timestamps
        * </pre>
        *
-       * <code>.SummaryStatistics sample_rate_statistics = 11;</code>
+       * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> 
@@ -17669,7 +17855,7 @@ public final class RedvoxApi1000 {
        * Statistics for latitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+       * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
        * @return Whether the latitudeSampleStatistics field is set.
        */
       public boolean hasLatitudeSampleStatistics() {
@@ -17680,7 +17866,7 @@ public final class RedvoxApi1000 {
        * Statistics for latitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+       * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
        * @return The latitudeSampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getLatitudeSampleStatistics() {
@@ -17695,7 +17881,7 @@ public final class RedvoxApi1000 {
        * Statistics for latitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+       * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
        */
       public Builder setLatitudeSampleStatistics(RedvoxApi1000.SummaryStatistics value) {
         if (latitudeSampleStatisticsBuilder_ == null) {
@@ -17715,7 +17901,7 @@ public final class RedvoxApi1000 {
        * Statistics for latitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+       * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
        */
       public Builder setLatitudeSampleStatistics(
           RedvoxApi1000.SummaryStatistics.Builder builderForValue) {
@@ -17733,7 +17919,7 @@ public final class RedvoxApi1000 {
        * Statistics for latitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+       * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
        */
       public Builder mergeLatitudeSampleStatistics(RedvoxApi1000.SummaryStatistics value) {
         if (latitudeSampleStatisticsBuilder_ == null) {
@@ -17755,7 +17941,7 @@ public final class RedvoxApi1000 {
        * Statistics for latitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+       * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
        */
       public Builder clearLatitudeSampleStatistics() {
         if (latitudeSampleStatisticsBuilder_ == null) {
@@ -17773,7 +17959,7 @@ public final class RedvoxApi1000 {
        * Statistics for latitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+       * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
        */
       public RedvoxApi1000.SummaryStatistics.Builder getLatitudeSampleStatisticsBuilder() {
         
@@ -17785,7 +17971,7 @@ public final class RedvoxApi1000 {
        * Statistics for latitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+       * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
        */
       public RedvoxApi1000.SummaryStatisticsOrBuilder getLatitudeSampleStatisticsOrBuilder() {
         if (latitudeSampleStatisticsBuilder_ != null) {
@@ -17800,7 +17986,7 @@ public final class RedvoxApi1000 {
        * Statistics for latitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics latitude_sample_statistics = 12;</code>
+       * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> 
@@ -17824,7 +18010,7 @@ public final class RedvoxApi1000 {
        * Statistics for longitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+       * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
        * @return Whether the longitudeSampleStatistics field is set.
        */
       public boolean hasLongitudeSampleStatistics() {
@@ -17835,7 +18021,7 @@ public final class RedvoxApi1000 {
        * Statistics for longitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+       * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
        * @return The longitudeSampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getLongitudeSampleStatistics() {
@@ -17850,7 +18036,7 @@ public final class RedvoxApi1000 {
        * Statistics for longitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+       * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
        */
       public Builder setLongitudeSampleStatistics(RedvoxApi1000.SummaryStatistics value) {
         if (longitudeSampleStatisticsBuilder_ == null) {
@@ -17870,7 +18056,7 @@ public final class RedvoxApi1000 {
        * Statistics for longitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+       * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
        */
       public Builder setLongitudeSampleStatistics(
           RedvoxApi1000.SummaryStatistics.Builder builderForValue) {
@@ -17888,7 +18074,7 @@ public final class RedvoxApi1000 {
        * Statistics for longitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+       * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
        */
       public Builder mergeLongitudeSampleStatistics(RedvoxApi1000.SummaryStatistics value) {
         if (longitudeSampleStatisticsBuilder_ == null) {
@@ -17910,7 +18096,7 @@ public final class RedvoxApi1000 {
        * Statistics for longitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+       * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
        */
       public Builder clearLongitudeSampleStatistics() {
         if (longitudeSampleStatisticsBuilder_ == null) {
@@ -17928,7 +18114,7 @@ public final class RedvoxApi1000 {
        * Statistics for longitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+       * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
        */
       public RedvoxApi1000.SummaryStatistics.Builder getLongitudeSampleStatisticsBuilder() {
         
@@ -17940,7 +18126,7 @@ public final class RedvoxApi1000 {
        * Statistics for longitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+       * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
        */
       public RedvoxApi1000.SummaryStatisticsOrBuilder getLongitudeSampleStatisticsOrBuilder() {
         if (longitudeSampleStatisticsBuilder_ != null) {
@@ -17955,7 +18141,7 @@ public final class RedvoxApi1000 {
        * Statistics for longitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics longitude_sample_statistics = 13;</code>
+       * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> 
@@ -17979,7 +18165,7 @@ public final class RedvoxApi1000 {
        * Statistics for altitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+       * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
        * @return Whether the altitudeSampleStatistics field is set.
        */
       public boolean hasAltitudeSampleStatistics() {
@@ -17990,7 +18176,7 @@ public final class RedvoxApi1000 {
        * Statistics for altitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+       * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
        * @return The altitudeSampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getAltitudeSampleStatistics() {
@@ -18005,7 +18191,7 @@ public final class RedvoxApi1000 {
        * Statistics for altitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+       * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
        */
       public Builder setAltitudeSampleStatistics(RedvoxApi1000.SummaryStatistics value) {
         if (altitudeSampleStatisticsBuilder_ == null) {
@@ -18025,7 +18211,7 @@ public final class RedvoxApi1000 {
        * Statistics for altitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+       * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
        */
       public Builder setAltitudeSampleStatistics(
           RedvoxApi1000.SummaryStatistics.Builder builderForValue) {
@@ -18043,7 +18229,7 @@ public final class RedvoxApi1000 {
        * Statistics for altitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+       * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
        */
       public Builder mergeAltitudeSampleStatistics(RedvoxApi1000.SummaryStatistics value) {
         if (altitudeSampleStatisticsBuilder_ == null) {
@@ -18065,7 +18251,7 @@ public final class RedvoxApi1000 {
        * Statistics for altitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+       * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
        */
       public Builder clearAltitudeSampleStatistics() {
         if (altitudeSampleStatisticsBuilder_ == null) {
@@ -18083,7 +18269,7 @@ public final class RedvoxApi1000 {
        * Statistics for altitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+       * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
        */
       public RedvoxApi1000.SummaryStatistics.Builder getAltitudeSampleStatisticsBuilder() {
         
@@ -18095,7 +18281,7 @@ public final class RedvoxApi1000 {
        * Statistics for altitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+       * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
        */
       public RedvoxApi1000.SummaryStatisticsOrBuilder getAltitudeSampleStatisticsOrBuilder() {
         if (altitudeSampleStatisticsBuilder_ != null) {
@@ -18110,7 +18296,7 @@ public final class RedvoxApi1000 {
        * Statistics for altitude samples
        * </pre>
        *
-       * <code>.SummaryStatistics altitude_sample_statistics = 14;</code>
+       * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> 
@@ -18134,7 +18320,7 @@ public final class RedvoxApi1000 {
        * Statistics for speed samples
        * </pre>
        *
-       * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+       * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
        * @return Whether the speedSampleStatistics field is set.
        */
       public boolean hasSpeedSampleStatistics() {
@@ -18145,7 +18331,7 @@ public final class RedvoxApi1000 {
        * Statistics for speed samples
        * </pre>
        *
-       * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+       * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
        * @return The speedSampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getSpeedSampleStatistics() {
@@ -18160,7 +18346,7 @@ public final class RedvoxApi1000 {
        * Statistics for speed samples
        * </pre>
        *
-       * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+       * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
        */
       public Builder setSpeedSampleStatistics(RedvoxApi1000.SummaryStatistics value) {
         if (speedSampleStatisticsBuilder_ == null) {
@@ -18180,7 +18366,7 @@ public final class RedvoxApi1000 {
        * Statistics for speed samples
        * </pre>
        *
-       * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+       * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
        */
       public Builder setSpeedSampleStatistics(
           RedvoxApi1000.SummaryStatistics.Builder builderForValue) {
@@ -18198,7 +18384,7 @@ public final class RedvoxApi1000 {
        * Statistics for speed samples
        * </pre>
        *
-       * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+       * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
        */
       public Builder mergeSpeedSampleStatistics(RedvoxApi1000.SummaryStatistics value) {
         if (speedSampleStatisticsBuilder_ == null) {
@@ -18220,7 +18406,7 @@ public final class RedvoxApi1000 {
        * Statistics for speed samples
        * </pre>
        *
-       * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+       * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
        */
       public Builder clearSpeedSampleStatistics() {
         if (speedSampleStatisticsBuilder_ == null) {
@@ -18238,7 +18424,7 @@ public final class RedvoxApi1000 {
        * Statistics for speed samples
        * </pre>
        *
-       * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+       * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
        */
       public RedvoxApi1000.SummaryStatistics.Builder getSpeedSampleStatisticsBuilder() {
         
@@ -18250,7 +18436,7 @@ public final class RedvoxApi1000 {
        * Statistics for speed samples
        * </pre>
        *
-       * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+       * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
        */
       public RedvoxApi1000.SummaryStatisticsOrBuilder getSpeedSampleStatisticsOrBuilder() {
         if (speedSampleStatisticsBuilder_ != null) {
@@ -18265,7 +18451,7 @@ public final class RedvoxApi1000 {
        * Statistics for speed samples
        * </pre>
        *
-       * <code>.SummaryStatistics speed_sample_statistics = 15;</code>
+       * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> 
@@ -18289,7 +18475,7 @@ public final class RedvoxApi1000 {
        * Statistics for accuracy samples
        * </pre>
        *
-       * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+       * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
        * @return Whether the accuracySampleStatistics field is set.
        */
       public boolean hasAccuracySampleStatistics() {
@@ -18300,7 +18486,7 @@ public final class RedvoxApi1000 {
        * Statistics for accuracy samples
        * </pre>
        *
-       * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+       * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
        * @return The accuracySampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getAccuracySampleStatistics() {
@@ -18315,7 +18501,7 @@ public final class RedvoxApi1000 {
        * Statistics for accuracy samples
        * </pre>
        *
-       * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+       * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
        */
       public Builder setAccuracySampleStatistics(RedvoxApi1000.SummaryStatistics value) {
         if (accuracySampleStatisticsBuilder_ == null) {
@@ -18335,7 +18521,7 @@ public final class RedvoxApi1000 {
        * Statistics for accuracy samples
        * </pre>
        *
-       * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+       * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
        */
       public Builder setAccuracySampleStatistics(
           RedvoxApi1000.SummaryStatistics.Builder builderForValue) {
@@ -18353,7 +18539,7 @@ public final class RedvoxApi1000 {
        * Statistics for accuracy samples
        * </pre>
        *
-       * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+       * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
        */
       public Builder mergeAccuracySampleStatistics(RedvoxApi1000.SummaryStatistics value) {
         if (accuracySampleStatisticsBuilder_ == null) {
@@ -18375,7 +18561,7 @@ public final class RedvoxApi1000 {
        * Statistics for accuracy samples
        * </pre>
        *
-       * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+       * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
        */
       public Builder clearAccuracySampleStatistics() {
         if (accuracySampleStatisticsBuilder_ == null) {
@@ -18393,7 +18579,7 @@ public final class RedvoxApi1000 {
        * Statistics for accuracy samples
        * </pre>
        *
-       * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+       * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
        */
       public RedvoxApi1000.SummaryStatistics.Builder getAccuracySampleStatisticsBuilder() {
         
@@ -18405,7 +18591,7 @@ public final class RedvoxApi1000 {
        * Statistics for accuracy samples
        * </pre>
        *
-       * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+       * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
        */
       public RedvoxApi1000.SummaryStatisticsOrBuilder getAccuracySampleStatisticsOrBuilder() {
         if (accuracySampleStatisticsBuilder_ != null) {
@@ -18420,7 +18606,7 @@ public final class RedvoxApi1000 {
        * Statistics for accuracy samples
        * </pre>
        *
-       * <code>.SummaryStatistics accuracy_sample_statistics = 16;</code>
+       * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> 
@@ -18467,7 +18653,7 @@ public final class RedvoxApi1000 {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 17;</code>
+       * <code>map&lt;string, string&gt; metadata = 19;</code>
        */
 
       public boolean containsMetadata(
@@ -18487,7 +18673,7 @@ public final class RedvoxApi1000 {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 17;</code>
+       * <code>map&lt;string, string&gt; metadata = 19;</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -18498,7 +18684,7 @@ public final class RedvoxApi1000 {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 17;</code>
+       * <code>map&lt;string, string&gt; metadata = 19;</code>
        */
 
       public java.lang.String getMetadataOrDefault(
@@ -18514,7 +18700,7 @@ public final class RedvoxApi1000 {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 17;</code>
+       * <code>map&lt;string, string&gt; metadata = 19;</code>
        */
 
       public java.lang.String getMetadataOrThrow(
@@ -18538,7 +18724,7 @@ public final class RedvoxApi1000 {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 17;</code>
+       * <code>map&lt;string, string&gt; metadata = 19;</code>
        */
 
       public Builder removeMetadata(
@@ -18561,7 +18747,7 @@ public final class RedvoxApi1000 {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 17;</code>
+       * <code>map&lt;string, string&gt; metadata = 19;</code>
        */
       public Builder putMetadata(
           java.lang.String key,
@@ -18577,7 +18763,7 @@ public final class RedvoxApi1000 {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 17;</code>
+       * <code>map&lt;string, string&gt; metadata = 19;</code>
        */
 
       public Builder putAllMetadata(
@@ -20290,33 +20476,35 @@ public final class RedvoxApi1000 {
       "istics\030\n \001(\0132\022.SummaryStatistics\022+\n\010meta" +
       "data\030\013 \003(\0132\031.XyzChannel.MetadataEntry\032/\n" +
       "\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"\243\006\n\017LocationChannel\022\032\n\022sensor_des" +
+      "(\t:\0028\001\"\367\006\n\017LocationChannel\022\032\n\022sensor_des" +
       "cription\030\001 \001(\t\022\033\n\023mean_sample_rate_hz\030\002 " +
       "\001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\030\n\020latitude_sa" +
       "mples\030\004 \003(\001\022\031\n\021longitude_samples\030\005 \003(\001\022\030" +
       "\n\020altitude_samples\030\006 \003(\001\022\025\n\rspeed_sample" +
-      "s\030\007 \003(\001\022\030\n\020accuracy_Samples\030\010 \003(\001\022\030\n\020loc" +
-      "ation_enabled\030\t \001(\010\022<\n\021location_provider" +
-      "\030\n \001(\0162!.LocationChannel.LocationProvide" +
-      "r\0222\n\026sample_rate_statistics\030\013 \001(\0132\022.Summ" +
-      "aryStatistics\0226\n\032latitude_sample_statist" +
-      "ics\030\014 \001(\0132\022.SummaryStatistics\0227\n\033longitu" +
-      "de_sample_statistics\030\r \001(\0132\022.SummaryStat" +
-      "istics\0226\n\032altitude_sample_statistics\030\016 \001" +
-      "(\0132\022.SummaryStatistics\0223\n\027speed_sample_s" +
-      "tatistics\030\017 \001(\0132\022.SummaryStatistics\0226\n\032a" +
-      "ccuracy_sample_statistics\030\020 \001(\0132\022.Summar" +
-      "yStatistics\0220\n\010metadata\030\021 \003(\0132\036.Location" +
-      "Channel.MetadataEntry\032/\n\rMetadataEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"<\n\020Locati" +
-      "onProvider\022\010\n\004NONE\020\000\022\010\n\004USER\020\001\022\007\n\003GPS\020\002\022" +
-      "\013\n\007NETWORK\020\003\"\356\001\n\021SummaryStatistics\022\r\n\005co" +
-      "unt\030\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\016\n\006median\030\003 \001(\001\022" +
-      "\014\n\004mode\030\004 \001(\001\022\020\n\010variance\030\005 \001(\001\022\013\n\003min\030\006" +
-      " \001(\001\022\013\n\003max\030\007 \001(\001\022\r\n\005range\030\010 \001(\001\0222\n\010meta" +
-      "data\030\t \003(\0132 .SummaryStatistics.MetadataE" +
-      "ntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001b\006proto3"
+      "s\030\007 \003(\001\022\030\n\020accuracy_Samples\030\010 \003(\001\022$\n\034loc" +
+      "ation_permissions_granted\030\t \001(\010\022#\n\033locat" +
+      "ion_services_requested\030\n \001(\010\022!\n\031location" +
+      "_services_enabled\030\013 \001(\010\022<\n\021location_prov" +
+      "ider\030\014 \001(\0162!.LocationChannel.LocationPro" +
+      "vider\0222\n\026sample_rate_statistics\030\r \001(\0132\022." +
+      "SummaryStatistics\0226\n\032latitude_sample_sta" +
+      "tistics\030\016 \001(\0132\022.SummaryStatistics\0227\n\033lon" +
+      "gitude_sample_statistics\030\017 \001(\0132\022.Summary" +
+      "Statistics\0226\n\032altitude_sample_statistics" +
+      "\030\020 \001(\0132\022.SummaryStatistics\0223\n\027speed_samp" +
+      "le_statistics\030\021 \001(\0132\022.SummaryStatistics\022" +
+      "6\n\032accuracy_sample_statistics\030\022 \001(\0132\022.Su" +
+      "mmaryStatistics\0220\n\010metadata\030\023 \003(\0132\036.Loca" +
+      "tionChannel.MetadataEntry\032/\n\rMetadataEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"<\n\020Lo" +
+      "cationProvider\022\010\n\004NONE\020\000\022\010\n\004USER\020\001\022\007\n\003GP" +
+      "S\020\002\022\013\n\007NETWORK\020\003\"\356\001\n\021SummaryStatistics\022\r" +
+      "\n\005count\030\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\016\n\006median\030\003 " +
+      "\001(\001\022\014\n\004mode\030\004 \001(\001\022\020\n\010variance\030\005 \001(\001\022\013\n\003m" +
+      "in\030\006 \001(\001\022\013\n\003max\030\007 \001(\001\022\r\n\005range\030\010 \001(\001\0222\n\010" +
+      "metadata\030\t \003(\0132 .SummaryStatistics.Metad" +
+      "ataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20375,7 +20563,7 @@ public final class RedvoxApi1000 {
     internal_static_LocationChannel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_LocationChannel_descriptor,
-        new java.lang.String[] { "SensorDescription", "MeanSampleRateHz", "SampleTsUs", "LatitudeSamples", "LongitudeSamples", "AltitudeSamples", "SpeedSamples", "AccuracySamples", "LocationEnabled", "LocationProvider", "SampleRateStatistics", "LatitudeSampleStatistics", "LongitudeSampleStatistics", "AltitudeSampleStatistics", "SpeedSampleStatistics", "AccuracySampleStatistics", "Metadata", });
+        new java.lang.String[] { "SensorDescription", "MeanSampleRateHz", "SampleTsUs", "LatitudeSamples", "LongitudeSamples", "AltitudeSamples", "SpeedSamples", "AccuracySamples", "LocationPermissionsGranted", "LocationServicesRequested", "LocationServicesEnabled", "LocationProvider", "SampleRateStatistics", "LatitudeSampleStatistics", "LongitudeSampleStatistics", "AltitudeSampleStatistics", "SpeedSampleStatistics", "AccuracySampleStatistics", "Metadata", });
     internal_static_LocationChannel_MetadataEntry_descriptor =
       internal_static_LocationChannel_descriptor.getNestedTypes().get(0);
     internal_static_LocationChannel_MetadataEntry_fieldAccessorTable = new

@@ -37,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Enum RedvoxPacket1000_NetworkType
 
+/** An enumeration for type safe network types */
 typedef GPB_ENUM(RedvoxPacket1000_NetworkType) {
   /**
    * Value used if any message's field encounters a value that is not defined
@@ -59,6 +60,7 @@ BOOL RedvoxPacket1000_NetworkType_IsValidValue(int32_t value);
 
 #pragma mark - Enum RedvoxPacket1000_OsType
 
+/** An enumeration for type sage OS types */
 typedef GPB_ENUM(RedvoxPacket1000_OsType) {
   /**
    * Value used if any message's field encounters a value that is not defined
@@ -515,15 +517,17 @@ typedef GPB_ENUM(LocationChannel_FieldNumber) {
   LocationChannel_FieldNumber_AltitudeSamplesArray = 6,
   LocationChannel_FieldNumber_SpeedSamplesArray = 7,
   LocationChannel_FieldNumber_AccuracySamplesArray = 8,
-  LocationChannel_FieldNumber_LocationEnabled = 9,
-  LocationChannel_FieldNumber_LocationProvider = 10,
-  LocationChannel_FieldNumber_SampleRateStatistics = 11,
-  LocationChannel_FieldNumber_LatitudeSampleStatistics = 12,
-  LocationChannel_FieldNumber_LongitudeSampleStatistics = 13,
-  LocationChannel_FieldNumber_AltitudeSampleStatistics = 14,
-  LocationChannel_FieldNumber_SpeedSampleStatistics = 15,
-  LocationChannel_FieldNumber_AccuracySampleStatistics = 16,
-  LocationChannel_FieldNumber_Metadata = 17,
+  LocationChannel_FieldNumber_LocationPermissionsGranted = 9,
+  LocationChannel_FieldNumber_LocationServicesRequested = 10,
+  LocationChannel_FieldNumber_LocationServicesEnabled = 11,
+  LocationChannel_FieldNumber_LocationProvider = 12,
+  LocationChannel_FieldNumber_SampleRateStatistics = 13,
+  LocationChannel_FieldNumber_LatitudeSampleStatistics = 14,
+  LocationChannel_FieldNumber_LongitudeSampleStatistics = 15,
+  LocationChannel_FieldNumber_AltitudeSampleStatistics = 16,
+  LocationChannel_FieldNumber_SpeedSampleStatistics = 17,
+  LocationChannel_FieldNumber_AccuracySampleStatistics = 18,
+  LocationChannel_FieldNumber_Metadata = 19,
 };
 
 /**
@@ -567,8 +571,14 @@ typedef GPB_ENUM(LocationChannel_FieldNumber) {
 /** The number of items in @c accuracySamplesArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger accuracySamplesArray_Count;
 
-/** Is location enabled by the app */
-@property(nonatomic, readwrite) BOOL locationEnabled;
+/** Have location permissions been granted by the user? */
+@property(nonatomic, readwrite) BOOL locationPermissionsGranted;
+
+/** Has location services been requested by the user? */
+@property(nonatomic, readwrite) BOOL locationServicesRequested;
+
+/** Are location services enabled and working? */
+@property(nonatomic, readwrite) BOOL locationServicesEnabled;
 
 /** Location provider enumeration */
 @property(nonatomic, readwrite) LocationChannel_LocationProvider locationProvider;

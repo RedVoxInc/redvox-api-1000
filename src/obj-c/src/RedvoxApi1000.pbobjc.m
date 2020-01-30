@@ -1004,7 +1004,9 @@ typedef struct XyzChannel__storage_ {
 @dynamic altitudeSamplesArray, altitudeSamplesArray_Count;
 @dynamic speedSamplesArray, speedSamplesArray_Count;
 @dynamic accuracySamplesArray, accuracySamplesArray_Count;
-@dynamic locationEnabled;
+@dynamic locationPermissionsGranted;
+@dynamic locationServicesRequested;
+@dynamic locationServicesEnabled;
 @dynamic locationProvider;
 @dynamic hasSampleRateStatistics, sampleRateStatistics;
 @dynamic hasLatitudeSampleStatistics, latitudeSampleStatistics;
@@ -1113,11 +1115,29 @@ typedef struct LocationChannel__storage_ {
         .dataType = GPBDataTypeDouble,
       },
       {
-        .name = "locationEnabled",
+        .name = "locationPermissionsGranted",
         .dataTypeSpecific.className = NULL,
-        .number = LocationChannel_FieldNumber_LocationEnabled,
+        .number = LocationChannel_FieldNumber_LocationPermissionsGranted,
         .hasIndex = 2,
         .offset = 3,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "locationServicesRequested",
+        .dataTypeSpecific.className = NULL,
+        .number = LocationChannel_FieldNumber_LocationServicesRequested,
+        .hasIndex = 4,
+        .offset = 5,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "locationServicesEnabled",
+        .dataTypeSpecific.className = NULL,
+        .number = LocationChannel_FieldNumber_LocationServicesEnabled,
+        .hasIndex = 6,
+        .offset = 7,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1125,7 +1145,7 @@ typedef struct LocationChannel__storage_ {
         .name = "locationProvider",
         .dataTypeSpecific.enumDescFunc = LocationChannel_LocationProvider_EnumDescriptor,
         .number = LocationChannel_FieldNumber_LocationProvider,
-        .hasIndex = 4,
+        .hasIndex = 8,
         .offset = (uint32_t)offsetof(LocationChannel__storage_, locationProvider),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
@@ -1134,7 +1154,7 @@ typedef struct LocationChannel__storage_ {
         .name = "sampleRateStatistics",
         .dataTypeSpecific.className = GPBStringifySymbol(SummaryStatistics),
         .number = LocationChannel_FieldNumber_SampleRateStatistics,
-        .hasIndex = 5,
+        .hasIndex = 9,
         .offset = (uint32_t)offsetof(LocationChannel__storage_, sampleRateStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -1143,7 +1163,7 @@ typedef struct LocationChannel__storage_ {
         .name = "latitudeSampleStatistics",
         .dataTypeSpecific.className = GPBStringifySymbol(SummaryStatistics),
         .number = LocationChannel_FieldNumber_LatitudeSampleStatistics,
-        .hasIndex = 6,
+        .hasIndex = 10,
         .offset = (uint32_t)offsetof(LocationChannel__storage_, latitudeSampleStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -1152,7 +1172,7 @@ typedef struct LocationChannel__storage_ {
         .name = "longitudeSampleStatistics",
         .dataTypeSpecific.className = GPBStringifySymbol(SummaryStatistics),
         .number = LocationChannel_FieldNumber_LongitudeSampleStatistics,
-        .hasIndex = 7,
+        .hasIndex = 11,
         .offset = (uint32_t)offsetof(LocationChannel__storage_, longitudeSampleStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -1161,7 +1181,7 @@ typedef struct LocationChannel__storage_ {
         .name = "altitudeSampleStatistics",
         .dataTypeSpecific.className = GPBStringifySymbol(SummaryStatistics),
         .number = LocationChannel_FieldNumber_AltitudeSampleStatistics,
-        .hasIndex = 8,
+        .hasIndex = 12,
         .offset = (uint32_t)offsetof(LocationChannel__storage_, altitudeSampleStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -1170,7 +1190,7 @@ typedef struct LocationChannel__storage_ {
         .name = "speedSampleStatistics",
         .dataTypeSpecific.className = GPBStringifySymbol(SummaryStatistics),
         .number = LocationChannel_FieldNumber_SpeedSampleStatistics,
-        .hasIndex = 9,
+        .hasIndex = 13,
         .offset = (uint32_t)offsetof(LocationChannel__storage_, speedSampleStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -1179,7 +1199,7 @@ typedef struct LocationChannel__storage_ {
         .name = "accuracySampleStatistics",
         .dataTypeSpecific.className = GPBStringifySymbol(SummaryStatistics),
         .number = LocationChannel_FieldNumber_AccuracySampleStatistics,
-        .hasIndex = 10,
+        .hasIndex = 14,
         .offset = (uint32_t)offsetof(LocationChannel__storage_, accuracySampleStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
