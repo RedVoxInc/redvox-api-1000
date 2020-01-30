@@ -36,7 +36,7 @@ message RedvoxPacket1000 {
     double device_temp_c = 12;                          // Temperature of the device in degrees centigrade
     double device_battery_percent = 13;                 // Device battery level as a percentage between 0% and 100%
     NetworkType network_type = 14;                      // Type of network connection
-    double network_strength = 15;                       // A value representing the strength of the newtwork connection
+    double network_strength_db = 15;                    // A value representing the strength of the network connection
 
     // Packet information
     bool is_backfilled = 16;                            // Field for if this packet has been backfilled or not
@@ -46,9 +46,9 @@ message RedvoxPacket1000 {
     double compressed_size_bytes = 20;                  // Size of the compressed packet
 
     // Server information
-    string auth_server = 21;                            // URL of server used for authentication
-    string synch_server = 22;                           // URL of server used for time synchronization
-    string acquisition_server = 23;                     // URL or server used for data acquisition
+    string auth_server_url = 21;                        // URL of server used for authentication
+    string synch_server_url = 22;                       // URL of server used for time synchronization
+    string acquisition_server_url = 23;                 // URL or server used for data acquisition
 
     // Timing
     double packet_start_ts_us_wall = 24;                // Start timestamp of the packet using the wall clock (corresponding to first microphone sample)
