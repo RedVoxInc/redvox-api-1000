@@ -2,12 +2,14 @@ syntax = "proto3";
 
 // Message type for encoding API 1000 RedVox packets.
 message RedvoxPacket1000 {
+    // An enumeration for type safe network types
     enum NetworkType {
         WIFI = 0;
         CELLULAR = 1;
         NONE = 2;
     }
 
+    // An enumeration for type sage OS types
     enum OsType {
         ANDROID = 0;
         IOS = 1;
@@ -126,15 +128,17 @@ message LocationChannel {
     repeated double altitude_samples = 6;               // A list of altitude samples
     repeated double speed_samples = 7;                  // A list of speed samples
     repeated double accuracy_Samples = 8;               // A list of accuracy samples
-    bool location_enabled = 9;                          // Is location enabled by the app
-    LocationProvider location_provider = 10;            // Location provider enumeration
-    SummaryStatistics sample_rate_statistics = 11;      // Statistics for sample timestamps
-    SummaryStatistics latitude_sample_statistics = 12;  // Statistics for latitude samples
-    SummaryStatistics longitude_sample_statistics = 13; // Statistics for longitude samples
-    SummaryStatistics altitude_sample_statistics = 14;  // Statistics for altitude samples
-    SummaryStatistics speed_sample_statistics = 15;     // Statistics for speed samples
-    SummaryStatistics accuracy_sample_statistics = 16;  // Statistics for accuracy samples
-    map<string, string> metadata = 17;                  // A map from string to string for including untyped metadata
+    bool location_permissions_granted = 9;              // Have location permissions been granted by the user?
+    bool location_services_requested = 10;              // Has location services been requested by the user?
+    bool location_services_enabled = 11;                // Are location services enabled and working?
+    LocationProvider location_provider = 12;            // Location provider enumeration
+    SummaryStatistics sample_rate_statistics = 13;      // Statistics for sample timestamps
+    SummaryStatistics latitude_sample_statistics = 14;  // Statistics for latitude samples
+    SummaryStatistics longitude_sample_statistics = 15; // Statistics for longitude samples
+    SummaryStatistics altitude_sample_statistics = 16;  // Statistics for altitude samples
+    SummaryStatistics speed_sample_statistics = 17;     // Statistics for speed samples
+    SummaryStatistics accuracy_sample_statistics = 18;  // Statistics for accuracy samples
+    map<string, string> metadata = 19;                  // A map from string to string for including untyped metadata
 }
 
 // Message type for summary statistics
