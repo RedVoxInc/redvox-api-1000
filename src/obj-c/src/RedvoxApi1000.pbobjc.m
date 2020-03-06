@@ -8,7 +8,7 @@
 #endif
 
 #if GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS
- #import <Protobuf/GPBProtocolBuffers_RuntimeSupport.h>
+ #import <protobuf/GPBProtocolBuffers_RuntimeSupport.h>
 #else
  #import "GPBProtocolBuffers_RuntimeSupport.h"
 #endif
@@ -521,7 +521,9 @@ typedef struct RedvoxPacket1000__storage_ {
         "\003\025\004\246\241!!\000\026\005\246\241!!\000\027\013\246\241!!\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -719,7 +721,9 @@ typedef struct MicrophoneChannel__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(MicrophoneChannel__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -828,7 +832,9 @@ typedef struct SingleChannel__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(SingleChannel__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -981,7 +987,9 @@ typedef struct XyzChannel__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(XyzChannel__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -1108,7 +1116,7 @@ typedef struct LocationChannel__storage_ {
         .number = LocationChannel_FieldNumber_AccuracySamplesArray,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(LocationChannel__storage_, accuracySamplesArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked | GPBFieldTextFormatNameCustom),
+        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
         .dataType = GPBDataTypeDouble,
       },
       {
@@ -1219,12 +1227,9 @@ typedef struct LocationChannel__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(LocationChannel__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    static const char *extraTextFormatInfo =
-        "\001\010\000accuracy_Samples\000";
-    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
-#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -1282,6 +1287,106 @@ BOOL LocationChannel_LocationProvider_IsValidValue(int32_t value__) {
       return NO;
   }
 }
+
+#pragma mark - ImageChannel
+
+@implementation ImageChannel
+
+@dynamic sensorDescription;
+@dynamic meanSampleRateHz;
+@dynamic sampleTsUsArray, sampleTsUsArray_Count;
+@dynamic samplesArray, samplesArray_Count;
+@dynamic hasSampleRateStatistics, sampleRateStatistics;
+@dynamic metadata, metadata_Count;
+
+typedef struct ImageChannel__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *sensorDescription;
+  GPBDoubleArray *sampleTsUsArray;
+  NSMutableArray *samplesArray;
+  SummaryStatistics *sampleRateStatistics;
+  NSMutableDictionary *metadata;
+  double meanSampleRateHz;
+} ImageChannel__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "sensorDescription",
+        .dataTypeSpecific.className = NULL,
+        .number = ImageChannel_FieldNumber_SensorDescription,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ImageChannel__storage_, sensorDescription),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "meanSampleRateHz",
+        .dataTypeSpecific.className = NULL,
+        .number = ImageChannel_FieldNumber_MeanSampleRateHz,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ImageChannel__storage_, meanSampleRateHz),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "sampleTsUsArray",
+        .dataTypeSpecific.className = NULL,
+        .number = ImageChannel_FieldNumber_SampleTsUsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ImageChannel__storage_, sampleTsUsArray),
+        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "samplesArray",
+        .dataTypeSpecific.className = NULL,
+        .number = ImageChannel_FieldNumber_SamplesArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ImageChannel__storage_, samplesArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeBytes,
+      },
+      {
+        .name = "sampleRateStatistics",
+        .dataTypeSpecific.className = GPBStringifySymbol(SummaryStatistics),
+        .number = ImageChannel_FieldNumber_SampleRateStatistics,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(ImageChannel__storage_, sampleRateStatistics),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "metadata",
+        .dataTypeSpecific.className = NULL,
+        .number = ImageChannel_FieldNumber_Metadata,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ImageChannel__storage_, metadata),
+        .flags = GPBFieldMapKeyString,
+        .dataType = GPBDataTypeString,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ImageChannel class]
+                                     rootClass:[RedvoxApi1000Root class]
+                                          file:RedvoxApi1000Root_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ImageChannel__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
 
 #pragma mark - SummaryStatistics
 
@@ -1406,7 +1511,9 @@ typedef struct SummaryStatistics__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(SummaryStatistics__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;

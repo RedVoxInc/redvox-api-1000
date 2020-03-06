@@ -8,7 +8,7 @@
 #endif
 
 #if GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS
- #import <Protobuf/GPBProtocolBuffers.h>
+ #import <protobuf/GPBProtocolBuffers.h>
 #else
  #import "GPBProtocolBuffers.h"
 #endif
@@ -631,6 +631,46 @@ int32_t LocationChannel_LocationProvider_RawValue(LocationChannel *message);
  * was generated.
  **/
 void SetLocationChannel_LocationProvider_RawValue(LocationChannel *message, int32_t value);
+
+#pragma mark - ImageChannel
+
+typedef GPB_ENUM(ImageChannel_FieldNumber) {
+  ImageChannel_FieldNumber_SensorDescription = 1,
+  ImageChannel_FieldNumber_MeanSampleRateHz = 2,
+  ImageChannel_FieldNumber_SampleTsUsArray = 3,
+  ImageChannel_FieldNumber_SamplesArray = 4,
+  ImageChannel_FieldNumber_SampleRateStatistics = 5,
+  ImageChannel_FieldNumber_Metadata = 6,
+};
+
+@interface ImageChannel : GPBMessage
+
+/** The name or description of the sensor */
+@property(nonatomic, readwrite, copy, null_resettable) NSString *sensorDescription;
+
+/** The mean sample rate in Hz */
+@property(nonatomic, readwrite) double meanSampleRateHz;
+
+/** A list of timestamps, one for each sample */
+@property(nonatomic, readwrite, strong, null_resettable) GPBDoubleArray *sampleTsUsArray;
+/** The number of items in @c sampleTsUsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger sampleTsUsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSData*> *samplesArray;
+/** The number of items in @c samplesArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger samplesArray_Count;
+
+/** Statistics for sample timestamps */
+@property(nonatomic, readwrite, strong, null_resettable) SummaryStatistics *sampleRateStatistics;
+/** Test to see if @c sampleRateStatistics has been set. */
+@property(nonatomic, readwrite) BOOL hasSampleRateStatistics;
+
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
+
+@end
 
 #pragma mark - SummaryStatistics
 

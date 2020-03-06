@@ -146,8 +146,8 @@ message ImageChannel {
     double mean_sample_rate_hz = 2;                     // The mean sample rate in Hz
     repeated double sample_ts_us = 3;                   // A list of timestamps, one for each sample
     repeated bytes samples = 4;
-    SummaryStatistics sample_rate_statistics = 13;      // Statistics for sample timestamps
-    map<string, string> metadata = 19;                  // A map from string to string for including untyped metadata
+    SummaryStatistics sample_rate_statistics = 5;      // Statistics for sample timestamps
+    map<string, string> metadata = 6;                  // A map from string to string for including untyped metadata
 }
 
 // Message type for summary statistics
