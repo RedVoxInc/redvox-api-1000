@@ -127,7 +127,7 @@ message LocationChannel {
     repeated double longitude_samples = 5;              // A list of longitude samples
     repeated double altitude_samples = 6;               // A list of altitude samples
     repeated double speed_samples = 7;                  // A list of speed samples
-    repeated double accuracy_Samples = 8;               // A list of accuracy samples
+    repeated double accuracy_samples = 8;               // A list of accuracy samples
     bool location_permissions_granted = 9;              // Have location permissions been granted by the user?
     bool location_services_requested = 10;              // Has location services been requested by the user?
     bool location_services_enabled = 11;                // Are location services enabled and working?
@@ -138,6 +138,15 @@ message LocationChannel {
     SummaryStatistics altitude_sample_statistics = 16;  // Statistics for altitude samples
     SummaryStatistics speed_sample_statistics = 17;     // Statistics for speed samples
     SummaryStatistics accuracy_sample_statistics = 18;  // Statistics for accuracy samples
+    map<string, string> metadata = 19;                  // A map from string to string for including untyped metadata
+}
+
+message ImageChannel {
+    string sensor_description = 1;                      // The name or description of the sensor
+    double mean_sample_rate_hz = 2;                     // The mean sample rate in Hz
+    repeated double sample_ts_us = 3;                   // A list of timestamps, one for each sample
+    repeated bytes samples = 4;
+    SummaryStatistics sample_rate_statistics = 13;      // Statistics for sample timestamps
     map<string, string> metadata = 19;                  // A map from string to string for including untyped metadata
 }
 
