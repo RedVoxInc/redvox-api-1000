@@ -164,3 +164,27 @@ message SummaryStatistics {
     map<string, string> metadata = 9;                   // A map from string to string for including untyped metadata
 }
 
+// Next we define the messages that should be utilized when communicating with a compatible RedVox acquisition service.
+
+// Message for sending RedVox data to a redvox.io data acquisition service.
+message AcquisitionRequest {
+    bytes compressed_redvox_packet_1000 = 1;            // The compressed packet to send.
+    int64 checksum = 2;                                 // A checksum of the bytes in field 1.
+}
+
+// Response from data acquisition services.
+message AcquisitionResponse {
+    enum ResponseType {                                 // Server response types
+        OK = 0;                                         // No issues with packet
+        AUTH_ERROR = 1;                                 // An authentication error has occurred
+        DATA_ERROR = 2;                                 // An error with the data decoding or data quality
+        OTHER_ERROR = 3;                                // Any other errors
+    }
+
+    ResponseType response_type = 1;                     // Response type (as above)
+    int64 checksum = 2;                                 // Checksum computed by server
+    string details = 3;                                 // Any other error details
+    bool resend = 4;                                    // If set, client to should attempt to resend the file
+                                                        // otherwise, don't resend the file.
+}
+

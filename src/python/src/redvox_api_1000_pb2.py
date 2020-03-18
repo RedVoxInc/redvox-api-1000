@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x19src/redvox-api-1000.proto\"\xd0\x0b\n\x10RedvoxPacket1000\x12\x0b\n\x03\x61pi\x18\x01 \x01(\r\x12\x12\n\nauth_email\x18\x02 \x01(\t\x12\x12\n\nauth_token\x18\x03 \x01(\t\x12\x16\n\x0e\x66irebase_token\x18\x04 \x01(\t\x12\x11\n\tdevice_id\x18\x05 \x01(\t\x12\x13\n\x0b\x64\x65vice_uuid\x18\x06 \x01(\t\x12\x13\n\x0b\x64\x65vice_make\x18\x07 \x01(\t\x12\x14\n\x0c\x64\x65vice_model\x18\x08 \x01(\t\x12+\n\tdevice_os\x18\t \x01(\x0e\x32\x18.RedvoxPacket1000.OsType\x12\x19\n\x11\x64\x65vice_os_version\x18\n \x01(\t\x12\x1a\n\x12\x64\x65vice_app_version\x18\x0b \x01(\t\x12\x15\n\rdevice_temp_c\x18\x0c \x01(\x01\x12\x1e\n\x16\x64\x65vice_battery_percent\x18\r \x01(\x01\x12\x33\n\x0cnetwork_type\x18\x0e \x01(\x0e\x32\x1d.RedvoxPacket1000.NetworkType\x12\x1b\n\x13network_strength_db\x18\x0f \x01(\x01\x12\x15\n\ris_backfilled\x18\x10 \x01(\x08\x12\x12\n\nis_private\x18\x11 \x01(\x08\x12\x18\n\x10is_mic_scrambled\x18\x12 \x01(\x08\x12\x1f\n\x17uncompressed_size_bytes\x18\x13 \x01(\x01\x12\x1d\n\x15\x63ompressed_size_bytes\x18\x14 \x01(\x01\x12\x17\n\x0f\x61uth_server_url\x18\x15 \x01(\t\x12\x18\n\x10synch_server_url\x18\x16 \x01(\t\x12\x1e\n\x16\x61\x63quisition_server_url\x18\x17 \x01(\t\x12\x1f\n\x17packet_start_ts_us_wall\x18\x18 \x01(\x01\x12\x1f\n\x17packet_start_ts_us_mach\x18\x19 \x01(\x01\x12\x1d\n\x15packet_end_ts_us_wall\x18\x1a \x01(\x01\x12\x1d\n\x15packet_end_ts_us_mach\x18\x1b \x01(\x01\x12(\n server_acquisition_arrival_ts_us\x18\x1c \x01(\x01\x12\x1c\n\x14\x61pp_start_ts_us_mach\x18\x1d \x01(\x01\x12\x14\n\x0csynch_params\x18\x1e \x03(\x01\x12\x17\n\x0f\x62\x65st_latency_us\x18\x1f \x01(\x01\x12\x16\n\x0e\x62\x65st_offset_us\x18  \x01(\x01\x12.\n\x12microphone_channel\x18! \x01(\x0b\x32\x12.MicrophoneChannel\x12)\n\x11\x62\x61rometer_channel\x18\" \x01(\x0b\x32\x0e.SingleChannel\x12*\n\x10location_channel\x18# \x01(\x0b\x32\x10.LocationChannel\x12*\n\x15\x61\x63\x63\x65lerometer_channel\x18$ \x01(\x0b\x32\x0b.XyzChannel\x12&\n\x11gyroscope_channel\x18% \x01(\x0b\x32\x0b.XyzChannel\x12)\n\x14magnetometer_channel\x18& \x01(\x0b\x32\x0b.XyzChannel\x12%\n\rlight_channel\x18\' \x01(\x0b\x32\x0e.SingleChannel\x12(\n\x10infrared_channel\x18( \x01(\x0b\x32\x0e.SingleChannel\x12$\n\rimage_channel\x18) \x01(\x0b\x32\r.ImageChannel\x12\x31\n\x08metadata\x18* \x03(\x0b\x32\x1f.RedvoxPacket1000.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"/\n\x0bNetworkType\x12\x08\n\x04WIFI\x10\x00\x12\x0c\n\x08\x43\x45LLULAR\x10\x01\x12\x08\n\x04NONE\x10\x02\"6\n\x06OsType\x12\x0b\n\x07\x41NDROID\x10\x00\x12\x07\n\x03IOS\x10\x01\x12\t\n\x05LINUX\x10\x02\x12\x0b\n\x07WINDOWS\x10\x03\"\x88\x02\n\x11MicrophoneChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1a\n\x12\x66irst_sample_ts_us\x18\x02 \x01(\x01\x12\x16\n\x0esample_rate_hz\x18\x03 \x01(\x01\x12\x0f\n\x07samples\x18\x04 \x03(\x01\x12-\n\x11sample_statistics\x18\x05 \x01(\x0b\x32\x12.SummaryStatistics\x12\x32\n\x08metadata\x18\x06 \x03(\x0b\x32 .MicrophoneChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xb3\x02\n\rSingleChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x0f\n\x07samples\x18\x04 \x03(\x01\x12\x32\n\x16sample_rate_statistics\x18\x05 \x01(\x0b\x32\x12.SummaryStatistics\x12-\n\x11sample_statistics\x18\x06 \x01(\x0b\x32\x12.SummaryStatistics\x12.\n\x08metadata\x18\x07 \x03(\x0b\x32\x1c.SingleChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xb9\x03\n\nXyzChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x11\n\tx_samples\x18\x04 \x03(\x01\x12\x11\n\ty_samples\x18\x05 \x03(\x01\x12\x11\n\tz_samples\x18\x06 \x03(\x01\x12\x32\n\x16sample_rate_statistics\x18\x07 \x01(\x0b\x32\x12.SummaryStatistics\x12/\n\x13x_sample_statistics\x18\x08 \x01(\x0b\x32\x12.SummaryStatistics\x12/\n\x13y_sample_statistics\x18\t \x01(\x0b\x32\x12.SummaryStatistics\x12/\n\x13z_sample_statistics\x18\n \x01(\x0b\x32\x12.SummaryStatistics\x12+\n\x08metadata\x18\x0b \x03(\x0b\x32\x19.XyzChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xf7\x06\n\x0fLocationChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x18\n\x10latitude_samples\x18\x04 \x03(\x01\x12\x19\n\x11longitude_samples\x18\x05 \x03(\x01\x12\x18\n\x10\x61ltitude_samples\x18\x06 \x03(\x01\x12\x15\n\rspeed_samples\x18\x07 \x03(\x01\x12\x18\n\x10\x61\x63\x63uracy_samples\x18\x08 \x03(\x01\x12$\n\x1clocation_permissions_granted\x18\t \x01(\x08\x12#\n\x1blocation_services_requested\x18\n \x01(\x08\x12!\n\x19location_services_enabled\x18\x0b \x01(\x08\x12<\n\x11location_provider\x18\x0c \x01(\x0e\x32!.LocationChannel.LocationProvider\x12\x32\n\x16sample_rate_statistics\x18\r \x01(\x0b\x32\x12.SummaryStatistics\x12\x36\n\x1alatitude_sample_statistics\x18\x0e \x01(\x0b\x32\x12.SummaryStatistics\x12\x37\n\x1blongitude_sample_statistics\x18\x0f \x01(\x0b\x32\x12.SummaryStatistics\x12\x36\n\x1a\x61ltitude_sample_statistics\x18\x10 \x01(\x0b\x32\x12.SummaryStatistics\x12\x33\n\x17speed_sample_statistics\x18\x11 \x01(\x0b\x32\x12.SummaryStatistics\x12\x36\n\x1a\x61\x63\x63uracy_sample_statistics\x18\x12 \x01(\x0b\x32\x12.SummaryStatistics\x12\x30\n\x08metadata\x18\x13 \x03(\x0b\x32\x1e.LocationChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"<\n\x10LocationProvider\x12\x08\n\x04NONE\x10\x00\x12\x08\n\x04USER\x10\x01\x12\x07\n\x03GPS\x10\x02\x12\x0b\n\x07NETWORK\x10\x03\"\x82\x02\n\x0cImageChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x0f\n\x07samples\x18\x04 \x03(\x0c\x12\x32\n\x16sample_rate_statistics\x18\x05 \x01(\x0b\x32\x12.SummaryStatistics\x12-\n\x08metadata\x18\x06 \x03(\x0b\x32\x1b.ImageChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xee\x01\n\x11SummaryStatistics\x12\r\n\x05\x63ount\x18\x01 \x01(\x01\x12\x0c\n\x04mean\x18\x02 \x01(\x01\x12\x0e\n\x06median\x18\x03 \x01(\x01\x12\x0c\n\x04mode\x18\x04 \x01(\x01\x12\x10\n\x08variance\x18\x05 \x01(\x01\x12\x0b\n\x03min\x18\x06 \x01(\x01\x12\x0b\n\x03max\x18\x07 \x01(\x01\x12\r\n\x05range\x18\x08 \x01(\x01\x12\x32\n\x08metadata\x18\t \x03(\x0b\x32 .SummaryStatistics.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x19src/redvox-api-1000.proto\"\xd0\x0b\n\x10RedvoxPacket1000\x12\x0b\n\x03\x61pi\x18\x01 \x01(\r\x12\x12\n\nauth_email\x18\x02 \x01(\t\x12\x12\n\nauth_token\x18\x03 \x01(\t\x12\x16\n\x0e\x66irebase_token\x18\x04 \x01(\t\x12\x11\n\tdevice_id\x18\x05 \x01(\t\x12\x13\n\x0b\x64\x65vice_uuid\x18\x06 \x01(\t\x12\x13\n\x0b\x64\x65vice_make\x18\x07 \x01(\t\x12\x14\n\x0c\x64\x65vice_model\x18\x08 \x01(\t\x12+\n\tdevice_os\x18\t \x01(\x0e\x32\x18.RedvoxPacket1000.OsType\x12\x19\n\x11\x64\x65vice_os_version\x18\n \x01(\t\x12\x1a\n\x12\x64\x65vice_app_version\x18\x0b \x01(\t\x12\x15\n\rdevice_temp_c\x18\x0c \x01(\x01\x12\x1e\n\x16\x64\x65vice_battery_percent\x18\r \x01(\x01\x12\x33\n\x0cnetwork_type\x18\x0e \x01(\x0e\x32\x1d.RedvoxPacket1000.NetworkType\x12\x1b\n\x13network_strength_db\x18\x0f \x01(\x01\x12\x15\n\ris_backfilled\x18\x10 \x01(\x08\x12\x12\n\nis_private\x18\x11 \x01(\x08\x12\x18\n\x10is_mic_scrambled\x18\x12 \x01(\x08\x12\x1f\n\x17uncompressed_size_bytes\x18\x13 \x01(\x01\x12\x1d\n\x15\x63ompressed_size_bytes\x18\x14 \x01(\x01\x12\x17\n\x0f\x61uth_server_url\x18\x15 \x01(\t\x12\x18\n\x10synch_server_url\x18\x16 \x01(\t\x12\x1e\n\x16\x61\x63quisition_server_url\x18\x17 \x01(\t\x12\x1f\n\x17packet_start_ts_us_wall\x18\x18 \x01(\x01\x12\x1f\n\x17packet_start_ts_us_mach\x18\x19 \x01(\x01\x12\x1d\n\x15packet_end_ts_us_wall\x18\x1a \x01(\x01\x12\x1d\n\x15packet_end_ts_us_mach\x18\x1b \x01(\x01\x12(\n server_acquisition_arrival_ts_us\x18\x1c \x01(\x01\x12\x1c\n\x14\x61pp_start_ts_us_mach\x18\x1d \x01(\x01\x12\x14\n\x0csynch_params\x18\x1e \x03(\x01\x12\x17\n\x0f\x62\x65st_latency_us\x18\x1f \x01(\x01\x12\x16\n\x0e\x62\x65st_offset_us\x18  \x01(\x01\x12.\n\x12microphone_channel\x18! \x01(\x0b\x32\x12.MicrophoneChannel\x12)\n\x11\x62\x61rometer_channel\x18\" \x01(\x0b\x32\x0e.SingleChannel\x12*\n\x10location_channel\x18# \x01(\x0b\x32\x10.LocationChannel\x12*\n\x15\x61\x63\x63\x65lerometer_channel\x18$ \x01(\x0b\x32\x0b.XyzChannel\x12&\n\x11gyroscope_channel\x18% \x01(\x0b\x32\x0b.XyzChannel\x12)\n\x14magnetometer_channel\x18& \x01(\x0b\x32\x0b.XyzChannel\x12%\n\rlight_channel\x18\' \x01(\x0b\x32\x0e.SingleChannel\x12(\n\x10infrared_channel\x18( \x01(\x0b\x32\x0e.SingleChannel\x12$\n\rimage_channel\x18) \x01(\x0b\x32\r.ImageChannel\x12\x31\n\x08metadata\x18* \x03(\x0b\x32\x1f.RedvoxPacket1000.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"/\n\x0bNetworkType\x12\x08\n\x04WIFI\x10\x00\x12\x0c\n\x08\x43\x45LLULAR\x10\x01\x12\x08\n\x04NONE\x10\x02\"6\n\x06OsType\x12\x0b\n\x07\x41NDROID\x10\x00\x12\x07\n\x03IOS\x10\x01\x12\t\n\x05LINUX\x10\x02\x12\x0b\n\x07WINDOWS\x10\x03\"\x88\x02\n\x11MicrophoneChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1a\n\x12\x66irst_sample_ts_us\x18\x02 \x01(\x01\x12\x16\n\x0esample_rate_hz\x18\x03 \x01(\x01\x12\x0f\n\x07samples\x18\x04 \x03(\x01\x12-\n\x11sample_statistics\x18\x05 \x01(\x0b\x32\x12.SummaryStatistics\x12\x32\n\x08metadata\x18\x06 \x03(\x0b\x32 .MicrophoneChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xb3\x02\n\rSingleChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x0f\n\x07samples\x18\x04 \x03(\x01\x12\x32\n\x16sample_rate_statistics\x18\x05 \x01(\x0b\x32\x12.SummaryStatistics\x12-\n\x11sample_statistics\x18\x06 \x01(\x0b\x32\x12.SummaryStatistics\x12.\n\x08metadata\x18\x07 \x03(\x0b\x32\x1c.SingleChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xb9\x03\n\nXyzChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x11\n\tx_samples\x18\x04 \x03(\x01\x12\x11\n\ty_samples\x18\x05 \x03(\x01\x12\x11\n\tz_samples\x18\x06 \x03(\x01\x12\x32\n\x16sample_rate_statistics\x18\x07 \x01(\x0b\x32\x12.SummaryStatistics\x12/\n\x13x_sample_statistics\x18\x08 \x01(\x0b\x32\x12.SummaryStatistics\x12/\n\x13y_sample_statistics\x18\t \x01(\x0b\x32\x12.SummaryStatistics\x12/\n\x13z_sample_statistics\x18\n \x01(\x0b\x32\x12.SummaryStatistics\x12+\n\x08metadata\x18\x0b \x03(\x0b\x32\x19.XyzChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xf7\x06\n\x0fLocationChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x18\n\x10latitude_samples\x18\x04 \x03(\x01\x12\x19\n\x11longitude_samples\x18\x05 \x03(\x01\x12\x18\n\x10\x61ltitude_samples\x18\x06 \x03(\x01\x12\x15\n\rspeed_samples\x18\x07 \x03(\x01\x12\x18\n\x10\x61\x63\x63uracy_samples\x18\x08 \x03(\x01\x12$\n\x1clocation_permissions_granted\x18\t \x01(\x08\x12#\n\x1blocation_services_requested\x18\n \x01(\x08\x12!\n\x19location_services_enabled\x18\x0b \x01(\x08\x12<\n\x11location_provider\x18\x0c \x01(\x0e\x32!.LocationChannel.LocationProvider\x12\x32\n\x16sample_rate_statistics\x18\r \x01(\x0b\x32\x12.SummaryStatistics\x12\x36\n\x1alatitude_sample_statistics\x18\x0e \x01(\x0b\x32\x12.SummaryStatistics\x12\x37\n\x1blongitude_sample_statistics\x18\x0f \x01(\x0b\x32\x12.SummaryStatistics\x12\x36\n\x1a\x61ltitude_sample_statistics\x18\x10 \x01(\x0b\x32\x12.SummaryStatistics\x12\x33\n\x17speed_sample_statistics\x18\x11 \x01(\x0b\x32\x12.SummaryStatistics\x12\x36\n\x1a\x61\x63\x63uracy_sample_statistics\x18\x12 \x01(\x0b\x32\x12.SummaryStatistics\x12\x30\n\x08metadata\x18\x13 \x03(\x0b\x32\x1e.LocationChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"<\n\x10LocationProvider\x12\x08\n\x04NONE\x10\x00\x12\x08\n\x04USER\x10\x01\x12\x07\n\x03GPS\x10\x02\x12\x0b\n\x07NETWORK\x10\x03\"\x82\x02\n\x0cImageChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x0f\n\x07samples\x18\x04 \x03(\x0c\x12\x32\n\x16sample_rate_statistics\x18\x05 \x01(\x0b\x32\x12.SummaryStatistics\x12-\n\x08metadata\x18\x06 \x03(\x0b\x32\x1b.ImageChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xee\x01\n\x11SummaryStatistics\x12\r\n\x05\x63ount\x18\x01 \x01(\x01\x12\x0c\n\x04mean\x18\x02 \x01(\x01\x12\x0e\n\x06median\x18\x03 \x01(\x01\x12\x0c\n\x04mode\x18\x04 \x01(\x01\x12\x10\n\x08variance\x18\x05 \x01(\x01\x12\x0b\n\x03min\x18\x06 \x01(\x01\x12\x0b\n\x03max\x18\x07 \x01(\x01\x12\r\n\x05range\x18\x08 \x01(\x01\x12\x32\n\x08metadata\x18\t \x03(\x0b\x32 .SummaryStatistics.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"M\n\x12\x41\x63quisitionRequest\x12%\n\x1d\x63ompressed_redvox_packet_1000\x18\x01 \x01(\x0c\x12\x10\n\x08\x63hecksum\x18\x02 \x01(\x03\"\xcb\x01\n\x13\x41\x63quisitionResponse\x12\x38\n\rresponse_type\x18\x01 \x01(\x0e\x32!.AcquisitionResponse.ResponseType\x12\x10\n\x08\x63hecksum\x18\x02 \x01(\x03\x12\x0f\n\x07\x64\x65tails\x18\x03 \x01(\t\x12\x0e\n\x06resend\x18\x04 \x01(\x08\"G\n\x0cResponseType\x12\x06\n\x02OK\x10\x00\x12\x0e\n\nAUTH_ERROR\x10\x01\x12\x0e\n\nDATA_ERROR\x10\x02\x12\x0f\n\x0bOTHER_ERROR\x10\x03\x62\x06proto3')
 )
 
 
@@ -109,6 +109,36 @@ _LOCATIONCHANNEL_LOCATIONPROVIDER = _descriptor.EnumDescriptor(
   serialized_end=3429,
 )
 _sym_db.RegisterEnumDescriptor(_LOCATIONCHANNEL_LOCATIONPROVIDER)
+
+_ACQUISITIONRESPONSE_RESPONSETYPE = _descriptor.EnumDescriptor(
+  name='ResponseType',
+  full_name='AcquisitionResponse.ResponseType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='OK', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='AUTH_ERROR', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DATA_ERROR', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='OTHER_ERROR', index=3, number=3,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=4145,
+  serialized_end=4216,
+)
+_sym_db.RegisterEnumDescriptor(_ACQUISITIONRESPONSE_RESPONSETYPE)
 
 
 _REDVOXPACKET1000_METADATAENTRY = _descriptor.Descriptor(
@@ -1240,6 +1270,97 @@ _SUMMARYSTATISTICS = _descriptor.Descriptor(
   serialized_end=3931,
 )
 
+
+_ACQUISITIONREQUEST = _descriptor.Descriptor(
+  name='AcquisitionRequest',
+  full_name='AcquisitionRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='compressed_redvox_packet_1000', full_name='AcquisitionRequest.compressed_redvox_packet_1000', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='checksum', full_name='AcquisitionRequest.checksum', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3933,
+  serialized_end=4010,
+)
+
+
+_ACQUISITIONRESPONSE = _descriptor.Descriptor(
+  name='AcquisitionResponse',
+  full_name='AcquisitionResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='response_type', full_name='AcquisitionResponse.response_type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='checksum', full_name='AcquisitionResponse.checksum', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='details', full_name='AcquisitionResponse.details', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='resend', full_name='AcquisitionResponse.resend', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _ACQUISITIONRESPONSE_RESPONSETYPE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4013,
+  serialized_end=4216,
+)
+
 _REDVOXPACKET1000_METADATAENTRY.containing_type = _REDVOXPACKET1000
 _REDVOXPACKET1000.fields_by_name['device_os'].enum_type = _REDVOXPACKET1000_OSTYPE
 _REDVOXPACKET1000.fields_by_name['network_type'].enum_type = _REDVOXPACKET1000_NETWORKTYPE
@@ -1283,6 +1404,8 @@ _IMAGECHANNEL.fields_by_name['sample_rate_statistics'].message_type = _SUMMARYST
 _IMAGECHANNEL.fields_by_name['metadata'].message_type = _IMAGECHANNEL_METADATAENTRY
 _SUMMARYSTATISTICS_METADATAENTRY.containing_type = _SUMMARYSTATISTICS
 _SUMMARYSTATISTICS.fields_by_name['metadata'].message_type = _SUMMARYSTATISTICS_METADATAENTRY
+_ACQUISITIONRESPONSE.fields_by_name['response_type'].enum_type = _ACQUISITIONRESPONSE_RESPONSETYPE
+_ACQUISITIONRESPONSE_RESPONSETYPE.containing_type = _ACQUISITIONRESPONSE
 DESCRIPTOR.message_types_by_name['RedvoxPacket1000'] = _REDVOXPACKET1000
 DESCRIPTOR.message_types_by_name['MicrophoneChannel'] = _MICROPHONECHANNEL
 DESCRIPTOR.message_types_by_name['SingleChannel'] = _SINGLECHANNEL
@@ -1290,6 +1413,8 @@ DESCRIPTOR.message_types_by_name['XyzChannel'] = _XYZCHANNEL
 DESCRIPTOR.message_types_by_name['LocationChannel'] = _LOCATIONCHANNEL
 DESCRIPTOR.message_types_by_name['ImageChannel'] = _IMAGECHANNEL
 DESCRIPTOR.message_types_by_name['SummaryStatistics'] = _SUMMARYSTATISTICS
+DESCRIPTOR.message_types_by_name['AcquisitionRequest'] = _ACQUISITIONREQUEST
+DESCRIPTOR.message_types_by_name['AcquisitionResponse'] = _ACQUISITIONRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RedvoxPacket1000 = _reflection.GeneratedProtocolMessageType('RedvoxPacket1000', (_message.Message,), dict(
@@ -1396,6 +1521,20 @@ SummaryStatistics = _reflection.GeneratedProtocolMessageType('SummaryStatistics'
   ))
 _sym_db.RegisterMessage(SummaryStatistics)
 _sym_db.RegisterMessage(SummaryStatistics.MetadataEntry)
+
+AcquisitionRequest = _reflection.GeneratedProtocolMessageType('AcquisitionRequest', (_message.Message,), dict(
+  DESCRIPTOR = _ACQUISITIONREQUEST,
+  __module__ = 'src.redvox_api_1000_pb2'
+  # @@protoc_insertion_point(class_scope:AcquisitionRequest)
+  ))
+_sym_db.RegisterMessage(AcquisitionRequest)
+
+AcquisitionResponse = _reflection.GeneratedProtocolMessageType('AcquisitionResponse', (_message.Message,), dict(
+  DESCRIPTOR = _ACQUISITIONRESPONSE,
+  __module__ = 'src.redvox_api_1000_pb2'
+  # @@protoc_insertion_point(class_scope:AcquisitionResponse)
+  ))
+_sym_db.RegisterMessage(AcquisitionResponse)
 
 
 _REDVOXPACKET1000_METADATAENTRY._options = None

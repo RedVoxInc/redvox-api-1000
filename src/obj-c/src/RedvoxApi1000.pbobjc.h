@@ -106,6 +106,37 @@ GPBEnumDescriptor *LocationChannel_LocationProvider_EnumDescriptor(void);
  **/
 BOOL LocationChannel_LocationProvider_IsValidValue(int32_t value);
 
+#pragma mark - Enum AcquisitionResponse_ResponseType
+
+/** Server response types */
+typedef GPB_ENUM(AcquisitionResponse_ResponseType) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  AcquisitionResponse_ResponseType_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  /** No issues with packet */
+  AcquisitionResponse_ResponseType_Ok = 0,
+
+  /** An authentication error has occurred */
+  AcquisitionResponse_ResponseType_AuthError = 1,
+
+  /** An error with the data decoding or data quality */
+  AcquisitionResponse_ResponseType_DataError = 2,
+
+  /** Any other errors */
+  AcquisitionResponse_ResponseType_OtherError = 3,
+};
+
+GPBEnumDescriptor *AcquisitionResponse_ResponseType_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL AcquisitionResponse_ResponseType_IsValidValue(int32_t value);
+
 #pragma mark - RedvoxApi1000Root
 
 /**
@@ -728,6 +759,66 @@ typedef GPB_ENUM(SummaryStatistics_FieldNumber) {
 @property(nonatomic, readonly) NSUInteger metadata_Count;
 
 @end
+
+#pragma mark - AcquisitionRequest
+
+typedef GPB_ENUM(AcquisitionRequest_FieldNumber) {
+  AcquisitionRequest_FieldNumber_CompressedRedvoxPacket1000 = 1,
+  AcquisitionRequest_FieldNumber_Checksum = 2,
+};
+
+/**
+ * Message for sending RedVox data to a redvox.io data acquisition service.
+ **/
+@interface AcquisitionRequest : GPBMessage
+
+/** The compressed packet to send. */
+@property(nonatomic, readwrite, copy, null_resettable) NSData *compressedRedvoxPacket1000;
+
+/** A checksum of the bytes in field 1. */
+@property(nonatomic, readwrite) int64_t checksum;
+
+@end
+
+#pragma mark - AcquisitionResponse
+
+typedef GPB_ENUM(AcquisitionResponse_FieldNumber) {
+  AcquisitionResponse_FieldNumber_ResponseType = 1,
+  AcquisitionResponse_FieldNumber_Checksum = 2,
+  AcquisitionResponse_FieldNumber_Details = 3,
+  AcquisitionResponse_FieldNumber_Resend = 4,
+};
+
+/**
+ * Response from data acquisition services.
+ **/
+@interface AcquisitionResponse : GPBMessage
+
+/** Response type (as above) */
+@property(nonatomic, readwrite) AcquisitionResponse_ResponseType responseType;
+
+/** Checksum computed by server */
+@property(nonatomic, readwrite) int64_t checksum;
+
+/** Any other error details */
+@property(nonatomic, readwrite, copy, null_resettable) NSString *details;
+
+/** If set, client to should attempt to resend the file */
+@property(nonatomic, readwrite) BOOL resend;
+
+@end
+
+/**
+ * Fetches the raw value of a @c AcquisitionResponse's @c responseType property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t AcquisitionResponse_ResponseType_RawValue(AcquisitionResponse *message);
+/**
+ * Sets the raw value of an @c AcquisitionResponse's @c responseType property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetAcquisitionResponse_ResponseType_RawValue(AcquisitionResponse *message, int32_t value);
 
 NS_ASSUME_NONNULL_END
 

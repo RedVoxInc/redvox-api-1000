@@ -1518,6 +1518,191 @@ typedef struct SummaryStatistics__storage_ {
 
 @end
 
+#pragma mark - AcquisitionRequest
+
+@implementation AcquisitionRequest
+
+@dynamic compressedRedvoxPacket1000;
+@dynamic checksum;
+
+typedef struct AcquisitionRequest__storage_ {
+  uint32_t _has_storage_[1];
+  NSData *compressedRedvoxPacket1000;
+  int64_t checksum;
+} AcquisitionRequest__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "compressedRedvoxPacket1000",
+        .dataTypeSpecific.className = NULL,
+        .number = AcquisitionRequest_FieldNumber_CompressedRedvoxPacket1000,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(AcquisitionRequest__storage_, compressedRedvoxPacket1000),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
+        .dataType = GPBDataTypeBytes,
+      },
+      {
+        .name = "checksum",
+        .dataTypeSpecific.className = NULL,
+        .number = AcquisitionRequest_FieldNumber_Checksum,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(AcquisitionRequest__storage_, checksum),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeInt64,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[AcquisitionRequest class]
+                                     rootClass:[RedvoxApi1000Root class]
+                                          file:RedvoxApi1000Root_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(AcquisitionRequest__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\001\n\246\246\204\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - AcquisitionResponse
+
+@implementation AcquisitionResponse
+
+@dynamic responseType;
+@dynamic checksum;
+@dynamic details;
+@dynamic resend;
+
+typedef struct AcquisitionResponse__storage_ {
+  uint32_t _has_storage_[1];
+  AcquisitionResponse_ResponseType responseType;
+  NSString *details;
+  int64_t checksum;
+} AcquisitionResponse__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "responseType",
+        .dataTypeSpecific.enumDescFunc = AcquisitionResponse_ResponseType_EnumDescriptor,
+        .number = AcquisitionResponse_FieldNumber_ResponseType,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(AcquisitionResponse__storage_, responseType),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "checksum",
+        .dataTypeSpecific.className = NULL,
+        .number = AcquisitionResponse_FieldNumber_Checksum,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(AcquisitionResponse__storage_, checksum),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeInt64,
+      },
+      {
+        .name = "details",
+        .dataTypeSpecific.className = NULL,
+        .number = AcquisitionResponse_FieldNumber_Details,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(AcquisitionResponse__storage_, details),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "resend",
+        .dataTypeSpecific.className = NULL,
+        .number = AcquisitionResponse_FieldNumber_Resend,
+        .hasIndex = 3,
+        .offset = 4,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[AcquisitionResponse class]
+                                     rootClass:[RedvoxApi1000Root class]
+                                          file:RedvoxApi1000Root_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(AcquisitionResponse__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+int32_t AcquisitionResponse_ResponseType_RawValue(AcquisitionResponse *message) {
+  GPBDescriptor *descriptor = [AcquisitionResponse descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:AcquisitionResponse_FieldNumber_ResponseType];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetAcquisitionResponse_ResponseType_RawValue(AcquisitionResponse *message, int32_t value) {
+  GPBDescriptor *descriptor = [AcquisitionResponse descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:AcquisitionResponse_FieldNumber_ResponseType];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
+
+#pragma mark - Enum AcquisitionResponse_ResponseType
+
+GPBEnumDescriptor *AcquisitionResponse_ResponseType_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "Ok\000AuthError\000DataError\000OtherError\000";
+    static const int32_t values[] = {
+        AcquisitionResponse_ResponseType_Ok,
+        AcquisitionResponse_ResponseType_AuthError,
+        AcquisitionResponse_ResponseType_DataError,
+        AcquisitionResponse_ResponseType_OtherError,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(AcquisitionResponse_ResponseType)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:AcquisitionResponse_ResponseType_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL AcquisitionResponse_ResponseType_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case AcquisitionResponse_ResponseType_Ok:
+    case AcquisitionResponse_ResponseType_AuthError:
+    case AcquisitionResponse_ResponseType_DataError:
+    case AcquisitionResponse_ResponseType_OtherError:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
 
 #pragma clang diagnostic pop
 

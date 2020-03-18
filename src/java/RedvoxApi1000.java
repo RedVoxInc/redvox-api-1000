@@ -21478,6 +21478,1641 @@ public final class RedvoxApi1000 {
 
   }
 
+  public interface AcquisitionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:AcquisitionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The compressed packet to send.
+     * </pre>
+     *
+     * <code>bytes compressed_redvox_packet_1000 = 1;</code>
+     */
+    com.google.protobuf.ByteString getCompressedRedvoxPacket1000();
+
+    /**
+     * <pre>
+     * A checksum of the bytes in field 1.
+     * </pre>
+     *
+     * <code>int64 checksum = 2;</code>
+     */
+    long getChecksum();
+  }
+  /**
+   * <pre>
+   * Message for sending RedVox data to a redvox.io data acquisition service.
+   * </pre>
+   *
+   * Protobuf type {@code AcquisitionRequest}
+   */
+  public  static final class AcquisitionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:AcquisitionRequest)
+      AcquisitionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AcquisitionRequest.newBuilder() to construct.
+    private AcquisitionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AcquisitionRequest() {
+      compressedRedvoxPacket1000_ = com.google.protobuf.ByteString.EMPTY;
+      checksum_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AcquisitionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              compressedRedvoxPacket1000_ = input.readBytes();
+              break;
+            }
+            case 16: {
+
+              checksum_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return RedvoxApi1000.internal_static_AcquisitionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return RedvoxApi1000.internal_static_AcquisitionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              RedvoxApi1000.AcquisitionRequest.class, RedvoxApi1000.AcquisitionRequest.Builder.class);
+    }
+
+    public static final int COMPRESSED_REDVOX_PACKET_1000_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString compressedRedvoxPacket1000_;
+    /**
+     * <pre>
+     * The compressed packet to send.
+     * </pre>
+     *
+     * <code>bytes compressed_redvox_packet_1000 = 1;</code>
+     */
+    public com.google.protobuf.ByteString getCompressedRedvoxPacket1000() {
+      return compressedRedvoxPacket1000_;
+    }
+
+    public static final int CHECKSUM_FIELD_NUMBER = 2;
+    private long checksum_;
+    /**
+     * <pre>
+     * A checksum of the bytes in field 1.
+     * </pre>
+     *
+     * <code>int64 checksum = 2;</code>
+     */
+    public long getChecksum() {
+      return checksum_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!compressedRedvoxPacket1000_.isEmpty()) {
+        output.writeBytes(1, compressedRedvoxPacket1000_);
+      }
+      if (checksum_ != 0L) {
+        output.writeInt64(2, checksum_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!compressedRedvoxPacket1000_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, compressedRedvoxPacket1000_);
+      }
+      if (checksum_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, checksum_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof RedvoxApi1000.AcquisitionRequest)) {
+        return super.equals(obj);
+      }
+      RedvoxApi1000.AcquisitionRequest other = (RedvoxApi1000.AcquisitionRequest) obj;
+
+      boolean result = true;
+      result = result && getCompressedRedvoxPacket1000()
+          .equals(other.getCompressedRedvoxPacket1000());
+      result = result && (getChecksum()
+          == other.getChecksum());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COMPRESSED_REDVOX_PACKET_1000_FIELD_NUMBER;
+      hash = (53 * hash) + getCompressedRedvoxPacket1000().hashCode();
+      hash = (37 * hash) + CHECKSUM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getChecksum());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static RedvoxApi1000.AcquisitionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static RedvoxApi1000.AcquisitionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static RedvoxApi1000.AcquisitionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static RedvoxApi1000.AcquisitionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static RedvoxApi1000.AcquisitionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static RedvoxApi1000.AcquisitionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static RedvoxApi1000.AcquisitionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static RedvoxApi1000.AcquisitionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static RedvoxApi1000.AcquisitionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static RedvoxApi1000.AcquisitionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static RedvoxApi1000.AcquisitionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static RedvoxApi1000.AcquisitionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(RedvoxApi1000.AcquisitionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Message for sending RedVox data to a redvox.io data acquisition service.
+     * </pre>
+     *
+     * Protobuf type {@code AcquisitionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:AcquisitionRequest)
+        RedvoxApi1000.AcquisitionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return RedvoxApi1000.internal_static_AcquisitionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return RedvoxApi1000.internal_static_AcquisitionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                RedvoxApi1000.AcquisitionRequest.class, RedvoxApi1000.AcquisitionRequest.Builder.class);
+      }
+
+      // Construct using RedvoxApi1000.AcquisitionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        compressedRedvoxPacket1000_ = com.google.protobuf.ByteString.EMPTY;
+
+        checksum_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return RedvoxApi1000.internal_static_AcquisitionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public RedvoxApi1000.AcquisitionRequest getDefaultInstanceForType() {
+        return RedvoxApi1000.AcquisitionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public RedvoxApi1000.AcquisitionRequest build() {
+        RedvoxApi1000.AcquisitionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public RedvoxApi1000.AcquisitionRequest buildPartial() {
+        RedvoxApi1000.AcquisitionRequest result = new RedvoxApi1000.AcquisitionRequest(this);
+        result.compressedRedvoxPacket1000_ = compressedRedvoxPacket1000_;
+        result.checksum_ = checksum_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof RedvoxApi1000.AcquisitionRequest) {
+          return mergeFrom((RedvoxApi1000.AcquisitionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(RedvoxApi1000.AcquisitionRequest other) {
+        if (other == RedvoxApi1000.AcquisitionRequest.getDefaultInstance()) return this;
+        if (other.getCompressedRedvoxPacket1000() != com.google.protobuf.ByteString.EMPTY) {
+          setCompressedRedvoxPacket1000(other.getCompressedRedvoxPacket1000());
+        }
+        if (other.getChecksum() != 0L) {
+          setChecksum(other.getChecksum());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        RedvoxApi1000.AcquisitionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (RedvoxApi1000.AcquisitionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.ByteString compressedRedvoxPacket1000_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * The compressed packet to send.
+       * </pre>
+       *
+       * <code>bytes compressed_redvox_packet_1000 = 1;</code>
+       */
+      public com.google.protobuf.ByteString getCompressedRedvoxPacket1000() {
+        return compressedRedvoxPacket1000_;
+      }
+      /**
+       * <pre>
+       * The compressed packet to send.
+       * </pre>
+       *
+       * <code>bytes compressed_redvox_packet_1000 = 1;</code>
+       */
+      public Builder setCompressedRedvoxPacket1000(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        compressedRedvoxPacket1000_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The compressed packet to send.
+       * </pre>
+       *
+       * <code>bytes compressed_redvox_packet_1000 = 1;</code>
+       */
+      public Builder clearCompressedRedvoxPacket1000() {
+        
+        compressedRedvoxPacket1000_ = getDefaultInstance().getCompressedRedvoxPacket1000();
+        onChanged();
+        return this;
+      }
+
+      private long checksum_ ;
+      /**
+       * <pre>
+       * A checksum of the bytes in field 1.
+       * </pre>
+       *
+       * <code>int64 checksum = 2;</code>
+       */
+      public long getChecksum() {
+        return checksum_;
+      }
+      /**
+       * <pre>
+       * A checksum of the bytes in field 1.
+       * </pre>
+       *
+       * <code>int64 checksum = 2;</code>
+       */
+      public Builder setChecksum(long value) {
+        
+        checksum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A checksum of the bytes in field 1.
+       * </pre>
+       *
+       * <code>int64 checksum = 2;</code>
+       */
+      public Builder clearChecksum() {
+        
+        checksum_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:AcquisitionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:AcquisitionRequest)
+    private static final RedvoxApi1000.AcquisitionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new RedvoxApi1000.AcquisitionRequest();
+    }
+
+    public static RedvoxApi1000.AcquisitionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AcquisitionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AcquisitionRequest>() {
+      @java.lang.Override
+      public AcquisitionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AcquisitionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AcquisitionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AcquisitionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public RedvoxApi1000.AcquisitionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AcquisitionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:AcquisitionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Response type (as above)
+     * </pre>
+     *
+     * <code>.AcquisitionResponse.ResponseType response_type = 1;</code>
+     */
+    int getResponseTypeValue();
+    /**
+     * <pre>
+     * Response type (as above)
+     * </pre>
+     *
+     * <code>.AcquisitionResponse.ResponseType response_type = 1;</code>
+     */
+    RedvoxApi1000.AcquisitionResponse.ResponseType getResponseType();
+
+    /**
+     * <pre>
+     * Checksum computed by server
+     * </pre>
+     *
+     * <code>int64 checksum = 2;</code>
+     */
+    long getChecksum();
+
+    /**
+     * <pre>
+     * Any other error details
+     * </pre>
+     *
+     * <code>string details = 3;</code>
+     */
+    java.lang.String getDetails();
+    /**
+     * <pre>
+     * Any other error details
+     * </pre>
+     *
+     * <code>string details = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getDetailsBytes();
+
+    /**
+     * <pre>
+     * If set, client to should attempt to resend the file
+     * </pre>
+     *
+     * <code>bool resend = 4;</code>
+     */
+    boolean getResend();
+  }
+  /**
+   * <pre>
+   * Response from data acquisition services.
+   * </pre>
+   *
+   * Protobuf type {@code AcquisitionResponse}
+   */
+  public  static final class AcquisitionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:AcquisitionResponse)
+      AcquisitionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AcquisitionResponse.newBuilder() to construct.
+    private AcquisitionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AcquisitionResponse() {
+      responseType_ = 0;
+      checksum_ = 0L;
+      details_ = "";
+      resend_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AcquisitionResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              responseType_ = rawValue;
+              break;
+            }
+            case 16: {
+
+              checksum_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              details_ = s;
+              break;
+            }
+            case 32: {
+
+              resend_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return RedvoxApi1000.internal_static_AcquisitionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return RedvoxApi1000.internal_static_AcquisitionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              RedvoxApi1000.AcquisitionResponse.class, RedvoxApi1000.AcquisitionResponse.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Server response types
+     * </pre>
+     *
+     * Protobuf enum {@code AcquisitionResponse.ResponseType}
+     */
+    public enum ResponseType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * No issues with packet
+       * </pre>
+       *
+       * <code>OK = 0;</code>
+       */
+      OK(0),
+      /**
+       * <pre>
+       * An authentication error has occurred
+       * </pre>
+       *
+       * <code>AUTH_ERROR = 1;</code>
+       */
+      AUTH_ERROR(1),
+      /**
+       * <pre>
+       * An error with the data decoding or data quality
+       * </pre>
+       *
+       * <code>DATA_ERROR = 2;</code>
+       */
+      DATA_ERROR(2),
+      /**
+       * <pre>
+       * Any other errors
+       * </pre>
+       *
+       * <code>OTHER_ERROR = 3;</code>
+       */
+      OTHER_ERROR(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * No issues with packet
+       * </pre>
+       *
+       * <code>OK = 0;</code>
+       */
+      public static final int OK_VALUE = 0;
+      /**
+       * <pre>
+       * An authentication error has occurred
+       * </pre>
+       *
+       * <code>AUTH_ERROR = 1;</code>
+       */
+      public static final int AUTH_ERROR_VALUE = 1;
+      /**
+       * <pre>
+       * An error with the data decoding or data quality
+       * </pre>
+       *
+       * <code>DATA_ERROR = 2;</code>
+       */
+      public static final int DATA_ERROR_VALUE = 2;
+      /**
+       * <pre>
+       * Any other errors
+       * </pre>
+       *
+       * <code>OTHER_ERROR = 3;</code>
+       */
+      public static final int OTHER_ERROR_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ResponseType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ResponseType forNumber(int value) {
+        switch (value) {
+          case 0: return OK;
+          case 1: return AUTH_ERROR;
+          case 2: return DATA_ERROR;
+          case 3: return OTHER_ERROR;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ResponseType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ResponseType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ResponseType>() {
+              public ResponseType findValueByNumber(int number) {
+                return ResponseType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return RedvoxApi1000.AcquisitionResponse.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ResponseType[] VALUES = values();
+
+      public static ResponseType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ResponseType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:AcquisitionResponse.ResponseType)
+    }
+
+    public static final int RESPONSE_TYPE_FIELD_NUMBER = 1;
+    private int responseType_;
+    /**
+     * <pre>
+     * Response type (as above)
+     * </pre>
+     *
+     * <code>.AcquisitionResponse.ResponseType response_type = 1;</code>
+     */
+    public int getResponseTypeValue() {
+      return responseType_;
+    }
+    /**
+     * <pre>
+     * Response type (as above)
+     * </pre>
+     *
+     * <code>.AcquisitionResponse.ResponseType response_type = 1;</code>
+     */
+    public RedvoxApi1000.AcquisitionResponse.ResponseType getResponseType() {
+      @SuppressWarnings("deprecation")
+      RedvoxApi1000.AcquisitionResponse.ResponseType result = RedvoxApi1000.AcquisitionResponse.ResponseType.valueOf(responseType_);
+      return result == null ? RedvoxApi1000.AcquisitionResponse.ResponseType.UNRECOGNIZED : result;
+    }
+
+    public static final int CHECKSUM_FIELD_NUMBER = 2;
+    private long checksum_;
+    /**
+     * <pre>
+     * Checksum computed by server
+     * </pre>
+     *
+     * <code>int64 checksum = 2;</code>
+     */
+    public long getChecksum() {
+      return checksum_;
+    }
+
+    public static final int DETAILS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object details_;
+    /**
+     * <pre>
+     * Any other error details
+     * </pre>
+     *
+     * <code>string details = 3;</code>
+     */
+    public java.lang.String getDetails() {
+      java.lang.Object ref = details_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        details_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Any other error details
+     * </pre>
+     *
+     * <code>string details = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDetailsBytes() {
+      java.lang.Object ref = details_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        details_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESEND_FIELD_NUMBER = 4;
+    private boolean resend_;
+    /**
+     * <pre>
+     * If set, client to should attempt to resend the file
+     * </pre>
+     *
+     * <code>bool resend = 4;</code>
+     */
+    public boolean getResend() {
+      return resend_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (responseType_ != RedvoxApi1000.AcquisitionResponse.ResponseType.OK.getNumber()) {
+        output.writeEnum(1, responseType_);
+      }
+      if (checksum_ != 0L) {
+        output.writeInt64(2, checksum_);
+      }
+      if (!getDetailsBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, details_);
+      }
+      if (resend_ != false) {
+        output.writeBool(4, resend_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (responseType_ != RedvoxApi1000.AcquisitionResponse.ResponseType.OK.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, responseType_);
+      }
+      if (checksum_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, checksum_);
+      }
+      if (!getDetailsBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, details_);
+      }
+      if (resend_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, resend_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof RedvoxApi1000.AcquisitionResponse)) {
+        return super.equals(obj);
+      }
+      RedvoxApi1000.AcquisitionResponse other = (RedvoxApi1000.AcquisitionResponse) obj;
+
+      boolean result = true;
+      result = result && responseType_ == other.responseType_;
+      result = result && (getChecksum()
+          == other.getChecksum());
+      result = result && getDetails()
+          .equals(other.getDetails());
+      result = result && (getResend()
+          == other.getResend());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESPONSE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + responseType_;
+      hash = (37 * hash) + CHECKSUM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getChecksum());
+      hash = (37 * hash) + DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getDetails().hashCode();
+      hash = (37 * hash) + RESEND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getResend());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static RedvoxApi1000.AcquisitionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static RedvoxApi1000.AcquisitionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static RedvoxApi1000.AcquisitionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static RedvoxApi1000.AcquisitionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static RedvoxApi1000.AcquisitionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static RedvoxApi1000.AcquisitionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static RedvoxApi1000.AcquisitionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static RedvoxApi1000.AcquisitionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static RedvoxApi1000.AcquisitionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static RedvoxApi1000.AcquisitionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static RedvoxApi1000.AcquisitionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static RedvoxApi1000.AcquisitionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(RedvoxApi1000.AcquisitionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Response from data acquisition services.
+     * </pre>
+     *
+     * Protobuf type {@code AcquisitionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:AcquisitionResponse)
+        RedvoxApi1000.AcquisitionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return RedvoxApi1000.internal_static_AcquisitionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return RedvoxApi1000.internal_static_AcquisitionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                RedvoxApi1000.AcquisitionResponse.class, RedvoxApi1000.AcquisitionResponse.Builder.class);
+      }
+
+      // Construct using RedvoxApi1000.AcquisitionResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        responseType_ = 0;
+
+        checksum_ = 0L;
+
+        details_ = "";
+
+        resend_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return RedvoxApi1000.internal_static_AcquisitionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public RedvoxApi1000.AcquisitionResponse getDefaultInstanceForType() {
+        return RedvoxApi1000.AcquisitionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public RedvoxApi1000.AcquisitionResponse build() {
+        RedvoxApi1000.AcquisitionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public RedvoxApi1000.AcquisitionResponse buildPartial() {
+        RedvoxApi1000.AcquisitionResponse result = new RedvoxApi1000.AcquisitionResponse(this);
+        result.responseType_ = responseType_;
+        result.checksum_ = checksum_;
+        result.details_ = details_;
+        result.resend_ = resend_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof RedvoxApi1000.AcquisitionResponse) {
+          return mergeFrom((RedvoxApi1000.AcquisitionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(RedvoxApi1000.AcquisitionResponse other) {
+        if (other == RedvoxApi1000.AcquisitionResponse.getDefaultInstance()) return this;
+        if (other.responseType_ != 0) {
+          setResponseTypeValue(other.getResponseTypeValue());
+        }
+        if (other.getChecksum() != 0L) {
+          setChecksum(other.getChecksum());
+        }
+        if (!other.getDetails().isEmpty()) {
+          details_ = other.details_;
+          onChanged();
+        }
+        if (other.getResend() != false) {
+          setResend(other.getResend());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        RedvoxApi1000.AcquisitionResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (RedvoxApi1000.AcquisitionResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int responseType_ = 0;
+      /**
+       * <pre>
+       * Response type (as above)
+       * </pre>
+       *
+       * <code>.AcquisitionResponse.ResponseType response_type = 1;</code>
+       */
+      public int getResponseTypeValue() {
+        return responseType_;
+      }
+      /**
+       * <pre>
+       * Response type (as above)
+       * </pre>
+       *
+       * <code>.AcquisitionResponse.ResponseType response_type = 1;</code>
+       */
+      public Builder setResponseTypeValue(int value) {
+        responseType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Response type (as above)
+       * </pre>
+       *
+       * <code>.AcquisitionResponse.ResponseType response_type = 1;</code>
+       */
+      public RedvoxApi1000.AcquisitionResponse.ResponseType getResponseType() {
+        @SuppressWarnings("deprecation")
+        RedvoxApi1000.AcquisitionResponse.ResponseType result = RedvoxApi1000.AcquisitionResponse.ResponseType.valueOf(responseType_);
+        return result == null ? RedvoxApi1000.AcquisitionResponse.ResponseType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Response type (as above)
+       * </pre>
+       *
+       * <code>.AcquisitionResponse.ResponseType response_type = 1;</code>
+       */
+      public Builder setResponseType(RedvoxApi1000.AcquisitionResponse.ResponseType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        responseType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Response type (as above)
+       * </pre>
+       *
+       * <code>.AcquisitionResponse.ResponseType response_type = 1;</code>
+       */
+      public Builder clearResponseType() {
+        
+        responseType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long checksum_ ;
+      /**
+       * <pre>
+       * Checksum computed by server
+       * </pre>
+       *
+       * <code>int64 checksum = 2;</code>
+       */
+      public long getChecksum() {
+        return checksum_;
+      }
+      /**
+       * <pre>
+       * Checksum computed by server
+       * </pre>
+       *
+       * <code>int64 checksum = 2;</code>
+       */
+      public Builder setChecksum(long value) {
+        
+        checksum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Checksum computed by server
+       * </pre>
+       *
+       * <code>int64 checksum = 2;</code>
+       */
+      public Builder clearChecksum() {
+        
+        checksum_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object details_ = "";
+      /**
+       * <pre>
+       * Any other error details
+       * </pre>
+       *
+       * <code>string details = 3;</code>
+       */
+      public java.lang.String getDetails() {
+        java.lang.Object ref = details_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          details_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Any other error details
+       * </pre>
+       *
+       * <code>string details = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDetailsBytes() {
+        java.lang.Object ref = details_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          details_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Any other error details
+       * </pre>
+       *
+       * <code>string details = 3;</code>
+       */
+      public Builder setDetails(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        details_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Any other error details
+       * </pre>
+       *
+       * <code>string details = 3;</code>
+       */
+      public Builder clearDetails() {
+        
+        details_ = getDefaultInstance().getDetails();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Any other error details
+       * </pre>
+       *
+       * <code>string details = 3;</code>
+       */
+      public Builder setDetailsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        details_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean resend_ ;
+      /**
+       * <pre>
+       * If set, client to should attempt to resend the file
+       * </pre>
+       *
+       * <code>bool resend = 4;</code>
+       */
+      public boolean getResend() {
+        return resend_;
+      }
+      /**
+       * <pre>
+       * If set, client to should attempt to resend the file
+       * </pre>
+       *
+       * <code>bool resend = 4;</code>
+       */
+      public Builder setResend(boolean value) {
+        
+        resend_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If set, client to should attempt to resend the file
+       * </pre>
+       *
+       * <code>bool resend = 4;</code>
+       */
+      public Builder clearResend() {
+        
+        resend_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:AcquisitionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:AcquisitionResponse)
+    private static final RedvoxApi1000.AcquisitionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new RedvoxApi1000.AcquisitionResponse();
+    }
+
+    public static RedvoxApi1000.AcquisitionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AcquisitionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AcquisitionResponse>() {
+      @java.lang.Override
+      public AcquisitionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AcquisitionResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AcquisitionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AcquisitionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public RedvoxApi1000.AcquisitionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_RedvoxPacket1000_descriptor;
   private static final 
@@ -21548,6 +23183,16 @@ public final class RedvoxApi1000 {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_SummaryStatistics_MetadataEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_AcquisitionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_AcquisitionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_AcquisitionResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_AcquisitionResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -21655,7 +23300,14 @@ public final class RedvoxApi1000 {
       "(\001\022\013\n\003max\030\007 \001(\001\022\r\n\005range\030\010 \001(\001\0222\n\010metada" +
       "ta\030\t \003(\0132 .SummaryStatistics.MetadataEnt" +
       "ry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001b\006proto3"
+      "e\030\002 \001(\t:\0028\001\"M\n\022AcquisitionRequest\022%\n\035com" +
+      "pressed_redvox_packet_1000\030\001 \001(\014\022\020\n\010chec" +
+      "ksum\030\002 \001(\003\"\313\001\n\023AcquisitionResponse\0228\n\rre" +
+      "sponse_type\030\001 \001(\0162!.AcquisitionResponse." +
+      "ResponseType\022\020\n\010checksum\030\002 \001(\003\022\017\n\007detail" +
+      "s\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"G\n\014ResponseType\022" +
+      "\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001\022\016\n\nDATA_ERROR\020\002\022" +
+      "\017\n\013OTHER_ERROR\020\003b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -21753,6 +23405,18 @@ public final class RedvoxApi1000 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SummaryStatistics_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_AcquisitionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_AcquisitionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_AcquisitionRequest_descriptor,
+        new java.lang.String[] { "CompressedRedvoxPacket1000", "Checksum", });
+    internal_static_AcquisitionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_AcquisitionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_AcquisitionResponse_descriptor,
+        new java.lang.String[] { "ResponseType", "Checksum", "Details", "Resend", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
