@@ -8,7 +8,7 @@
 #endif
 
 #if GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS
- #import <protobuf/GPBProtocolBuffers.h>
+ #import <Protobuf/GPBProtocolBuffers.h>
 #else
  #import "GPBProtocolBuffers.h"
 #endif
@@ -27,6 +27,7 @@
 
 CF_EXTERN_C_BEGIN
 
+@class ImageChannel;
 @class LocationChannel;
 @class MicrophoneChannel;
 @class SingleChannel;
@@ -163,7 +164,8 @@ typedef GPB_ENUM(RedvoxPacket1000_FieldNumber) {
   RedvoxPacket1000_FieldNumber_MagnetometerChannel = 38,
   RedvoxPacket1000_FieldNumber_LightChannel = 39,
   RedvoxPacket1000_FieldNumber_InfraredChannel = 40,
-  RedvoxPacket1000_FieldNumber_Metadata = 41,
+  RedvoxPacket1000_FieldNumber_ImageChannel = 41,
+  RedvoxPacket1000_FieldNumber_Metadata = 42,
 };
 
 /**
@@ -308,6 +310,11 @@ typedef GPB_ENUM(RedvoxPacket1000_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) SingleChannel *infraredChannel;
 /** Test to see if @c infraredChannel has been set. */
 @property(nonatomic, readwrite) BOOL hasInfraredChannel;
+
+/** The image channel */
+@property(nonatomic, readwrite, strong, null_resettable) ImageChannel *imageChannel;
+/** Test to see if @c imageChannel has been set. */
+@property(nonatomic, readwrite) BOOL hasImageChannel;
 
 /** Metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;

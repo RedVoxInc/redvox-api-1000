@@ -7,7 +7,7 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.MicrophoneChannel');
+goog.provide('proto.ImageChannel');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -26,19 +26,19 @@ goog.require('proto.SummaryStatistics');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.MicrophoneChannel = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.MicrophoneChannel.repeatedFields_, null);
+proto.ImageChannel = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.ImageChannel.repeatedFields_, null);
 };
-goog.inherits(proto.MicrophoneChannel, jspb.Message);
+goog.inherits(proto.ImageChannel, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.MicrophoneChannel.displayName = 'proto.MicrophoneChannel';
+  proto.ImageChannel.displayName = 'proto.ImageChannel';
 }
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.MicrophoneChannel.repeatedFields_ = [4];
+proto.ImageChannel.repeatedFields_ = [3,4];
 
 
 
@@ -53,8 +53,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.MicrophoneChannel.prototype.toObject = function(opt_includeInstance) {
-  return proto.MicrophoneChannel.toObject(opt_includeInstance, this);
+proto.ImageChannel.prototype.toObject = function(opt_includeInstance) {
+  return proto.ImageChannel.toObject(opt_includeInstance, this);
 };
 
 
@@ -63,17 +63,17 @@ proto.MicrophoneChannel.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.MicrophoneChannel} msg The msg instance to transform.
+ * @param {!proto.ImageChannel} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.MicrophoneChannel.toObject = function(includeInstance, msg) {
+proto.ImageChannel.toObject = function(includeInstance, msg) {
   var f, obj = {
     sensorDescription: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    firstSampleTsUs: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
-    sampleRateHz: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
-    samplesList: jspb.Message.getRepeatedFloatingPointField(msg, 4),
-    sampleStatistics: (f = msg.getSampleStatistics()) && proto.SummaryStatistics.toObject(includeInstance, f),
+    meanSampleRateHz: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
+    sampleTsUsList: jspb.Message.getRepeatedFloatingPointField(msg, 3),
+    samplesList: msg.getSamplesList_asB64(),
+    sampleRateStatistics: (f = msg.getSampleRateStatistics()) && proto.SummaryStatistics.toObject(includeInstance, f),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -88,23 +88,23 @@ proto.MicrophoneChannel.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.MicrophoneChannel}
+ * @return {!proto.ImageChannel}
  */
-proto.MicrophoneChannel.deserializeBinary = function(bytes) {
+proto.ImageChannel.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.MicrophoneChannel;
-  return proto.MicrophoneChannel.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ImageChannel;
+  return proto.ImageChannel.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.MicrophoneChannel} msg The message object to deserialize into.
+ * @param {!proto.ImageChannel} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.MicrophoneChannel}
+ * @return {!proto.ImageChannel}
  */
-proto.MicrophoneChannel.deserializeBinaryFromReader = function(msg, reader) {
+proto.ImageChannel.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -117,20 +117,20 @@ proto.MicrophoneChannel.deserializeBinaryFromReader = function(msg, reader) {
       break;
     case 2:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setFirstSampleTsUs(value);
+      msg.setMeanSampleRateHz(value);
       break;
     case 3:
-      var value = /** @type {number} */ (reader.readDouble());
-      msg.setSampleRateHz(value);
+      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
+      msg.setSampleTsUsList(value);
       break;
     case 4:
-      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setSamplesList(value);
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.addSamples(value);
       break;
     case 5:
       var value = new proto.SummaryStatistics;
       reader.readMessage(value,proto.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setSampleStatistics(value);
+      msg.setSampleRateStatistics(value);
       break;
     case 6:
       var value = msg.getMetadataMap();
@@ -151,9 +151,9 @@ proto.MicrophoneChannel.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.MicrophoneChannel.prototype.serializeBinary = function() {
+proto.ImageChannel.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.MicrophoneChannel.serializeBinaryToWriter(this, writer);
+  proto.ImageChannel.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -161,11 +161,11 @@ proto.MicrophoneChannel.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.MicrophoneChannel} message
+ * @param {!proto.ImageChannel} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.MicrophoneChannel.serializeBinaryToWriter = function(message, writer) {
+proto.ImageChannel.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getSensorDescription();
   if (f.length > 0) {
@@ -174,28 +174,28 @@ proto.MicrophoneChannel.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getFirstSampleTsUs();
+  f = message.getMeanSampleRateHz();
   if (f !== 0.0) {
     writer.writeDouble(
       2,
       f
     );
   }
-  f = message.getSampleRateHz();
-  if (f !== 0.0) {
-    writer.writeDouble(
+  f = message.getSampleTsUsList();
+  if (f.length > 0) {
+    writer.writePackedDouble(
       3,
       f
     );
   }
-  f = message.getSamplesList();
+  f = message.getSamplesList_asU8();
   if (f.length > 0) {
-    writer.writePackedDouble(
+    writer.writeRepeatedBytes(
       4,
       f
     );
   }
-  f = message.getSampleStatistics();
+  f = message.getSampleRateStatistics();
   if (f != null) {
     writer.writeMessage(
       5,
@@ -214,59 +214,44 @@ proto.MicrophoneChannel.serializeBinaryToWriter = function(message, writer) {
  * optional string sensor_description = 1;
  * @return {string}
  */
-proto.MicrophoneChannel.prototype.getSensorDescription = function() {
+proto.ImageChannel.prototype.getSensorDescription = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.MicrophoneChannel.prototype.setSensorDescription = function(value) {
+proto.ImageChannel.prototype.setSensorDescription = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional double first_sample_ts_us = 2;
+ * optional double mean_sample_rate_hz = 2;
  * @return {number}
  */
-proto.MicrophoneChannel.prototype.getFirstSampleTsUs = function() {
+proto.ImageChannel.prototype.getMeanSampleRateHz = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 2, 0.0));
 };
 
 
 /** @param {number} value */
-proto.MicrophoneChannel.prototype.setFirstSampleTsUs = function(value) {
+proto.ImageChannel.prototype.setMeanSampleRateHz = function(value) {
   jspb.Message.setProto3FloatField(this, 2, value);
 };
 
 
 /**
- * optional double sample_rate_hz = 3;
- * @return {number}
- */
-proto.MicrophoneChannel.prototype.getSampleRateHz = function() {
-  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 3, 0.0));
-};
-
-
-/** @param {number} value */
-proto.MicrophoneChannel.prototype.setSampleRateHz = function(value) {
-  jspb.Message.setProto3FloatField(this, 3, value);
-};
-
-
-/**
- * repeated double samples = 4;
+ * repeated double sample_ts_us = 3;
  * @return {!Array<number>}
  */
-proto.MicrophoneChannel.prototype.getSamplesList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 4));
+proto.ImageChannel.prototype.getSampleTsUsList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 3));
 };
 
 
 /** @param {!Array<number>} value */
-proto.MicrophoneChannel.prototype.setSamplesList = function(value) {
-  jspb.Message.setField(this, 4, value || []);
+proto.ImageChannel.prototype.setSampleTsUsList = function(value) {
+  jspb.Message.setField(this, 3, value || []);
 };
 
 
@@ -274,34 +259,87 @@ proto.MicrophoneChannel.prototype.setSamplesList = function(value) {
  * @param {!number} value
  * @param {number=} opt_index
  */
-proto.MicrophoneChannel.prototype.addSamples = function(value, opt_index) {
+proto.ImageChannel.prototype.addSampleTsUs = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 3, value, opt_index);
+};
+
+
+proto.ImageChannel.prototype.clearSampleTsUsList = function() {
+  this.setSampleTsUsList([]);
+};
+
+
+/**
+ * repeated bytes samples = 4;
+ * @return {!Array<string>}
+ */
+proto.ImageChannel.prototype.getSamplesList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 4));
+};
+
+
+/**
+ * repeated bytes samples = 4;
+ * This is a type-conversion wrapper around `getSamplesList()`
+ * @return {!Array<string>}
+ */
+proto.ImageChannel.prototype.getSamplesList_asB64 = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
+      this.getSamplesList()));
+};
+
+
+/**
+ * repeated bytes samples = 4;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getSamplesList()`
+ * @return {!Array<!Uint8Array>}
+ */
+proto.ImageChannel.prototype.getSamplesList_asU8 = function() {
+  return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
+      this.getSamplesList()));
+};
+
+
+/** @param {!(Array<!Uint8Array>|Array<string>)} value */
+proto.ImageChannel.prototype.setSamplesList = function(value) {
+  jspb.Message.setField(this, 4, value || []);
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @param {number=} opt_index
+ */
+proto.ImageChannel.prototype.addSamples = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 4, value, opt_index);
 };
 
 
-proto.MicrophoneChannel.prototype.clearSamplesList = function() {
+proto.ImageChannel.prototype.clearSamplesList = function() {
   this.setSamplesList([]);
 };
 
 
 /**
- * optional SummaryStatistics sample_statistics = 5;
+ * optional SummaryStatistics sample_rate_statistics = 5;
  * @return {?proto.SummaryStatistics}
  */
-proto.MicrophoneChannel.prototype.getSampleStatistics = function() {
+proto.ImageChannel.prototype.getSampleRateStatistics = function() {
   return /** @type{?proto.SummaryStatistics} */ (
     jspb.Message.getWrapperField(this, proto.SummaryStatistics, 5));
 };
 
 
 /** @param {?proto.SummaryStatistics|undefined} value */
-proto.MicrophoneChannel.prototype.setSampleStatistics = function(value) {
+proto.ImageChannel.prototype.setSampleRateStatistics = function(value) {
   jspb.Message.setWrapperField(this, 5, value);
 };
 
 
-proto.MicrophoneChannel.prototype.clearSampleStatistics = function() {
-  this.setSampleStatistics(undefined);
+proto.ImageChannel.prototype.clearSampleRateStatistics = function() {
+  this.setSampleRateStatistics(undefined);
 };
 
 
@@ -309,7 +347,7 @@ proto.MicrophoneChannel.prototype.clearSampleStatistics = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.MicrophoneChannel.prototype.hasSampleStatistics = function() {
+proto.ImageChannel.prototype.hasSampleRateStatistics = function() {
   return jspb.Message.getField(this, 5) != null;
 };
 
@@ -320,14 +358,14 @@ proto.MicrophoneChannel.prototype.hasSampleStatistics = function() {
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.MicrophoneChannel.prototype.getMetadataMap = function(opt_noLazyCreate) {
+proto.ImageChannel.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 6, opt_noLazyCreate,
       null));
 };
 
 
-proto.MicrophoneChannel.prototype.clearMetadataMap = function() {
+proto.ImageChannel.prototype.clearMetadataMap = function() {
   this.getMetadataMap().clear();
 };
 

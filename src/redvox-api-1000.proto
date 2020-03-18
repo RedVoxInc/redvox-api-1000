@@ -70,9 +70,10 @@ message RedvoxPacket1000 {
     XyzChannel magnetometer_channel = 38;               // The magnetometer channel
     SingleChannel light_channel = 39;                   // The light channel
     SingleChannel infrared_channel = 40;                // The infrared channel
+    ImageChannel image_channel = 41;                    // The image channel
 
     // Metadata
-    map<string, string> metadata = 41;                  // A map from string to string for including untyped metadata
+    map<string, string> metadata = 42;                  // A map from string to string for including untyped metadata
 }
 
 // Message type for microphone channels
@@ -146,8 +147,8 @@ message ImageChannel {
     double mean_sample_rate_hz = 2;                     // The mean sample rate in Hz
     repeated double sample_ts_us = 3;                   // A list of timestamps, one for each sample
     repeated bytes samples = 4;
-    SummaryStatistics sample_rate_statistics = 5;      // Statistics for sample timestamps
-    map<string, string> metadata = 6;                  // A map from string to string for including untyped metadata
+    SummaryStatistics sample_rate_statistics = 5;       // Statistics for sample timestamps
+    map<string, string> metadata = 6;                   // A map from string to string for including untyped metadata
 }
 
 // Message type for summary statistics
@@ -160,5 +161,6 @@ message SummaryStatistics {
     double min = 6;                                     // The minimum value
     double max = 7;                                     // The maximum value
     double range = 8;                                   // The range of the values
-    map<string, string> metadata = 9;                  // A map from string to string for including untyped metadata
+    map<string, string> metadata = 9;                   // A map from string to string for including untyped metadata
 }
+

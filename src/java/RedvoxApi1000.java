@@ -22,7 +22,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>uint32 api = 1;</code>
-     * @return The api.
      */
     int getApi();
 
@@ -32,7 +31,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string auth_email = 2;</code>
-     * @return The authEmail.
      */
     java.lang.String getAuthEmail();
     /**
@@ -41,7 +39,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string auth_email = 2;</code>
-     * @return The bytes for authEmail.
      */
     com.google.protobuf.ByteString
         getAuthEmailBytes();
@@ -52,7 +49,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string auth_token = 3;</code>
-     * @return The authToken.
      */
     java.lang.String getAuthToken();
     /**
@@ -61,7 +57,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string auth_token = 3;</code>
-     * @return The bytes for authToken.
      */
     com.google.protobuf.ByteString
         getAuthTokenBytes();
@@ -72,7 +67,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string firebase_token = 4;</code>
-     * @return The firebaseToken.
      */
     java.lang.String getFirebaseToken();
     /**
@@ -81,7 +75,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string firebase_token = 4;</code>
-     * @return The bytes for firebaseToken.
      */
     com.google.protobuf.ByteString
         getFirebaseTokenBytes();
@@ -92,7 +85,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_id = 5;</code>
-     * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
@@ -101,7 +93,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_id = 5;</code>
-     * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -112,7 +103,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_uuid = 6;</code>
-     * @return The deviceUuid.
      */
     java.lang.String getDeviceUuid();
     /**
@@ -121,7 +111,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_uuid = 6;</code>
-     * @return The bytes for deviceUuid.
      */
     com.google.protobuf.ByteString
         getDeviceUuidBytes();
@@ -132,7 +121,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_make = 7;</code>
-     * @return The deviceMake.
      */
     java.lang.String getDeviceMake();
     /**
@@ -141,7 +129,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_make = 7;</code>
-     * @return The bytes for deviceMake.
      */
     com.google.protobuf.ByteString
         getDeviceMakeBytes();
@@ -152,7 +139,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_model = 8;</code>
-     * @return The deviceModel.
      */
     java.lang.String getDeviceModel();
     /**
@@ -161,7 +147,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_model = 8;</code>
-     * @return The bytes for deviceModel.
      */
     com.google.protobuf.ByteString
         getDeviceModelBytes();
@@ -172,7 +157,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.RedvoxPacket1000.OsType device_os = 9;</code>
-     * @return The enum numeric value on the wire for deviceOs.
      */
     int getDeviceOsValue();
     /**
@@ -181,7 +165,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.RedvoxPacket1000.OsType device_os = 9;</code>
-     * @return The deviceOs.
      */
     RedvoxApi1000.RedvoxPacket1000.OsType getDeviceOs();
 
@@ -191,7 +174,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_os_version = 10;</code>
-     * @return The deviceOsVersion.
      */
     java.lang.String getDeviceOsVersion();
     /**
@@ -200,7 +182,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_os_version = 10;</code>
-     * @return The bytes for deviceOsVersion.
      */
     com.google.protobuf.ByteString
         getDeviceOsVersionBytes();
@@ -211,7 +192,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_app_version = 11;</code>
-     * @return The deviceAppVersion.
      */
     java.lang.String getDeviceAppVersion();
     /**
@@ -220,7 +200,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_app_version = 11;</code>
-     * @return The bytes for deviceAppVersion.
      */
     com.google.protobuf.ByteString
         getDeviceAppVersionBytes();
@@ -231,7 +210,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double device_temp_c = 12;</code>
-     * @return The deviceTempC.
      */
     double getDeviceTempC();
 
@@ -241,7 +219,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double device_battery_percent = 13;</code>
-     * @return The deviceBatteryPercent.
      */
     double getDeviceBatteryPercent();
 
@@ -251,7 +228,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.RedvoxPacket1000.NetworkType network_type = 14;</code>
-     * @return The enum numeric value on the wire for networkType.
      */
     int getNetworkTypeValue();
     /**
@@ -260,7 +236,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.RedvoxPacket1000.NetworkType network_type = 14;</code>
-     * @return The networkType.
      */
     RedvoxApi1000.RedvoxPacket1000.NetworkType getNetworkType();
 
@@ -270,7 +245,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double network_strength_db = 15;</code>
-     * @return The networkStrengthDb.
      */
     double getNetworkStrengthDb();
 
@@ -280,7 +254,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>bool is_backfilled = 16;</code>
-     * @return The isBackfilled.
      */
     boolean getIsBackfilled();
 
@@ -290,7 +263,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>bool is_private = 17;</code>
-     * @return The isPrivate.
      */
     boolean getIsPrivate();
 
@@ -300,7 +272,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>bool is_mic_scrambled = 18;</code>
-     * @return The isMicScrambled.
      */
     boolean getIsMicScrambled();
 
@@ -310,7 +281,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double uncompressed_size_bytes = 19;</code>
-     * @return The uncompressedSizeBytes.
      */
     double getUncompressedSizeBytes();
 
@@ -320,7 +290,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double compressed_size_bytes = 20;</code>
-     * @return The compressedSizeBytes.
      */
     double getCompressedSizeBytes();
 
@@ -330,7 +299,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string auth_server_url = 21;</code>
-     * @return The authServerUrl.
      */
     java.lang.String getAuthServerUrl();
     /**
@@ -339,7 +307,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string auth_server_url = 21;</code>
-     * @return The bytes for authServerUrl.
      */
     com.google.protobuf.ByteString
         getAuthServerUrlBytes();
@@ -350,7 +317,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string synch_server_url = 22;</code>
-     * @return The synchServerUrl.
      */
     java.lang.String getSynchServerUrl();
     /**
@@ -359,7 +325,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string synch_server_url = 22;</code>
-     * @return The bytes for synchServerUrl.
      */
     com.google.protobuf.ByteString
         getSynchServerUrlBytes();
@@ -370,7 +335,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string acquisition_server_url = 23;</code>
-     * @return The acquisitionServerUrl.
      */
     java.lang.String getAcquisitionServerUrl();
     /**
@@ -379,7 +343,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string acquisition_server_url = 23;</code>
-     * @return The bytes for acquisitionServerUrl.
      */
     com.google.protobuf.ByteString
         getAcquisitionServerUrlBytes();
@@ -390,7 +353,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double packet_start_ts_us_wall = 24;</code>
-     * @return The packetStartTsUsWall.
      */
     double getPacketStartTsUsWall();
 
@@ -400,7 +362,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double packet_start_ts_us_mach = 25;</code>
-     * @return The packetStartTsUsMach.
      */
     double getPacketStartTsUsMach();
 
@@ -410,7 +371,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double packet_end_ts_us_wall = 26;</code>
-     * @return The packetEndTsUsWall.
      */
     double getPacketEndTsUsWall();
 
@@ -420,7 +380,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double packet_end_ts_us_mach = 27;</code>
-     * @return The packetEndTsUsMach.
      */
     double getPacketEndTsUsMach();
 
@@ -430,7 +389,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double server_acquisition_arrival_ts_us = 28;</code>
-     * @return The serverAcquisitionArrivalTsUs.
      */
     double getServerAcquisitionArrivalTsUs();
 
@@ -440,7 +398,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double app_start_ts_us_mach = 29;</code>
-     * @return The appStartTsUsMach.
      */
     double getAppStartTsUsMach();
 
@@ -450,7 +407,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double synch_params = 30;</code>
-     * @return A list containing the synchParams.
      */
     java.util.List<java.lang.Double> getSynchParamsList();
     /**
@@ -459,7 +415,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double synch_params = 30;</code>
-     * @return The count of synchParams.
      */
     int getSynchParamsCount();
     /**
@@ -468,8 +423,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double synch_params = 30;</code>
-     * @param index The index of the element to return.
-     * @return The synchParams at the given index.
      */
     double getSynchParams(int index);
 
@@ -479,7 +432,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double best_latency_us = 31;</code>
-     * @return The bestLatencyUs.
      */
     double getBestLatencyUs();
 
@@ -489,7 +441,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double best_offset_us = 32;</code>
-     * @return The bestOffsetUs.
      */
     double getBestOffsetUs();
 
@@ -499,7 +450,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.MicrophoneChannel microphone_channel = 33;</code>
-     * @return Whether the microphoneChannel field is set.
      */
     boolean hasMicrophoneChannel();
     /**
@@ -508,7 +458,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.MicrophoneChannel microphone_channel = 33;</code>
-     * @return The microphoneChannel.
      */
     RedvoxApi1000.MicrophoneChannel getMicrophoneChannel();
     /**
@@ -526,7 +475,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SingleChannel barometer_channel = 34;</code>
-     * @return Whether the barometerChannel field is set.
      */
     boolean hasBarometerChannel();
     /**
@@ -535,7 +483,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SingleChannel barometer_channel = 34;</code>
-     * @return The barometerChannel.
      */
     RedvoxApi1000.SingleChannel getBarometerChannel();
     /**
@@ -553,7 +500,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.LocationChannel location_channel = 35;</code>
-     * @return Whether the locationChannel field is set.
      */
     boolean hasLocationChannel();
     /**
@@ -562,7 +508,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.LocationChannel location_channel = 35;</code>
-     * @return The locationChannel.
      */
     RedvoxApi1000.LocationChannel getLocationChannel();
     /**
@@ -580,7 +525,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.XyzChannel accelerometer_channel = 36;</code>
-     * @return Whether the accelerometerChannel field is set.
      */
     boolean hasAccelerometerChannel();
     /**
@@ -589,7 +533,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.XyzChannel accelerometer_channel = 36;</code>
-     * @return The accelerometerChannel.
      */
     RedvoxApi1000.XyzChannel getAccelerometerChannel();
     /**
@@ -607,7 +550,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.XyzChannel gyroscope_channel = 37;</code>
-     * @return Whether the gyroscopeChannel field is set.
      */
     boolean hasGyroscopeChannel();
     /**
@@ -616,7 +558,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.XyzChannel gyroscope_channel = 37;</code>
-     * @return The gyroscopeChannel.
      */
     RedvoxApi1000.XyzChannel getGyroscopeChannel();
     /**
@@ -634,7 +575,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.XyzChannel magnetometer_channel = 38;</code>
-     * @return Whether the magnetometerChannel field is set.
      */
     boolean hasMagnetometerChannel();
     /**
@@ -643,7 +583,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.XyzChannel magnetometer_channel = 38;</code>
-     * @return The magnetometerChannel.
      */
     RedvoxApi1000.XyzChannel getMagnetometerChannel();
     /**
@@ -661,7 +600,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SingleChannel light_channel = 39;</code>
-     * @return Whether the lightChannel field is set.
      */
     boolean hasLightChannel();
     /**
@@ -670,7 +608,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SingleChannel light_channel = 39;</code>
-     * @return The lightChannel.
      */
     RedvoxApi1000.SingleChannel getLightChannel();
     /**
@@ -688,7 +625,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SingleChannel infrared_channel = 40;</code>
-     * @return Whether the infraredChannel field is set.
      */
     boolean hasInfraredChannel();
     /**
@@ -697,7 +633,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SingleChannel infrared_channel = 40;</code>
-     * @return The infraredChannel.
      */
     RedvoxApi1000.SingleChannel getInfraredChannel();
     /**
@@ -711,10 +646,35 @@ public final class RedvoxApi1000 {
 
     /**
      * <pre>
+     * The image channel
+     * </pre>
+     *
+     * <code>.ImageChannel image_channel = 41;</code>
+     */
+    boolean hasImageChannel();
+    /**
+     * <pre>
+     * The image channel
+     * </pre>
+     *
+     * <code>.ImageChannel image_channel = 41;</code>
+     */
+    RedvoxApi1000.ImageChannel getImageChannel();
+    /**
+     * <pre>
+     * The image channel
+     * </pre>
+     *
+     * <code>.ImageChannel image_channel = 41;</code>
+     */
+    RedvoxApi1000.ImageChannelOrBuilder getImageChannelOrBuilder();
+
+    /**
+     * <pre>
      * Metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 41;</code>
+     * <code>map&lt;string, string&gt; metadata = 42;</code>
      */
     int getMetadataCount();
     /**
@@ -722,7 +682,7 @@ public final class RedvoxApi1000 {
      * Metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 41;</code>
+     * <code>map&lt;string, string&gt; metadata = 42;</code>
      */
     boolean containsMetadata(
         java.lang.String key);
@@ -737,7 +697,7 @@ public final class RedvoxApi1000 {
      * Metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 41;</code>
+     * <code>map&lt;string, string&gt; metadata = 42;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getMetadataMap();
@@ -746,7 +706,7 @@ public final class RedvoxApi1000 {
      * Metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 41;</code>
+     * <code>map&lt;string, string&gt; metadata = 42;</code>
      */
 
     java.lang.String getMetadataOrDefault(
@@ -757,7 +717,7 @@ public final class RedvoxApi1000 {
      * Metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 41;</code>
+     * <code>map&lt;string, string&gt; metadata = 42;</code>
      */
 
     java.lang.String getMetadataOrThrow(
@@ -780,6 +740,7 @@ public final class RedvoxApi1000 {
       super(builder);
     }
     private RedvoxPacket1000() {
+      api_ = 0;
       authEmail_ = "";
       authToken_ = "";
       firebaseToken_ = "";
@@ -790,18 +751,27 @@ public final class RedvoxApi1000 {
       deviceOs_ = 0;
       deviceOsVersion_ = "";
       deviceAppVersion_ = "";
+      deviceTempC_ = 0D;
+      deviceBatteryPercent_ = 0D;
       networkType_ = 0;
+      networkStrengthDb_ = 0D;
+      isBackfilled_ = false;
+      isPrivate_ = false;
+      isMicScrambled_ = false;
+      uncompressedSizeBytes_ = 0D;
+      compressedSizeBytes_ = 0D;
       authServerUrl_ = "";
       synchServerUrl_ = "";
       acquisitionServerUrl_ = "";
-      synchParams_ = emptyDoubleList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RedvoxPacket1000();
+      packetStartTsUsWall_ = 0D;
+      packetStartTsUsMach_ = 0D;
+      packetEndTsUsWall_ = 0D;
+      packetEndTsUsMach_ = 0D;
+      serverAcquisitionArrivalTsUs_ = 0D;
+      appStartTsUsMach_ = 0D;
+      synchParams_ = java.util.Collections.emptyList();
+      bestLatencyUs_ = 0D;
+      bestOffsetUs_ = 0D;
     }
 
     @java.lang.Override
@@ -818,6 +788,7 @@ public final class RedvoxApi1000 {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -988,22 +959,22 @@ public final class RedvoxApi1000 {
               break;
             }
             case 241: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                synchParams_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000001;
+              if (!((mutable_bitField0_ & 0x20000000) == 0x20000000)) {
+                synchParams_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x20000000;
               }
-              synchParams_.addDouble(input.readDouble());
+              synchParams_.add(input.readDouble());
               break;
             }
             case 242: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                synchParams_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000001;
+              if (!((mutable_bitField0_ & 0x20000000) == 0x20000000) && input.getBytesUntilLimit() > 0) {
+                synchParams_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x20000000;
               }
               while (input.getBytesUntilLimit() > 0) {
-                synchParams_.addDouble(input.readDouble());
+                synchParams_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
@@ -1123,10 +1094,23 @@ public final class RedvoxApi1000 {
               break;
             }
             case 330: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              RedvoxApi1000.ImageChannel.Builder subBuilder = null;
+              if (imageChannel_ != null) {
+                subBuilder = imageChannel_.toBuilder();
+              }
+              imageChannel_ = input.readMessage(RedvoxApi1000.ImageChannel.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(imageChannel_);
+                imageChannel_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 338: {
+              if (!((mutable_bitField1_ & 0x00000200) == 0x00000200)) {
                 metadata_ = com.google.protobuf.MapField.newMapField(
                     MetadataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField1_ |= 0x00000200;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               metadata__ = input.readMessage(
@@ -1136,7 +1120,7 @@ public final class RedvoxApi1000 {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1150,8 +1134,8 @@ public final class RedvoxApi1000 {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          synchParams_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x20000000) == 0x20000000)) {
+          synchParams_ = java.util.Collections.unmodifiableList(synchParams_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1167,7 +1151,7 @@ public final class RedvoxApi1000 {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 41:
+        case 42:
           return internalGetMetadata();
         default:
           throw new RuntimeException(
@@ -1229,8 +1213,6 @@ public final class RedvoxApi1000 {
       }
 
       /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1238,10 +1220,6 @@ public final class RedvoxApi1000 {
         return forNumber(value);
       }
 
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
       public static NetworkType forNumber(int value) {
         switch (value) {
           case 0: return WIFI;
@@ -1354,8 +1332,6 @@ public final class RedvoxApi1000 {
       }
 
       /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -1363,10 +1339,6 @@ public final class RedvoxApi1000 {
         return forNumber(value);
       }
 
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
       public static OsType forNumber(int value) {
         switch (value) {
           case 0: return ANDROID;
@@ -1425,6 +1397,8 @@ public final class RedvoxApi1000 {
       // @@protoc_insertion_point(enum_scope:RedvoxPacket1000.OsType)
     }
 
+    private int bitField0_;
+    private int bitField1_;
     public static final int API_FIELD_NUMBER = 1;
     private int api_;
     /**
@@ -1433,7 +1407,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>uint32 api = 1;</code>
-     * @return The api.
      */
     public int getApi() {
       return api_;
@@ -1447,7 +1420,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string auth_email = 2;</code>
-     * @return The authEmail.
      */
     public java.lang.String getAuthEmail() {
       java.lang.Object ref = authEmail_;
@@ -1467,7 +1439,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string auth_email = 2;</code>
-     * @return The bytes for authEmail.
      */
     public com.google.protobuf.ByteString
         getAuthEmailBytes() {
@@ -1491,7 +1462,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string auth_token = 3;</code>
-     * @return The authToken.
      */
     public java.lang.String getAuthToken() {
       java.lang.Object ref = authToken_;
@@ -1511,7 +1481,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string auth_token = 3;</code>
-     * @return The bytes for authToken.
      */
     public com.google.protobuf.ByteString
         getAuthTokenBytes() {
@@ -1535,7 +1504,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string firebase_token = 4;</code>
-     * @return The firebaseToken.
      */
     public java.lang.String getFirebaseToken() {
       java.lang.Object ref = firebaseToken_;
@@ -1555,7 +1523,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string firebase_token = 4;</code>
-     * @return The bytes for firebaseToken.
      */
     public com.google.protobuf.ByteString
         getFirebaseTokenBytes() {
@@ -1579,7 +1546,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_id = 5;</code>
-     * @return The deviceId.
      */
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
@@ -1599,7 +1565,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_id = 5;</code>
-     * @return The bytes for deviceId.
      */
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
@@ -1623,7 +1588,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_uuid = 6;</code>
-     * @return The deviceUuid.
      */
     public java.lang.String getDeviceUuid() {
       java.lang.Object ref = deviceUuid_;
@@ -1643,7 +1607,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_uuid = 6;</code>
-     * @return The bytes for deviceUuid.
      */
     public com.google.protobuf.ByteString
         getDeviceUuidBytes() {
@@ -1667,7 +1630,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_make = 7;</code>
-     * @return The deviceMake.
      */
     public java.lang.String getDeviceMake() {
       java.lang.Object ref = deviceMake_;
@@ -1687,7 +1649,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_make = 7;</code>
-     * @return The bytes for deviceMake.
      */
     public com.google.protobuf.ByteString
         getDeviceMakeBytes() {
@@ -1711,7 +1672,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_model = 8;</code>
-     * @return The deviceModel.
      */
     public java.lang.String getDeviceModel() {
       java.lang.Object ref = deviceModel_;
@@ -1731,7 +1691,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_model = 8;</code>
-     * @return The bytes for deviceModel.
      */
     public com.google.protobuf.ByteString
         getDeviceModelBytes() {
@@ -1755,7 +1714,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.RedvoxPacket1000.OsType device_os = 9;</code>
-     * @return The enum numeric value on the wire for deviceOs.
      */
     public int getDeviceOsValue() {
       return deviceOs_;
@@ -1766,7 +1724,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.RedvoxPacket1000.OsType device_os = 9;</code>
-     * @return The deviceOs.
      */
     public RedvoxApi1000.RedvoxPacket1000.OsType getDeviceOs() {
       @SuppressWarnings("deprecation")
@@ -1782,7 +1739,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_os_version = 10;</code>
-     * @return The deviceOsVersion.
      */
     public java.lang.String getDeviceOsVersion() {
       java.lang.Object ref = deviceOsVersion_;
@@ -1802,7 +1758,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_os_version = 10;</code>
-     * @return The bytes for deviceOsVersion.
      */
     public com.google.protobuf.ByteString
         getDeviceOsVersionBytes() {
@@ -1826,7 +1781,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_app_version = 11;</code>
-     * @return The deviceAppVersion.
      */
     public java.lang.String getDeviceAppVersion() {
       java.lang.Object ref = deviceAppVersion_;
@@ -1846,7 +1800,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string device_app_version = 11;</code>
-     * @return The bytes for deviceAppVersion.
      */
     public com.google.protobuf.ByteString
         getDeviceAppVersionBytes() {
@@ -1870,7 +1823,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double device_temp_c = 12;</code>
-     * @return The deviceTempC.
      */
     public double getDeviceTempC() {
       return deviceTempC_;
@@ -1884,7 +1836,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double device_battery_percent = 13;</code>
-     * @return The deviceBatteryPercent.
      */
     public double getDeviceBatteryPercent() {
       return deviceBatteryPercent_;
@@ -1898,7 +1849,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.RedvoxPacket1000.NetworkType network_type = 14;</code>
-     * @return The enum numeric value on the wire for networkType.
      */
     public int getNetworkTypeValue() {
       return networkType_;
@@ -1909,7 +1859,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.RedvoxPacket1000.NetworkType network_type = 14;</code>
-     * @return The networkType.
      */
     public RedvoxApi1000.RedvoxPacket1000.NetworkType getNetworkType() {
       @SuppressWarnings("deprecation")
@@ -1925,7 +1874,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double network_strength_db = 15;</code>
-     * @return The networkStrengthDb.
      */
     public double getNetworkStrengthDb() {
       return networkStrengthDb_;
@@ -1939,7 +1887,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>bool is_backfilled = 16;</code>
-     * @return The isBackfilled.
      */
     public boolean getIsBackfilled() {
       return isBackfilled_;
@@ -1953,7 +1900,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>bool is_private = 17;</code>
-     * @return The isPrivate.
      */
     public boolean getIsPrivate() {
       return isPrivate_;
@@ -1967,7 +1913,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>bool is_mic_scrambled = 18;</code>
-     * @return The isMicScrambled.
      */
     public boolean getIsMicScrambled() {
       return isMicScrambled_;
@@ -1981,7 +1926,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double uncompressed_size_bytes = 19;</code>
-     * @return The uncompressedSizeBytes.
      */
     public double getUncompressedSizeBytes() {
       return uncompressedSizeBytes_;
@@ -1995,7 +1939,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double compressed_size_bytes = 20;</code>
-     * @return The compressedSizeBytes.
      */
     public double getCompressedSizeBytes() {
       return compressedSizeBytes_;
@@ -2009,7 +1952,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string auth_server_url = 21;</code>
-     * @return The authServerUrl.
      */
     public java.lang.String getAuthServerUrl() {
       java.lang.Object ref = authServerUrl_;
@@ -2029,7 +1971,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string auth_server_url = 21;</code>
-     * @return The bytes for authServerUrl.
      */
     public com.google.protobuf.ByteString
         getAuthServerUrlBytes() {
@@ -2053,7 +1994,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string synch_server_url = 22;</code>
-     * @return The synchServerUrl.
      */
     public java.lang.String getSynchServerUrl() {
       java.lang.Object ref = synchServerUrl_;
@@ -2073,7 +2013,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string synch_server_url = 22;</code>
-     * @return The bytes for synchServerUrl.
      */
     public com.google.protobuf.ByteString
         getSynchServerUrlBytes() {
@@ -2097,7 +2036,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string acquisition_server_url = 23;</code>
-     * @return The acquisitionServerUrl.
      */
     public java.lang.String getAcquisitionServerUrl() {
       java.lang.Object ref = acquisitionServerUrl_;
@@ -2117,7 +2055,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string acquisition_server_url = 23;</code>
-     * @return The bytes for acquisitionServerUrl.
      */
     public com.google.protobuf.ByteString
         getAcquisitionServerUrlBytes() {
@@ -2141,7 +2078,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double packet_start_ts_us_wall = 24;</code>
-     * @return The packetStartTsUsWall.
      */
     public double getPacketStartTsUsWall() {
       return packetStartTsUsWall_;
@@ -2155,7 +2091,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double packet_start_ts_us_mach = 25;</code>
-     * @return The packetStartTsUsMach.
      */
     public double getPacketStartTsUsMach() {
       return packetStartTsUsMach_;
@@ -2169,7 +2104,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double packet_end_ts_us_wall = 26;</code>
-     * @return The packetEndTsUsWall.
      */
     public double getPacketEndTsUsWall() {
       return packetEndTsUsWall_;
@@ -2183,7 +2117,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double packet_end_ts_us_mach = 27;</code>
-     * @return The packetEndTsUsMach.
      */
     public double getPacketEndTsUsMach() {
       return packetEndTsUsMach_;
@@ -2197,7 +2130,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double server_acquisition_arrival_ts_us = 28;</code>
-     * @return The serverAcquisitionArrivalTsUs.
      */
     public double getServerAcquisitionArrivalTsUs() {
       return serverAcquisitionArrivalTsUs_;
@@ -2211,21 +2143,19 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double app_start_ts_us_mach = 29;</code>
-     * @return The appStartTsUsMach.
      */
     public double getAppStartTsUsMach() {
       return appStartTsUsMach_;
     }
 
     public static final int SYNCH_PARAMS_FIELD_NUMBER = 30;
-    private com.google.protobuf.Internal.DoubleList synchParams_;
+    private java.util.List<java.lang.Double> synchParams_;
     /**
      * <pre>
      * An array of synchronization params from the synch server
      * </pre>
      *
      * <code>repeated double synch_params = 30;</code>
-     * @return A list containing the synchParams.
      */
     public java.util.List<java.lang.Double>
         getSynchParamsList() {
@@ -2237,7 +2167,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double synch_params = 30;</code>
-     * @return The count of synchParams.
      */
     public int getSynchParamsCount() {
       return synchParams_.size();
@@ -2248,11 +2177,9 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double synch_params = 30;</code>
-     * @param index The index of the element to return.
-     * @return The synchParams at the given index.
      */
     public double getSynchParams(int index) {
-      return synchParams_.getDouble(index);
+      return synchParams_.get(index);
     }
     private int synchParamsMemoizedSerializedSize = -1;
 
@@ -2264,7 +2191,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double best_latency_us = 31;</code>
-     * @return The bestLatencyUs.
      */
     public double getBestLatencyUs() {
       return bestLatencyUs_;
@@ -2278,7 +2204,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double best_offset_us = 32;</code>
-     * @return The bestOffsetUs.
      */
     public double getBestOffsetUs() {
       return bestOffsetUs_;
@@ -2292,7 +2217,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.MicrophoneChannel microphone_channel = 33;</code>
-     * @return Whether the microphoneChannel field is set.
      */
     public boolean hasMicrophoneChannel() {
       return microphoneChannel_ != null;
@@ -2303,7 +2227,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.MicrophoneChannel microphone_channel = 33;</code>
-     * @return The microphoneChannel.
      */
     public RedvoxApi1000.MicrophoneChannel getMicrophoneChannel() {
       return microphoneChannel_ == null ? RedvoxApi1000.MicrophoneChannel.getDefaultInstance() : microphoneChannel_;
@@ -2327,7 +2250,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SingleChannel barometer_channel = 34;</code>
-     * @return Whether the barometerChannel field is set.
      */
     public boolean hasBarometerChannel() {
       return barometerChannel_ != null;
@@ -2338,7 +2260,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SingleChannel barometer_channel = 34;</code>
-     * @return The barometerChannel.
      */
     public RedvoxApi1000.SingleChannel getBarometerChannel() {
       return barometerChannel_ == null ? RedvoxApi1000.SingleChannel.getDefaultInstance() : barometerChannel_;
@@ -2362,7 +2283,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.LocationChannel location_channel = 35;</code>
-     * @return Whether the locationChannel field is set.
      */
     public boolean hasLocationChannel() {
       return locationChannel_ != null;
@@ -2373,7 +2293,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.LocationChannel location_channel = 35;</code>
-     * @return The locationChannel.
      */
     public RedvoxApi1000.LocationChannel getLocationChannel() {
       return locationChannel_ == null ? RedvoxApi1000.LocationChannel.getDefaultInstance() : locationChannel_;
@@ -2397,7 +2316,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.XyzChannel accelerometer_channel = 36;</code>
-     * @return Whether the accelerometerChannel field is set.
      */
     public boolean hasAccelerometerChannel() {
       return accelerometerChannel_ != null;
@@ -2408,7 +2326,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.XyzChannel accelerometer_channel = 36;</code>
-     * @return The accelerometerChannel.
      */
     public RedvoxApi1000.XyzChannel getAccelerometerChannel() {
       return accelerometerChannel_ == null ? RedvoxApi1000.XyzChannel.getDefaultInstance() : accelerometerChannel_;
@@ -2432,7 +2349,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.XyzChannel gyroscope_channel = 37;</code>
-     * @return Whether the gyroscopeChannel field is set.
      */
     public boolean hasGyroscopeChannel() {
       return gyroscopeChannel_ != null;
@@ -2443,7 +2359,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.XyzChannel gyroscope_channel = 37;</code>
-     * @return The gyroscopeChannel.
      */
     public RedvoxApi1000.XyzChannel getGyroscopeChannel() {
       return gyroscopeChannel_ == null ? RedvoxApi1000.XyzChannel.getDefaultInstance() : gyroscopeChannel_;
@@ -2467,7 +2382,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.XyzChannel magnetometer_channel = 38;</code>
-     * @return Whether the magnetometerChannel field is set.
      */
     public boolean hasMagnetometerChannel() {
       return magnetometerChannel_ != null;
@@ -2478,7 +2392,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.XyzChannel magnetometer_channel = 38;</code>
-     * @return The magnetometerChannel.
      */
     public RedvoxApi1000.XyzChannel getMagnetometerChannel() {
       return magnetometerChannel_ == null ? RedvoxApi1000.XyzChannel.getDefaultInstance() : magnetometerChannel_;
@@ -2502,7 +2415,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SingleChannel light_channel = 39;</code>
-     * @return Whether the lightChannel field is set.
      */
     public boolean hasLightChannel() {
       return lightChannel_ != null;
@@ -2513,7 +2425,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SingleChannel light_channel = 39;</code>
-     * @return The lightChannel.
      */
     public RedvoxApi1000.SingleChannel getLightChannel() {
       return lightChannel_ == null ? RedvoxApi1000.SingleChannel.getDefaultInstance() : lightChannel_;
@@ -2537,7 +2448,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SingleChannel infrared_channel = 40;</code>
-     * @return Whether the infraredChannel field is set.
      */
     public boolean hasInfraredChannel() {
       return infraredChannel_ != null;
@@ -2548,7 +2458,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SingleChannel infrared_channel = 40;</code>
-     * @return The infraredChannel.
      */
     public RedvoxApi1000.SingleChannel getInfraredChannel() {
       return infraredChannel_ == null ? RedvoxApi1000.SingleChannel.getDefaultInstance() : infraredChannel_;
@@ -2564,7 +2473,40 @@ public final class RedvoxApi1000 {
       return getInfraredChannel();
     }
 
-    public static final int METADATA_FIELD_NUMBER = 41;
+    public static final int IMAGE_CHANNEL_FIELD_NUMBER = 41;
+    private RedvoxApi1000.ImageChannel imageChannel_;
+    /**
+     * <pre>
+     * The image channel
+     * </pre>
+     *
+     * <code>.ImageChannel image_channel = 41;</code>
+     */
+    public boolean hasImageChannel() {
+      return imageChannel_ != null;
+    }
+    /**
+     * <pre>
+     * The image channel
+     * </pre>
+     *
+     * <code>.ImageChannel image_channel = 41;</code>
+     */
+    public RedvoxApi1000.ImageChannel getImageChannel() {
+      return imageChannel_ == null ? RedvoxApi1000.ImageChannel.getDefaultInstance() : imageChannel_;
+    }
+    /**
+     * <pre>
+     * The image channel
+     * </pre>
+     *
+     * <code>.ImageChannel image_channel = 41;</code>
+     */
+    public RedvoxApi1000.ImageChannelOrBuilder getImageChannelOrBuilder() {
+      return getImageChannel();
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 42;
     private static final class MetadataDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.String, java.lang.String> defaultEntry =
@@ -2595,7 +2537,7 @@ public final class RedvoxApi1000 {
      * Metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 41;</code>
+     * <code>map&lt;string, string&gt; metadata = 42;</code>
      */
 
     public boolean containsMetadata(
@@ -2615,7 +2557,7 @@ public final class RedvoxApi1000 {
      * Metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 41;</code>
+     * <code>map&lt;string, string&gt; metadata = 42;</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -2626,7 +2568,7 @@ public final class RedvoxApi1000 {
      * Metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 41;</code>
+     * <code>map&lt;string, string&gt; metadata = 42;</code>
      */
 
     public java.lang.String getMetadataOrDefault(
@@ -2642,7 +2584,7 @@ public final class RedvoxApi1000 {
      * Metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 41;</code>
+     * <code>map&lt;string, string&gt; metadata = 42;</code>
      */
 
     public java.lang.String getMetadataOrThrow(
@@ -2763,7 +2705,7 @@ public final class RedvoxApi1000 {
         output.writeUInt32NoTag(synchParamsMemoizedSerializedSize);
       }
       for (int i = 0; i < synchParams_.size(); i++) {
-        output.writeDoubleNoTag(synchParams_.getDouble(i));
+        output.writeDoubleNoTag(synchParams_.get(i));
       }
       if (bestLatencyUs_ != 0D) {
         output.writeDouble(31, bestLatencyUs_);
@@ -2795,12 +2737,15 @@ public final class RedvoxApi1000 {
       if (infraredChannel_ != null) {
         output.writeMessage(40, getInfraredChannel());
       }
+      if (imageChannel_ != null) {
+        output.writeMessage(41, getImageChannel());
+      }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
           internalGetMetadata(),
           MetadataDefaultEntryHolder.defaultEntry,
-          41);
+          42);
       unknownFields.writeTo(output);
     }
 
@@ -2965,6 +2910,10 @@ public final class RedvoxApi1000 {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(40, getInfraredChannel());
       }
+      if (imageChannel_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(41, getImageChannel());
+      }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetMetadata().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
@@ -2973,7 +2922,7 @@ public final class RedvoxApi1000 {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(41, metadata__);
+            .computeMessageSize(42, metadata__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2990,125 +2939,144 @@ public final class RedvoxApi1000 {
       }
       RedvoxApi1000.RedvoxPacket1000 other = (RedvoxApi1000.RedvoxPacket1000) obj;
 
-      if (getApi()
-          != other.getApi()) return false;
-      if (!getAuthEmail()
-          .equals(other.getAuthEmail())) return false;
-      if (!getAuthToken()
-          .equals(other.getAuthToken())) return false;
-      if (!getFirebaseToken()
-          .equals(other.getFirebaseToken())) return false;
-      if (!getDeviceId()
-          .equals(other.getDeviceId())) return false;
-      if (!getDeviceUuid()
-          .equals(other.getDeviceUuid())) return false;
-      if (!getDeviceMake()
-          .equals(other.getDeviceMake())) return false;
-      if (!getDeviceModel()
-          .equals(other.getDeviceModel())) return false;
-      if (deviceOs_ != other.deviceOs_) return false;
-      if (!getDeviceOsVersion()
-          .equals(other.getDeviceOsVersion())) return false;
-      if (!getDeviceAppVersion()
-          .equals(other.getDeviceAppVersion())) return false;
-      if (java.lang.Double.doubleToLongBits(getDeviceTempC())
-          != java.lang.Double.doubleToLongBits(
-              other.getDeviceTempC())) return false;
-      if (java.lang.Double.doubleToLongBits(getDeviceBatteryPercent())
-          != java.lang.Double.doubleToLongBits(
-              other.getDeviceBatteryPercent())) return false;
-      if (networkType_ != other.networkType_) return false;
-      if (java.lang.Double.doubleToLongBits(getNetworkStrengthDb())
-          != java.lang.Double.doubleToLongBits(
-              other.getNetworkStrengthDb())) return false;
-      if (getIsBackfilled()
-          != other.getIsBackfilled()) return false;
-      if (getIsPrivate()
-          != other.getIsPrivate()) return false;
-      if (getIsMicScrambled()
-          != other.getIsMicScrambled()) return false;
-      if (java.lang.Double.doubleToLongBits(getUncompressedSizeBytes())
-          != java.lang.Double.doubleToLongBits(
-              other.getUncompressedSizeBytes())) return false;
-      if (java.lang.Double.doubleToLongBits(getCompressedSizeBytes())
-          != java.lang.Double.doubleToLongBits(
-              other.getCompressedSizeBytes())) return false;
-      if (!getAuthServerUrl()
-          .equals(other.getAuthServerUrl())) return false;
-      if (!getSynchServerUrl()
-          .equals(other.getSynchServerUrl())) return false;
-      if (!getAcquisitionServerUrl()
-          .equals(other.getAcquisitionServerUrl())) return false;
-      if (java.lang.Double.doubleToLongBits(getPacketStartTsUsWall())
-          != java.lang.Double.doubleToLongBits(
-              other.getPacketStartTsUsWall())) return false;
-      if (java.lang.Double.doubleToLongBits(getPacketStartTsUsMach())
-          != java.lang.Double.doubleToLongBits(
-              other.getPacketStartTsUsMach())) return false;
-      if (java.lang.Double.doubleToLongBits(getPacketEndTsUsWall())
-          != java.lang.Double.doubleToLongBits(
-              other.getPacketEndTsUsWall())) return false;
-      if (java.lang.Double.doubleToLongBits(getPacketEndTsUsMach())
-          != java.lang.Double.doubleToLongBits(
-              other.getPacketEndTsUsMach())) return false;
-      if (java.lang.Double.doubleToLongBits(getServerAcquisitionArrivalTsUs())
-          != java.lang.Double.doubleToLongBits(
-              other.getServerAcquisitionArrivalTsUs())) return false;
-      if (java.lang.Double.doubleToLongBits(getAppStartTsUsMach())
-          != java.lang.Double.doubleToLongBits(
-              other.getAppStartTsUsMach())) return false;
-      if (!getSynchParamsList()
-          .equals(other.getSynchParamsList())) return false;
-      if (java.lang.Double.doubleToLongBits(getBestLatencyUs())
-          != java.lang.Double.doubleToLongBits(
-              other.getBestLatencyUs())) return false;
-      if (java.lang.Double.doubleToLongBits(getBestOffsetUs())
-          != java.lang.Double.doubleToLongBits(
-              other.getBestOffsetUs())) return false;
-      if (hasMicrophoneChannel() != other.hasMicrophoneChannel()) return false;
+      boolean result = true;
+      result = result && (getApi()
+          == other.getApi());
+      result = result && getAuthEmail()
+          .equals(other.getAuthEmail());
+      result = result && getAuthToken()
+          .equals(other.getAuthToken());
+      result = result && getFirebaseToken()
+          .equals(other.getFirebaseToken());
+      result = result && getDeviceId()
+          .equals(other.getDeviceId());
+      result = result && getDeviceUuid()
+          .equals(other.getDeviceUuid());
+      result = result && getDeviceMake()
+          .equals(other.getDeviceMake());
+      result = result && getDeviceModel()
+          .equals(other.getDeviceModel());
+      result = result && deviceOs_ == other.deviceOs_;
+      result = result && getDeviceOsVersion()
+          .equals(other.getDeviceOsVersion());
+      result = result && getDeviceAppVersion()
+          .equals(other.getDeviceAppVersion());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getDeviceTempC())
+          == java.lang.Double.doubleToLongBits(
+              other.getDeviceTempC()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getDeviceBatteryPercent())
+          == java.lang.Double.doubleToLongBits(
+              other.getDeviceBatteryPercent()));
+      result = result && networkType_ == other.networkType_;
+      result = result && (
+          java.lang.Double.doubleToLongBits(getNetworkStrengthDb())
+          == java.lang.Double.doubleToLongBits(
+              other.getNetworkStrengthDb()));
+      result = result && (getIsBackfilled()
+          == other.getIsBackfilled());
+      result = result && (getIsPrivate()
+          == other.getIsPrivate());
+      result = result && (getIsMicScrambled()
+          == other.getIsMicScrambled());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getUncompressedSizeBytes())
+          == java.lang.Double.doubleToLongBits(
+              other.getUncompressedSizeBytes()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getCompressedSizeBytes())
+          == java.lang.Double.doubleToLongBits(
+              other.getCompressedSizeBytes()));
+      result = result && getAuthServerUrl()
+          .equals(other.getAuthServerUrl());
+      result = result && getSynchServerUrl()
+          .equals(other.getSynchServerUrl());
+      result = result && getAcquisitionServerUrl()
+          .equals(other.getAcquisitionServerUrl());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getPacketStartTsUsWall())
+          == java.lang.Double.doubleToLongBits(
+              other.getPacketStartTsUsWall()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getPacketStartTsUsMach())
+          == java.lang.Double.doubleToLongBits(
+              other.getPacketStartTsUsMach()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getPacketEndTsUsWall())
+          == java.lang.Double.doubleToLongBits(
+              other.getPacketEndTsUsWall()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getPacketEndTsUsMach())
+          == java.lang.Double.doubleToLongBits(
+              other.getPacketEndTsUsMach()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getServerAcquisitionArrivalTsUs())
+          == java.lang.Double.doubleToLongBits(
+              other.getServerAcquisitionArrivalTsUs()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getAppStartTsUsMach())
+          == java.lang.Double.doubleToLongBits(
+              other.getAppStartTsUsMach()));
+      result = result && getSynchParamsList()
+          .equals(other.getSynchParamsList());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getBestLatencyUs())
+          == java.lang.Double.doubleToLongBits(
+              other.getBestLatencyUs()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getBestOffsetUs())
+          == java.lang.Double.doubleToLongBits(
+              other.getBestOffsetUs()));
+      result = result && (hasMicrophoneChannel() == other.hasMicrophoneChannel());
       if (hasMicrophoneChannel()) {
-        if (!getMicrophoneChannel()
-            .equals(other.getMicrophoneChannel())) return false;
+        result = result && getMicrophoneChannel()
+            .equals(other.getMicrophoneChannel());
       }
-      if (hasBarometerChannel() != other.hasBarometerChannel()) return false;
+      result = result && (hasBarometerChannel() == other.hasBarometerChannel());
       if (hasBarometerChannel()) {
-        if (!getBarometerChannel()
-            .equals(other.getBarometerChannel())) return false;
+        result = result && getBarometerChannel()
+            .equals(other.getBarometerChannel());
       }
-      if (hasLocationChannel() != other.hasLocationChannel()) return false;
+      result = result && (hasLocationChannel() == other.hasLocationChannel());
       if (hasLocationChannel()) {
-        if (!getLocationChannel()
-            .equals(other.getLocationChannel())) return false;
+        result = result && getLocationChannel()
+            .equals(other.getLocationChannel());
       }
-      if (hasAccelerometerChannel() != other.hasAccelerometerChannel()) return false;
+      result = result && (hasAccelerometerChannel() == other.hasAccelerometerChannel());
       if (hasAccelerometerChannel()) {
-        if (!getAccelerometerChannel()
-            .equals(other.getAccelerometerChannel())) return false;
+        result = result && getAccelerometerChannel()
+            .equals(other.getAccelerometerChannel());
       }
-      if (hasGyroscopeChannel() != other.hasGyroscopeChannel()) return false;
+      result = result && (hasGyroscopeChannel() == other.hasGyroscopeChannel());
       if (hasGyroscopeChannel()) {
-        if (!getGyroscopeChannel()
-            .equals(other.getGyroscopeChannel())) return false;
+        result = result && getGyroscopeChannel()
+            .equals(other.getGyroscopeChannel());
       }
-      if (hasMagnetometerChannel() != other.hasMagnetometerChannel()) return false;
+      result = result && (hasMagnetometerChannel() == other.hasMagnetometerChannel());
       if (hasMagnetometerChannel()) {
-        if (!getMagnetometerChannel()
-            .equals(other.getMagnetometerChannel())) return false;
+        result = result && getMagnetometerChannel()
+            .equals(other.getMagnetometerChannel());
       }
-      if (hasLightChannel() != other.hasLightChannel()) return false;
+      result = result && (hasLightChannel() == other.hasLightChannel());
       if (hasLightChannel()) {
-        if (!getLightChannel()
-            .equals(other.getLightChannel())) return false;
+        result = result && getLightChannel()
+            .equals(other.getLightChannel());
       }
-      if (hasInfraredChannel() != other.hasInfraredChannel()) return false;
+      result = result && (hasInfraredChannel() == other.hasInfraredChannel());
       if (hasInfraredChannel()) {
-        if (!getInfraredChannel()
-            .equals(other.getInfraredChannel())) return false;
+        result = result && getInfraredChannel()
+            .equals(other.getInfraredChannel());
       }
-      if (!internalGetMetadata().equals(
-          other.internalGetMetadata())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && (hasImageChannel() == other.hasImageChannel());
+      if (hasImageChannel()) {
+        result = result && getImageChannel()
+            .equals(other.getImageChannel());
+      }
+      result = result && internalGetMetadata().equals(
+          other.internalGetMetadata());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -3232,6 +3200,10 @@ public final class RedvoxApi1000 {
         hash = (37 * hash) + INFRARED_CHANNEL_FIELD_NUMBER;
         hash = (53 * hash) + getInfraredChannel().hashCode();
       }
+      if (hasImageChannel()) {
+        hash = (37 * hash) + IMAGE_CHANNEL_FIELD_NUMBER;
+        hash = (53 * hash) + getImageChannel().hashCode();
+      }
       if (!internalGetMetadata().getMap().isEmpty()) {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + internalGetMetadata().hashCode();
@@ -3351,7 +3323,7 @@ public final class RedvoxApi1000 {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 41:
+          case 42:
             return internalGetMetadata();
           default:
             throw new RuntimeException(
@@ -3362,7 +3334,7 @@ public final class RedvoxApi1000 {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 41:
+          case 42:
             return internalGetMutableMetadata();
           default:
             throw new RuntimeException(
@@ -3453,8 +3425,8 @@ public final class RedvoxApi1000 {
 
         appStartTsUsMach_ = 0D;
 
-        synchParams_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        synchParams_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x20000000);
         bestLatencyUs_ = 0D;
 
         bestOffsetUs_ = 0D;
@@ -3507,6 +3479,12 @@ public final class RedvoxApi1000 {
           infraredChannel_ = null;
           infraredChannelBuilder_ = null;
         }
+        if (imageChannelBuilder_ == null) {
+          imageChannel_ = null;
+        } else {
+          imageChannel_ = null;
+          imageChannelBuilder_ = null;
+        }
         internalGetMutableMetadata().clear();
         return this;
       }
@@ -3535,6 +3513,9 @@ public final class RedvoxApi1000 {
       public RedvoxApi1000.RedvoxPacket1000 buildPartial() {
         RedvoxApi1000.RedvoxPacket1000 result = new RedvoxApi1000.RedvoxPacket1000(this);
         int from_bitField0_ = bitField0_;
+        int from_bitField1_ = bitField1_;
+        int to_bitField0_ = 0;
+        int to_bitField1_ = 0;
         result.api_ = api_;
         result.authEmail_ = authEmail_;
         result.authToken_ = authToken_;
@@ -3564,9 +3545,9 @@ public final class RedvoxApi1000 {
         result.packetEndTsUsMach_ = packetEndTsUsMach_;
         result.serverAcquisitionArrivalTsUs_ = serverAcquisitionArrivalTsUs_;
         result.appStartTsUsMach_ = appStartTsUsMach_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          synchParams_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
+        if (((bitField0_ & 0x20000000) == 0x20000000)) {
+          synchParams_ = java.util.Collections.unmodifiableList(synchParams_);
+          bitField0_ = (bitField0_ & ~0x20000000);
         }
         result.synchParams_ = synchParams_;
         result.bestLatencyUs_ = bestLatencyUs_;
@@ -3611,43 +3592,50 @@ public final class RedvoxApi1000 {
         } else {
           result.infraredChannel_ = infraredChannelBuilder_.build();
         }
+        if (imageChannelBuilder_ == null) {
+          result.imageChannel_ = imageChannel_;
+        } else {
+          result.imageChannel_ = imageChannelBuilder_.build();
+        }
         result.metadata_ = internalGetMetadata();
         result.metadata_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
+        result.bitField1_ = to_bitField1_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3763,7 +3751,7 @@ public final class RedvoxApi1000 {
         if (!other.synchParams_.isEmpty()) {
           if (synchParams_.isEmpty()) {
             synchParams_ = other.synchParams_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x20000000);
           } else {
             ensureSynchParamsIsMutable();
             synchParams_.addAll(other.synchParams_);
@@ -3800,6 +3788,9 @@ public final class RedvoxApi1000 {
         if (other.hasInfraredChannel()) {
           mergeInfraredChannel(other.getInfraredChannel());
         }
+        if (other.hasImageChannel()) {
+          mergeImageChannel(other.getImageChannel());
+        }
         internalGetMutableMetadata().mergeFrom(
             other.internalGetMetadata());
         this.mergeUnknownFields(other.unknownFields);
@@ -3831,6 +3822,7 @@ public final class RedvoxApi1000 {
         return this;
       }
       private int bitField0_;
+      private int bitField1_;
 
       private int api_ ;
       /**
@@ -3839,7 +3831,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>uint32 api = 1;</code>
-       * @return The api.
        */
       public int getApi() {
         return api_;
@@ -3850,8 +3841,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>uint32 api = 1;</code>
-       * @param value The api to set.
-       * @return This builder for chaining.
        */
       public Builder setApi(int value) {
         
@@ -3865,7 +3854,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>uint32 api = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearApi() {
         
@@ -3881,7 +3869,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_email = 2;</code>
-       * @return The authEmail.
        */
       public java.lang.String getAuthEmail() {
         java.lang.Object ref = authEmail_;
@@ -3901,7 +3888,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_email = 2;</code>
-       * @return The bytes for authEmail.
        */
       public com.google.protobuf.ByteString
           getAuthEmailBytes() {
@@ -3922,8 +3908,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_email = 2;</code>
-       * @param value The authEmail to set.
-       * @return This builder for chaining.
        */
       public Builder setAuthEmail(
           java.lang.String value) {
@@ -3941,7 +3925,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_email = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAuthEmail() {
         
@@ -3955,8 +3938,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_email = 2;</code>
-       * @param value The bytes for authEmail to set.
-       * @return This builder for chaining.
        */
       public Builder setAuthEmailBytes(
           com.google.protobuf.ByteString value) {
@@ -3977,7 +3958,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_token = 3;</code>
-       * @return The authToken.
        */
       public java.lang.String getAuthToken() {
         java.lang.Object ref = authToken_;
@@ -3997,7 +3977,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_token = 3;</code>
-       * @return The bytes for authToken.
        */
       public com.google.protobuf.ByteString
           getAuthTokenBytes() {
@@ -4018,8 +3997,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_token = 3;</code>
-       * @param value The authToken to set.
-       * @return This builder for chaining.
        */
       public Builder setAuthToken(
           java.lang.String value) {
@@ -4037,7 +4014,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_token = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAuthToken() {
         
@@ -4051,8 +4027,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_token = 3;</code>
-       * @param value The bytes for authToken to set.
-       * @return This builder for chaining.
        */
       public Builder setAuthTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -4073,7 +4047,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string firebase_token = 4;</code>
-       * @return The firebaseToken.
        */
       public java.lang.String getFirebaseToken() {
         java.lang.Object ref = firebaseToken_;
@@ -4093,7 +4066,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string firebase_token = 4;</code>
-       * @return The bytes for firebaseToken.
        */
       public com.google.protobuf.ByteString
           getFirebaseTokenBytes() {
@@ -4114,8 +4086,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string firebase_token = 4;</code>
-       * @param value The firebaseToken to set.
-       * @return This builder for chaining.
        */
       public Builder setFirebaseToken(
           java.lang.String value) {
@@ -4133,7 +4103,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string firebase_token = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearFirebaseToken() {
         
@@ -4147,8 +4116,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string firebase_token = 4;</code>
-       * @param value The bytes for firebaseToken to set.
-       * @return This builder for chaining.
        */
       public Builder setFirebaseTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -4169,7 +4136,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_id = 5;</code>
-       * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -4189,7 +4155,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_id = 5;</code>
-       * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -4210,8 +4175,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_id = 5;</code>
-       * @param value The deviceId to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -4229,7 +4192,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_id = 5;</code>
-       * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
         
@@ -4243,8 +4205,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_id = 5;</code>
-       * @param value The bytes for deviceId to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4265,7 +4225,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_uuid = 6;</code>
-       * @return The deviceUuid.
        */
       public java.lang.String getDeviceUuid() {
         java.lang.Object ref = deviceUuid_;
@@ -4285,7 +4244,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_uuid = 6;</code>
-       * @return The bytes for deviceUuid.
        */
       public com.google.protobuf.ByteString
           getDeviceUuidBytes() {
@@ -4306,8 +4264,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_uuid = 6;</code>
-       * @param value The deviceUuid to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceUuid(
           java.lang.String value) {
@@ -4325,7 +4281,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_uuid = 6;</code>
-       * @return This builder for chaining.
        */
       public Builder clearDeviceUuid() {
         
@@ -4339,8 +4294,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_uuid = 6;</code>
-       * @param value The bytes for deviceUuid to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceUuidBytes(
           com.google.protobuf.ByteString value) {
@@ -4361,7 +4314,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_make = 7;</code>
-       * @return The deviceMake.
        */
       public java.lang.String getDeviceMake() {
         java.lang.Object ref = deviceMake_;
@@ -4381,7 +4333,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_make = 7;</code>
-       * @return The bytes for deviceMake.
        */
       public com.google.protobuf.ByteString
           getDeviceMakeBytes() {
@@ -4402,8 +4353,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_make = 7;</code>
-       * @param value The deviceMake to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceMake(
           java.lang.String value) {
@@ -4421,7 +4370,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_make = 7;</code>
-       * @return This builder for chaining.
        */
       public Builder clearDeviceMake() {
         
@@ -4435,8 +4383,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_make = 7;</code>
-       * @param value The bytes for deviceMake to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceMakeBytes(
           com.google.protobuf.ByteString value) {
@@ -4457,7 +4403,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_model = 8;</code>
-       * @return The deviceModel.
        */
       public java.lang.String getDeviceModel() {
         java.lang.Object ref = deviceModel_;
@@ -4477,7 +4422,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_model = 8;</code>
-       * @return The bytes for deviceModel.
        */
       public com.google.protobuf.ByteString
           getDeviceModelBytes() {
@@ -4498,8 +4442,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_model = 8;</code>
-       * @param value The deviceModel to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceModel(
           java.lang.String value) {
@@ -4517,7 +4459,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_model = 8;</code>
-       * @return This builder for chaining.
        */
       public Builder clearDeviceModel() {
         
@@ -4531,8 +4472,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_model = 8;</code>
-       * @param value The bytes for deviceModel to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceModelBytes(
           com.google.protobuf.ByteString value) {
@@ -4553,7 +4492,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.RedvoxPacket1000.OsType device_os = 9;</code>
-       * @return The enum numeric value on the wire for deviceOs.
        */
       public int getDeviceOsValue() {
         return deviceOs_;
@@ -4564,8 +4502,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.RedvoxPacket1000.OsType device_os = 9;</code>
-       * @param value The enum numeric value on the wire for deviceOs to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceOsValue(int value) {
         deviceOs_ = value;
@@ -4578,7 +4514,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.RedvoxPacket1000.OsType device_os = 9;</code>
-       * @return The deviceOs.
        */
       public RedvoxApi1000.RedvoxPacket1000.OsType getDeviceOs() {
         @SuppressWarnings("deprecation")
@@ -4591,8 +4526,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.RedvoxPacket1000.OsType device_os = 9;</code>
-       * @param value The deviceOs to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceOs(RedvoxApi1000.RedvoxPacket1000.OsType value) {
         if (value == null) {
@@ -4609,7 +4542,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.RedvoxPacket1000.OsType device_os = 9;</code>
-       * @return This builder for chaining.
        */
       public Builder clearDeviceOs() {
         
@@ -4625,7 +4557,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_os_version = 10;</code>
-       * @return The deviceOsVersion.
        */
       public java.lang.String getDeviceOsVersion() {
         java.lang.Object ref = deviceOsVersion_;
@@ -4645,7 +4576,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_os_version = 10;</code>
-       * @return The bytes for deviceOsVersion.
        */
       public com.google.protobuf.ByteString
           getDeviceOsVersionBytes() {
@@ -4666,8 +4596,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_os_version = 10;</code>
-       * @param value The deviceOsVersion to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceOsVersion(
           java.lang.String value) {
@@ -4685,7 +4613,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_os_version = 10;</code>
-       * @return This builder for chaining.
        */
       public Builder clearDeviceOsVersion() {
         
@@ -4699,8 +4626,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_os_version = 10;</code>
-       * @param value The bytes for deviceOsVersion to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceOsVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -4721,7 +4646,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_app_version = 11;</code>
-       * @return The deviceAppVersion.
        */
       public java.lang.String getDeviceAppVersion() {
         java.lang.Object ref = deviceAppVersion_;
@@ -4741,7 +4665,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_app_version = 11;</code>
-       * @return The bytes for deviceAppVersion.
        */
       public com.google.protobuf.ByteString
           getDeviceAppVersionBytes() {
@@ -4762,8 +4685,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_app_version = 11;</code>
-       * @param value The deviceAppVersion to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceAppVersion(
           java.lang.String value) {
@@ -4781,7 +4702,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_app_version = 11;</code>
-       * @return This builder for chaining.
        */
       public Builder clearDeviceAppVersion() {
         
@@ -4795,8 +4715,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string device_app_version = 11;</code>
-       * @param value The bytes for deviceAppVersion to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceAppVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -4817,7 +4735,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double device_temp_c = 12;</code>
-       * @return The deviceTempC.
        */
       public double getDeviceTempC() {
         return deviceTempC_;
@@ -4828,8 +4745,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double device_temp_c = 12;</code>
-       * @param value The deviceTempC to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceTempC(double value) {
         
@@ -4843,7 +4758,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double device_temp_c = 12;</code>
-       * @return This builder for chaining.
        */
       public Builder clearDeviceTempC() {
         
@@ -4859,7 +4773,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double device_battery_percent = 13;</code>
-       * @return The deviceBatteryPercent.
        */
       public double getDeviceBatteryPercent() {
         return deviceBatteryPercent_;
@@ -4870,8 +4783,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double device_battery_percent = 13;</code>
-       * @param value The deviceBatteryPercent to set.
-       * @return This builder for chaining.
        */
       public Builder setDeviceBatteryPercent(double value) {
         
@@ -4885,7 +4796,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double device_battery_percent = 13;</code>
-       * @return This builder for chaining.
        */
       public Builder clearDeviceBatteryPercent() {
         
@@ -4901,7 +4811,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.RedvoxPacket1000.NetworkType network_type = 14;</code>
-       * @return The enum numeric value on the wire for networkType.
        */
       public int getNetworkTypeValue() {
         return networkType_;
@@ -4912,8 +4821,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.RedvoxPacket1000.NetworkType network_type = 14;</code>
-       * @param value The enum numeric value on the wire for networkType to set.
-       * @return This builder for chaining.
        */
       public Builder setNetworkTypeValue(int value) {
         networkType_ = value;
@@ -4926,7 +4833,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.RedvoxPacket1000.NetworkType network_type = 14;</code>
-       * @return The networkType.
        */
       public RedvoxApi1000.RedvoxPacket1000.NetworkType getNetworkType() {
         @SuppressWarnings("deprecation")
@@ -4939,8 +4845,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.RedvoxPacket1000.NetworkType network_type = 14;</code>
-       * @param value The networkType to set.
-       * @return This builder for chaining.
        */
       public Builder setNetworkType(RedvoxApi1000.RedvoxPacket1000.NetworkType value) {
         if (value == null) {
@@ -4957,7 +4861,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.RedvoxPacket1000.NetworkType network_type = 14;</code>
-       * @return This builder for chaining.
        */
       public Builder clearNetworkType() {
         
@@ -4973,7 +4876,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double network_strength_db = 15;</code>
-       * @return The networkStrengthDb.
        */
       public double getNetworkStrengthDb() {
         return networkStrengthDb_;
@@ -4984,8 +4886,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double network_strength_db = 15;</code>
-       * @param value The networkStrengthDb to set.
-       * @return This builder for chaining.
        */
       public Builder setNetworkStrengthDb(double value) {
         
@@ -4999,7 +4899,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double network_strength_db = 15;</code>
-       * @return This builder for chaining.
        */
       public Builder clearNetworkStrengthDb() {
         
@@ -5015,7 +4914,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool is_backfilled = 16;</code>
-       * @return The isBackfilled.
        */
       public boolean getIsBackfilled() {
         return isBackfilled_;
@@ -5026,8 +4924,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool is_backfilled = 16;</code>
-       * @param value The isBackfilled to set.
-       * @return This builder for chaining.
        */
       public Builder setIsBackfilled(boolean value) {
         
@@ -5041,7 +4937,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool is_backfilled = 16;</code>
-       * @return This builder for chaining.
        */
       public Builder clearIsBackfilled() {
         
@@ -5057,7 +4952,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool is_private = 17;</code>
-       * @return The isPrivate.
        */
       public boolean getIsPrivate() {
         return isPrivate_;
@@ -5068,8 +4962,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool is_private = 17;</code>
-       * @param value The isPrivate to set.
-       * @return This builder for chaining.
        */
       public Builder setIsPrivate(boolean value) {
         
@@ -5083,7 +4975,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool is_private = 17;</code>
-       * @return This builder for chaining.
        */
       public Builder clearIsPrivate() {
         
@@ -5099,7 +4990,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool is_mic_scrambled = 18;</code>
-       * @return The isMicScrambled.
        */
       public boolean getIsMicScrambled() {
         return isMicScrambled_;
@@ -5110,8 +5000,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool is_mic_scrambled = 18;</code>
-       * @param value The isMicScrambled to set.
-       * @return This builder for chaining.
        */
       public Builder setIsMicScrambled(boolean value) {
         
@@ -5125,7 +5013,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool is_mic_scrambled = 18;</code>
-       * @return This builder for chaining.
        */
       public Builder clearIsMicScrambled() {
         
@@ -5141,7 +5028,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double uncompressed_size_bytes = 19;</code>
-       * @return The uncompressedSizeBytes.
        */
       public double getUncompressedSizeBytes() {
         return uncompressedSizeBytes_;
@@ -5152,8 +5038,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double uncompressed_size_bytes = 19;</code>
-       * @param value The uncompressedSizeBytes to set.
-       * @return This builder for chaining.
        */
       public Builder setUncompressedSizeBytes(double value) {
         
@@ -5167,7 +5051,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double uncompressed_size_bytes = 19;</code>
-       * @return This builder for chaining.
        */
       public Builder clearUncompressedSizeBytes() {
         
@@ -5183,7 +5066,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double compressed_size_bytes = 20;</code>
-       * @return The compressedSizeBytes.
        */
       public double getCompressedSizeBytes() {
         return compressedSizeBytes_;
@@ -5194,8 +5076,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double compressed_size_bytes = 20;</code>
-       * @param value The compressedSizeBytes to set.
-       * @return This builder for chaining.
        */
       public Builder setCompressedSizeBytes(double value) {
         
@@ -5209,7 +5089,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double compressed_size_bytes = 20;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCompressedSizeBytes() {
         
@@ -5225,7 +5104,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_server_url = 21;</code>
-       * @return The authServerUrl.
        */
       public java.lang.String getAuthServerUrl() {
         java.lang.Object ref = authServerUrl_;
@@ -5245,7 +5123,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_server_url = 21;</code>
-       * @return The bytes for authServerUrl.
        */
       public com.google.protobuf.ByteString
           getAuthServerUrlBytes() {
@@ -5266,8 +5143,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_server_url = 21;</code>
-       * @param value The authServerUrl to set.
-       * @return This builder for chaining.
        */
       public Builder setAuthServerUrl(
           java.lang.String value) {
@@ -5285,7 +5160,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_server_url = 21;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAuthServerUrl() {
         
@@ -5299,8 +5173,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string auth_server_url = 21;</code>
-       * @param value The bytes for authServerUrl to set.
-       * @return This builder for chaining.
        */
       public Builder setAuthServerUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -5321,7 +5193,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string synch_server_url = 22;</code>
-       * @return The synchServerUrl.
        */
       public java.lang.String getSynchServerUrl() {
         java.lang.Object ref = synchServerUrl_;
@@ -5341,7 +5212,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string synch_server_url = 22;</code>
-       * @return The bytes for synchServerUrl.
        */
       public com.google.protobuf.ByteString
           getSynchServerUrlBytes() {
@@ -5362,8 +5232,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string synch_server_url = 22;</code>
-       * @param value The synchServerUrl to set.
-       * @return This builder for chaining.
        */
       public Builder setSynchServerUrl(
           java.lang.String value) {
@@ -5381,7 +5249,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string synch_server_url = 22;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSynchServerUrl() {
         
@@ -5395,8 +5262,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string synch_server_url = 22;</code>
-       * @param value The bytes for synchServerUrl to set.
-       * @return This builder for chaining.
        */
       public Builder setSynchServerUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -5417,7 +5282,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string acquisition_server_url = 23;</code>
-       * @return The acquisitionServerUrl.
        */
       public java.lang.String getAcquisitionServerUrl() {
         java.lang.Object ref = acquisitionServerUrl_;
@@ -5437,7 +5301,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string acquisition_server_url = 23;</code>
-       * @return The bytes for acquisitionServerUrl.
        */
       public com.google.protobuf.ByteString
           getAcquisitionServerUrlBytes() {
@@ -5458,8 +5321,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string acquisition_server_url = 23;</code>
-       * @param value The acquisitionServerUrl to set.
-       * @return This builder for chaining.
        */
       public Builder setAcquisitionServerUrl(
           java.lang.String value) {
@@ -5477,7 +5338,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string acquisition_server_url = 23;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAcquisitionServerUrl() {
         
@@ -5491,8 +5351,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string acquisition_server_url = 23;</code>
-       * @param value The bytes for acquisitionServerUrl to set.
-       * @return This builder for chaining.
        */
       public Builder setAcquisitionServerUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -5513,7 +5371,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double packet_start_ts_us_wall = 24;</code>
-       * @return The packetStartTsUsWall.
        */
       public double getPacketStartTsUsWall() {
         return packetStartTsUsWall_;
@@ -5524,8 +5381,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double packet_start_ts_us_wall = 24;</code>
-       * @param value The packetStartTsUsWall to set.
-       * @return This builder for chaining.
        */
       public Builder setPacketStartTsUsWall(double value) {
         
@@ -5539,7 +5394,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double packet_start_ts_us_wall = 24;</code>
-       * @return This builder for chaining.
        */
       public Builder clearPacketStartTsUsWall() {
         
@@ -5555,7 +5409,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double packet_start_ts_us_mach = 25;</code>
-       * @return The packetStartTsUsMach.
        */
       public double getPacketStartTsUsMach() {
         return packetStartTsUsMach_;
@@ -5566,8 +5419,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double packet_start_ts_us_mach = 25;</code>
-       * @param value The packetStartTsUsMach to set.
-       * @return This builder for chaining.
        */
       public Builder setPacketStartTsUsMach(double value) {
         
@@ -5581,7 +5432,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double packet_start_ts_us_mach = 25;</code>
-       * @return This builder for chaining.
        */
       public Builder clearPacketStartTsUsMach() {
         
@@ -5597,7 +5447,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double packet_end_ts_us_wall = 26;</code>
-       * @return The packetEndTsUsWall.
        */
       public double getPacketEndTsUsWall() {
         return packetEndTsUsWall_;
@@ -5608,8 +5457,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double packet_end_ts_us_wall = 26;</code>
-       * @param value The packetEndTsUsWall to set.
-       * @return This builder for chaining.
        */
       public Builder setPacketEndTsUsWall(double value) {
         
@@ -5623,7 +5470,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double packet_end_ts_us_wall = 26;</code>
-       * @return This builder for chaining.
        */
       public Builder clearPacketEndTsUsWall() {
         
@@ -5639,7 +5485,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double packet_end_ts_us_mach = 27;</code>
-       * @return The packetEndTsUsMach.
        */
       public double getPacketEndTsUsMach() {
         return packetEndTsUsMach_;
@@ -5650,8 +5495,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double packet_end_ts_us_mach = 27;</code>
-       * @param value The packetEndTsUsMach to set.
-       * @return This builder for chaining.
        */
       public Builder setPacketEndTsUsMach(double value) {
         
@@ -5665,7 +5508,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double packet_end_ts_us_mach = 27;</code>
-       * @return This builder for chaining.
        */
       public Builder clearPacketEndTsUsMach() {
         
@@ -5681,7 +5523,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double server_acquisition_arrival_ts_us = 28;</code>
-       * @return The serverAcquisitionArrivalTsUs.
        */
       public double getServerAcquisitionArrivalTsUs() {
         return serverAcquisitionArrivalTsUs_;
@@ -5692,8 +5533,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double server_acquisition_arrival_ts_us = 28;</code>
-       * @param value The serverAcquisitionArrivalTsUs to set.
-       * @return This builder for chaining.
        */
       public Builder setServerAcquisitionArrivalTsUs(double value) {
         
@@ -5707,7 +5546,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double server_acquisition_arrival_ts_us = 28;</code>
-       * @return This builder for chaining.
        */
       public Builder clearServerAcquisitionArrivalTsUs() {
         
@@ -5723,7 +5561,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double app_start_ts_us_mach = 29;</code>
-       * @return The appStartTsUsMach.
        */
       public double getAppStartTsUsMach() {
         return appStartTsUsMach_;
@@ -5734,8 +5571,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double app_start_ts_us_mach = 29;</code>
-       * @param value The appStartTsUsMach to set.
-       * @return This builder for chaining.
        */
       public Builder setAppStartTsUsMach(double value) {
         
@@ -5749,7 +5584,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double app_start_ts_us_mach = 29;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAppStartTsUsMach() {
         
@@ -5758,11 +5592,11 @@ public final class RedvoxApi1000 {
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList synchParams_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> synchParams_ = java.util.Collections.emptyList();
       private void ensureSynchParamsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          synchParams_ = mutableCopy(synchParams_);
-          bitField0_ |= 0x00000001;
+        if (!((bitField0_ & 0x20000000) == 0x20000000)) {
+          synchParams_ = new java.util.ArrayList<java.lang.Double>(synchParams_);
+          bitField0_ |= 0x20000000;
          }
       }
       /**
@@ -5771,12 +5605,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double synch_params = 30;</code>
-       * @return A list containing the synchParams.
        */
       public java.util.List<java.lang.Double>
           getSynchParamsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(synchParams_) : synchParams_;
+        return java.util.Collections.unmodifiableList(synchParams_);
       }
       /**
        * <pre>
@@ -5784,7 +5616,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double synch_params = 30;</code>
-       * @return The count of synchParams.
        */
       public int getSynchParamsCount() {
         return synchParams_.size();
@@ -5795,11 +5626,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double synch_params = 30;</code>
-       * @param index The index of the element to return.
-       * @return The synchParams at the given index.
        */
       public double getSynchParams(int index) {
-        return synchParams_.getDouble(index);
+        return synchParams_.get(index);
       }
       /**
        * <pre>
@@ -5807,14 +5636,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double synch_params = 30;</code>
-       * @param index The index to set the value at.
-       * @param value The synchParams to set.
-       * @return This builder for chaining.
        */
       public Builder setSynchParams(
           int index, double value) {
         ensureSynchParamsIsMutable();
-        synchParams_.setDouble(index, value);
+        synchParams_.set(index, value);
         onChanged();
         return this;
       }
@@ -5824,12 +5650,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double synch_params = 30;</code>
-       * @param value The synchParams to add.
-       * @return This builder for chaining.
        */
       public Builder addSynchParams(double value) {
         ensureSynchParamsIsMutable();
-        synchParams_.addDouble(value);
+        synchParams_.add(value);
         onChanged();
         return this;
       }
@@ -5839,8 +5663,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double synch_params = 30;</code>
-       * @param values The synchParams to add.
-       * @return This builder for chaining.
        */
       public Builder addAllSynchParams(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -5856,11 +5678,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double synch_params = 30;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSynchParams() {
-        synchParams_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        synchParams_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x20000000);
         onChanged();
         return this;
       }
@@ -5872,7 +5693,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double best_latency_us = 31;</code>
-       * @return The bestLatencyUs.
        */
       public double getBestLatencyUs() {
         return bestLatencyUs_;
@@ -5883,8 +5703,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double best_latency_us = 31;</code>
-       * @param value The bestLatencyUs to set.
-       * @return This builder for chaining.
        */
       public Builder setBestLatencyUs(double value) {
         
@@ -5898,7 +5716,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double best_latency_us = 31;</code>
-       * @return This builder for chaining.
        */
       public Builder clearBestLatencyUs() {
         
@@ -5914,7 +5731,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double best_offset_us = 32;</code>
-       * @return The bestOffsetUs.
        */
       public double getBestOffsetUs() {
         return bestOffsetUs_;
@@ -5925,8 +5741,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double best_offset_us = 32;</code>
-       * @param value The bestOffsetUs to set.
-       * @return This builder for chaining.
        */
       public Builder setBestOffsetUs(double value) {
         
@@ -5940,7 +5754,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double best_offset_us = 32;</code>
-       * @return This builder for chaining.
        */
       public Builder clearBestOffsetUs() {
         
@@ -5949,7 +5762,7 @@ public final class RedvoxApi1000 {
         return this;
       }
 
-      private RedvoxApi1000.MicrophoneChannel microphoneChannel_;
+      private RedvoxApi1000.MicrophoneChannel microphoneChannel_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.MicrophoneChannel, RedvoxApi1000.MicrophoneChannel.Builder, RedvoxApi1000.MicrophoneChannelOrBuilder> microphoneChannelBuilder_;
       /**
@@ -5958,7 +5771,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.MicrophoneChannel microphone_channel = 33;</code>
-       * @return Whether the microphoneChannel field is set.
        */
       public boolean hasMicrophoneChannel() {
         return microphoneChannelBuilder_ != null || microphoneChannel_ != null;
@@ -5969,7 +5781,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.MicrophoneChannel microphone_channel = 33;</code>
-       * @return The microphoneChannel.
        */
       public RedvoxApi1000.MicrophoneChannel getMicrophoneChannel() {
         if (microphoneChannelBuilder_ == null) {
@@ -6104,7 +5915,7 @@ public final class RedvoxApi1000 {
         return microphoneChannelBuilder_;
       }
 
-      private RedvoxApi1000.SingleChannel barometerChannel_;
+      private RedvoxApi1000.SingleChannel barometerChannel_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SingleChannel, RedvoxApi1000.SingleChannel.Builder, RedvoxApi1000.SingleChannelOrBuilder> barometerChannelBuilder_;
       /**
@@ -6113,7 +5924,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SingleChannel barometer_channel = 34;</code>
-       * @return Whether the barometerChannel field is set.
        */
       public boolean hasBarometerChannel() {
         return barometerChannelBuilder_ != null || barometerChannel_ != null;
@@ -6124,7 +5934,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SingleChannel barometer_channel = 34;</code>
-       * @return The barometerChannel.
        */
       public RedvoxApi1000.SingleChannel getBarometerChannel() {
         if (barometerChannelBuilder_ == null) {
@@ -6259,7 +6068,7 @@ public final class RedvoxApi1000 {
         return barometerChannelBuilder_;
       }
 
-      private RedvoxApi1000.LocationChannel locationChannel_;
+      private RedvoxApi1000.LocationChannel locationChannel_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.LocationChannel, RedvoxApi1000.LocationChannel.Builder, RedvoxApi1000.LocationChannelOrBuilder> locationChannelBuilder_;
       /**
@@ -6268,7 +6077,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.LocationChannel location_channel = 35;</code>
-       * @return Whether the locationChannel field is set.
        */
       public boolean hasLocationChannel() {
         return locationChannelBuilder_ != null || locationChannel_ != null;
@@ -6279,7 +6087,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.LocationChannel location_channel = 35;</code>
-       * @return The locationChannel.
        */
       public RedvoxApi1000.LocationChannel getLocationChannel() {
         if (locationChannelBuilder_ == null) {
@@ -6414,7 +6221,7 @@ public final class RedvoxApi1000 {
         return locationChannelBuilder_;
       }
 
-      private RedvoxApi1000.XyzChannel accelerometerChannel_;
+      private RedvoxApi1000.XyzChannel accelerometerChannel_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.XyzChannel, RedvoxApi1000.XyzChannel.Builder, RedvoxApi1000.XyzChannelOrBuilder> accelerometerChannelBuilder_;
       /**
@@ -6423,7 +6230,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.XyzChannel accelerometer_channel = 36;</code>
-       * @return Whether the accelerometerChannel field is set.
        */
       public boolean hasAccelerometerChannel() {
         return accelerometerChannelBuilder_ != null || accelerometerChannel_ != null;
@@ -6434,7 +6240,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.XyzChannel accelerometer_channel = 36;</code>
-       * @return The accelerometerChannel.
        */
       public RedvoxApi1000.XyzChannel getAccelerometerChannel() {
         if (accelerometerChannelBuilder_ == null) {
@@ -6569,7 +6374,7 @@ public final class RedvoxApi1000 {
         return accelerometerChannelBuilder_;
       }
 
-      private RedvoxApi1000.XyzChannel gyroscopeChannel_;
+      private RedvoxApi1000.XyzChannel gyroscopeChannel_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.XyzChannel, RedvoxApi1000.XyzChannel.Builder, RedvoxApi1000.XyzChannelOrBuilder> gyroscopeChannelBuilder_;
       /**
@@ -6578,7 +6383,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.XyzChannel gyroscope_channel = 37;</code>
-       * @return Whether the gyroscopeChannel field is set.
        */
       public boolean hasGyroscopeChannel() {
         return gyroscopeChannelBuilder_ != null || gyroscopeChannel_ != null;
@@ -6589,7 +6393,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.XyzChannel gyroscope_channel = 37;</code>
-       * @return The gyroscopeChannel.
        */
       public RedvoxApi1000.XyzChannel getGyroscopeChannel() {
         if (gyroscopeChannelBuilder_ == null) {
@@ -6724,7 +6527,7 @@ public final class RedvoxApi1000 {
         return gyroscopeChannelBuilder_;
       }
 
-      private RedvoxApi1000.XyzChannel magnetometerChannel_;
+      private RedvoxApi1000.XyzChannel magnetometerChannel_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.XyzChannel, RedvoxApi1000.XyzChannel.Builder, RedvoxApi1000.XyzChannelOrBuilder> magnetometerChannelBuilder_;
       /**
@@ -6733,7 +6536,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.XyzChannel magnetometer_channel = 38;</code>
-       * @return Whether the magnetometerChannel field is set.
        */
       public boolean hasMagnetometerChannel() {
         return magnetometerChannelBuilder_ != null || magnetometerChannel_ != null;
@@ -6744,7 +6546,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.XyzChannel magnetometer_channel = 38;</code>
-       * @return The magnetometerChannel.
        */
       public RedvoxApi1000.XyzChannel getMagnetometerChannel() {
         if (magnetometerChannelBuilder_ == null) {
@@ -6879,7 +6680,7 @@ public final class RedvoxApi1000 {
         return magnetometerChannelBuilder_;
       }
 
-      private RedvoxApi1000.SingleChannel lightChannel_;
+      private RedvoxApi1000.SingleChannel lightChannel_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SingleChannel, RedvoxApi1000.SingleChannel.Builder, RedvoxApi1000.SingleChannelOrBuilder> lightChannelBuilder_;
       /**
@@ -6888,7 +6689,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SingleChannel light_channel = 39;</code>
-       * @return Whether the lightChannel field is set.
        */
       public boolean hasLightChannel() {
         return lightChannelBuilder_ != null || lightChannel_ != null;
@@ -6899,7 +6699,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SingleChannel light_channel = 39;</code>
-       * @return The lightChannel.
        */
       public RedvoxApi1000.SingleChannel getLightChannel() {
         if (lightChannelBuilder_ == null) {
@@ -7034,7 +6833,7 @@ public final class RedvoxApi1000 {
         return lightChannelBuilder_;
       }
 
-      private RedvoxApi1000.SingleChannel infraredChannel_;
+      private RedvoxApi1000.SingleChannel infraredChannel_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SingleChannel, RedvoxApi1000.SingleChannel.Builder, RedvoxApi1000.SingleChannelOrBuilder> infraredChannelBuilder_;
       /**
@@ -7043,7 +6842,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SingleChannel infrared_channel = 40;</code>
-       * @return Whether the infraredChannel field is set.
        */
       public boolean hasInfraredChannel() {
         return infraredChannelBuilder_ != null || infraredChannel_ != null;
@@ -7054,7 +6852,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SingleChannel infrared_channel = 40;</code>
-       * @return The infraredChannel.
        */
       public RedvoxApi1000.SingleChannel getInfraredChannel() {
         if (infraredChannelBuilder_ == null) {
@@ -7189,6 +6986,159 @@ public final class RedvoxApi1000 {
         return infraredChannelBuilder_;
       }
 
+      private RedvoxApi1000.ImageChannel imageChannel_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          RedvoxApi1000.ImageChannel, RedvoxApi1000.ImageChannel.Builder, RedvoxApi1000.ImageChannelOrBuilder> imageChannelBuilder_;
+      /**
+       * <pre>
+       * The image channel
+       * </pre>
+       *
+       * <code>.ImageChannel image_channel = 41;</code>
+       */
+      public boolean hasImageChannel() {
+        return imageChannelBuilder_ != null || imageChannel_ != null;
+      }
+      /**
+       * <pre>
+       * The image channel
+       * </pre>
+       *
+       * <code>.ImageChannel image_channel = 41;</code>
+       */
+      public RedvoxApi1000.ImageChannel getImageChannel() {
+        if (imageChannelBuilder_ == null) {
+          return imageChannel_ == null ? RedvoxApi1000.ImageChannel.getDefaultInstance() : imageChannel_;
+        } else {
+          return imageChannelBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The image channel
+       * </pre>
+       *
+       * <code>.ImageChannel image_channel = 41;</code>
+       */
+      public Builder setImageChannel(RedvoxApi1000.ImageChannel value) {
+        if (imageChannelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          imageChannel_ = value;
+          onChanged();
+        } else {
+          imageChannelBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The image channel
+       * </pre>
+       *
+       * <code>.ImageChannel image_channel = 41;</code>
+       */
+      public Builder setImageChannel(
+          RedvoxApi1000.ImageChannel.Builder builderForValue) {
+        if (imageChannelBuilder_ == null) {
+          imageChannel_ = builderForValue.build();
+          onChanged();
+        } else {
+          imageChannelBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The image channel
+       * </pre>
+       *
+       * <code>.ImageChannel image_channel = 41;</code>
+       */
+      public Builder mergeImageChannel(RedvoxApi1000.ImageChannel value) {
+        if (imageChannelBuilder_ == null) {
+          if (imageChannel_ != null) {
+            imageChannel_ =
+              RedvoxApi1000.ImageChannel.newBuilder(imageChannel_).mergeFrom(value).buildPartial();
+          } else {
+            imageChannel_ = value;
+          }
+          onChanged();
+        } else {
+          imageChannelBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The image channel
+       * </pre>
+       *
+       * <code>.ImageChannel image_channel = 41;</code>
+       */
+      public Builder clearImageChannel() {
+        if (imageChannelBuilder_ == null) {
+          imageChannel_ = null;
+          onChanged();
+        } else {
+          imageChannel_ = null;
+          imageChannelBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The image channel
+       * </pre>
+       *
+       * <code>.ImageChannel image_channel = 41;</code>
+       */
+      public RedvoxApi1000.ImageChannel.Builder getImageChannelBuilder() {
+        
+        onChanged();
+        return getImageChannelFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The image channel
+       * </pre>
+       *
+       * <code>.ImageChannel image_channel = 41;</code>
+       */
+      public RedvoxApi1000.ImageChannelOrBuilder getImageChannelOrBuilder() {
+        if (imageChannelBuilder_ != null) {
+          return imageChannelBuilder_.getMessageOrBuilder();
+        } else {
+          return imageChannel_ == null ?
+              RedvoxApi1000.ImageChannel.getDefaultInstance() : imageChannel_;
+        }
+      }
+      /**
+       * <pre>
+       * The image channel
+       * </pre>
+       *
+       * <code>.ImageChannel image_channel = 41;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          RedvoxApi1000.ImageChannel, RedvoxApi1000.ImageChannel.Builder, RedvoxApi1000.ImageChannelOrBuilder> 
+          getImageChannelFieldBuilder() {
+        if (imageChannelBuilder_ == null) {
+          imageChannelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              RedvoxApi1000.ImageChannel, RedvoxApi1000.ImageChannel.Builder, RedvoxApi1000.ImageChannelOrBuilder>(
+                  getImageChannel(),
+                  getParentForChildren(),
+                  isClean());
+          imageChannel_ = null;
+        }
+        return imageChannelBuilder_;
+      }
+
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> metadata_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -7220,7 +7170,7 @@ public final class RedvoxApi1000 {
        * Metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 41;</code>
+       * <code>map&lt;string, string&gt; metadata = 42;</code>
        */
 
       public boolean containsMetadata(
@@ -7240,7 +7190,7 @@ public final class RedvoxApi1000 {
        * Metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 41;</code>
+       * <code>map&lt;string, string&gt; metadata = 42;</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -7251,7 +7201,7 @@ public final class RedvoxApi1000 {
        * Metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 41;</code>
+       * <code>map&lt;string, string&gt; metadata = 42;</code>
        */
 
       public java.lang.String getMetadataOrDefault(
@@ -7267,7 +7217,7 @@ public final class RedvoxApi1000 {
        * Metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 41;</code>
+       * <code>map&lt;string, string&gt; metadata = 42;</code>
        */
 
       public java.lang.String getMetadataOrThrow(
@@ -7291,7 +7241,7 @@ public final class RedvoxApi1000 {
        * Metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 41;</code>
+       * <code>map&lt;string, string&gt; metadata = 42;</code>
        */
 
       public Builder removeMetadata(
@@ -7314,7 +7264,7 @@ public final class RedvoxApi1000 {
        * Metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 41;</code>
+       * <code>map&lt;string, string&gt; metadata = 42;</code>
        */
       public Builder putMetadata(
           java.lang.String key,
@@ -7330,7 +7280,7 @@ public final class RedvoxApi1000 {
        * Metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 41;</code>
+       * <code>map&lt;string, string&gt; metadata = 42;</code>
        */
 
       public Builder putAllMetadata(
@@ -7342,7 +7292,7 @@ public final class RedvoxApi1000 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -7402,7 +7352,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The sensorDescription.
      */
     java.lang.String getSensorDescription();
     /**
@@ -7411,7 +7360,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The bytes for sensorDescription.
      */
     com.google.protobuf.ByteString
         getSensorDescriptionBytes();
@@ -7422,7 +7370,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double first_sample_ts_us = 2;</code>
-     * @return The firstSampleTsUs.
      */
     double getFirstSampleTsUs();
 
@@ -7432,7 +7379,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double sample_rate_hz = 3;</code>
-     * @return The sampleRateHz.
      */
     double getSampleRateHz();
 
@@ -7442,7 +7388,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double samples = 4;</code>
-     * @return A list containing the samples.
      */
     java.util.List<java.lang.Double> getSamplesList();
     /**
@@ -7451,7 +7396,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double samples = 4;</code>
-     * @return The count of samples.
      */
     int getSamplesCount();
     /**
@@ -7460,8 +7404,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double samples = 4;</code>
-     * @param index The index of the element to return.
-     * @return The samples at the given index.
      */
     double getSamples(int index);
 
@@ -7471,7 +7413,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_statistics = 5;</code>
-     * @return Whether the sampleStatistics field is set.
      */
     boolean hasSampleStatistics();
     /**
@@ -7480,7 +7421,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_statistics = 5;</code>
-     * @return The sampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getSampleStatistics();
     /**
@@ -7564,14 +7504,9 @@ public final class RedvoxApi1000 {
     }
     private MicrophoneChannel() {
       sensorDescription_ = "";
-      samples_ = emptyDoubleList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MicrophoneChannel();
+      firstSampleTsUs_ = 0D;
+      sampleRateHz_ = 0D;
+      samples_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -7615,22 +7550,22 @@ public final class RedvoxApi1000 {
               break;
             }
             case 33: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                samples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000001;
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                samples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000008;
               }
-              samples_.addDouble(input.readDouble());
+              samples_.add(input.readDouble());
               break;
             }
             case 34: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                samples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000001;
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008) && input.getBytesUntilLimit() > 0) {
+                samples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000008;
               }
               while (input.getBytesUntilLimit() > 0) {
-                samples_.addDouble(input.readDouble());
+                samples_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
@@ -7649,10 +7584,10 @@ public final class RedvoxApi1000 {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
                 metadata_ = com.google.protobuf.MapField.newMapField(
                     MetadataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000020;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               metadata__ = input.readMessage(
@@ -7662,7 +7597,7 @@ public final class RedvoxApi1000 {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7676,8 +7611,8 @@ public final class RedvoxApi1000 {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          samples_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          samples_ = java.util.Collections.unmodifiableList(samples_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -7708,6 +7643,7 @@ public final class RedvoxApi1000 {
               RedvoxApi1000.MicrophoneChannel.class, RedvoxApi1000.MicrophoneChannel.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SENSOR_DESCRIPTION_FIELD_NUMBER = 1;
     private volatile java.lang.Object sensorDescription_;
     /**
@@ -7716,7 +7652,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The sensorDescription.
      */
     public java.lang.String getSensorDescription() {
       java.lang.Object ref = sensorDescription_;
@@ -7736,7 +7671,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The bytes for sensorDescription.
      */
     public com.google.protobuf.ByteString
         getSensorDescriptionBytes() {
@@ -7760,7 +7694,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double first_sample_ts_us = 2;</code>
-     * @return The firstSampleTsUs.
      */
     public double getFirstSampleTsUs() {
       return firstSampleTsUs_;
@@ -7774,21 +7707,19 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double sample_rate_hz = 3;</code>
-     * @return The sampleRateHz.
      */
     public double getSampleRateHz() {
       return sampleRateHz_;
     }
 
     public static final int SAMPLES_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.DoubleList samples_;
+    private java.util.List<java.lang.Double> samples_;
     /**
      * <pre>
      * List of microphone samples
      * </pre>
      *
      * <code>repeated double samples = 4;</code>
-     * @return A list containing the samples.
      */
     public java.util.List<java.lang.Double>
         getSamplesList() {
@@ -7800,7 +7731,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double samples = 4;</code>
-     * @return The count of samples.
      */
     public int getSamplesCount() {
       return samples_.size();
@@ -7811,11 +7741,9 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double samples = 4;</code>
-     * @param index The index of the element to return.
-     * @return The samples at the given index.
      */
     public double getSamples(int index) {
-      return samples_.getDouble(index);
+      return samples_.get(index);
     }
     private int samplesMemoizedSerializedSize = -1;
 
@@ -7827,7 +7755,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_statistics = 5;</code>
-     * @return Whether the sampleStatistics field is set.
      */
     public boolean hasSampleStatistics() {
       return sampleStatistics_ != null;
@@ -7838,7 +7765,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_statistics = 5;</code>
-     * @return The sampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getSampleStatistics() {
       return sampleStatistics_ == null ? RedvoxApi1000.SummaryStatistics.getDefaultInstance() : sampleStatistics_;
@@ -7975,7 +7901,7 @@ public final class RedvoxApi1000 {
         output.writeUInt32NoTag(samplesMemoizedSerializedSize);
       }
       for (int i = 0; i < samples_.size(); i++) {
-        output.writeDoubleNoTag(samples_.getDouble(i));
+        output.writeDoubleNoTag(samples_.get(i));
       }
       if (sampleStatistics_ != null) {
         output.writeMessage(5, getSampleStatistics());
@@ -8046,25 +7972,28 @@ public final class RedvoxApi1000 {
       }
       RedvoxApi1000.MicrophoneChannel other = (RedvoxApi1000.MicrophoneChannel) obj;
 
-      if (!getSensorDescription()
-          .equals(other.getSensorDescription())) return false;
-      if (java.lang.Double.doubleToLongBits(getFirstSampleTsUs())
-          != java.lang.Double.doubleToLongBits(
-              other.getFirstSampleTsUs())) return false;
-      if (java.lang.Double.doubleToLongBits(getSampleRateHz())
-          != java.lang.Double.doubleToLongBits(
-              other.getSampleRateHz())) return false;
-      if (!getSamplesList()
-          .equals(other.getSamplesList())) return false;
-      if (hasSampleStatistics() != other.hasSampleStatistics()) return false;
+      boolean result = true;
+      result = result && getSensorDescription()
+          .equals(other.getSensorDescription());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getFirstSampleTsUs())
+          == java.lang.Double.doubleToLongBits(
+              other.getFirstSampleTsUs()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getSampleRateHz())
+          == java.lang.Double.doubleToLongBits(
+              other.getSampleRateHz()));
+      result = result && getSamplesList()
+          .equals(other.getSamplesList());
+      result = result && (hasSampleStatistics() == other.hasSampleStatistics());
       if (hasSampleStatistics()) {
-        if (!getSampleStatistics()
-            .equals(other.getSampleStatistics())) return false;
+        result = result && getSampleStatistics()
+            .equals(other.getSampleStatistics());
       }
-      if (!internalGetMetadata().equals(
-          other.internalGetMetadata())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && internalGetMetadata().equals(
+          other.internalGetMetadata());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -8259,8 +8188,8 @@ public final class RedvoxApi1000 {
 
         sampleRateHz_ = 0D;
 
-        samples_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        samples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (sampleStatisticsBuilder_ == null) {
           sampleStatistics_ = null;
         } else {
@@ -8295,12 +8224,13 @@ public final class RedvoxApi1000 {
       public RedvoxApi1000.MicrophoneChannel buildPartial() {
         RedvoxApi1000.MicrophoneChannel result = new RedvoxApi1000.MicrophoneChannel(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.sensorDescription_ = sensorDescription_;
         result.firstSampleTsUs_ = firstSampleTsUs_;
         result.sampleRateHz_ = sampleRateHz_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          samples_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          samples_ = java.util.Collections.unmodifiableList(samples_);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.samples_ = samples_;
         if (sampleStatisticsBuilder_ == null) {
@@ -8310,41 +8240,42 @@ public final class RedvoxApi1000 {
         }
         result.metadata_ = internalGetMetadata();
         result.metadata_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8371,7 +8302,7 @@ public final class RedvoxApi1000 {
         if (!other.samples_.isEmpty()) {
           if (samples_.isEmpty()) {
             samples_ = other.samples_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureSamplesIsMutable();
             samples_.addAll(other.samples_);
@@ -8420,7 +8351,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return The sensorDescription.
        */
       public java.lang.String getSensorDescription() {
         java.lang.Object ref = sensorDescription_;
@@ -8440,7 +8370,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return The bytes for sensorDescription.
        */
       public com.google.protobuf.ByteString
           getSensorDescriptionBytes() {
@@ -8461,8 +8390,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @param value The sensorDescription to set.
-       * @return This builder for chaining.
        */
       public Builder setSensorDescription(
           java.lang.String value) {
@@ -8480,7 +8407,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSensorDescription() {
         
@@ -8494,8 +8420,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @param value The bytes for sensorDescription to set.
-       * @return This builder for chaining.
        */
       public Builder setSensorDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -8516,7 +8440,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double first_sample_ts_us = 2;</code>
-       * @return The firstSampleTsUs.
        */
       public double getFirstSampleTsUs() {
         return firstSampleTsUs_;
@@ -8527,8 +8450,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double first_sample_ts_us = 2;</code>
-       * @param value The firstSampleTsUs to set.
-       * @return This builder for chaining.
        */
       public Builder setFirstSampleTsUs(double value) {
         
@@ -8542,7 +8463,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double first_sample_ts_us = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearFirstSampleTsUs() {
         
@@ -8558,7 +8478,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double sample_rate_hz = 3;</code>
-       * @return The sampleRateHz.
        */
       public double getSampleRateHz() {
         return sampleRateHz_;
@@ -8569,8 +8488,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double sample_rate_hz = 3;</code>
-       * @param value The sampleRateHz to set.
-       * @return This builder for chaining.
        */
       public Builder setSampleRateHz(double value) {
         
@@ -8584,7 +8501,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double sample_rate_hz = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSampleRateHz() {
         
@@ -8593,11 +8509,11 @@ public final class RedvoxApi1000 {
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList samples_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> samples_ = java.util.Collections.emptyList();
       private void ensureSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          samples_ = mutableCopy(samples_);
-          bitField0_ |= 0x00000001;
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          samples_ = new java.util.ArrayList<java.lang.Double>(samples_);
+          bitField0_ |= 0x00000008;
          }
       }
       /**
@@ -8606,12 +8522,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double samples = 4;</code>
-       * @return A list containing the samples.
        */
       public java.util.List<java.lang.Double>
           getSamplesList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(samples_) : samples_;
+        return java.util.Collections.unmodifiableList(samples_);
       }
       /**
        * <pre>
@@ -8619,7 +8533,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double samples = 4;</code>
-       * @return The count of samples.
        */
       public int getSamplesCount() {
         return samples_.size();
@@ -8630,11 +8543,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double samples = 4;</code>
-       * @param index The index of the element to return.
-       * @return The samples at the given index.
        */
       public double getSamples(int index) {
-        return samples_.getDouble(index);
+        return samples_.get(index);
       }
       /**
        * <pre>
@@ -8642,14 +8553,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double samples = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The samples to set.
-       * @return This builder for chaining.
        */
       public Builder setSamples(
           int index, double value) {
         ensureSamplesIsMutable();
-        samples_.setDouble(index, value);
+        samples_.set(index, value);
         onChanged();
         return this;
       }
@@ -8659,12 +8567,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double samples = 4;</code>
-       * @param value The samples to add.
-       * @return This builder for chaining.
        */
       public Builder addSamples(double value) {
         ensureSamplesIsMutable();
-        samples_.addDouble(value);
+        samples_.add(value);
         onChanged();
         return this;
       }
@@ -8674,8 +8580,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double samples = 4;</code>
-       * @param values The samples to add.
-       * @return This builder for chaining.
        */
       public Builder addAllSamples(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -8691,16 +8595,15 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double samples = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSamples() {
-        samples_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        samples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
 
-      private RedvoxApi1000.SummaryStatistics sampleStatistics_;
+      private RedvoxApi1000.SummaryStatistics sampleStatistics_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> sampleStatisticsBuilder_;
       /**
@@ -8709,7 +8612,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics sample_statistics = 5;</code>
-       * @return Whether the sampleStatistics field is set.
        */
       public boolean hasSampleStatistics() {
         return sampleStatisticsBuilder_ != null || sampleStatistics_ != null;
@@ -8720,7 +8622,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics sample_statistics = 5;</code>
-       * @return The sampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getSampleStatistics() {
         if (sampleStatisticsBuilder_ == null) {
@@ -9008,7 +8909,7 @@ public final class RedvoxApi1000 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -9068,7 +8969,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The sensorDescription.
      */
     java.lang.String getSensorDescription();
     /**
@@ -9077,7 +8977,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The bytes for sensorDescription.
      */
     com.google.protobuf.ByteString
         getSensorDescriptionBytes();
@@ -9088,7 +8987,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double mean_sample_rate_hz = 2;</code>
-     * @return The meanSampleRateHz.
      */
     double getMeanSampleRateHz();
 
@@ -9098,7 +8996,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return A list containing the sampleTsUs.
      */
     java.util.List<java.lang.Double> getSampleTsUsList();
     /**
@@ -9107,7 +9004,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return The count of sampleTsUs.
      */
     int getSampleTsUsCount();
     /**
@@ -9116,8 +9012,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @param index The index of the element to return.
-     * @return The sampleTsUs at the given index.
      */
     double getSampleTsUs(int index);
 
@@ -9127,7 +9021,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double samples = 4;</code>
-     * @return A list containing the samples.
      */
     java.util.List<java.lang.Double> getSamplesList();
     /**
@@ -9136,7 +9029,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double samples = 4;</code>
-     * @return The count of samples.
      */
     int getSamplesCount();
     /**
@@ -9145,8 +9037,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double samples = 4;</code>
-     * @param index The index of the element to return.
-     * @return The samples at the given index.
      */
     double getSamples(int index);
 
@@ -9156,7 +9046,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 5;</code>
-     * @return Whether the sampleRateStatistics field is set.
      */
     boolean hasSampleRateStatistics();
     /**
@@ -9165,7 +9054,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 5;</code>
-     * @return The sampleRateStatistics.
      */
     RedvoxApi1000.SummaryStatistics getSampleRateStatistics();
     /**
@@ -9183,7 +9071,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_statistics = 6;</code>
-     * @return Whether the sampleStatistics field is set.
      */
     boolean hasSampleStatistics();
     /**
@@ -9192,7 +9079,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_statistics = 6;</code>
-     * @return The sampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getSampleStatistics();
     /**
@@ -9276,15 +9162,9 @@ public final class RedvoxApi1000 {
     }
     private SingleChannel() {
       sensorDescription_ = "";
-      sampleTsUs_ = emptyDoubleList();
-      samples_ = emptyDoubleList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SingleChannel();
+      meanSampleRateHz_ = 0D;
+      sampleTsUs_ = java.util.Collections.emptyList();
+      samples_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -9323,43 +9203,43 @@ public final class RedvoxApi1000 {
               break;
             }
             case 25: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                sampleTsUs_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000001;
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                sampleTsUs_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000004;
               }
-              sampleTsUs_.addDouble(input.readDouble());
+              sampleTsUs_.add(input.readDouble());
               break;
             }
             case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                sampleTsUs_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000001;
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
+                sampleTsUs_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000004;
               }
               while (input.getBytesUntilLimit() > 0) {
-                sampleTsUs_.addDouble(input.readDouble());
+                sampleTsUs_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
             }
             case 33: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                samples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000002;
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                samples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000008;
               }
-              samples_.addDouble(input.readDouble());
+              samples_.add(input.readDouble());
               break;
             }
             case 34: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                samples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000002;
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008) && input.getBytesUntilLimit() > 0) {
+                samples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000008;
               }
               while (input.getBytesUntilLimit() > 0) {
-                samples_.addDouble(input.readDouble());
+                samples_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
@@ -9391,10 +9271,10 @@ public final class RedvoxApi1000 {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
                 metadata_ = com.google.protobuf.MapField.newMapField(
                     MetadataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000040;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               metadata__ = input.readMessage(
@@ -9404,7 +9284,7 @@ public final class RedvoxApi1000 {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9418,11 +9298,11 @@ public final class RedvoxApi1000 {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          sampleTsUs_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          sampleTsUs_ = java.util.Collections.unmodifiableList(sampleTsUs_);
         }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          samples_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          samples_ = java.util.Collections.unmodifiableList(samples_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -9453,6 +9333,7 @@ public final class RedvoxApi1000 {
               RedvoxApi1000.SingleChannel.class, RedvoxApi1000.SingleChannel.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SENSOR_DESCRIPTION_FIELD_NUMBER = 1;
     private volatile java.lang.Object sensorDescription_;
     /**
@@ -9461,7 +9342,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The sensorDescription.
      */
     public java.lang.String getSensorDescription() {
       java.lang.Object ref = sensorDescription_;
@@ -9481,7 +9361,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The bytes for sensorDescription.
      */
     public com.google.protobuf.ByteString
         getSensorDescriptionBytes() {
@@ -9505,21 +9384,19 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double mean_sample_rate_hz = 2;</code>
-     * @return The meanSampleRateHz.
      */
     public double getMeanSampleRateHz() {
       return meanSampleRateHz_;
     }
 
     public static final int SAMPLE_TS_US_FIELD_NUMBER = 3;
-    private com.google.protobuf.Internal.DoubleList sampleTsUs_;
+    private java.util.List<java.lang.Double> sampleTsUs_;
     /**
      * <pre>
      * A list of timestamps, one for each sample
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return A list containing the sampleTsUs.
      */
     public java.util.List<java.lang.Double>
         getSampleTsUsList() {
@@ -9531,7 +9408,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return The count of sampleTsUs.
      */
     public int getSampleTsUsCount() {
       return sampleTsUs_.size();
@@ -9542,23 +9418,20 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @param index The index of the element to return.
-     * @return The sampleTsUs at the given index.
      */
     public double getSampleTsUs(int index) {
-      return sampleTsUs_.getDouble(index);
+      return sampleTsUs_.get(index);
     }
     private int sampleTsUsMemoizedSerializedSize = -1;
 
     public static final int SAMPLES_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.DoubleList samples_;
+    private java.util.List<java.lang.Double> samples_;
     /**
      * <pre>
      * A list of samples
      * </pre>
      *
      * <code>repeated double samples = 4;</code>
-     * @return A list containing the samples.
      */
     public java.util.List<java.lang.Double>
         getSamplesList() {
@@ -9570,7 +9443,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double samples = 4;</code>
-     * @return The count of samples.
      */
     public int getSamplesCount() {
       return samples_.size();
@@ -9581,11 +9453,9 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double samples = 4;</code>
-     * @param index The index of the element to return.
-     * @return The samples at the given index.
      */
     public double getSamples(int index) {
-      return samples_.getDouble(index);
+      return samples_.get(index);
     }
     private int samplesMemoizedSerializedSize = -1;
 
@@ -9597,7 +9467,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 5;</code>
-     * @return Whether the sampleRateStatistics field is set.
      */
     public boolean hasSampleRateStatistics() {
       return sampleRateStatistics_ != null;
@@ -9608,7 +9477,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 5;</code>
-     * @return The sampleRateStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getSampleRateStatistics() {
       return sampleRateStatistics_ == null ? RedvoxApi1000.SummaryStatistics.getDefaultInstance() : sampleRateStatistics_;
@@ -9632,7 +9500,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_statistics = 6;</code>
-     * @return Whether the sampleStatistics field is set.
      */
     public boolean hasSampleStatistics() {
       return sampleStatistics_ != null;
@@ -9643,7 +9510,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_statistics = 6;</code>
-     * @return The sampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getSampleStatistics() {
       return sampleStatistics_ == null ? RedvoxApi1000.SummaryStatistics.getDefaultInstance() : sampleStatistics_;
@@ -9777,14 +9643,14 @@ public final class RedvoxApi1000 {
         output.writeUInt32NoTag(sampleTsUsMemoizedSerializedSize);
       }
       for (int i = 0; i < sampleTsUs_.size(); i++) {
-        output.writeDoubleNoTag(sampleTsUs_.getDouble(i));
+        output.writeDoubleNoTag(sampleTsUs_.get(i));
       }
       if (getSamplesList().size() > 0) {
         output.writeUInt32NoTag(34);
         output.writeUInt32NoTag(samplesMemoizedSerializedSize);
       }
       for (int i = 0; i < samples_.size(); i++) {
-        output.writeDoubleNoTag(samples_.getDouble(i));
+        output.writeDoubleNoTag(samples_.get(i));
       }
       if (sampleRateStatistics_ != null) {
         output.writeMessage(5, getSampleRateStatistics());
@@ -9869,29 +9735,31 @@ public final class RedvoxApi1000 {
       }
       RedvoxApi1000.SingleChannel other = (RedvoxApi1000.SingleChannel) obj;
 
-      if (!getSensorDescription()
-          .equals(other.getSensorDescription())) return false;
-      if (java.lang.Double.doubleToLongBits(getMeanSampleRateHz())
-          != java.lang.Double.doubleToLongBits(
-              other.getMeanSampleRateHz())) return false;
-      if (!getSampleTsUsList()
-          .equals(other.getSampleTsUsList())) return false;
-      if (!getSamplesList()
-          .equals(other.getSamplesList())) return false;
-      if (hasSampleRateStatistics() != other.hasSampleRateStatistics()) return false;
+      boolean result = true;
+      result = result && getSensorDescription()
+          .equals(other.getSensorDescription());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getMeanSampleRateHz())
+          == java.lang.Double.doubleToLongBits(
+              other.getMeanSampleRateHz()));
+      result = result && getSampleTsUsList()
+          .equals(other.getSampleTsUsList());
+      result = result && getSamplesList()
+          .equals(other.getSamplesList());
+      result = result && (hasSampleRateStatistics() == other.hasSampleRateStatistics());
       if (hasSampleRateStatistics()) {
-        if (!getSampleRateStatistics()
-            .equals(other.getSampleRateStatistics())) return false;
+        result = result && getSampleRateStatistics()
+            .equals(other.getSampleRateStatistics());
       }
-      if (hasSampleStatistics() != other.hasSampleStatistics()) return false;
+      result = result && (hasSampleStatistics() == other.hasSampleStatistics());
       if (hasSampleStatistics()) {
-        if (!getSampleStatistics()
-            .equals(other.getSampleStatistics())) return false;
+        result = result && getSampleStatistics()
+            .equals(other.getSampleStatistics());
       }
-      if (!internalGetMetadata().equals(
-          other.internalGetMetadata())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && internalGetMetadata().equals(
+          other.internalGetMetadata());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -10089,10 +9957,10 @@ public final class RedvoxApi1000 {
 
         meanSampleRateHz_ = 0D;
 
-        sampleTsUs_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        samples_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        sampleTsUs_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        samples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (sampleRateStatisticsBuilder_ == null) {
           sampleRateStatistics_ = null;
         } else {
@@ -10133,16 +10001,17 @@ public final class RedvoxApi1000 {
       public RedvoxApi1000.SingleChannel buildPartial() {
         RedvoxApi1000.SingleChannel result = new RedvoxApi1000.SingleChannel(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.sensorDescription_ = sensorDescription_;
         result.meanSampleRateHz_ = meanSampleRateHz_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          sampleTsUs_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          sampleTsUs_ = java.util.Collections.unmodifiableList(sampleTsUs_);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.sampleTsUs_ = sampleTsUs_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          samples_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          samples_ = java.util.Collections.unmodifiableList(samples_);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.samples_ = samples_;
         if (sampleRateStatisticsBuilder_ == null) {
@@ -10157,41 +10026,42 @@ public final class RedvoxApi1000 {
         }
         result.metadata_ = internalGetMetadata();
         result.metadata_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10215,7 +10085,7 @@ public final class RedvoxApi1000 {
         if (!other.sampleTsUs_.isEmpty()) {
           if (sampleTsUs_.isEmpty()) {
             sampleTsUs_ = other.sampleTsUs_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSampleTsUsIsMutable();
             sampleTsUs_.addAll(other.sampleTsUs_);
@@ -10225,7 +10095,7 @@ public final class RedvoxApi1000 {
         if (!other.samples_.isEmpty()) {
           if (samples_.isEmpty()) {
             samples_ = other.samples_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureSamplesIsMutable();
             samples_.addAll(other.samples_);
@@ -10277,7 +10147,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return The sensorDescription.
        */
       public java.lang.String getSensorDescription() {
         java.lang.Object ref = sensorDescription_;
@@ -10297,7 +10166,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return The bytes for sensorDescription.
        */
       public com.google.protobuf.ByteString
           getSensorDescriptionBytes() {
@@ -10318,8 +10186,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @param value The sensorDescription to set.
-       * @return This builder for chaining.
        */
       public Builder setSensorDescription(
           java.lang.String value) {
@@ -10337,7 +10203,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSensorDescription() {
         
@@ -10351,8 +10216,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @param value The bytes for sensorDescription to set.
-       * @return This builder for chaining.
        */
       public Builder setSensorDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -10373,7 +10236,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean_sample_rate_hz = 2;</code>
-       * @return The meanSampleRateHz.
        */
       public double getMeanSampleRateHz() {
         return meanSampleRateHz_;
@@ -10384,8 +10246,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean_sample_rate_hz = 2;</code>
-       * @param value The meanSampleRateHz to set.
-       * @return This builder for chaining.
        */
       public Builder setMeanSampleRateHz(double value) {
         
@@ -10399,7 +10259,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean_sample_rate_hz = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearMeanSampleRateHz() {
         
@@ -10408,11 +10267,11 @@ public final class RedvoxApi1000 {
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList sampleTsUs_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> sampleTsUs_ = java.util.Collections.emptyList();
       private void ensureSampleTsUsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          sampleTsUs_ = mutableCopy(sampleTsUs_);
-          bitField0_ |= 0x00000001;
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          sampleTsUs_ = new java.util.ArrayList<java.lang.Double>(sampleTsUs_);
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -10421,12 +10280,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @return A list containing the sampleTsUs.
        */
       public java.util.List<java.lang.Double>
           getSampleTsUsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(sampleTsUs_) : sampleTsUs_;
+        return java.util.Collections.unmodifiableList(sampleTsUs_);
       }
       /**
        * <pre>
@@ -10434,7 +10291,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @return The count of sampleTsUs.
        */
       public int getSampleTsUsCount() {
         return sampleTsUs_.size();
@@ -10445,11 +10301,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param index The index of the element to return.
-       * @return The sampleTsUs at the given index.
        */
       public double getSampleTsUs(int index) {
-        return sampleTsUs_.getDouble(index);
+        return sampleTsUs_.get(index);
       }
       /**
        * <pre>
@@ -10457,14 +10311,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param index The index to set the value at.
-       * @param value The sampleTsUs to set.
-       * @return This builder for chaining.
        */
       public Builder setSampleTsUs(
           int index, double value) {
         ensureSampleTsUsIsMutable();
-        sampleTsUs_.setDouble(index, value);
+        sampleTsUs_.set(index, value);
         onChanged();
         return this;
       }
@@ -10474,12 +10325,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param value The sampleTsUs to add.
-       * @return This builder for chaining.
        */
       public Builder addSampleTsUs(double value) {
         ensureSampleTsUsIsMutable();
-        sampleTsUs_.addDouble(value);
+        sampleTsUs_.add(value);
         onChanged();
         return this;
       }
@@ -10489,8 +10338,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param values The sampleTsUs to add.
-       * @return This builder for chaining.
        */
       public Builder addAllSampleTsUs(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -10506,20 +10353,19 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSampleTsUs() {
-        sampleTsUs_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        sampleTsUs_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList samples_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> samples_ = java.util.Collections.emptyList();
       private void ensureSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          samples_ = mutableCopy(samples_);
-          bitField0_ |= 0x00000002;
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          samples_ = new java.util.ArrayList<java.lang.Double>(samples_);
+          bitField0_ |= 0x00000008;
          }
       }
       /**
@@ -10528,12 +10374,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double samples = 4;</code>
-       * @return A list containing the samples.
        */
       public java.util.List<java.lang.Double>
           getSamplesList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(samples_) : samples_;
+        return java.util.Collections.unmodifiableList(samples_);
       }
       /**
        * <pre>
@@ -10541,7 +10385,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double samples = 4;</code>
-       * @return The count of samples.
        */
       public int getSamplesCount() {
         return samples_.size();
@@ -10552,11 +10395,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double samples = 4;</code>
-       * @param index The index of the element to return.
-       * @return The samples at the given index.
        */
       public double getSamples(int index) {
-        return samples_.getDouble(index);
+        return samples_.get(index);
       }
       /**
        * <pre>
@@ -10564,14 +10405,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double samples = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The samples to set.
-       * @return This builder for chaining.
        */
       public Builder setSamples(
           int index, double value) {
         ensureSamplesIsMutable();
-        samples_.setDouble(index, value);
+        samples_.set(index, value);
         onChanged();
         return this;
       }
@@ -10581,12 +10419,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double samples = 4;</code>
-       * @param value The samples to add.
-       * @return This builder for chaining.
        */
       public Builder addSamples(double value) {
         ensureSamplesIsMutable();
-        samples_.addDouble(value);
+        samples_.add(value);
         onChanged();
         return this;
       }
@@ -10596,8 +10432,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double samples = 4;</code>
-       * @param values The samples to add.
-       * @return This builder for chaining.
        */
       public Builder addAllSamples(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -10613,16 +10447,15 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double samples = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSamples() {
-        samples_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        samples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
 
-      private RedvoxApi1000.SummaryStatistics sampleRateStatistics_;
+      private RedvoxApi1000.SummaryStatistics sampleRateStatistics_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> sampleRateStatisticsBuilder_;
       /**
@@ -10631,7 +10464,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics sample_rate_statistics = 5;</code>
-       * @return Whether the sampleRateStatistics field is set.
        */
       public boolean hasSampleRateStatistics() {
         return sampleRateStatisticsBuilder_ != null || sampleRateStatistics_ != null;
@@ -10642,7 +10474,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics sample_rate_statistics = 5;</code>
-       * @return The sampleRateStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getSampleRateStatistics() {
         if (sampleRateStatisticsBuilder_ == null) {
@@ -10777,7 +10608,7 @@ public final class RedvoxApi1000 {
         return sampleRateStatisticsBuilder_;
       }
 
-      private RedvoxApi1000.SummaryStatistics sampleStatistics_;
+      private RedvoxApi1000.SummaryStatistics sampleStatistics_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> sampleStatisticsBuilder_;
       /**
@@ -10786,7 +10617,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics sample_statistics = 6;</code>
-       * @return Whether the sampleStatistics field is set.
        */
       public boolean hasSampleStatistics() {
         return sampleStatisticsBuilder_ != null || sampleStatistics_ != null;
@@ -10797,7 +10627,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics sample_statistics = 6;</code>
-       * @return The sampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getSampleStatistics() {
         if (sampleStatisticsBuilder_ == null) {
@@ -11085,7 +10914,7 @@ public final class RedvoxApi1000 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -11145,7 +10974,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The sensorDescription.
      */
     java.lang.String getSensorDescription();
     /**
@@ -11154,7 +10982,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The bytes for sensorDescription.
      */
     com.google.protobuf.ByteString
         getSensorDescriptionBytes();
@@ -11165,7 +10992,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double mean_sample_rate_hz = 2;</code>
-     * @return The meanSampleRateHz.
      */
     double getMeanSampleRateHz();
 
@@ -11175,7 +11001,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return A list containing the sampleTsUs.
      */
     java.util.List<java.lang.Double> getSampleTsUsList();
     /**
@@ -11184,7 +11009,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return The count of sampleTsUs.
      */
     int getSampleTsUsCount();
     /**
@@ -11193,8 +11017,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @param index The index of the element to return.
-     * @return The sampleTsUs at the given index.
      */
     double getSampleTsUs(int index);
 
@@ -11204,7 +11026,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double x_samples = 4;</code>
-     * @return A list containing the xSamples.
      */
     java.util.List<java.lang.Double> getXSamplesList();
     /**
@@ -11213,7 +11034,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double x_samples = 4;</code>
-     * @return The count of xSamples.
      */
     int getXSamplesCount();
     /**
@@ -11222,8 +11042,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double x_samples = 4;</code>
-     * @param index The index of the element to return.
-     * @return The xSamples at the given index.
      */
     double getXSamples(int index);
 
@@ -11233,7 +11051,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double y_samples = 5;</code>
-     * @return A list containing the ySamples.
      */
     java.util.List<java.lang.Double> getYSamplesList();
     /**
@@ -11242,7 +11059,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double y_samples = 5;</code>
-     * @return The count of ySamples.
      */
     int getYSamplesCount();
     /**
@@ -11251,8 +11067,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double y_samples = 5;</code>
-     * @param index The index of the element to return.
-     * @return The ySamples at the given index.
      */
     double getYSamples(int index);
 
@@ -11262,7 +11076,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double z_samples = 6;</code>
-     * @return A list containing the zSamples.
      */
     java.util.List<java.lang.Double> getZSamplesList();
     /**
@@ -11271,7 +11084,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double z_samples = 6;</code>
-     * @return The count of zSamples.
      */
     int getZSamplesCount();
     /**
@@ -11280,8 +11092,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double z_samples = 6;</code>
-     * @param index The index of the element to return.
-     * @return The zSamples at the given index.
      */
     double getZSamples(int index);
 
@@ -11291,7 +11101,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 7;</code>
-     * @return Whether the sampleRateStatistics field is set.
      */
     boolean hasSampleRateStatistics();
     /**
@@ -11300,7 +11109,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 7;</code>
-     * @return The sampleRateStatistics.
      */
     RedvoxApi1000.SummaryStatistics getSampleRateStatistics();
     /**
@@ -11318,7 +11126,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics x_sample_statistics = 8;</code>
-     * @return Whether the xSampleStatistics field is set.
      */
     boolean hasXSampleStatistics();
     /**
@@ -11327,7 +11134,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics x_sample_statistics = 8;</code>
-     * @return The xSampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getXSampleStatistics();
     /**
@@ -11345,7 +11151,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics y_sample_statistics = 9;</code>
-     * @return Whether the ySampleStatistics field is set.
      */
     boolean hasYSampleStatistics();
     /**
@@ -11354,7 +11159,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics y_sample_statistics = 9;</code>
-     * @return The ySampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getYSampleStatistics();
     /**
@@ -11372,7 +11176,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics z_sample_statistics = 10;</code>
-     * @return Whether the zSampleStatistics field is set.
      */
     boolean hasZSampleStatistics();
     /**
@@ -11381,7 +11184,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics z_sample_statistics = 10;</code>
-     * @return The zSampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getZSampleStatistics();
     /**
@@ -11465,17 +11267,11 @@ public final class RedvoxApi1000 {
     }
     private XyzChannel() {
       sensorDescription_ = "";
-      sampleTsUs_ = emptyDoubleList();
-      xSamples_ = emptyDoubleList();
-      ySamples_ = emptyDoubleList();
-      zSamples_ = emptyDoubleList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new XyzChannel();
+      meanSampleRateHz_ = 0D;
+      sampleTsUs_ = java.util.Collections.emptyList();
+      xSamples_ = java.util.Collections.emptyList();
+      ySamples_ = java.util.Collections.emptyList();
+      zSamples_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -11514,85 +11310,85 @@ public final class RedvoxApi1000 {
               break;
             }
             case 25: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                sampleTsUs_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000001;
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                sampleTsUs_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000004;
               }
-              sampleTsUs_.addDouble(input.readDouble());
+              sampleTsUs_.add(input.readDouble());
               break;
             }
             case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                sampleTsUs_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000001;
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
+                sampleTsUs_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000004;
               }
               while (input.getBytesUntilLimit() > 0) {
-                sampleTsUs_.addDouble(input.readDouble());
+                sampleTsUs_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
             }
             case 33: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                xSamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000002;
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                xSamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000008;
               }
-              xSamples_.addDouble(input.readDouble());
+              xSamples_.add(input.readDouble());
               break;
             }
             case 34: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                xSamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000002;
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008) && input.getBytesUntilLimit() > 0) {
+                xSamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000008;
               }
               while (input.getBytesUntilLimit() > 0) {
-                xSamples_.addDouble(input.readDouble());
+                xSamples_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
             }
             case 41: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                ySamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000004;
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                ySamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000010;
               }
-              ySamples_.addDouble(input.readDouble());
+              ySamples_.add(input.readDouble());
               break;
             }
             case 42: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
-                ySamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000004;
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010) && input.getBytesUntilLimit() > 0) {
+                ySamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000010;
               }
               while (input.getBytesUntilLimit() > 0) {
-                ySamples_.addDouble(input.readDouble());
+                ySamples_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
             }
             case 49: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                zSamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000008;
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                zSamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000020;
               }
-              zSamples_.addDouble(input.readDouble());
+              zSamples_.add(input.readDouble());
               break;
             }
             case 50: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
-                zSamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000008;
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020) && input.getBytesUntilLimit() > 0) {
+                zSamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000020;
               }
               while (input.getBytesUntilLimit() > 0) {
-                zSamples_.addDouble(input.readDouble());
+                zSamples_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
@@ -11650,10 +11446,10 @@ public final class RedvoxApi1000 {
               break;
             }
             case 90: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
                 metadata_ = com.google.protobuf.MapField.newMapField(
                     MetadataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000400;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               metadata__ = input.readMessage(
@@ -11663,7 +11459,7 @@ public final class RedvoxApi1000 {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -11677,17 +11473,17 @@ public final class RedvoxApi1000 {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          sampleTsUs_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          sampleTsUs_ = java.util.Collections.unmodifiableList(sampleTsUs_);
         }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          xSamples_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          xSamples_ = java.util.Collections.unmodifiableList(xSamples_);
         }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          ySamples_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          ySamples_ = java.util.Collections.unmodifiableList(ySamples_);
         }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          zSamples_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          zSamples_ = java.util.Collections.unmodifiableList(zSamples_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -11718,6 +11514,7 @@ public final class RedvoxApi1000 {
               RedvoxApi1000.XyzChannel.class, RedvoxApi1000.XyzChannel.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SENSOR_DESCRIPTION_FIELD_NUMBER = 1;
     private volatile java.lang.Object sensorDescription_;
     /**
@@ -11726,7 +11523,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The sensorDescription.
      */
     public java.lang.String getSensorDescription() {
       java.lang.Object ref = sensorDescription_;
@@ -11746,7 +11542,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The bytes for sensorDescription.
      */
     public com.google.protobuf.ByteString
         getSensorDescriptionBytes() {
@@ -11770,21 +11565,19 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double mean_sample_rate_hz = 2;</code>
-     * @return The meanSampleRateHz.
      */
     public double getMeanSampleRateHz() {
       return meanSampleRateHz_;
     }
 
     public static final int SAMPLE_TS_US_FIELD_NUMBER = 3;
-    private com.google.protobuf.Internal.DoubleList sampleTsUs_;
+    private java.util.List<java.lang.Double> sampleTsUs_;
     /**
      * <pre>
      * A list of timestamps, one for each sample
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return A list containing the sampleTsUs.
      */
     public java.util.List<java.lang.Double>
         getSampleTsUsList() {
@@ -11796,7 +11589,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return The count of sampleTsUs.
      */
     public int getSampleTsUsCount() {
       return sampleTsUs_.size();
@@ -11807,23 +11599,20 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @param index The index of the element to return.
-     * @return The sampleTsUs at the given index.
      */
     public double getSampleTsUs(int index) {
-      return sampleTsUs_.getDouble(index);
+      return sampleTsUs_.get(index);
     }
     private int sampleTsUsMemoizedSerializedSize = -1;
 
     public static final int X_SAMPLES_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.DoubleList xSamples_;
+    private java.util.List<java.lang.Double> xSamples_;
     /**
      * <pre>
      * A list of samples for the X-channel
      * </pre>
      *
      * <code>repeated double x_samples = 4;</code>
-     * @return A list containing the xSamples.
      */
     public java.util.List<java.lang.Double>
         getXSamplesList() {
@@ -11835,7 +11624,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double x_samples = 4;</code>
-     * @return The count of xSamples.
      */
     public int getXSamplesCount() {
       return xSamples_.size();
@@ -11846,23 +11634,20 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double x_samples = 4;</code>
-     * @param index The index of the element to return.
-     * @return The xSamples at the given index.
      */
     public double getXSamples(int index) {
-      return xSamples_.getDouble(index);
+      return xSamples_.get(index);
     }
     private int xSamplesMemoizedSerializedSize = -1;
 
     public static final int Y_SAMPLES_FIELD_NUMBER = 5;
-    private com.google.protobuf.Internal.DoubleList ySamples_;
+    private java.util.List<java.lang.Double> ySamples_;
     /**
      * <pre>
      * A list of samples for the Y-channel
      * </pre>
      *
      * <code>repeated double y_samples = 5;</code>
-     * @return A list containing the ySamples.
      */
     public java.util.List<java.lang.Double>
         getYSamplesList() {
@@ -11874,7 +11659,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double y_samples = 5;</code>
-     * @return The count of ySamples.
      */
     public int getYSamplesCount() {
       return ySamples_.size();
@@ -11885,23 +11669,20 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double y_samples = 5;</code>
-     * @param index The index of the element to return.
-     * @return The ySamples at the given index.
      */
     public double getYSamples(int index) {
-      return ySamples_.getDouble(index);
+      return ySamples_.get(index);
     }
     private int ySamplesMemoizedSerializedSize = -1;
 
     public static final int Z_SAMPLES_FIELD_NUMBER = 6;
-    private com.google.protobuf.Internal.DoubleList zSamples_;
+    private java.util.List<java.lang.Double> zSamples_;
     /**
      * <pre>
      * A list of samples for the Z-channel
      * </pre>
      *
      * <code>repeated double z_samples = 6;</code>
-     * @return A list containing the zSamples.
      */
     public java.util.List<java.lang.Double>
         getZSamplesList() {
@@ -11913,7 +11694,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double z_samples = 6;</code>
-     * @return The count of zSamples.
      */
     public int getZSamplesCount() {
       return zSamples_.size();
@@ -11924,11 +11704,9 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double z_samples = 6;</code>
-     * @param index The index of the element to return.
-     * @return The zSamples at the given index.
      */
     public double getZSamples(int index) {
-      return zSamples_.getDouble(index);
+      return zSamples_.get(index);
     }
     private int zSamplesMemoizedSerializedSize = -1;
 
@@ -11940,7 +11718,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 7;</code>
-     * @return Whether the sampleRateStatistics field is set.
      */
     public boolean hasSampleRateStatistics() {
       return sampleRateStatistics_ != null;
@@ -11951,7 +11728,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 7;</code>
-     * @return The sampleRateStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getSampleRateStatistics() {
       return sampleRateStatistics_ == null ? RedvoxApi1000.SummaryStatistics.getDefaultInstance() : sampleRateStatistics_;
@@ -11975,7 +11751,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics x_sample_statistics = 8;</code>
-     * @return Whether the xSampleStatistics field is set.
      */
     public boolean hasXSampleStatistics() {
       return xSampleStatistics_ != null;
@@ -11986,7 +11761,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics x_sample_statistics = 8;</code>
-     * @return The xSampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getXSampleStatistics() {
       return xSampleStatistics_ == null ? RedvoxApi1000.SummaryStatistics.getDefaultInstance() : xSampleStatistics_;
@@ -12010,7 +11784,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics y_sample_statistics = 9;</code>
-     * @return Whether the ySampleStatistics field is set.
      */
     public boolean hasYSampleStatistics() {
       return ySampleStatistics_ != null;
@@ -12021,7 +11794,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics y_sample_statistics = 9;</code>
-     * @return The ySampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getYSampleStatistics() {
       return ySampleStatistics_ == null ? RedvoxApi1000.SummaryStatistics.getDefaultInstance() : ySampleStatistics_;
@@ -12045,7 +11817,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics z_sample_statistics = 10;</code>
-     * @return Whether the zSampleStatistics field is set.
      */
     public boolean hasZSampleStatistics() {
       return zSampleStatistics_ != null;
@@ -12056,7 +11827,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics z_sample_statistics = 10;</code>
-     * @return The zSampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getZSampleStatistics() {
       return zSampleStatistics_ == null ? RedvoxApi1000.SummaryStatistics.getDefaultInstance() : zSampleStatistics_;
@@ -12190,28 +11960,28 @@ public final class RedvoxApi1000 {
         output.writeUInt32NoTag(sampleTsUsMemoizedSerializedSize);
       }
       for (int i = 0; i < sampleTsUs_.size(); i++) {
-        output.writeDoubleNoTag(sampleTsUs_.getDouble(i));
+        output.writeDoubleNoTag(sampleTsUs_.get(i));
       }
       if (getXSamplesList().size() > 0) {
         output.writeUInt32NoTag(34);
         output.writeUInt32NoTag(xSamplesMemoizedSerializedSize);
       }
       for (int i = 0; i < xSamples_.size(); i++) {
-        output.writeDoubleNoTag(xSamples_.getDouble(i));
+        output.writeDoubleNoTag(xSamples_.get(i));
       }
       if (getYSamplesList().size() > 0) {
         output.writeUInt32NoTag(42);
         output.writeUInt32NoTag(ySamplesMemoizedSerializedSize);
       }
       for (int i = 0; i < ySamples_.size(); i++) {
-        output.writeDoubleNoTag(ySamples_.getDouble(i));
+        output.writeDoubleNoTag(ySamples_.get(i));
       }
       if (getZSamplesList().size() > 0) {
         output.writeUInt32NoTag(50);
         output.writeUInt32NoTag(zSamplesMemoizedSerializedSize);
       }
       for (int i = 0; i < zSamples_.size(); i++) {
-        output.writeDoubleNoTag(zSamples_.getDouble(i));
+        output.writeDoubleNoTag(zSamples_.get(i));
       }
       if (sampleRateStatistics_ != null) {
         output.writeMessage(7, getSampleRateStatistics());
@@ -12332,43 +12102,45 @@ public final class RedvoxApi1000 {
       }
       RedvoxApi1000.XyzChannel other = (RedvoxApi1000.XyzChannel) obj;
 
-      if (!getSensorDescription()
-          .equals(other.getSensorDescription())) return false;
-      if (java.lang.Double.doubleToLongBits(getMeanSampleRateHz())
-          != java.lang.Double.doubleToLongBits(
-              other.getMeanSampleRateHz())) return false;
-      if (!getSampleTsUsList()
-          .equals(other.getSampleTsUsList())) return false;
-      if (!getXSamplesList()
-          .equals(other.getXSamplesList())) return false;
-      if (!getYSamplesList()
-          .equals(other.getYSamplesList())) return false;
-      if (!getZSamplesList()
-          .equals(other.getZSamplesList())) return false;
-      if (hasSampleRateStatistics() != other.hasSampleRateStatistics()) return false;
+      boolean result = true;
+      result = result && getSensorDescription()
+          .equals(other.getSensorDescription());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getMeanSampleRateHz())
+          == java.lang.Double.doubleToLongBits(
+              other.getMeanSampleRateHz()));
+      result = result && getSampleTsUsList()
+          .equals(other.getSampleTsUsList());
+      result = result && getXSamplesList()
+          .equals(other.getXSamplesList());
+      result = result && getYSamplesList()
+          .equals(other.getYSamplesList());
+      result = result && getZSamplesList()
+          .equals(other.getZSamplesList());
+      result = result && (hasSampleRateStatistics() == other.hasSampleRateStatistics());
       if (hasSampleRateStatistics()) {
-        if (!getSampleRateStatistics()
-            .equals(other.getSampleRateStatistics())) return false;
+        result = result && getSampleRateStatistics()
+            .equals(other.getSampleRateStatistics());
       }
-      if (hasXSampleStatistics() != other.hasXSampleStatistics()) return false;
+      result = result && (hasXSampleStatistics() == other.hasXSampleStatistics());
       if (hasXSampleStatistics()) {
-        if (!getXSampleStatistics()
-            .equals(other.getXSampleStatistics())) return false;
+        result = result && getXSampleStatistics()
+            .equals(other.getXSampleStatistics());
       }
-      if (hasYSampleStatistics() != other.hasYSampleStatistics()) return false;
+      result = result && (hasYSampleStatistics() == other.hasYSampleStatistics());
       if (hasYSampleStatistics()) {
-        if (!getYSampleStatistics()
-            .equals(other.getYSampleStatistics())) return false;
+        result = result && getYSampleStatistics()
+            .equals(other.getYSampleStatistics());
       }
-      if (hasZSampleStatistics() != other.hasZSampleStatistics()) return false;
+      result = result && (hasZSampleStatistics() == other.hasZSampleStatistics());
       if (hasZSampleStatistics()) {
-        if (!getZSampleStatistics()
-            .equals(other.getZSampleStatistics())) return false;
+        result = result && getZSampleStatistics()
+            .equals(other.getZSampleStatistics());
       }
-      if (!internalGetMetadata().equals(
-          other.internalGetMetadata())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && internalGetMetadata().equals(
+          other.internalGetMetadata());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -12582,14 +12354,14 @@ public final class RedvoxApi1000 {
 
         meanSampleRateHz_ = 0D;
 
-        sampleTsUs_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        xSamples_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        ySamples_ = emptyDoubleList();
+        sampleTsUs_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
-        zSamples_ = emptyDoubleList();
+        xSamples_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
+        ySamples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        zSamples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (sampleRateStatisticsBuilder_ == null) {
           sampleRateStatistics_ = null;
         } else {
@@ -12642,26 +12414,27 @@ public final class RedvoxApi1000 {
       public RedvoxApi1000.XyzChannel buildPartial() {
         RedvoxApi1000.XyzChannel result = new RedvoxApi1000.XyzChannel(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.sensorDescription_ = sensorDescription_;
         result.meanSampleRateHz_ = meanSampleRateHz_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          sampleTsUs_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.sampleTsUs_ = sampleTsUs_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          xSamples_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.xSamples_ = xSamples_;
-        if (((bitField0_ & 0x00000004) != 0)) {
-          ySamples_.makeImmutable();
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          sampleTsUs_ = java.util.Collections.unmodifiableList(sampleTsUs_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
-        result.ySamples_ = ySamples_;
-        if (((bitField0_ & 0x00000008) != 0)) {
-          zSamples_.makeImmutable();
+        result.sampleTsUs_ = sampleTsUs_;
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          xSamples_ = java.util.Collections.unmodifiableList(xSamples_);
           bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.xSamples_ = xSamples_;
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          ySamples_ = java.util.Collections.unmodifiableList(ySamples_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.ySamples_ = ySamples_;
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          zSamples_ = java.util.Collections.unmodifiableList(zSamples_);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.zSamples_ = zSamples_;
         if (sampleRateStatisticsBuilder_ == null) {
@@ -12686,41 +12459,42 @@ public final class RedvoxApi1000 {
         }
         result.metadata_ = internalGetMetadata();
         result.metadata_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12744,7 +12518,7 @@ public final class RedvoxApi1000 {
         if (!other.sampleTsUs_.isEmpty()) {
           if (sampleTsUs_.isEmpty()) {
             sampleTsUs_ = other.sampleTsUs_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSampleTsUsIsMutable();
             sampleTsUs_.addAll(other.sampleTsUs_);
@@ -12754,7 +12528,7 @@ public final class RedvoxApi1000 {
         if (!other.xSamples_.isEmpty()) {
           if (xSamples_.isEmpty()) {
             xSamples_ = other.xSamples_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureXSamplesIsMutable();
             xSamples_.addAll(other.xSamples_);
@@ -12764,7 +12538,7 @@ public final class RedvoxApi1000 {
         if (!other.ySamples_.isEmpty()) {
           if (ySamples_.isEmpty()) {
             ySamples_ = other.ySamples_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureYSamplesIsMutable();
             ySamples_.addAll(other.ySamples_);
@@ -12774,7 +12548,7 @@ public final class RedvoxApi1000 {
         if (!other.zSamples_.isEmpty()) {
           if (zSamples_.isEmpty()) {
             zSamples_ = other.zSamples_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureZSamplesIsMutable();
             zSamples_.addAll(other.zSamples_);
@@ -12832,7 +12606,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return The sensorDescription.
        */
       public java.lang.String getSensorDescription() {
         java.lang.Object ref = sensorDescription_;
@@ -12852,7 +12625,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return The bytes for sensorDescription.
        */
       public com.google.protobuf.ByteString
           getSensorDescriptionBytes() {
@@ -12873,8 +12645,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @param value The sensorDescription to set.
-       * @return This builder for chaining.
        */
       public Builder setSensorDescription(
           java.lang.String value) {
@@ -12892,7 +12662,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSensorDescription() {
         
@@ -12906,8 +12675,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @param value The bytes for sensorDescription to set.
-       * @return This builder for chaining.
        */
       public Builder setSensorDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -12928,7 +12695,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean_sample_rate_hz = 2;</code>
-       * @return The meanSampleRateHz.
        */
       public double getMeanSampleRateHz() {
         return meanSampleRateHz_;
@@ -12939,8 +12705,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean_sample_rate_hz = 2;</code>
-       * @param value The meanSampleRateHz to set.
-       * @return This builder for chaining.
        */
       public Builder setMeanSampleRateHz(double value) {
         
@@ -12954,7 +12718,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean_sample_rate_hz = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearMeanSampleRateHz() {
         
@@ -12963,11 +12726,11 @@ public final class RedvoxApi1000 {
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList sampleTsUs_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> sampleTsUs_ = java.util.Collections.emptyList();
       private void ensureSampleTsUsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          sampleTsUs_ = mutableCopy(sampleTsUs_);
-          bitField0_ |= 0x00000001;
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          sampleTsUs_ = new java.util.ArrayList<java.lang.Double>(sampleTsUs_);
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -12976,12 +12739,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @return A list containing the sampleTsUs.
        */
       public java.util.List<java.lang.Double>
           getSampleTsUsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(sampleTsUs_) : sampleTsUs_;
+        return java.util.Collections.unmodifiableList(sampleTsUs_);
       }
       /**
        * <pre>
@@ -12989,7 +12750,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @return The count of sampleTsUs.
        */
       public int getSampleTsUsCount() {
         return sampleTsUs_.size();
@@ -13000,11 +12760,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param index The index of the element to return.
-       * @return The sampleTsUs at the given index.
        */
       public double getSampleTsUs(int index) {
-        return sampleTsUs_.getDouble(index);
+        return sampleTsUs_.get(index);
       }
       /**
        * <pre>
@@ -13012,14 +12770,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param index The index to set the value at.
-       * @param value The sampleTsUs to set.
-       * @return This builder for chaining.
        */
       public Builder setSampleTsUs(
           int index, double value) {
         ensureSampleTsUsIsMutable();
-        sampleTsUs_.setDouble(index, value);
+        sampleTsUs_.set(index, value);
         onChanged();
         return this;
       }
@@ -13029,12 +12784,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param value The sampleTsUs to add.
-       * @return This builder for chaining.
        */
       public Builder addSampleTsUs(double value) {
         ensureSampleTsUsIsMutable();
-        sampleTsUs_.addDouble(value);
+        sampleTsUs_.add(value);
         onChanged();
         return this;
       }
@@ -13044,8 +12797,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param values The sampleTsUs to add.
-       * @return This builder for chaining.
        */
       public Builder addAllSampleTsUs(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -13061,20 +12812,19 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSampleTsUs() {
-        sampleTsUs_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        sampleTsUs_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList xSamples_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> xSamples_ = java.util.Collections.emptyList();
       private void ensureXSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          xSamples_ = mutableCopy(xSamples_);
-          bitField0_ |= 0x00000002;
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          xSamples_ = new java.util.ArrayList<java.lang.Double>(xSamples_);
+          bitField0_ |= 0x00000008;
          }
       }
       /**
@@ -13083,12 +12833,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double x_samples = 4;</code>
-       * @return A list containing the xSamples.
        */
       public java.util.List<java.lang.Double>
           getXSamplesList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(xSamples_) : xSamples_;
+        return java.util.Collections.unmodifiableList(xSamples_);
       }
       /**
        * <pre>
@@ -13096,7 +12844,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double x_samples = 4;</code>
-       * @return The count of xSamples.
        */
       public int getXSamplesCount() {
         return xSamples_.size();
@@ -13107,11 +12854,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double x_samples = 4;</code>
-       * @param index The index of the element to return.
-       * @return The xSamples at the given index.
        */
       public double getXSamples(int index) {
-        return xSamples_.getDouble(index);
+        return xSamples_.get(index);
       }
       /**
        * <pre>
@@ -13119,14 +12864,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double x_samples = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The xSamples to set.
-       * @return This builder for chaining.
        */
       public Builder setXSamples(
           int index, double value) {
         ensureXSamplesIsMutable();
-        xSamples_.setDouble(index, value);
+        xSamples_.set(index, value);
         onChanged();
         return this;
       }
@@ -13136,12 +12878,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double x_samples = 4;</code>
-       * @param value The xSamples to add.
-       * @return This builder for chaining.
        */
       public Builder addXSamples(double value) {
         ensureXSamplesIsMutable();
-        xSamples_.addDouble(value);
+        xSamples_.add(value);
         onChanged();
         return this;
       }
@@ -13151,8 +12891,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double x_samples = 4;</code>
-       * @param values The xSamples to add.
-       * @return This builder for chaining.
        */
       public Builder addAllXSamples(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -13168,20 +12906,19 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double x_samples = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearXSamples() {
-        xSamples_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        xSamples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList ySamples_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> ySamples_ = java.util.Collections.emptyList();
       private void ensureYSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          ySamples_ = mutableCopy(ySamples_);
-          bitField0_ |= 0x00000004;
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          ySamples_ = new java.util.ArrayList<java.lang.Double>(ySamples_);
+          bitField0_ |= 0x00000010;
          }
       }
       /**
@@ -13190,12 +12927,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double y_samples = 5;</code>
-       * @return A list containing the ySamples.
        */
       public java.util.List<java.lang.Double>
           getYSamplesList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(ySamples_) : ySamples_;
+        return java.util.Collections.unmodifiableList(ySamples_);
       }
       /**
        * <pre>
@@ -13203,7 +12938,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double y_samples = 5;</code>
-       * @return The count of ySamples.
        */
       public int getYSamplesCount() {
         return ySamples_.size();
@@ -13214,11 +12948,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double y_samples = 5;</code>
-       * @param index The index of the element to return.
-       * @return The ySamples at the given index.
        */
       public double getYSamples(int index) {
-        return ySamples_.getDouble(index);
+        return ySamples_.get(index);
       }
       /**
        * <pre>
@@ -13226,14 +12958,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double y_samples = 5;</code>
-       * @param index The index to set the value at.
-       * @param value The ySamples to set.
-       * @return This builder for chaining.
        */
       public Builder setYSamples(
           int index, double value) {
         ensureYSamplesIsMutable();
-        ySamples_.setDouble(index, value);
+        ySamples_.set(index, value);
         onChanged();
         return this;
       }
@@ -13243,12 +12972,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double y_samples = 5;</code>
-       * @param value The ySamples to add.
-       * @return This builder for chaining.
        */
       public Builder addYSamples(double value) {
         ensureYSamplesIsMutable();
-        ySamples_.addDouble(value);
+        ySamples_.add(value);
         onChanged();
         return this;
       }
@@ -13258,8 +12985,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double y_samples = 5;</code>
-       * @param values The ySamples to add.
-       * @return This builder for chaining.
        */
       public Builder addAllYSamples(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -13275,20 +13000,19 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double y_samples = 5;</code>
-       * @return This builder for chaining.
        */
       public Builder clearYSamples() {
-        ySamples_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        ySamples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList zSamples_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> zSamples_ = java.util.Collections.emptyList();
       private void ensureZSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          zSamples_ = mutableCopy(zSamples_);
-          bitField0_ |= 0x00000008;
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          zSamples_ = new java.util.ArrayList<java.lang.Double>(zSamples_);
+          bitField0_ |= 0x00000020;
          }
       }
       /**
@@ -13297,12 +13021,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double z_samples = 6;</code>
-       * @return A list containing the zSamples.
        */
       public java.util.List<java.lang.Double>
           getZSamplesList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
-                 java.util.Collections.unmodifiableList(zSamples_) : zSamples_;
+        return java.util.Collections.unmodifiableList(zSamples_);
       }
       /**
        * <pre>
@@ -13310,7 +13032,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double z_samples = 6;</code>
-       * @return The count of zSamples.
        */
       public int getZSamplesCount() {
         return zSamples_.size();
@@ -13321,11 +13042,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double z_samples = 6;</code>
-       * @param index The index of the element to return.
-       * @return The zSamples at the given index.
        */
       public double getZSamples(int index) {
-        return zSamples_.getDouble(index);
+        return zSamples_.get(index);
       }
       /**
        * <pre>
@@ -13333,14 +13052,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double z_samples = 6;</code>
-       * @param index The index to set the value at.
-       * @param value The zSamples to set.
-       * @return This builder for chaining.
        */
       public Builder setZSamples(
           int index, double value) {
         ensureZSamplesIsMutable();
-        zSamples_.setDouble(index, value);
+        zSamples_.set(index, value);
         onChanged();
         return this;
       }
@@ -13350,12 +13066,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double z_samples = 6;</code>
-       * @param value The zSamples to add.
-       * @return This builder for chaining.
        */
       public Builder addZSamples(double value) {
         ensureZSamplesIsMutable();
-        zSamples_.addDouble(value);
+        zSamples_.add(value);
         onChanged();
         return this;
       }
@@ -13365,8 +13079,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double z_samples = 6;</code>
-       * @param values The zSamples to add.
-       * @return This builder for chaining.
        */
       public Builder addAllZSamples(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -13382,16 +13094,15 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double z_samples = 6;</code>
-       * @return This builder for chaining.
        */
       public Builder clearZSamples() {
-        zSamples_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        zSamples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
 
-      private RedvoxApi1000.SummaryStatistics sampleRateStatistics_;
+      private RedvoxApi1000.SummaryStatistics sampleRateStatistics_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> sampleRateStatisticsBuilder_;
       /**
@@ -13400,7 +13111,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics sample_rate_statistics = 7;</code>
-       * @return Whether the sampleRateStatistics field is set.
        */
       public boolean hasSampleRateStatistics() {
         return sampleRateStatisticsBuilder_ != null || sampleRateStatistics_ != null;
@@ -13411,7 +13121,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics sample_rate_statistics = 7;</code>
-       * @return The sampleRateStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getSampleRateStatistics() {
         if (sampleRateStatisticsBuilder_ == null) {
@@ -13546,7 +13255,7 @@ public final class RedvoxApi1000 {
         return sampleRateStatisticsBuilder_;
       }
 
-      private RedvoxApi1000.SummaryStatistics xSampleStatistics_;
+      private RedvoxApi1000.SummaryStatistics xSampleStatistics_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> xSampleStatisticsBuilder_;
       /**
@@ -13555,7 +13264,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics x_sample_statistics = 8;</code>
-       * @return Whether the xSampleStatistics field is set.
        */
       public boolean hasXSampleStatistics() {
         return xSampleStatisticsBuilder_ != null || xSampleStatistics_ != null;
@@ -13566,7 +13274,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics x_sample_statistics = 8;</code>
-       * @return The xSampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getXSampleStatistics() {
         if (xSampleStatisticsBuilder_ == null) {
@@ -13701,7 +13408,7 @@ public final class RedvoxApi1000 {
         return xSampleStatisticsBuilder_;
       }
 
-      private RedvoxApi1000.SummaryStatistics ySampleStatistics_;
+      private RedvoxApi1000.SummaryStatistics ySampleStatistics_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> ySampleStatisticsBuilder_;
       /**
@@ -13710,7 +13417,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics y_sample_statistics = 9;</code>
-       * @return Whether the ySampleStatistics field is set.
        */
       public boolean hasYSampleStatistics() {
         return ySampleStatisticsBuilder_ != null || ySampleStatistics_ != null;
@@ -13721,7 +13427,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics y_sample_statistics = 9;</code>
-       * @return The ySampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getYSampleStatistics() {
         if (ySampleStatisticsBuilder_ == null) {
@@ -13856,7 +13561,7 @@ public final class RedvoxApi1000 {
         return ySampleStatisticsBuilder_;
       }
 
-      private RedvoxApi1000.SummaryStatistics zSampleStatistics_;
+      private RedvoxApi1000.SummaryStatistics zSampleStatistics_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> zSampleStatisticsBuilder_;
       /**
@@ -13865,7 +13570,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics z_sample_statistics = 10;</code>
-       * @return Whether the zSampleStatistics field is set.
        */
       public boolean hasZSampleStatistics() {
         return zSampleStatisticsBuilder_ != null || zSampleStatistics_ != null;
@@ -13876,7 +13580,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics z_sample_statistics = 10;</code>
-       * @return The zSampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getZSampleStatistics() {
         if (zSampleStatisticsBuilder_ == null) {
@@ -14164,7 +13867,7 @@ public final class RedvoxApi1000 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -14224,7 +13927,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The sensorDescription.
      */
     java.lang.String getSensorDescription();
     /**
@@ -14233,7 +13935,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The bytes for sensorDescription.
      */
     com.google.protobuf.ByteString
         getSensorDescriptionBytes();
@@ -14244,7 +13945,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double mean_sample_rate_hz = 2;</code>
-     * @return The meanSampleRateHz.
      */
     double getMeanSampleRateHz();
 
@@ -14254,7 +13954,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return A list containing the sampleTsUs.
      */
     java.util.List<java.lang.Double> getSampleTsUsList();
     /**
@@ -14263,7 +13962,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return The count of sampleTsUs.
      */
     int getSampleTsUsCount();
     /**
@@ -14272,8 +13970,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @param index The index of the element to return.
-     * @return The sampleTsUs at the given index.
      */
     double getSampleTsUs(int index);
 
@@ -14283,7 +13979,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double latitude_samples = 4;</code>
-     * @return A list containing the latitudeSamples.
      */
     java.util.List<java.lang.Double> getLatitudeSamplesList();
     /**
@@ -14292,7 +13987,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double latitude_samples = 4;</code>
-     * @return The count of latitudeSamples.
      */
     int getLatitudeSamplesCount();
     /**
@@ -14301,8 +13995,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double latitude_samples = 4;</code>
-     * @param index The index of the element to return.
-     * @return The latitudeSamples at the given index.
      */
     double getLatitudeSamples(int index);
 
@@ -14312,7 +14004,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double longitude_samples = 5;</code>
-     * @return A list containing the longitudeSamples.
      */
     java.util.List<java.lang.Double> getLongitudeSamplesList();
     /**
@@ -14321,7 +14012,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double longitude_samples = 5;</code>
-     * @return The count of longitudeSamples.
      */
     int getLongitudeSamplesCount();
     /**
@@ -14330,8 +14020,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double longitude_samples = 5;</code>
-     * @param index The index of the element to return.
-     * @return The longitudeSamples at the given index.
      */
     double getLongitudeSamples(int index);
 
@@ -14341,7 +14029,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double altitude_samples = 6;</code>
-     * @return A list containing the altitudeSamples.
      */
     java.util.List<java.lang.Double> getAltitudeSamplesList();
     /**
@@ -14350,7 +14037,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double altitude_samples = 6;</code>
-     * @return The count of altitudeSamples.
      */
     int getAltitudeSamplesCount();
     /**
@@ -14359,8 +14045,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double altitude_samples = 6;</code>
-     * @param index The index of the element to return.
-     * @return The altitudeSamples at the given index.
      */
     double getAltitudeSamples(int index);
 
@@ -14370,7 +14054,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double speed_samples = 7;</code>
-     * @return A list containing the speedSamples.
      */
     java.util.List<java.lang.Double> getSpeedSamplesList();
     /**
@@ -14379,7 +14062,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double speed_samples = 7;</code>
-     * @return The count of speedSamples.
      */
     int getSpeedSamplesCount();
     /**
@@ -14388,8 +14070,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double speed_samples = 7;</code>
-     * @param index The index of the element to return.
-     * @return The speedSamples at the given index.
      */
     double getSpeedSamples(int index);
 
@@ -14399,7 +14079,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double accuracy_samples = 8;</code>
-     * @return A list containing the accuracySamples.
      */
     java.util.List<java.lang.Double> getAccuracySamplesList();
     /**
@@ -14408,7 +14087,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double accuracy_samples = 8;</code>
-     * @return The count of accuracySamples.
      */
     int getAccuracySamplesCount();
     /**
@@ -14417,8 +14095,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double accuracy_samples = 8;</code>
-     * @param index The index of the element to return.
-     * @return The accuracySamples at the given index.
      */
     double getAccuracySamples(int index);
 
@@ -14428,7 +14104,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>bool location_permissions_granted = 9;</code>
-     * @return The locationPermissionsGranted.
      */
     boolean getLocationPermissionsGranted();
 
@@ -14438,7 +14113,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>bool location_services_requested = 10;</code>
-     * @return The locationServicesRequested.
      */
     boolean getLocationServicesRequested();
 
@@ -14448,7 +14122,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>bool location_services_enabled = 11;</code>
-     * @return The locationServicesEnabled.
      */
     boolean getLocationServicesEnabled();
 
@@ -14458,7 +14131,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
-     * @return The enum numeric value on the wire for locationProvider.
      */
     int getLocationProviderValue();
     /**
@@ -14467,7 +14139,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
-     * @return The locationProvider.
      */
     RedvoxApi1000.LocationChannel.LocationProvider getLocationProvider();
 
@@ -14477,7 +14148,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
-     * @return Whether the sampleRateStatistics field is set.
      */
     boolean hasSampleRateStatistics();
     /**
@@ -14486,7 +14156,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
-     * @return The sampleRateStatistics.
      */
     RedvoxApi1000.SummaryStatistics getSampleRateStatistics();
     /**
@@ -14504,7 +14173,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
-     * @return Whether the latitudeSampleStatistics field is set.
      */
     boolean hasLatitudeSampleStatistics();
     /**
@@ -14513,7 +14181,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
-     * @return The latitudeSampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getLatitudeSampleStatistics();
     /**
@@ -14531,7 +14198,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
-     * @return Whether the longitudeSampleStatistics field is set.
      */
     boolean hasLongitudeSampleStatistics();
     /**
@@ -14540,7 +14206,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
-     * @return The longitudeSampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getLongitudeSampleStatistics();
     /**
@@ -14558,7 +14223,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
-     * @return Whether the altitudeSampleStatistics field is set.
      */
     boolean hasAltitudeSampleStatistics();
     /**
@@ -14567,7 +14231,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
-     * @return The altitudeSampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getAltitudeSampleStatistics();
     /**
@@ -14585,7 +14248,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
-     * @return Whether the speedSampleStatistics field is set.
      */
     boolean hasSpeedSampleStatistics();
     /**
@@ -14594,7 +14256,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
-     * @return The speedSampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getSpeedSampleStatistics();
     /**
@@ -14612,7 +14273,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
-     * @return Whether the accuracySampleStatistics field is set.
      */
     boolean hasAccuracySampleStatistics();
     /**
@@ -14621,7 +14281,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
-     * @return The accuracySampleStatistics.
      */
     RedvoxApi1000.SummaryStatistics getAccuracySampleStatistics();
     /**
@@ -14705,20 +14364,17 @@ public final class RedvoxApi1000 {
     }
     private LocationChannel() {
       sensorDescription_ = "";
-      sampleTsUs_ = emptyDoubleList();
-      latitudeSamples_ = emptyDoubleList();
-      longitudeSamples_ = emptyDoubleList();
-      altitudeSamples_ = emptyDoubleList();
-      speedSamples_ = emptyDoubleList();
-      accuracySamples_ = emptyDoubleList();
+      meanSampleRateHz_ = 0D;
+      sampleTsUs_ = java.util.Collections.emptyList();
+      latitudeSamples_ = java.util.Collections.emptyList();
+      longitudeSamples_ = java.util.Collections.emptyList();
+      altitudeSamples_ = java.util.Collections.emptyList();
+      speedSamples_ = java.util.Collections.emptyList();
+      accuracySamples_ = java.util.Collections.emptyList();
+      locationPermissionsGranted_ = false;
+      locationServicesRequested_ = false;
+      locationServicesEnabled_ = false;
       locationProvider_ = 0;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new LocationChannel();
     }
 
     @java.lang.Override
@@ -14757,127 +14413,127 @@ public final class RedvoxApi1000 {
               break;
             }
             case 25: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                sampleTsUs_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000001;
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                sampleTsUs_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000004;
               }
-              sampleTsUs_.addDouble(input.readDouble());
+              sampleTsUs_.add(input.readDouble());
               break;
             }
             case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                sampleTsUs_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000001;
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
+                sampleTsUs_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000004;
               }
               while (input.getBytesUntilLimit() > 0) {
-                sampleTsUs_.addDouble(input.readDouble());
+                sampleTsUs_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
             }
             case 33: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                latitudeSamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000002;
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                latitudeSamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000008;
               }
-              latitudeSamples_.addDouble(input.readDouble());
+              latitudeSamples_.add(input.readDouble());
               break;
             }
             case 34: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                latitudeSamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000002;
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008) && input.getBytesUntilLimit() > 0) {
+                latitudeSamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000008;
               }
               while (input.getBytesUntilLimit() > 0) {
-                latitudeSamples_.addDouble(input.readDouble());
+                latitudeSamples_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
             }
             case 41: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                longitudeSamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000004;
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                longitudeSamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000010;
               }
-              longitudeSamples_.addDouble(input.readDouble());
+              longitudeSamples_.add(input.readDouble());
               break;
             }
             case 42: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
-                longitudeSamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000004;
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010) && input.getBytesUntilLimit() > 0) {
+                longitudeSamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000010;
               }
               while (input.getBytesUntilLimit() > 0) {
-                longitudeSamples_.addDouble(input.readDouble());
+                longitudeSamples_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
             }
             case 49: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                altitudeSamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000008;
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                altitudeSamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000020;
               }
-              altitudeSamples_.addDouble(input.readDouble());
+              altitudeSamples_.add(input.readDouble());
               break;
             }
             case 50: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
-                altitudeSamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000008;
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020) && input.getBytesUntilLimit() > 0) {
+                altitudeSamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000020;
               }
               while (input.getBytesUntilLimit() > 0) {
-                altitudeSamples_.addDouble(input.readDouble());
+                altitudeSamples_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
             }
             case 57: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                speedSamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000010;
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                speedSamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000040;
               }
-              speedSamples_.addDouble(input.readDouble());
+              speedSamples_.add(input.readDouble());
               break;
             }
             case 58: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
-                speedSamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000010;
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040) && input.getBytesUntilLimit() > 0) {
+                speedSamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000040;
               }
               while (input.getBytesUntilLimit() > 0) {
-                speedSamples_.addDouble(input.readDouble());
+                speedSamples_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
             }
             case 65: {
-              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-                accuracySamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000020;
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                accuracySamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000080;
               }
-              accuracySamples_.addDouble(input.readDouble());
+              accuracySamples_.add(input.readDouble());
               break;
             }
             case 66: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000020) != 0) && input.getBytesUntilLimit() > 0) {
-                accuracySamples_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000020;
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080) && input.getBytesUntilLimit() > 0) {
+                accuracySamples_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000080;
               }
               while (input.getBytesUntilLimit() > 0) {
-                accuracySamples_.addDouble(input.readDouble());
+                accuracySamples_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
@@ -14982,10 +14638,10 @@ public final class RedvoxApi1000 {
               break;
             }
             case 154: {
-              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+              if (!((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
                 metadata_ = com.google.protobuf.MapField.newMapField(
                     MetadataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00040000;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               metadata__ = input.readMessage(
@@ -14995,7 +14651,7 @@ public final class RedvoxApi1000 {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -15009,23 +14665,23 @@ public final class RedvoxApi1000 {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          sampleTsUs_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          sampleTsUs_ = java.util.Collections.unmodifiableList(sampleTsUs_);
         }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          latitudeSamples_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          latitudeSamples_ = java.util.Collections.unmodifiableList(latitudeSamples_);
         }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          longitudeSamples_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          longitudeSamples_ = java.util.Collections.unmodifiableList(longitudeSamples_);
         }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          altitudeSamples_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          altitudeSamples_ = java.util.Collections.unmodifiableList(altitudeSamples_);
         }
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
-          speedSamples_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          speedSamples_ = java.util.Collections.unmodifiableList(speedSamples_);
         }
-        if (((mutable_bitField0_ & 0x00000020) != 0)) {
-          accuracySamples_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          accuracySamples_ = java.util.Collections.unmodifiableList(accuracySamples_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -15107,8 +14763,6 @@ public final class RedvoxApi1000 {
       }
 
       /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -15116,10 +14770,6 @@ public final class RedvoxApi1000 {
         return forNumber(value);
       }
 
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
       public static LocationProvider forNumber(int value) {
         switch (value) {
           case 0: return NONE;
@@ -15178,6 +14828,7 @@ public final class RedvoxApi1000 {
       // @@protoc_insertion_point(enum_scope:LocationChannel.LocationProvider)
     }
 
+    private int bitField0_;
     public static final int SENSOR_DESCRIPTION_FIELD_NUMBER = 1;
     private volatile java.lang.Object sensorDescription_;
     /**
@@ -15186,7 +14837,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The sensorDescription.
      */
     public java.lang.String getSensorDescription() {
       java.lang.Object ref = sensorDescription_;
@@ -15206,7 +14856,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The bytes for sensorDescription.
      */
     public com.google.protobuf.ByteString
         getSensorDescriptionBytes() {
@@ -15230,21 +14879,19 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double mean_sample_rate_hz = 2;</code>
-     * @return The meanSampleRateHz.
      */
     public double getMeanSampleRateHz() {
       return meanSampleRateHz_;
     }
 
     public static final int SAMPLE_TS_US_FIELD_NUMBER = 3;
-    private com.google.protobuf.Internal.DoubleList sampleTsUs_;
+    private java.util.List<java.lang.Double> sampleTsUs_;
     /**
      * <pre>
      * A list of timestamps, one for each sample
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return A list containing the sampleTsUs.
      */
     public java.util.List<java.lang.Double>
         getSampleTsUsList() {
@@ -15256,7 +14903,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return The count of sampleTsUs.
      */
     public int getSampleTsUsCount() {
       return sampleTsUs_.size();
@@ -15267,23 +14913,20 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @param index The index of the element to return.
-     * @return The sampleTsUs at the given index.
      */
     public double getSampleTsUs(int index) {
-      return sampleTsUs_.getDouble(index);
+      return sampleTsUs_.get(index);
     }
     private int sampleTsUsMemoizedSerializedSize = -1;
 
     public static final int LATITUDE_SAMPLES_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.DoubleList latitudeSamples_;
+    private java.util.List<java.lang.Double> latitudeSamples_;
     /**
      * <pre>
      * A list of latitude samples
      * </pre>
      *
      * <code>repeated double latitude_samples = 4;</code>
-     * @return A list containing the latitudeSamples.
      */
     public java.util.List<java.lang.Double>
         getLatitudeSamplesList() {
@@ -15295,7 +14938,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double latitude_samples = 4;</code>
-     * @return The count of latitudeSamples.
      */
     public int getLatitudeSamplesCount() {
       return latitudeSamples_.size();
@@ -15306,23 +14948,20 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double latitude_samples = 4;</code>
-     * @param index The index of the element to return.
-     * @return The latitudeSamples at the given index.
      */
     public double getLatitudeSamples(int index) {
-      return latitudeSamples_.getDouble(index);
+      return latitudeSamples_.get(index);
     }
     private int latitudeSamplesMemoizedSerializedSize = -1;
 
     public static final int LONGITUDE_SAMPLES_FIELD_NUMBER = 5;
-    private com.google.protobuf.Internal.DoubleList longitudeSamples_;
+    private java.util.List<java.lang.Double> longitudeSamples_;
     /**
      * <pre>
      * A list of longitude samples
      * </pre>
      *
      * <code>repeated double longitude_samples = 5;</code>
-     * @return A list containing the longitudeSamples.
      */
     public java.util.List<java.lang.Double>
         getLongitudeSamplesList() {
@@ -15334,7 +14973,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double longitude_samples = 5;</code>
-     * @return The count of longitudeSamples.
      */
     public int getLongitudeSamplesCount() {
       return longitudeSamples_.size();
@@ -15345,23 +14983,20 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double longitude_samples = 5;</code>
-     * @param index The index of the element to return.
-     * @return The longitudeSamples at the given index.
      */
     public double getLongitudeSamples(int index) {
-      return longitudeSamples_.getDouble(index);
+      return longitudeSamples_.get(index);
     }
     private int longitudeSamplesMemoizedSerializedSize = -1;
 
     public static final int ALTITUDE_SAMPLES_FIELD_NUMBER = 6;
-    private com.google.protobuf.Internal.DoubleList altitudeSamples_;
+    private java.util.List<java.lang.Double> altitudeSamples_;
     /**
      * <pre>
      * A list of altitude samples
      * </pre>
      *
      * <code>repeated double altitude_samples = 6;</code>
-     * @return A list containing the altitudeSamples.
      */
     public java.util.List<java.lang.Double>
         getAltitudeSamplesList() {
@@ -15373,7 +15008,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double altitude_samples = 6;</code>
-     * @return The count of altitudeSamples.
      */
     public int getAltitudeSamplesCount() {
       return altitudeSamples_.size();
@@ -15384,23 +15018,20 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double altitude_samples = 6;</code>
-     * @param index The index of the element to return.
-     * @return The altitudeSamples at the given index.
      */
     public double getAltitudeSamples(int index) {
-      return altitudeSamples_.getDouble(index);
+      return altitudeSamples_.get(index);
     }
     private int altitudeSamplesMemoizedSerializedSize = -1;
 
     public static final int SPEED_SAMPLES_FIELD_NUMBER = 7;
-    private com.google.protobuf.Internal.DoubleList speedSamples_;
+    private java.util.List<java.lang.Double> speedSamples_;
     /**
      * <pre>
      * A list of speed samples
      * </pre>
      *
      * <code>repeated double speed_samples = 7;</code>
-     * @return A list containing the speedSamples.
      */
     public java.util.List<java.lang.Double>
         getSpeedSamplesList() {
@@ -15412,7 +15043,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double speed_samples = 7;</code>
-     * @return The count of speedSamples.
      */
     public int getSpeedSamplesCount() {
       return speedSamples_.size();
@@ -15423,23 +15053,20 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double speed_samples = 7;</code>
-     * @param index The index of the element to return.
-     * @return The speedSamples at the given index.
      */
     public double getSpeedSamples(int index) {
-      return speedSamples_.getDouble(index);
+      return speedSamples_.get(index);
     }
     private int speedSamplesMemoizedSerializedSize = -1;
 
     public static final int ACCURACY_SAMPLES_FIELD_NUMBER = 8;
-    private com.google.protobuf.Internal.DoubleList accuracySamples_;
+    private java.util.List<java.lang.Double> accuracySamples_;
     /**
      * <pre>
      * A list of accuracy samples
      * </pre>
      *
      * <code>repeated double accuracy_samples = 8;</code>
-     * @return A list containing the accuracySamples.
      */
     public java.util.List<java.lang.Double>
         getAccuracySamplesList() {
@@ -15451,7 +15078,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double accuracy_samples = 8;</code>
-     * @return The count of accuracySamples.
      */
     public int getAccuracySamplesCount() {
       return accuracySamples_.size();
@@ -15462,11 +15088,9 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double accuracy_samples = 8;</code>
-     * @param index The index of the element to return.
-     * @return The accuracySamples at the given index.
      */
     public double getAccuracySamples(int index) {
-      return accuracySamples_.getDouble(index);
+      return accuracySamples_.get(index);
     }
     private int accuracySamplesMemoizedSerializedSize = -1;
 
@@ -15478,7 +15102,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>bool location_permissions_granted = 9;</code>
-     * @return The locationPermissionsGranted.
      */
     public boolean getLocationPermissionsGranted() {
       return locationPermissionsGranted_;
@@ -15492,7 +15115,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>bool location_services_requested = 10;</code>
-     * @return The locationServicesRequested.
      */
     public boolean getLocationServicesRequested() {
       return locationServicesRequested_;
@@ -15506,7 +15128,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>bool location_services_enabled = 11;</code>
-     * @return The locationServicesEnabled.
      */
     public boolean getLocationServicesEnabled() {
       return locationServicesEnabled_;
@@ -15520,7 +15141,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
-     * @return The enum numeric value on the wire for locationProvider.
      */
     public int getLocationProviderValue() {
       return locationProvider_;
@@ -15531,7 +15151,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
-     * @return The locationProvider.
      */
     public RedvoxApi1000.LocationChannel.LocationProvider getLocationProvider() {
       @SuppressWarnings("deprecation")
@@ -15547,7 +15166,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
-     * @return Whether the sampleRateStatistics field is set.
      */
     public boolean hasSampleRateStatistics() {
       return sampleRateStatistics_ != null;
@@ -15558,7 +15176,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
-     * @return The sampleRateStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getSampleRateStatistics() {
       return sampleRateStatistics_ == null ? RedvoxApi1000.SummaryStatistics.getDefaultInstance() : sampleRateStatistics_;
@@ -15582,7 +15199,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
-     * @return Whether the latitudeSampleStatistics field is set.
      */
     public boolean hasLatitudeSampleStatistics() {
       return latitudeSampleStatistics_ != null;
@@ -15593,7 +15209,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
-     * @return The latitudeSampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getLatitudeSampleStatistics() {
       return latitudeSampleStatistics_ == null ? RedvoxApi1000.SummaryStatistics.getDefaultInstance() : latitudeSampleStatistics_;
@@ -15617,7 +15232,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
-     * @return Whether the longitudeSampleStatistics field is set.
      */
     public boolean hasLongitudeSampleStatistics() {
       return longitudeSampleStatistics_ != null;
@@ -15628,7 +15242,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
-     * @return The longitudeSampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getLongitudeSampleStatistics() {
       return longitudeSampleStatistics_ == null ? RedvoxApi1000.SummaryStatistics.getDefaultInstance() : longitudeSampleStatistics_;
@@ -15652,7 +15265,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
-     * @return Whether the altitudeSampleStatistics field is set.
      */
     public boolean hasAltitudeSampleStatistics() {
       return altitudeSampleStatistics_ != null;
@@ -15663,7 +15275,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
-     * @return The altitudeSampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getAltitudeSampleStatistics() {
       return altitudeSampleStatistics_ == null ? RedvoxApi1000.SummaryStatistics.getDefaultInstance() : altitudeSampleStatistics_;
@@ -15687,7 +15298,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
-     * @return Whether the speedSampleStatistics field is set.
      */
     public boolean hasSpeedSampleStatistics() {
       return speedSampleStatistics_ != null;
@@ -15698,7 +15308,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
-     * @return The speedSampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getSpeedSampleStatistics() {
       return speedSampleStatistics_ == null ? RedvoxApi1000.SummaryStatistics.getDefaultInstance() : speedSampleStatistics_;
@@ -15722,7 +15331,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
-     * @return Whether the accuracySampleStatistics field is set.
      */
     public boolean hasAccuracySampleStatistics() {
       return accuracySampleStatistics_ != null;
@@ -15733,7 +15341,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
-     * @return The accuracySampleStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getAccuracySampleStatistics() {
       return accuracySampleStatistics_ == null ? RedvoxApi1000.SummaryStatistics.getDefaultInstance() : accuracySampleStatistics_;
@@ -15867,42 +15474,42 @@ public final class RedvoxApi1000 {
         output.writeUInt32NoTag(sampleTsUsMemoizedSerializedSize);
       }
       for (int i = 0; i < sampleTsUs_.size(); i++) {
-        output.writeDoubleNoTag(sampleTsUs_.getDouble(i));
+        output.writeDoubleNoTag(sampleTsUs_.get(i));
       }
       if (getLatitudeSamplesList().size() > 0) {
         output.writeUInt32NoTag(34);
         output.writeUInt32NoTag(latitudeSamplesMemoizedSerializedSize);
       }
       for (int i = 0; i < latitudeSamples_.size(); i++) {
-        output.writeDoubleNoTag(latitudeSamples_.getDouble(i));
+        output.writeDoubleNoTag(latitudeSamples_.get(i));
       }
       if (getLongitudeSamplesList().size() > 0) {
         output.writeUInt32NoTag(42);
         output.writeUInt32NoTag(longitudeSamplesMemoizedSerializedSize);
       }
       for (int i = 0; i < longitudeSamples_.size(); i++) {
-        output.writeDoubleNoTag(longitudeSamples_.getDouble(i));
+        output.writeDoubleNoTag(longitudeSamples_.get(i));
       }
       if (getAltitudeSamplesList().size() > 0) {
         output.writeUInt32NoTag(50);
         output.writeUInt32NoTag(altitudeSamplesMemoizedSerializedSize);
       }
       for (int i = 0; i < altitudeSamples_.size(); i++) {
-        output.writeDoubleNoTag(altitudeSamples_.getDouble(i));
+        output.writeDoubleNoTag(altitudeSamples_.get(i));
       }
       if (getSpeedSamplesList().size() > 0) {
         output.writeUInt32NoTag(58);
         output.writeUInt32NoTag(speedSamplesMemoizedSerializedSize);
       }
       for (int i = 0; i < speedSamples_.size(); i++) {
-        output.writeDoubleNoTag(speedSamples_.getDouble(i));
+        output.writeDoubleNoTag(speedSamples_.get(i));
       }
       if (getAccuracySamplesList().size() > 0) {
         output.writeUInt32NoTag(66);
         output.writeUInt32NoTag(accuracySamplesMemoizedSerializedSize);
       }
       for (int i = 0; i < accuracySamples_.size(); i++) {
-        output.writeDoubleNoTag(accuracySamples_.getDouble(i));
+        output.writeDoubleNoTag(accuracySamples_.get(i));
       }
       if (locationPermissionsGranted_ != false) {
         output.writeBool(9, locationPermissionsGranted_);
@@ -16087,64 +15694,66 @@ public final class RedvoxApi1000 {
       }
       RedvoxApi1000.LocationChannel other = (RedvoxApi1000.LocationChannel) obj;
 
-      if (!getSensorDescription()
-          .equals(other.getSensorDescription())) return false;
-      if (java.lang.Double.doubleToLongBits(getMeanSampleRateHz())
-          != java.lang.Double.doubleToLongBits(
-              other.getMeanSampleRateHz())) return false;
-      if (!getSampleTsUsList()
-          .equals(other.getSampleTsUsList())) return false;
-      if (!getLatitudeSamplesList()
-          .equals(other.getLatitudeSamplesList())) return false;
-      if (!getLongitudeSamplesList()
-          .equals(other.getLongitudeSamplesList())) return false;
-      if (!getAltitudeSamplesList()
-          .equals(other.getAltitudeSamplesList())) return false;
-      if (!getSpeedSamplesList()
-          .equals(other.getSpeedSamplesList())) return false;
-      if (!getAccuracySamplesList()
-          .equals(other.getAccuracySamplesList())) return false;
-      if (getLocationPermissionsGranted()
-          != other.getLocationPermissionsGranted()) return false;
-      if (getLocationServicesRequested()
-          != other.getLocationServicesRequested()) return false;
-      if (getLocationServicesEnabled()
-          != other.getLocationServicesEnabled()) return false;
-      if (locationProvider_ != other.locationProvider_) return false;
-      if (hasSampleRateStatistics() != other.hasSampleRateStatistics()) return false;
+      boolean result = true;
+      result = result && getSensorDescription()
+          .equals(other.getSensorDescription());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getMeanSampleRateHz())
+          == java.lang.Double.doubleToLongBits(
+              other.getMeanSampleRateHz()));
+      result = result && getSampleTsUsList()
+          .equals(other.getSampleTsUsList());
+      result = result && getLatitudeSamplesList()
+          .equals(other.getLatitudeSamplesList());
+      result = result && getLongitudeSamplesList()
+          .equals(other.getLongitudeSamplesList());
+      result = result && getAltitudeSamplesList()
+          .equals(other.getAltitudeSamplesList());
+      result = result && getSpeedSamplesList()
+          .equals(other.getSpeedSamplesList());
+      result = result && getAccuracySamplesList()
+          .equals(other.getAccuracySamplesList());
+      result = result && (getLocationPermissionsGranted()
+          == other.getLocationPermissionsGranted());
+      result = result && (getLocationServicesRequested()
+          == other.getLocationServicesRequested());
+      result = result && (getLocationServicesEnabled()
+          == other.getLocationServicesEnabled());
+      result = result && locationProvider_ == other.locationProvider_;
+      result = result && (hasSampleRateStatistics() == other.hasSampleRateStatistics());
       if (hasSampleRateStatistics()) {
-        if (!getSampleRateStatistics()
-            .equals(other.getSampleRateStatistics())) return false;
+        result = result && getSampleRateStatistics()
+            .equals(other.getSampleRateStatistics());
       }
-      if (hasLatitudeSampleStatistics() != other.hasLatitudeSampleStatistics()) return false;
+      result = result && (hasLatitudeSampleStatistics() == other.hasLatitudeSampleStatistics());
       if (hasLatitudeSampleStatistics()) {
-        if (!getLatitudeSampleStatistics()
-            .equals(other.getLatitudeSampleStatistics())) return false;
+        result = result && getLatitudeSampleStatistics()
+            .equals(other.getLatitudeSampleStatistics());
       }
-      if (hasLongitudeSampleStatistics() != other.hasLongitudeSampleStatistics()) return false;
+      result = result && (hasLongitudeSampleStatistics() == other.hasLongitudeSampleStatistics());
       if (hasLongitudeSampleStatistics()) {
-        if (!getLongitudeSampleStatistics()
-            .equals(other.getLongitudeSampleStatistics())) return false;
+        result = result && getLongitudeSampleStatistics()
+            .equals(other.getLongitudeSampleStatistics());
       }
-      if (hasAltitudeSampleStatistics() != other.hasAltitudeSampleStatistics()) return false;
+      result = result && (hasAltitudeSampleStatistics() == other.hasAltitudeSampleStatistics());
       if (hasAltitudeSampleStatistics()) {
-        if (!getAltitudeSampleStatistics()
-            .equals(other.getAltitudeSampleStatistics())) return false;
+        result = result && getAltitudeSampleStatistics()
+            .equals(other.getAltitudeSampleStatistics());
       }
-      if (hasSpeedSampleStatistics() != other.hasSpeedSampleStatistics()) return false;
+      result = result && (hasSpeedSampleStatistics() == other.hasSpeedSampleStatistics());
       if (hasSpeedSampleStatistics()) {
-        if (!getSpeedSampleStatistics()
-            .equals(other.getSpeedSampleStatistics())) return false;
+        result = result && getSpeedSampleStatistics()
+            .equals(other.getSpeedSampleStatistics());
       }
-      if (hasAccuracySampleStatistics() != other.hasAccuracySampleStatistics()) return false;
+      result = result && (hasAccuracySampleStatistics() == other.hasAccuracySampleStatistics());
       if (hasAccuracySampleStatistics()) {
-        if (!getAccuracySampleStatistics()
-            .equals(other.getAccuracySampleStatistics())) return false;
+        result = result && getAccuracySampleStatistics()
+            .equals(other.getAccuracySampleStatistics());
       }
-      if (!internalGetMetadata().equals(
-          other.internalGetMetadata())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && internalGetMetadata().equals(
+          other.internalGetMetadata());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -16385,18 +15994,18 @@ public final class RedvoxApi1000 {
 
         meanSampleRateHz_ = 0D;
 
-        sampleTsUs_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        latitudeSamples_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        longitudeSamples_ = emptyDoubleList();
+        sampleTsUs_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
-        altitudeSamples_ = emptyDoubleList();
+        latitudeSamples_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
-        speedSamples_ = emptyDoubleList();
+        longitudeSamples_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000010);
-        accuracySamples_ = emptyDoubleList();
+        altitudeSamples_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000020);
+        speedSamples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        accuracySamples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
         locationPermissionsGranted_ = false;
 
         locationServicesRequested_ = false;
@@ -16469,36 +16078,37 @@ public final class RedvoxApi1000 {
       public RedvoxApi1000.LocationChannel buildPartial() {
         RedvoxApi1000.LocationChannel result = new RedvoxApi1000.LocationChannel(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.sensorDescription_ = sensorDescription_;
         result.meanSampleRateHz_ = meanSampleRateHz_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          sampleTsUs_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.sampleTsUs_ = sampleTsUs_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          latitudeSamples_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.latitudeSamples_ = latitudeSamples_;
-        if (((bitField0_ & 0x00000004) != 0)) {
-          longitudeSamples_.makeImmutable();
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          sampleTsUs_ = java.util.Collections.unmodifiableList(sampleTsUs_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
-        result.longitudeSamples_ = longitudeSamples_;
-        if (((bitField0_ & 0x00000008) != 0)) {
-          altitudeSamples_.makeImmutable();
+        result.sampleTsUs_ = sampleTsUs_;
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          latitudeSamples_ = java.util.Collections.unmodifiableList(latitudeSamples_);
           bitField0_ = (bitField0_ & ~0x00000008);
         }
-        result.altitudeSamples_ = altitudeSamples_;
-        if (((bitField0_ & 0x00000010) != 0)) {
-          speedSamples_.makeImmutable();
+        result.latitudeSamples_ = latitudeSamples_;
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          longitudeSamples_ = java.util.Collections.unmodifiableList(longitudeSamples_);
           bitField0_ = (bitField0_ & ~0x00000010);
         }
-        result.speedSamples_ = speedSamples_;
-        if (((bitField0_ & 0x00000020) != 0)) {
-          accuracySamples_.makeImmutable();
+        result.longitudeSamples_ = longitudeSamples_;
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          altitudeSamples_ = java.util.Collections.unmodifiableList(altitudeSamples_);
           bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.altitudeSamples_ = altitudeSamples_;
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          speedSamples_ = java.util.Collections.unmodifiableList(speedSamples_);
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.speedSamples_ = speedSamples_;
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          accuracySamples_ = java.util.Collections.unmodifiableList(accuracySamples_);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.accuracySamples_ = accuracySamples_;
         result.locationPermissionsGranted_ = locationPermissionsGranted_;
@@ -16537,41 +16147,42 @@ public final class RedvoxApi1000 {
         }
         result.metadata_ = internalGetMetadata();
         result.metadata_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16595,7 +16206,7 @@ public final class RedvoxApi1000 {
         if (!other.sampleTsUs_.isEmpty()) {
           if (sampleTsUs_.isEmpty()) {
             sampleTsUs_ = other.sampleTsUs_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSampleTsUsIsMutable();
             sampleTsUs_.addAll(other.sampleTsUs_);
@@ -16605,7 +16216,7 @@ public final class RedvoxApi1000 {
         if (!other.latitudeSamples_.isEmpty()) {
           if (latitudeSamples_.isEmpty()) {
             latitudeSamples_ = other.latitudeSamples_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureLatitudeSamplesIsMutable();
             latitudeSamples_.addAll(other.latitudeSamples_);
@@ -16615,7 +16226,7 @@ public final class RedvoxApi1000 {
         if (!other.longitudeSamples_.isEmpty()) {
           if (longitudeSamples_.isEmpty()) {
             longitudeSamples_ = other.longitudeSamples_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureLongitudeSamplesIsMutable();
             longitudeSamples_.addAll(other.longitudeSamples_);
@@ -16625,7 +16236,7 @@ public final class RedvoxApi1000 {
         if (!other.altitudeSamples_.isEmpty()) {
           if (altitudeSamples_.isEmpty()) {
             altitudeSamples_ = other.altitudeSamples_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureAltitudeSamplesIsMutable();
             altitudeSamples_.addAll(other.altitudeSamples_);
@@ -16635,7 +16246,7 @@ public final class RedvoxApi1000 {
         if (!other.speedSamples_.isEmpty()) {
           if (speedSamples_.isEmpty()) {
             speedSamples_ = other.speedSamples_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureSpeedSamplesIsMutable();
             speedSamples_.addAll(other.speedSamples_);
@@ -16645,7 +16256,7 @@ public final class RedvoxApi1000 {
         if (!other.accuracySamples_.isEmpty()) {
           if (accuracySamples_.isEmpty()) {
             accuracySamples_ = other.accuracySamples_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureAccuracySamplesIsMutable();
             accuracySamples_.addAll(other.accuracySamples_);
@@ -16721,7 +16332,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return The sensorDescription.
        */
       public java.lang.String getSensorDescription() {
         java.lang.Object ref = sensorDescription_;
@@ -16741,7 +16351,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return The bytes for sensorDescription.
        */
       public com.google.protobuf.ByteString
           getSensorDescriptionBytes() {
@@ -16762,8 +16371,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @param value The sensorDescription to set.
-       * @return This builder for chaining.
        */
       public Builder setSensorDescription(
           java.lang.String value) {
@@ -16781,7 +16388,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSensorDescription() {
         
@@ -16795,8 +16401,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @param value The bytes for sensorDescription to set.
-       * @return This builder for chaining.
        */
       public Builder setSensorDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -16817,7 +16421,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean_sample_rate_hz = 2;</code>
-       * @return The meanSampleRateHz.
        */
       public double getMeanSampleRateHz() {
         return meanSampleRateHz_;
@@ -16828,8 +16431,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean_sample_rate_hz = 2;</code>
-       * @param value The meanSampleRateHz to set.
-       * @return This builder for chaining.
        */
       public Builder setMeanSampleRateHz(double value) {
         
@@ -16843,7 +16444,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean_sample_rate_hz = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearMeanSampleRateHz() {
         
@@ -16852,11 +16452,11 @@ public final class RedvoxApi1000 {
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList sampleTsUs_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> sampleTsUs_ = java.util.Collections.emptyList();
       private void ensureSampleTsUsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          sampleTsUs_ = mutableCopy(sampleTsUs_);
-          bitField0_ |= 0x00000001;
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          sampleTsUs_ = new java.util.ArrayList<java.lang.Double>(sampleTsUs_);
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -16865,12 +16465,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @return A list containing the sampleTsUs.
        */
       public java.util.List<java.lang.Double>
           getSampleTsUsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(sampleTsUs_) : sampleTsUs_;
+        return java.util.Collections.unmodifiableList(sampleTsUs_);
       }
       /**
        * <pre>
@@ -16878,7 +16476,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @return The count of sampleTsUs.
        */
       public int getSampleTsUsCount() {
         return sampleTsUs_.size();
@@ -16889,11 +16486,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param index The index of the element to return.
-       * @return The sampleTsUs at the given index.
        */
       public double getSampleTsUs(int index) {
-        return sampleTsUs_.getDouble(index);
+        return sampleTsUs_.get(index);
       }
       /**
        * <pre>
@@ -16901,14 +16496,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param index The index to set the value at.
-       * @param value The sampleTsUs to set.
-       * @return This builder for chaining.
        */
       public Builder setSampleTsUs(
           int index, double value) {
         ensureSampleTsUsIsMutable();
-        sampleTsUs_.setDouble(index, value);
+        sampleTsUs_.set(index, value);
         onChanged();
         return this;
       }
@@ -16918,12 +16510,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param value The sampleTsUs to add.
-       * @return This builder for chaining.
        */
       public Builder addSampleTsUs(double value) {
         ensureSampleTsUsIsMutable();
-        sampleTsUs_.addDouble(value);
+        sampleTsUs_.add(value);
         onChanged();
         return this;
       }
@@ -16933,8 +16523,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param values The sampleTsUs to add.
-       * @return This builder for chaining.
        */
       public Builder addAllSampleTsUs(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -16950,20 +16538,19 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSampleTsUs() {
-        sampleTsUs_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        sampleTsUs_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList latitudeSamples_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> latitudeSamples_ = java.util.Collections.emptyList();
       private void ensureLatitudeSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          latitudeSamples_ = mutableCopy(latitudeSamples_);
-          bitField0_ |= 0x00000002;
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          latitudeSamples_ = new java.util.ArrayList<java.lang.Double>(latitudeSamples_);
+          bitField0_ |= 0x00000008;
          }
       }
       /**
@@ -16972,12 +16559,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double latitude_samples = 4;</code>
-       * @return A list containing the latitudeSamples.
        */
       public java.util.List<java.lang.Double>
           getLatitudeSamplesList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(latitudeSamples_) : latitudeSamples_;
+        return java.util.Collections.unmodifiableList(latitudeSamples_);
       }
       /**
        * <pre>
@@ -16985,7 +16570,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double latitude_samples = 4;</code>
-       * @return The count of latitudeSamples.
        */
       public int getLatitudeSamplesCount() {
         return latitudeSamples_.size();
@@ -16996,11 +16580,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double latitude_samples = 4;</code>
-       * @param index The index of the element to return.
-       * @return The latitudeSamples at the given index.
        */
       public double getLatitudeSamples(int index) {
-        return latitudeSamples_.getDouble(index);
+        return latitudeSamples_.get(index);
       }
       /**
        * <pre>
@@ -17008,14 +16590,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double latitude_samples = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The latitudeSamples to set.
-       * @return This builder for chaining.
        */
       public Builder setLatitudeSamples(
           int index, double value) {
         ensureLatitudeSamplesIsMutable();
-        latitudeSamples_.setDouble(index, value);
+        latitudeSamples_.set(index, value);
         onChanged();
         return this;
       }
@@ -17025,12 +16604,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double latitude_samples = 4;</code>
-       * @param value The latitudeSamples to add.
-       * @return This builder for chaining.
        */
       public Builder addLatitudeSamples(double value) {
         ensureLatitudeSamplesIsMutable();
-        latitudeSamples_.addDouble(value);
+        latitudeSamples_.add(value);
         onChanged();
         return this;
       }
@@ -17040,8 +16617,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double latitude_samples = 4;</code>
-       * @param values The latitudeSamples to add.
-       * @return This builder for chaining.
        */
       public Builder addAllLatitudeSamples(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -17057,20 +16632,19 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double latitude_samples = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearLatitudeSamples() {
-        latitudeSamples_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        latitudeSamples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList longitudeSamples_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> longitudeSamples_ = java.util.Collections.emptyList();
       private void ensureLongitudeSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          longitudeSamples_ = mutableCopy(longitudeSamples_);
-          bitField0_ |= 0x00000004;
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          longitudeSamples_ = new java.util.ArrayList<java.lang.Double>(longitudeSamples_);
+          bitField0_ |= 0x00000010;
          }
       }
       /**
@@ -17079,12 +16653,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double longitude_samples = 5;</code>
-       * @return A list containing the longitudeSamples.
        */
       public java.util.List<java.lang.Double>
           getLongitudeSamplesList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(longitudeSamples_) : longitudeSamples_;
+        return java.util.Collections.unmodifiableList(longitudeSamples_);
       }
       /**
        * <pre>
@@ -17092,7 +16664,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double longitude_samples = 5;</code>
-       * @return The count of longitudeSamples.
        */
       public int getLongitudeSamplesCount() {
         return longitudeSamples_.size();
@@ -17103,11 +16674,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double longitude_samples = 5;</code>
-       * @param index The index of the element to return.
-       * @return The longitudeSamples at the given index.
        */
       public double getLongitudeSamples(int index) {
-        return longitudeSamples_.getDouble(index);
+        return longitudeSamples_.get(index);
       }
       /**
        * <pre>
@@ -17115,14 +16684,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double longitude_samples = 5;</code>
-       * @param index The index to set the value at.
-       * @param value The longitudeSamples to set.
-       * @return This builder for chaining.
        */
       public Builder setLongitudeSamples(
           int index, double value) {
         ensureLongitudeSamplesIsMutable();
-        longitudeSamples_.setDouble(index, value);
+        longitudeSamples_.set(index, value);
         onChanged();
         return this;
       }
@@ -17132,12 +16698,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double longitude_samples = 5;</code>
-       * @param value The longitudeSamples to add.
-       * @return This builder for chaining.
        */
       public Builder addLongitudeSamples(double value) {
         ensureLongitudeSamplesIsMutable();
-        longitudeSamples_.addDouble(value);
+        longitudeSamples_.add(value);
         onChanged();
         return this;
       }
@@ -17147,8 +16711,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double longitude_samples = 5;</code>
-       * @param values The longitudeSamples to add.
-       * @return This builder for chaining.
        */
       public Builder addAllLongitudeSamples(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -17164,20 +16726,19 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double longitude_samples = 5;</code>
-       * @return This builder for chaining.
        */
       public Builder clearLongitudeSamples() {
-        longitudeSamples_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        longitudeSamples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList altitudeSamples_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> altitudeSamples_ = java.util.Collections.emptyList();
       private void ensureAltitudeSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          altitudeSamples_ = mutableCopy(altitudeSamples_);
-          bitField0_ |= 0x00000008;
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          altitudeSamples_ = new java.util.ArrayList<java.lang.Double>(altitudeSamples_);
+          bitField0_ |= 0x00000020;
          }
       }
       /**
@@ -17186,12 +16747,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double altitude_samples = 6;</code>
-       * @return A list containing the altitudeSamples.
        */
       public java.util.List<java.lang.Double>
           getAltitudeSamplesList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
-                 java.util.Collections.unmodifiableList(altitudeSamples_) : altitudeSamples_;
+        return java.util.Collections.unmodifiableList(altitudeSamples_);
       }
       /**
        * <pre>
@@ -17199,7 +16758,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double altitude_samples = 6;</code>
-       * @return The count of altitudeSamples.
        */
       public int getAltitudeSamplesCount() {
         return altitudeSamples_.size();
@@ -17210,11 +16768,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double altitude_samples = 6;</code>
-       * @param index The index of the element to return.
-       * @return The altitudeSamples at the given index.
        */
       public double getAltitudeSamples(int index) {
-        return altitudeSamples_.getDouble(index);
+        return altitudeSamples_.get(index);
       }
       /**
        * <pre>
@@ -17222,14 +16778,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double altitude_samples = 6;</code>
-       * @param index The index to set the value at.
-       * @param value The altitudeSamples to set.
-       * @return This builder for chaining.
        */
       public Builder setAltitudeSamples(
           int index, double value) {
         ensureAltitudeSamplesIsMutable();
-        altitudeSamples_.setDouble(index, value);
+        altitudeSamples_.set(index, value);
         onChanged();
         return this;
       }
@@ -17239,12 +16792,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double altitude_samples = 6;</code>
-       * @param value The altitudeSamples to add.
-       * @return This builder for chaining.
        */
       public Builder addAltitudeSamples(double value) {
         ensureAltitudeSamplesIsMutable();
-        altitudeSamples_.addDouble(value);
+        altitudeSamples_.add(value);
         onChanged();
         return this;
       }
@@ -17254,8 +16805,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double altitude_samples = 6;</code>
-       * @param values The altitudeSamples to add.
-       * @return This builder for chaining.
        */
       public Builder addAllAltitudeSamples(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -17271,20 +16820,19 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double altitude_samples = 6;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAltitudeSamples() {
-        altitudeSamples_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        altitudeSamples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList speedSamples_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> speedSamples_ = java.util.Collections.emptyList();
       private void ensureSpeedSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
-          speedSamples_ = mutableCopy(speedSamples_);
-          bitField0_ |= 0x00000010;
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          speedSamples_ = new java.util.ArrayList<java.lang.Double>(speedSamples_);
+          bitField0_ |= 0x00000040;
          }
       }
       /**
@@ -17293,12 +16841,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double speed_samples = 7;</code>
-       * @return A list containing the speedSamples.
        */
       public java.util.List<java.lang.Double>
           getSpeedSamplesList() {
-        return ((bitField0_ & 0x00000010) != 0) ?
-                 java.util.Collections.unmodifiableList(speedSamples_) : speedSamples_;
+        return java.util.Collections.unmodifiableList(speedSamples_);
       }
       /**
        * <pre>
@@ -17306,7 +16852,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double speed_samples = 7;</code>
-       * @return The count of speedSamples.
        */
       public int getSpeedSamplesCount() {
         return speedSamples_.size();
@@ -17317,11 +16862,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double speed_samples = 7;</code>
-       * @param index The index of the element to return.
-       * @return The speedSamples at the given index.
        */
       public double getSpeedSamples(int index) {
-        return speedSamples_.getDouble(index);
+        return speedSamples_.get(index);
       }
       /**
        * <pre>
@@ -17329,14 +16872,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double speed_samples = 7;</code>
-       * @param index The index to set the value at.
-       * @param value The speedSamples to set.
-       * @return This builder for chaining.
        */
       public Builder setSpeedSamples(
           int index, double value) {
         ensureSpeedSamplesIsMutable();
-        speedSamples_.setDouble(index, value);
+        speedSamples_.set(index, value);
         onChanged();
         return this;
       }
@@ -17346,12 +16886,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double speed_samples = 7;</code>
-       * @param value The speedSamples to add.
-       * @return This builder for chaining.
        */
       public Builder addSpeedSamples(double value) {
         ensureSpeedSamplesIsMutable();
-        speedSamples_.addDouble(value);
+        speedSamples_.add(value);
         onChanged();
         return this;
       }
@@ -17361,8 +16899,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double speed_samples = 7;</code>
-       * @param values The speedSamples to add.
-       * @return This builder for chaining.
        */
       public Builder addAllSpeedSamples(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -17378,20 +16914,19 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double speed_samples = 7;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSpeedSamples() {
-        speedSamples_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        speedSamples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList accuracySamples_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> accuracySamples_ = java.util.Collections.emptyList();
       private void ensureAccuracySamplesIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
-          accuracySamples_ = mutableCopy(accuracySamples_);
-          bitField0_ |= 0x00000020;
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+          accuracySamples_ = new java.util.ArrayList<java.lang.Double>(accuracySamples_);
+          bitField0_ |= 0x00000080;
          }
       }
       /**
@@ -17400,12 +16935,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double accuracy_samples = 8;</code>
-       * @return A list containing the accuracySamples.
        */
       public java.util.List<java.lang.Double>
           getAccuracySamplesList() {
-        return ((bitField0_ & 0x00000020) != 0) ?
-                 java.util.Collections.unmodifiableList(accuracySamples_) : accuracySamples_;
+        return java.util.Collections.unmodifiableList(accuracySamples_);
       }
       /**
        * <pre>
@@ -17413,7 +16946,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double accuracy_samples = 8;</code>
-       * @return The count of accuracySamples.
        */
       public int getAccuracySamplesCount() {
         return accuracySamples_.size();
@@ -17424,11 +16956,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double accuracy_samples = 8;</code>
-       * @param index The index of the element to return.
-       * @return The accuracySamples at the given index.
        */
       public double getAccuracySamples(int index) {
-        return accuracySamples_.getDouble(index);
+        return accuracySamples_.get(index);
       }
       /**
        * <pre>
@@ -17436,14 +16966,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double accuracy_samples = 8;</code>
-       * @param index The index to set the value at.
-       * @param value The accuracySamples to set.
-       * @return This builder for chaining.
        */
       public Builder setAccuracySamples(
           int index, double value) {
         ensureAccuracySamplesIsMutable();
-        accuracySamples_.setDouble(index, value);
+        accuracySamples_.set(index, value);
         onChanged();
         return this;
       }
@@ -17453,12 +16980,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double accuracy_samples = 8;</code>
-       * @param value The accuracySamples to add.
-       * @return This builder for chaining.
        */
       public Builder addAccuracySamples(double value) {
         ensureAccuracySamplesIsMutable();
-        accuracySamples_.addDouble(value);
+        accuracySamples_.add(value);
         onChanged();
         return this;
       }
@@ -17468,8 +16993,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double accuracy_samples = 8;</code>
-       * @param values The accuracySamples to add.
-       * @return This builder for chaining.
        */
       public Builder addAllAccuracySamples(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -17485,11 +17008,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double accuracy_samples = 8;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAccuracySamples() {
-        accuracySamples_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        accuracySamples_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -17501,7 +17023,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool location_permissions_granted = 9;</code>
-       * @return The locationPermissionsGranted.
        */
       public boolean getLocationPermissionsGranted() {
         return locationPermissionsGranted_;
@@ -17512,8 +17033,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool location_permissions_granted = 9;</code>
-       * @param value The locationPermissionsGranted to set.
-       * @return This builder for chaining.
        */
       public Builder setLocationPermissionsGranted(boolean value) {
         
@@ -17527,7 +17046,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool location_permissions_granted = 9;</code>
-       * @return This builder for chaining.
        */
       public Builder clearLocationPermissionsGranted() {
         
@@ -17543,7 +17061,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool location_services_requested = 10;</code>
-       * @return The locationServicesRequested.
        */
       public boolean getLocationServicesRequested() {
         return locationServicesRequested_;
@@ -17554,8 +17071,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool location_services_requested = 10;</code>
-       * @param value The locationServicesRequested to set.
-       * @return This builder for chaining.
        */
       public Builder setLocationServicesRequested(boolean value) {
         
@@ -17569,7 +17084,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool location_services_requested = 10;</code>
-       * @return This builder for chaining.
        */
       public Builder clearLocationServicesRequested() {
         
@@ -17585,7 +17099,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool location_services_enabled = 11;</code>
-       * @return The locationServicesEnabled.
        */
       public boolean getLocationServicesEnabled() {
         return locationServicesEnabled_;
@@ -17596,8 +17109,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool location_services_enabled = 11;</code>
-       * @param value The locationServicesEnabled to set.
-       * @return This builder for chaining.
        */
       public Builder setLocationServicesEnabled(boolean value) {
         
@@ -17611,7 +17122,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>bool location_services_enabled = 11;</code>
-       * @return This builder for chaining.
        */
       public Builder clearLocationServicesEnabled() {
         
@@ -17627,7 +17137,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
-       * @return The enum numeric value on the wire for locationProvider.
        */
       public int getLocationProviderValue() {
         return locationProvider_;
@@ -17638,8 +17147,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
-       * @param value The enum numeric value on the wire for locationProvider to set.
-       * @return This builder for chaining.
        */
       public Builder setLocationProviderValue(int value) {
         locationProvider_ = value;
@@ -17652,7 +17159,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
-       * @return The locationProvider.
        */
       public RedvoxApi1000.LocationChannel.LocationProvider getLocationProvider() {
         @SuppressWarnings("deprecation")
@@ -17665,8 +17171,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
-       * @param value The locationProvider to set.
-       * @return This builder for chaining.
        */
       public Builder setLocationProvider(RedvoxApi1000.LocationChannel.LocationProvider value) {
         if (value == null) {
@@ -17683,7 +17187,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.LocationChannel.LocationProvider location_provider = 12;</code>
-       * @return This builder for chaining.
        */
       public Builder clearLocationProvider() {
         
@@ -17692,7 +17195,7 @@ public final class RedvoxApi1000 {
         return this;
       }
 
-      private RedvoxApi1000.SummaryStatistics sampleRateStatistics_;
+      private RedvoxApi1000.SummaryStatistics sampleRateStatistics_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> sampleRateStatisticsBuilder_;
       /**
@@ -17701,7 +17204,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
-       * @return Whether the sampleRateStatistics field is set.
        */
       public boolean hasSampleRateStatistics() {
         return sampleRateStatisticsBuilder_ != null || sampleRateStatistics_ != null;
@@ -17712,7 +17214,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics sample_rate_statistics = 13;</code>
-       * @return The sampleRateStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getSampleRateStatistics() {
         if (sampleRateStatisticsBuilder_ == null) {
@@ -17847,7 +17348,7 @@ public final class RedvoxApi1000 {
         return sampleRateStatisticsBuilder_;
       }
 
-      private RedvoxApi1000.SummaryStatistics latitudeSampleStatistics_;
+      private RedvoxApi1000.SummaryStatistics latitudeSampleStatistics_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> latitudeSampleStatisticsBuilder_;
       /**
@@ -17856,7 +17357,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
-       * @return Whether the latitudeSampleStatistics field is set.
        */
       public boolean hasLatitudeSampleStatistics() {
         return latitudeSampleStatisticsBuilder_ != null || latitudeSampleStatistics_ != null;
@@ -17867,7 +17367,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics latitude_sample_statistics = 14;</code>
-       * @return The latitudeSampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getLatitudeSampleStatistics() {
         if (latitudeSampleStatisticsBuilder_ == null) {
@@ -18002,7 +17501,7 @@ public final class RedvoxApi1000 {
         return latitudeSampleStatisticsBuilder_;
       }
 
-      private RedvoxApi1000.SummaryStatistics longitudeSampleStatistics_;
+      private RedvoxApi1000.SummaryStatistics longitudeSampleStatistics_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> longitudeSampleStatisticsBuilder_;
       /**
@@ -18011,7 +17510,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
-       * @return Whether the longitudeSampleStatistics field is set.
        */
       public boolean hasLongitudeSampleStatistics() {
         return longitudeSampleStatisticsBuilder_ != null || longitudeSampleStatistics_ != null;
@@ -18022,7 +17520,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics longitude_sample_statistics = 15;</code>
-       * @return The longitudeSampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getLongitudeSampleStatistics() {
         if (longitudeSampleStatisticsBuilder_ == null) {
@@ -18157,7 +17654,7 @@ public final class RedvoxApi1000 {
         return longitudeSampleStatisticsBuilder_;
       }
 
-      private RedvoxApi1000.SummaryStatistics altitudeSampleStatistics_;
+      private RedvoxApi1000.SummaryStatistics altitudeSampleStatistics_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> altitudeSampleStatisticsBuilder_;
       /**
@@ -18166,7 +17663,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
-       * @return Whether the altitudeSampleStatistics field is set.
        */
       public boolean hasAltitudeSampleStatistics() {
         return altitudeSampleStatisticsBuilder_ != null || altitudeSampleStatistics_ != null;
@@ -18177,7 +17673,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics altitude_sample_statistics = 16;</code>
-       * @return The altitudeSampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getAltitudeSampleStatistics() {
         if (altitudeSampleStatisticsBuilder_ == null) {
@@ -18312,7 +17807,7 @@ public final class RedvoxApi1000 {
         return altitudeSampleStatisticsBuilder_;
       }
 
-      private RedvoxApi1000.SummaryStatistics speedSampleStatistics_;
+      private RedvoxApi1000.SummaryStatistics speedSampleStatistics_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> speedSampleStatisticsBuilder_;
       /**
@@ -18321,7 +17816,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
-       * @return Whether the speedSampleStatistics field is set.
        */
       public boolean hasSpeedSampleStatistics() {
         return speedSampleStatisticsBuilder_ != null || speedSampleStatistics_ != null;
@@ -18332,7 +17826,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics speed_sample_statistics = 17;</code>
-       * @return The speedSampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getSpeedSampleStatistics() {
         if (speedSampleStatisticsBuilder_ == null) {
@@ -18467,7 +17960,7 @@ public final class RedvoxApi1000 {
         return speedSampleStatisticsBuilder_;
       }
 
-      private RedvoxApi1000.SummaryStatistics accuracySampleStatistics_;
+      private RedvoxApi1000.SummaryStatistics accuracySampleStatistics_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> accuracySampleStatisticsBuilder_;
       /**
@@ -18476,7 +17969,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
-       * @return Whether the accuracySampleStatistics field is set.
        */
       public boolean hasAccuracySampleStatistics() {
         return accuracySampleStatisticsBuilder_ != null || accuracySampleStatistics_ != null;
@@ -18487,7 +17979,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics accuracy_sample_statistics = 18;</code>
-       * @return The accuracySampleStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getAccuracySampleStatistics() {
         if (accuracySampleStatisticsBuilder_ == null) {
@@ -18775,7 +18266,7 @@ public final class RedvoxApi1000 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -18835,7 +18326,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The sensorDescription.
      */
     java.lang.String getSensorDescription();
     /**
@@ -18844,7 +18334,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The bytes for sensorDescription.
      */
     com.google.protobuf.ByteString
         getSensorDescriptionBytes();
@@ -18855,7 +18344,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double mean_sample_rate_hz = 2;</code>
-     * @return The meanSampleRateHz.
      */
     double getMeanSampleRateHz();
 
@@ -18865,7 +18353,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return A list containing the sampleTsUs.
      */
     java.util.List<java.lang.Double> getSampleTsUsList();
     /**
@@ -18874,7 +18361,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return The count of sampleTsUs.
      */
     int getSampleTsUsCount();
     /**
@@ -18883,25 +18369,19 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @param index The index of the element to return.
-     * @return The sampleTsUs at the given index.
      */
     double getSampleTsUs(int index);
 
     /**
      * <code>repeated bytes samples = 4;</code>
-     * @return A list containing the samples.
      */
     java.util.List<com.google.protobuf.ByteString> getSamplesList();
     /**
      * <code>repeated bytes samples = 4;</code>
-     * @return The count of samples.
      */
     int getSamplesCount();
     /**
      * <code>repeated bytes samples = 4;</code>
-     * @param index The index of the element to return.
-     * @return The samples at the given index.
      */
     com.google.protobuf.ByteString getSamples(int index);
 
@@ -18911,7 +18391,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 5;</code>
-     * @return Whether the sampleRateStatistics field is set.
      */
     boolean hasSampleRateStatistics();
     /**
@@ -18920,7 +18399,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 5;</code>
-     * @return The sampleRateStatistics.
      */
     RedvoxApi1000.SummaryStatistics getSampleRateStatistics();
     /**
@@ -19000,15 +18478,9 @@ public final class RedvoxApi1000 {
     }
     private ImageChannel() {
       sensorDescription_ = "";
-      sampleTsUs_ = emptyDoubleList();
+      meanSampleRateHz_ = 0D;
+      sampleTsUs_ = java.util.Collections.emptyList();
       samples_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ImageChannel();
     }
 
     @java.lang.Override
@@ -19047,30 +18519,30 @@ public final class RedvoxApi1000 {
               break;
             }
             case 25: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                sampleTsUs_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000001;
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                sampleTsUs_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000004;
               }
-              sampleTsUs_.addDouble(input.readDouble());
+              sampleTsUs_.add(input.readDouble());
               break;
             }
             case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                sampleTsUs_ = newDoubleList();
-                mutable_bitField0_ |= 0x00000001;
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
+                sampleTsUs_ = new java.util.ArrayList<java.lang.Double>();
+                mutable_bitField0_ |= 0x00000004;
               }
               while (input.getBytesUntilLimit() > 0) {
-                sampleTsUs_.addDouble(input.readDouble());
+                sampleTsUs_.add(input.readDouble());
               }
               input.popLimit(limit);
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 samples_ = new java.util.ArrayList<com.google.protobuf.ByteString>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000008;
               }
               samples_.add(input.readBytes());
               break;
@@ -19089,10 +18561,10 @@ public final class RedvoxApi1000 {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
                 metadata_ = com.google.protobuf.MapField.newMapField(
                     MetadataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000020;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               metadata__ = input.readMessage(
@@ -19102,7 +18574,7 @@ public final class RedvoxApi1000 {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -19116,11 +18588,11 @@ public final class RedvoxApi1000 {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          sampleTsUs_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          sampleTsUs_ = java.util.Collections.unmodifiableList(sampleTsUs_);
         }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          samples_ = java.util.Collections.unmodifiableList(samples_); // C
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          samples_ = java.util.Collections.unmodifiableList(samples_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -19151,6 +18623,7 @@ public final class RedvoxApi1000 {
               RedvoxApi1000.ImageChannel.class, RedvoxApi1000.ImageChannel.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SENSOR_DESCRIPTION_FIELD_NUMBER = 1;
     private volatile java.lang.Object sensorDescription_;
     /**
@@ -19159,7 +18632,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The sensorDescription.
      */
     public java.lang.String getSensorDescription() {
       java.lang.Object ref = sensorDescription_;
@@ -19179,7 +18651,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>string sensor_description = 1;</code>
-     * @return The bytes for sensorDescription.
      */
     public com.google.protobuf.ByteString
         getSensorDescriptionBytes() {
@@ -19203,21 +18674,19 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double mean_sample_rate_hz = 2;</code>
-     * @return The meanSampleRateHz.
      */
     public double getMeanSampleRateHz() {
       return meanSampleRateHz_;
     }
 
     public static final int SAMPLE_TS_US_FIELD_NUMBER = 3;
-    private com.google.protobuf.Internal.DoubleList sampleTsUs_;
+    private java.util.List<java.lang.Double> sampleTsUs_;
     /**
      * <pre>
      * A list of timestamps, one for each sample
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return A list containing the sampleTsUs.
      */
     public java.util.List<java.lang.Double>
         getSampleTsUsList() {
@@ -19229,7 +18698,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @return The count of sampleTsUs.
      */
     public int getSampleTsUsCount() {
       return sampleTsUs_.size();
@@ -19240,11 +18708,9 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>repeated double sample_ts_us = 3;</code>
-     * @param index The index of the element to return.
-     * @return The sampleTsUs at the given index.
      */
     public double getSampleTsUs(int index) {
-      return sampleTsUs_.getDouble(index);
+      return sampleTsUs_.get(index);
     }
     private int sampleTsUsMemoizedSerializedSize = -1;
 
@@ -19252,7 +18718,6 @@ public final class RedvoxApi1000 {
     private java.util.List<com.google.protobuf.ByteString> samples_;
     /**
      * <code>repeated bytes samples = 4;</code>
-     * @return A list containing the samples.
      */
     public java.util.List<com.google.protobuf.ByteString>
         getSamplesList() {
@@ -19260,15 +18725,12 @@ public final class RedvoxApi1000 {
     }
     /**
      * <code>repeated bytes samples = 4;</code>
-     * @return The count of samples.
      */
     public int getSamplesCount() {
       return samples_.size();
     }
     /**
      * <code>repeated bytes samples = 4;</code>
-     * @param index The index of the element to return.
-     * @return The samples at the given index.
      */
     public com.google.protobuf.ByteString getSamples(int index) {
       return samples_.get(index);
@@ -19282,7 +18744,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 5;</code>
-     * @return Whether the sampleRateStatistics field is set.
      */
     public boolean hasSampleRateStatistics() {
       return sampleRateStatistics_ != null;
@@ -19293,7 +18754,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>.SummaryStatistics sample_rate_statistics = 5;</code>
-     * @return The sampleRateStatistics.
      */
     public RedvoxApi1000.SummaryStatistics getSampleRateStatistics() {
       return sampleRateStatistics_ == null ? RedvoxApi1000.SummaryStatistics.getDefaultInstance() : sampleRateStatistics_;
@@ -19427,7 +18887,7 @@ public final class RedvoxApi1000 {
         output.writeUInt32NoTag(sampleTsUsMemoizedSerializedSize);
       }
       for (int i = 0; i < sampleTsUs_.size(); i++) {
-        output.writeDoubleNoTag(sampleTsUs_.getDouble(i));
+        output.writeDoubleNoTag(sampleTsUs_.get(i));
       }
       for (int i = 0; i < samples_.size(); i++) {
         output.writeBytes(4, samples_.get(i));
@@ -19506,24 +18966,26 @@ public final class RedvoxApi1000 {
       }
       RedvoxApi1000.ImageChannel other = (RedvoxApi1000.ImageChannel) obj;
 
-      if (!getSensorDescription()
-          .equals(other.getSensorDescription())) return false;
-      if (java.lang.Double.doubleToLongBits(getMeanSampleRateHz())
-          != java.lang.Double.doubleToLongBits(
-              other.getMeanSampleRateHz())) return false;
-      if (!getSampleTsUsList()
-          .equals(other.getSampleTsUsList())) return false;
-      if (!getSamplesList()
-          .equals(other.getSamplesList())) return false;
-      if (hasSampleRateStatistics() != other.hasSampleRateStatistics()) return false;
+      boolean result = true;
+      result = result && getSensorDescription()
+          .equals(other.getSensorDescription());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getMeanSampleRateHz())
+          == java.lang.Double.doubleToLongBits(
+              other.getMeanSampleRateHz()));
+      result = result && getSampleTsUsList()
+          .equals(other.getSampleTsUsList());
+      result = result && getSamplesList()
+          .equals(other.getSamplesList());
+      result = result && (hasSampleRateStatistics() == other.hasSampleRateStatistics());
       if (hasSampleRateStatistics()) {
-        if (!getSampleRateStatistics()
-            .equals(other.getSampleRateStatistics())) return false;
+        result = result && getSampleRateStatistics()
+            .equals(other.getSampleRateStatistics());
       }
-      if (!internalGetMetadata().equals(
-          other.internalGetMetadata())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && internalGetMetadata().equals(
+          other.internalGetMetadata());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -19713,10 +19175,10 @@ public final class RedvoxApi1000 {
 
         meanSampleRateHz_ = 0D;
 
-        sampleTsUs_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        sampleTsUs_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         samples_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (sampleRateStatisticsBuilder_ == null) {
           sampleRateStatistics_ = null;
         } else {
@@ -19751,16 +19213,17 @@ public final class RedvoxApi1000 {
       public RedvoxApi1000.ImageChannel buildPartial() {
         RedvoxApi1000.ImageChannel result = new RedvoxApi1000.ImageChannel(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.sensorDescription_ = sensorDescription_;
         result.meanSampleRateHz_ = meanSampleRateHz_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          sampleTsUs_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          sampleTsUs_ = java.util.Collections.unmodifiableList(sampleTsUs_);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.sampleTsUs_ = sampleTsUs_;
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
           samples_ = java.util.Collections.unmodifiableList(samples_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.samples_ = samples_;
         if (sampleRateStatisticsBuilder_ == null) {
@@ -19770,41 +19233,42 @@ public final class RedvoxApi1000 {
         }
         result.metadata_ = internalGetMetadata();
         result.metadata_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -19828,7 +19292,7 @@ public final class RedvoxApi1000 {
         if (!other.sampleTsUs_.isEmpty()) {
           if (sampleTsUs_.isEmpty()) {
             sampleTsUs_ = other.sampleTsUs_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSampleTsUsIsMutable();
             sampleTsUs_.addAll(other.sampleTsUs_);
@@ -19838,7 +19302,7 @@ public final class RedvoxApi1000 {
         if (!other.samples_.isEmpty()) {
           if (samples_.isEmpty()) {
             samples_ = other.samples_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureSamplesIsMutable();
             samples_.addAll(other.samples_);
@@ -19887,7 +19351,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return The sensorDescription.
        */
       public java.lang.String getSensorDescription() {
         java.lang.Object ref = sensorDescription_;
@@ -19907,7 +19370,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return The bytes for sensorDescription.
        */
       public com.google.protobuf.ByteString
           getSensorDescriptionBytes() {
@@ -19928,8 +19390,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @param value The sensorDescription to set.
-       * @return This builder for chaining.
        */
       public Builder setSensorDescription(
           java.lang.String value) {
@@ -19947,7 +19407,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSensorDescription() {
         
@@ -19961,8 +19420,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>string sensor_description = 1;</code>
-       * @param value The bytes for sensorDescription to set.
-       * @return This builder for chaining.
        */
       public Builder setSensorDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -19983,7 +19440,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean_sample_rate_hz = 2;</code>
-       * @return The meanSampleRateHz.
        */
       public double getMeanSampleRateHz() {
         return meanSampleRateHz_;
@@ -19994,8 +19450,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean_sample_rate_hz = 2;</code>
-       * @param value The meanSampleRateHz to set.
-       * @return This builder for chaining.
        */
       public Builder setMeanSampleRateHz(double value) {
         
@@ -20009,7 +19463,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean_sample_rate_hz = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearMeanSampleRateHz() {
         
@@ -20018,11 +19471,11 @@ public final class RedvoxApi1000 {
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList sampleTsUs_ = emptyDoubleList();
+      private java.util.List<java.lang.Double> sampleTsUs_ = java.util.Collections.emptyList();
       private void ensureSampleTsUsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          sampleTsUs_ = mutableCopy(sampleTsUs_);
-          bitField0_ |= 0x00000001;
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          sampleTsUs_ = new java.util.ArrayList<java.lang.Double>(sampleTsUs_);
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -20031,12 +19484,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @return A list containing the sampleTsUs.
        */
       public java.util.List<java.lang.Double>
           getSampleTsUsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(sampleTsUs_) : sampleTsUs_;
+        return java.util.Collections.unmodifiableList(sampleTsUs_);
       }
       /**
        * <pre>
@@ -20044,7 +19495,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @return The count of sampleTsUs.
        */
       public int getSampleTsUsCount() {
         return sampleTsUs_.size();
@@ -20055,11 +19505,9 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param index The index of the element to return.
-       * @return The sampleTsUs at the given index.
        */
       public double getSampleTsUs(int index) {
-        return sampleTsUs_.getDouble(index);
+        return sampleTsUs_.get(index);
       }
       /**
        * <pre>
@@ -20067,14 +19515,11 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param index The index to set the value at.
-       * @param value The sampleTsUs to set.
-       * @return This builder for chaining.
        */
       public Builder setSampleTsUs(
           int index, double value) {
         ensureSampleTsUsIsMutable();
-        sampleTsUs_.setDouble(index, value);
+        sampleTsUs_.set(index, value);
         onChanged();
         return this;
       }
@@ -20084,12 +19529,10 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param value The sampleTsUs to add.
-       * @return This builder for chaining.
        */
       public Builder addSampleTsUs(double value) {
         ensureSampleTsUsIsMutable();
-        sampleTsUs_.addDouble(value);
+        sampleTsUs_.add(value);
         onChanged();
         return this;
       }
@@ -20099,8 +19542,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @param values The sampleTsUs to add.
-       * @return This builder for chaining.
        */
       public Builder addAllSampleTsUs(
           java.lang.Iterable<? extends java.lang.Double> values) {
@@ -20116,51 +19557,42 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>repeated double sample_ts_us = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSampleTsUs() {
-        sampleTsUs_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        sampleTsUs_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
 
       private java.util.List<com.google.protobuf.ByteString> samples_ = java.util.Collections.emptyList();
       private void ensureSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           samples_ = new java.util.ArrayList<com.google.protobuf.ByteString>(samples_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000008;
          }
       }
       /**
        * <code>repeated bytes samples = 4;</code>
-       * @return A list containing the samples.
        */
       public java.util.List<com.google.protobuf.ByteString>
           getSamplesList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(samples_) : samples_;
+        return java.util.Collections.unmodifiableList(samples_);
       }
       /**
        * <code>repeated bytes samples = 4;</code>
-       * @return The count of samples.
        */
       public int getSamplesCount() {
         return samples_.size();
       }
       /**
        * <code>repeated bytes samples = 4;</code>
-       * @param index The index of the element to return.
-       * @return The samples at the given index.
        */
       public com.google.protobuf.ByteString getSamples(int index) {
         return samples_.get(index);
       }
       /**
        * <code>repeated bytes samples = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The samples to set.
-       * @return This builder for chaining.
        */
       public Builder setSamples(
           int index, com.google.protobuf.ByteString value) {
@@ -20174,8 +19606,6 @@ public final class RedvoxApi1000 {
       }
       /**
        * <code>repeated bytes samples = 4;</code>
-       * @param value The samples to add.
-       * @return This builder for chaining.
        */
       public Builder addSamples(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -20188,8 +19618,6 @@ public final class RedvoxApi1000 {
       }
       /**
        * <code>repeated bytes samples = 4;</code>
-       * @param values The samples to add.
-       * @return This builder for chaining.
        */
       public Builder addAllSamples(
           java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
@@ -20201,16 +19629,15 @@ public final class RedvoxApi1000 {
       }
       /**
        * <code>repeated bytes samples = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearSamples() {
         samples_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
 
-      private RedvoxApi1000.SummaryStatistics sampleRateStatistics_;
+      private RedvoxApi1000.SummaryStatistics sampleRateStatistics_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           RedvoxApi1000.SummaryStatistics, RedvoxApi1000.SummaryStatistics.Builder, RedvoxApi1000.SummaryStatisticsOrBuilder> sampleRateStatisticsBuilder_;
       /**
@@ -20219,7 +19646,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics sample_rate_statistics = 5;</code>
-       * @return Whether the sampleRateStatistics field is set.
        */
       public boolean hasSampleRateStatistics() {
         return sampleRateStatisticsBuilder_ != null || sampleRateStatistics_ != null;
@@ -20230,7 +19656,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>.SummaryStatistics sample_rate_statistics = 5;</code>
-       * @return The sampleRateStatistics.
        */
       public RedvoxApi1000.SummaryStatistics getSampleRateStatistics() {
         if (sampleRateStatisticsBuilder_ == null) {
@@ -20518,7 +19943,7 @@ public final class RedvoxApi1000 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -20578,7 +20003,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double count = 1;</code>
-     * @return The count.
      */
     double getCount();
 
@@ -20588,7 +20012,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double mean = 2;</code>
-     * @return The mean.
      */
     double getMean();
 
@@ -20598,7 +20021,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double median = 3;</code>
-     * @return The median.
      */
     double getMedian();
 
@@ -20608,7 +20030,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double mode = 4;</code>
-     * @return The mode.
      */
     double getMode();
 
@@ -20618,7 +20039,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double variance = 5;</code>
-     * @return The variance.
      */
     double getVariance();
 
@@ -20628,7 +20048,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double min = 6;</code>
-     * @return The min.
      */
     double getMin();
 
@@ -20638,7 +20057,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double max = 7;</code>
-     * @return The max.
      */
     double getMax();
 
@@ -20648,7 +20066,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double range = 8;</code>
-     * @return The range.
      */
     double getRange();
 
@@ -20723,13 +20140,14 @@ public final class RedvoxApi1000 {
       super(builder);
     }
     private SummaryStatistics() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SummaryStatistics();
+      count_ = 0D;
+      mean_ = 0D;
+      median_ = 0D;
+      mode_ = 0D;
+      variance_ = 0D;
+      min_ = 0D;
+      max_ = 0D;
+      range_ = 0D;
     }
 
     @java.lang.Override
@@ -20797,10 +20215,10 @@ public final class RedvoxApi1000 {
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
                 metadata_ = com.google.protobuf.MapField.newMapField(
                     MetadataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000100;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               metadata__ = input.readMessage(
@@ -20810,7 +20228,7 @@ public final class RedvoxApi1000 {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -20853,6 +20271,7 @@ public final class RedvoxApi1000 {
               RedvoxApi1000.SummaryStatistics.class, RedvoxApi1000.SummaryStatistics.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COUNT_FIELD_NUMBER = 1;
     private double count_;
     /**
@@ -20861,7 +20280,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double count = 1;</code>
-     * @return The count.
      */
     public double getCount() {
       return count_;
@@ -20875,7 +20293,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double mean = 2;</code>
-     * @return The mean.
      */
     public double getMean() {
       return mean_;
@@ -20889,7 +20306,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double median = 3;</code>
-     * @return The median.
      */
     public double getMedian() {
       return median_;
@@ -20903,7 +20319,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double mode = 4;</code>
-     * @return The mode.
      */
     public double getMode() {
       return mode_;
@@ -20917,7 +20332,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double variance = 5;</code>
-     * @return The variance.
      */
     public double getVariance() {
       return variance_;
@@ -20931,7 +20345,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double min = 6;</code>
-     * @return The min.
      */
     public double getMin() {
       return min_;
@@ -20945,7 +20358,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double max = 7;</code>
-     * @return The max.
      */
     public double getMax() {
       return max_;
@@ -20959,7 +20371,6 @@ public final class RedvoxApi1000 {
      * </pre>
      *
      * <code>double range = 8;</code>
-     * @return The range.
      */
     public double getRange() {
       return range_;
@@ -21167,34 +20578,43 @@ public final class RedvoxApi1000 {
       }
       RedvoxApi1000.SummaryStatistics other = (RedvoxApi1000.SummaryStatistics) obj;
 
-      if (java.lang.Double.doubleToLongBits(getCount())
-          != java.lang.Double.doubleToLongBits(
-              other.getCount())) return false;
-      if (java.lang.Double.doubleToLongBits(getMean())
-          != java.lang.Double.doubleToLongBits(
-              other.getMean())) return false;
-      if (java.lang.Double.doubleToLongBits(getMedian())
-          != java.lang.Double.doubleToLongBits(
-              other.getMedian())) return false;
-      if (java.lang.Double.doubleToLongBits(getMode())
-          != java.lang.Double.doubleToLongBits(
-              other.getMode())) return false;
-      if (java.lang.Double.doubleToLongBits(getVariance())
-          != java.lang.Double.doubleToLongBits(
-              other.getVariance())) return false;
-      if (java.lang.Double.doubleToLongBits(getMin())
-          != java.lang.Double.doubleToLongBits(
-              other.getMin())) return false;
-      if (java.lang.Double.doubleToLongBits(getMax())
-          != java.lang.Double.doubleToLongBits(
-              other.getMax())) return false;
-      if (java.lang.Double.doubleToLongBits(getRange())
-          != java.lang.Double.doubleToLongBits(
-              other.getRange())) return false;
-      if (!internalGetMetadata().equals(
-          other.internalGetMetadata())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && (
+          java.lang.Double.doubleToLongBits(getCount())
+          == java.lang.Double.doubleToLongBits(
+              other.getCount()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getMean())
+          == java.lang.Double.doubleToLongBits(
+              other.getMean()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getMedian())
+          == java.lang.Double.doubleToLongBits(
+              other.getMedian()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getMode())
+          == java.lang.Double.doubleToLongBits(
+              other.getMode()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getVariance())
+          == java.lang.Double.doubleToLongBits(
+              other.getVariance()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getMin())
+          == java.lang.Double.doubleToLongBits(
+              other.getMin()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getMax())
+          == java.lang.Double.doubleToLongBits(
+              other.getMax()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getRange())
+          == java.lang.Double.doubleToLongBits(
+              other.getRange()));
+      result = result && internalGetMetadata().equals(
+          other.internalGetMetadata());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -21435,6 +20855,7 @@ public final class RedvoxApi1000 {
       public RedvoxApi1000.SummaryStatistics buildPartial() {
         RedvoxApi1000.SummaryStatistics result = new RedvoxApi1000.SummaryStatistics(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.count_ = count_;
         result.mean_ = mean_;
         result.median_ = median_;
@@ -21445,41 +20866,42 @@ public final class RedvoxApi1000 {
         result.range_ = range_;
         result.metadata_ = internalGetMetadata();
         result.metadata_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -21556,7 +20978,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double count = 1;</code>
-       * @return The count.
        */
       public double getCount() {
         return count_;
@@ -21567,8 +20988,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double count = 1;</code>
-       * @param value The count to set.
-       * @return This builder for chaining.
        */
       public Builder setCount(double value) {
         
@@ -21582,7 +21001,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double count = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearCount() {
         
@@ -21598,7 +21016,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean = 2;</code>
-       * @return The mean.
        */
       public double getMean() {
         return mean_;
@@ -21609,8 +21026,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean = 2;</code>
-       * @param value The mean to set.
-       * @return This builder for chaining.
        */
       public Builder setMean(double value) {
         
@@ -21624,7 +21039,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mean = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearMean() {
         
@@ -21640,7 +21054,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double median = 3;</code>
-       * @return The median.
        */
       public double getMedian() {
         return median_;
@@ -21651,8 +21064,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double median = 3;</code>
-       * @param value The median to set.
-       * @return This builder for chaining.
        */
       public Builder setMedian(double value) {
         
@@ -21666,7 +21077,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double median = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearMedian() {
         
@@ -21682,7 +21092,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mode = 4;</code>
-       * @return The mode.
        */
       public double getMode() {
         return mode_;
@@ -21693,8 +21102,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mode = 4;</code>
-       * @param value The mode to set.
-       * @return This builder for chaining.
        */
       public Builder setMode(double value) {
         
@@ -21708,7 +21115,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double mode = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearMode() {
         
@@ -21724,7 +21130,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double variance = 5;</code>
-       * @return The variance.
        */
       public double getVariance() {
         return variance_;
@@ -21735,8 +21140,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double variance = 5;</code>
-       * @param value The variance to set.
-       * @return This builder for chaining.
        */
       public Builder setVariance(double value) {
         
@@ -21750,7 +21153,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double variance = 5;</code>
-       * @return This builder for chaining.
        */
       public Builder clearVariance() {
         
@@ -21766,7 +21168,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double min = 6;</code>
-       * @return The min.
        */
       public double getMin() {
         return min_;
@@ -21777,8 +21178,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double min = 6;</code>
-       * @param value The min to set.
-       * @return This builder for chaining.
        */
       public Builder setMin(double value) {
         
@@ -21792,7 +21191,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double min = 6;</code>
-       * @return This builder for chaining.
        */
       public Builder clearMin() {
         
@@ -21808,7 +21206,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double max = 7;</code>
-       * @return The max.
        */
       public double getMax() {
         return max_;
@@ -21819,8 +21216,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double max = 7;</code>
-       * @param value The max to set.
-       * @return This builder for chaining.
        */
       public Builder setMax(double value) {
         
@@ -21834,7 +21229,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double max = 7;</code>
-       * @return This builder for chaining.
        */
       public Builder clearMax() {
         
@@ -21850,7 +21244,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double range = 8;</code>
-       * @return The range.
        */
       public double getRange() {
         return range_;
@@ -21861,8 +21254,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double range = 8;</code>
-       * @param value The range to set.
-       * @return This builder for chaining.
        */
       public Builder setRange(double value) {
         
@@ -21876,7 +21267,6 @@ public final class RedvoxApi1000 {
        * </pre>
        *
        * <code>double range = 8;</code>
-       * @return This builder for chaining.
        */
       public Builder clearRange() {
         
@@ -22038,7 +21428,7 @@ public final class RedvoxApi1000 {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -22167,7 +21557,7 @@ public final class RedvoxApi1000 {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031src/redvox-api-1000.proto\"\252\013\n\020RedvoxPa" +
+      "\n\031src/redvox-api-1000.proto\"\320\013\n\020RedvoxPa" +
       "cket1000\022\013\n\003api\030\001 \001(\r\022\022\n\nauth_email\030\002 \001(" +
       "\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016firebase_token\030" +
       "\004 \001(\t\022\021\n\tdevice_id\030\005 \001(\t\022\023\n\013device_uuid\030" +
@@ -22198,84 +21588,93 @@ public final class RedvoxApi1000 {
       "cope_channel\030% \001(\0132\013.XyzChannel\022)\n\024magne" +
       "tometer_channel\030& \001(\0132\013.XyzChannel\022%\n\rli" +
       "ght_channel\030\' \001(\0132\016.SingleChannel\022(\n\020inf" +
-      "rared_channel\030( \001(\0132\016.SingleChannel\0221\n\010m" +
-      "etadata\030) \003(\0132\037.RedvoxPacket1000.Metadat" +
-      "aEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"/\n\013NetworkType\022\010\n\004WIFI\020\000" +
-      "\022\014\n\010CELLULAR\020\001\022\010\n\004NONE\020\002\"6\n\006OsType\022\013\n\007AN" +
-      "DROID\020\000\022\007\n\003IOS\020\001\022\t\n\005LINUX\020\002\022\013\n\007WINDOWS\020\003" +
-      "\"\210\002\n\021MicrophoneChannel\022\032\n\022sensor_descrip" +
-      "tion\030\001 \001(\t\022\032\n\022first_sample_ts_us\030\002 \001(\001\022\026" +
-      "\n\016sample_rate_hz\030\003 \001(\001\022\017\n\007samples\030\004 \003(\001\022" +
-      "-\n\021sample_statistics\030\005 \001(\0132\022.SummaryStat" +
-      "istics\0222\n\010metadata\030\006 \003(\0132 .MicrophoneCha" +
-      "nnel.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\263\002\n\rSingleCh" +
-      "annel\022\032\n\022sensor_description\030\001 \001(\t\022\033\n\023mea" +
-      "n_sample_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003" +
-      " \003(\001\022\017\n\007samples\030\004 \003(\001\0222\n\026sample_rate_sta" +
-      "tistics\030\005 \001(\0132\022.SummaryStatistics\022-\n\021sam" +
-      "ple_statistics\030\006 \001(\0132\022.SummaryStatistics" +
-      "\022.\n\010metadata\030\007 \003(\0132\034.SingleChannel.Metad" +
-      "ataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"\271\003\n\nXyzChannel\022\032\n\022sens" +
-      "or_description\030\001 \001(\t\022\033\n\023mean_sample_rate" +
-      "_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\021\n\tx_sam" +
-      "ples\030\004 \003(\001\022\021\n\ty_samples\030\005 \003(\001\022\021\n\tz_sampl" +
-      "es\030\006 \003(\001\0222\n\026sample_rate_statistics\030\007 \001(\013" +
-      "2\022.SummaryStatistics\022/\n\023x_sample_statist" +
-      "ics\030\010 \001(\0132\022.SummaryStatistics\022/\n\023y_sampl" +
-      "e_statistics\030\t \001(\0132\022.SummaryStatistics\022/" +
-      "\n\023z_sample_statistics\030\n \001(\0132\022.SummarySta" +
-      "tistics\022+\n\010metadata\030\013 \003(\0132\031.XyzChannel.M" +
-      "etadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\367\006\n\017LocationChanne" +
-      "l\022\032\n\022sensor_description\030\001 \001(\t\022\033\n\023mean_sa" +
-      "mple_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001" +
-      "\022\030\n\020latitude_samples\030\004 \003(\001\022\031\n\021longitude_" +
-      "samples\030\005 \003(\001\022\030\n\020altitude_samples\030\006 \003(\001\022" +
-      "\025\n\rspeed_samples\030\007 \003(\001\022\030\n\020accuracy_sampl" +
-      "es\030\010 \003(\001\022$\n\034location_permissions_granted" +
-      "\030\t \001(\010\022#\n\033location_services_requested\030\n " +
-      "\001(\010\022!\n\031location_services_enabled\030\013 \001(\010\022<" +
-      "\n\021location_provider\030\014 \001(\0162!.LocationChan" +
-      "nel.LocationProvider\0222\n\026sample_rate_stat" +
-      "istics\030\r \001(\0132\022.SummaryStatistics\0226\n\032lati" +
-      "tude_sample_statistics\030\016 \001(\0132\022.SummarySt" +
-      "atistics\0227\n\033longitude_sample_statistics\030" +
-      "\017 \001(\0132\022.SummaryStatistics\0226\n\032altitude_sa" +
-      "mple_statistics\030\020 \001(\0132\022.SummaryStatistic" +
-      "s\0223\n\027speed_sample_statistics\030\021 \001(\0132\022.Sum" +
-      "maryStatistics\0226\n\032accuracy_sample_statis" +
-      "tics\030\022 \001(\0132\022.SummaryStatistics\0220\n\010metada" +
-      "ta\030\023 \003(\0132\036.LocationChannel.MetadataEntry" +
-      "\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"<\n\020LocationProvider\022\010\n\004NONE\020\000\022" +
-      "\010\n\004USER\020\001\022\007\n\003GPS\020\002\022\013\n\007NETWORK\020\003\"\202\002\n\014Imag" +
-      "eChannel\022\032\n\022sensor_description\030\001 \001(\t\022\033\n\023" +
-      "mean_sample_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_u" +
-      "s\030\003 \003(\001\022\017\n\007samples\030\004 \003(\014\0222\n\026sample_rate_" +
-      "statistics\030\005 \001(\0132\022.SummaryStatistics\022-\n\010" +
-      "metadata\030\006 \003(\0132\033.ImageChannel.MetadataEn" +
-      "try\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"\356\001\n\021SummaryStatistics\022\r\n\005co" +
-      "unt\030\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\016\n\006median\030\003 \001(\001\022" +
-      "\014\n\004mode\030\004 \001(\001\022\020\n\010variance\030\005 \001(\001\022\013\n\003min\030\006" +
-      " \001(\001\022\013\n\003max\030\007 \001(\001\022\r\n\005range\030\010 \001(\001\0222\n\010meta" +
-      "data\030\t \003(\0132 .SummaryStatistics.MetadataE" +
+      "rared_channel\030( \001(\0132\016.SingleChannel\022$\n\ri" +
+      "mage_channel\030) \001(\0132\r.ImageChannel\0221\n\010met" +
+      "adata\030* \003(\0132\037.RedvoxPacket1000.MetadataE" +
       "ntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001b\006proto3"
+      "lue\030\002 \001(\t:\0028\001\"/\n\013NetworkType\022\010\n\004WIFI\020\000\022\014" +
+      "\n\010CELLULAR\020\001\022\010\n\004NONE\020\002\"6\n\006OsType\022\013\n\007ANDR" +
+      "OID\020\000\022\007\n\003IOS\020\001\022\t\n\005LINUX\020\002\022\013\n\007WINDOWS\020\003\"\210" +
+      "\002\n\021MicrophoneChannel\022\032\n\022sensor_descripti" +
+      "on\030\001 \001(\t\022\032\n\022first_sample_ts_us\030\002 \001(\001\022\026\n\016" +
+      "sample_rate_hz\030\003 \001(\001\022\017\n\007samples\030\004 \003(\001\022-\n" +
+      "\021sample_statistics\030\005 \001(\0132\022.SummaryStatis" +
+      "tics\0222\n\010metadata\030\006 \003(\0132 .MicrophoneChann" +
+      "el.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\263\002\n\rSingleChan" +
+      "nel\022\032\n\022sensor_description\030\001 \001(\t\022\033\n\023mean_" +
+      "sample_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003" +
+      "(\001\022\017\n\007samples\030\004 \003(\001\0222\n\026sample_rate_stati" +
+      "stics\030\005 \001(\0132\022.SummaryStatistics\022-\n\021sampl" +
+      "e_statistics\030\006 \001(\0132\022.SummaryStatistics\022." +
+      "\n\010metadata\030\007 \003(\0132\034.SingleChannel.Metadat" +
+      "aEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"\271\003\n\nXyzChannel\022\032\n\022sensor" +
+      "_description\030\001 \001(\t\022\033\n\023mean_sample_rate_h" +
+      "z\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\021\n\tx_sampl" +
+      "es\030\004 \003(\001\022\021\n\ty_samples\030\005 \003(\001\022\021\n\tz_samples" +
+      "\030\006 \003(\001\0222\n\026sample_rate_statistics\030\007 \001(\0132\022" +
+      ".SummaryStatistics\022/\n\023x_sample_statistic" +
+      "s\030\010 \001(\0132\022.SummaryStatistics\022/\n\023y_sample_" +
+      "statistics\030\t \001(\0132\022.SummaryStatistics\022/\n\023" +
+      "z_sample_statistics\030\n \001(\0132\022.SummaryStati" +
+      "stics\022+\n\010metadata\030\013 \003(\0132\031.XyzChannel.Met" +
+      "adataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\367\006\n\017LocationChannel\022" +
+      "\032\n\022sensor_description\030\001 \001(\t\022\033\n\023mean_samp" +
+      "le_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\030" +
+      "\n\020latitude_samples\030\004 \003(\001\022\031\n\021longitude_sa" +
+      "mples\030\005 \003(\001\022\030\n\020altitude_samples\030\006 \003(\001\022\025\n" +
+      "\rspeed_samples\030\007 \003(\001\022\030\n\020accuracy_samples" +
+      "\030\010 \003(\001\022$\n\034location_permissions_granted\030\t" +
+      " \001(\010\022#\n\033location_services_requested\030\n \001(" +
+      "\010\022!\n\031location_services_enabled\030\013 \001(\010\022<\n\021" +
+      "location_provider\030\014 \001(\0162!.LocationChanne" +
+      "l.LocationProvider\0222\n\026sample_rate_statis" +
+      "tics\030\r \001(\0132\022.SummaryStatistics\0226\n\032latitu" +
+      "de_sample_statistics\030\016 \001(\0132\022.SummaryStat" +
+      "istics\0227\n\033longitude_sample_statistics\030\017 " +
+      "\001(\0132\022.SummaryStatistics\0226\n\032altitude_samp" +
+      "le_statistics\030\020 \001(\0132\022.SummaryStatistics\022" +
+      "3\n\027speed_sample_statistics\030\021 \001(\0132\022.Summa" +
+      "ryStatistics\0226\n\032accuracy_sample_statisti" +
+      "cs\030\022 \001(\0132\022.SummaryStatistics\0220\n\010metadata" +
+      "\030\023 \003(\0132\036.LocationChannel.MetadataEntry\032/" +
+      "\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"<\n\020LocationProvider\022\010\n\004NONE\020\000\022\010\n" +
+      "\004USER\020\001\022\007\n\003GPS\020\002\022\013\n\007NETWORK\020\003\"\202\002\n\014ImageC" +
+      "hannel\022\032\n\022sensor_description\030\001 \001(\t\022\033\n\023me" +
+      "an_sample_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030" +
+      "\003 \003(\001\022\017\n\007samples\030\004 \003(\014\0222\n\026sample_rate_st" +
+      "atistics\030\005 \001(\0132\022.SummaryStatistics\022-\n\010me" +
+      "tadata\030\006 \003(\0132\033.ImageChannel.MetadataEntr" +
+      "y\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"\356\001\n\021SummaryStatistics\022\r\n\005coun" +
+      "t\030\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\016\n\006median\030\003 \001(\001\022\014\n" +
+      "\004mode\030\004 \001(\001\022\020\n\010variance\030\005 \001(\001\022\013\n\003min\030\006 \001" +
+      "(\001\022\013\n\003max\030\007 \001(\001\022\r\n\005range\030\010 \001(\001\0222\n\010metada" +
+      "ta\030\t \003(\0132 .SummaryStatistics.MetadataEnt" +
+      "ry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001b\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
+        }, assigner);
     internal_static_RedvoxPacket1000_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_RedvoxPacket1000_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RedvoxPacket1000_descriptor,
-        new java.lang.String[] { "Api", "AuthEmail", "AuthToken", "FirebaseToken", "DeviceId", "DeviceUuid", "DeviceMake", "DeviceModel", "DeviceOs", "DeviceOsVersion", "DeviceAppVersion", "DeviceTempC", "DeviceBatteryPercent", "NetworkType", "NetworkStrengthDb", "IsBackfilled", "IsPrivate", "IsMicScrambled", "UncompressedSizeBytes", "CompressedSizeBytes", "AuthServerUrl", "SynchServerUrl", "AcquisitionServerUrl", "PacketStartTsUsWall", "PacketStartTsUsMach", "PacketEndTsUsWall", "PacketEndTsUsMach", "ServerAcquisitionArrivalTsUs", "AppStartTsUsMach", "SynchParams", "BestLatencyUs", "BestOffsetUs", "MicrophoneChannel", "BarometerChannel", "LocationChannel", "AccelerometerChannel", "GyroscopeChannel", "MagnetometerChannel", "LightChannel", "InfraredChannel", "Metadata", });
+        new java.lang.String[] { "Api", "AuthEmail", "AuthToken", "FirebaseToken", "DeviceId", "DeviceUuid", "DeviceMake", "DeviceModel", "DeviceOs", "DeviceOsVersion", "DeviceAppVersion", "DeviceTempC", "DeviceBatteryPercent", "NetworkType", "NetworkStrengthDb", "IsBackfilled", "IsPrivate", "IsMicScrambled", "UncompressedSizeBytes", "CompressedSizeBytes", "AuthServerUrl", "SynchServerUrl", "AcquisitionServerUrl", "PacketStartTsUsWall", "PacketStartTsUsMach", "PacketEndTsUsWall", "PacketEndTsUsMach", "ServerAcquisitionArrivalTsUs", "AppStartTsUsMach", "SynchParams", "BestLatencyUs", "BestOffsetUs", "MicrophoneChannel", "BarometerChannel", "LocationChannel", "AccelerometerChannel", "GyroscopeChannel", "MagnetometerChannel", "LightChannel", "InfraredChannel", "ImageChannel", "Metadata", });
     internal_static_RedvoxPacket1000_MetadataEntry_descriptor =
       internal_static_RedvoxPacket1000_descriptor.getNestedTypes().get(0);
     internal_static_RedvoxPacket1000_MetadataEntry_fieldAccessorTable = new
