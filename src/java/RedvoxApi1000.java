@@ -21,9 +21,9 @@ public final class RedvoxApi1000 {
      * API Version
      * </pre>
      *
-     * <code>uint32 api = 1;</code>
+     * <code>double api = 1;</code>
      */
-    int getApi();
+    double getApi();
 
     /**
      * <pre>
@@ -740,7 +740,7 @@ public final class RedvoxApi1000 {
       super(builder);
     }
     private RedvoxPacket1000() {
-      api_ = 0;
+      api_ = 0D;
       authEmail_ = "";
       authToken_ = "";
       firebaseToken_ = "";
@@ -799,9 +799,9 @@ public final class RedvoxApi1000 {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 9: {
 
-              api_ = input.readUInt32();
+              api_ = input.readDouble();
               break;
             }
             case 18: {
@@ -1400,15 +1400,15 @@ public final class RedvoxApi1000 {
     private int bitField0_;
     private int bitField1_;
     public static final int API_FIELD_NUMBER = 1;
-    private int api_;
+    private double api_;
     /**
      * <pre>
      * API Version
      * </pre>
      *
-     * <code>uint32 api = 1;</code>
+     * <code>double api = 1;</code>
      */
-    public int getApi() {
+    public double getApi() {
       return api_;
     }
 
@@ -2613,8 +2613,8 @@ public final class RedvoxApi1000 {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (api_ != 0) {
-        output.writeUInt32(1, api_);
+      if (api_ != 0D) {
+        output.writeDouble(1, api_);
       }
       if (!getAuthEmailBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, authEmail_);
@@ -2755,9 +2755,9 @@ public final class RedvoxApi1000 {
       if (size != -1) return size;
 
       size = 0;
-      if (api_ != 0) {
+      if (api_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, api_);
+          .computeDoubleSize(1, api_);
       }
       if (!getAuthEmailBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, authEmail_);
@@ -2940,8 +2940,10 @@ public final class RedvoxApi1000 {
       RedvoxApi1000.RedvoxPacket1000 other = (RedvoxApi1000.RedvoxPacket1000) obj;
 
       boolean result = true;
-      result = result && (getApi()
-          == other.getApi());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getApi())
+          == java.lang.Double.doubleToLongBits(
+              other.getApi()));
       result = result && getAuthEmail()
           .equals(other.getAuthEmail());
       result = result && getAuthToken()
@@ -3087,7 +3089,8 @@ public final class RedvoxApi1000 {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + API_FIELD_NUMBER;
-      hash = (53 * hash) + getApi();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getApi()));
       hash = (37 * hash) + AUTH_EMAIL_FIELD_NUMBER;
       hash = (53 * hash) + getAuthEmail().hashCode();
       hash = (37 * hash) + AUTH_TOKEN_FIELD_NUMBER;
@@ -3367,7 +3370,7 @@ public final class RedvoxApi1000 {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        api_ = 0;
+        api_ = 0D;
 
         authEmail_ = "";
 
@@ -3649,7 +3652,7 @@ public final class RedvoxApi1000 {
 
       public Builder mergeFrom(RedvoxApi1000.RedvoxPacket1000 other) {
         if (other == RedvoxApi1000.RedvoxPacket1000.getDefaultInstance()) return this;
-        if (other.getApi() != 0) {
+        if (other.getApi() != 0D) {
           setApi(other.getApi());
         }
         if (!other.getAuthEmail().isEmpty()) {
@@ -3824,15 +3827,15 @@ public final class RedvoxApi1000 {
       private int bitField0_;
       private int bitField1_;
 
-      private int api_ ;
+      private double api_ ;
       /**
        * <pre>
        * API Version
        * </pre>
        *
-       * <code>uint32 api = 1;</code>
+       * <code>double api = 1;</code>
        */
-      public int getApi() {
+      public double getApi() {
         return api_;
       }
       /**
@@ -3840,9 +3843,9 @@ public final class RedvoxApi1000 {
        * API Version
        * </pre>
        *
-       * <code>uint32 api = 1;</code>
+       * <code>double api = 1;</code>
        */
-      public Builder setApi(int value) {
+      public Builder setApi(double value) {
         
         api_ = value;
         onChanged();
@@ -3853,11 +3856,11 @@ public final class RedvoxApi1000 {
        * API Version
        * </pre>
        *
-       * <code>uint32 api = 1;</code>
+       * <code>double api = 1;</code>
        */
       public Builder clearApi() {
         
-        api_ = 0;
+        api_ = 0D;
         onChanged();
         return this;
       }
@@ -23203,7 +23206,7 @@ public final class RedvoxApi1000 {
   static {
     java.lang.String[] descriptorData = {
       "\n\031src/redvox-api-1000.proto\"\320\013\n\020RedvoxPa" +
-      "cket1000\022\013\n\003api\030\001 \001(\r\022\022\n\nauth_email\030\002 \001(" +
+      "cket1000\022\013\n\003api\030\001 \001(\001\022\022\n\nauth_email\030\002 \001(" +
       "\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016firebase_token\030" +
       "\004 \001(\t\022\021\n\tdevice_id\030\005 \001(\t\022\023\n\013device_uuid\030" +
       "\006 \001(\t\022\023\n\013device_make\030\007 \001(\t\022\024\n\014device_mod" +

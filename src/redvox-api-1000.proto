@@ -18,7 +18,7 @@ message RedvoxPacket1000 {
     }
 
     // API Version
-    uint32 api = 1;                                     // The API version, should always be 1000
+    double api = 1;                                     // The API version, should always be 1000
 
     // User information
     string auth_email = 2;                              // The e-mail the user used to authenticate with

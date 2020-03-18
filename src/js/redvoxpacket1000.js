@@ -75,7 +75,7 @@ proto.RedvoxPacket1000.prototype.toObject = function(opt_includeInstance) {
  */
 proto.RedvoxPacket1000.toObject = function(includeInstance, msg) {
   var f, obj = {
-    api: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    api: +jspb.Message.getFieldWithDefault(msg, 1, 0.0),
     authEmail: jspb.Message.getFieldWithDefault(msg, 2, ""),
     authToken: jspb.Message.getFieldWithDefault(msg, 3, ""),
     firebaseToken: jspb.Message.getFieldWithDefault(msg, 4, ""),
@@ -154,7 +154,7 @@ proto.RedvoxPacket1000.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readUint32());
+      var value = /** @type {number} */ (reader.readDouble());
       msg.setApi(value);
       break;
     case 2:
@@ -362,8 +362,8 @@ proto.RedvoxPacket1000.prototype.serializeBinary = function() {
 proto.RedvoxPacket1000.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getApi();
-  if (f !== 0) {
-    writer.writeUint32(
+  if (f !== 0.0) {
+    writer.writeDouble(
       1,
       f
     );
@@ -684,17 +684,17 @@ proto.RedvoxPacket1000.OsType = {
 };
 
 /**
- * optional uint32 api = 1;
+ * optional double api = 1;
  * @return {number}
  */
 proto.RedvoxPacket1000.prototype.getApi = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 1, 0.0));
 };
 
 
 /** @param {number} value */
 proto.RedvoxPacket1000.prototype.setApi = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value);
+  jspb.Message.setProto3FloatField(this, 1, value);
 };
 
 

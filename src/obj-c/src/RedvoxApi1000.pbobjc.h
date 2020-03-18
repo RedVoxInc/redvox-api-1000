@@ -205,7 +205,7 @@ typedef GPB_ENUM(RedvoxPacket1000_FieldNumber) {
 @interface RedvoxPacket1000 : GPBMessage
 
 /** API Version */
-@property(nonatomic, readwrite) uint32_t api;
+@property(nonatomic, readwrite) double api;
 
 /** User information */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *authEmail;

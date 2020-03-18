@@ -93,7 +93,6 @@ static GPBFileDescriptor *RedvoxApi1000Root_FileDescriptor(void) {
 
 typedef struct RedvoxPacket1000__storage_ {
   uint32_t _has_storage_[2];
-  uint32_t api;
   RedvoxPacket1000_OsType deviceOs;
   RedvoxPacket1000_NetworkType networkType;
   NSString *authEmail;
@@ -119,6 +118,7 @@ typedef struct RedvoxPacket1000__storage_ {
   SingleChannel *infraredChannel;
   ImageChannel *imageChannel;
   NSMutableDictionary *metadata;
+  double api;
   double deviceTempC;
   double deviceBatteryPercent;
   double networkStrengthDb;
@@ -147,7 +147,7 @@ typedef struct RedvoxPacket1000__storage_ {
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, api),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeUInt32,
+        .dataType = GPBDataTypeDouble,
       },
       {
         .name = "authEmail",

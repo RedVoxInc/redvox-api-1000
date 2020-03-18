@@ -105,7 +105,7 @@ class RedvoxPacket1000(google___protobuf___message___Message):
         else:
             def ClearField(self, field_name: typing_extensions___Literal[u"key",b"key",u"value",b"value"]) -> None: ...
 
-    api = ... # type: builtin___int
+    api = ... # type: builtin___float
     auth_email = ... # type: typing___Text
     auth_token = ... # type: typing___Text
     firebase_token = ... # type: typing___Text
@@ -170,7 +170,7 @@ class RedvoxPacket1000(google___protobuf___message___Message):
 
     def __init__(self,
         *,
-        api : typing___Optional[builtin___int] = None,
+        api : typing___Optional[builtin___float] = None,
         auth_email : typing___Optional[typing___Text] = None,
         auth_token : typing___Optional[typing___Text] = None,
         firebase_token : typing___Optional[typing___Text] = None,
