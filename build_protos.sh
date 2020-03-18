@@ -5,7 +5,16 @@ if ! [[ -x "$(command -v protoc)" ]]; then
   exit 1
 fi
 
-protoc  --java_out=./src/java \
-        --python_out=./src/python --mypy_out=./src/python \
-        --objc_out=./src/obj-c \
-        --js_out=./src/js src/redvox-api-1000.proto
+SRC=src/redvox_api1000/redvox_api_1000.proto
+
+OUT=src/generated
+JAVA_OUT=${OUT}/java
+PYTHON_OUT=${OUT}/python
+OBJ_C_OUT=${OUT}/obj_c
+JS_OUT=${OUT}/js
+
+protoc  --java_out=${JAVA_OUT}                                  \
+        --python_out=${PYTHON_OUT} --mypy_out=${PYTHON_OUT}     \
+        --objc_out=${OBJ_C_OUT}                                 \
+        --js_out=${JS_OUT}                                      \
+        ${SRC}

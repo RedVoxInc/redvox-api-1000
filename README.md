@@ -23,7 +23,28 @@ Higher level SDKs are provided for easier reading, editing, and writing of RedVo
 
 ### Descriptions of API 1000 
 
-API 1000 (or API M for "millenary") provides a type safe way of serializing RedVox data.
+API 1000 (or API M for "millenary") provides a type safe way of serializing RedVox data. It roughly consists of three types of data. Typed metadata describing the sensor and sensor channels, typed sensor payload data and timestamps, and untyped metadata that can be used for extending the protocol. 
+
+Data in API 1000 files should follow the following conventions:
+
+* All numeric types are represented as 64-bit floating point values
+* All timestamps should be recorded as the number of microseconds since the [epoch](https://en.wikipedia.org/wiki/Unix_time)
+* Enumerations are provided for fields that have a finite set of values
+* Sensor channels are divided into the following types: `MicrophoneChannel`, `SingleChannel`, `LocationChannel`, `XyzChannel`, and `ImageChannel`.
+
+#### Description of Packet Level Metadata
+
+Packet level metadata is used to provide information about state of the sensor. The following types of packet level metadata are utilized in API M.
+
+##### User Information
+
+Fields relating to the user account that owns the data and various authentication tokens.
+
+##### Device Information
+
+Fields relating to device specific IDs, make/model, OS, app, battery, temperature, and network information.
+
+ 
 
 ### RedVox Data Acquisition Service Protocol
 

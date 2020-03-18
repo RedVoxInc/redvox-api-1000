@@ -7,8 +7,8 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.AcquisitionResponse');
-goog.provide('proto.AcquisitionResponse.ResponseType');
+goog.provide('proto.redvox_api1000.AcquisitionResponse');
+goog.provide('proto.redvox_api1000.AcquisitionResponse.ResponseType');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -25,12 +25,12 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.AcquisitionResponse = function(opt_data) {
+proto.redvox_api1000.AcquisitionResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.AcquisitionResponse, jspb.Message);
+goog.inherits(proto.redvox_api1000.AcquisitionResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.AcquisitionResponse.displayName = 'proto.AcquisitionResponse';
+  proto.redvox_api1000.AcquisitionResponse.displayName = 'proto.redvox_api1000.AcquisitionResponse';
 }
 
 
@@ -45,8 +45,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.AcquisitionResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.AcquisitionResponse.toObject(opt_includeInstance, this);
+proto.redvox_api1000.AcquisitionResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.redvox_api1000.AcquisitionResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -55,11 +55,11 @@ proto.AcquisitionResponse.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.AcquisitionResponse} msg The msg instance to transform.
+ * @param {!proto.redvox_api1000.AcquisitionResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.AcquisitionResponse.toObject = function(includeInstance, msg) {
+proto.redvox_api1000.AcquisitionResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     responseType: jspb.Message.getFieldWithDefault(msg, 1, 0),
     checksum: jspb.Message.getFieldWithDefault(msg, 2, 0),
@@ -78,23 +78,23 @@ proto.AcquisitionResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.AcquisitionResponse}
+ * @return {!proto.redvox_api1000.AcquisitionResponse}
  */
-proto.AcquisitionResponse.deserializeBinary = function(bytes) {
+proto.redvox_api1000.AcquisitionResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.AcquisitionResponse;
-  return proto.AcquisitionResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.redvox_api1000.AcquisitionResponse;
+  return proto.redvox_api1000.AcquisitionResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.AcquisitionResponse} msg The message object to deserialize into.
+ * @param {!proto.redvox_api1000.AcquisitionResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.AcquisitionResponse}
+ * @return {!proto.redvox_api1000.AcquisitionResponse}
  */
-proto.AcquisitionResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.redvox_api1000.AcquisitionResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -102,7 +102,7 @@ proto.AcquisitionResponse.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {!proto.AcquisitionResponse.ResponseType} */ (reader.readEnum());
+      var value = /** @type {!proto.redvox_api1000.AcquisitionResponse.ResponseType} */ (reader.readEnum());
       msg.setResponseType(value);
       break;
     case 2:
@@ -130,9 +130,9 @@ proto.AcquisitionResponse.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.AcquisitionResponse.prototype.serializeBinary = function() {
+proto.redvox_api1000.AcquisitionResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.AcquisitionResponse.serializeBinaryToWriter(this, writer);
+  proto.redvox_api1000.AcquisitionResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -140,11 +140,11 @@ proto.AcquisitionResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.AcquisitionResponse} message
+ * @param {!proto.redvox_api1000.AcquisitionResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.AcquisitionResponse.serializeBinaryToWriter = function(message, writer) {
+proto.redvox_api1000.AcquisitionResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getResponseType();
   if (f !== 0.0) {
@@ -180,7 +180,7 @@ proto.AcquisitionResponse.serializeBinaryToWriter = function(message, writer) {
 /**
  * @enum {number}
  */
-proto.AcquisitionResponse.ResponseType = {
+proto.redvox_api1000.AcquisitionResponse.ResponseType = {
   OK: 0,
   AUTH_ERROR: 1,
   DATA_ERROR: 2,
@@ -189,15 +189,15 @@ proto.AcquisitionResponse.ResponseType = {
 
 /**
  * optional ResponseType response_type = 1;
- * @return {!proto.AcquisitionResponse.ResponseType}
+ * @return {!proto.redvox_api1000.AcquisitionResponse.ResponseType}
  */
-proto.AcquisitionResponse.prototype.getResponseType = function() {
-  return /** @type {!proto.AcquisitionResponse.ResponseType} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+proto.redvox_api1000.AcquisitionResponse.prototype.getResponseType = function() {
+  return /** @type {!proto.redvox_api1000.AcquisitionResponse.ResponseType} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
-/** @param {!proto.AcquisitionResponse.ResponseType} value */
-proto.AcquisitionResponse.prototype.setResponseType = function(value) {
+/** @param {!proto.redvox_api1000.AcquisitionResponse.ResponseType} value */
+proto.redvox_api1000.AcquisitionResponse.prototype.setResponseType = function(value) {
   jspb.Message.setProto3EnumField(this, 1, value);
 };
 
@@ -206,13 +206,13 @@ proto.AcquisitionResponse.prototype.setResponseType = function(value) {
  * optional int64 checksum = 2;
  * @return {number}
  */
-proto.AcquisitionResponse.prototype.getChecksum = function() {
+proto.redvox_api1000.AcquisitionResponse.prototype.getChecksum = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /** @param {number} value */
-proto.AcquisitionResponse.prototype.setChecksum = function(value) {
+proto.redvox_api1000.AcquisitionResponse.prototype.setChecksum = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -221,13 +221,13 @@ proto.AcquisitionResponse.prototype.setChecksum = function(value) {
  * optional string details = 3;
  * @return {string}
  */
-proto.AcquisitionResponse.prototype.getDetails = function() {
+proto.redvox_api1000.AcquisitionResponse.prototype.getDetails = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.AcquisitionResponse.prototype.setDetails = function(value) {
+proto.redvox_api1000.AcquisitionResponse.prototype.setDetails = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -238,13 +238,13 @@ proto.AcquisitionResponse.prototype.setDetails = function(value) {
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.AcquisitionResponse.prototype.getResend = function() {
+proto.redvox_api1000.AcquisitionResponse.prototype.getResend = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 4, false));
 };
 
 
 /** @param {boolean} value */
-proto.AcquisitionResponse.prototype.setResend = function(value) {
+proto.redvox_api1000.AcquisitionResponse.prototype.setResend = function(value) {
   jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
