@@ -1,9 +1,13 @@
-syntax = "proto3";
+/**
+* This file contains the protobuf message definitions for RedVox API 1000 data.
+*/
 
+syntax = "proto3";
 package redvox_api1000;
 option java_package = "io.redvox.redvox_api1000";
 
 message RedvoxPacket1000 {
+    // Top level packet fields
     double api = 1;                                     // The API version, should always be 1000
     UserInformation user_information = 2;               // User information
     DeviceInformation device_information = 3;           // Device information
@@ -12,24 +16,30 @@ message RedvoxPacket1000 {
     SensorChannels sensor_channels = 6;                 // Sensor channels
     map<string, string> metadata = 7;                   // A map from string to string for including untyped metadata
 
+    // The rest of this message contains embedded message types
+
     message UserInformation {
-        string auth_email = 1;                              // The e-mail the user used to authenticate with
-        string auth_token = 2;                              // The JWT token used for authentication
-        string firebase_token = 3;                          // The assigned firebase token
+        string auth_email = 1;                          // The e-mail the user used to authenticate with
+        string auth_token = 2;                          // The JWT token used for authentication
+        string firebase_token = 3;                      // The assigned firebase token
     }
 
     message DeviceInformation {
-        string device_id = 1;                               // The user selectable device id
-        string device_uuid = 2;                             // The app provided UUID
-        string device_make = 3;                             // Make of the device
-        string device_model = 4;                            // Model of the device
-        OsType device_os = 5;                               // OS of the device
-        string device_os_version = 6;                       // OS version of the device
-        string device_app_version = 7;                      // App version on the device
-        double device_temp_c = 8;                           // Temperature of the device in degrees centigrade
-        double device_battery_percent = 9;                  // Device battery level as a percentage between 0% and 100%
-        NetworkType network_type = 10;                      // Type of network connection
-        double network_strength_db = 11;                    // A value representing the strength of the network connection
+        string device_id = 1;                           // The user selectable device id
+        string device_uuid = 2;                         // The app provided UUID
+        string device_make = 3;                         // Make of the device
+        string device_model = 4;                        // Model of the device
+        OsType device_os = 5;                           // OS of the device
+        string device_os_version = 6;                   // OS version of the device
+        string device_app_version = 7;                  // App version on the device
+        AppSettings app_settings = 8;
+        NetworkType network_type = 9;                   // Type of network connection
+        SummaryStatistics network_strength_db = 10;     // A value representing the strength of the network connection
+        SummaryStatistics device_temp_c = 11;           // Temperature of the device in degrees centigrade
+        SummaryStatistics device_battery_percent = 12;  // Device battery level as a percentage between 0% and 100%
+        SummaryStatistics available_ram_bytes = 13;
+        SummaryStatistics available_disk_bytes = 14;
+        SummaryStatistics cpu_utilization_bytes = 15;
 
         enum NetworkType {
             WIFI = 0;
@@ -42,6 +52,52 @@ message RedvoxPacket1000 {
             IOS = 1;
             LINUX = 2;
             WINDOWS = 3;
+        }
+
+        message AppSettings {
+            AudioSamplingRate audio_sampling_rate = 1;
+            AudioSourceTuning audio_source_tuning = 2;
+            repeated InputSensor additional_input_sensors = 3;
+            bool automatically_record = 4;
+            bool launch_at_power_up = 5;
+            string redvox_id = 6;
+            bool push_to_server = 7;
+            bool publish_data_as_private = 8;
+            bool scrambled_voice_data = 9;
+            bool provide_backfill = 10;
+            bool use_custom_time_sync_server = 11;
+            string time_synch_server_url = 12;
+            bool use_custom_data_server = 13;
+            string data_server_url = 14;
+            bool auto_delete_data_files = 15;
+            double storage_space_allowance = 16;
+            bool use_sd_card_for_data_storage = 17;
+            bool use_location_services = 18;
+            double use_latitude = 19;
+            double use_longitude = 20;
+
+            enum AudioSamplingRate {
+                HZ_80 = 0;
+                HZ_800 = 1;
+                HZ_8000 = 2;
+            }
+
+            enum AudioSourceTuning {
+                INFRASOUND = 0;
+                LOW_AUDIO = 1;
+                AUDIO = 2;
+            }
+
+            enum InputSensor {
+                BAROMETER = 0;
+                ACCELEROMETER = 1;
+                ACCELEROMETER_FAST = 2;
+                MAGNETOMETER = 3;
+                MAGNETOMETER_FAST = 4;
+                GYROSCOPE = 5;
+                GYROSCOPE_FAST = 6;
+                LUMINOSITY = 7;
+            }
         }
     }
 
@@ -144,18 +200,18 @@ message RedvoxPacket1000 {
             SummaryStatistics sample_rate_statistics = 5;       // Statistics for sample timestamps
             map<string, string> metadata = 6;                   // A map from string to string for including untyped metadata
         }
+    }
 
-        message SummaryStatistics {
-            double count = 1;                                   // The total count of values included in the statistics
-            double mean = 2;                                    // The mean of the values
-            double median = 3;                                  // The median of the values
-            double mode = 4;                                    // The mode of the values
-            double variance = 5;                                // The variance of the values
-            double min = 6;                                     // The minimum value
-            double max = 7;                                     // The maximum value
-            double range = 8;                                   // The range of the values
-            map<string, string> metadata = 9;                   // A map from string to string for including untyped metadata
-        }
+    message SummaryStatistics {
+        double count = 1;                                   // The total count of values included in the statistics
+        double mean = 2;                                    // The mean of the values
+        double median = 3;                                  // The median of the values
+        double mode = 4;                                    // The mode of the values
+        double variance = 5;                                // The variance of the values
+        double min = 6;                                     // The minimum value
+        double max = 7;                                     // The maximum value
+        double range = 8;                                   // The range of the values
+        map<string, string> metadata = 9;                   // A map from string to string for including untyped metadata
     }
 }
 

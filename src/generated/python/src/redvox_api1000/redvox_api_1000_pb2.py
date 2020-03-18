@@ -19,10 +19,108 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='redvox_api1000',
   syntax='proto3',
   serialized_options=_b('\n\030io.redvox.redvox_api1000'),
-  serialized_pb=_b('\n(src/redvox_api1000/redvox_api_1000.proto\x12\x0eredvox_api1000\"\xea,\n\x10RedvoxPacket1000\x12\x0b\n\x03\x61pi\x18\x01 \x01(\x01\x12J\n\x10user_information\x18\x02 \x01(\x0b\x32\x30.redvox_api1000.RedvoxPacket1000.UserInformation\x12N\n\x12\x64\x65vice_information\x18\x03 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.DeviceInformation\x12N\n\x12packet_information\x18\x04 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.PacketInformation\x12N\n\x12timing_information\x18\x05 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.TimingInformation\x12H\n\x0fsensor_channels\x18\x06 \x01(\x0b\x32/.redvox_api1000.RedvoxPacket1000.SensorChannels\x12@\n\x08metadata\x18\x07 \x03(\x0b\x32..redvox_api1000.RedvoxPacket1000.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1aQ\n\x0fUserInformation\x12\x12\n\nauth_email\x18\x01 \x01(\t\x12\x12\n\nauth_token\x18\x02 \x01(\t\x12\x16\n\x0e\x66irebase_token\x18\x03 \x01(\t\x1a\xfe\x03\n\x11\x44\x65viceInformation\x12\x11\n\tdevice_id\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65vice_uuid\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65vice_make\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x65vice_model\x18\x04 \x01(\t\x12L\n\tdevice_os\x18\x05 \x01(\x0e\x32\x39.redvox_api1000.RedvoxPacket1000.DeviceInformation.OsType\x12\x19\n\x11\x64\x65vice_os_version\x18\x06 \x01(\t\x12\x1a\n\x12\x64\x65vice_app_version\x18\x07 \x01(\t\x12\x15\n\rdevice_temp_c\x18\x08 \x01(\x01\x12\x1e\n\x16\x64\x65vice_battery_percent\x18\t \x01(\x01\x12T\n\x0cnetwork_type\x18\n \x01(\x0e\x32>.redvox_api1000.RedvoxPacket1000.DeviceInformation.NetworkType\x12\x1b\n\x13network_strength_db\x18\x0b \x01(\x01\"/\n\x0bNetworkType\x12\x08\n\x04WIFI\x10\x00\x12\x0c\n\x08\x43\x45LLULAR\x10\x01\x12\x08\n\x04NONE\x10\x02\"6\n\x06OsType\x12\x0b\n\x07\x41NDROID\x10\x00\x12\x07\n\x03IOS\x10\x01\x12\t\n\x05LINUX\x10\x02\x12\x0b\n\x07WINDOWS\x10\x03\x1aX\n\x11PacketInformation\x12\x15\n\ris_backfilled\x18\x01 \x01(\x08\x12\x12\n\nis_private\x18\x02 \x01(\x08\x12\x18\n\x10is_mic_scrambled\x18\x03 \x01(\x08\x1a\xa2\x02\n\x11TimingInformation\x12\x1f\n\x17packet_start_ts_us_wall\x18\x01 \x01(\x01\x12\x1f\n\x17packet_start_ts_us_mach\x18\x02 \x01(\x01\x12\x1d\n\x15packet_end_ts_us_wall\x18\x03 \x01(\x01\x12\x1d\n\x15packet_end_ts_us_mach\x18\x04 \x01(\x01\x12(\n server_acquisition_arrival_ts_us\x18\x05 \x01(\x01\x12\x1c\n\x14\x61pp_start_ts_us_mach\x18\x06 \x01(\x01\x12\x14\n\x0csynch_params\x18\x07 \x03(\x01\x12\x17\n\x0f\x62\x65st_latency_us\x18\x08 \x01(\x01\x12\x16\n\x0e\x62\x65st_offset_us\x18\t \x01(\x01\x1a\xfc \n\x0eSensorChannels\x12]\n\x12microphone_channel\x18\x01 \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel\x12X\n\x11\x62\x61rometer_channel\x18\x02 \x01(\x0b\x32=.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel\x12Y\n\x10location_channel\x18\x03 \x01(\x0b\x32?.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel\x12Y\n\x15\x61\x63\x63\x65lerometer_channel\x18\x04 \x01(\x0b\x32:.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel\x12U\n\x11gyroscope_channel\x18\x05 \x01(\x0b\x32:.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel\x12X\n\x14magnetometer_channel\x18\x06 \x01(\x0b\x32:.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel\x12T\n\rlight_channel\x18\x07 \x01(\x0b\x32=.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel\x12W\n\x10infrared_channel\x18\x08 \x01(\x0b\x32=.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel\x12S\n\rimage_channel\x18\t \x01(\x0b\x32<.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel\x1a\xe6\x02\n\x11MicrophoneChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1a\n\x12\x66irst_sample_ts_us\x18\x02 \x01(\x01\x12\x16\n\x0esample_rate_hz\x18\x03 \x01(\x01\x12\x0f\n\x07samples\x18\x04 \x03(\x01\x12\\\n\x11sample_statistics\x18\x05 \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics\x12\x61\n\x08metadata\x18\x06 \x03(\x0b\x32O.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\xc0\x03\n\rSingleChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x0f\n\x07samples\x18\x04 \x03(\x01\x12\x61\n\x16sample_rate_statistics\x18\x05 \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics\x12\\\n\x11sample_statistics\x18\x06 \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics\x12]\n\x08metadata\x18\x07 \x03(\x0b\x32K.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\xef\t\n\x0fLocationChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x18\n\x10latitude_samples\x18\x04 \x03(\x01\x12\x19\n\x11longitude_samples\x18\x05 \x03(\x01\x12\x18\n\x10\x61ltitude_samples\x18\x06 \x03(\x01\x12\x15\n\rspeed_samples\x18\x07 \x03(\x01\x12\x18\n\x10\x61\x63\x63uracy_samples\x18\x08 \x03(\x01\x12$\n\x1clocation_permissions_granted\x18\t \x01(\x08\x12#\n\x1blocation_services_requested\x18\n \x01(\x08\x12!\n\x19location_services_enabled\x18\x0b \x01(\x08\x12k\n\x11location_provider\x18\x0c \x01(\x0e\x32P.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider\x12\x61\n\x16sample_rate_statistics\x18\r \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics\x12\x65\n\x1alatitude_sample_statistics\x18\x0e \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics\x12\x66\n\x1blongitude_sample_statistics\x18\x0f \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics\x12\x65\n\x1a\x61ltitude_sample_statistics\x18\x10 \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics\x12\x62\n\x17speed_sample_statistics\x18\x11 \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics\x12\x65\n\x1a\x61\x63\x63uracy_sample_statistics\x18\x12 \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics\x12_\n\x08metadata\x18\x13 \x03(\x0b\x32M.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"<\n\x10LocationProvider\x12\x08\n\x04NONE\x10\x00\x12\x08\n\x04USER\x10\x01\x12\x07\n\x03GPS\x10\x02\x12\x0b\n\x07NETWORK\x10\x03\x1a\xa4\x05\n\nXyzChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x11\n\tx_samples\x18\x04 \x03(\x01\x12\x11\n\ty_samples\x18\x05 \x03(\x01\x12\x11\n\tz_samples\x18\x06 \x03(\x01\x12\x61\n\x16sample_rate_statistics\x18\x07 \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics\x12^\n\x13x_sample_statistics\x18\x08 \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics\x12^\n\x13y_sample_statistics\x18\t \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics\x12^\n\x13z_sample_statistics\x18\n \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics\x12Z\n\x08metadata\x18\x0b \x03(\x0b\x32H.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\xe0\x02\n\x0cImageChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x0f\n\x07samples\x18\x04 \x03(\x0c\x12\x61\n\x16sample_rate_statistics\x18\x05 \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics\x12\\\n\x08metadata\x18\x06 \x03(\x0b\x32J.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x9d\x02\n\x11SummaryStatistics\x12\r\n\x05\x63ount\x18\x01 \x01(\x01\x12\x0c\n\x04mean\x18\x02 \x01(\x01\x12\x0e\n\x06median\x18\x03 \x01(\x01\x12\x0c\n\x04mode\x18\x04 \x01(\x01\x12\x10\n\x08variance\x18\x05 \x01(\x01\x12\x0b\n\x03min\x18\x06 \x01(\x01\x12\x0b\n\x03max\x18\x07 \x01(\x01\x12\r\n\x05range\x18\x08 \x01(\x01\x12\x61\n\x08metadata\x18\t \x03(\x0b\x32O.redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"M\n\x12\x41\x63quisitionRequest\x12%\n\x1d\x63ompressed_redvox_packet_1000\x18\x01 \x01(\x0c\x12\x10\n\x08\x63hecksum\x18\x02 \x01(\x03\"\xda\x01\n\x13\x41\x63quisitionResponse\x12G\n\rresponse_type\x18\x01 \x01(\x0e\x32\x30.redvox_api1000.AcquisitionResponse.ResponseType\x12\x10\n\x08\x63hecksum\x18\x02 \x01(\x03\x12\x0f\n\x07\x64\x65tails\x18\x03 \x01(\t\x12\x0e\n\x06resend\x18\x04 \x01(\x08\"G\n\x0cResponseType\x12\x06\n\x02OK\x10\x00\x12\x0e\n\nAUTH_ERROR\x10\x01\x12\x0e\n\nDATA_ERROR\x10\x02\x12\x0f\n\x0bOTHER_ERROR\x10\x03\x42\x1a\n\x18io.redvox.redvox_api1000b\x06proto3')
+  serialized_pb=_b('\n(src/redvox_api1000/redvox_api_1000.proto\x12\x0eredvox_api1000\"\xd9\x37\n\x10RedvoxPacket1000\x12\x0b\n\x03\x61pi\x18\x01 \x01(\x01\x12J\n\x10user_information\x18\x02 \x01(\x0b\x32\x30.redvox_api1000.RedvoxPacket1000.UserInformation\x12N\n\x12\x64\x65vice_information\x18\x03 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.DeviceInformation\x12N\n\x12packet_information\x18\x04 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.PacketInformation\x12N\n\x12timing_information\x18\x05 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.TimingInformation\x12H\n\x0fsensor_channels\x18\x06 \x01(\x0b\x32/.redvox_api1000.RedvoxPacket1000.SensorChannels\x12@\n\x08metadata\x18\x07 \x03(\x0b\x32..redvox_api1000.RedvoxPacket1000.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1aQ\n\x0fUserInformation\x12\x12\n\nauth_email\x18\x01 \x01(\t\x12\x12\n\nauth_token\x18\x02 \x01(\t\x12\x16\n\x0e\x66irebase_token\x18\x03 \x01(\t\x1a\xce\x10\n\x11\x44\x65viceInformation\x12\x11\n\tdevice_id\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65vice_uuid\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65vice_make\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x65vice_model\x18\x04 \x01(\t\x12L\n\tdevice_os\x18\x05 \x01(\x0e\x32\x39.redvox_api1000.RedvoxPacket1000.DeviceInformation.OsType\x12\x19\n\x11\x64\x65vice_os_version\x18\x06 \x01(\t\x12\x1a\n\x12\x64\x65vice_app_version\x18\x07 \x01(\t\x12T\n\x0c\x61pp_settings\x18\x08 \x01(\x0b\x32>.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings\x12T\n\x0cnetwork_type\x18\t \x01(\x0e\x32>.redvox_api1000.RedvoxPacket1000.DeviceInformation.NetworkType\x12O\n\x13network_strength_db\x18\n \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12I\n\rdevice_temp_c\x18\x0b \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12R\n\x16\x64\x65vice_battery_percent\x18\x0c \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12O\n\x13\x61vailable_ram_bytes\x18\r \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12P\n\x14\x61vailable_disk_bytes\x18\x0e \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12Q\n\x15\x63pu_utilization_bytes\x18\x0f \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x1a\xe5\x08\n\x0b\x41ppSettings\x12m\n\x13\x61udio_sampling_rate\x18\x01 \x01(\x0e\x32P.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate\x12m\n\x13\x61udio_source_tuning\x18\x02 \x01(\x0e\x32P.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning\x12l\n\x18\x61\x64\x64itional_input_sensors\x18\x03 \x03(\x0e\x32J.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor\x12\x1c\n\x14\x61utomatically_record\x18\x04 \x01(\x08\x12\x1a\n\x12launch_at_power_up\x18\x05 \x01(\x08\x12\x11\n\tredvox_id\x18\x06 \x01(\t\x12\x16\n\x0epush_to_server\x18\x07 \x01(\x08\x12\x1f\n\x17publish_data_as_private\x18\x08 \x01(\x08\x12\x1c\n\x14scrambled_voice_data\x18\t \x01(\x08\x12\x18\n\x10provide_backfill\x18\n \x01(\x08\x12#\n\x1buse_custom_time_sync_server\x18\x0b \x01(\x08\x12\x1d\n\x15time_synch_server_url\x18\x0c \x01(\t\x12\x1e\n\x16use_custom_data_server\x18\r \x01(\x08\x12\x17\n\x0f\x64\x61ta_server_url\x18\x0e \x01(\t\x12\x1e\n\x16\x61uto_delete_data_files\x18\x0f \x01(\x08\x12\x1f\n\x17storage_space_allowance\x18\x10 \x01(\x01\x12$\n\x1cuse_sd_card_for_data_storage\x18\x11 \x01(\x08\x12\x1d\n\x15use_location_services\x18\x12 \x01(\x08\x12\x14\n\x0cuse_latitude\x18\x13 \x01(\x01\x12\x15\n\ruse_longitude\x18\x14 \x01(\x01\"7\n\x11\x41udioSamplingRate\x12\t\n\x05HZ_80\x10\x00\x12\n\n\x06HZ_800\x10\x01\x12\x0b\n\x07HZ_8000\x10\x02\"=\n\x11\x41udioSourceTuning\x12\x0e\n\nINFRASOUND\x10\x00\x12\r\n\tLOW_AUDIO\x10\x01\x12\t\n\x05\x41UDIO\x10\x02\"\xa3\x01\n\x0bInputSensor\x12\r\n\tBAROMETER\x10\x00\x12\x11\n\rACCELEROMETER\x10\x01\x12\x16\n\x12\x41\x43\x43\x45LEROMETER_FAST\x10\x02\x12\x10\n\x0cMAGNETOMETER\x10\x03\x12\x15\n\x11MAGNETOMETER_FAST\x10\x04\x12\r\n\tGYROSCOPE\x10\x05\x12\x12\n\x0eGYROSCOPE_FAST\x10\x06\x12\x0e\n\nLUMINOSITY\x10\x07\"/\n\x0bNetworkType\x12\x08\n\x04WIFI\x10\x00\x12\x0c\n\x08\x43\x45LLULAR\x10\x01\x12\x08\n\x04NONE\x10\x02\"6\n\x06OsType\x12\x0b\n\x07\x41NDROID\x10\x00\x12\x07\n\x03IOS\x10\x01\x12\t\n\x05LINUX\x10\x02\x12\x0b\n\x07WINDOWS\x10\x03\x1aX\n\x11PacketInformation\x12\x15\n\ris_backfilled\x18\x01 \x01(\x08\x12\x12\n\nis_private\x18\x02 \x01(\x08\x12\x18\n\x10is_mic_scrambled\x18\x03 \x01(\x08\x1a\xa2\x02\n\x11TimingInformation\x12\x1f\n\x17packet_start_ts_us_wall\x18\x01 \x01(\x01\x12\x1f\n\x17packet_start_ts_us_mach\x18\x02 \x01(\x01\x12\x1d\n\x15packet_end_ts_us_wall\x18\x03 \x01(\x01\x12\x1d\n\x15packet_end_ts_us_mach\x18\x04 \x01(\x01\x12(\n server_acquisition_arrival_ts_us\x18\x05 \x01(\x01\x12\x1c\n\x14\x61pp_start_ts_us_mach\x18\x06 \x01(\x01\x12\x14\n\x0csynch_params\x18\x07 \x03(\x01\x12\x17\n\x0f\x62\x65st_latency_us\x18\x08 \x01(\x01\x12\x16\n\x0e\x62\x65st_offset_us\x18\t \x01(\x01\x1a\x8a\x1d\n\x0eSensorChannels\x12]\n\x12microphone_channel\x18\x01 \x01(\x0b\x32\x41.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel\x12X\n\x11\x62\x61rometer_channel\x18\x02 \x01(\x0b\x32=.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel\x12Y\n\x10location_channel\x18\x03 \x01(\x0b\x32?.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel\x12Y\n\x15\x61\x63\x63\x65lerometer_channel\x18\x04 \x01(\x0b\x32:.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel\x12U\n\x11gyroscope_channel\x18\x05 \x01(\x0b\x32:.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel\x12X\n\x14magnetometer_channel\x18\x06 \x01(\x0b\x32:.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel\x12T\n\rlight_channel\x18\x07 \x01(\x0b\x32=.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel\x12W\n\x10infrared_channel\x18\x08 \x01(\x0b\x32=.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel\x12S\n\rimage_channel\x18\t \x01(\x0b\x32<.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel\x1a\xd7\x02\n\x11MicrophoneChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1a\n\x12\x66irst_sample_ts_us\x18\x02 \x01(\x01\x12\x16\n\x0esample_rate_hz\x18\x03 \x01(\x01\x12\x0f\n\x07samples\x18\x04 \x03(\x01\x12M\n\x11sample_statistics\x18\x05 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12\x61\n\x08metadata\x18\x06 \x03(\x0b\x32O.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\xa2\x03\n\rSingleChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x0f\n\x07samples\x18\x04 \x03(\x01\x12R\n\x16sample_rate_statistics\x18\x05 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12M\n\x11sample_statistics\x18\x06 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12]\n\x08metadata\x18\x07 \x03(\x0b\x32K.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x95\t\n\x0fLocationChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x18\n\x10latitude_samples\x18\x04 \x03(\x01\x12\x19\n\x11longitude_samples\x18\x05 \x03(\x01\x12\x18\n\x10\x61ltitude_samples\x18\x06 \x03(\x01\x12\x15\n\rspeed_samples\x18\x07 \x03(\x01\x12\x18\n\x10\x61\x63\x63uracy_samples\x18\x08 \x03(\x01\x12$\n\x1clocation_permissions_granted\x18\t \x01(\x08\x12#\n\x1blocation_services_requested\x18\n \x01(\x08\x12!\n\x19location_services_enabled\x18\x0b \x01(\x08\x12k\n\x11location_provider\x18\x0c \x01(\x0e\x32P.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider\x12R\n\x16sample_rate_statistics\x18\r \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12V\n\x1alatitude_sample_statistics\x18\x0e \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12W\n\x1blongitude_sample_statistics\x18\x0f \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12V\n\x1a\x61ltitude_sample_statistics\x18\x10 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12S\n\x17speed_sample_statistics\x18\x11 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12V\n\x1a\x61\x63\x63uracy_sample_statistics\x18\x12 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12_\n\x08metadata\x18\x13 \x03(\x0b\x32M.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"<\n\x10LocationProvider\x12\x08\n\x04NONE\x10\x00\x12\x08\n\x04USER\x10\x01\x12\x07\n\x03GPS\x10\x02\x12\x0b\n\x07NETWORK\x10\x03\x1a\xe8\x04\n\nXyzChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x11\n\tx_samples\x18\x04 \x03(\x01\x12\x11\n\ty_samples\x18\x05 \x03(\x01\x12\x11\n\tz_samples\x18\x06 \x03(\x01\x12R\n\x16sample_rate_statistics\x18\x07 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12O\n\x13x_sample_statistics\x18\x08 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12O\n\x13y_sample_statistics\x18\t \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12O\n\x13z_sample_statistics\x18\n \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12Z\n\x08metadata\x18\x0b \x03(\x0b\x32H.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\xd1\x02\n\x0cImageChannel\x12\x1a\n\x12sensor_description\x18\x01 \x01(\t\x12\x1b\n\x13mean_sample_rate_hz\x18\x02 \x01(\x01\x12\x14\n\x0csample_ts_us\x18\x03 \x03(\x01\x12\x0f\n\x07samples\x18\x04 \x03(\x0c\x12R\n\x16sample_rate_statistics\x18\x05 \x01(\x0b\x32\x32.redvox_api1000.RedvoxPacket1000.SummaryStatistics\x12\\\n\x08metadata\x18\x06 \x03(\x0b\x32J.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x8e\x02\n\x11SummaryStatistics\x12\r\n\x05\x63ount\x18\x01 \x01(\x01\x12\x0c\n\x04mean\x18\x02 \x01(\x01\x12\x0e\n\x06median\x18\x03 \x01(\x01\x12\x0c\n\x04mode\x18\x04 \x01(\x01\x12\x10\n\x08variance\x18\x05 \x01(\x01\x12\x0b\n\x03min\x18\x06 \x01(\x01\x12\x0b\n\x03max\x18\x07 \x01(\x01\x12\r\n\x05range\x18\x08 \x01(\x01\x12R\n\x08metadata\x18\t \x03(\x0b\x32@.redvox_api1000.RedvoxPacket1000.SummaryStatistics.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"M\n\x12\x41\x63quisitionRequest\x12%\n\x1d\x63ompressed_redvox_packet_1000\x18\x01 \x01(\x0c\x12\x10\n\x08\x63hecksum\x18\x02 \x01(\x03\"\xda\x01\n\x13\x41\x63quisitionResponse\x12G\n\rresponse_type\x18\x01 \x01(\x0e\x32\x30.redvox_api1000.AcquisitionResponse.ResponseType\x12\x10\n\x08\x63hecksum\x18\x02 \x01(\x03\x12\x0f\n\x07\x64\x65tails\x18\x03 \x01(\t\x12\x0e\n\x06resend\x18\x04 \x01(\x08\"G\n\x0cResponseType\x12\x06\n\x02OK\x10\x00\x12\x0e\n\nAUTH_ERROR\x10\x01\x12\x0e\n\nDATA_ERROR\x10\x02\x12\x0f\n\x0bOTHER_ERROR\x10\x03\x42\x1a\n\x18io.redvox.redvox_api1000b\x06proto3')
 )
 
 
+
+_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_AUDIOSAMPLINGRATE = _descriptor.EnumDescriptor(
+  name='AudioSamplingRate',
+  full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='HZ_80', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HZ_800', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HZ_8000', index=2, number=2,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=2420,
+  serialized_end=2475,
+)
+_sym_db.RegisterEnumDescriptor(_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_AUDIOSAMPLINGRATE)
+
+_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_AUDIOSOURCETUNING = _descriptor.EnumDescriptor(
+  name='AudioSourceTuning',
+  full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='INFRASOUND', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='LOW_AUDIO', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='AUDIO', index=2, number=2,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=2477,
+  serialized_end=2538,
+)
+_sym_db.RegisterEnumDescriptor(_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_AUDIOSOURCETUNING)
+
+_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_INPUTSENSOR = _descriptor.EnumDescriptor(
+  name='InputSensor',
+  full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='BAROMETER', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ACCELEROMETER', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ACCELEROMETER_FAST', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MAGNETOMETER', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MAGNETOMETER_FAST', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GYROSCOPE', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GYROSCOPE_FAST', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='LUMINOSITY', index=7, number=7,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=2541,
+  serialized_end=2704,
+)
+_sym_db.RegisterEnumDescriptor(_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_INPUTSENSOR)
 
 _REDVOXPACKET1000_DEVICEINFORMATION_NETWORKTYPE = _descriptor.EnumDescriptor(
   name='NetworkType',
@@ -45,8 +143,8 @@ _REDVOXPACKET1000_DEVICEINFORMATION_NETWORKTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1090,
-  serialized_end=1137,
+  serialized_start=2706,
+  serialized_end=2753,
 )
 _sym_db.RegisterEnumDescriptor(_REDVOXPACKET1000_DEVICEINFORMATION_NETWORKTYPE)
 
@@ -75,8 +173,8 @@ _REDVOXPACKET1000_DEVICEINFORMATION_OSTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1139,
-  serialized_end=1193,
+  serialized_start=2755,
+  serialized_end=2809,
 )
 _sym_db.RegisterEnumDescriptor(_REDVOXPACKET1000_DEVICEINFORMATION_OSTYPE)
 
@@ -105,8 +203,8 @@ _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL_LOCATIONPROVIDER = _descriptor.
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=4417,
-  serialized_end=4477,
+  serialized_start=5898,
+  serialized_end=5958,
 )
 _sym_db.RegisterEnumDescriptor(_REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL_LOCATIONPROVIDER)
 
@@ -135,8 +233,8 @@ _ACQUISITIONRESPONSE_RESPONSETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=6028,
-  serialized_end=6099,
+  serialized_start=7419,
+  serialized_end=7490,
 )
 _sym_db.RegisterEnumDescriptor(_ACQUISITIONRESPONSE_RESPONSETYPE)
 
@@ -222,6 +320,172 @@ _REDVOXPACKET1000_USERINFORMATION = _descriptor.Descriptor(
   serialized_end=680,
 )
 
+_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS = _descriptor.Descriptor(
+  name='AppSettings',
+  full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='audio_sampling_rate', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.audio_sampling_rate', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='audio_source_tuning', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.audio_source_tuning', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='additional_input_sensors', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.additional_input_sensors', index=2,
+      number=3, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='automatically_record', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.automatically_record', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='launch_at_power_up', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.launch_at_power_up', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='redvox_id', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.redvox_id', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='push_to_server', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.push_to_server', index=6,
+      number=7, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='publish_data_as_private', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.publish_data_as_private', index=7,
+      number=8, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='scrambled_voice_data', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.scrambled_voice_data', index=8,
+      number=9, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='provide_backfill', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.provide_backfill', index=9,
+      number=10, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='use_custom_time_sync_server', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.use_custom_time_sync_server', index=10,
+      number=11, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='time_synch_server_url', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.time_synch_server_url', index=11,
+      number=12, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='use_custom_data_server', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.use_custom_data_server', index=12,
+      number=13, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='data_server_url', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.data_server_url', index=13,
+      number=14, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='auto_delete_data_files', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.auto_delete_data_files', index=14,
+      number=15, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='storage_space_allowance', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.storage_space_allowance', index=15,
+      number=16, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='use_sd_card_for_data_storage', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.use_sd_card_for_data_storage', index=16,
+      number=17, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='use_location_services', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.use_location_services', index=17,
+      number=18, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='use_latitude', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.use_latitude', index=18,
+      number=19, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='use_longitude', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.use_longitude', index=19,
+      number=20, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_AUDIOSAMPLINGRATE,
+    _REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_AUDIOSOURCETUNING,
+    _REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_INPUTSENSOR,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1579,
+  serialized_end=2704,
+)
+
 _REDVOXPACKET1000_DEVICEINFORMATION = _descriptor.Descriptor(
   name='DeviceInformation',
   full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation',
@@ -279,37 +543,65 @@ _REDVOXPACKET1000_DEVICEINFORMATION = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='device_temp_c', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.device_temp_c', index=7,
-      number=8, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
+      name='app_settings', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.app_settings', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='device_battery_percent', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.device_battery_percent', index=8,
-      number=9, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='network_type', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.network_type', index=9,
-      number=10, type=14, cpp_type=8, label=1,
+      name='network_type', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.network_type', index=8,
+      number=9, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='network_strength_db', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.network_strength_db', index=10,
-      number=11, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
+      name='network_strength_db', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.network_strength_db', index=9,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='device_temp_c', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.device_temp_c', index=10,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='device_battery_percent', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.device_battery_percent', index=11,
+      number=12, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='available_ram_bytes', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.available_ram_bytes', index=12,
+      number=13, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='available_disk_bytes', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.available_disk_bytes', index=13,
+      number=14, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='cpu_utilization_bytes', full_name='redvox_api1000.RedvoxPacket1000.DeviceInformation.cpu_utilization_bytes', index=14,
+      number=15, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS, ],
   enum_types=[
     _REDVOXPACKET1000_DEVICEINFORMATION_NETWORKTYPE,
     _REDVOXPACKET1000_DEVICEINFORMATION_OSTYPE,
@@ -321,7 +613,7 @@ _REDVOXPACKET1000_DEVICEINFORMATION = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=683,
-  serialized_end=1193,
+  serialized_end=2809,
 )
 
 _REDVOXPACKET1000_PACKETINFORMATION = _descriptor.Descriptor(
@@ -364,8 +656,8 @@ _REDVOXPACKET1000_PACKETINFORMATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1195,
-  serialized_end=1283,
+  serialized_start=2811,
+  serialized_end=2899,
 )
 
 _REDVOXPACKET1000_TIMINGINFORMATION = _descriptor.Descriptor(
@@ -450,8 +742,8 @@ _REDVOXPACKET1000_TIMINGINFORMATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1286,
-  serialized_end=1576,
+  serialized_start=2902,
+  serialized_end=3192,
 )
 
 _REDVOXPACKET1000_SENSORCHANNELS_MICROPHONECHANNEL_METADATAENTRY = _descriptor.Descriptor(
@@ -552,8 +844,8 @@ _REDVOXPACKET1000_SENSORCHANNELS_MICROPHONECHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2402,
-  serialized_end=2760,
+  serialized_start=4018,
+  serialized_end=4361,
 )
 
 _REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL_METADATAENTRY = _descriptor.Descriptor(
@@ -661,8 +953,8 @@ _REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2763,
-  serialized_end=3211,
+  serialized_start=4364,
+  serialized_end=4782,
 )
 
 _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL_METADATAENTRY = _descriptor.Descriptor(
@@ -855,8 +1147,8 @@ _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3214,
-  serialized_end=4477,
+  serialized_start=4785,
+  serialized_end=5958,
 )
 
 _REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL_METADATAENTRY = _descriptor.Descriptor(
@@ -992,8 +1284,8 @@ _REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4480,
-  serialized_end=5156,
+  serialized_start=5961,
+  serialized_end=6577,
 )
 
 _REDVOXPACKET1000_SENSORCHANNELS_IMAGECHANNEL_METADATAENTRY = _descriptor.Descriptor(
@@ -1094,131 +1386,8 @@ _REDVOXPACKET1000_SENSORCHANNELS_IMAGECHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5159,
-  serialized_end=5511,
-)
-
-_REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS_METADATAENTRY = _descriptor.Descriptor(
-  name='MetadataEntry',
-  full_name='redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics.MetadataEntry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='key', full_name='redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics.MetadataEntry.key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics.MetadataEntry.value', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=_b('8\001'),
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=550,
-  serialized_end=597,
-)
-
-_REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS = _descriptor.Descriptor(
-  name='SummaryStatistics',
-  full_name='redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='count', full_name='redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics.count', index=0,
-      number=1, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='mean', full_name='redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics.mean', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='median', full_name='redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics.median', index=2,
-      number=3, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='mode', full_name='redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics.mode', index=3,
-      number=4, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='variance', full_name='redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics.variance', index=4,
-      number=5, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='min', full_name='redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics.min', index=5,
-      number=6, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='max', full_name='redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics.max', index=6,
-      number=7, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='range', full_name='redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics.range', index=7,
-      number=8, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='metadata', full_name='redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics.metadata', index=8,
-      number=9, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[_REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS_METADATAENTRY, ],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5514,
-  serialized_end=5799,
+  serialized_start=6580,
+  serialized_end=6917,
 )
 
 _REDVOXPACKET1000_SENSORCHANNELS = _descriptor.Descriptor(
@@ -1294,7 +1463,7 @@ _REDVOXPACKET1000_SENSORCHANNELS = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_REDVOXPACKET1000_SENSORCHANNELS_MICROPHONECHANNEL, _REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL, _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL, _REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL, _REDVOXPACKET1000_SENSORCHANNELS_IMAGECHANNEL, _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS, ],
+  nested_types=[_REDVOXPACKET1000_SENSORCHANNELS_MICROPHONECHANNEL, _REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL, _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL, _REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL, _REDVOXPACKET1000_SENSORCHANNELS_IMAGECHANNEL, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -1303,8 +1472,131 @@ _REDVOXPACKET1000_SENSORCHANNELS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1579,
-  serialized_end=5799,
+  serialized_start=3195,
+  serialized_end=6917,
+)
+
+_REDVOXPACKET1000_SUMMARYSTATISTICS_METADATAENTRY = _descriptor.Descriptor(
+  name='MetadataEntry',
+  full_name='redvox_api1000.RedvoxPacket1000.SummaryStatistics.MetadataEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='redvox_api1000.RedvoxPacket1000.SummaryStatistics.MetadataEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='redvox_api1000.RedvoxPacket1000.SummaryStatistics.MetadataEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=550,
+  serialized_end=597,
+)
+
+_REDVOXPACKET1000_SUMMARYSTATISTICS = _descriptor.Descriptor(
+  name='SummaryStatistics',
+  full_name='redvox_api1000.RedvoxPacket1000.SummaryStatistics',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='count', full_name='redvox_api1000.RedvoxPacket1000.SummaryStatistics.count', index=0,
+      number=1, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='mean', full_name='redvox_api1000.RedvoxPacket1000.SummaryStatistics.mean', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='median', full_name='redvox_api1000.RedvoxPacket1000.SummaryStatistics.median', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='mode', full_name='redvox_api1000.RedvoxPacket1000.SummaryStatistics.mode', index=3,
+      number=4, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='variance', full_name='redvox_api1000.RedvoxPacket1000.SummaryStatistics.variance', index=4,
+      number=5, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='min', full_name='redvox_api1000.RedvoxPacket1000.SummaryStatistics.min', index=5,
+      number=6, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='max', full_name='redvox_api1000.RedvoxPacket1000.SummaryStatistics.max', index=6,
+      number=7, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='range', full_name='redvox_api1000.RedvoxPacket1000.SummaryStatistics.range', index=7,
+      number=8, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='metadata', full_name='redvox_api1000.RedvoxPacket1000.SummaryStatistics.metadata', index=8,
+      number=9, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_REDVOXPACKET1000_SUMMARYSTATISTICS_METADATAENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6920,
+  serialized_end=7190,
 )
 
 _REDVOXPACKET1000 = _descriptor.Descriptor(
@@ -1366,7 +1658,7 @@ _REDVOXPACKET1000 = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_REDVOXPACKET1000_METADATAENTRY, _REDVOXPACKET1000_USERINFORMATION, _REDVOXPACKET1000_DEVICEINFORMATION, _REDVOXPACKET1000_PACKETINFORMATION, _REDVOXPACKET1000_TIMINGINFORMATION, _REDVOXPACKET1000_SENSORCHANNELS, ],
+  nested_types=[_REDVOXPACKET1000_METADATAENTRY, _REDVOXPACKET1000_USERINFORMATION, _REDVOXPACKET1000_DEVICEINFORMATION, _REDVOXPACKET1000_PACKETINFORMATION, _REDVOXPACKET1000_TIMINGINFORMATION, _REDVOXPACKET1000_SENSORCHANNELS, _REDVOXPACKET1000_SUMMARYSTATISTICS, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -1376,7 +1668,7 @@ _REDVOXPACKET1000 = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=61,
-  serialized_end=5799,
+  serialized_end=7190,
 )
 
 
@@ -1413,8 +1705,8 @@ _ACQUISITIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5801,
-  serialized_end=5878,
+  serialized_start=7192,
+  serialized_end=7269,
 )
 
 
@@ -1466,53 +1758,64 @@ _ACQUISITIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5881,
-  serialized_end=6099,
+  serialized_start=7272,
+  serialized_end=7490,
 )
 
 _REDVOXPACKET1000_METADATAENTRY.containing_type = _REDVOXPACKET1000
 _REDVOXPACKET1000_USERINFORMATION.containing_type = _REDVOXPACKET1000
+_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS.fields_by_name['audio_sampling_rate'].enum_type = _REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_AUDIOSAMPLINGRATE
+_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS.fields_by_name['audio_source_tuning'].enum_type = _REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_AUDIOSOURCETUNING
+_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS.fields_by_name['additional_input_sensors'].enum_type = _REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_INPUTSENSOR
+_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS.containing_type = _REDVOXPACKET1000_DEVICEINFORMATION
+_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_AUDIOSAMPLINGRATE.containing_type = _REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS
+_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_AUDIOSOURCETUNING.containing_type = _REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS
+_REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS_INPUTSENSOR.containing_type = _REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS
 _REDVOXPACKET1000_DEVICEINFORMATION.fields_by_name['device_os'].enum_type = _REDVOXPACKET1000_DEVICEINFORMATION_OSTYPE
+_REDVOXPACKET1000_DEVICEINFORMATION.fields_by_name['app_settings'].message_type = _REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS
 _REDVOXPACKET1000_DEVICEINFORMATION.fields_by_name['network_type'].enum_type = _REDVOXPACKET1000_DEVICEINFORMATION_NETWORKTYPE
+_REDVOXPACKET1000_DEVICEINFORMATION.fields_by_name['network_strength_db'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_DEVICEINFORMATION.fields_by_name['device_temp_c'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_DEVICEINFORMATION.fields_by_name['device_battery_percent'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_DEVICEINFORMATION.fields_by_name['available_ram_bytes'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_DEVICEINFORMATION.fields_by_name['available_disk_bytes'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_DEVICEINFORMATION.fields_by_name['cpu_utilization_bytes'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
 _REDVOXPACKET1000_DEVICEINFORMATION.containing_type = _REDVOXPACKET1000
 _REDVOXPACKET1000_DEVICEINFORMATION_NETWORKTYPE.containing_type = _REDVOXPACKET1000_DEVICEINFORMATION
 _REDVOXPACKET1000_DEVICEINFORMATION_OSTYPE.containing_type = _REDVOXPACKET1000_DEVICEINFORMATION
 _REDVOXPACKET1000_PACKETINFORMATION.containing_type = _REDVOXPACKET1000
 _REDVOXPACKET1000_TIMINGINFORMATION.containing_type = _REDVOXPACKET1000
 _REDVOXPACKET1000_SENSORCHANNELS_MICROPHONECHANNEL_METADATAENTRY.containing_type = _REDVOXPACKET1000_SENSORCHANNELS_MICROPHONECHANNEL
-_REDVOXPACKET1000_SENSORCHANNELS_MICROPHONECHANNEL.fields_by_name['sample_statistics'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SENSORCHANNELS_MICROPHONECHANNEL.fields_by_name['sample_statistics'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
 _REDVOXPACKET1000_SENSORCHANNELS_MICROPHONECHANNEL.fields_by_name['metadata'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_MICROPHONECHANNEL_METADATAENTRY
 _REDVOXPACKET1000_SENSORCHANNELS_MICROPHONECHANNEL.containing_type = _REDVOXPACKET1000_SENSORCHANNELS
 _REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL_METADATAENTRY.containing_type = _REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL
-_REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL.fields_by_name['sample_rate_statistics'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
-_REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL.fields_by_name['sample_statistics'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL.fields_by_name['sample_rate_statistics'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL.fields_by_name['sample_statistics'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
 _REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL.fields_by_name['metadata'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL_METADATAENTRY
 _REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL.containing_type = _REDVOXPACKET1000_SENSORCHANNELS
 _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL_METADATAENTRY.containing_type = _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL
 _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.fields_by_name['location_provider'].enum_type = _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL_LOCATIONPROVIDER
-_REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.fields_by_name['sample_rate_statistics'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
-_REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.fields_by_name['latitude_sample_statistics'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
-_REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.fields_by_name['longitude_sample_statistics'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
-_REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.fields_by_name['altitude_sample_statistics'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
-_REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.fields_by_name['speed_sample_statistics'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
-_REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.fields_by_name['accuracy_sample_statistics'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.fields_by_name['sample_rate_statistics'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.fields_by_name['latitude_sample_statistics'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.fields_by_name['longitude_sample_statistics'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.fields_by_name['altitude_sample_statistics'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.fields_by_name['speed_sample_statistics'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.fields_by_name['accuracy_sample_statistics'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
 _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.fields_by_name['metadata'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL_METADATAENTRY
 _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL.containing_type = _REDVOXPACKET1000_SENSORCHANNELS
 _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL_LOCATIONPROVIDER.containing_type = _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL
 _REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL_METADATAENTRY.containing_type = _REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL
-_REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL.fields_by_name['sample_rate_statistics'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
-_REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL.fields_by_name['x_sample_statistics'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
-_REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL.fields_by_name['y_sample_statistics'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
-_REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL.fields_by_name['z_sample_statistics'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL.fields_by_name['sample_rate_statistics'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL.fields_by_name['x_sample_statistics'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL.fields_by_name['y_sample_statistics'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL.fields_by_name['z_sample_statistics'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
 _REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL.fields_by_name['metadata'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL_METADATAENTRY
 _REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL.containing_type = _REDVOXPACKET1000_SENSORCHANNELS
 _REDVOXPACKET1000_SENSORCHANNELS_IMAGECHANNEL_METADATAENTRY.containing_type = _REDVOXPACKET1000_SENSORCHANNELS_IMAGECHANNEL
-_REDVOXPACKET1000_SENSORCHANNELS_IMAGECHANNEL.fields_by_name['sample_rate_statistics'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SENSORCHANNELS_IMAGECHANNEL.fields_by_name['sample_rate_statistics'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
 _REDVOXPACKET1000_SENSORCHANNELS_IMAGECHANNEL.fields_by_name['metadata'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_IMAGECHANNEL_METADATAENTRY
 _REDVOXPACKET1000_SENSORCHANNELS_IMAGECHANNEL.containing_type = _REDVOXPACKET1000_SENSORCHANNELS
-_REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS_METADATAENTRY.containing_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS
-_REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS.fields_by_name['metadata'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS_METADATAENTRY
-_REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS.containing_type = _REDVOXPACKET1000_SENSORCHANNELS
 _REDVOXPACKET1000_SENSORCHANNELS.fields_by_name['microphone_channel'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_MICROPHONECHANNEL
 _REDVOXPACKET1000_SENSORCHANNELS.fields_by_name['barometer_channel'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL
 _REDVOXPACKET1000_SENSORCHANNELS.fields_by_name['location_channel'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL
@@ -1523,6 +1826,9 @@ _REDVOXPACKET1000_SENSORCHANNELS.fields_by_name['light_channel'].message_type = 
 _REDVOXPACKET1000_SENSORCHANNELS.fields_by_name['infrared_channel'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL
 _REDVOXPACKET1000_SENSORCHANNELS.fields_by_name['image_channel'].message_type = _REDVOXPACKET1000_SENSORCHANNELS_IMAGECHANNEL
 _REDVOXPACKET1000_SENSORCHANNELS.containing_type = _REDVOXPACKET1000
+_REDVOXPACKET1000_SUMMARYSTATISTICS_METADATAENTRY.containing_type = _REDVOXPACKET1000_SUMMARYSTATISTICS
+_REDVOXPACKET1000_SUMMARYSTATISTICS.fields_by_name['metadata'].message_type = _REDVOXPACKET1000_SUMMARYSTATISTICS_METADATAENTRY
+_REDVOXPACKET1000_SUMMARYSTATISTICS.containing_type = _REDVOXPACKET1000
 _REDVOXPACKET1000.fields_by_name['user_information'].message_type = _REDVOXPACKET1000_USERINFORMATION
 _REDVOXPACKET1000.fields_by_name['device_information'].message_type = _REDVOXPACKET1000_DEVICEINFORMATION
 _REDVOXPACKET1000.fields_by_name['packet_information'].message_type = _REDVOXPACKET1000_PACKETINFORMATION
@@ -1553,6 +1859,13 @@ RedvoxPacket1000 = _reflection.GeneratedProtocolMessageType('RedvoxPacket1000', 
   ,
 
   DeviceInformation = _reflection.GeneratedProtocolMessageType('DeviceInformation', (_message.Message,), dict(
+
+    AppSettings = _reflection.GeneratedProtocolMessageType('AppSettings', (_message.Message,), dict(
+      DESCRIPTOR = _REDVOXPACKET1000_DEVICEINFORMATION_APPSETTINGS,
+      __module__ = 'src.redvox_api1000.redvox_api_1000_pb2'
+      # @@protoc_insertion_point(class_scope:redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings)
+      ))
+    ,
     DESCRIPTOR = _REDVOXPACKET1000_DEVICEINFORMATION,
     __module__ = 'src.redvox_api1000.redvox_api_1000_pb2'
     # @@protoc_insertion_point(class_scope:redvox_api1000.RedvoxPacket1000.DeviceInformation)
@@ -1644,23 +1957,23 @@ RedvoxPacket1000 = _reflection.GeneratedProtocolMessageType('RedvoxPacket1000', 
       # @@protoc_insertion_point(class_scope:redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel)
       ))
     ,
-
-    SummaryStatistics = _reflection.GeneratedProtocolMessageType('SummaryStatistics', (_message.Message,), dict(
-
-      MetadataEntry = _reflection.GeneratedProtocolMessageType('MetadataEntry', (_message.Message,), dict(
-        DESCRIPTOR = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS_METADATAENTRY,
-        __module__ = 'src.redvox_api1000.redvox_api_1000_pb2'
-        # @@protoc_insertion_point(class_scope:redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics.MetadataEntry)
-        ))
-      ,
-      DESCRIPTOR = _REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS,
-      __module__ = 'src.redvox_api1000.redvox_api_1000_pb2'
-      # @@protoc_insertion_point(class_scope:redvox_api1000.RedvoxPacket1000.SensorChannels.SummaryStatistics)
-      ))
-    ,
     DESCRIPTOR = _REDVOXPACKET1000_SENSORCHANNELS,
     __module__ = 'src.redvox_api1000.redvox_api_1000_pb2'
     # @@protoc_insertion_point(class_scope:redvox_api1000.RedvoxPacket1000.SensorChannels)
+    ))
+  ,
+
+  SummaryStatistics = _reflection.GeneratedProtocolMessageType('SummaryStatistics', (_message.Message,), dict(
+
+    MetadataEntry = _reflection.GeneratedProtocolMessageType('MetadataEntry', (_message.Message,), dict(
+      DESCRIPTOR = _REDVOXPACKET1000_SUMMARYSTATISTICS_METADATAENTRY,
+      __module__ = 'src.redvox_api1000.redvox_api_1000_pb2'
+      # @@protoc_insertion_point(class_scope:redvox_api1000.RedvoxPacket1000.SummaryStatistics.MetadataEntry)
+      ))
+    ,
+    DESCRIPTOR = _REDVOXPACKET1000_SUMMARYSTATISTICS,
+    __module__ = 'src.redvox_api1000.redvox_api_1000_pb2'
+    # @@protoc_insertion_point(class_scope:redvox_api1000.RedvoxPacket1000.SummaryStatistics)
     ))
   ,
   DESCRIPTOR = _REDVOXPACKET1000,
@@ -1671,6 +1984,7 @@ _sym_db.RegisterMessage(RedvoxPacket1000)
 _sym_db.RegisterMessage(RedvoxPacket1000.MetadataEntry)
 _sym_db.RegisterMessage(RedvoxPacket1000.UserInformation)
 _sym_db.RegisterMessage(RedvoxPacket1000.DeviceInformation)
+_sym_db.RegisterMessage(RedvoxPacket1000.DeviceInformation.AppSettings)
 _sym_db.RegisterMessage(RedvoxPacket1000.PacketInformation)
 _sym_db.RegisterMessage(RedvoxPacket1000.TimingInformation)
 _sym_db.RegisterMessage(RedvoxPacket1000.SensorChannels)
@@ -1684,8 +1998,8 @@ _sym_db.RegisterMessage(RedvoxPacket1000.SensorChannels.XyzChannel)
 _sym_db.RegisterMessage(RedvoxPacket1000.SensorChannels.XyzChannel.MetadataEntry)
 _sym_db.RegisterMessage(RedvoxPacket1000.SensorChannels.ImageChannel)
 _sym_db.RegisterMessage(RedvoxPacket1000.SensorChannels.ImageChannel.MetadataEntry)
-_sym_db.RegisterMessage(RedvoxPacket1000.SensorChannels.SummaryStatistics)
-_sym_db.RegisterMessage(RedvoxPacket1000.SensorChannels.SummaryStatistics.MetadataEntry)
+_sym_db.RegisterMessage(RedvoxPacket1000.SummaryStatistics)
+_sym_db.RegisterMessage(RedvoxPacket1000.SummaryStatistics.MetadataEntry)
 
 AcquisitionRequest = _reflection.GeneratedProtocolMessageType('AcquisitionRequest', (_message.Message,), dict(
   DESCRIPTOR = _ACQUISITIONREQUEST,
@@ -1709,5 +2023,5 @@ _REDVOXPACKET1000_SENSORCHANNELS_SINGLECHANNEL_METADATAENTRY._options = None
 _REDVOXPACKET1000_SENSORCHANNELS_LOCATIONCHANNEL_METADATAENTRY._options = None
 _REDVOXPACKET1000_SENSORCHANNELS_XYZCHANNEL_METADATAENTRY._options = None
 _REDVOXPACKET1000_SENSORCHANNELS_IMAGECHANNEL_METADATAENTRY._options = None
-_REDVOXPACKET1000_SENSORCHANNELS_SUMMARYSTATISTICS_METADATAENTRY._options = None
+_REDVOXPACKET1000_SUMMARYSTATISTICS_METADATAENTRY._options = None
 # @@protoc_insertion_point(module_scope)

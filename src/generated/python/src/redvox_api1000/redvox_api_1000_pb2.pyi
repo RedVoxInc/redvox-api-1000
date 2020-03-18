@@ -132,6 +132,132 @@ class RedvoxPacket1000(google___protobuf___message___Message):
         LINUX = typing___cast('RedvoxPacket1000.DeviceInformation.OsType', 2)
         WINDOWS = typing___cast('RedvoxPacket1000.DeviceInformation.OsType', 3)
 
+        class AppSettings(google___protobuf___message___Message):
+            DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+            class AudioSamplingRate(builtin___int):
+                DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
+                @classmethod
+                def Name(cls, number: builtin___int) -> builtin___str: ...
+                @classmethod
+                def Value(cls, name: builtin___str) -> 'RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate': ...
+                @classmethod
+                def keys(cls) -> typing___List[builtin___str]: ...
+                @classmethod
+                def values(cls) -> typing___List['RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate']: ...
+                @classmethod
+                def items(cls) -> typing___List[typing___Tuple[builtin___str, 'RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate']]: ...
+                HZ_80 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 0)
+                HZ_800 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 1)
+                HZ_8000 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 2)
+            HZ_80 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 0)
+            HZ_800 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 1)
+            HZ_8000 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 2)
+
+            class AudioSourceTuning(builtin___int):
+                DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
+                @classmethod
+                def Name(cls, number: builtin___int) -> builtin___str: ...
+                @classmethod
+                def Value(cls, name: builtin___str) -> 'RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning': ...
+                @classmethod
+                def keys(cls) -> typing___List[builtin___str]: ...
+                @classmethod
+                def values(cls) -> typing___List['RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning']: ...
+                @classmethod
+                def items(cls) -> typing___List[typing___Tuple[builtin___str, 'RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning']]: ...
+                INFRASOUND = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning', 0)
+                LOW_AUDIO = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning', 1)
+                AUDIO = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning', 2)
+            INFRASOUND = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning', 0)
+            LOW_AUDIO = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning', 1)
+            AUDIO = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning', 2)
+
+            class InputSensor(builtin___int):
+                DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
+                @classmethod
+                def Name(cls, number: builtin___int) -> builtin___str: ...
+                @classmethod
+                def Value(cls, name: builtin___str) -> 'RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor': ...
+                @classmethod
+                def keys(cls) -> typing___List[builtin___str]: ...
+                @classmethod
+                def values(cls) -> typing___List['RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor']: ...
+                @classmethod
+                def items(cls) -> typing___List[typing___Tuple[builtin___str, 'RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor']]: ...
+                BAROMETER = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 0)
+                ACCELEROMETER = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 1)
+                ACCELEROMETER_FAST = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 2)
+                MAGNETOMETER = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 3)
+                MAGNETOMETER_FAST = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 4)
+                GYROSCOPE = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 5)
+                GYROSCOPE_FAST = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 6)
+                LUMINOSITY = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 7)
+            BAROMETER = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 0)
+            ACCELEROMETER = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 1)
+            ACCELEROMETER_FAST = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 2)
+            MAGNETOMETER = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 3)
+            MAGNETOMETER_FAST = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 4)
+            GYROSCOPE = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 5)
+            GYROSCOPE_FAST = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 6)
+            LUMINOSITY = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor', 7)
+
+            audio_sampling_rate = ... # type: RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate
+            audio_source_tuning = ... # type: RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning
+            additional_input_sensors = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor]
+            automatically_record = ... # type: builtin___bool
+            launch_at_power_up = ... # type: builtin___bool
+            redvox_id = ... # type: typing___Text
+            push_to_server = ... # type: builtin___bool
+            publish_data_as_private = ... # type: builtin___bool
+            scrambled_voice_data = ... # type: builtin___bool
+            provide_backfill = ... # type: builtin___bool
+            use_custom_time_sync_server = ... # type: builtin___bool
+            time_synch_server_url = ... # type: typing___Text
+            use_custom_data_server = ... # type: builtin___bool
+            data_server_url = ... # type: typing___Text
+            auto_delete_data_files = ... # type: builtin___bool
+            storage_space_allowance = ... # type: builtin___float
+            use_sd_card_for_data_storage = ... # type: builtin___bool
+            use_location_services = ... # type: builtin___bool
+            use_latitude = ... # type: builtin___float
+            use_longitude = ... # type: builtin___float
+
+            def __init__(self,
+                *,
+                audio_sampling_rate : typing___Optional[RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate] = None,
+                audio_source_tuning : typing___Optional[RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning] = None,
+                additional_input_sensors : typing___Optional[typing___Iterable[RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor]] = None,
+                automatically_record : typing___Optional[builtin___bool] = None,
+                launch_at_power_up : typing___Optional[builtin___bool] = None,
+                redvox_id : typing___Optional[typing___Text] = None,
+                push_to_server : typing___Optional[builtin___bool] = None,
+                publish_data_as_private : typing___Optional[builtin___bool] = None,
+                scrambled_voice_data : typing___Optional[builtin___bool] = None,
+                provide_backfill : typing___Optional[builtin___bool] = None,
+                use_custom_time_sync_server : typing___Optional[builtin___bool] = None,
+                time_synch_server_url : typing___Optional[typing___Text] = None,
+                use_custom_data_server : typing___Optional[builtin___bool] = None,
+                data_server_url : typing___Optional[typing___Text] = None,
+                auto_delete_data_files : typing___Optional[builtin___bool] = None,
+                storage_space_allowance : typing___Optional[builtin___float] = None,
+                use_sd_card_for_data_storage : typing___Optional[builtin___bool] = None,
+                use_location_services : typing___Optional[builtin___bool] = None,
+                use_latitude : typing___Optional[builtin___float] = None,
+                use_longitude : typing___Optional[builtin___float] = None,
+                ) -> None: ...
+            if sys.version_info >= (3,):
+                @classmethod
+                def FromString(cls, s: builtin___bytes) -> RedvoxPacket1000.DeviceInformation.AppSettings: ...
+            else:
+                @classmethod
+                def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> RedvoxPacket1000.DeviceInformation.AppSettings: ...
+            def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+            def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+            if sys.version_info >= (3,):
+                def ClearField(self, field_name: typing_extensions___Literal[u"additional_input_sensors",u"audio_sampling_rate",u"audio_source_tuning",u"auto_delete_data_files",u"automatically_record",u"data_server_url",u"launch_at_power_up",u"provide_backfill",u"publish_data_as_private",u"push_to_server",u"redvox_id",u"scrambled_voice_data",u"storage_space_allowance",u"time_synch_server_url",u"use_custom_data_server",u"use_custom_time_sync_server",u"use_latitude",u"use_location_services",u"use_longitude",u"use_sd_card_for_data_storage"]) -> None: ...
+            else:
+                def ClearField(self, field_name: typing_extensions___Literal[u"additional_input_sensors",b"additional_input_sensors",u"audio_sampling_rate",b"audio_sampling_rate",u"audio_source_tuning",b"audio_source_tuning",u"auto_delete_data_files",b"auto_delete_data_files",u"automatically_record",b"automatically_record",u"data_server_url",b"data_server_url",u"launch_at_power_up",b"launch_at_power_up",u"provide_backfill",b"provide_backfill",u"publish_data_as_private",b"publish_data_as_private",u"push_to_server",b"push_to_server",u"redvox_id",b"redvox_id",u"scrambled_voice_data",b"scrambled_voice_data",u"storage_space_allowance",b"storage_space_allowance",u"time_synch_server_url",b"time_synch_server_url",u"use_custom_data_server",b"use_custom_data_server",u"use_custom_time_sync_server",b"use_custom_time_sync_server",u"use_latitude",b"use_latitude",u"use_location_services",b"use_location_services",u"use_longitude",b"use_longitude",u"use_sd_card_for_data_storage",b"use_sd_card_for_data_storage"]) -> None: ...
+
         device_id = ... # type: typing___Text
         device_uuid = ... # type: typing___Text
         device_make = ... # type: typing___Text
@@ -139,10 +265,28 @@ class RedvoxPacket1000(google___protobuf___message___Message):
         device_os = ... # type: RedvoxPacket1000.DeviceInformation.OsType
         device_os_version = ... # type: typing___Text
         device_app_version = ... # type: typing___Text
-        device_temp_c = ... # type: builtin___float
-        device_battery_percent = ... # type: builtin___float
         network_type = ... # type: RedvoxPacket1000.DeviceInformation.NetworkType
-        network_strength_db = ... # type: builtin___float
+
+        @property
+        def app_settings(self) -> RedvoxPacket1000.DeviceInformation.AppSettings: ...
+
+        @property
+        def network_strength_db(self) -> RedvoxPacket1000.SummaryStatistics: ...
+
+        @property
+        def device_temp_c(self) -> RedvoxPacket1000.SummaryStatistics: ...
+
+        @property
+        def device_battery_percent(self) -> RedvoxPacket1000.SummaryStatistics: ...
+
+        @property
+        def available_ram_bytes(self) -> RedvoxPacket1000.SummaryStatistics: ...
+
+        @property
+        def available_disk_bytes(self) -> RedvoxPacket1000.SummaryStatistics: ...
+
+        @property
+        def cpu_utilization_bytes(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
         def __init__(self,
             *,
@@ -153,10 +297,14 @@ class RedvoxPacket1000(google___protobuf___message___Message):
             device_os : typing___Optional[RedvoxPacket1000.DeviceInformation.OsType] = None,
             device_os_version : typing___Optional[typing___Text] = None,
             device_app_version : typing___Optional[typing___Text] = None,
-            device_temp_c : typing___Optional[builtin___float] = None,
-            device_battery_percent : typing___Optional[builtin___float] = None,
+            app_settings : typing___Optional[RedvoxPacket1000.DeviceInformation.AppSettings] = None,
             network_type : typing___Optional[RedvoxPacket1000.DeviceInformation.NetworkType] = None,
-            network_strength_db : typing___Optional[builtin___float] = None,
+            network_strength_db : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
+            device_temp_c : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
+            device_battery_percent : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
+            available_ram_bytes : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
+            available_disk_bytes : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
+            cpu_utilization_bytes : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
             ) -> None: ...
         if sys.version_info >= (3,):
             @classmethod
@@ -167,9 +315,11 @@ class RedvoxPacket1000(google___protobuf___message___Message):
         def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
         def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
         if sys.version_info >= (3,):
-            def ClearField(self, field_name: typing_extensions___Literal[u"device_app_version",u"device_battery_percent",u"device_id",u"device_make",u"device_model",u"device_os",u"device_os_version",u"device_temp_c",u"device_uuid",u"network_strength_db",u"network_type"]) -> None: ...
+            def HasField(self, field_name: typing_extensions___Literal[u"app_settings",u"available_disk_bytes",u"available_ram_bytes",u"cpu_utilization_bytes",u"device_battery_percent",u"device_temp_c",u"network_strength_db"]) -> builtin___bool: ...
+            def ClearField(self, field_name: typing_extensions___Literal[u"app_settings",u"available_disk_bytes",u"available_ram_bytes",u"cpu_utilization_bytes",u"device_app_version",u"device_battery_percent",u"device_id",u"device_make",u"device_model",u"device_os",u"device_os_version",u"device_temp_c",u"device_uuid",u"network_strength_db",u"network_type"]) -> None: ...
         else:
-            def ClearField(self, field_name: typing_extensions___Literal[u"device_app_version",b"device_app_version",u"device_battery_percent",b"device_battery_percent",u"device_id",b"device_id",u"device_make",b"device_make",u"device_model",b"device_model",u"device_os",b"device_os",u"device_os_version",b"device_os_version",u"device_temp_c",b"device_temp_c",u"device_uuid",b"device_uuid",u"network_strength_db",b"network_strength_db",u"network_type",b"network_type"]) -> None: ...
+            def HasField(self, field_name: typing_extensions___Literal[u"app_settings",b"app_settings",u"available_disk_bytes",b"available_disk_bytes",u"available_ram_bytes",b"available_ram_bytes",u"cpu_utilization_bytes",b"cpu_utilization_bytes",u"device_battery_percent",b"device_battery_percent",u"device_temp_c",b"device_temp_c",u"network_strength_db",b"network_strength_db"]) -> builtin___bool: ...
+            def ClearField(self, field_name: typing_extensions___Literal[u"app_settings",b"app_settings",u"available_disk_bytes",b"available_disk_bytes",u"available_ram_bytes",b"available_ram_bytes",u"cpu_utilization_bytes",b"cpu_utilization_bytes",u"device_app_version",b"device_app_version",u"device_battery_percent",b"device_battery_percent",u"device_id",b"device_id",u"device_make",b"device_make",u"device_model",b"device_model",u"device_os",b"device_os",u"device_os_version",b"device_os_version",u"device_temp_c",b"device_temp_c",u"device_uuid",b"device_uuid",u"network_strength_db",b"network_strength_db",u"network_type",b"network_type"]) -> None: ...
 
     class PacketInformation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -266,7 +416,7 @@ class RedvoxPacket1000(google___protobuf___message___Message):
             samples = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[builtin___float]
 
             @property
-            def sample_statistics(self) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
+            def sample_statistics(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
             @property
             def metadata(self) -> typing___MutableMapping[typing___Text, typing___Text]: ...
@@ -277,7 +427,7 @@ class RedvoxPacket1000(google___protobuf___message___Message):
                 first_sample_ts_us : typing___Optional[builtin___float] = None,
                 sample_rate_hz : typing___Optional[builtin___float] = None,
                 samples : typing___Optional[typing___Iterable[builtin___float]] = None,
-                sample_statistics : typing___Optional[RedvoxPacket1000.SensorChannels.SummaryStatistics] = None,
+                sample_statistics : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
                 metadata : typing___Optional[typing___Mapping[typing___Text, typing___Text]] = None,
                 ) -> None: ...
             if sys.version_info >= (3,):
@@ -326,10 +476,10 @@ class RedvoxPacket1000(google___protobuf___message___Message):
             samples = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[builtin___float]
 
             @property
-            def sample_rate_statistics(self) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
+            def sample_rate_statistics(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
             @property
-            def sample_statistics(self) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
+            def sample_statistics(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
             @property
             def metadata(self) -> typing___MutableMapping[typing___Text, typing___Text]: ...
@@ -340,8 +490,8 @@ class RedvoxPacket1000(google___protobuf___message___Message):
                 mean_sample_rate_hz : typing___Optional[builtin___float] = None,
                 sample_ts_us : typing___Optional[typing___Iterable[builtin___float]] = None,
                 samples : typing___Optional[typing___Iterable[builtin___float]] = None,
-                sample_rate_statistics : typing___Optional[RedvoxPacket1000.SensorChannels.SummaryStatistics] = None,
-                sample_statistics : typing___Optional[RedvoxPacket1000.SensorChannels.SummaryStatistics] = None,
+                sample_rate_statistics : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
+                sample_statistics : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
                 metadata : typing___Optional[typing___Mapping[typing___Text, typing___Text]] = None,
                 ) -> None: ...
             if sys.version_info >= (3,):
@@ -419,22 +569,22 @@ class RedvoxPacket1000(google___protobuf___message___Message):
             location_provider = ... # type: RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider
 
             @property
-            def sample_rate_statistics(self) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
+            def sample_rate_statistics(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
             @property
-            def latitude_sample_statistics(self) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
+            def latitude_sample_statistics(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
             @property
-            def longitude_sample_statistics(self) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
+            def longitude_sample_statistics(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
             @property
-            def altitude_sample_statistics(self) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
+            def altitude_sample_statistics(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
             @property
-            def speed_sample_statistics(self) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
+            def speed_sample_statistics(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
             @property
-            def accuracy_sample_statistics(self) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
+            def accuracy_sample_statistics(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
             @property
             def metadata(self) -> typing___MutableMapping[typing___Text, typing___Text]: ...
@@ -453,12 +603,12 @@ class RedvoxPacket1000(google___protobuf___message___Message):
                 location_services_requested : typing___Optional[builtin___bool] = None,
                 location_services_enabled : typing___Optional[builtin___bool] = None,
                 location_provider : typing___Optional[RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider] = None,
-                sample_rate_statistics : typing___Optional[RedvoxPacket1000.SensorChannels.SummaryStatistics] = None,
-                latitude_sample_statistics : typing___Optional[RedvoxPacket1000.SensorChannels.SummaryStatistics] = None,
-                longitude_sample_statistics : typing___Optional[RedvoxPacket1000.SensorChannels.SummaryStatistics] = None,
-                altitude_sample_statistics : typing___Optional[RedvoxPacket1000.SensorChannels.SummaryStatistics] = None,
-                speed_sample_statistics : typing___Optional[RedvoxPacket1000.SensorChannels.SummaryStatistics] = None,
-                accuracy_sample_statistics : typing___Optional[RedvoxPacket1000.SensorChannels.SummaryStatistics] = None,
+                sample_rate_statistics : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
+                latitude_sample_statistics : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
+                longitude_sample_statistics : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
+                altitude_sample_statistics : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
+                speed_sample_statistics : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
+                accuracy_sample_statistics : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
                 metadata : typing___Optional[typing___Mapping[typing___Text, typing___Text]] = None,
                 ) -> None: ...
             if sys.version_info >= (3,):
@@ -509,16 +659,16 @@ class RedvoxPacket1000(google___protobuf___message___Message):
             z_samples = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[builtin___float]
 
             @property
-            def sample_rate_statistics(self) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
+            def sample_rate_statistics(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
             @property
-            def x_sample_statistics(self) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
+            def x_sample_statistics(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
             @property
-            def y_sample_statistics(self) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
+            def y_sample_statistics(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
             @property
-            def z_sample_statistics(self) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
+            def z_sample_statistics(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
             @property
             def metadata(self) -> typing___MutableMapping[typing___Text, typing___Text]: ...
@@ -531,10 +681,10 @@ class RedvoxPacket1000(google___protobuf___message___Message):
                 x_samples : typing___Optional[typing___Iterable[builtin___float]] = None,
                 y_samples : typing___Optional[typing___Iterable[builtin___float]] = None,
                 z_samples : typing___Optional[typing___Iterable[builtin___float]] = None,
-                sample_rate_statistics : typing___Optional[RedvoxPacket1000.SensorChannels.SummaryStatistics] = None,
-                x_sample_statistics : typing___Optional[RedvoxPacket1000.SensorChannels.SummaryStatistics] = None,
-                y_sample_statistics : typing___Optional[RedvoxPacket1000.SensorChannels.SummaryStatistics] = None,
-                z_sample_statistics : typing___Optional[RedvoxPacket1000.SensorChannels.SummaryStatistics] = None,
+                sample_rate_statistics : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
+                x_sample_statistics : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
+                y_sample_statistics : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
+                z_sample_statistics : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
                 metadata : typing___Optional[typing___Mapping[typing___Text, typing___Text]] = None,
                 ) -> None: ...
             if sys.version_info >= (3,):
@@ -583,7 +733,7 @@ class RedvoxPacket1000(google___protobuf___message___Message):
             samples = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[builtin___bytes]
 
             @property
-            def sample_rate_statistics(self) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
+            def sample_rate_statistics(self) -> RedvoxPacket1000.SummaryStatistics: ...
 
             @property
             def metadata(self) -> typing___MutableMapping[typing___Text, typing___Text]: ...
@@ -594,7 +744,7 @@ class RedvoxPacket1000(google___protobuf___message___Message):
                 mean_sample_rate_hz : typing___Optional[builtin___float] = None,
                 sample_ts_us : typing___Optional[typing___Iterable[builtin___float]] = None,
                 samples : typing___Optional[typing___Iterable[builtin___bytes]] = None,
-                sample_rate_statistics : typing___Optional[RedvoxPacket1000.SensorChannels.SummaryStatistics] = None,
+                sample_rate_statistics : typing___Optional[RedvoxPacket1000.SummaryStatistics] = None,
                 metadata : typing___Optional[typing___Mapping[typing___Text, typing___Text]] = None,
                 ) -> None: ...
             if sys.version_info >= (3,):
@@ -611,68 +761,6 @@ class RedvoxPacket1000(google___protobuf___message___Message):
             else:
                 def HasField(self, field_name: typing_extensions___Literal[u"sample_rate_statistics",b"sample_rate_statistics"]) -> builtin___bool: ...
                 def ClearField(self, field_name: typing_extensions___Literal[u"mean_sample_rate_hz",b"mean_sample_rate_hz",u"metadata",b"metadata",u"sample_rate_statistics",b"sample_rate_statistics",u"sample_ts_us",b"sample_ts_us",u"samples",b"samples",u"sensor_description",b"sensor_description"]) -> None: ...
-
-        class SummaryStatistics(google___protobuf___message___Message):
-            DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-            class MetadataEntry(google___protobuf___message___Message):
-                DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
-                key = ... # type: typing___Text
-                value = ... # type: typing___Text
-
-                def __init__(self,
-                    *,
-                    key : typing___Optional[typing___Text] = None,
-                    value : typing___Optional[typing___Text] = None,
-                    ) -> None: ...
-                if sys.version_info >= (3,):
-                    @classmethod
-                    def FromString(cls, s: builtin___bytes) -> RedvoxPacket1000.SensorChannels.SummaryStatistics.MetadataEntry: ...
-                else:
-                    @classmethod
-                    def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> RedvoxPacket1000.SensorChannels.SummaryStatistics.MetadataEntry: ...
-                def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-                def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-                if sys.version_info >= (3,):
-                    def ClearField(self, field_name: typing_extensions___Literal[u"key",u"value"]) -> None: ...
-                else:
-                    def ClearField(self, field_name: typing_extensions___Literal[u"key",b"key",u"value",b"value"]) -> None: ...
-
-            count = ... # type: builtin___float
-            mean = ... # type: builtin___float
-            median = ... # type: builtin___float
-            mode = ... # type: builtin___float
-            variance = ... # type: builtin___float
-            min = ... # type: builtin___float
-            max = ... # type: builtin___float
-            range = ... # type: builtin___float
-
-            @property
-            def metadata(self) -> typing___MutableMapping[typing___Text, typing___Text]: ...
-
-            def __init__(self,
-                *,
-                count : typing___Optional[builtin___float] = None,
-                mean : typing___Optional[builtin___float] = None,
-                median : typing___Optional[builtin___float] = None,
-                mode : typing___Optional[builtin___float] = None,
-                variance : typing___Optional[builtin___float] = None,
-                min : typing___Optional[builtin___float] = None,
-                max : typing___Optional[builtin___float] = None,
-                range : typing___Optional[builtin___float] = None,
-                metadata : typing___Optional[typing___Mapping[typing___Text, typing___Text]] = None,
-                ) -> None: ...
-            if sys.version_info >= (3,):
-                @classmethod
-                def FromString(cls, s: builtin___bytes) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
-            else:
-                @classmethod
-                def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> RedvoxPacket1000.SensorChannels.SummaryStatistics: ...
-            def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-            def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
-            if sys.version_info >= (3,):
-                def ClearField(self, field_name: typing_extensions___Literal[u"count",u"max",u"mean",u"median",u"metadata",u"min",u"mode",u"range",u"variance"]) -> None: ...
-            else:
-                def ClearField(self, field_name: typing_extensions___Literal[u"count",b"count",u"max",b"max",u"mean",b"mean",u"median",b"median",u"metadata",b"metadata",u"min",b"min",u"mode",b"mode",u"range",b"range",u"variance",b"variance"]) -> None: ...
 
 
         @property
@@ -728,6 +816,68 @@ class RedvoxPacket1000(google___protobuf___message___Message):
         else:
             def HasField(self, field_name: typing_extensions___Literal[u"accelerometer_channel",b"accelerometer_channel",u"barometer_channel",b"barometer_channel",u"gyroscope_channel",b"gyroscope_channel",u"image_channel",b"image_channel",u"infrared_channel",b"infrared_channel",u"light_channel",b"light_channel",u"location_channel",b"location_channel",u"magnetometer_channel",b"magnetometer_channel",u"microphone_channel",b"microphone_channel"]) -> builtin___bool: ...
             def ClearField(self, field_name: typing_extensions___Literal[u"accelerometer_channel",b"accelerometer_channel",u"barometer_channel",b"barometer_channel",u"gyroscope_channel",b"gyroscope_channel",u"image_channel",b"image_channel",u"infrared_channel",b"infrared_channel",u"light_channel",b"light_channel",u"location_channel",b"location_channel",u"magnetometer_channel",b"magnetometer_channel",u"microphone_channel",b"microphone_channel"]) -> None: ...
+
+    class SummaryStatistics(google___protobuf___message___Message):
+        DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        class MetadataEntry(google___protobuf___message___Message):
+            DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+            key = ... # type: typing___Text
+            value = ... # type: typing___Text
+
+            def __init__(self,
+                *,
+                key : typing___Optional[typing___Text] = None,
+                value : typing___Optional[typing___Text] = None,
+                ) -> None: ...
+            if sys.version_info >= (3,):
+                @classmethod
+                def FromString(cls, s: builtin___bytes) -> RedvoxPacket1000.SummaryStatistics.MetadataEntry: ...
+            else:
+                @classmethod
+                def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> RedvoxPacket1000.SummaryStatistics.MetadataEntry: ...
+            def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+            def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+            if sys.version_info >= (3,):
+                def ClearField(self, field_name: typing_extensions___Literal[u"key",u"value"]) -> None: ...
+            else:
+                def ClearField(self, field_name: typing_extensions___Literal[u"key",b"key",u"value",b"value"]) -> None: ...
+
+        count = ... # type: builtin___float
+        mean = ... # type: builtin___float
+        median = ... # type: builtin___float
+        mode = ... # type: builtin___float
+        variance = ... # type: builtin___float
+        min = ... # type: builtin___float
+        max = ... # type: builtin___float
+        range = ... # type: builtin___float
+
+        @property
+        def metadata(self) -> typing___MutableMapping[typing___Text, typing___Text]: ...
+
+        def __init__(self,
+            *,
+            count : typing___Optional[builtin___float] = None,
+            mean : typing___Optional[builtin___float] = None,
+            median : typing___Optional[builtin___float] = None,
+            mode : typing___Optional[builtin___float] = None,
+            variance : typing___Optional[builtin___float] = None,
+            min : typing___Optional[builtin___float] = None,
+            max : typing___Optional[builtin___float] = None,
+            range : typing___Optional[builtin___float] = None,
+            metadata : typing___Optional[typing___Mapping[typing___Text, typing___Text]] = None,
+            ) -> None: ...
+        if sys.version_info >= (3,):
+            @classmethod
+            def FromString(cls, s: builtin___bytes) -> RedvoxPacket1000.SummaryStatistics: ...
+        else:
+            @classmethod
+            def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> RedvoxPacket1000.SummaryStatistics: ...
+        def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+        def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+        if sys.version_info >= (3,):
+            def ClearField(self, field_name: typing_extensions___Literal[u"count",u"max",u"mean",u"median",u"metadata",u"min",u"mode",u"range",u"variance"]) -> None: ...
+        else:
+            def ClearField(self, field_name: typing_extensions___Literal[u"count",b"count",u"max",b"max",u"mean",b"mean",u"median",b"median",u"metadata",b"metadata",u"min",b"min",u"mode",b"mode",u"range",b"range",u"variance",b"variance"]) -> None: ...
 
     api = ... # type: builtin___float
 

@@ -28,14 +28,15 @@
 CF_EXTERN_C_BEGIN
 
 @class RedvoxPacket1000_DeviceInformation;
+@class RedvoxPacket1000_DeviceInformation_AppSettings;
 @class RedvoxPacket1000_PacketInformation;
 @class RedvoxPacket1000_SensorChannels;
 @class RedvoxPacket1000_SensorChannels_ImageChannel;
 @class RedvoxPacket1000_SensorChannels_LocationChannel;
 @class RedvoxPacket1000_SensorChannels_MicrophoneChannel;
 @class RedvoxPacket1000_SensorChannels_SingleChannel;
-@class RedvoxPacket1000_SensorChannels_SummaryStatistics;
 @class RedvoxPacket1000_SensorChannels_XyzChannel;
+@class RedvoxPacket1000_SummaryStatistics;
 @class RedvoxPacket1000_TimingInformation;
 @class RedvoxPacket1000_UserInformation;
 
@@ -85,6 +86,77 @@ GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_OsType_EnumDescriptor(void
  * the time this source was generated.
  **/
 BOOL RedvoxPacket1000_DeviceInformation_OsType_IsValidValue(int32_t value);
+
+#pragma mark - Enum RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate
+
+typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz80 = 0,
+  RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz800 = 1,
+  RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz8000 = 2,
+};
+
+GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_IsValidValue(int32_t value);
+
+#pragma mark - Enum RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning
+
+typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_Infrasound = 0,
+  RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_LowAudio = 1,
+  RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_Audio = 2,
+};
+
+GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_IsValidValue(int32_t value);
+
+#pragma mark - Enum RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor
+
+typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Barometer = 0,
+  RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Accelerometer = 1,
+  RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_AccelerometerFast = 2,
+  RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Magnetometer = 3,
+  RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_MagnetometerFast = 4,
+  RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Gyroscope = 5,
+  RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_GyroscopeFast = 6,
+  RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Luminosity = 7,
+};
+
+GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_IsValidValue(int32_t value);
 
 #pragma mark - Enum RedvoxPacket1000_SensorChannels_LocationChannel_LocationProvider
 
@@ -169,7 +241,7 @@ typedef GPB_ENUM(RedvoxPacket1000_FieldNumber) {
 
 @interface RedvoxPacket1000 : GPBMessage
 
-/** The API version, should always be 1000 */
+/** Top level packet fields */
 @property(nonatomic, readwrite) double api;
 
 /** User information */
@@ -235,10 +307,14 @@ typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_FieldNumber) {
   RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceOs = 5,
   RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceOsVersion = 6,
   RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceAppVersion = 7,
-  RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceTempC = 8,
-  RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceBatteryPercent = 9,
-  RedvoxPacket1000_DeviceInformation_FieldNumber_NetworkType = 10,
-  RedvoxPacket1000_DeviceInformation_FieldNumber_NetworkStrengthDb = 11,
+  RedvoxPacket1000_DeviceInformation_FieldNumber_AppSettings = 8,
+  RedvoxPacket1000_DeviceInformation_FieldNumber_NetworkType = 9,
+  RedvoxPacket1000_DeviceInformation_FieldNumber_NetworkStrengthDb = 10,
+  RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceTempC = 11,
+  RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceBatteryPercent = 12,
+  RedvoxPacket1000_DeviceInformation_FieldNumber_AvailableRamBytes = 13,
+  RedvoxPacket1000_DeviceInformation_FieldNumber_AvailableDiskBytes = 14,
+  RedvoxPacket1000_DeviceInformation_FieldNumber_CpuUtilizationBytes = 15,
 };
 
 @interface RedvoxPacket1000_DeviceInformation : GPBMessage
@@ -264,17 +340,39 @@ typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_FieldNumber) {
 /** App version on the device */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *deviceAppVersion;
 
-/** Temperature of the device in degrees centigrade */
-@property(nonatomic, readwrite) double deviceTempC;
-
-/** Device battery level as a percentage between 0% and 100% */
-@property(nonatomic, readwrite) double deviceBatteryPercent;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_DeviceInformation_AppSettings *appSettings;
+/** Test to see if @c appSettings has been set. */
+@property(nonatomic, readwrite) BOOL hasAppSettings;
 
 /** Type of network connection */
 @property(nonatomic, readwrite) RedvoxPacket1000_DeviceInformation_NetworkType networkType;
 
 /** A value representing the strength of the network connection */
-@property(nonatomic, readwrite) double networkStrengthDb;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *networkStrengthDb;
+/** Test to see if @c networkStrengthDb has been set. */
+@property(nonatomic, readwrite) BOOL hasNetworkStrengthDb;
+
+/** Temperature of the device in degrees centigrade */
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *deviceTempC;
+/** Test to see if @c deviceTempC has been set. */
+@property(nonatomic, readwrite) BOOL hasDeviceTempC;
+
+/** Device battery level as a percentage between 0% and 100% */
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *deviceBatteryPercent;
+/** Test to see if @c deviceBatteryPercent has been set. */
+@property(nonatomic, readwrite) BOOL hasDeviceBatteryPercent;
+
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *availableRamBytes;
+/** Test to see if @c availableRamBytes has been set. */
+@property(nonatomic, readwrite) BOOL hasAvailableRamBytes;
+
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *availableDiskBytes;
+/** Test to see if @c availableDiskBytes has been set. */
+@property(nonatomic, readwrite) BOOL hasAvailableDiskBytes;
+
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *cpuUtilizationBytes;
+/** Test to see if @c cpuUtilizationBytes has been set. */
+@property(nonatomic, readwrite) BOOL hasCpuUtilizationBytes;
 
 @end
 
@@ -301,6 +399,102 @@ int32_t RedvoxPacket1000_DeviceInformation_NetworkType_RawValue(RedvoxPacket1000
  * was generated.
  **/
 void SetRedvoxPacket1000_DeviceInformation_NetworkType_RawValue(RedvoxPacket1000_DeviceInformation *message, int32_t value);
+
+#pragma mark - RedvoxPacket1000_DeviceInformation_AppSettings
+
+typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber) {
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AudioSamplingRate = 1,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AudioSourceTuning = 2,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AdditionalInputSensorsArray = 3,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AutomaticallyRecord = 4,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_LaunchAtPowerUp = 5,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_RedvoxId = 6,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_PushToServer = 7,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_PublishDataAsPrivate = 8,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_ScrambledVoiceData = 9,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_ProvideBackfill = 10,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseCustomTimeSyncServer = 11,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_TimeSynchServerURL = 12,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseCustomDataServer = 13,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_DataServerURL = 14,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AutoDeleteDataFiles = 15,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_StorageSpaceAllowance = 16,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseSdCardForDataStorage = 17,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseLocationServices = 18,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseLatitude = 19,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseLongitude = 20,
+};
+
+@interface RedvoxPacket1000_DeviceInformation_AppSettings : GPBMessage
+
+@property(nonatomic, readwrite) RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate audioSamplingRate;
+
+@property(nonatomic, readwrite) RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning audioSourceTuning;
+
+// |additionalInputSensorsArray| contains |RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor|
+@property(nonatomic, readwrite, strong, null_resettable) GPBEnumArray *additionalInputSensorsArray;
+/** The number of items in @c additionalInputSensorsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger additionalInputSensorsArray_Count;
+
+@property(nonatomic, readwrite) BOOL automaticallyRecord;
+
+@property(nonatomic, readwrite) BOOL launchAtPowerUp;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *redvoxId;
+
+@property(nonatomic, readwrite) BOOL pushToServer;
+
+@property(nonatomic, readwrite) BOOL publishDataAsPrivate;
+
+@property(nonatomic, readwrite) BOOL scrambledVoiceData;
+
+@property(nonatomic, readwrite) BOOL provideBackfill;
+
+@property(nonatomic, readwrite) BOOL useCustomTimeSyncServer;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *timeSynchServerURL;
+
+@property(nonatomic, readwrite) BOOL useCustomDataServer;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *dataServerURL;
+
+@property(nonatomic, readwrite) BOOL autoDeleteDataFiles;
+
+@property(nonatomic, readwrite) double storageSpaceAllowance;
+
+@property(nonatomic, readwrite) BOOL useSdCardForDataStorage;
+
+@property(nonatomic, readwrite) BOOL useLocationServices;
+
+@property(nonatomic, readwrite) double useLatitude;
+
+@property(nonatomic, readwrite) double useLongitude;
+
+@end
+
+/**
+ * Fetches the raw value of a @c RedvoxPacket1000_DeviceInformation_AppSettings's @c audioSamplingRate property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_RawValue(RedvoxPacket1000_DeviceInformation_AppSettings *message);
+/**
+ * Sets the raw value of an @c RedvoxPacket1000_DeviceInformation_AppSettings's @c audioSamplingRate property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_RawValue(RedvoxPacket1000_DeviceInformation_AppSettings *message, int32_t value);
+
+/**
+ * Fetches the raw value of a @c RedvoxPacket1000_DeviceInformation_AppSettings's @c audioSourceTuning property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_RawValue(RedvoxPacket1000_DeviceInformation_AppSettings *message);
+/**
+ * Sets the raw value of an @c RedvoxPacket1000_DeviceInformation_AppSettings's @c audioSourceTuning property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_RawValue(RedvoxPacket1000_DeviceInformation_AppSettings *message, int32_t value);
 
 #pragma mark - RedvoxPacket1000_PacketInformation
 
@@ -461,7 +655,7 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber) 
 @property(nonatomic, readonly) NSUInteger samplesArray_Count;
 
 /** Statistics for microphone samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SummaryStatistics *sampleStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *sampleStatistics;
 /** Test to see if @c sampleStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasSampleStatistics;
 
@@ -503,12 +697,12 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_SingleChannel_FieldNumber) {
 @property(nonatomic, readonly) NSUInteger samplesArray_Count;
 
 /** Statistics for sample timestamps */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SummaryStatistics *sampleRateStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *sampleRateStatistics;
 /** Test to see if @c sampleRateStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasSampleRateStatistics;
 
 /** Statistics for samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SummaryStatistics *sampleStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *sampleStatistics;
 /** Test to see if @c sampleStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasSampleStatistics;
 
@@ -594,32 +788,32 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber) {
 @property(nonatomic, readwrite) RedvoxPacket1000_SensorChannels_LocationChannel_LocationProvider locationProvider;
 
 /** Statistics for sample timestamps */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SummaryStatistics *sampleRateStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *sampleRateStatistics;
 /** Test to see if @c sampleRateStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasSampleRateStatistics;
 
 /** Statistics for latitude samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SummaryStatistics *latitudeSampleStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *latitudeSampleStatistics;
 /** Test to see if @c latitudeSampleStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasLatitudeSampleStatistics;
 
 /** Statistics for longitude samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SummaryStatistics *longitudeSampleStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *longitudeSampleStatistics;
 /** Test to see if @c longitudeSampleStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasLongitudeSampleStatistics;
 
 /** Statistics for altitude samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SummaryStatistics *altitudeSampleStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *altitudeSampleStatistics;
 /** Test to see if @c altitudeSampleStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasAltitudeSampleStatistics;
 
 /** Statistics for speed samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SummaryStatistics *speedSampleStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *speedSampleStatistics;
 /** Test to see if @c speedSampleStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasSpeedSampleStatistics;
 
 /** Statistics for accuracy samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SummaryStatistics *accuracySampleStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *accuracySampleStatistics;
 /** Test to see if @c accuracySampleStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasAccuracySampleStatistics;
 
@@ -687,22 +881,22 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_XyzChannel_FieldNumber) {
 @property(nonatomic, readonly) NSUInteger zSamplesArray_Count;
 
 /** Statistics for sample timestamps */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SummaryStatistics *sampleRateStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *sampleRateStatistics;
 /** Test to see if @c sampleRateStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasSampleRateStatistics;
 
 /** Statistics for X-channel */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SummaryStatistics *xSampleStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *xSampleStatistics;
 /** Test to see if @c xSampleStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasXSampleStatistics;
 
 /** Statistics for Y-channel */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SummaryStatistics *ySampleStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *ySampleStatistics;
 /** Test to see if @c ySampleStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasYSampleStatistics;
 
 /** Statistics for Z-channel */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SummaryStatistics *zSampleStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *zSampleStatistics;
 /** Test to see if @c zSampleStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasZSampleStatistics;
 
@@ -742,7 +936,7 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_ImageChannel_FieldNumber) {
 @property(nonatomic, readonly) NSUInteger samplesArray_Count;
 
 /** Statistics for sample timestamps */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SummaryStatistics *sampleRateStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *sampleRateStatistics;
 /** Test to see if @c sampleRateStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasSampleRateStatistics;
 
@@ -753,21 +947,21 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_ImageChannel_FieldNumber) {
 
 @end
 
-#pragma mark - RedvoxPacket1000_SensorChannels_SummaryStatistics
+#pragma mark - RedvoxPacket1000_SummaryStatistics
 
-typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_SummaryStatistics_FieldNumber) {
-  RedvoxPacket1000_SensorChannels_SummaryStatistics_FieldNumber_Count = 1,
-  RedvoxPacket1000_SensorChannels_SummaryStatistics_FieldNumber_Mean = 2,
-  RedvoxPacket1000_SensorChannels_SummaryStatistics_FieldNumber_Median = 3,
-  RedvoxPacket1000_SensorChannels_SummaryStatistics_FieldNumber_Mode = 4,
-  RedvoxPacket1000_SensorChannels_SummaryStatistics_FieldNumber_Variance = 5,
-  RedvoxPacket1000_SensorChannels_SummaryStatistics_FieldNumber_Min = 6,
-  RedvoxPacket1000_SensorChannels_SummaryStatistics_FieldNumber_Max = 7,
-  RedvoxPacket1000_SensorChannels_SummaryStatistics_FieldNumber_Range = 8,
-  RedvoxPacket1000_SensorChannels_SummaryStatistics_FieldNumber_Metadata = 9,
+typedef GPB_ENUM(RedvoxPacket1000_SummaryStatistics_FieldNumber) {
+  RedvoxPacket1000_SummaryStatistics_FieldNumber_Count = 1,
+  RedvoxPacket1000_SummaryStatistics_FieldNumber_Mean = 2,
+  RedvoxPacket1000_SummaryStatistics_FieldNumber_Median = 3,
+  RedvoxPacket1000_SummaryStatistics_FieldNumber_Mode = 4,
+  RedvoxPacket1000_SummaryStatistics_FieldNumber_Variance = 5,
+  RedvoxPacket1000_SummaryStatistics_FieldNumber_Min = 6,
+  RedvoxPacket1000_SummaryStatistics_FieldNumber_Max = 7,
+  RedvoxPacket1000_SummaryStatistics_FieldNumber_Range = 8,
+  RedvoxPacket1000_SummaryStatistics_FieldNumber_Metadata = 9,
 };
 
-@interface RedvoxPacket1000_SensorChannels_SummaryStatistics : GPBMessage
+@interface RedvoxPacket1000_SummaryStatistics : GPBMessage
 
 /** The total count of values included in the statistics */
 @property(nonatomic, readwrite) double count;
