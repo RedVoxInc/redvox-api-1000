@@ -39,7 +39,7 @@ message RedvoxPacket1000 {
         SummaryStatistics device_battery_percent = 12;  // Device battery level as a percentage between 0% and 100%
         SummaryStatistics available_ram_bytes = 13;
         SummaryStatistics available_disk_bytes = 14;
-        SummaryStatistics cpu_utilization_bytes = 15;
+        SummaryStatistics cpu_utilization = 15;
 
         enum NetworkType {
             WIFI = 0;
