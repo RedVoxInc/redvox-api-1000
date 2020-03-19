@@ -237,7 +237,7 @@ typedef struct RedvoxPacket1000_UserInformation__storage_ {
 @dynamic hasDeviceBatteryPercent, deviceBatteryPercent;
 @dynamic hasAvailableRamBytes, availableRamBytes;
 @dynamic hasAvailableDiskBytes, availableDiskBytes;
-@dynamic hasCpuUtilizationBytes, cpuUtilizationBytes;
+@dynamic hasCpuUtilization, cpuUtilization;
 
 typedef struct RedvoxPacket1000_DeviceInformation__storage_ {
   uint32_t _has_storage_[1];
@@ -255,7 +255,7 @@ typedef struct RedvoxPacket1000_DeviceInformation__storage_ {
   RedvoxPacket1000_SummaryStatistics *deviceBatteryPercent;
   RedvoxPacket1000_SummaryStatistics *availableRamBytes;
   RedvoxPacket1000_SummaryStatistics *availableDiskBytes;
-  RedvoxPacket1000_SummaryStatistics *cpuUtilizationBytes;
+  RedvoxPacket1000_SummaryStatistics *cpuUtilization;
 } RedvoxPacket1000_DeviceInformation__storage_;
 
 // This method is threadsafe because it is initially called
@@ -391,11 +391,11 @@ typedef struct RedvoxPacket1000_DeviceInformation__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "cpuUtilizationBytes",
+        .name = "cpuUtilization",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_CpuUtilizationBytes,
+        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_CpuUtilization,
         .hasIndex = 14,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, cpuUtilizationBytes),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, cpuUtilization),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -919,7 +919,6 @@ BOOL RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_IsValidValue(int
 
 @dynamic isBackfilled;
 @dynamic isPrivate;
-@dynamic isMicScrambled;
 
 typedef struct RedvoxPacket1000_PacketInformation__storage_ {
   uint32_t _has_storage_[1];
@@ -946,15 +945,6 @@ typedef struct RedvoxPacket1000_PacketInformation__storage_ {
         .number = RedvoxPacket1000_PacketInformation_FieldNumber_IsPrivate,
         .hasIndex = 2,
         .offset = 3,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeBool,
-      },
-      {
-        .name = "isMicScrambled",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_PacketInformation_FieldNumber_IsMicScrambled,
-        .hasIndex = 4,
-        .offset = 5,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1247,6 +1237,7 @@ typedef struct RedvoxPacket1000_SensorChannels__storage_ {
 @dynamic sensorDescription;
 @dynamic firstSampleTsUs;
 @dynamic sampleRateHz;
+@dynamic isScrambled;
 @dynamic samplesArray, samplesArray_Count;
 @dynamic hasSampleStatistics, sampleStatistics;
 @dynamic metadata, metadata_Count;
@@ -1295,6 +1286,15 @@ typedef struct RedvoxPacket1000_SensorChannels_MicrophoneChannel__storage_ {
         .dataType = GPBDataTypeDouble,
       },
       {
+        .name = "isScrambled",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_IsScrambled,
+        .hasIndex = 3,
+        .offset = 4,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
         .name = "samplesArray",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_SamplesArray,
@@ -1307,7 +1307,7 @@ typedef struct RedvoxPacket1000_SensorChannels_MicrophoneChannel__storage_ {
         .name = "sampleStatistics",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
         .number = RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_SampleStatistics,
-        .hasIndex = 3,
+        .hasIndex = 5,
         .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_MicrophoneChannel__storage_, sampleStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,

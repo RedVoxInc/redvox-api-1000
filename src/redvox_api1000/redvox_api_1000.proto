@@ -1,5 +1,5 @@
 /**
-* This file contains the protobuf message definitions for RedVox API 1000 data.
+* This file contains the protobuf message definitions for RedVox API 1000 data and network communications.
 */
 
 syntax = "proto3";
@@ -16,7 +16,7 @@ message RedvoxPacket1000 {
     SensorChannels sensor_channels = 6;                 // Sensor channels
     map<string, string> metadata = 7;                   // A map from string to string for including untyped metadata
 
-    // The rest of this message contains embedded message types
+    // --------- The rest of this message contains embedded message types
 
     message UserInformation {
         string auth_email = 1;                          // The e-mail the user used to authenticate with
@@ -32,14 +32,14 @@ message RedvoxPacket1000 {
         OsType device_os = 5;                           // OS of the device
         string device_os_version = 6;                   // OS version of the device
         string device_app_version = 7;                  // App version on the device
-        AppSettings app_settings = 8;
+        AppSettings app_settings = 8;                   // A copy of the App's settings
         NetworkType network_type = 9;                   // Type of network connection
         SummaryStatistics network_strength_db = 10;     // A value representing the strength of the network connection
         SummaryStatistics device_temp_c = 11;           // Temperature of the device in degrees centigrade
         SummaryStatistics device_battery_percent = 12;  // Device battery level as a percentage between 0% and 100%
-        SummaryStatistics available_ram_bytes = 13;
-        SummaryStatistics available_disk_bytes = 14;
-        SummaryStatistics cpu_utilization = 15;
+        SummaryStatistics available_ram_bytes = 13;     // Available RAM in bytes
+        SummaryStatistics available_disk_bytes = 14;    // Available disk space in bytes
+        SummaryStatistics cpu_utilization = 15;         // CPU utilization
 
         enum NetworkType {
             WIFI = 0;
@@ -102,9 +102,8 @@ message RedvoxPacket1000 {
     }
 
     message PacketInformation {
-        bool is_backfilled = 1;                             // Field for if this packet has been backfilled or not
-        bool is_private = 2;                                // Field for if this packet is private to the user or not
-        bool is_mic_scrambled = 3;                          // Field that determines if the microphone data is scrambled or not (should be True for 8000Hz data)
+        bool is_backfilled = 1;                            // Field for if this packet has been backfilled or not
+        bool is_private = 2;                               // Field for if this packet is private to the user or not
     }
 
     message TimingInformation {
@@ -134,9 +133,10 @@ message RedvoxPacket1000 {
             string sensor_description = 1;                      // The name or description of the microphone sensor
             double first_sample_ts_us = 2;                      // Timestamp of the first microphone sample
             double sample_rate_hz = 3;                          // Microphone sample rate in Hz
-            repeated double samples = 4;                        // List of microphone samples
-            SummaryStatistics sample_statistics = 5;            // Statistics for microphone samples
-            map<string, string> metadata = 6;                   // A map from string to string for including untyped metadata
+            bool is_scrambled = 4;                              // If audio data has been scrambled to remove voice
+            repeated double samples = 5;                        // List of microphone samples
+            SummaryStatistics sample_statistics = 6;            // Statistics for microphone samples
+            map<string, string> metadata = 7;                   // A map from string to string for including untyped metadata
         }
 
         message SingleChannel {
@@ -150,13 +150,6 @@ message RedvoxPacket1000 {
         }
 
         message LocationChannel {
-            enum LocationProvider {
-                NONE = 0;
-                USER = 1;
-                GPS = 2;
-                NETWORK = 3;
-            }
-
             string sensor_description = 1;                      // The name or description of the sensor
             double mean_sample_rate_hz = 2;                     // The mean sample rate in Hz
             repeated double sample_ts_us = 3;                   // A list of timestamps, one for each sample
@@ -176,6 +169,13 @@ message RedvoxPacket1000 {
             SummaryStatistics speed_sample_statistics = 17;     // Statistics for speed samples
             SummaryStatistics accuracy_sample_statistics = 18;  // Statistics for accuracy samples
             map<string, string> metadata = 19;                  // A map from string to string for including untyped metadata
+
+            enum LocationProvider {
+                NONE = 0;
+                USER = 1;
+                GPS = 2;
+                NETWORK = 3;
+            }
         }
 
         message XyzChannel {
@@ -196,45 +196,45 @@ message RedvoxPacket1000 {
             string sensor_description = 1;                      // The name or description of the sensor
             double mean_sample_rate_hz = 2;                     // The mean sample rate in Hz
             repeated double sample_ts_us = 3;                   // A list of timestamps, one for each sample
-            repeated bytes samples = 4;
+            repeated bytes samples = 4;                         // A list of bytes each representing a single image
             SummaryStatistics sample_rate_statistics = 5;       // Statistics for sample timestamps
             map<string, string> metadata = 6;                   // A map from string to string for including untyped metadata
         }
     }
 
     message SummaryStatistics {
-        double count = 1;                                   // The total count of values included in the statistics
-        double mean = 2;                                    // The mean of the values
-        double median = 3;                                  // The median of the values
-        double mode = 4;                                    // The mode of the values
-        double variance = 5;                                // The variance of the values
-        double min = 6;                                     // The minimum value
-        double max = 7;                                     // The maximum value
-        double range = 8;                                   // The range of the values
-        map<string, string> metadata = 9;                   // A map from string to string for including untyped metadata
+        double count = 1;                                       // The total count of values included in the statistics
+        double mean = 2;                                        // The mean of the values
+        double median = 3;                                      // The median of the values
+        double mode = 4;                                        // The mode of the values
+        double variance = 5;                                    // The variance of the values
+        double min = 6;                                         // The minimum value
+        double max = 7;                                         // The maximum value
+        double range = 8;                                       // The range of the values
+        map<string, string> metadata = 9;                       // A map from string to string for including untyped metadata
     }
 }
 
 
 // Message for sending RedVox data to a redvox.io data acquisition service.
 message AcquisitionRequest {
-    bytes compressed_redvox_packet_1000 = 1; // The compressed packet to send.
-    int64 checksum = 2; // A checksum of the bytes in field 1.
+    bytes compressed_redvox_packet_1000 = 1;                // The compressed packet to send.
+    int64 checksum = 2;                                     // A checksum of the bytes in field 1.
 }
 
 // Response from data acquisition services.
 message AcquisitionResponse {
-    enum ResponseType { // Server response types
-                        OK = 0; // No issues with packet
-                        AUTH_ERROR = 1; // An authentication error has occurred
-                        DATA_ERROR = 2; // An error with the data decoding or data quality
-                        OTHER_ERROR = 3; // Any other errors
-    }
+    ResponseType response_type = 1;                         // Response type (as above)
+    int64 checksum = 2;                                     // Checksum computed by server
+    string details = 3;                                     // Any other error details
+    bool resend = 4;                                        // If set, client to should attempt to resend the file
+                                                            // otherwise, don't resend the file.
 
-    ResponseType response_type = 1; // Response type (as above)
-    int64 checksum = 2; // Checksum computed by server
-    string details = 3; // Any other error details
-    bool resend = 4; // If set, client to should attempt to resend the file
-    // otherwise, don't resend the file.
+    enum ResponseType {                                     // Server response types
+        OK = 0;                             // No issues with packet
+        AUTH_ERROR = 1;                     // An authentication error has occurred
+        DATA_ERROR = 2;                     // An error with the data decoding or data quality
+        OTHER_ERROR = 3;                    // Any other errors
+    }
 }
 

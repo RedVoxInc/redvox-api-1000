@@ -314,7 +314,7 @@ typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_FieldNumber) {
   RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceBatteryPercent = 12,
   RedvoxPacket1000_DeviceInformation_FieldNumber_AvailableRamBytes = 13,
   RedvoxPacket1000_DeviceInformation_FieldNumber_AvailableDiskBytes = 14,
-  RedvoxPacket1000_DeviceInformation_FieldNumber_CpuUtilizationBytes = 15,
+  RedvoxPacket1000_DeviceInformation_FieldNumber_CpuUtilization = 15,
 };
 
 @interface RedvoxPacket1000_DeviceInformation : GPBMessage
@@ -340,6 +340,7 @@ typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_FieldNumber) {
 /** App version on the device */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *deviceAppVersion;
 
+/** A copy of the App's settings */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_DeviceInformation_AppSettings *appSettings;
 /** Test to see if @c appSettings has been set. */
 @property(nonatomic, readwrite) BOOL hasAppSettings;
@@ -362,17 +363,20 @@ typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_FieldNumber) {
 /** Test to see if @c deviceBatteryPercent has been set. */
 @property(nonatomic, readwrite) BOOL hasDeviceBatteryPercent;
 
+/** Available RAM in bytes */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *availableRamBytes;
 /** Test to see if @c availableRamBytes has been set. */
 @property(nonatomic, readwrite) BOOL hasAvailableRamBytes;
 
+/** Available disk space in bytes */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *availableDiskBytes;
 /** Test to see if @c availableDiskBytes has been set. */
 @property(nonatomic, readwrite) BOOL hasAvailableDiskBytes;
 
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *cpuUtilizationBytes;
-/** Test to see if @c cpuUtilizationBytes has been set. */
-@property(nonatomic, readwrite) BOOL hasCpuUtilizationBytes;
+/** CPU utilization */
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *cpuUtilization;
+/** Test to see if @c cpuUtilization has been set. */
+@property(nonatomic, readwrite) BOOL hasCpuUtilization;
 
 @end
 
@@ -501,7 +505,6 @@ void SetRedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_RawValu
 typedef GPB_ENUM(RedvoxPacket1000_PacketInformation_FieldNumber) {
   RedvoxPacket1000_PacketInformation_FieldNumber_IsBackfilled = 1,
   RedvoxPacket1000_PacketInformation_FieldNumber_IsPrivate = 2,
-  RedvoxPacket1000_PacketInformation_FieldNumber_IsMicScrambled = 3,
 };
 
 @interface RedvoxPacket1000_PacketInformation : GPBMessage
@@ -511,9 +514,6 @@ typedef GPB_ENUM(RedvoxPacket1000_PacketInformation_FieldNumber) {
 
 /** Field for if this packet is private to the user or not */
 @property(nonatomic, readwrite) BOOL isPrivate;
-
-/** Field that determines if the microphone data is scrambled or not (should be True for 8000Hz data) */
-@property(nonatomic, readwrite) BOOL isMicScrambled;
 
 @end
 
@@ -633,9 +633,10 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber) 
   RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_SensorDescription = 1,
   RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_FirstSampleTsUs = 2,
   RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_SampleRateHz = 3,
-  RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_SamplesArray = 4,
-  RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_SampleStatistics = 5,
-  RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_Metadata = 6,
+  RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_IsScrambled = 4,
+  RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_SamplesArray = 5,
+  RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_SampleStatistics = 6,
+  RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_Metadata = 7,
 };
 
 @interface RedvoxPacket1000_SensorChannels_MicrophoneChannel : GPBMessage
@@ -648,6 +649,9 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber) 
 
 /** Microphone sample rate in Hz */
 @property(nonatomic, readwrite) double sampleRateHz;
+
+/** If audio data has been scrambled to remove voice */
+@property(nonatomic, readwrite) BOOL isScrambled;
 
 /** List of microphone samples */
 @property(nonatomic, readwrite, strong, null_resettable) GPBDoubleArray *samplesArray;
@@ -931,6 +935,7 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_ImageChannel_FieldNumber) {
 /** The number of items in @c sampleTsUsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger sampleTsUsArray_Count;
 
+/** A list of bytes each representing a single image */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSData*> *samplesArray;
 /** The number of items in @c samplesArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger samplesArray_Count;
