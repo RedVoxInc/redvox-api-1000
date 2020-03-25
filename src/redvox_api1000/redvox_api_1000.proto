@@ -238,3 +238,14 @@ message AcquisitionResponse {
     }
 }
 
+message SynchRequest {
+    uint64 seq_id = 1;
+    uint32 sub_seq_id = 2;
+}
+
+message SynchResponse {
+    uint64 seq_id = 1;
+    uint32 sub_seq_id = 2;
+    uint64 recv_ts_us = 3;
+    uint64 send_ts_us = 4;
+}
