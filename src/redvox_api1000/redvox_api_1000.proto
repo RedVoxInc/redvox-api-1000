@@ -113,9 +113,18 @@ message RedvoxPacket1000 {
         double packet_end_ts_us_mach = 4;                  // End timestamp of the packet using machine time (corresponding to the last microphone sample)
         double server_acquisition_arrival_ts_us = 5;       // Timestamp that the packet arrived at the acquisition server
         double app_start_ts_us_mach = 6;                   // The start of the app as machine time
-        repeated double synch_params = 7;                  // An array of synchronization params from the synch server
+        repeated SynchExchange synch_exchanges = 7;        // An array of synchronization params from the synch server
         double best_latency_us = 8;                        // The best latency as determined from the synch params
         double best_offset_us = 9;                         // The best offset as determined from the synch params
+
+        message SynchExchange {
+            double a1 = 1;
+            double a2 = 2;
+            double a3 = 3;
+            double b1 = 4;
+            double b2 = 5;
+            double b3 = 6;
+        }
     }
 
     message SensorChannels {
