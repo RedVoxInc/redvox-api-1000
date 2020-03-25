@@ -428,7 +428,7 @@ typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber) {
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_RedvoxId = 6,
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_PushToServer = 7,
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_PublishDataAsPrivate = 8,
-  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_ScrambledVoiceData = 9,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_ScrambleVoiceData = 9,
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_ProvideBackfill = 10,
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseCustomTimeSyncServer = 11,
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_TimeSynchServerURL = 12,
@@ -464,7 +464,7 @@ typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber) {
 
 @property(nonatomic, readwrite) BOOL publishDataAsPrivate;
 
-@property(nonatomic, readwrite) BOOL scrambledVoiceData;
+@property(nonatomic, readwrite) BOOL scrambleVoiceData;
 
 @property(nonatomic, readwrite) BOOL provideBackfill;
 

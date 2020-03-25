@@ -2597,9 +2597,9 @@ public final class RedvoxApi1000 {
         boolean getPublishDataAsPrivate();
 
         /**
-         * <code>bool scrambled_voice_data = 9;</code>
+         * <code>bool scramble_voice_data = 9;</code>
          */
-        boolean getScrambledVoiceData();
+        boolean getScrambleVoiceData();
 
         /**
          * <code>bool provide_backfill = 10;</code>
@@ -2741,7 +2741,7 @@ public final class RedvoxApi1000 {
           redvoxId_ = "";
           pushToServer_ = false;
           publishDataAsPrivate_ = false;
-          scrambledVoiceData_ = false;
+          scrambleVoiceData_ = false;
           provideBackfill_ = false;
           useCustomTimeSyncServer_ = false;
           timeSynchServerUrl_ = "";
@@ -2842,7 +2842,7 @@ public final class RedvoxApi1000 {
                 }
                 case 72: {
 
-                  scrambledVoiceData_ = input.readBool();
+                  scrambleVoiceData_ = input.readBool();
                   break;
                 }
                 case 80: {
@@ -3479,13 +3479,13 @@ public final class RedvoxApi1000 {
           return publishDataAsPrivate_;
         }
 
-        public static final int SCRAMBLED_VOICE_DATA_FIELD_NUMBER = 9;
-        private boolean scrambledVoiceData_;
+        public static final int SCRAMBLE_VOICE_DATA_FIELD_NUMBER = 9;
+        private boolean scrambleVoiceData_;
         /**
-         * <code>bool scrambled_voice_data = 9;</code>
+         * <code>bool scramble_voice_data = 9;</code>
          */
-        public boolean getScrambledVoiceData() {
-          return scrambledVoiceData_;
+        public boolean getScrambleVoiceData() {
+          return scrambleVoiceData_;
         }
 
         public static final int PROVIDE_BACKFILL_FIELD_NUMBER = 10;
@@ -3772,8 +3772,8 @@ public final class RedvoxApi1000 {
           if (publishDataAsPrivate_ != false) {
             output.writeBool(8, publishDataAsPrivate_);
           }
-          if (scrambledVoiceData_ != false) {
-            output.writeBool(9, scrambledVoiceData_);
+          if (scrambleVoiceData_ != false) {
+            output.writeBool(9, scrambleVoiceData_);
           }
           if (provideBackfill_ != false) {
             output.writeBool(10, provideBackfill_);
@@ -3862,9 +3862,9 @@ public final class RedvoxApi1000 {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(8, publishDataAsPrivate_);
           }
-          if (scrambledVoiceData_ != false) {
+          if (scrambleVoiceData_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(9, scrambledVoiceData_);
+              .computeBoolSize(9, scrambleVoiceData_);
           }
           if (provideBackfill_ != false) {
             size += com.google.protobuf.CodedOutputStream
@@ -3947,8 +3947,8 @@ public final class RedvoxApi1000 {
               == other.getPushToServer());
           result = result && (getPublishDataAsPrivate()
               == other.getPublishDataAsPrivate());
-          result = result && (getScrambledVoiceData()
-              == other.getScrambledVoiceData());
+          result = result && (getScrambleVoiceData()
+              == other.getScrambleVoiceData());
           result = result && (getProvideBackfill()
               == other.getProvideBackfill());
           result = result && (getUseCustomTimeSyncServer()
@@ -4012,9 +4012,9 @@ public final class RedvoxApi1000 {
           hash = (37 * hash) + PUBLISH_DATA_AS_PRIVATE_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getPublishDataAsPrivate());
-          hash = (37 * hash) + SCRAMBLED_VOICE_DATA_FIELD_NUMBER;
+          hash = (37 * hash) + SCRAMBLE_VOICE_DATA_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-              getScrambledVoiceData());
+              getScrambleVoiceData());
           hash = (37 * hash) + PROVIDE_BACKFILL_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getProvideBackfill());
@@ -4221,7 +4221,7 @@ public final class RedvoxApi1000 {
 
             publishDataAsPrivate_ = false;
 
-            scrambledVoiceData_ = false;
+            scrambleVoiceData_ = false;
 
             provideBackfill_ = false;
 
@@ -4286,7 +4286,7 @@ public final class RedvoxApi1000 {
             result.redvoxId_ = redvoxId_;
             result.pushToServer_ = pushToServer_;
             result.publishDataAsPrivate_ = publishDataAsPrivate_;
-            result.scrambledVoiceData_ = scrambledVoiceData_;
+            result.scrambleVoiceData_ = scrambleVoiceData_;
             result.provideBackfill_ = provideBackfill_;
             result.useCustomTimeSyncServer_ = useCustomTimeSyncServer_;
             result.timeSynchServerUrl_ = timeSynchServerUrl_;
@@ -4381,8 +4381,8 @@ public final class RedvoxApi1000 {
             if (other.getPublishDataAsPrivate() != false) {
               setPublishDataAsPrivate(other.getPublishDataAsPrivate());
             }
-            if (other.getScrambledVoiceData() != false) {
-              setScrambledVoiceData(other.getScrambledVoiceData());
+            if (other.getScrambleVoiceData() != false) {
+              setScrambleVoiceData(other.getScrambleVoiceData());
             }
             if (other.getProvideBackfill() != false) {
               setProvideBackfill(other.getProvideBackfill());
@@ -4832,28 +4832,28 @@ public final class RedvoxApi1000 {
             return this;
           }
 
-          private boolean scrambledVoiceData_ ;
+          private boolean scrambleVoiceData_ ;
           /**
-           * <code>bool scrambled_voice_data = 9;</code>
+           * <code>bool scramble_voice_data = 9;</code>
            */
-          public boolean getScrambledVoiceData() {
-            return scrambledVoiceData_;
+          public boolean getScrambleVoiceData() {
+            return scrambleVoiceData_;
           }
           /**
-           * <code>bool scrambled_voice_data = 9;</code>
+           * <code>bool scramble_voice_data = 9;</code>
            */
-          public Builder setScrambledVoiceData(boolean value) {
+          public Builder setScrambleVoiceData(boolean value) {
             
-            scrambledVoiceData_ = value;
+            scrambleVoiceData_ = value;
             onChanged();
             return this;
           }
           /**
-           * <code>bool scrambled_voice_data = 9;</code>
+           * <code>bool scramble_voice_data = 9;</code>
            */
-          public Builder clearScrambledVoiceData() {
+          public Builder clearScrambleVoiceData() {
             
-            scrambledVoiceData_ = false;
+            scrambleVoiceData_ = false;
             onChanged();
             return this;
           }
@@ -34884,7 +34884,7 @@ public final class RedvoxApi1000 {
   static {
     java.lang.String[] descriptorData = {
       "\n(src/redvox_api1000/redvox_api_1000.pro" +
-      "to\022\016redvox_api1000\"\250@\n\020RedvoxPacket1000\022" +
+      "to\022\016redvox_api1000\"\247@\n\020RedvoxPacket1000\022" +
       "\013\n\003api\030\001 \001(\001\022J\n\020user_information\030\002 \001(\01320" +
       ".redvox_api1000.RedvoxPacket1000.UserInf" +
       "ormation\022N\n\022device_information\030\003 \001(\01322.r" +
@@ -34903,7 +34903,7 @@ public final class RedvoxApi1000 {
       "\t\022P\n\010metadata\030\004 \003(\0132>.redvox_api1000.Red" +
       "voxPacket1000.UserInformation.MetadataEn" +
       "try\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\032\336\022\n\021DeviceInformation\022\021\n\tde" +
+      "ue\030\002 \001(\t:\0028\001\032\335\022\n\021DeviceInformation\022\021\n\tde" +
       "vice_id\030\001 \001(\t\022\023\n\013device_uuid\030\002 \001(\t\022\023\n\013de" +
       "vice_make\030\003 \001(\t\022\024\n\014device_model\030\004 \001(\t\022L\n" +
       "\tdevice_os\030\005 \001(\01629.redvox_api1000.Redvox" +
@@ -34928,7 +34928,7 @@ public final class RedvoxApi1000 {
       "1000.SummaryStatistics\022R\n\010metadata\030\020 \003(\013" +
       "2@.redvox_api1000.RedvoxPacket1000.Devic" +
       "eInformation.MetadataEntry\032/\n\rMetadataEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\366\t\n\013" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\365\t\n\013" +
       "AppSettings\022m\n\023audio_sampling_rate\030\001 \001(\016" +
       "2P.redvox_api1000.RedvoxPacket1000.Devic" +
       "eInformation.AppSettings.AudioSamplingRa" +
@@ -34940,169 +34940,169 @@ public final class RedvoxApi1000 {
       "AppSettings.InputSensor\022\034\n\024automatically" +
       "_record\030\004 \001(\010\022\032\n\022launch_at_power_up\030\005 \001(" +
       "\010\022\021\n\tredvox_id\030\006 \001(\t\022\026\n\016push_to_server\030\007" +
-      " \001(\010\022\037\n\027publish_data_as_private\030\010 \001(\010\022\034\n" +
-      "\024scrambled_voice_data\030\t \001(\010\022\030\n\020provide_b" +
-      "ackfill\030\n \001(\010\022#\n\033use_custom_time_sync_se" +
-      "rver\030\013 \001(\010\022\035\n\025time_synch_server_url\030\014 \001(" +
-      "\t\022\036\n\026use_custom_data_server\030\r \001(\010\022\027\n\017dat" +
-      "a_server_url\030\016 \001(\t\022\036\n\026auto_delete_data_f" +
-      "iles\030\017 \001(\010\022\037\n\027storage_space_allowance\030\020 " +
-      "\001(\001\022$\n\034use_sd_card_for_data_storage\030\021 \001(" +
-      "\010\022\035\n\025use_location_services\030\022 \001(\010\022\024\n\014use_" +
-      "latitude\030\023 \001(\001\022\025\n\ruse_longitude\030\024 \001(\001\022^\n" +
-      "\010metadata\030\025 \003(\0132L.redvox_api1000.RedvoxP" +
-      "acket1000.DeviceInformation.AppSettings." +
+      " \001(\010\022\037\n\027publish_data_as_private\030\010 \001(\010\022\033\n" +
+      "\023scramble_voice_data\030\t \001(\010\022\030\n\020provide_ba" +
+      "ckfill\030\n \001(\010\022#\n\033use_custom_time_sync_ser" +
+      "ver\030\013 \001(\010\022\035\n\025time_synch_server_url\030\014 \001(\t" +
+      "\022\036\n\026use_custom_data_server\030\r \001(\010\022\027\n\017data" +
+      "_server_url\030\016 \001(\t\022\036\n\026auto_delete_data_fi" +
+      "les\030\017 \001(\010\022\037\n\027storage_space_allowance\030\020 \001" +
+      "(\001\022$\n\034use_sd_card_for_data_storage\030\021 \001(\010" +
+      "\022\035\n\025use_location_services\030\022 \001(\010\022\024\n\014use_l" +
+      "atitude\030\023 \001(\001\022\025\n\ruse_longitude\030\024 \001(\001\022^\n\010" +
+      "metadata\030\025 \003(\0132L.redvox_api1000.RedvoxPa" +
+      "cket1000.DeviceInformation.AppSettings.M" +
+      "etadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7\n\021AudioSamplingRa" +
+      "te\022\t\n\005HZ_80\020\000\022\n\n\006HZ_800\020\001\022\013\n\007HZ_8000\020\002\"=" +
+      "\n\021AudioSourceTuning\022\016\n\nINFRASOUND\020\000\022\r\n\tL" +
+      "OW_AUDIO\020\001\022\t\n\005AUDIO\020\002\"\243\001\n\013InputSensor\022\r\n" +
+      "\tBAROMETER\020\000\022\021\n\rACCELEROMETER\020\001\022\026\n\022ACCEL" +
+      "EROMETER_FAST\020\002\022\020\n\014MAGNETOMETER\020\003\022\025\n\021MAG" +
+      "NETOMETER_FAST\020\004\022\r\n\tGYROSCOPE\020\005\022\022\n\016GYROS" +
+      "COPE_FAST\020\006\022\016\n\nLUMINOSITY\020\007\"/\n\013NetworkTy" +
+      "pe\022\010\n\004WIFI\020\000\022\014\n\010CELLULAR\020\001\022\010\n\004NONE\020\002\"6\n\006" +
+      "OsType\022\013\n\007ANDROID\020\000\022\007\n\003IOS\020\001\022\t\n\005LINUX\020\002\022" +
+      "\013\n\007WINDOWS\020\003\032\303\001\n\021PacketInformation\022\025\n\ris" +
+      "_backfilled\030\001 \001(\010\022\022\n\nis_private\030\002 \001(\010\022R\n" +
+      "\010metadata\030\003 \003(\0132@.redvox_api1000.RedvoxP" +
+      "acket1000.PacketInformation.MetadataEntr" +
+      "y\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\032\331\005\n\021TimingInformation\022\037\n\027pack" +
+      "et_start_ts_us_wall\030\001 \001(\001\022\037\n\027packet_star" +
+      "t_ts_us_mach\030\002 \001(\001\022\035\n\025packet_end_ts_us_w" +
+      "all\030\003 \001(\001\022\035\n\025packet_end_ts_us_mach\030\004 \001(\001" +
+      "\022(\n server_acquisition_arrival_ts_us\030\005 \001" +
+      "(\001\022\034\n\024app_start_ts_us_mach\030\006 \001(\001\022Y\n\017sync" +
+      "h_exchanges\030\007 \003(\0132@.redvox_api1000.Redvo" +
+      "xPacket1000.TimingInformation.SynchExcha" +
+      "nge\022\027\n\017best_latency_us\030\010 \001(\001\022\026\n\016best_off" +
+      "set_us\030\t \001(\001\022R\n\010metadata\030\n \003(\0132@.redvox_" +
+      "api1000.RedvoxPacket1000.TimingInformati" +
+      "on.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\352\001\n\rSynchExcha" +
+      "nge\022\n\n\002a1\030\001 \001(\001\022\n\n\002a2\030\002 \001(\001\022\n\n\002a3\030\003 \001(\001\022" +
+      "\n\n\002b1\030\004 \001(\001\022\n\n\002b2\030\005 \001(\001\022\n\n\002b3\030\006 \001(\001\022`\n\010m" +
+      "etadata\030\007 \003(\0132N.redvox_api1000.RedvoxPac" +
+      "ket1000.TimingInformation.SynchExchange." +
       "MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7\n\021AudioSamplingR" +
-      "ate\022\t\n\005HZ_80\020\000\022\n\n\006HZ_800\020\001\022\013\n\007HZ_8000\020\002\"" +
-      "=\n\021AudioSourceTuning\022\016\n\nINFRASOUND\020\000\022\r\n\t" +
-      "LOW_AUDIO\020\001\022\t\n\005AUDIO\020\002\"\243\001\n\013InputSensor\022\r" +
-      "\n\tBAROMETER\020\000\022\021\n\rACCELEROMETER\020\001\022\026\n\022ACCE" +
-      "LEROMETER_FAST\020\002\022\020\n\014MAGNETOMETER\020\003\022\025\n\021MA" +
-      "GNETOMETER_FAST\020\004\022\r\n\tGYROSCOPE\020\005\022\022\n\016GYRO" +
-      "SCOPE_FAST\020\006\022\016\n\nLUMINOSITY\020\007\"/\n\013NetworkT" +
-      "ype\022\010\n\004WIFI\020\000\022\014\n\010CELLULAR\020\001\022\010\n\004NONE\020\002\"6\n" +
-      "\006OsType\022\013\n\007ANDROID\020\000\022\007\n\003IOS\020\001\022\t\n\005LINUX\020\002" +
-      "\022\013\n\007WINDOWS\020\003\032\303\001\n\021PacketInformation\022\025\n\ri" +
-      "s_backfilled\030\001 \001(\010\022\022\n\nis_private\030\002 \001(\010\022R" +
-      "\n\010metadata\030\003 \003(\0132@.redvox_api1000.Redvox" +
-      "Packet1000.PacketInformation.MetadataEnt" +
-      "ry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\032\331\005\n\021TimingInformation\022\037\n\027pac" +
-      "ket_start_ts_us_wall\030\001 \001(\001\022\037\n\027packet_sta" +
-      "rt_ts_us_mach\030\002 \001(\001\022\035\n\025packet_end_ts_us_" +
-      "wall\030\003 \001(\001\022\035\n\025packet_end_ts_us_mach\030\004 \001(" +
-      "\001\022(\n server_acquisition_arrival_ts_us\030\005 " +
-      "\001(\001\022\034\n\024app_start_ts_us_mach\030\006 \001(\001\022Y\n\017syn" +
-      "ch_exchanges\030\007 \003(\0132@.redvox_api1000.Redv" +
-      "oxPacket1000.TimingInformation.SynchExch" +
-      "ange\022\027\n\017best_latency_us\030\010 \001(\001\022\026\n\016best_of" +
-      "fset_us\030\t \001(\001\022R\n\010metadata\030\n \003(\0132@.redvox" +
-      "_api1000.RedvoxPacket1000.TimingInformat" +
-      "ion.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\352\001\n\rSynchExch" +
-      "ange\022\n\n\002a1\030\001 \001(\001\022\n\n\002a2\030\002 \001(\001\022\n\n\002a3\030\003 \001(\001" +
-      "\022\n\n\002b1\030\004 \001(\001\022\n\n\002b2\030\005 \001(\001\022\n\n\002b3\030\006 \001(\001\022`\n\010" +
-      "metadata\030\007 \003(\0132N.redvox_api1000.RedvoxPa" +
-      "cket1000.TimingInformation.SynchExchange" +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\036\n\016SensorChannel" +
+      "s\022]\n\022microphone_channel\030\001 \001(\0132A.redvox_a" +
+      "pi1000.RedvoxPacket1000.SensorChannels.M" +
+      "icrophoneChannel\022X\n\021barometer_channel\030\002 " +
+      "\001(\0132=.redvox_api1000.RedvoxPacket1000.Se" +
+      "nsorChannels.SingleChannel\022Y\n\020location_c" +
+      "hannel\030\003 \001(\0132?.redvox_api1000.RedvoxPack" +
+      "et1000.SensorChannels.LocationChannel\022Y\n" +
+      "\025accelerometer_channel\030\004 \001(\0132:.redvox_ap" +
+      "i1000.RedvoxPacket1000.SensorChannels.Xy" +
+      "zChannel\022U\n\021gyroscope_channel\030\005 \001(\0132:.re" +
+      "dvox_api1000.RedvoxPacket1000.SensorChan" +
+      "nels.XyzChannel\022X\n\024magnetometer_channel\030" +
+      "\006 \001(\0132:.redvox_api1000.RedvoxPacket1000." +
+      "SensorChannels.XyzChannel\022T\n\rlight_chann" +
+      "el\030\007 \001(\0132=.redvox_api1000.RedvoxPacket10" +
+      "00.SensorChannels.SingleChannel\022W\n\020infra" +
+      "red_channel\030\010 \001(\0132=.redvox_api1000.Redvo" +
+      "xPacket1000.SensorChannels.SingleChannel" +
+      "\022S\n\rimage_channel\030\t \001(\0132<.redvox_api1000" +
+      ".RedvoxPacket1000.SensorChannels.ImageCh" +
+      "annel\022O\n\010metadata\030\n \003(\0132=.redvox_api1000" +
+      ".RedvoxPacket1000.SensorChannels.Metadat" +
+      "aEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\032\355\002\n\021MicrophoneChannel\022\032\n" +
+      "\022sensor_description\030\001 \001(\t\022\032\n\022first_sampl" +
+      "e_ts_us\030\002 \001(\001\022\026\n\016sample_rate_hz\030\003 \001(\001\022\024\n" +
+      "\014is_scrambled\030\004 \001(\010\022\017\n\007samples\030\005 \003(\001\022M\n\021" +
+      "sample_statistics\030\006 \001(\01322.redvox_api1000" +
+      ".RedvoxPacket1000.SummaryStatistics\022a\n\010m" +
+      "etadata\030\007 \003(\0132O.redvox_api1000.RedvoxPac" +
+      "ket1000.SensorChannels.MicrophoneChannel" +
       ".MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\036\n\016SensorChanne" +
-      "ls\022]\n\022microphone_channel\030\001 \001(\0132A.redvox_" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\003\n\rSingleChanne" +
+      "l\022\032\n\022sensor_description\030\001 \001(\t\022\033\n\023mean_sa" +
+      "mple_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001" +
+      "\022\017\n\007samples\030\004 \003(\001\022R\n\026sample_rate_statist" +
+      "ics\030\005 \001(\01322.redvox_api1000.RedvoxPacket1" +
+      "000.SummaryStatistics\022M\n\021sample_statisti" +
+      "cs\030\006 \001(\01322.redvox_api1000.RedvoxPacket10" +
+      "00.SummaryStatistics\022]\n\010metadata\030\007 \003(\0132K" +
+      ".redvox_api1000.RedvoxPacket1000.SensorC" +
+      "hannels.SingleChannel.MetadataEntry\032/\n\rM" +
+      "etadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\032\225\t\n\017LocationChannel\022\032\n\022sensor_descr" +
+      "iption\030\001 \001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001(" +
+      "\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\030\n\020latitude_samp" +
+      "les\030\004 \003(\001\022\031\n\021longitude_samples\030\005 \003(\001\022\030\n\020" +
+      "altitude_samples\030\006 \003(\001\022\025\n\rspeed_samples\030" +
+      "\007 \003(\001\022\030\n\020accuracy_samples\030\010 \003(\001\022$\n\034locat" +
+      "ion_permissions_granted\030\t \001(\010\022#\n\033locatio" +
+      "n_services_requested\030\n \001(\010\022!\n\031location_s" +
+      "ervices_enabled\030\013 \001(\010\022k\n\021location_provid" +
+      "er\030\014 \001(\0162P.redvox_api1000.RedvoxPacket10" +
+      "00.SensorChannels.LocationChannel.Locati" +
+      "onProvider\022R\n\026sample_rate_statistics\030\r \001" +
+      "(\01322.redvox_api1000.RedvoxPacket1000.Sum" +
+      "maryStatistics\022V\n\032latitude_sample_statis" +
+      "tics\030\016 \001(\01322.redvox_api1000.RedvoxPacket" +
+      "1000.SummaryStatistics\022W\n\033longitude_samp" +
+      "le_statistics\030\017 \001(\01322.redvox_api1000.Red" +
+      "voxPacket1000.SummaryStatistics\022V\n\032altit" +
+      "ude_sample_statistics\030\020 \001(\01322.redvox_api" +
+      "1000.RedvoxPacket1000.SummaryStatistics\022" +
+      "S\n\027speed_sample_statistics\030\021 \001(\01322.redvo" +
+      "x_api1000.RedvoxPacket1000.SummaryStatis" +
+      "tics\022V\n\032accuracy_sample_statistics\030\022 \001(\013" +
+      "22.redvox_api1000.RedvoxPacket1000.Summa" +
+      "ryStatistics\022_\n\010metadata\030\023 \003(\0132M.redvox_" +
       "api1000.RedvoxPacket1000.SensorChannels." +
-      "MicrophoneChannel\022X\n\021barometer_channel\030\002" +
-      " \001(\0132=.redvox_api1000.RedvoxPacket1000.S" +
-      "ensorChannels.SingleChannel\022Y\n\020location_" +
-      "channel\030\003 \001(\0132?.redvox_api1000.RedvoxPac" +
-      "ket1000.SensorChannels.LocationChannel\022Y" +
-      "\n\025accelerometer_channel\030\004 \001(\0132:.redvox_a" +
-      "pi1000.RedvoxPacket1000.SensorChannels.X" +
-      "yzChannel\022U\n\021gyroscope_channel\030\005 \001(\0132:.r" +
-      "edvox_api1000.RedvoxPacket1000.SensorCha" +
-      "nnels.XyzChannel\022X\n\024magnetometer_channel" +
-      "\030\006 \001(\0132:.redvox_api1000.RedvoxPacket1000" +
-      ".SensorChannels.XyzChannel\022T\n\rlight_chan" +
-      "nel\030\007 \001(\0132=.redvox_api1000.RedvoxPacket1" +
-      "000.SensorChannels.SingleChannel\022W\n\020infr" +
-      "ared_channel\030\010 \001(\0132=.redvox_api1000.Redv" +
-      "oxPacket1000.SensorChannels.SingleChanne" +
-      "l\022S\n\rimage_channel\030\t \001(\0132<.redvox_api100" +
-      "0.RedvoxPacket1000.SensorChannels.ImageC" +
-      "hannel\022O\n\010metadata\030\n \003(\0132=.redvox_api100" +
-      "0.RedvoxPacket1000.SensorChannels.Metada" +
-      "taEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\032\355\002\n\021MicrophoneChannel\022\032" +
-      "\n\022sensor_description\030\001 \001(\t\022\032\n\022first_samp" +
-      "le_ts_us\030\002 \001(\001\022\026\n\016sample_rate_hz\030\003 \001(\001\022\024" +
-      "\n\014is_scrambled\030\004 \001(\010\022\017\n\007samples\030\005 \003(\001\022M\n" +
-      "\021sample_statistics\030\006 \001(\01322.redvox_api100" +
-      "0.RedvoxPacket1000.SummaryStatistics\022a\n\010" +
-      "metadata\030\007 \003(\0132O.redvox_api1000.RedvoxPa" +
-      "cket1000.SensorChannels.MicrophoneChanne" +
-      "l.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\003\n\rSingleChann" +
-      "el\022\032\n\022sensor_description\030\001 \001(\t\022\033\n\023mean_s" +
-      "ample_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(" +
-      "\001\022\017\n\007samples\030\004 \003(\001\022R\n\026sample_rate_statis" +
-      "tics\030\005 \001(\01322.redvox_api1000.RedvoxPacket" +
-      "1000.SummaryStatistics\022M\n\021sample_statist" +
-      "ics\030\006 \001(\01322.redvox_api1000.RedvoxPacket1" +
-      "000.SummaryStatistics\022]\n\010metadata\030\007 \003(\0132" +
-      "K.redvox_api1000.RedvoxPacket1000.Sensor" +
-      "Channels.SingleChannel.MetadataEntry\032/\n\r" +
-      "MetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\032\225\t\n\017LocationChannel\022\032\n\022sensor_desc" +
-      "ription\030\001 \001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001" +
-      "(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\030\n\020latitude_sam" +
-      "ples\030\004 \003(\001\022\031\n\021longitude_samples\030\005 \003(\001\022\030\n" +
-      "\020altitude_samples\030\006 \003(\001\022\025\n\rspeed_samples" +
-      "\030\007 \003(\001\022\030\n\020accuracy_samples\030\010 \003(\001\022$\n\034loca" +
-      "tion_permissions_granted\030\t \001(\010\022#\n\033locati" +
-      "on_services_requested\030\n \001(\010\022!\n\031location_" +
-      "services_enabled\030\013 \001(\010\022k\n\021location_provi" +
-      "der\030\014 \001(\0162P.redvox_api1000.RedvoxPacket1" +
-      "000.SensorChannels.LocationChannel.Locat" +
-      "ionProvider\022R\n\026sample_rate_statistics\030\r " +
+      "LocationChannel.MetadataEntry\032/\n\rMetadat" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"<" +
+      "\n\020LocationProvider\022\010\n\004NONE\020\000\022\010\n\004USER\020\001\022\007" +
+      "\n\003GPS\020\002\022\013\n\007NETWORK\020\003\032\350\004\n\nXyzChannel\022\032\n\022s" +
+      "ensor_description\030\001 \001(\t\022\033\n\023mean_sample_r" +
+      "ate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\021\n\tx_" +
+      "samples\030\004 \003(\001\022\021\n\ty_samples\030\005 \003(\001\022\021\n\tz_sa" +
+      "mples\030\006 \003(\001\022R\n\026sample_rate_statistics\030\007 " +
       "\001(\01322.redvox_api1000.RedvoxPacket1000.Su" +
-      "mmaryStatistics\022V\n\032latitude_sample_stati" +
-      "stics\030\016 \001(\01322.redvox_api1000.RedvoxPacke" +
-      "t1000.SummaryStatistics\022W\n\033longitude_sam" +
-      "ple_statistics\030\017 \001(\01322.redvox_api1000.Re" +
-      "dvoxPacket1000.SummaryStatistics\022V\n\032alti" +
-      "tude_sample_statistics\030\020 \001(\01322.redvox_ap" +
-      "i1000.RedvoxPacket1000.SummaryStatistics" +
-      "\022S\n\027speed_sample_statistics\030\021 \001(\01322.redv" +
-      "ox_api1000.RedvoxPacket1000.SummaryStati" +
-      "stics\022V\n\032accuracy_sample_statistics\030\022 \001(" +
-      "\01322.redvox_api1000.RedvoxPacket1000.Summ" +
-      "aryStatistics\022_\n\010metadata\030\023 \003(\0132M.redvox" +
-      "_api1000.RedvoxPacket1000.SensorChannels" +
-      ".LocationChannel.MetadataEntry\032/\n\rMetada" +
-      "taEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
-      "<\n\020LocationProvider\022\010\n\004NONE\020\000\022\010\n\004USER\020\001\022" +
-      "\007\n\003GPS\020\002\022\013\n\007NETWORK\020\003\032\350\004\n\nXyzChannel\022\032\n\022" +
-      "sensor_description\030\001 \001(\t\022\033\n\023mean_sample_" +
-      "rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\021\n\tx" +
-      "_samples\030\004 \003(\001\022\021\n\ty_samples\030\005 \003(\001\022\021\n\tz_s" +
-      "amples\030\006 \003(\001\022R\n\026sample_rate_statistics\030\007" +
+      "mmaryStatistics\022O\n\023x_sample_statistics\030\010" +
       " \001(\01322.redvox_api1000.RedvoxPacket1000.S" +
-      "ummaryStatistics\022O\n\023x_sample_statistics\030" +
-      "\010 \001(\01322.redvox_api1000.RedvoxPacket1000." +
-      "SummaryStatistics\022O\n\023y_sample_statistics" +
-      "\030\t \001(\01322.redvox_api1000.RedvoxPacket1000" +
-      ".SummaryStatistics\022O\n\023z_sample_statistic" +
-      "s\030\n \001(\01322.redvox_api1000.RedvoxPacket100" +
-      "0.SummaryStatistics\022Z\n\010metadata\030\013 \003(\0132H." +
-      "redvox_api1000.RedvoxPacket1000.SensorCh" +
-      "annels.XyzChannel.MetadataEntry\032/\n\rMetad" +
-      "ataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\032\321\002\n\014ImageChannel\022\032\n\022sensor_description\030" +
-      "\001 \001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001(\001\022\024\n\014sa" +
-      "mple_ts_us\030\003 \003(\001\022\017\n\007samples\030\004 \003(\014\022R\n\026sam" +
-      "ple_rate_statistics\030\005 \001(\01322.redvox_api10" +
-      "00.RedvoxPacket1000.SummaryStatistics\022\\\n" +
-      "\010metadata\030\006 \003(\0132J.redvox_api1000.RedvoxP" +
-      "acket1000.SensorChannels.ImageChannel.Me" +
-      "tadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\216\002\n\021SummaryStatisti" +
-      "cs\022\r\n\005count\030\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\016\n\006media" +
-      "n\030\003 \001(\001\022\014\n\004mode\030\004 \001(\001\022\020\n\010variance\030\005 \001(\001\022" +
-      "\013\n\003min\030\006 \001(\001\022\013\n\003max\030\007 \001(\001\022\r\n\005range\030\010 \001(\001" +
-      "\022R\n\010metadata\030\t \003(\0132@.redvox_api1000.Redv" +
-      "oxPacket1000.SummaryStatistics.MetadataE" +
-      "ntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\"M\n\022AcquisitionRequest\022%\n\035c" +
-      "ompressed_redvox_packet_1000\030\001 \001(\014\022\020\n\010ch" +
-      "ecksum\030\002 \001(\003\"\332\001\n\023AcquisitionResponse\022G\n\r" +
-      "response_type\030\001 \001(\01620.redvox_api1000.Acq" +
-      "uisitionResponse.ResponseType\022\020\n\010checksu" +
-      "m\030\002 \001(\003\022\017\n\007details\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010" +
-      "\"G\n\014ResponseType\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001" +
-      "\022\016\n\nDATA_ERROR\020\002\022\017\n\013OTHER_ERROR\020\003\"2\n\014Syn" +
-      "chRequest\022\016\n\006seq_id\030\001 \001(\004\022\022\n\nsub_seq_id\030" +
-      "\002 \001(\r\"[\n\rSynchResponse\022\016\n\006seq_id\030\001 \001(\004\022\022" +
-      "\n\nsub_seq_id\030\002 \001(\r\022\022\n\nrecv_ts_us\030\003 \001(\004\022\022" +
-      "\n\nsend_ts_us\030\004 \001(\004B\032\n\030io.redvox.redvox_a" +
-      "pi1000b\006proto3"
+      "ummaryStatistics\022O\n\023y_sample_statistics\030" +
+      "\t \001(\01322.redvox_api1000.RedvoxPacket1000." +
+      "SummaryStatistics\022O\n\023z_sample_statistics" +
+      "\030\n \001(\01322.redvox_api1000.RedvoxPacket1000" +
+      ".SummaryStatistics\022Z\n\010metadata\030\013 \003(\0132H.r" +
+      "edvox_api1000.RedvoxPacket1000.SensorCha" +
+      "nnels.XyzChannel.MetadataEntry\032/\n\rMetada" +
+      "taEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032" +
+      "\321\002\n\014ImageChannel\022\032\n\022sensor_description\030\001" +
+      " \001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001(\001\022\024\n\014sam" +
+      "ple_ts_us\030\003 \003(\001\022\017\n\007samples\030\004 \003(\014\022R\n\026samp" +
+      "le_rate_statistics\030\005 \001(\01322.redvox_api100" +
+      "0.RedvoxPacket1000.SummaryStatistics\022\\\n\010" +
+      "metadata\030\006 \003(\0132J.redvox_api1000.RedvoxPa" +
+      "cket1000.SensorChannels.ImageChannel.Met" +
+      "adataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\032\216\002\n\021SummaryStatistic" +
+      "s\022\r\n\005count\030\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\016\n\006median" +
+      "\030\003 \001(\001\022\014\n\004mode\030\004 \001(\001\022\020\n\010variance\030\005 \001(\001\022\013" +
+      "\n\003min\030\006 \001(\001\022\013\n\003max\030\007 \001(\001\022\r\n\005range\030\010 \001(\001\022" +
+      "R\n\010metadata\030\t \003(\0132@.redvox_api1000.Redvo" +
+      "xPacket1000.SummaryStatistics.MetadataEn" +
+      "try\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"M\n\022AcquisitionRequest\022%\n\035co" +
+      "mpressed_redvox_packet_1000\030\001 \001(\014\022\020\n\010che" +
+      "cksum\030\002 \001(\003\"\332\001\n\023AcquisitionResponse\022G\n\rr" +
+      "esponse_type\030\001 \001(\01620.redvox_api1000.Acqu" +
+      "isitionResponse.ResponseType\022\020\n\010checksum" +
+      "\030\002 \001(\003\022\017\n\007details\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"" +
+      "G\n\014ResponseType\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001\022" +
+      "\016\n\nDATA_ERROR\020\002\022\017\n\013OTHER_ERROR\020\003\"2\n\014Sync" +
+      "hRequest\022\016\n\006seq_id\030\001 \001(\004\022\022\n\nsub_seq_id\030\002" +
+      " \001(\r\"[\n\rSynchResponse\022\016\n\006seq_id\030\001 \001(\004\022\022\n" +
+      "\nsub_seq_id\030\002 \001(\r\022\022\n\nrecv_ts_us\030\003 \001(\004\022\022\n" +
+      "\nsend_ts_us\030\004 \001(\004B\032\n\030io.redvox.redvox_ap" +
+      "i1000b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -35157,7 +35157,7 @@ public final class RedvoxApi1000 {
     internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_descriptor,
-        new java.lang.String[] { "AudioSamplingRate", "AudioSourceTuning", "AdditionalInputSensors", "AutomaticallyRecord", "LaunchAtPowerUp", "RedvoxId", "PushToServer", "PublishDataAsPrivate", "ScrambledVoiceData", "ProvideBackfill", "UseCustomTimeSyncServer", "TimeSynchServerUrl", "UseCustomDataServer", "DataServerUrl", "AutoDeleteDataFiles", "StorageSpaceAllowance", "UseSdCardForDataStorage", "UseLocationServices", "UseLatitude", "UseLongitude", "Metadata", });
+        new java.lang.String[] { "AudioSamplingRate", "AudioSourceTuning", "AdditionalInputSensors", "AutomaticallyRecord", "LaunchAtPowerUp", "RedvoxId", "PushToServer", "PublishDataAsPrivate", "ScrambleVoiceData", "ProvideBackfill", "UseCustomTimeSyncServer", "TimeSynchServerUrl", "UseCustomDataServer", "DataServerUrl", "AutoDeleteDataFiles", "StorageSpaceAllowance", "UseSdCardForDataStorage", "UseLocationServices", "UseLatitude", "UseLongitude", "Metadata", });
     internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_MetadataEntry_descriptor =
       internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_descriptor.getNestedTypes().get(0);
     internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_MetadataEntry_fieldAccessorTable = new

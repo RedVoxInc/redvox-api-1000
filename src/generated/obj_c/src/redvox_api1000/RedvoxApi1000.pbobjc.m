@@ -551,7 +551,7 @@ BOOL RedvoxPacket1000_DeviceInformation_OsType_IsValidValue(int32_t value__) {
 @dynamic redvoxId;
 @dynamic pushToServer;
 @dynamic publishDataAsPrivate;
-@dynamic scrambledVoiceData;
+@dynamic scrambleVoiceData;
 @dynamic provideBackfill;
 @dynamic useCustomTimeSyncServer;
 @dynamic timeSynchServerURL;
@@ -658,9 +658,9 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
         .dataType = GPBDataTypeBool,
       },
       {
-        .name = "scrambledVoiceData",
+        .name = "scrambleVoiceData",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_ScrambledVoiceData,
+        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_ScrambleVoiceData,
         .hasIndex = 11,
         .offset = 12,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,

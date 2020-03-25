@@ -867,7 +867,7 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.toObject = f
     redvoxId: jspb.Message.getFieldWithDefault(msg, 6, ""),
     pushToServer: jspb.Message.getFieldWithDefault(msg, 7, false),
     publishDataAsPrivate: jspb.Message.getFieldWithDefault(msg, 8, false),
-    scrambledVoiceData: jspb.Message.getFieldWithDefault(msg, 9, false),
+    scrambleVoiceData: jspb.Message.getFieldWithDefault(msg, 9, false),
     provideBackfill: jspb.Message.getFieldWithDefault(msg, 10, false),
     useCustomTimeSyncServer: jspb.Message.getFieldWithDefault(msg, 11, false),
     timeSynchServerUrl: jspb.Message.getFieldWithDefault(msg, 12, ""),
@@ -950,7 +950,7 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.deserializeB
       break;
     case 9:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setScrambledVoiceData(value);
+      msg.setScrambleVoiceData(value);
       break;
     case 10:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -1087,7 +1087,7 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.serializeBin
       f
     );
   }
-  f = message.getScrambledVoiceData();
+  f = message.getScrambleVoiceData();
   if (f) {
     writer.writeBool(
       9,
@@ -1353,18 +1353,18 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
 
 
 /**
- * optional bool scrambled_voice_data = 9;
+ * optional bool scramble_voice_data = 9;
  * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getScrambledVoiceData = function() {
+proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getScrambleVoiceData = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 9, false));
 };
 
 
 /** @param {boolean} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setScrambledVoiceData = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setScrambleVoiceData = function(value) {
   jspb.Message.setProto3BooleanField(this, 9, value);
 };
 
