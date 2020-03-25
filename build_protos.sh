@@ -5,6 +5,11 @@ if ! [[ -x "$(command -v protoc)" ]]; then
   exit 1
 fi
 
+if ! [[ -x "$(command -v protoc-gen-mypy)" ]]; then
+  echo 'Error: protoc-gen-mypy is not installed.' >&2
+  exit 1
+fi
+
 SRC=src/redvox_api1000/redvox_api_1000.proto
 
 OUT=src/generated

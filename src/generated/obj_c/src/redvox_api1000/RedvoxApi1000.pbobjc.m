@@ -976,13 +976,13 @@ typedef struct RedvoxPacket1000_PacketInformation__storage_ {
 @dynamic packetEndTsUsMach;
 @dynamic serverAcquisitionArrivalTsUs;
 @dynamic appStartTsUsMach;
-@dynamic synchParamsArray, synchParamsArray_Count;
+@dynamic synchExchangesArray, synchExchangesArray_Count;
 @dynamic bestLatencyUs;
 @dynamic bestOffsetUs;
 
 typedef struct RedvoxPacket1000_TimingInformation__storage_ {
   uint32_t _has_storage_[1];
-  GPBDoubleArray *synchParamsArray;
+  NSMutableArray *synchExchangesArray;
   double packetStartTsUsWall;
   double packetStartTsUsMach;
   double packetEndTsUsWall;
@@ -1054,13 +1054,13 @@ typedef struct RedvoxPacket1000_TimingInformation__storage_ {
         .dataType = GPBDataTypeDouble,
       },
       {
-        .name = "synchParamsArray",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_TimingInformation_FieldNumber_SynchParamsArray,
+        .name = "synchExchangesArray",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_TimingInformation_SynchExchange),
+        .number = RedvoxPacket1000_TimingInformation_FieldNumber_SynchExchangesArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, synchParamsArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeDouble,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, synchExchangesArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
       },
       {
         .name = "bestLatencyUs",
@@ -1090,6 +1090,105 @@ typedef struct RedvoxPacket1000_TimingInformation__storage_ {
                                    storageSize:sizeof(RedvoxPacket1000_TimingInformation__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacket1000)];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - RedvoxPacket1000_TimingInformation_SynchExchange
+
+@implementation RedvoxPacket1000_TimingInformation_SynchExchange
+
+@dynamic a1;
+@dynamic a2;
+@dynamic a3;
+@dynamic b1;
+@dynamic b2;
+@dynamic b3;
+
+typedef struct RedvoxPacket1000_TimingInformation_SynchExchange__storage_ {
+  uint32_t _has_storage_[1];
+  double a1;
+  double a2;
+  double a3;
+  double b1;
+  double b2;
+  double b3;
+} RedvoxPacket1000_TimingInformation_SynchExchange__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "a1",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_A1,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation_SynchExchange__storage_, a1),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "a2",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_A2,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation_SynchExchange__storage_, a2),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "a3",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_A3,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation_SynchExchange__storage_, a3),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "b1",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_B1,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation_SynchExchange__storage_, b1),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "b2",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_B2,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation_SynchExchange__storage_, b2),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "b3",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_B3,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation_SynchExchange__storage_, b3),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeDouble,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[RedvoxPacket1000_TimingInformation_SynchExchange class]
+                                     rootClass:[RedvoxApi1000Root class]
+                                          file:RedvoxApi1000Root_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(RedvoxPacket1000_TimingInformation_SynchExchange__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacket1000_TimingInformation)];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -2308,6 +2407,136 @@ BOOL AcquisitionResponse_ResponseType_IsValidValue(int32_t value__) {
       return NO;
   }
 }
+
+#pragma mark - SynchRequest
+
+@implementation SynchRequest
+
+@dynamic seqId;
+@dynamic subSeqId;
+
+typedef struct SynchRequest__storage_ {
+  uint32_t _has_storage_[1];
+  uint32_t subSeqId;
+  uint64_t seqId;
+} SynchRequest__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "seqId",
+        .dataTypeSpecific.className = NULL,
+        .number = SynchRequest_FieldNumber_SeqId,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(SynchRequest__storage_, seqId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt64,
+      },
+      {
+        .name = "subSeqId",
+        .dataTypeSpecific.className = NULL,
+        .number = SynchRequest_FieldNumber_SubSeqId,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(SynchRequest__storage_, subSeqId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[SynchRequest class]
+                                     rootClass:[RedvoxApi1000Root class]
+                                          file:RedvoxApi1000Root_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(SynchRequest__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - SynchResponse
+
+@implementation SynchResponse
+
+@dynamic seqId;
+@dynamic subSeqId;
+@dynamic recvTsUs;
+@dynamic sendTsUs;
+
+typedef struct SynchResponse__storage_ {
+  uint32_t _has_storage_[1];
+  uint32_t subSeqId;
+  uint64_t seqId;
+  uint64_t recvTsUs;
+  uint64_t sendTsUs;
+} SynchResponse__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "seqId",
+        .dataTypeSpecific.className = NULL,
+        .number = SynchResponse_FieldNumber_SeqId,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(SynchResponse__storage_, seqId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt64,
+      },
+      {
+        .name = "subSeqId",
+        .dataTypeSpecific.className = NULL,
+        .number = SynchResponse_FieldNumber_SubSeqId,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(SynchResponse__storage_, subSeqId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "recvTsUs",
+        .dataTypeSpecific.className = NULL,
+        .number = SynchResponse_FieldNumber_RecvTsUs,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(SynchResponse__storage_, recvTsUs),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt64,
+      },
+      {
+        .name = "sendTsUs",
+        .dataTypeSpecific.className = NULL,
+        .number = SynchResponse_FieldNumber_SendTsUs,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(SynchResponse__storage_, sendTsUs),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt64,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[SynchResponse class]
+                                     rootClass:[RedvoxApi1000Root class]
+                                          file:RedvoxApi1000Root_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(SynchResponse__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
 
 
 #pragma clang diagnostic pop

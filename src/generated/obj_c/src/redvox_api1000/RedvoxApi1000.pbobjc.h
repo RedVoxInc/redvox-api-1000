@@ -38,6 +38,7 @@ CF_EXTERN_C_BEGIN
 @class RedvoxPacket1000_SensorChannels_XyzChannel;
 @class RedvoxPacket1000_SummaryStatistics;
 @class RedvoxPacket1000_TimingInformation;
+@class RedvoxPacket1000_TimingInformation_SynchExchange;
 @class RedvoxPacket1000_UserInformation;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -526,7 +527,7 @@ typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_FieldNumber) {
   RedvoxPacket1000_TimingInformation_FieldNumber_PacketEndTsUsMach = 4,
   RedvoxPacket1000_TimingInformation_FieldNumber_ServerAcquisitionArrivalTsUs = 5,
   RedvoxPacket1000_TimingInformation_FieldNumber_AppStartTsUsMach = 6,
-  RedvoxPacket1000_TimingInformation_FieldNumber_SynchParamsArray = 7,
+  RedvoxPacket1000_TimingInformation_FieldNumber_SynchExchangesArray = 7,
   RedvoxPacket1000_TimingInformation_FieldNumber_BestLatencyUs = 8,
   RedvoxPacket1000_TimingInformation_FieldNumber_BestOffsetUs = 9,
 };
@@ -552,15 +553,42 @@ typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_FieldNumber) {
 @property(nonatomic, readwrite) double appStartTsUsMach;
 
 /** An array of synchronization params from the synch server */
-@property(nonatomic, readwrite, strong, null_resettable) GPBDoubleArray *synchParamsArray;
-/** The number of items in @c synchParamsArray without causing the array to be created. */
-@property(nonatomic, readonly) NSUInteger synchParamsArray_Count;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<RedvoxPacket1000_TimingInformation_SynchExchange*> *synchExchangesArray;
+/** The number of items in @c synchExchangesArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger synchExchangesArray_Count;
 
 /** The best latency as determined from the synch params */
 @property(nonatomic, readwrite) double bestLatencyUs;
 
 /** The best offset as determined from the synch params */
 @property(nonatomic, readwrite) double bestOffsetUs;
+
+@end
+
+#pragma mark - RedvoxPacket1000_TimingInformation_SynchExchange
+
+typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber) {
+  RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_A1 = 1,
+  RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_A2 = 2,
+  RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_A3 = 3,
+  RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_B1 = 4,
+  RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_B2 = 5,
+  RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_B3 = 6,
+};
+
+@interface RedvoxPacket1000_TimingInformation_SynchExchange : GPBMessage
+
+@property(nonatomic, readwrite) double a1;
+
+@property(nonatomic, readwrite) double a2;
+
+@property(nonatomic, readwrite) double a3;
+
+@property(nonatomic, readwrite) double b1;
+
+@property(nonatomic, readwrite) double b2;
+
+@property(nonatomic, readwrite) double b3;
 
 @end
 
@@ -1058,6 +1086,42 @@ int32_t AcquisitionResponse_ResponseType_RawValue(AcquisitionResponse *message);
  * was generated.
  **/
 void SetAcquisitionResponse_ResponseType_RawValue(AcquisitionResponse *message, int32_t value);
+
+#pragma mark - SynchRequest
+
+typedef GPB_ENUM(SynchRequest_FieldNumber) {
+  SynchRequest_FieldNumber_SeqId = 1,
+  SynchRequest_FieldNumber_SubSeqId = 2,
+};
+
+@interface SynchRequest : GPBMessage
+
+@property(nonatomic, readwrite) uint64_t seqId;
+
+@property(nonatomic, readwrite) uint32_t subSeqId;
+
+@end
+
+#pragma mark - SynchResponse
+
+typedef GPB_ENUM(SynchResponse_FieldNumber) {
+  SynchResponse_FieldNumber_SeqId = 1,
+  SynchResponse_FieldNumber_SubSeqId = 2,
+  SynchResponse_FieldNumber_RecvTsUs = 3,
+  SynchResponse_FieldNumber_SendTsUs = 4,
+};
+
+@interface SynchResponse : GPBMessage
+
+@property(nonatomic, readwrite) uint64_t seqId;
+
+@property(nonatomic, readwrite) uint32_t subSeqId;
+
+@property(nonatomic, readwrite) uint64_t recvTsUs;
+
+@property(nonatomic, readwrite) uint64_t sendTsUs;
+
+@end
 
 NS_ASSUME_NONNULL_END
 

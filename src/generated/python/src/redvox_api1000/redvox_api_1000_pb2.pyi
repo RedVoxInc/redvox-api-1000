@@ -6,6 +6,7 @@ from google.protobuf.descriptor import (
 )
 
 from google.protobuf.internal.containers import (
+    RepeatedCompositeFieldContainer as google___protobuf___internal___containers___RepeatedCompositeFieldContainer,
     RepeatedScalarFieldContainer as google___protobuf___internal___containers___RepeatedScalarFieldContainer,
 )
 
@@ -346,15 +347,48 @@ class RedvoxPacket1000(google___protobuf___message___Message):
 
     class TimingInformation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+        class SynchExchange(google___protobuf___message___Message):
+            DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+            a1 = ... # type: builtin___float
+            a2 = ... # type: builtin___float
+            a3 = ... # type: builtin___float
+            b1 = ... # type: builtin___float
+            b2 = ... # type: builtin___float
+            b3 = ... # type: builtin___float
+
+            def __init__(self,
+                *,
+                a1 : typing___Optional[builtin___float] = None,
+                a2 : typing___Optional[builtin___float] = None,
+                a3 : typing___Optional[builtin___float] = None,
+                b1 : typing___Optional[builtin___float] = None,
+                b2 : typing___Optional[builtin___float] = None,
+                b3 : typing___Optional[builtin___float] = None,
+                ) -> None: ...
+            if sys.version_info >= (3,):
+                @classmethod
+                def FromString(cls, s: builtin___bytes) -> RedvoxPacket1000.TimingInformation.SynchExchange: ...
+            else:
+                @classmethod
+                def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> RedvoxPacket1000.TimingInformation.SynchExchange: ...
+            def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+            def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+            if sys.version_info >= (3,):
+                def ClearField(self, field_name: typing_extensions___Literal[u"a1",u"a2",u"a3",u"b1",u"b2",u"b3"]) -> None: ...
+            else:
+                def ClearField(self, field_name: typing_extensions___Literal[u"a1",b"a1",u"a2",b"a2",u"a3",b"a3",u"b1",b"b1",u"b2",b"b2",u"b3",b"b3"]) -> None: ...
+
         packet_start_ts_us_wall = ... # type: builtin___float
         packet_start_ts_us_mach = ... # type: builtin___float
         packet_end_ts_us_wall = ... # type: builtin___float
         packet_end_ts_us_mach = ... # type: builtin___float
         server_acquisition_arrival_ts_us = ... # type: builtin___float
         app_start_ts_us_mach = ... # type: builtin___float
-        synch_params = ... # type: google___protobuf___internal___containers___RepeatedScalarFieldContainer[builtin___float]
         best_latency_us = ... # type: builtin___float
         best_offset_us = ... # type: builtin___float
+
+        @property
+        def synch_exchanges(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[RedvoxPacket1000.TimingInformation.SynchExchange]: ...
 
         def __init__(self,
             *,
@@ -364,7 +398,7 @@ class RedvoxPacket1000(google___protobuf___message___Message):
             packet_end_ts_us_mach : typing___Optional[builtin___float] = None,
             server_acquisition_arrival_ts_us : typing___Optional[builtin___float] = None,
             app_start_ts_us_mach : typing___Optional[builtin___float] = None,
-            synch_params : typing___Optional[typing___Iterable[builtin___float]] = None,
+            synch_exchanges : typing___Optional[typing___Iterable[RedvoxPacket1000.TimingInformation.SynchExchange]] = None,
             best_latency_us : typing___Optional[builtin___float] = None,
             best_offset_us : typing___Optional[builtin___float] = None,
             ) -> None: ...
@@ -377,9 +411,9 @@ class RedvoxPacket1000(google___protobuf___message___Message):
         def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
         def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
         if sys.version_info >= (3,):
-            def ClearField(self, field_name: typing_extensions___Literal[u"app_start_ts_us_mach",u"best_latency_us",u"best_offset_us",u"packet_end_ts_us_mach",u"packet_end_ts_us_wall",u"packet_start_ts_us_mach",u"packet_start_ts_us_wall",u"server_acquisition_arrival_ts_us",u"synch_params"]) -> None: ...
+            def ClearField(self, field_name: typing_extensions___Literal[u"app_start_ts_us_mach",u"best_latency_us",u"best_offset_us",u"packet_end_ts_us_mach",u"packet_end_ts_us_wall",u"packet_start_ts_us_mach",u"packet_start_ts_us_wall",u"server_acquisition_arrival_ts_us",u"synch_exchanges"]) -> None: ...
         else:
-            def ClearField(self, field_name: typing_extensions___Literal[u"app_start_ts_us_mach",b"app_start_ts_us_mach",u"best_latency_us",b"best_latency_us",u"best_offset_us",b"best_offset_us",u"packet_end_ts_us_mach",b"packet_end_ts_us_mach",u"packet_end_ts_us_wall",b"packet_end_ts_us_wall",u"packet_start_ts_us_mach",b"packet_start_ts_us_mach",u"packet_start_ts_us_wall",b"packet_start_ts_us_wall",u"server_acquisition_arrival_ts_us",b"server_acquisition_arrival_ts_us",u"synch_params",b"synch_params"]) -> None: ...
+            def ClearField(self, field_name: typing_extensions___Literal[u"app_start_ts_us_mach",b"app_start_ts_us_mach",u"best_latency_us",b"best_latency_us",u"best_offset_us",b"best_offset_us",u"packet_end_ts_us_mach",b"packet_end_ts_us_mach",u"packet_end_ts_us_wall",b"packet_end_ts_us_wall",u"packet_start_ts_us_mach",b"packet_start_ts_us_mach",u"packet_start_ts_us_wall",b"packet_start_ts_us_wall",u"server_acquisition_arrival_ts_us",b"server_acquisition_arrival_ts_us",u"synch_exchanges",b"synch_exchanges"]) -> None: ...
 
     class SensorChannels(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
@@ -994,3 +1028,53 @@ class AcquisitionResponse(google___protobuf___message___Message):
         def ClearField(self, field_name: typing_extensions___Literal[u"checksum",u"details",u"resend",u"response_type"]) -> None: ...
     else:
         def ClearField(self, field_name: typing_extensions___Literal[u"checksum",b"checksum",u"details",b"details",u"resend",b"resend",u"response_type",b"response_type"]) -> None: ...
+
+class SynchRequest(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    seq_id = ... # type: builtin___int
+    sub_seq_id = ... # type: builtin___int
+
+    def __init__(self,
+        *,
+        seq_id : typing___Optional[builtin___int] = None,
+        sub_seq_id : typing___Optional[builtin___int] = None,
+        ) -> None: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> SynchRequest: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> SynchRequest: ...
+    def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+    def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+    if sys.version_info >= (3,):
+        def ClearField(self, field_name: typing_extensions___Literal[u"seq_id",u"sub_seq_id"]) -> None: ...
+    else:
+        def ClearField(self, field_name: typing_extensions___Literal[u"seq_id",b"seq_id",u"sub_seq_id",b"sub_seq_id"]) -> None: ...
+
+class SynchResponse(google___protobuf___message___Message):
+    DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
+    seq_id = ... # type: builtin___int
+    sub_seq_id = ... # type: builtin___int
+    recv_ts_us = ... # type: builtin___int
+    send_ts_us = ... # type: builtin___int
+
+    def __init__(self,
+        *,
+        seq_id : typing___Optional[builtin___int] = None,
+        sub_seq_id : typing___Optional[builtin___int] = None,
+        recv_ts_us : typing___Optional[builtin___int] = None,
+        send_ts_us : typing___Optional[builtin___int] = None,
+        ) -> None: ...
+    if sys.version_info >= (3,):
+        @classmethod
+        def FromString(cls, s: builtin___bytes) -> SynchResponse: ...
+    else:
+        @classmethod
+        def FromString(cls, s: typing___Union[builtin___bytes, builtin___buffer, builtin___unicode]) -> SynchResponse: ...
+    def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+    def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
+    if sys.version_info >= (3,):
+        def ClearField(self, field_name: typing_extensions___Literal[u"recv_ts_us",u"send_ts_us",u"seq_id",u"sub_seq_id"]) -> None: ...
+    else:
+        def ClearField(self, field_name: typing_extensions___Literal[u"recv_ts_us",b"recv_ts_us",u"send_ts_us",b"send_ts_us",u"seq_id",b"seq_id",u"sub_seq_id",b"sub_seq_id"]) -> None: ...
