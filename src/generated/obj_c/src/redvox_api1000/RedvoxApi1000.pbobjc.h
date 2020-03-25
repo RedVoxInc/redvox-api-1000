@@ -431,7 +431,7 @@ typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber) {
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_ScrambleVoiceData = 9,
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_ProvideBackfill = 10,
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseCustomTimeSyncServer = 11,
-  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_TimeSynchServerURL = 12,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_TimeSyncServerURL = 12,
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseCustomDataServer = 13,
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_DataServerURL = 14,
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AutoDeleteDataFiles = 15,
@@ -470,7 +470,7 @@ typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber) {
 
 @property(nonatomic, readwrite) BOOL useCustomTimeSyncServer;
 
-@property(nonatomic, readwrite, copy, null_resettable) NSString *timeSynchServerURL;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *timeSyncServerURL;
 
 @property(nonatomic, readwrite) BOOL useCustomDataServer;
 

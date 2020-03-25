@@ -870,7 +870,7 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.toObject = f
     scrambleVoiceData: jspb.Message.getFieldWithDefault(msg, 9, false),
     provideBackfill: jspb.Message.getFieldWithDefault(msg, 10, false),
     useCustomTimeSyncServer: jspb.Message.getFieldWithDefault(msg, 11, false),
-    timeSynchServerUrl: jspb.Message.getFieldWithDefault(msg, 12, ""),
+    timeSyncServerUrl: jspb.Message.getFieldWithDefault(msg, 12, ""),
     useCustomDataServer: jspb.Message.getFieldWithDefault(msg, 13, false),
     dataServerUrl: jspb.Message.getFieldWithDefault(msg, 14, ""),
     autoDeleteDataFiles: jspb.Message.getFieldWithDefault(msg, 15, false),
@@ -962,7 +962,7 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.deserializeB
       break;
     case 12:
       var value = /** @type {string} */ (reader.readString());
-      msg.setTimeSynchServerUrl(value);
+      msg.setTimeSyncServerUrl(value);
       break;
     case 13:
       var value = /** @type {boolean} */ (reader.readBool());
@@ -1108,7 +1108,7 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.serializeBin
       f
     );
   }
-  f = message.getTimeSynchServerUrl();
+  f = message.getTimeSyncServerUrl();
   if (f.length > 0) {
     writer.writeString(
       12,
@@ -1404,16 +1404,16 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
 
 
 /**
- * optional string time_synch_server_url = 12;
+ * optional string time_sync_server_url = 12;
  * @return {string}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getTimeSynchServerUrl = function() {
+proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getTimeSyncServerUrl = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setTimeSynchServerUrl = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setTimeSyncServerUrl = function(value) {
   jspb.Message.setProto3StringField(this, 12, value);
 };
 

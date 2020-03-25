@@ -2612,14 +2612,14 @@ public final class RedvoxApi1000 {
         boolean getUseCustomTimeSyncServer();
 
         /**
-         * <code>string time_synch_server_url = 12;</code>
+         * <code>string time_sync_server_url = 12;</code>
          */
-        java.lang.String getTimeSynchServerUrl();
+        java.lang.String getTimeSyncServerUrl();
         /**
-         * <code>string time_synch_server_url = 12;</code>
+         * <code>string time_sync_server_url = 12;</code>
          */
         com.google.protobuf.ByteString
-            getTimeSynchServerUrlBytes();
+            getTimeSyncServerUrlBytes();
 
         /**
          * <code>bool use_custom_data_server = 13;</code>
@@ -2744,7 +2744,7 @@ public final class RedvoxApi1000 {
           scrambleVoiceData_ = false;
           provideBackfill_ = false;
           useCustomTimeSyncServer_ = false;
-          timeSynchServerUrl_ = "";
+          timeSyncServerUrl_ = "";
           useCustomDataServer_ = false;
           dataServerUrl_ = "";
           autoDeleteDataFiles_ = false;
@@ -2858,7 +2858,7 @@ public final class RedvoxApi1000 {
                 case 98: {
                   java.lang.String s = input.readStringRequireUtf8();
 
-                  timeSynchServerUrl_ = s;
+                  timeSyncServerUrl_ = s;
                   break;
                 }
                 case 104: {
@@ -3506,34 +3506,34 @@ public final class RedvoxApi1000 {
           return useCustomTimeSyncServer_;
         }
 
-        public static final int TIME_SYNCH_SERVER_URL_FIELD_NUMBER = 12;
-        private volatile java.lang.Object timeSynchServerUrl_;
+        public static final int TIME_SYNC_SERVER_URL_FIELD_NUMBER = 12;
+        private volatile java.lang.Object timeSyncServerUrl_;
         /**
-         * <code>string time_synch_server_url = 12;</code>
+         * <code>string time_sync_server_url = 12;</code>
          */
-        public java.lang.String getTimeSynchServerUrl() {
-          java.lang.Object ref = timeSynchServerUrl_;
+        public java.lang.String getTimeSyncServerUrl() {
+          java.lang.Object ref = timeSyncServerUrl_;
           if (ref instanceof java.lang.String) {
             return (java.lang.String) ref;
           } else {
             com.google.protobuf.ByteString bs = 
                 (com.google.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
-            timeSynchServerUrl_ = s;
+            timeSyncServerUrl_ = s;
             return s;
           }
         }
         /**
-         * <code>string time_synch_server_url = 12;</code>
+         * <code>string time_sync_server_url = 12;</code>
          */
         public com.google.protobuf.ByteString
-            getTimeSynchServerUrlBytes() {
-          java.lang.Object ref = timeSynchServerUrl_;
+            getTimeSyncServerUrlBytes() {
+          java.lang.Object ref = timeSyncServerUrl_;
           if (ref instanceof java.lang.String) {
             com.google.protobuf.ByteString b = 
                 com.google.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
-            timeSynchServerUrl_ = b;
+            timeSyncServerUrl_ = b;
             return b;
           } else {
             return (com.google.protobuf.ByteString) ref;
@@ -3781,8 +3781,8 @@ public final class RedvoxApi1000 {
           if (useCustomTimeSyncServer_ != false) {
             output.writeBool(11, useCustomTimeSyncServer_);
           }
-          if (!getTimeSynchServerUrlBytes().isEmpty()) {
-            com.google.protobuf.GeneratedMessageV3.writeString(output, 12, timeSynchServerUrl_);
+          if (!getTimeSyncServerUrlBytes().isEmpty()) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 12, timeSyncServerUrl_);
           }
           if (useCustomDataServer_ != false) {
             output.writeBool(13, useCustomDataServer_);
@@ -3874,8 +3874,8 @@ public final class RedvoxApi1000 {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(11, useCustomTimeSyncServer_);
           }
-          if (!getTimeSynchServerUrlBytes().isEmpty()) {
-            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, timeSynchServerUrl_);
+          if (!getTimeSyncServerUrlBytes().isEmpty()) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, timeSyncServerUrl_);
           }
           if (useCustomDataServer_ != false) {
             size += com.google.protobuf.CodedOutputStream
@@ -3953,8 +3953,8 @@ public final class RedvoxApi1000 {
               == other.getProvideBackfill());
           result = result && (getUseCustomTimeSyncServer()
               == other.getUseCustomTimeSyncServer());
-          result = result && getTimeSynchServerUrl()
-              .equals(other.getTimeSynchServerUrl());
+          result = result && getTimeSyncServerUrl()
+              .equals(other.getTimeSyncServerUrl());
           result = result && (getUseCustomDataServer()
               == other.getUseCustomDataServer());
           result = result && getDataServerUrl()
@@ -4021,8 +4021,8 @@ public final class RedvoxApi1000 {
           hash = (37 * hash) + USE_CUSTOM_TIME_SYNC_SERVER_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getUseCustomTimeSyncServer());
-          hash = (37 * hash) + TIME_SYNCH_SERVER_URL_FIELD_NUMBER;
-          hash = (53 * hash) + getTimeSynchServerUrl().hashCode();
+          hash = (37 * hash) + TIME_SYNC_SERVER_URL_FIELD_NUMBER;
+          hash = (53 * hash) + getTimeSyncServerUrl().hashCode();
           hash = (37 * hash) + USE_CUSTOM_DATA_SERVER_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getUseCustomDataServer());
@@ -4227,7 +4227,7 @@ public final class RedvoxApi1000 {
 
             useCustomTimeSyncServer_ = false;
 
-            timeSynchServerUrl_ = "";
+            timeSyncServerUrl_ = "";
 
             useCustomDataServer_ = false;
 
@@ -4289,7 +4289,7 @@ public final class RedvoxApi1000 {
             result.scrambleVoiceData_ = scrambleVoiceData_;
             result.provideBackfill_ = provideBackfill_;
             result.useCustomTimeSyncServer_ = useCustomTimeSyncServer_;
-            result.timeSynchServerUrl_ = timeSynchServerUrl_;
+            result.timeSyncServerUrl_ = timeSyncServerUrl_;
             result.useCustomDataServer_ = useCustomDataServer_;
             result.dataServerUrl_ = dataServerUrl_;
             result.autoDeleteDataFiles_ = autoDeleteDataFiles_;
@@ -4390,8 +4390,8 @@ public final class RedvoxApi1000 {
             if (other.getUseCustomTimeSyncServer() != false) {
               setUseCustomTimeSyncServer(other.getUseCustomTimeSyncServer());
             }
-            if (!other.getTimeSynchServerUrl().isEmpty()) {
-              timeSynchServerUrl_ = other.timeSynchServerUrl_;
+            if (!other.getTimeSyncServerUrl().isEmpty()) {
+              timeSyncServerUrl_ = other.timeSyncServerUrl_;
               onChanged();
             }
             if (other.getUseCustomDataServer() != false) {
@@ -4910,71 +4910,71 @@ public final class RedvoxApi1000 {
             return this;
           }
 
-          private java.lang.Object timeSynchServerUrl_ = "";
+          private java.lang.Object timeSyncServerUrl_ = "";
           /**
-           * <code>string time_synch_server_url = 12;</code>
+           * <code>string time_sync_server_url = 12;</code>
            */
-          public java.lang.String getTimeSynchServerUrl() {
-            java.lang.Object ref = timeSynchServerUrl_;
+          public java.lang.String getTimeSyncServerUrl() {
+            java.lang.Object ref = timeSyncServerUrl_;
             if (!(ref instanceof java.lang.String)) {
               com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
               java.lang.String s = bs.toStringUtf8();
-              timeSynchServerUrl_ = s;
+              timeSyncServerUrl_ = s;
               return s;
             } else {
               return (java.lang.String) ref;
             }
           }
           /**
-           * <code>string time_synch_server_url = 12;</code>
+           * <code>string time_sync_server_url = 12;</code>
            */
           public com.google.protobuf.ByteString
-              getTimeSynchServerUrlBytes() {
-            java.lang.Object ref = timeSynchServerUrl_;
+              getTimeSyncServerUrlBytes() {
+            java.lang.Object ref = timeSyncServerUrl_;
             if (ref instanceof String) {
               com.google.protobuf.ByteString b = 
                   com.google.protobuf.ByteString.copyFromUtf8(
                       (java.lang.String) ref);
-              timeSynchServerUrl_ = b;
+              timeSyncServerUrl_ = b;
               return b;
             } else {
               return (com.google.protobuf.ByteString) ref;
             }
           }
           /**
-           * <code>string time_synch_server_url = 12;</code>
+           * <code>string time_sync_server_url = 12;</code>
            */
-          public Builder setTimeSynchServerUrl(
+          public Builder setTimeSyncServerUrl(
               java.lang.String value) {
             if (value == null) {
     throw new NullPointerException();
   }
   
-            timeSynchServerUrl_ = value;
+            timeSyncServerUrl_ = value;
             onChanged();
             return this;
           }
           /**
-           * <code>string time_synch_server_url = 12;</code>
+           * <code>string time_sync_server_url = 12;</code>
            */
-          public Builder clearTimeSynchServerUrl() {
+          public Builder clearTimeSyncServerUrl() {
             
-            timeSynchServerUrl_ = getDefaultInstance().getTimeSynchServerUrl();
+            timeSyncServerUrl_ = getDefaultInstance().getTimeSyncServerUrl();
             onChanged();
             return this;
           }
           /**
-           * <code>string time_synch_server_url = 12;</code>
+           * <code>string time_sync_server_url = 12;</code>
            */
-          public Builder setTimeSynchServerUrlBytes(
+          public Builder setTimeSyncServerUrlBytes(
               com.google.protobuf.ByteString value) {
             if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
             
-            timeSynchServerUrl_ = value;
+            timeSyncServerUrl_ = value;
             onChanged();
             return this;
           }
@@ -34884,7 +34884,7 @@ public final class RedvoxApi1000 {
   static {
     java.lang.String[] descriptorData = {
       "\n(src/redvox_api1000/redvox_api_1000.pro" +
-      "to\022\016redvox_api1000\"\247@\n\020RedvoxPacket1000\022" +
+      "to\022\016redvox_api1000\"\246@\n\020RedvoxPacket1000\022" +
       "\013\n\003api\030\001 \001(\001\022J\n\020user_information\030\002 \001(\01320" +
       ".redvox_api1000.RedvoxPacket1000.UserInf" +
       "ormation\022N\n\022device_information\030\003 \001(\01322.r" +
@@ -34903,7 +34903,7 @@ public final class RedvoxApi1000 {
       "\t\022P\n\010metadata\030\004 \003(\0132>.redvox_api1000.Red" +
       "voxPacket1000.UserInformation.MetadataEn" +
       "try\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\032\335\022\n\021DeviceInformation\022\021\n\tde" +
+      "ue\030\002 \001(\t:\0028\001\032\334\022\n\021DeviceInformation\022\021\n\tde" +
       "vice_id\030\001 \001(\t\022\023\n\013device_uuid\030\002 \001(\t\022\023\n\013de" +
       "vice_make\030\003 \001(\t\022\024\n\014device_model\030\004 \001(\t\022L\n" +
       "\tdevice_os\030\005 \001(\01629.redvox_api1000.Redvox" +
@@ -34928,7 +34928,7 @@ public final class RedvoxApi1000 {
       "1000.SummaryStatistics\022R\n\010metadata\030\020 \003(\013" +
       "2@.redvox_api1000.RedvoxPacket1000.Devic" +
       "eInformation.MetadataEntry\032/\n\rMetadataEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\365\t\n\013" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\364\t\n\013" +
       "AppSettings\022m\n\023audio_sampling_rate\030\001 \001(\016" +
       "2P.redvox_api1000.RedvoxPacket1000.Devic" +
       "eInformation.AppSettings.AudioSamplingRa" +
@@ -34943,166 +34943,166 @@ public final class RedvoxApi1000 {
       " \001(\010\022\037\n\027publish_data_as_private\030\010 \001(\010\022\033\n" +
       "\023scramble_voice_data\030\t \001(\010\022\030\n\020provide_ba" +
       "ckfill\030\n \001(\010\022#\n\033use_custom_time_sync_ser" +
-      "ver\030\013 \001(\010\022\035\n\025time_synch_server_url\030\014 \001(\t" +
-      "\022\036\n\026use_custom_data_server\030\r \001(\010\022\027\n\017data" +
-      "_server_url\030\016 \001(\t\022\036\n\026auto_delete_data_fi" +
-      "les\030\017 \001(\010\022\037\n\027storage_space_allowance\030\020 \001" +
-      "(\001\022$\n\034use_sd_card_for_data_storage\030\021 \001(\010" +
-      "\022\035\n\025use_location_services\030\022 \001(\010\022\024\n\014use_l" +
-      "atitude\030\023 \001(\001\022\025\n\ruse_longitude\030\024 \001(\001\022^\n\010" +
-      "metadata\030\025 \003(\0132L.redvox_api1000.RedvoxPa" +
-      "cket1000.DeviceInformation.AppSettings.M" +
+      "ver\030\013 \001(\010\022\034\n\024time_sync_server_url\030\014 \001(\t\022" +
+      "\036\n\026use_custom_data_server\030\r \001(\010\022\027\n\017data_" +
+      "server_url\030\016 \001(\t\022\036\n\026auto_delete_data_fil" +
+      "es\030\017 \001(\010\022\037\n\027storage_space_allowance\030\020 \001(" +
+      "\001\022$\n\034use_sd_card_for_data_storage\030\021 \001(\010\022" +
+      "\035\n\025use_location_services\030\022 \001(\010\022\024\n\014use_la" +
+      "titude\030\023 \001(\001\022\025\n\ruse_longitude\030\024 \001(\001\022^\n\010m" +
+      "etadata\030\025 \003(\0132L.redvox_api1000.RedvoxPac" +
+      "ket1000.DeviceInformation.AppSettings.Me" +
+      "tadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7\n\021AudioSamplingRat" +
+      "e\022\t\n\005HZ_80\020\000\022\n\n\006HZ_800\020\001\022\013\n\007HZ_8000\020\002\"=\n" +
+      "\021AudioSourceTuning\022\016\n\nINFRASOUND\020\000\022\r\n\tLO" +
+      "W_AUDIO\020\001\022\t\n\005AUDIO\020\002\"\243\001\n\013InputSensor\022\r\n\t" +
+      "BAROMETER\020\000\022\021\n\rACCELEROMETER\020\001\022\026\n\022ACCELE" +
+      "ROMETER_FAST\020\002\022\020\n\014MAGNETOMETER\020\003\022\025\n\021MAGN" +
+      "ETOMETER_FAST\020\004\022\r\n\tGYROSCOPE\020\005\022\022\n\016GYROSC" +
+      "OPE_FAST\020\006\022\016\n\nLUMINOSITY\020\007\"/\n\013NetworkTyp" +
+      "e\022\010\n\004WIFI\020\000\022\014\n\010CELLULAR\020\001\022\010\n\004NONE\020\002\"6\n\006O" +
+      "sType\022\013\n\007ANDROID\020\000\022\007\n\003IOS\020\001\022\t\n\005LINUX\020\002\022\013" +
+      "\n\007WINDOWS\020\003\032\303\001\n\021PacketInformation\022\025\n\ris_" +
+      "backfilled\030\001 \001(\010\022\022\n\nis_private\030\002 \001(\010\022R\n\010" +
+      "metadata\030\003 \003(\0132@.redvox_api1000.RedvoxPa" +
+      "cket1000.PacketInformation.MetadataEntry" +
+      "\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\032\331\005\n\021TimingInformation\022\037\n\027packe" +
+      "t_start_ts_us_wall\030\001 \001(\001\022\037\n\027packet_start" +
+      "_ts_us_mach\030\002 \001(\001\022\035\n\025packet_end_ts_us_wa" +
+      "ll\030\003 \001(\001\022\035\n\025packet_end_ts_us_mach\030\004 \001(\001\022" +
+      "(\n server_acquisition_arrival_ts_us\030\005 \001(" +
+      "\001\022\034\n\024app_start_ts_us_mach\030\006 \001(\001\022Y\n\017synch" +
+      "_exchanges\030\007 \003(\0132@.redvox_api1000.Redvox" +
+      "Packet1000.TimingInformation.SynchExchan" +
+      "ge\022\027\n\017best_latency_us\030\010 \001(\001\022\026\n\016best_offs" +
+      "et_us\030\t \001(\001\022R\n\010metadata\030\n \003(\0132@.redvox_a" +
+      "pi1000.RedvoxPacket1000.TimingInformatio" +
+      "n.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\352\001\n\rSynchExchan" +
+      "ge\022\n\n\002a1\030\001 \001(\001\022\n\n\002a2\030\002 \001(\001\022\n\n\002a3\030\003 \001(\001\022\n" +
+      "\n\002b1\030\004 \001(\001\022\n\n\002b2\030\005 \001(\001\022\n\n\002b3\030\006 \001(\001\022`\n\010me" +
+      "tadata\030\007 \003(\0132N.redvox_api1000.RedvoxPack" +
+      "et1000.TimingInformation.SynchExchange.M" +
       "etadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7\n\021AudioSamplingRa" +
-      "te\022\t\n\005HZ_80\020\000\022\n\n\006HZ_800\020\001\022\013\n\007HZ_8000\020\002\"=" +
-      "\n\021AudioSourceTuning\022\016\n\nINFRASOUND\020\000\022\r\n\tL" +
-      "OW_AUDIO\020\001\022\t\n\005AUDIO\020\002\"\243\001\n\013InputSensor\022\r\n" +
-      "\tBAROMETER\020\000\022\021\n\rACCELEROMETER\020\001\022\026\n\022ACCEL" +
-      "EROMETER_FAST\020\002\022\020\n\014MAGNETOMETER\020\003\022\025\n\021MAG" +
-      "NETOMETER_FAST\020\004\022\r\n\tGYROSCOPE\020\005\022\022\n\016GYROS" +
-      "COPE_FAST\020\006\022\016\n\nLUMINOSITY\020\007\"/\n\013NetworkTy" +
-      "pe\022\010\n\004WIFI\020\000\022\014\n\010CELLULAR\020\001\022\010\n\004NONE\020\002\"6\n\006" +
-      "OsType\022\013\n\007ANDROID\020\000\022\007\n\003IOS\020\001\022\t\n\005LINUX\020\002\022" +
-      "\013\n\007WINDOWS\020\003\032\303\001\n\021PacketInformation\022\025\n\ris" +
-      "_backfilled\030\001 \001(\010\022\022\n\nis_private\030\002 \001(\010\022R\n" +
-      "\010metadata\030\003 \003(\0132@.redvox_api1000.RedvoxP" +
-      "acket1000.PacketInformation.MetadataEntr" +
-      "y\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\032\331\005\n\021TimingInformation\022\037\n\027pack" +
-      "et_start_ts_us_wall\030\001 \001(\001\022\037\n\027packet_star" +
-      "t_ts_us_mach\030\002 \001(\001\022\035\n\025packet_end_ts_us_w" +
-      "all\030\003 \001(\001\022\035\n\025packet_end_ts_us_mach\030\004 \001(\001" +
-      "\022(\n server_acquisition_arrival_ts_us\030\005 \001" +
-      "(\001\022\034\n\024app_start_ts_us_mach\030\006 \001(\001\022Y\n\017sync" +
-      "h_exchanges\030\007 \003(\0132@.redvox_api1000.Redvo" +
-      "xPacket1000.TimingInformation.SynchExcha" +
-      "nge\022\027\n\017best_latency_us\030\010 \001(\001\022\026\n\016best_off" +
-      "set_us\030\t \001(\001\022R\n\010metadata\030\n \003(\0132@.redvox_" +
-      "api1000.RedvoxPacket1000.TimingInformati" +
-      "on.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\352\001\n\rSynchExcha" +
-      "nge\022\n\n\002a1\030\001 \001(\001\022\n\n\002a2\030\002 \001(\001\022\n\n\002a3\030\003 \001(\001\022" +
-      "\n\n\002b1\030\004 \001(\001\022\n\n\002b2\030\005 \001(\001\022\n\n\002b3\030\006 \001(\001\022`\n\010m" +
-      "etadata\030\007 \003(\0132N.redvox_api1000.RedvoxPac" +
-      "ket1000.TimingInformation.SynchExchange." +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\036\n\016SensorChannels" +
+      "\022]\n\022microphone_channel\030\001 \001(\0132A.redvox_ap" +
+      "i1000.RedvoxPacket1000.SensorChannels.Mi" +
+      "crophoneChannel\022X\n\021barometer_channel\030\002 \001" +
+      "(\0132=.redvox_api1000.RedvoxPacket1000.Sen" +
+      "sorChannels.SingleChannel\022Y\n\020location_ch" +
+      "annel\030\003 \001(\0132?.redvox_api1000.RedvoxPacke" +
+      "t1000.SensorChannels.LocationChannel\022Y\n\025" +
+      "accelerometer_channel\030\004 \001(\0132:.redvox_api" +
+      "1000.RedvoxPacket1000.SensorChannels.Xyz" +
+      "Channel\022U\n\021gyroscope_channel\030\005 \001(\0132:.red" +
+      "vox_api1000.RedvoxPacket1000.SensorChann" +
+      "els.XyzChannel\022X\n\024magnetometer_channel\030\006" +
+      " \001(\0132:.redvox_api1000.RedvoxPacket1000.S" +
+      "ensorChannels.XyzChannel\022T\n\rlight_channe" +
+      "l\030\007 \001(\0132=.redvox_api1000.RedvoxPacket100" +
+      "0.SensorChannels.SingleChannel\022W\n\020infrar" +
+      "ed_channel\030\010 \001(\0132=.redvox_api1000.Redvox" +
+      "Packet1000.SensorChannels.SingleChannel\022" +
+      "S\n\rimage_channel\030\t \001(\0132<.redvox_api1000." +
+      "RedvoxPacket1000.SensorChannels.ImageCha" +
+      "nnel\022O\n\010metadata\030\n \003(\0132=.redvox_api1000." +
+      "RedvoxPacket1000.SensorChannels.Metadata" +
+      "Entry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\032\355\002\n\021MicrophoneChannel\022\032\n\022" +
+      "sensor_description\030\001 \001(\t\022\032\n\022first_sample" +
+      "_ts_us\030\002 \001(\001\022\026\n\016sample_rate_hz\030\003 \001(\001\022\024\n\014" +
+      "is_scrambled\030\004 \001(\010\022\017\n\007samples\030\005 \003(\001\022M\n\021s" +
+      "ample_statistics\030\006 \001(\01322.redvox_api1000." +
+      "RedvoxPacket1000.SummaryStatistics\022a\n\010me" +
+      "tadata\030\007 \003(\0132O.redvox_api1000.RedvoxPack" +
+      "et1000.SensorChannels.MicrophoneChannel." +
       "MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\036\n\016SensorChannel" +
-      "s\022]\n\022microphone_channel\030\001 \001(\0132A.redvox_a" +
-      "pi1000.RedvoxPacket1000.SensorChannels.M" +
-      "icrophoneChannel\022X\n\021barometer_channel\030\002 " +
-      "\001(\0132=.redvox_api1000.RedvoxPacket1000.Se" +
-      "nsorChannels.SingleChannel\022Y\n\020location_c" +
-      "hannel\030\003 \001(\0132?.redvox_api1000.RedvoxPack" +
-      "et1000.SensorChannels.LocationChannel\022Y\n" +
-      "\025accelerometer_channel\030\004 \001(\0132:.redvox_ap" +
-      "i1000.RedvoxPacket1000.SensorChannels.Xy" +
-      "zChannel\022U\n\021gyroscope_channel\030\005 \001(\0132:.re" +
-      "dvox_api1000.RedvoxPacket1000.SensorChan" +
-      "nels.XyzChannel\022X\n\024magnetometer_channel\030" +
-      "\006 \001(\0132:.redvox_api1000.RedvoxPacket1000." +
-      "SensorChannels.XyzChannel\022T\n\rlight_chann" +
-      "el\030\007 \001(\0132=.redvox_api1000.RedvoxPacket10" +
-      "00.SensorChannels.SingleChannel\022W\n\020infra" +
-      "red_channel\030\010 \001(\0132=.redvox_api1000.Redvo" +
-      "xPacket1000.SensorChannels.SingleChannel" +
-      "\022S\n\rimage_channel\030\t \001(\0132<.redvox_api1000" +
-      ".RedvoxPacket1000.SensorChannels.ImageCh" +
-      "annel\022O\n\010metadata\030\n \003(\0132=.redvox_api1000" +
-      ".RedvoxPacket1000.SensorChannels.Metadat" +
-      "aEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\032\355\002\n\021MicrophoneChannel\022\032\n" +
-      "\022sensor_description\030\001 \001(\t\022\032\n\022first_sampl" +
-      "e_ts_us\030\002 \001(\001\022\026\n\016sample_rate_hz\030\003 \001(\001\022\024\n" +
-      "\014is_scrambled\030\004 \001(\010\022\017\n\007samples\030\005 \003(\001\022M\n\021" +
-      "sample_statistics\030\006 \001(\01322.redvox_api1000" +
-      ".RedvoxPacket1000.SummaryStatistics\022a\n\010m" +
-      "etadata\030\007 \003(\0132O.redvox_api1000.RedvoxPac" +
-      "ket1000.SensorChannels.MicrophoneChannel" +
-      ".MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\003\n\rSingleChanne" +
-      "l\022\032\n\022sensor_description\030\001 \001(\t\022\033\n\023mean_sa" +
-      "mple_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001" +
-      "\022\017\n\007samples\030\004 \003(\001\022R\n\026sample_rate_statist" +
-      "ics\030\005 \001(\01322.redvox_api1000.RedvoxPacket1" +
-      "000.SummaryStatistics\022M\n\021sample_statisti" +
-      "cs\030\006 \001(\01322.redvox_api1000.RedvoxPacket10" +
-      "00.SummaryStatistics\022]\n\010metadata\030\007 \003(\0132K" +
-      ".redvox_api1000.RedvoxPacket1000.SensorC" +
-      "hannels.SingleChannel.MetadataEntry\032/\n\rM" +
-      "etadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\032\225\t\n\017LocationChannel\022\032\n\022sensor_descr" +
-      "iption\030\001 \001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001(" +
-      "\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\030\n\020latitude_samp" +
-      "les\030\004 \003(\001\022\031\n\021longitude_samples\030\005 \003(\001\022\030\n\020" +
-      "altitude_samples\030\006 \003(\001\022\025\n\rspeed_samples\030" +
-      "\007 \003(\001\022\030\n\020accuracy_samples\030\010 \003(\001\022$\n\034locat" +
-      "ion_permissions_granted\030\t \001(\010\022#\n\033locatio" +
-      "n_services_requested\030\n \001(\010\022!\n\031location_s" +
-      "ervices_enabled\030\013 \001(\010\022k\n\021location_provid" +
-      "er\030\014 \001(\0162P.redvox_api1000.RedvoxPacket10" +
-      "00.SensorChannels.LocationChannel.Locati" +
-      "onProvider\022R\n\026sample_rate_statistics\030\r \001" +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\003\n\rSingleChannel" +
+      "\022\032\n\022sensor_description\030\001 \001(\t\022\033\n\023mean_sam" +
+      "ple_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022" +
+      "\017\n\007samples\030\004 \003(\001\022R\n\026sample_rate_statisti" +
+      "cs\030\005 \001(\01322.redvox_api1000.RedvoxPacket10" +
+      "00.SummaryStatistics\022M\n\021sample_statistic" +
+      "s\030\006 \001(\01322.redvox_api1000.RedvoxPacket100" +
+      "0.SummaryStatistics\022]\n\010metadata\030\007 \003(\0132K." +
+      "redvox_api1000.RedvoxPacket1000.SensorCh" +
+      "annels.SingleChannel.MetadataEntry\032/\n\rMe" +
+      "tadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\032\225\t\n\017LocationChannel\022\032\n\022sensor_descri" +
+      "ption\030\001 \001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001(\001" +
+      "\022\024\n\014sample_ts_us\030\003 \003(\001\022\030\n\020latitude_sampl" +
+      "es\030\004 \003(\001\022\031\n\021longitude_samples\030\005 \003(\001\022\030\n\020a" +
+      "ltitude_samples\030\006 \003(\001\022\025\n\rspeed_samples\030\007" +
+      " \003(\001\022\030\n\020accuracy_samples\030\010 \003(\001\022$\n\034locati" +
+      "on_permissions_granted\030\t \001(\010\022#\n\033location" +
+      "_services_requested\030\n \001(\010\022!\n\031location_se" +
+      "rvices_enabled\030\013 \001(\010\022k\n\021location_provide" +
+      "r\030\014 \001(\0162P.redvox_api1000.RedvoxPacket100" +
+      "0.SensorChannels.LocationChannel.Locatio" +
+      "nProvider\022R\n\026sample_rate_statistics\030\r \001(" +
+      "\01322.redvox_api1000.RedvoxPacket1000.Summ" +
+      "aryStatistics\022V\n\032latitude_sample_statist" +
+      "ics\030\016 \001(\01322.redvox_api1000.RedvoxPacket1" +
+      "000.SummaryStatistics\022W\n\033longitude_sampl" +
+      "e_statistics\030\017 \001(\01322.redvox_api1000.Redv" +
+      "oxPacket1000.SummaryStatistics\022V\n\032altitu" +
+      "de_sample_statistics\030\020 \001(\01322.redvox_api1" +
+      "000.RedvoxPacket1000.SummaryStatistics\022S" +
+      "\n\027speed_sample_statistics\030\021 \001(\01322.redvox" +
+      "_api1000.RedvoxPacket1000.SummaryStatist" +
+      "ics\022V\n\032accuracy_sample_statistics\030\022 \001(\0132" +
+      "2.redvox_api1000.RedvoxPacket1000.Summar" +
+      "yStatistics\022_\n\010metadata\030\023 \003(\0132M.redvox_a" +
+      "pi1000.RedvoxPacket1000.SensorChannels.L" +
+      "ocationChannel.MetadataEntry\032/\n\rMetadata" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"<\n" +
+      "\020LocationProvider\022\010\n\004NONE\020\000\022\010\n\004USER\020\001\022\007\n" +
+      "\003GPS\020\002\022\013\n\007NETWORK\020\003\032\350\004\n\nXyzChannel\022\032\n\022se" +
+      "nsor_description\030\001 \001(\t\022\033\n\023mean_sample_ra" +
+      "te_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\021\n\tx_s" +
+      "amples\030\004 \003(\001\022\021\n\ty_samples\030\005 \003(\001\022\021\n\tz_sam" +
+      "ples\030\006 \003(\001\022R\n\026sample_rate_statistics\030\007 \001" +
       "(\01322.redvox_api1000.RedvoxPacket1000.Sum" +
-      "maryStatistics\022V\n\032latitude_sample_statis" +
-      "tics\030\016 \001(\01322.redvox_api1000.RedvoxPacket" +
-      "1000.SummaryStatistics\022W\n\033longitude_samp" +
-      "le_statistics\030\017 \001(\01322.redvox_api1000.Red" +
-      "voxPacket1000.SummaryStatistics\022V\n\032altit" +
-      "ude_sample_statistics\030\020 \001(\01322.redvox_api" +
-      "1000.RedvoxPacket1000.SummaryStatistics\022" +
-      "S\n\027speed_sample_statistics\030\021 \001(\01322.redvo" +
-      "x_api1000.RedvoxPacket1000.SummaryStatis" +
-      "tics\022V\n\032accuracy_sample_statistics\030\022 \001(\013" +
-      "22.redvox_api1000.RedvoxPacket1000.Summa" +
-      "ryStatistics\022_\n\010metadata\030\023 \003(\0132M.redvox_" +
-      "api1000.RedvoxPacket1000.SensorChannels." +
-      "LocationChannel.MetadataEntry\032/\n\rMetadat" +
-      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"<" +
-      "\n\020LocationProvider\022\010\n\004NONE\020\000\022\010\n\004USER\020\001\022\007" +
-      "\n\003GPS\020\002\022\013\n\007NETWORK\020\003\032\350\004\n\nXyzChannel\022\032\n\022s" +
-      "ensor_description\030\001 \001(\t\022\033\n\023mean_sample_r" +
-      "ate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\021\n\tx_" +
-      "samples\030\004 \003(\001\022\021\n\ty_samples\030\005 \003(\001\022\021\n\tz_sa" +
-      "mples\030\006 \003(\001\022R\n\026sample_rate_statistics\030\007 " +
+      "maryStatistics\022O\n\023x_sample_statistics\030\010 " +
       "\001(\01322.redvox_api1000.RedvoxPacket1000.Su" +
-      "mmaryStatistics\022O\n\023x_sample_statistics\030\010" +
+      "mmaryStatistics\022O\n\023y_sample_statistics\030\t" +
       " \001(\01322.redvox_api1000.RedvoxPacket1000.S" +
-      "ummaryStatistics\022O\n\023y_sample_statistics\030" +
-      "\t \001(\01322.redvox_api1000.RedvoxPacket1000." +
-      "SummaryStatistics\022O\n\023z_sample_statistics" +
-      "\030\n \001(\01322.redvox_api1000.RedvoxPacket1000" +
-      ".SummaryStatistics\022Z\n\010metadata\030\013 \003(\0132H.r" +
-      "edvox_api1000.RedvoxPacket1000.SensorCha" +
-      "nnels.XyzChannel.MetadataEntry\032/\n\rMetada" +
-      "taEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032" +
-      "\321\002\n\014ImageChannel\022\032\n\022sensor_description\030\001" +
-      " \001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001(\001\022\024\n\014sam" +
-      "ple_ts_us\030\003 \003(\001\022\017\n\007samples\030\004 \003(\014\022R\n\026samp" +
-      "le_rate_statistics\030\005 \001(\01322.redvox_api100" +
-      "0.RedvoxPacket1000.SummaryStatistics\022\\\n\010" +
-      "metadata\030\006 \003(\0132J.redvox_api1000.RedvoxPa" +
-      "cket1000.SensorChannels.ImageChannel.Met" +
-      "adataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\032\216\002\n\021SummaryStatistic" +
-      "s\022\r\n\005count\030\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\016\n\006median" +
-      "\030\003 \001(\001\022\014\n\004mode\030\004 \001(\001\022\020\n\010variance\030\005 \001(\001\022\013" +
-      "\n\003min\030\006 \001(\001\022\013\n\003max\030\007 \001(\001\022\r\n\005range\030\010 \001(\001\022" +
-      "R\n\010metadata\030\t \003(\0132@.redvox_api1000.Redvo" +
-      "xPacket1000.SummaryStatistics.MetadataEn" +
-      "try\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"M\n\022AcquisitionRequest\022%\n\035co" +
-      "mpressed_redvox_packet_1000\030\001 \001(\014\022\020\n\010che" +
-      "cksum\030\002 \001(\003\"\332\001\n\023AcquisitionResponse\022G\n\rr" +
-      "esponse_type\030\001 \001(\01620.redvox_api1000.Acqu" +
-      "isitionResponse.ResponseType\022\020\n\010checksum" +
-      "\030\002 \001(\003\022\017\n\007details\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"" +
-      "G\n\014ResponseType\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001\022" +
-      "\016\n\nDATA_ERROR\020\002\022\017\n\013OTHER_ERROR\020\003\"2\n\014Sync" +
-      "hRequest\022\016\n\006seq_id\030\001 \001(\004\022\022\n\nsub_seq_id\030\002" +
-      " \001(\r\"[\n\rSynchResponse\022\016\n\006seq_id\030\001 \001(\004\022\022\n" +
-      "\nsub_seq_id\030\002 \001(\r\022\022\n\nrecv_ts_us\030\003 \001(\004\022\022\n" +
-      "\nsend_ts_us\030\004 \001(\004B\032\n\030io.redvox.redvox_ap" +
-      "i1000b\006proto3"
+      "ummaryStatistics\022O\n\023z_sample_statistics\030" +
+      "\n \001(\01322.redvox_api1000.RedvoxPacket1000." +
+      "SummaryStatistics\022Z\n\010metadata\030\013 \003(\0132H.re" +
+      "dvox_api1000.RedvoxPacket1000.SensorChan" +
+      "nels.XyzChannel.MetadataEntry\032/\n\rMetadat" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321" +
+      "\002\n\014ImageChannel\022\032\n\022sensor_description\030\001 " +
+      "\001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001(\001\022\024\n\014samp" +
+      "le_ts_us\030\003 \003(\001\022\017\n\007samples\030\004 \003(\014\022R\n\026sampl" +
+      "e_rate_statistics\030\005 \001(\01322.redvox_api1000" +
+      ".RedvoxPacket1000.SummaryStatistics\022\\\n\010m" +
+      "etadata\030\006 \003(\0132J.redvox_api1000.RedvoxPac" +
+      "ket1000.SensorChannels.ImageChannel.Meta" +
+      "dataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\032\216\002\n\021SummaryStatistics" +
+      "\022\r\n\005count\030\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\016\n\006median\030" +
+      "\003 \001(\001\022\014\n\004mode\030\004 \001(\001\022\020\n\010variance\030\005 \001(\001\022\013\n" +
+      "\003min\030\006 \001(\001\022\013\n\003max\030\007 \001(\001\022\r\n\005range\030\010 \001(\001\022R" +
+      "\n\010metadata\030\t \003(\0132@.redvox_api1000.Redvox" +
+      "Packet1000.SummaryStatistics.MetadataEnt" +
+      "ry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"M\n\022AcquisitionRequest\022%\n\035com" +
+      "pressed_redvox_packet_1000\030\001 \001(\014\022\020\n\010chec" +
+      "ksum\030\002 \001(\003\"\332\001\n\023AcquisitionResponse\022G\n\rre" +
+      "sponse_type\030\001 \001(\01620.redvox_api1000.Acqui" +
+      "sitionResponse.ResponseType\022\020\n\010checksum\030" +
+      "\002 \001(\003\022\017\n\007details\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"G" +
+      "\n\014ResponseType\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001\022\016" +
+      "\n\nDATA_ERROR\020\002\022\017\n\013OTHER_ERROR\020\003\"2\n\014Synch" +
+      "Request\022\016\n\006seq_id\030\001 \001(\004\022\022\n\nsub_seq_id\030\002 " +
+      "\001(\r\"[\n\rSynchResponse\022\016\n\006seq_id\030\001 \001(\004\022\022\n\n" +
+      "sub_seq_id\030\002 \001(\r\022\022\n\nrecv_ts_us\030\003 \001(\004\022\022\n\n" +
+      "send_ts_us\030\004 \001(\004B\032\n\030io.redvox.redvox_api" +
+      "1000b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -35157,7 +35157,7 @@ public final class RedvoxApi1000 {
     internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_descriptor,
-        new java.lang.String[] { "AudioSamplingRate", "AudioSourceTuning", "AdditionalInputSensors", "AutomaticallyRecord", "LaunchAtPowerUp", "RedvoxId", "PushToServer", "PublishDataAsPrivate", "ScrambleVoiceData", "ProvideBackfill", "UseCustomTimeSyncServer", "TimeSynchServerUrl", "UseCustomDataServer", "DataServerUrl", "AutoDeleteDataFiles", "StorageSpaceAllowance", "UseSdCardForDataStorage", "UseLocationServices", "UseLatitude", "UseLongitude", "Metadata", });
+        new java.lang.String[] { "AudioSamplingRate", "AudioSourceTuning", "AdditionalInputSensors", "AutomaticallyRecord", "LaunchAtPowerUp", "RedvoxId", "PushToServer", "PublishDataAsPrivate", "ScrambleVoiceData", "ProvideBackfill", "UseCustomTimeSyncServer", "TimeSyncServerUrl", "UseCustomDataServer", "DataServerUrl", "AutoDeleteDataFiles", "StorageSpaceAllowance", "UseSdCardForDataStorage", "UseLocationServices", "UseLatitude", "UseLongitude", "Metadata", });
     internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_MetadataEntry_descriptor =
       internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_descriptor.getNestedTypes().get(0);
     internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_MetadataEntry_fieldAccessorTable = new

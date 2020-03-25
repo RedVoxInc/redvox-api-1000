@@ -554,7 +554,7 @@ BOOL RedvoxPacket1000_DeviceInformation_OsType_IsValidValue(int32_t value__) {
 @dynamic scrambleVoiceData;
 @dynamic provideBackfill;
 @dynamic useCustomTimeSyncServer;
-@dynamic timeSynchServerURL;
+@dynamic timeSyncServerURL;
 @dynamic useCustomDataServer;
 @dynamic dataServerURL;
 @dynamic autoDeleteDataFiles;
@@ -571,7 +571,7 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
   RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning audioSourceTuning;
   GPBEnumArray *additionalInputSensorsArray;
   NSString *redvoxId;
-  NSString *timeSynchServerURL;
+  NSString *timeSyncServerURL;
   NSString *dataServerURL;
   NSMutableDictionary *metadata;
   double storageSpaceAllowance;
@@ -685,11 +685,11 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
         .dataType = GPBDataTypeBool,
       },
       {
-        .name = "timeSynchServerURL",
+        .name = "timeSyncServerURL",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_TimeSynchServerURL,
+        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_TimeSyncServerURL,
         .hasIndex = 17,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation_AppSettings__storage_, timeSynchServerURL),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation_AppSettings__storage_, timeSyncServerURL),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeString,
       },
@@ -785,7 +785,7 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
                                          flags:GPBDescriptorInitializationFlag_None];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
-        "\002\014\004\245\246\241!!\000\016\004\246\241!!\000";
+        "\002\014\004\244\246\241!!\000\016\004\246\241!!\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacket1000_DeviceInformation)];
