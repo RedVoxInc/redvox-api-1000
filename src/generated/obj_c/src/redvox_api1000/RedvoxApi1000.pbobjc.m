@@ -160,12 +160,14 @@ typedef struct RedvoxPacket1000__storage_ {
 @dynamic authEmail;
 @dynamic authToken;
 @dynamic firebaseToken;
+@dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacket1000_UserInformation__storage_ {
   uint32_t _has_storage_[1];
   NSString *authEmail;
   NSString *authToken;
   NSString *firebaseToken;
+  NSMutableDictionary *metadata;
 } RedvoxPacket1000_UserInformation__storage_;
 
 // This method is threadsafe because it is initially called
@@ -199,6 +201,15 @@ typedef struct RedvoxPacket1000_UserInformation__storage_ {
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacket1000_UserInformation__storage_, firebaseToken),
         .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "metadata",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_UserInformation_FieldNumber_Metadata,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_UserInformation__storage_, metadata),
+        .flags = GPBFieldMapKeyString,
         .dataType = GPBDataTypeString,
       },
     };
@@ -238,6 +249,7 @@ typedef struct RedvoxPacket1000_UserInformation__storage_ {
 @dynamic hasAvailableRamBytes, availableRamBytes;
 @dynamic hasAvailableDiskBytes, availableDiskBytes;
 @dynamic hasCpuUtilization, cpuUtilization;
+@dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacket1000_DeviceInformation__storage_ {
   uint32_t _has_storage_[1];
@@ -256,6 +268,7 @@ typedef struct RedvoxPacket1000_DeviceInformation__storage_ {
   RedvoxPacket1000_SummaryStatistics *availableRamBytes;
   RedvoxPacket1000_SummaryStatistics *availableDiskBytes;
   RedvoxPacket1000_SummaryStatistics *cpuUtilization;
+  NSMutableDictionary *metadata;
 } RedvoxPacket1000_DeviceInformation__storage_;
 
 // This method is threadsafe because it is initially called
@@ -399,6 +412,15 @@ typedef struct RedvoxPacket1000_DeviceInformation__storage_ {
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
+      {
+        .name = "metadata",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_Metadata,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, metadata),
+        .flags = GPBFieldMapKeyString,
+        .dataType = GPBDataTypeString,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[RedvoxPacket1000_DeviceInformation class]
@@ -541,6 +563,7 @@ BOOL RedvoxPacket1000_DeviceInformation_OsType_IsValidValue(int32_t value__) {
 @dynamic useLocationServices;
 @dynamic useLatitude;
 @dynamic useLongitude;
+@dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
   uint32_t _has_storage_[1];
@@ -550,6 +573,7 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
   NSString *redvoxId;
   NSString *timeSynchServerURL;
   NSString *dataServerURL;
+  NSMutableDictionary *metadata;
   double storageSpaceAllowance;
   double useLatitude;
   double useLongitude;
@@ -741,6 +765,15 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
+      {
+        .name = "metadata",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_Metadata,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation_AppSettings__storage_, metadata),
+        .flags = GPBFieldMapKeyString,
+        .dataType = GPBDataTypeString,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[RedvoxPacket1000_DeviceInformation_AppSettings class]
@@ -919,9 +952,11 @@ BOOL RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_IsValidValue(int
 
 @dynamic isBackfilled;
 @dynamic isPrivate;
+@dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacket1000_PacketInformation__storage_ {
   uint32_t _has_storage_[1];
+  NSMutableDictionary *metadata;
 } RedvoxPacket1000_PacketInformation__storage_;
 
 // This method is threadsafe because it is initially called
@@ -947,6 +982,15 @@ typedef struct RedvoxPacket1000_PacketInformation__storage_ {
         .offset = 3,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "metadata",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_PacketInformation_FieldNumber_Metadata,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_PacketInformation__storage_, metadata),
+        .flags = GPBFieldMapKeyString,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -979,10 +1023,12 @@ typedef struct RedvoxPacket1000_PacketInformation__storage_ {
 @dynamic synchExchangesArray, synchExchangesArray_Count;
 @dynamic bestLatencyUs;
 @dynamic bestOffsetUs;
+@dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacket1000_TimingInformation__storage_ {
   uint32_t _has_storage_[1];
   NSMutableArray *synchExchangesArray;
+  NSMutableDictionary *metadata;
   double packetStartTsUsWall;
   double packetStartTsUsMach;
   double packetEndTsUsWall;
@@ -1080,6 +1126,15 @@ typedef struct RedvoxPacket1000_TimingInformation__storage_ {
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
+      {
+        .name = "metadata",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_TimingInformation_FieldNumber_Metadata,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, metadata),
+        .flags = GPBFieldMapKeyString,
+        .dataType = GPBDataTypeString,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[RedvoxPacket1000_TimingInformation class]
@@ -1108,9 +1163,11 @@ typedef struct RedvoxPacket1000_TimingInformation__storage_ {
 @dynamic b1;
 @dynamic b2;
 @dynamic b3;
+@dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacket1000_TimingInformation_SynchExchange__storage_ {
   uint32_t _has_storage_[1];
+  NSMutableDictionary *metadata;
   double a1;
   double a2;
   double a3;
@@ -1179,6 +1236,15 @@ typedef struct RedvoxPacket1000_TimingInformation_SynchExchange__storage_ {
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
+      {
+        .name = "metadata",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_Metadata,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation_SynchExchange__storage_, metadata),
+        .flags = GPBFieldMapKeyString,
+        .dataType = GPBDataTypeString,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[RedvoxPacket1000_TimingInformation_SynchExchange class]
@@ -1210,6 +1276,7 @@ typedef struct RedvoxPacket1000_TimingInformation_SynchExchange__storage_ {
 @dynamic hasLightChannel, lightChannel;
 @dynamic hasInfraredChannel, infraredChannel;
 @dynamic hasImageChannel, imageChannel;
+@dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacket1000_SensorChannels__storage_ {
   uint32_t _has_storage_[1];
@@ -1222,6 +1289,7 @@ typedef struct RedvoxPacket1000_SensorChannels__storage_ {
   RedvoxPacket1000_SensorChannels_SingleChannel *lightChannel;
   RedvoxPacket1000_SensorChannels_SingleChannel *infraredChannel;
   RedvoxPacket1000_SensorChannels_ImageChannel *imageChannel;
+  NSMutableDictionary *metadata;
 } RedvoxPacket1000_SensorChannels__storage_;
 
 // This method is threadsafe because it is initially called
@@ -1310,6 +1378,15 @@ typedef struct RedvoxPacket1000_SensorChannels__storage_ {
         .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels__storage_, imageChannel),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "metadata",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_SensorChannels_FieldNumber_Metadata,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels__storage_, metadata),
+        .flags = GPBFieldMapKeyString,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =

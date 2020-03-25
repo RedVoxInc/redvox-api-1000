@@ -283,6 +283,7 @@ typedef GPB_ENUM(RedvoxPacket1000_UserInformation_FieldNumber) {
   RedvoxPacket1000_UserInformation_FieldNumber_AuthEmail = 1,
   RedvoxPacket1000_UserInformation_FieldNumber_AuthToken = 2,
   RedvoxPacket1000_UserInformation_FieldNumber_FirebaseToken = 3,
+  RedvoxPacket1000_UserInformation_FieldNumber_Metadata = 4,
 };
 
 @interface RedvoxPacket1000_UserInformation : GPBMessage
@@ -295,6 +296,11 @@ typedef GPB_ENUM(RedvoxPacket1000_UserInformation_FieldNumber) {
 
 /** The assigned firebase token */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *firebaseToken;
+
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
 
 @end
 
@@ -316,6 +322,7 @@ typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_FieldNumber) {
   RedvoxPacket1000_DeviceInformation_FieldNumber_AvailableRamBytes = 13,
   RedvoxPacket1000_DeviceInformation_FieldNumber_AvailableDiskBytes = 14,
   RedvoxPacket1000_DeviceInformation_FieldNumber_CpuUtilization = 15,
+  RedvoxPacket1000_DeviceInformation_FieldNumber_Metadata = 16,
 };
 
 @interface RedvoxPacket1000_DeviceInformation : GPBMessage
@@ -379,6 +386,11 @@ typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_FieldNumber) {
 /** Test to see if @c cpuUtilization has been set. */
 @property(nonatomic, readwrite) BOOL hasCpuUtilization;
 
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
+
 @end
 
 /**
@@ -428,6 +440,7 @@ typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber) {
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseLocationServices = 18,
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseLatitude = 19,
   RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseLongitude = 20,
+  RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_Metadata = 21,
 };
 
 @interface RedvoxPacket1000_DeviceInformation_AppSettings : GPBMessage
@@ -475,6 +488,11 @@ typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber) {
 
 @property(nonatomic, readwrite) double useLongitude;
 
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
+
 @end
 
 /**
@@ -506,6 +524,7 @@ void SetRedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_RawValu
 typedef GPB_ENUM(RedvoxPacket1000_PacketInformation_FieldNumber) {
   RedvoxPacket1000_PacketInformation_FieldNumber_IsBackfilled = 1,
   RedvoxPacket1000_PacketInformation_FieldNumber_IsPrivate = 2,
+  RedvoxPacket1000_PacketInformation_FieldNumber_Metadata = 3,
 };
 
 @interface RedvoxPacket1000_PacketInformation : GPBMessage
@@ -515,6 +534,11 @@ typedef GPB_ENUM(RedvoxPacket1000_PacketInformation_FieldNumber) {
 
 /** Field for if this packet is private to the user or not */
 @property(nonatomic, readwrite) BOOL isPrivate;
+
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
 
 @end
 
@@ -530,6 +554,7 @@ typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_FieldNumber) {
   RedvoxPacket1000_TimingInformation_FieldNumber_SynchExchangesArray = 7,
   RedvoxPacket1000_TimingInformation_FieldNumber_BestLatencyUs = 8,
   RedvoxPacket1000_TimingInformation_FieldNumber_BestOffsetUs = 9,
+  RedvoxPacket1000_TimingInformation_FieldNumber_Metadata = 10,
 };
 
 @interface RedvoxPacket1000_TimingInformation : GPBMessage
@@ -563,6 +588,11 @@ typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_FieldNumber) {
 /** The best offset as determined from the synch params */
 @property(nonatomic, readwrite) double bestOffsetUs;
 
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
+
 @end
 
 #pragma mark - RedvoxPacket1000_TimingInformation_SynchExchange
@@ -574,6 +604,7 @@ typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber) {
   RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_B1 = 4,
   RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_B2 = 5,
   RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_B3 = 6,
+  RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_Metadata = 7,
 };
 
 @interface RedvoxPacket1000_TimingInformation_SynchExchange : GPBMessage
@@ -590,6 +621,11 @@ typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber) {
 
 @property(nonatomic, readwrite) double b3;
 
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
+
 @end
 
 #pragma mark - RedvoxPacket1000_SensorChannels
@@ -604,6 +640,7 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_FieldNumber) {
   RedvoxPacket1000_SensorChannels_FieldNumber_LightChannel = 7,
   RedvoxPacket1000_SensorChannels_FieldNumber_InfraredChannel = 8,
   RedvoxPacket1000_SensorChannels_FieldNumber_ImageChannel = 9,
+  RedvoxPacket1000_SensorChannels_FieldNumber_Metadata = 10,
 };
 
 @interface RedvoxPacket1000_SensorChannels : GPBMessage
@@ -652,6 +689,11 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_ImageChannel *imageChannel;
 /** Test to see if @c imageChannel has been set. */
 @property(nonatomic, readwrite) BOOL hasImageChannel;
+
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
 
 @end
 

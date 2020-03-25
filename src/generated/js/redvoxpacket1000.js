@@ -290,7 +290,8 @@ proto.redvox_api1000.RedvoxPacket1000.UserInformation.toObject = function(includ
   var f, obj = {
     authEmail: jspb.Message.getFieldWithDefault(msg, 1, ""),
     authToken: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    firebaseToken: jspb.Message.getFieldWithDefault(msg, 3, "")
+    firebaseToken: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
   if (includeInstance) {
@@ -338,6 +339,12 @@ proto.redvox_api1000.RedvoxPacket1000.UserInformation.deserializeBinaryFromReade
     case 3:
       var value = /** @type {string} */ (reader.readString());
       msg.setFirebaseToken(value);
+      break;
+    case 4:
+      var value = msg.getMetadataMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
+         });
       break;
     default:
       reader.skipField();
@@ -389,6 +396,10 @@ proto.redvox_api1000.RedvoxPacket1000.UserInformation.serializeBinaryToWriter = 
       f
     );
   }
+  f = message.getMetadataMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(4, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+  }
 };
 
 
@@ -434,6 +445,24 @@ proto.redvox_api1000.RedvoxPacket1000.UserInformation.prototype.getFirebaseToken
 /** @param {string} value */
 proto.redvox_api1000.RedvoxPacket1000.UserInformation.prototype.setFirebaseToken = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * map<string, string> metadata = 4;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
+ */
+proto.redvox_api1000.RedvoxPacket1000.UserInformation.prototype.getMetadataMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 4, opt_noLazyCreate,
+      null));
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.UserInformation.prototype.clearMetadataMap = function() {
+  this.getMetadataMap().clear();
 };
 
 
@@ -498,7 +527,8 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.toObject = function(incl
     deviceBatteryPercent: (f = msg.getDeviceBatteryPercent()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
     availableRamBytes: (f = msg.getAvailableRamBytes()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
     availableDiskBytes: (f = msg.getAvailableDiskBytes()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    cpuUtilization: (f = msg.getCpuUtilization()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f)
+    cpuUtilization: (f = msg.getCpuUtilization()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
+    metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
   if (includeInstance) {
@@ -601,6 +631,12 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.deserializeBinaryFromRea
       var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
       reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
       msg.setCpuUtilization(value);
+      break;
+    case 16:
+      var value = msg.getMetadataMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
+         });
       break;
     default:
       reader.skipField();
@@ -743,6 +779,10 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.serializeBinaryToWriter 
       proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
     );
   }
+  f = message.getMetadataMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(16, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+  }
 };
 
 
@@ -838,7 +878,8 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.toObject = f
     useSdCardForDataStorage: jspb.Message.getFieldWithDefault(msg, 17, false),
     useLocationServices: jspb.Message.getFieldWithDefault(msg, 18, false),
     useLatitude: +jspb.Message.getFieldWithDefault(msg, 19, 0.0),
-    useLongitude: +jspb.Message.getFieldWithDefault(msg, 20, 0.0)
+    useLongitude: +jspb.Message.getFieldWithDefault(msg, 20, 0.0),
+    metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
   if (includeInstance) {
@@ -954,6 +995,12 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.deserializeB
     case 20:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setUseLongitude(value);
+      break;
+    case 21:
+      var value = msg.getMetadataMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
+         });
       break;
     default:
       reader.skipField();
@@ -1123,6 +1170,10 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.serializeBin
       20,
       f
     );
+  }
+  f = message.getMetadataMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(21, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -1496,6 +1547,24 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
 
 
 /**
+ * map<string, string> metadata = 21;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
+ */
+proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getMetadataMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 21, opt_noLazyCreate,
+      null));
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.clearMetadataMap = function() {
+  this.getMetadataMap().clear();
+};
+
+
+/**
  * optional string device_id = 1;
  * @return {string}
  */
@@ -1825,6 +1894,24 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.hasCpuUtilizat
 };
 
 
+/**
+ * map<string, string> metadata = 16;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
+ */
+proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getMetadataMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 16, opt_noLazyCreate,
+      null));
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearMetadataMap = function() {
+  this.getMetadataMap().clear();
+};
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1873,7 +1960,8 @@ proto.redvox_api1000.RedvoxPacket1000.PacketInformation.prototype.toObject = fun
 proto.redvox_api1000.RedvoxPacket1000.PacketInformation.toObject = function(includeInstance, msg) {
   var f, obj = {
     isBackfilled: jspb.Message.getFieldWithDefault(msg, 1, false),
-    isPrivate: jspb.Message.getFieldWithDefault(msg, 2, false)
+    isPrivate: jspb.Message.getFieldWithDefault(msg, 2, false),
+    metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
   if (includeInstance) {
@@ -1918,6 +2006,12 @@ proto.redvox_api1000.RedvoxPacket1000.PacketInformation.deserializeBinaryFromRea
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setIsPrivate(value);
       break;
+    case 3:
+      var value = msg.getMetadataMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
+         });
+      break;
     default:
       reader.skipField();
       break;
@@ -1961,6 +2055,10 @@ proto.redvox_api1000.RedvoxPacket1000.PacketInformation.serializeBinaryToWriter 
       f
     );
   }
+  f = message.getMetadataMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(3, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+  }
 };
 
 
@@ -1995,6 +2093,24 @@ proto.redvox_api1000.RedvoxPacket1000.PacketInformation.prototype.getIsPrivate =
 /** @param {boolean} value */
 proto.redvox_api1000.RedvoxPacket1000.PacketInformation.prototype.setIsPrivate = function(value) {
   jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * map<string, string> metadata = 3;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
+ */
+proto.redvox_api1000.RedvoxPacket1000.PacketInformation.prototype.getMetadataMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 3, opt_noLazyCreate,
+      null));
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.PacketInformation.prototype.clearMetadataMap = function() {
+  this.getMetadataMap().clear();
 };
 
 
@@ -2061,7 +2177,8 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.toObject = function(incl
     synchExchangesList: jspb.Message.toObjectList(msg.getSynchExchangesList(),
     proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.toObject, includeInstance),
     bestLatencyUs: +jspb.Message.getFieldWithDefault(msg, 8, 0.0),
-    bestOffsetUs: +jspb.Message.getFieldWithDefault(msg, 9, 0.0)
+    bestOffsetUs: +jspb.Message.getFieldWithDefault(msg, 9, 0.0),
+    metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
   if (includeInstance) {
@@ -2134,6 +2251,12 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.deserializeBinaryFromRea
     case 9:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setBestOffsetUs(value);
+      break;
+    case 10:
+      var value = msg.getMetadataMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
+         });
       break;
     default:
       reader.skipField();
@@ -2228,6 +2351,10 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.serializeBinaryToWriter 
       f
     );
   }
+  f = message.getMetadataMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(10, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+  }
 };
 
 
@@ -2283,7 +2410,8 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.toObject =
     a3: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
     b1: +jspb.Message.getFieldWithDefault(msg, 4, 0.0),
     b2: +jspb.Message.getFieldWithDefault(msg, 5, 0.0),
-    b3: +jspb.Message.getFieldWithDefault(msg, 6, 0.0)
+    b3: +jspb.Message.getFieldWithDefault(msg, 6, 0.0),
+    metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
   if (includeInstance) {
@@ -2343,6 +2471,12 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.deserializ
     case 6:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setB3(value);
+      break;
+    case 7:
+      var value = msg.getMetadataMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
+         });
       break;
     default:
       reader.skipField();
@@ -2414,6 +2548,10 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.serializeB
       6,
       f
     );
+  }
+  f = message.getMetadataMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(7, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -2505,6 +2643,24 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.prototype.
 /** @param {number} value */
 proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.prototype.setB3 = function(value) {
   jspb.Message.setProto3FloatField(this, 6, value);
+};
+
+
+/**
+ * map<string, string> metadata = 7;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
+ */
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.prototype.getMetadataMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 7, opt_noLazyCreate,
+      null));
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.prototype.clearMetadataMap = function() {
+  this.getMetadataMap().clear();
 };
 
 
@@ -2659,6 +2815,24 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setBestOffsetU
 };
 
 
+/**
+ * map<string, string> metadata = 10;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
+ */
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getMetadataMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 10, opt_noLazyCreate,
+      null));
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.clearMetadataMap = function() {
+  this.getMetadataMap().clear();
+};
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2714,7 +2888,8 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.toObject = function(include
     magnetometerChannel: (f = msg.getMagnetometerChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.toObject(includeInstance, f),
     lightChannel: (f = msg.getLightChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.toObject(includeInstance, f),
     infraredChannel: (f = msg.getInfraredChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.toObject(includeInstance, f),
-    imageChannel: (f = msg.getImageChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.toObject(includeInstance, f)
+    imageChannel: (f = msg.getImageChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.toObject(includeInstance, f),
+    metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
   if (includeInstance) {
@@ -2795,6 +2970,12 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.deserializeBinaryFromReader
       var value = new proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel;
       reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.deserializeBinaryFromReader);
       msg.setImageChannel(value);
+      break;
+    case 10:
+      var value = msg.getMetadataMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
+         });
       break;
     default:
       reader.skipField();
@@ -2896,6 +3077,10 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.serializeBinaryToWriter = f
       f,
       proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.serializeBinaryToWriter
     );
+  }
+  f = message.getMetadataMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(10, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -5627,6 +5812,24 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.clearImageChannel
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.hasImageChannel = function() {
   return jspb.Message.getField(this, 9) != null;
+};
+
+
+/**
+ * map<string, string> metadata = 10;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.getMetadataMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 10, opt_noLazyCreate,
+      null));
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.clearMetadataMap = function() {
+  this.getMetadataMap().clear();
 };
 
 

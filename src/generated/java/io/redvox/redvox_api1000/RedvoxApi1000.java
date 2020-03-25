@@ -430,6 +430,60 @@ public final class RedvoxApi1000 {
        */
       com.google.protobuf.ByteString
           getFirebaseTokenBytes();
+
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      int getMetadataCount();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      boolean containsMetadata(
+          java.lang.String key);
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.String, java.lang.String>
+      getMetadata();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      java.util.Map<java.lang.String, java.lang.String>
+      getMetadataMap();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue);
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      java.lang.String getMetadataOrThrow(
+          java.lang.String key);
     }
     /**
      * Protobuf type {@code redvox_api1000.RedvoxPacket1000.UserInformation}
@@ -491,6 +545,19 @@ public final class RedvoxApi1000 {
                 firebaseToken_ = s;
                 break;
               }
+              case 34: {
+                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                  metadata_ = com.google.protobuf.MapField.newMapField(
+                      MetadataDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000008;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                metadata__ = input.readMessage(
+                    MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                metadata_.getMutableMap().put(
+                    metadata__.getKey(), metadata__.getValue());
+                break;
+              }
               default: {
                 if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -515,6 +582,18 @@ public final class RedvoxApi1000 {
         return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_UserInformation_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      @java.lang.Override
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -523,6 +602,7 @@ public final class RedvoxApi1000 {
                 io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.UserInformation.class, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.UserInformation.Builder.class);
       }
 
+      private int bitField0_;
       public static final int AUTH_EMAIL_FIELD_NUMBER = 1;
       private volatile java.lang.Object authEmail_;
       /**
@@ -649,6 +729,98 @@ public final class RedvoxApi1000 {
         }
       }
 
+      public static final int METADATA_FIELD_NUMBER = 4;
+      private static final class MetadataDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.String, java.lang.String> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.String, java.lang.String>newDefaultInstance(
+                    io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_UserInformation_MetadataEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "",
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "");
+      }
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> metadata_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMetadata() {
+        if (metadata_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        return metadata_;
+      }
+
+      public int getMetadataCount() {
+        return internalGetMetadata().getMap().size();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      public boolean containsMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetMetadata().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+        return getMetadataMap();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+        return internalGetMetadata().getMap();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      public java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      public java.lang.String getMetadataOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -672,6 +844,12 @@ public final class RedvoxApi1000 {
         if (!getFirebaseTokenBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, firebaseToken_);
         }
+        com.google.protobuf.GeneratedMessageV3
+          .serializeStringMapTo(
+            output,
+            internalGetMetadata(),
+            MetadataDefaultEntryHolder.defaultEntry,
+            4);
         unknownFields.writeTo(output);
       }
 
@@ -689,6 +867,16 @@ public final class RedvoxApi1000 {
         }
         if (!getFirebaseTokenBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, firebaseToken_);
+        }
+        for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+             : internalGetMetadata().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+          metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(4, metadata__);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -712,6 +900,8 @@ public final class RedvoxApi1000 {
             .equals(other.getAuthToken());
         result = result && getFirebaseToken()
             .equals(other.getFirebaseToken());
+        result = result && internalGetMetadata().equals(
+            other.internalGetMetadata());
         result = result && unknownFields.equals(other.unknownFields);
         return result;
       }
@@ -729,6 +919,10 @@ public final class RedvoxApi1000 {
         hash = (53 * hash) + getAuthToken().hashCode();
         hash = (37 * hash) + FIREBASE_TOKEN_FIELD_NUMBER;
         hash = (53 * hash) + getFirebaseToken().hashCode();
+        if (!internalGetMetadata().getMap().isEmpty()) {
+          hash = (37 * hash) + METADATA_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetMetadata().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -836,6 +1030,28 @@ public final class RedvoxApi1000 {
           return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_UserInformation_descriptor;
         }
 
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 4:
+              return internalGetMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMutableMapField(
+            int number) {
+          switch (number) {
+            case 4:
+              return internalGetMutableMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
@@ -868,6 +1084,7 @@ public final class RedvoxApi1000 {
 
           firebaseToken_ = "";
 
+          internalGetMutableMetadata().clear();
           return this;
         }
 
@@ -894,9 +1111,14 @@ public final class RedvoxApi1000 {
         @java.lang.Override
         public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.UserInformation buildPartial() {
           io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.UserInformation result = new io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.UserInformation(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
           result.authEmail_ = authEmail_;
           result.authToken_ = authToken_;
           result.firebaseToken_ = firebaseToken_;
+          result.metadata_ = internalGetMetadata();
+          result.metadata_.makeImmutable();
+          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
@@ -957,6 +1179,8 @@ public final class RedvoxApi1000 {
             firebaseToken_ = other.firebaseToken_;
             onChanged();
           }
+          internalGetMutableMetadata().mergeFrom(
+              other.internalGetMetadata());
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -985,6 +1209,7 @@ public final class RedvoxApi1000 {
           }
           return this;
         }
+        private int bitField0_;
 
         private java.lang.Object authEmail_ = "";
         /**
@@ -1250,6 +1475,157 @@ public final class RedvoxApi1000 {
           
           firebaseToken_ = value;
           onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.MapField<
+            java.lang.String, java.lang.String> metadata_;
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMetadata() {
+          if (metadata_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          return metadata_;
+        }
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableMetadata() {
+          onChanged();;
+          if (metadata_ == null) {
+            metadata_ = com.google.protobuf.MapField.newMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          if (!metadata_.isMutable()) {
+            metadata_ = metadata_.copy();
+          }
+          return metadata_;
+        }
+
+        public int getMetadataCount() {
+          return internalGetMetadata().getMap().size();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        public boolean containsMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          return internalGetMetadata().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getMetadataMap()} instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+          return getMetadataMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+          return internalGetMetadata().getMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        public java.lang.String getMetadataOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        public java.lang.String getMetadataOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
+        public Builder clearMetadata() {
+          internalGetMutableMetadata().getMutableMap()
+              .clear();
+          return this;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        public Builder removeMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableMetadata().getMutableMap()
+              .remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String>
+        getMutableMetadata() {
+          return internalGetMutableMetadata().getMutableMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+        public Builder putMetadata(
+            java.lang.String key,
+            java.lang.String value) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (value == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableMetadata().getMutableMap()
+              .put(key, value);
+          return this;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        public Builder putAllMetadata(
+            java.util.Map<java.lang.String, java.lang.String> values) {
+          internalGetMutableMetadata().getMutableMap()
+              .putAll(values);
           return this;
         }
         @java.lang.Override
@@ -1625,6 +2001,60 @@ public final class RedvoxApi1000 {
        * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics cpu_utilization = 15;</code>
        */
       io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder getCpuUtilizationOrBuilder();
+
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 16;</code>
+       */
+      int getMetadataCount();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 16;</code>
+       */
+      boolean containsMetadata(
+          java.lang.String key);
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.String, java.lang.String>
+      getMetadata();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 16;</code>
+       */
+      java.util.Map<java.lang.String, java.lang.String>
+      getMetadataMap();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 16;</code>
+       */
+
+      java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue);
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 16;</code>
+       */
+
+      java.lang.String getMetadataOrThrow(
+          java.lang.String key);
     }
     /**
      * Protobuf type {@code redvox_api1000.RedvoxPacket1000.DeviceInformation}
@@ -1812,6 +2242,19 @@ public final class RedvoxApi1000 {
 
                 break;
               }
+              case 130: {
+                if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+                  metadata_ = com.google.protobuf.MapField.newMapField(
+                      MetadataDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00008000;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                metadata__ = input.readMessage(
+                    MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                metadata_.getMutableMap().put(
+                    metadata__.getKey(), metadata__.getValue());
+                break;
+              }
               default: {
                 if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -1836,6 +2279,18 @@ public final class RedvoxApi1000 {
         return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      @java.lang.Override
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 16:
+            return internalGetMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -2210,6 +2665,60 @@ public final class RedvoxApi1000 {
          * <code>double use_longitude = 20;</code>
          */
         double getUseLongitude();
+
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 21;</code>
+         */
+        int getMetadataCount();
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 21;</code>
+         */
+        boolean containsMetadata(
+            java.lang.String key);
+        /**
+         * Use {@link #getMetadataMap()} instead.
+         */
+        @java.lang.Deprecated
+        java.util.Map<java.lang.String, java.lang.String>
+        getMetadata();
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 21;</code>
+         */
+        java.util.Map<java.lang.String, java.lang.String>
+        getMetadataMap();
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 21;</code>
+         */
+
+        java.lang.String getMetadataOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue);
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 21;</code>
+         */
+
+        java.lang.String getMetadataOrThrow(
+            java.lang.String key);
       }
       /**
        * Protobuf type {@code redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings}
@@ -2393,6 +2902,19 @@ public final class RedvoxApi1000 {
                   useLongitude_ = input.readDouble();
                   break;
                 }
+                case 170: {
+                  if (!((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+                    metadata_ = com.google.protobuf.MapField.newMapField(
+                        MetadataDefaultEntryHolder.defaultEntry);
+                    mutable_bitField0_ |= 0x00100000;
+                  }
+                  com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                  metadata__ = input.readMessage(
+                      MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                  metadata_.getMutableMap().put(
+                      metadata__.getKey(), metadata__.getValue());
+                  break;
+                }
                 default: {
                   if (!parseUnknownFieldProto3(
                       input, unknownFields, extensionRegistry, tag)) {
@@ -2420,6 +2942,18 @@ public final class RedvoxApi1000 {
           return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_descriptor;
         }
 
+        @SuppressWarnings({"rawtypes"})
+        @java.lang.Override
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 21:
+              return internalGetMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
@@ -3103,6 +3637,98 @@ public final class RedvoxApi1000 {
           return useLongitude_;
         }
 
+        public static final int METADATA_FIELD_NUMBER = 21;
+        private static final class MetadataDefaultEntryHolder {
+          static final com.google.protobuf.MapEntry<
+              java.lang.String, java.lang.String> defaultEntry =
+                  com.google.protobuf.MapEntry
+                  .<java.lang.String, java.lang.String>newDefaultInstance(
+                      io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_MetadataEntry_descriptor, 
+                      com.google.protobuf.WireFormat.FieldType.STRING,
+                      "",
+                      com.google.protobuf.WireFormat.FieldType.STRING,
+                      "");
+        }
+        private com.google.protobuf.MapField<
+            java.lang.String, java.lang.String> metadata_;
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMetadata() {
+          if (metadata_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          return metadata_;
+        }
+
+        public int getMetadataCount() {
+          return internalGetMetadata().getMap().size();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 21;</code>
+         */
+
+        public boolean containsMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          return internalGetMetadata().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getMetadataMap()} instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+          return getMetadataMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 21;</code>
+         */
+
+        public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+          return internalGetMetadata().getMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 21;</code>
+         */
+
+        public java.lang.String getMetadataOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 21;</code>
+         */
+
+        public java.lang.String getMetadataOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -3182,6 +3808,12 @@ public final class RedvoxApi1000 {
           if (useLongitude_ != 0D) {
             output.writeDouble(20, useLongitude_);
           }
+          com.google.protobuf.GeneratedMessageV3
+            .serializeStringMapTo(
+              output,
+              internalGetMetadata(),
+              MetadataDefaultEntryHolder.defaultEntry,
+              21);
           unknownFields.writeTo(output);
         }
 
@@ -3276,6 +3908,16 @@ public final class RedvoxApi1000 {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(20, useLongitude_);
           }
+          for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+               : internalGetMetadata().getMap().entrySet()) {
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+            metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+                .setKey(entry.getKey())
+                .setValue(entry.getValue())
+                .build();
+            size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(21, metadata__);
+          }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
           return size;
@@ -3335,6 +3977,8 @@ public final class RedvoxApi1000 {
               java.lang.Double.doubleToLongBits(getUseLongitude())
               == java.lang.Double.doubleToLongBits(
                   other.getUseLongitude()));
+          result = result && internalGetMetadata().equals(
+              other.internalGetMetadata());
           result = result && unknownFields.equals(other.unknownFields);
           return result;
         }
@@ -3402,6 +4046,10 @@ public final class RedvoxApi1000 {
           hash = (37 * hash) + USE_LONGITUDE_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
               java.lang.Double.doubleToLongBits(getUseLongitude()));
+          if (!internalGetMetadata().getMap().isEmpty()) {
+            hash = (37 * hash) + METADATA_FIELD_NUMBER;
+            hash = (53 * hash) + internalGetMetadata().hashCode();
+          }
           hash = (29 * hash) + unknownFields.hashCode();
           memoizedHashCode = hash;
           return hash;
@@ -3509,6 +4157,28 @@ public final class RedvoxApi1000 {
             return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_descriptor;
           }
 
+          @SuppressWarnings({"rawtypes"})
+          protected com.google.protobuf.MapField internalGetMapField(
+              int number) {
+            switch (number) {
+              case 21:
+                return internalGetMetadata();
+              default:
+                throw new RuntimeException(
+                    "Invalid map field number: " + number);
+            }
+          }
+          @SuppressWarnings({"rawtypes"})
+          protected com.google.protobuf.MapField internalGetMutableMapField(
+              int number) {
+            switch (number) {
+              case 21:
+                return internalGetMutableMetadata();
+              default:
+                throw new RuntimeException(
+                    "Invalid map field number: " + number);
+            }
+          }
           @java.lang.Override
           protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
               internalGetFieldAccessorTable() {
@@ -3575,6 +4245,7 @@ public final class RedvoxApi1000 {
 
             useLongitude_ = 0D;
 
+            internalGetMutableMetadata().clear();
             return this;
           }
 
@@ -3627,6 +4298,8 @@ public final class RedvoxApi1000 {
             result.useLocationServices_ = useLocationServices_;
             result.useLatitude_ = useLatitude_;
             result.useLongitude_ = useLongitude_;
+            result.metadata_ = internalGetMetadata();
+            result.metadata_.makeImmutable();
             result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
@@ -3746,6 +4419,8 @@ public final class RedvoxApi1000 {
             if (other.getUseLongitude() != 0D) {
               setUseLongitude(other.getUseLongitude());
             }
+            internalGetMutableMetadata().mergeFrom(
+                other.internalGetMetadata());
             this.mergeUnknownFields(other.unknownFields);
             onChanged();
             return this;
@@ -4554,6 +5229,157 @@ public final class RedvoxApi1000 {
             onChanged();
             return this;
           }
+
+          private com.google.protobuf.MapField<
+              java.lang.String, java.lang.String> metadata_;
+          private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+          internalGetMetadata() {
+            if (metadata_ == null) {
+              return com.google.protobuf.MapField.emptyMapField(
+                  MetadataDefaultEntryHolder.defaultEntry);
+            }
+            return metadata_;
+          }
+          private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+          internalGetMutableMetadata() {
+            onChanged();;
+            if (metadata_ == null) {
+              metadata_ = com.google.protobuf.MapField.newMapField(
+                  MetadataDefaultEntryHolder.defaultEntry);
+            }
+            if (!metadata_.isMutable()) {
+              metadata_ = metadata_.copy();
+            }
+            return metadata_;
+          }
+
+          public int getMetadataCount() {
+            return internalGetMetadata().getMap().size();
+          }
+          /**
+           * <pre>
+           * A map from string to string for including untyped metadata
+           * </pre>
+           *
+           * <code>map&lt;string, string&gt; metadata = 21;</code>
+           */
+
+          public boolean containsMetadata(
+              java.lang.String key) {
+            if (key == null) { throw new java.lang.NullPointerException(); }
+            return internalGetMetadata().getMap().containsKey(key);
+          }
+          /**
+           * Use {@link #getMetadataMap()} instead.
+           */
+          @java.lang.Deprecated
+          public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+            return getMetadataMap();
+          }
+          /**
+           * <pre>
+           * A map from string to string for including untyped metadata
+           * </pre>
+           *
+           * <code>map&lt;string, string&gt; metadata = 21;</code>
+           */
+
+          public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+            return internalGetMetadata().getMap();
+          }
+          /**
+           * <pre>
+           * A map from string to string for including untyped metadata
+           * </pre>
+           *
+           * <code>map&lt;string, string&gt; metadata = 21;</code>
+           */
+
+          public java.lang.String getMetadataOrDefault(
+              java.lang.String key,
+              java.lang.String defaultValue) {
+            if (key == null) { throw new java.lang.NullPointerException(); }
+            java.util.Map<java.lang.String, java.lang.String> map =
+                internalGetMetadata().getMap();
+            return map.containsKey(key) ? map.get(key) : defaultValue;
+          }
+          /**
+           * <pre>
+           * A map from string to string for including untyped metadata
+           * </pre>
+           *
+           * <code>map&lt;string, string&gt; metadata = 21;</code>
+           */
+
+          public java.lang.String getMetadataOrThrow(
+              java.lang.String key) {
+            if (key == null) { throw new java.lang.NullPointerException(); }
+            java.util.Map<java.lang.String, java.lang.String> map =
+                internalGetMetadata().getMap();
+            if (!map.containsKey(key)) {
+              throw new java.lang.IllegalArgumentException();
+            }
+            return map.get(key);
+          }
+
+          public Builder clearMetadata() {
+            internalGetMutableMetadata().getMutableMap()
+                .clear();
+            return this;
+          }
+          /**
+           * <pre>
+           * A map from string to string for including untyped metadata
+           * </pre>
+           *
+           * <code>map&lt;string, string&gt; metadata = 21;</code>
+           */
+
+          public Builder removeMetadata(
+              java.lang.String key) {
+            if (key == null) { throw new java.lang.NullPointerException(); }
+            internalGetMutableMetadata().getMutableMap()
+                .remove(key);
+            return this;
+          }
+          /**
+           * Use alternate mutation accessors instead.
+           */
+          @java.lang.Deprecated
+          public java.util.Map<java.lang.String, java.lang.String>
+          getMutableMetadata() {
+            return internalGetMutableMetadata().getMutableMap();
+          }
+          /**
+           * <pre>
+           * A map from string to string for including untyped metadata
+           * </pre>
+           *
+           * <code>map&lt;string, string&gt; metadata = 21;</code>
+           */
+          public Builder putMetadata(
+              java.lang.String key,
+              java.lang.String value) {
+            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (value == null) { throw new java.lang.NullPointerException(); }
+            internalGetMutableMetadata().getMutableMap()
+                .put(key, value);
+            return this;
+          }
+          /**
+           * <pre>
+           * A map from string to string for including untyped metadata
+           * </pre>
+           *
+           * <code>map&lt;string, string&gt; metadata = 21;</code>
+           */
+
+          public Builder putAllMetadata(
+              java.util.Map<java.lang.String, java.lang.String> values) {
+            internalGetMutableMetadata().getMutableMap()
+                .putAll(values);
+            return this;
+          }
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4607,6 +5433,7 @@ public final class RedvoxApi1000 {
 
       }
 
+      private int bitField0_;
       public static final int DEVICE_ID_FIELD_NUMBER = 1;
       private volatile java.lang.Object deviceId_;
       /**
@@ -5140,6 +5967,98 @@ public final class RedvoxApi1000 {
         return getCpuUtilization();
       }
 
+      public static final int METADATA_FIELD_NUMBER = 16;
+      private static final class MetadataDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.String, java.lang.String> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.String, java.lang.String>newDefaultInstance(
+                    io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_MetadataEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "",
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "");
+      }
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> metadata_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMetadata() {
+        if (metadata_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        return metadata_;
+      }
+
+      public int getMetadataCount() {
+        return internalGetMetadata().getMap().size();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 16;</code>
+       */
+
+      public boolean containsMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetMetadata().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+        return getMetadataMap();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 16;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+        return internalGetMetadata().getMap();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 16;</code>
+       */
+
+      public java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 16;</code>
+       */
+
+      public java.lang.String getMetadataOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -5199,6 +6118,12 @@ public final class RedvoxApi1000 {
         if (cpuUtilization_ != null) {
           output.writeMessage(15, getCpuUtilization());
         }
+        com.google.protobuf.GeneratedMessageV3
+          .serializeStringMapTo(
+            output,
+            internalGetMetadata(),
+            MetadataDefaultEntryHolder.defaultEntry,
+            16);
         unknownFields.writeTo(output);
       }
 
@@ -5261,6 +6186,16 @@ public final class RedvoxApi1000 {
         if (cpuUtilization_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(15, getCpuUtilization());
+        }
+        for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+             : internalGetMetadata().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+          metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(16, metadata__);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -5327,6 +6262,8 @@ public final class RedvoxApi1000 {
           result = result && getCpuUtilization()
               .equals(other.getCpuUtilization());
         }
+        result = result && internalGetMetadata().equals(
+            other.internalGetMetadata());
         result = result && unknownFields.equals(other.unknownFields);
         return result;
       }
@@ -5381,6 +6318,10 @@ public final class RedvoxApi1000 {
         if (hasCpuUtilization()) {
           hash = (37 * hash) + CPU_UTILIZATION_FIELD_NUMBER;
           hash = (53 * hash) + getCpuUtilization().hashCode();
+        }
+        if (!internalGetMetadata().getMap().isEmpty()) {
+          hash = (37 * hash) + METADATA_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetMetadata().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -5489,6 +6430,28 @@ public final class RedvoxApi1000 {
           return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_descriptor;
         }
 
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 16:
+              return internalGetMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMutableMapField(
+            int number) {
+          switch (number) {
+            case 16:
+              return internalGetMutableMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
@@ -5573,6 +6536,7 @@ public final class RedvoxApi1000 {
             cpuUtilization_ = null;
             cpuUtilizationBuilder_ = null;
           }
+          internalGetMutableMetadata().clear();
           return this;
         }
 
@@ -5599,6 +6563,8 @@ public final class RedvoxApi1000 {
         @java.lang.Override
         public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.DeviceInformation buildPartial() {
           io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.DeviceInformation result = new io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.DeviceInformation(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
           result.deviceId_ = deviceId_;
           result.deviceUuid_ = deviceUuid_;
           result.deviceMake_ = deviceMake_;
@@ -5642,6 +6608,9 @@ public final class RedvoxApi1000 {
           } else {
             result.cpuUtilization_ = cpuUtilizationBuilder_.build();
           }
+          result.metadata_ = internalGetMetadata();
+          result.metadata_.makeImmutable();
+          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
@@ -5741,6 +6710,8 @@ public final class RedvoxApi1000 {
           if (other.hasCpuUtilization()) {
             mergeCpuUtilization(other.getCpuUtilization());
           }
+          internalGetMutableMetadata().mergeFrom(
+              other.internalGetMetadata());
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -5769,6 +6740,7 @@ public final class RedvoxApi1000 {
           }
           return this;
         }
+        private int bitField0_;
 
         private java.lang.Object deviceId_ = "";
         /**
@@ -7504,6 +8476,157 @@ public final class RedvoxApi1000 {
           }
           return cpuUtilizationBuilder_;
         }
+
+        private com.google.protobuf.MapField<
+            java.lang.String, java.lang.String> metadata_;
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMetadata() {
+          if (metadata_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          return metadata_;
+        }
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableMetadata() {
+          onChanged();;
+          if (metadata_ == null) {
+            metadata_ = com.google.protobuf.MapField.newMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          if (!metadata_.isMutable()) {
+            metadata_ = metadata_.copy();
+          }
+          return metadata_;
+        }
+
+        public int getMetadataCount() {
+          return internalGetMetadata().getMap().size();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 16;</code>
+         */
+
+        public boolean containsMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          return internalGetMetadata().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getMetadataMap()} instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+          return getMetadataMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 16;</code>
+         */
+
+        public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+          return internalGetMetadata().getMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 16;</code>
+         */
+
+        public java.lang.String getMetadataOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 16;</code>
+         */
+
+        public java.lang.String getMetadataOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
+        public Builder clearMetadata() {
+          internalGetMutableMetadata().getMutableMap()
+              .clear();
+          return this;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 16;</code>
+         */
+
+        public Builder removeMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableMetadata().getMutableMap()
+              .remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String>
+        getMutableMetadata() {
+          return internalGetMutableMetadata().getMutableMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 16;</code>
+         */
+        public Builder putMetadata(
+            java.lang.String key,
+            java.lang.String value) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (value == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableMetadata().getMutableMap()
+              .put(key, value);
+          return this;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 16;</code>
+         */
+
+        public Builder putAllMetadata(
+            java.util.Map<java.lang.String, java.lang.String> values) {
+          internalGetMutableMetadata().getMutableMap()
+              .putAll(values);
+          return this;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7578,6 +8701,60 @@ public final class RedvoxApi1000 {
        * <code>bool is_private = 2;</code>
        */
       boolean getIsPrivate();
+
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+      int getMetadataCount();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+      boolean containsMetadata(
+          java.lang.String key);
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.String, java.lang.String>
+      getMetadata();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+      java.util.Map<java.lang.String, java.lang.String>
+      getMetadataMap();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+
+      java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue);
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+
+      java.lang.String getMetadataOrThrow(
+          java.lang.String key);
     }
     /**
      * Protobuf type {@code redvox_api1000.RedvoxPacket1000.PacketInformation}
@@ -7630,6 +8807,19 @@ public final class RedvoxApi1000 {
                 isPrivate_ = input.readBool();
                 break;
               }
+              case 26: {
+                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                  metadata_ = com.google.protobuf.MapField.newMapField(
+                      MetadataDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                metadata__ = input.readMessage(
+                    MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                metadata_.getMutableMap().put(
+                    metadata__.getKey(), metadata__.getValue());
+                break;
+              }
               default: {
                 if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -7654,6 +8844,18 @@ public final class RedvoxApi1000 {
         return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_PacketInformation_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      @java.lang.Override
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -7662,6 +8864,7 @@ public final class RedvoxApi1000 {
                 io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PacketInformation.class, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PacketInformation.Builder.class);
       }
 
+      private int bitField0_;
       public static final int IS_BACKFILLED_FIELD_NUMBER = 1;
       private boolean isBackfilled_;
       /**
@@ -7688,6 +8891,98 @@ public final class RedvoxApi1000 {
         return isPrivate_;
       }
 
+      public static final int METADATA_FIELD_NUMBER = 3;
+      private static final class MetadataDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.String, java.lang.String> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.String, java.lang.String>newDefaultInstance(
+                    io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_PacketInformation_MetadataEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "",
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "");
+      }
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> metadata_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMetadata() {
+        if (metadata_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        return metadata_;
+      }
+
+      public int getMetadataCount() {
+        return internalGetMetadata().getMap().size();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+
+      public boolean containsMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetMetadata().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+        return getMetadataMap();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+        return internalGetMetadata().getMap();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+
+      public java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       */
+
+      public java.lang.String getMetadataOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -7708,6 +9003,12 @@ public final class RedvoxApi1000 {
         if (isPrivate_ != false) {
           output.writeBool(2, isPrivate_);
         }
+        com.google.protobuf.GeneratedMessageV3
+          .serializeStringMapTo(
+            output,
+            internalGetMetadata(),
+            MetadataDefaultEntryHolder.defaultEntry,
+            3);
         unknownFields.writeTo(output);
       }
 
@@ -7724,6 +9025,16 @@ public final class RedvoxApi1000 {
         if (isPrivate_ != false) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(2, isPrivate_);
+        }
+        for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+             : internalGetMetadata().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+          metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(3, metadata__);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -7745,6 +9056,8 @@ public final class RedvoxApi1000 {
             == other.getIsBackfilled());
         result = result && (getIsPrivate()
             == other.getIsPrivate());
+        result = result && internalGetMetadata().equals(
+            other.internalGetMetadata());
         result = result && unknownFields.equals(other.unknownFields);
         return result;
       }
@@ -7762,6 +9075,10 @@ public final class RedvoxApi1000 {
         hash = (37 * hash) + IS_PRIVATE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIsPrivate());
+        if (!internalGetMetadata().getMap().isEmpty()) {
+          hash = (37 * hash) + METADATA_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetMetadata().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -7869,6 +9186,28 @@ public final class RedvoxApi1000 {
           return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_PacketInformation_descriptor;
         }
 
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 3:
+              return internalGetMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMutableMapField(
+            int number) {
+          switch (number) {
+            case 3:
+              return internalGetMutableMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
@@ -7899,6 +9238,7 @@ public final class RedvoxApi1000 {
 
           isPrivate_ = false;
 
+          internalGetMutableMetadata().clear();
           return this;
         }
 
@@ -7925,8 +9265,13 @@ public final class RedvoxApi1000 {
         @java.lang.Override
         public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PacketInformation buildPartial() {
           io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PacketInformation result = new io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PacketInformation(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
           result.isBackfilled_ = isBackfilled_;
           result.isPrivate_ = isPrivate_;
+          result.metadata_ = internalGetMetadata();
+          result.metadata_.makeImmutable();
+          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
@@ -7981,6 +9326,8 @@ public final class RedvoxApi1000 {
           if (other.getIsPrivate() != false) {
             setIsPrivate(other.getIsPrivate());
           }
+          internalGetMutableMetadata().mergeFrom(
+              other.internalGetMetadata());
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -8009,6 +9356,7 @@ public final class RedvoxApi1000 {
           }
           return this;
         }
+        private int bitField0_;
 
         private boolean isBackfilled_ ;
         /**
@@ -8083,6 +9431,157 @@ public final class RedvoxApi1000 {
           
           isPrivate_ = false;
           onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.MapField<
+            java.lang.String, java.lang.String> metadata_;
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMetadata() {
+          if (metadata_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          return metadata_;
+        }
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableMetadata() {
+          onChanged();;
+          if (metadata_ == null) {
+            metadata_ = com.google.protobuf.MapField.newMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          if (!metadata_.isMutable()) {
+            metadata_ = metadata_.copy();
+          }
+          return metadata_;
+        }
+
+        public int getMetadataCount() {
+          return internalGetMetadata().getMap().size();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 3;</code>
+         */
+
+        public boolean containsMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          return internalGetMetadata().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getMetadataMap()} instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+          return getMetadataMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 3;</code>
+         */
+
+        public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+          return internalGetMetadata().getMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 3;</code>
+         */
+
+        public java.lang.String getMetadataOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 3;</code>
+         */
+
+        public java.lang.String getMetadataOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
+        public Builder clearMetadata() {
+          internalGetMutableMetadata().getMutableMap()
+              .clear();
+          return this;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 3;</code>
+         */
+
+        public Builder removeMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableMetadata().getMutableMap()
+              .remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String>
+        getMutableMetadata() {
+          return internalGetMutableMetadata().getMutableMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 3;</code>
+         */
+        public Builder putMetadata(
+            java.lang.String key,
+            java.lang.String value) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (value == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableMetadata().getMutableMap()
+              .put(key, value);
+          return this;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 3;</code>
+         */
+
+        public Builder putAllMetadata(
+            java.util.Map<java.lang.String, java.lang.String> values) {
+          internalGetMutableMetadata().getMutableMap()
+              .putAll(values);
           return this;
         }
         @java.lang.Override
@@ -8257,6 +9756,60 @@ public final class RedvoxApi1000 {
        * <code>double best_offset_us = 9;</code>
        */
       double getBestOffsetUs();
+
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+      int getMetadataCount();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+      boolean containsMetadata(
+          java.lang.String key);
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.String, java.lang.String>
+      getMetadata();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+      java.util.Map<java.lang.String, java.lang.String>
+      getMetadataMap();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+
+      java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue);
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+
+      java.lang.String getMetadataOrThrow(
+          java.lang.String key);
     }
     /**
      * Protobuf type {@code redvox_api1000.RedvoxPacket1000.TimingInformation}
@@ -8355,6 +9908,19 @@ public final class RedvoxApi1000 {
                 bestOffsetUs_ = input.readDouble();
                 break;
               }
+              case 82: {
+                if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+                  metadata_ = com.google.protobuf.MapField.newMapField(
+                      MetadataDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000200;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                metadata__ = input.readMessage(
+                    MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                metadata_.getMutableMap().put(
+                    metadata__.getKey(), metadata__.getValue());
+                break;
+              }
               default: {
                 if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -8382,6 +9948,18 @@ public final class RedvoxApi1000 {
         return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      @java.lang.Override
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 10:
+            return internalGetMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -8423,6 +10001,60 @@ public final class RedvoxApi1000 {
          * <code>double b3 = 6;</code>
          */
         double getB3();
+
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         */
+        int getMetadataCount();
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         */
+        boolean containsMetadata(
+            java.lang.String key);
+        /**
+         * Use {@link #getMetadataMap()} instead.
+         */
+        @java.lang.Deprecated
+        java.util.Map<java.lang.String, java.lang.String>
+        getMetadata();
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         */
+        java.util.Map<java.lang.String, java.lang.String>
+        getMetadataMap();
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         */
+
+        java.lang.String getMetadataOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue);
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         */
+
+        java.lang.String getMetadataOrThrow(
+            java.lang.String key);
       }
       /**
        * Protobuf type {@code redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange}
@@ -8499,6 +10131,19 @@ public final class RedvoxApi1000 {
                   b3_ = input.readDouble();
                   break;
                 }
+                case 58: {
+                  if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                    metadata_ = com.google.protobuf.MapField.newMapField(
+                        MetadataDefaultEntryHolder.defaultEntry);
+                    mutable_bitField0_ |= 0x00000040;
+                  }
+                  com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                  metadata__ = input.readMessage(
+                      MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                  metadata_.getMutableMap().put(
+                      metadata__.getKey(), metadata__.getValue());
+                  break;
+                }
                 default: {
                   if (!parseUnknownFieldProto3(
                       input, unknownFields, extensionRegistry, tag)) {
@@ -8523,6 +10168,18 @@ public final class RedvoxApi1000 {
           return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_descriptor;
         }
 
+        @SuppressWarnings({"rawtypes"})
+        @java.lang.Override
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 7:
+              return internalGetMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
@@ -8531,6 +10188,7 @@ public final class RedvoxApi1000 {
                   io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimingInformation.SynchExchange.class, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimingInformation.SynchExchange.Builder.class);
         }
 
+        private int bitField0_;
         public static final int A1_FIELD_NUMBER = 1;
         private double a1_;
         /**
@@ -8585,6 +10243,98 @@ public final class RedvoxApi1000 {
           return b3_;
         }
 
+        public static final int METADATA_FIELD_NUMBER = 7;
+        private static final class MetadataDefaultEntryHolder {
+          static final com.google.protobuf.MapEntry<
+              java.lang.String, java.lang.String> defaultEntry =
+                  com.google.protobuf.MapEntry
+                  .<java.lang.String, java.lang.String>newDefaultInstance(
+                      io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_MetadataEntry_descriptor, 
+                      com.google.protobuf.WireFormat.FieldType.STRING,
+                      "",
+                      com.google.protobuf.WireFormat.FieldType.STRING,
+                      "");
+        }
+        private com.google.protobuf.MapField<
+            java.lang.String, java.lang.String> metadata_;
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMetadata() {
+          if (metadata_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          return metadata_;
+        }
+
+        public int getMetadataCount() {
+          return internalGetMetadata().getMap().size();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         */
+
+        public boolean containsMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          return internalGetMetadata().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getMetadataMap()} instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+          return getMetadataMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         */
+
+        public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+          return internalGetMetadata().getMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         */
+
+        public java.lang.String getMetadataOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         */
+
+        public java.lang.String getMetadataOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -8617,6 +10367,12 @@ public final class RedvoxApi1000 {
           if (b3_ != 0D) {
             output.writeDouble(6, b3_);
           }
+          com.google.protobuf.GeneratedMessageV3
+            .serializeStringMapTo(
+              output,
+              internalGetMetadata(),
+              MetadataDefaultEntryHolder.defaultEntry,
+              7);
           unknownFields.writeTo(output);
         }
 
@@ -8649,6 +10405,16 @@ public final class RedvoxApi1000 {
           if (b3_ != 0D) {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(6, b3_);
+          }
+          for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+               : internalGetMetadata().getMap().entrySet()) {
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+            metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+                .setKey(entry.getKey())
+                .setValue(entry.getValue())
+                .build();
+            size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(7, metadata__);
           }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
@@ -8690,6 +10456,8 @@ public final class RedvoxApi1000 {
               java.lang.Double.doubleToLongBits(getB3())
               == java.lang.Double.doubleToLongBits(
                   other.getB3()));
+          result = result && internalGetMetadata().equals(
+              other.internalGetMetadata());
           result = result && unknownFields.equals(other.unknownFields);
           return result;
         }
@@ -8719,6 +10487,10 @@ public final class RedvoxApi1000 {
           hash = (37 * hash) + B3_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
               java.lang.Double.doubleToLongBits(getB3()));
+          if (!internalGetMetadata().getMap().isEmpty()) {
+            hash = (37 * hash) + METADATA_FIELD_NUMBER;
+            hash = (53 * hash) + internalGetMetadata().hashCode();
+          }
           hash = (29 * hash) + unknownFields.hashCode();
           memoizedHashCode = hash;
           return hash;
@@ -8826,6 +10598,28 @@ public final class RedvoxApi1000 {
             return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_descriptor;
           }
 
+          @SuppressWarnings({"rawtypes"})
+          protected com.google.protobuf.MapField internalGetMapField(
+              int number) {
+            switch (number) {
+              case 7:
+                return internalGetMetadata();
+              default:
+                throw new RuntimeException(
+                    "Invalid map field number: " + number);
+            }
+          }
+          @SuppressWarnings({"rawtypes"})
+          protected com.google.protobuf.MapField internalGetMutableMapField(
+              int number) {
+            switch (number) {
+              case 7:
+                return internalGetMutableMetadata();
+              default:
+                throw new RuntimeException(
+                    "Invalid map field number: " + number);
+            }
+          }
           @java.lang.Override
           protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
               internalGetFieldAccessorTable() {
@@ -8864,6 +10658,7 @@ public final class RedvoxApi1000 {
 
             b3_ = 0D;
 
+            internalGetMutableMetadata().clear();
             return this;
           }
 
@@ -8890,12 +10685,17 @@ public final class RedvoxApi1000 {
           @java.lang.Override
           public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimingInformation.SynchExchange buildPartial() {
             io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimingInformation.SynchExchange result = new io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimingInformation.SynchExchange(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
             result.a1_ = a1_;
             result.a2_ = a2_;
             result.a3_ = a3_;
             result.b1_ = b1_;
             result.b2_ = b2_;
             result.b3_ = b3_;
+            result.metadata_ = internalGetMetadata();
+            result.metadata_.makeImmutable();
+            result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
           }
@@ -8962,6 +10762,8 @@ public final class RedvoxApi1000 {
             if (other.getB3() != 0D) {
               setB3(other.getB3());
             }
+            internalGetMutableMetadata().mergeFrom(
+                other.internalGetMetadata());
             this.mergeUnknownFields(other.unknownFields);
             onChanged();
             return this;
@@ -8990,6 +10792,7 @@ public final class RedvoxApi1000 {
             }
             return this;
           }
+          private int bitField0_;
 
           private double a1_ ;
           /**
@@ -9144,6 +10947,157 @@ public final class RedvoxApi1000 {
             
             b3_ = 0D;
             onChanged();
+            return this;
+          }
+
+          private com.google.protobuf.MapField<
+              java.lang.String, java.lang.String> metadata_;
+          private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+          internalGetMetadata() {
+            if (metadata_ == null) {
+              return com.google.protobuf.MapField.emptyMapField(
+                  MetadataDefaultEntryHolder.defaultEntry);
+            }
+            return metadata_;
+          }
+          private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+          internalGetMutableMetadata() {
+            onChanged();;
+            if (metadata_ == null) {
+              metadata_ = com.google.protobuf.MapField.newMapField(
+                  MetadataDefaultEntryHolder.defaultEntry);
+            }
+            if (!metadata_.isMutable()) {
+              metadata_ = metadata_.copy();
+            }
+            return metadata_;
+          }
+
+          public int getMetadataCount() {
+            return internalGetMetadata().getMap().size();
+          }
+          /**
+           * <pre>
+           * A map from string to string for including untyped metadata
+           * </pre>
+           *
+           * <code>map&lt;string, string&gt; metadata = 7;</code>
+           */
+
+          public boolean containsMetadata(
+              java.lang.String key) {
+            if (key == null) { throw new java.lang.NullPointerException(); }
+            return internalGetMetadata().getMap().containsKey(key);
+          }
+          /**
+           * Use {@link #getMetadataMap()} instead.
+           */
+          @java.lang.Deprecated
+          public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+            return getMetadataMap();
+          }
+          /**
+           * <pre>
+           * A map from string to string for including untyped metadata
+           * </pre>
+           *
+           * <code>map&lt;string, string&gt; metadata = 7;</code>
+           */
+
+          public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+            return internalGetMetadata().getMap();
+          }
+          /**
+           * <pre>
+           * A map from string to string for including untyped metadata
+           * </pre>
+           *
+           * <code>map&lt;string, string&gt; metadata = 7;</code>
+           */
+
+          public java.lang.String getMetadataOrDefault(
+              java.lang.String key,
+              java.lang.String defaultValue) {
+            if (key == null) { throw new java.lang.NullPointerException(); }
+            java.util.Map<java.lang.String, java.lang.String> map =
+                internalGetMetadata().getMap();
+            return map.containsKey(key) ? map.get(key) : defaultValue;
+          }
+          /**
+           * <pre>
+           * A map from string to string for including untyped metadata
+           * </pre>
+           *
+           * <code>map&lt;string, string&gt; metadata = 7;</code>
+           */
+
+          public java.lang.String getMetadataOrThrow(
+              java.lang.String key) {
+            if (key == null) { throw new java.lang.NullPointerException(); }
+            java.util.Map<java.lang.String, java.lang.String> map =
+                internalGetMetadata().getMap();
+            if (!map.containsKey(key)) {
+              throw new java.lang.IllegalArgumentException();
+            }
+            return map.get(key);
+          }
+
+          public Builder clearMetadata() {
+            internalGetMutableMetadata().getMutableMap()
+                .clear();
+            return this;
+          }
+          /**
+           * <pre>
+           * A map from string to string for including untyped metadata
+           * </pre>
+           *
+           * <code>map&lt;string, string&gt; metadata = 7;</code>
+           */
+
+          public Builder removeMetadata(
+              java.lang.String key) {
+            if (key == null) { throw new java.lang.NullPointerException(); }
+            internalGetMutableMetadata().getMutableMap()
+                .remove(key);
+            return this;
+          }
+          /**
+           * Use alternate mutation accessors instead.
+           */
+          @java.lang.Deprecated
+          public java.util.Map<java.lang.String, java.lang.String>
+          getMutableMetadata() {
+            return internalGetMutableMetadata().getMutableMap();
+          }
+          /**
+           * <pre>
+           * A map from string to string for including untyped metadata
+           * </pre>
+           *
+           * <code>map&lt;string, string&gt; metadata = 7;</code>
+           */
+          public Builder putMetadata(
+              java.lang.String key,
+              java.lang.String value) {
+            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (value == null) { throw new java.lang.NullPointerException(); }
+            internalGetMutableMetadata().getMutableMap()
+                .put(key, value);
+            return this;
+          }
+          /**
+           * <pre>
+           * A map from string to string for including untyped metadata
+           * </pre>
+           *
+           * <code>map&lt;string, string&gt; metadata = 7;</code>
+           */
+
+          public Builder putAllMetadata(
+              java.util.Map<java.lang.String, java.lang.String> values) {
+            internalGetMutableMetadata().getMutableMap()
+                .putAll(values);
             return this;
           }
           @java.lang.Override
@@ -9359,6 +11313,98 @@ public final class RedvoxApi1000 {
         return bestOffsetUs_;
       }
 
+      public static final int METADATA_FIELD_NUMBER = 10;
+      private static final class MetadataDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.String, java.lang.String> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.String, java.lang.String>newDefaultInstance(
+                    io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_MetadataEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "",
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "");
+      }
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> metadata_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMetadata() {
+        if (metadata_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        return metadata_;
+      }
+
+      public int getMetadataCount() {
+        return internalGetMetadata().getMap().size();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+
+      public boolean containsMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetMetadata().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+        return getMetadataMap();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+        return internalGetMetadata().getMap();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+
+      public java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+
+      public java.lang.String getMetadataOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -9400,6 +11446,12 @@ public final class RedvoxApi1000 {
         if (bestOffsetUs_ != 0D) {
           output.writeDouble(9, bestOffsetUs_);
         }
+        com.google.protobuf.GeneratedMessageV3
+          .serializeStringMapTo(
+            output,
+            internalGetMetadata(),
+            MetadataDefaultEntryHolder.defaultEntry,
+            10);
         unknownFields.writeTo(output);
       }
 
@@ -9444,6 +11496,16 @@ public final class RedvoxApi1000 {
         if (bestOffsetUs_ != 0D) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(9, bestOffsetUs_);
+        }
+        for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+             : internalGetMetadata().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+          metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(10, metadata__);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -9495,6 +11557,8 @@ public final class RedvoxApi1000 {
             java.lang.Double.doubleToLongBits(getBestOffsetUs())
             == java.lang.Double.doubleToLongBits(
                 other.getBestOffsetUs()));
+        result = result && internalGetMetadata().equals(
+            other.internalGetMetadata());
         result = result && unknownFields.equals(other.unknownFields);
         return result;
       }
@@ -9534,6 +11598,10 @@ public final class RedvoxApi1000 {
         hash = (37 * hash) + BEST_OFFSET_US_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             java.lang.Double.doubleToLongBits(getBestOffsetUs()));
+        if (!internalGetMetadata().getMap().isEmpty()) {
+          hash = (37 * hash) + METADATA_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetMetadata().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -9641,6 +11709,28 @@ public final class RedvoxApi1000 {
           return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_descriptor;
         }
 
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 10:
+              return internalGetMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMutableMapField(
+            int number) {
+          switch (number) {
+            case 10:
+              return internalGetMutableMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
@@ -9690,6 +11780,7 @@ public final class RedvoxApi1000 {
 
           bestOffsetUs_ = 0D;
 
+          internalGetMutableMetadata().clear();
           return this;
         }
 
@@ -9735,6 +11826,8 @@ public final class RedvoxApi1000 {
           }
           result.bestLatencyUs_ = bestLatencyUs_;
           result.bestOffsetUs_ = bestOffsetUs_;
+          result.metadata_ = internalGetMetadata();
+          result.metadata_.makeImmutable();
           result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
@@ -9834,6 +11927,8 @@ public final class RedvoxApi1000 {
           if (other.getBestOffsetUs() != 0D) {
             setBestOffsetUs(other.getBestOffsetUs());
           }
+          internalGetMutableMetadata().mergeFrom(
+              other.internalGetMetadata());
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -10479,6 +12574,157 @@ public final class RedvoxApi1000 {
           onChanged();
           return this;
         }
+
+        private com.google.protobuf.MapField<
+            java.lang.String, java.lang.String> metadata_;
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMetadata() {
+          if (metadata_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          return metadata_;
+        }
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableMetadata() {
+          onChanged();;
+          if (metadata_ == null) {
+            metadata_ = com.google.protobuf.MapField.newMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          if (!metadata_.isMutable()) {
+            metadata_ = metadata_.copy();
+          }
+          return metadata_;
+        }
+
+        public int getMetadataCount() {
+          return internalGetMetadata().getMap().size();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 10;</code>
+         */
+
+        public boolean containsMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          return internalGetMetadata().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getMetadataMap()} instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+          return getMetadataMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 10;</code>
+         */
+
+        public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+          return internalGetMetadata().getMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 10;</code>
+         */
+
+        public java.lang.String getMetadataOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 10;</code>
+         */
+
+        public java.lang.String getMetadataOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
+        public Builder clearMetadata() {
+          internalGetMutableMetadata().getMutableMap()
+              .clear();
+          return this;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 10;</code>
+         */
+
+        public Builder removeMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableMetadata().getMutableMap()
+              .remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String>
+        getMutableMetadata() {
+          return internalGetMutableMetadata().getMutableMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 10;</code>
+         */
+        public Builder putMetadata(
+            java.lang.String key,
+            java.lang.String value) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (value == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableMetadata().getMutableMap()
+              .put(key, value);
+          return this;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 10;</code>
+         */
+
+        public Builder putAllMetadata(
+            java.util.Map<java.lang.String, java.lang.String> values) {
+          internalGetMutableMetadata().getMutableMap()
+              .putAll(values);
+          return this;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10760,6 +13006,60 @@ public final class RedvoxApi1000 {
        * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel image_channel = 9;</code>
        */
       io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels.ImageChannelOrBuilder getImageChannelOrBuilder();
+
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+      int getMetadataCount();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+      boolean containsMetadata(
+          java.lang.String key);
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.String, java.lang.String>
+      getMetadata();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+      java.util.Map<java.lang.String, java.lang.String>
+      getMetadataMap();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+
+      java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue);
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+
+      java.lang.String getMetadataOrThrow(
+          java.lang.String key);
     }
     /**
      * Protobuf type {@code redvox_api1000.RedvoxPacket1000.SensorChannels}
@@ -10917,6 +13217,19 @@ public final class RedvoxApi1000 {
 
                 break;
               }
+              case 82: {
+                if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+                  metadata_ = com.google.protobuf.MapField.newMapField(
+                      MetadataDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000200;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                metadata__ = input.readMessage(
+                    MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                metadata_.getMutableMap().put(
+                    metadata__.getKey(), metadata__.getValue());
+                break;
+              }
               default: {
                 if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -10941,6 +13254,18 @@ public final class RedvoxApi1000 {
         return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      @java.lang.Override
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 10:
+            return internalGetMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -23704,6 +26029,7 @@ public final class RedvoxApi1000 {
 
       }
 
+      private int bitField0_;
       public static final int MICROPHONE_CHANNEL_FIELD_NUMBER = 1;
       private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel microphoneChannel_;
       /**
@@ -24001,6 +26327,98 @@ public final class RedvoxApi1000 {
         return getImageChannel();
       }
 
+      public static final int METADATA_FIELD_NUMBER = 10;
+      private static final class MetadataDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.String, java.lang.String> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.String, java.lang.String>newDefaultInstance(
+                    io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_MetadataEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "",
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "");
+      }
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> metadata_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMetadata() {
+        if (metadata_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        return metadata_;
+      }
+
+      public int getMetadataCount() {
+        return internalGetMetadata().getMap().size();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+
+      public boolean containsMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetMetadata().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+        return getMetadataMap();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+        return internalGetMetadata().getMap();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+
+      public java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 10;</code>
+       */
+
+      public java.lang.String getMetadataOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -24042,6 +26460,12 @@ public final class RedvoxApi1000 {
         if (imageChannel_ != null) {
           output.writeMessage(9, getImageChannel());
         }
+        com.google.protobuf.GeneratedMessageV3
+          .serializeStringMapTo(
+            output,
+            internalGetMetadata(),
+            MetadataDefaultEntryHolder.defaultEntry,
+            10);
         unknownFields.writeTo(output);
       }
 
@@ -24086,6 +26510,16 @@ public final class RedvoxApi1000 {
         if (imageChannel_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(9, getImageChannel());
+        }
+        for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+             : internalGetMetadata().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+          metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(10, metadata__);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -24148,6 +26582,8 @@ public final class RedvoxApi1000 {
           result = result && getImageChannel()
               .equals(other.getImageChannel());
         }
+        result = result && internalGetMetadata().equals(
+            other.internalGetMetadata());
         result = result && unknownFields.equals(other.unknownFields);
         return result;
       }
@@ -24194,6 +26630,10 @@ public final class RedvoxApi1000 {
         if (hasImageChannel()) {
           hash = (37 * hash) + IMAGE_CHANNEL_FIELD_NUMBER;
           hash = (53 * hash) + getImageChannel().hashCode();
+        }
+        if (!internalGetMetadata().getMap().isEmpty()) {
+          hash = (37 * hash) + METADATA_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetMetadata().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -24302,6 +26742,28 @@ public final class RedvoxApi1000 {
           return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor;
         }
 
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 10:
+              return internalGetMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMutableMapField(
+            int number) {
+          switch (number) {
+            case 10:
+              return internalGetMutableMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
@@ -24382,6 +26844,7 @@ public final class RedvoxApi1000 {
             imageChannel_ = null;
             imageChannelBuilder_ = null;
           }
+          internalGetMutableMetadata().clear();
           return this;
         }
 
@@ -24408,6 +26871,8 @@ public final class RedvoxApi1000 {
         @java.lang.Override
         public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels buildPartial() {
           io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels result = new io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
           if (microphoneChannelBuilder_ == null) {
             result.microphoneChannel_ = microphoneChannel_;
           } else {
@@ -24453,6 +26918,9 @@ public final class RedvoxApi1000 {
           } else {
             result.imageChannel_ = imageChannelBuilder_.build();
           }
+          result.metadata_ = internalGetMetadata();
+          result.metadata_.makeImmutable();
+          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
@@ -24528,6 +26996,8 @@ public final class RedvoxApi1000 {
           if (other.hasImageChannel()) {
             mergeImageChannel(other.getImageChannel());
           }
+          internalGetMutableMetadata().mergeFrom(
+              other.internalGetMetadata());
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -24556,6 +27026,7 @@ public final class RedvoxApi1000 {
           }
           return this;
         }
+        private int bitField0_;
 
         private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel microphoneChannel_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -25932,6 +28403,157 @@ public final class RedvoxApi1000 {
             imageChannel_ = null;
           }
           return imageChannelBuilder_;
+        }
+
+        private com.google.protobuf.MapField<
+            java.lang.String, java.lang.String> metadata_;
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMetadata() {
+          if (metadata_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          return metadata_;
+        }
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableMetadata() {
+          onChanged();;
+          if (metadata_ == null) {
+            metadata_ = com.google.protobuf.MapField.newMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          if (!metadata_.isMutable()) {
+            metadata_ = metadata_.copy();
+          }
+          return metadata_;
+        }
+
+        public int getMetadataCount() {
+          return internalGetMetadata().getMap().size();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 10;</code>
+         */
+
+        public boolean containsMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          return internalGetMetadata().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getMetadataMap()} instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+          return getMetadataMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 10;</code>
+         */
+
+        public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+          return internalGetMetadata().getMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 10;</code>
+         */
+
+        public java.lang.String getMetadataOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 10;</code>
+         */
+
+        public java.lang.String getMetadataOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
+        public Builder clearMetadata() {
+          internalGetMutableMetadata().getMutableMap()
+              .clear();
+          return this;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 10;</code>
+         */
+
+        public Builder removeMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableMetadata().getMutableMap()
+              .remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String>
+        getMutableMetadata() {
+          return internalGetMutableMetadata().getMutableMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 10;</code>
+         */
+        public Builder putMetadata(
+            java.lang.String key,
+            java.lang.String value) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (value == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableMetadata().getMutableMap()
+              .put(key, value);
+          return this;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 10;</code>
+         */
+
+        public Builder putAllMetadata(
+            java.util.Map<java.lang.String, java.lang.String> values) {
+          internalGetMutableMetadata().getMutableMap()
+              .putAll(values);
+          return this;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -32108,35 +34730,70 @@ public final class RedvoxApi1000 {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_redvox_api1000_RedvoxPacket1000_UserInformation_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_redvox_api1000_RedvoxPacket1000_UserInformation_MetadataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_redvox_api1000_RedvoxPacket1000_UserInformation_MetadataEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_MetadataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_MetadataEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_MetadataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_MetadataEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_redvox_api1000_RedvoxPacket1000_PacketInformation_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_redvox_api1000_RedvoxPacket1000_PacketInformation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_redvox_api1000_RedvoxPacket1000_PacketInformation_MetadataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_redvox_api1000_RedvoxPacket1000_PacketInformation_MetadataEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_MetadataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_MetadataEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_MetadataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_MetadataEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_MetadataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_MetadataEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_MicrophoneChannel_descriptor;
   private static final 
@@ -32227,7 +34884,7 @@ public final class RedvoxApi1000 {
   static {
     java.lang.String[] descriptorData = {
       "\n(src/redvox_api1000/redvox_api_1000.pro" +
-      "to\022\016redvox_api1000\"\3558\n\020RedvoxPacket1000\022" +
+      "to\022\016redvox_api1000\"\250@\n\020RedvoxPacket1000\022" +
       "\013\n\003api\030\001 \001(\001\022J\n\020user_information\030\002 \001(\01320" +
       ".redvox_api1000.RedvoxPacket1000.UserInf" +
       "ormation\022N\n\022device_information\030\003 \001(\01322.r" +
@@ -32240,188 +34897,212 @@ public final class RedvoxApi1000 {
       "ox_api1000.RedvoxPacket1000.SensorChanne" +
       "ls\022@\n\010metadata\030\007 \003(\0132..redvox_api1000.Re" +
       "dvoxPacket1000.MetadataEntry\032/\n\rMetadata" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032Q\n" +
-      "\017UserInformation\022\022\n\nauth_email\030\001 \001(\t\022\022\n\n" +
-      "auth_token\030\002 \001(\t\022\026\n\016firebase_token\030\003 \001(\t" +
-      "\032\310\020\n\021DeviceInformation\022\021\n\tdevice_id\030\001 \001(" +
-      "\t\022\023\n\013device_uuid\030\002 \001(\t\022\023\n\013device_make\030\003 " +
-      "\001(\t\022\024\n\014device_model\030\004 \001(\t\022L\n\tdevice_os\030\005" +
-      " \001(\01629.redvox_api1000.RedvoxPacket1000.D" +
-      "eviceInformation.OsType\022\031\n\021device_os_ver" +
-      "sion\030\006 \001(\t\022\032\n\022device_app_version\030\007 \001(\t\022T" +
-      "\n\014app_settings\030\010 \001(\0132>.redvox_api1000.Re" +
-      "dvoxPacket1000.DeviceInformation.AppSett" +
-      "ings\022T\n\014network_type\030\t \001(\0162>.redvox_api1" +
-      "000.RedvoxPacket1000.DeviceInformation.N" +
-      "etworkType\022O\n\023network_strength_db\030\n \001(\0132" +
-      "2.redvox_api1000.RedvoxPacket1000.Summar" +
-      "yStatistics\022I\n\rdevice_temp_c\030\013 \001(\01322.red" +
-      "vox_api1000.RedvoxPacket1000.SummaryStat" +
-      "istics\022R\n\026device_battery_percent\030\014 \001(\01322" +
-      ".redvox_api1000.RedvoxPacket1000.Summary" +
-      "Statistics\022O\n\023available_ram_bytes\030\r \001(\0132" +
-      "2.redvox_api1000.RedvoxPacket1000.Summar" +
-      "yStatistics\022P\n\024available_disk_bytes\030\016 \001(" +
-      "\01322.redvox_api1000.RedvoxPacket1000.Summ" +
-      "aryStatistics\022K\n\017cpu_utilization\030\017 \001(\01322" +
-      ".redvox_api1000.RedvoxPacket1000.Summary" +
-      "Statistics\032\345\010\n\013AppSettings\022m\n\023audio_samp" +
-      "ling_rate\030\001 \001(\0162P.redvox_api1000.RedvoxP" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\324\001" +
+      "\n\017UserInformation\022\022\n\nauth_email\030\001 \001(\t\022\022\n" +
+      "\nauth_token\030\002 \001(\t\022\026\n\016firebase_token\030\003 \001(" +
+      "\t\022P\n\010metadata\030\004 \003(\0132>.redvox_api1000.Red" +
+      "voxPacket1000.UserInformation.MetadataEn" +
+      "try\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\032\336\022\n\021DeviceInformation\022\021\n\tde" +
+      "vice_id\030\001 \001(\t\022\023\n\013device_uuid\030\002 \001(\t\022\023\n\013de" +
+      "vice_make\030\003 \001(\t\022\024\n\014device_model\030\004 \001(\t\022L\n" +
+      "\tdevice_os\030\005 \001(\01629.redvox_api1000.Redvox" +
+      "Packet1000.DeviceInformation.OsType\022\031\n\021d" +
+      "evice_os_version\030\006 \001(\t\022\032\n\022device_app_ver" +
+      "sion\030\007 \001(\t\022T\n\014app_settings\030\010 \001(\0132>.redvo" +
+      "x_api1000.RedvoxPacket1000.DeviceInforma" +
+      "tion.AppSettings\022T\n\014network_type\030\t \001(\0162>" +
+      ".redvox_api1000.RedvoxPacket1000.DeviceI" +
+      "nformation.NetworkType\022O\n\023network_streng" +
+      "th_db\030\n \001(\01322.redvox_api1000.RedvoxPacke" +
+      "t1000.SummaryStatistics\022I\n\rdevice_temp_c" +
+      "\030\013 \001(\01322.redvox_api1000.RedvoxPacket1000" +
+      ".SummaryStatistics\022R\n\026device_battery_per" +
+      "cent\030\014 \001(\01322.redvox_api1000.RedvoxPacket" +
+      "1000.SummaryStatistics\022O\n\023available_ram_" +
+      "bytes\030\r \001(\01322.redvox_api1000.RedvoxPacke" +
+      "t1000.SummaryStatistics\022P\n\024available_dis" +
+      "k_bytes\030\016 \001(\01322.redvox_api1000.RedvoxPac" +
+      "ket1000.SummaryStatistics\022K\n\017cpu_utiliza" +
+      "tion\030\017 \001(\01322.redvox_api1000.RedvoxPacket" +
+      "1000.SummaryStatistics\022R\n\010metadata\030\020 \003(\013" +
+      "2@.redvox_api1000.RedvoxPacket1000.Devic" +
+      "eInformation.MetadataEntry\032/\n\rMetadataEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\366\t\n\013" +
+      "AppSettings\022m\n\023audio_sampling_rate\030\001 \001(\016" +
+      "2P.redvox_api1000.RedvoxPacket1000.Devic" +
+      "eInformation.AppSettings.AudioSamplingRa" +
+      "te\022m\n\023audio_source_tuning\030\002 \001(\0162P.redvox" +
+      "_api1000.RedvoxPacket1000.DeviceInformat" +
+      "ion.AppSettings.AudioSourceTuning\022l\n\030add" +
+      "itional_input_sensors\030\003 \003(\0162J.redvox_api" +
+      "1000.RedvoxPacket1000.DeviceInformation." +
+      "AppSettings.InputSensor\022\034\n\024automatically" +
+      "_record\030\004 \001(\010\022\032\n\022launch_at_power_up\030\005 \001(" +
+      "\010\022\021\n\tredvox_id\030\006 \001(\t\022\026\n\016push_to_server\030\007" +
+      " \001(\010\022\037\n\027publish_data_as_private\030\010 \001(\010\022\034\n" +
+      "\024scrambled_voice_data\030\t \001(\010\022\030\n\020provide_b" +
+      "ackfill\030\n \001(\010\022#\n\033use_custom_time_sync_se" +
+      "rver\030\013 \001(\010\022\035\n\025time_synch_server_url\030\014 \001(" +
+      "\t\022\036\n\026use_custom_data_server\030\r \001(\010\022\027\n\017dat" +
+      "a_server_url\030\016 \001(\t\022\036\n\026auto_delete_data_f" +
+      "iles\030\017 \001(\010\022\037\n\027storage_space_allowance\030\020 " +
+      "\001(\001\022$\n\034use_sd_card_for_data_storage\030\021 \001(" +
+      "\010\022\035\n\025use_location_services\030\022 \001(\010\022\024\n\014use_" +
+      "latitude\030\023 \001(\001\022\025\n\ruse_longitude\030\024 \001(\001\022^\n" +
+      "\010metadata\030\025 \003(\0132L.redvox_api1000.RedvoxP" +
       "acket1000.DeviceInformation.AppSettings." +
-      "AudioSamplingRate\022m\n\023audio_source_tuning" +
-      "\030\002 \001(\0162P.redvox_api1000.RedvoxPacket1000" +
-      ".DeviceInformation.AppSettings.AudioSour" +
-      "ceTuning\022l\n\030additional_input_sensors\030\003 \003" +
-      "(\0162J.redvox_api1000.RedvoxPacket1000.Dev" +
-      "iceInformation.AppSettings.InputSensor\022\034" +
-      "\n\024automatically_record\030\004 \001(\010\022\032\n\022launch_a" +
-      "t_power_up\030\005 \001(\010\022\021\n\tredvox_id\030\006 \001(\t\022\026\n\016p" +
-      "ush_to_server\030\007 \001(\010\022\037\n\027publish_data_as_p" +
-      "rivate\030\010 \001(\010\022\034\n\024scrambled_voice_data\030\t \001" +
-      "(\010\022\030\n\020provide_backfill\030\n \001(\010\022#\n\033use_cust" +
-      "om_time_sync_server\030\013 \001(\010\022\035\n\025time_synch_" +
-      "server_url\030\014 \001(\t\022\036\n\026use_custom_data_serv" +
-      "er\030\r \001(\010\022\027\n\017data_server_url\030\016 \001(\t\022\036\n\026aut" +
-      "o_delete_data_files\030\017 \001(\010\022\037\n\027storage_spa" +
-      "ce_allowance\030\020 \001(\001\022$\n\034use_sd_card_for_da" +
-      "ta_storage\030\021 \001(\010\022\035\n\025use_location_service" +
-      "s\030\022 \001(\010\022\024\n\014use_latitude\030\023 \001(\001\022\025\n\ruse_lon" +
-      "gitude\030\024 \001(\001\"7\n\021AudioSamplingRate\022\t\n\005HZ_" +
-      "80\020\000\022\n\n\006HZ_800\020\001\022\013\n\007HZ_8000\020\002\"=\n\021AudioSo" +
-      "urceTuning\022\016\n\nINFRASOUND\020\000\022\r\n\tLOW_AUDIO\020" +
-      "\001\022\t\n\005AUDIO\020\002\"\243\001\n\013InputSensor\022\r\n\tBAROMETE" +
-      "R\020\000\022\021\n\rACCELEROMETER\020\001\022\026\n\022ACCELEROMETER_" +
-      "FAST\020\002\022\020\n\014MAGNETOMETER\020\003\022\025\n\021MAGNETOMETER" +
-      "_FAST\020\004\022\r\n\tGYROSCOPE\020\005\022\022\n\016GYROSCOPE_FAST" +
-      "\020\006\022\016\n\nLUMINOSITY\020\007\"/\n\013NetworkType\022\010\n\004WIF" +
-      "I\020\000\022\014\n\010CELLULAR\020\001\022\010\n\004NONE\020\002\"6\n\006OsType\022\013\n" +
-      "\007ANDROID\020\000\022\007\n\003IOS\020\001\022\t\n\005LINUX\020\002\022\013\n\007WINDOW" +
-      "S\020\003\032>\n\021PacketInformation\022\025\n\ris_backfille" +
-      "d\030\001 \001(\010\022\022\n\nis_private\030\002 \001(\010\032\300\003\n\021TimingIn" +
-      "formation\022\037\n\027packet_start_ts_us_wall\030\001 \001" +
-      "(\001\022\037\n\027packet_start_ts_us_mach\030\002 \001(\001\022\035\n\025p" +
-      "acket_end_ts_us_wall\030\003 \001(\001\022\035\n\025packet_end" +
-      "_ts_us_mach\030\004 \001(\001\022(\n server_acquisition_" +
-      "arrival_ts_us\030\005 \001(\001\022\034\n\024app_start_ts_us_m" +
-      "ach\030\006 \001(\001\022Y\n\017synch_exchanges\030\007 \003(\0132@.red" +
-      "vox_api1000.RedvoxPacket1000.TimingInfor" +
-      "mation.SynchExchange\022\027\n\017best_latency_us\030" +
-      "\010 \001(\001\022\026\n\016best_offset_us\030\t \001(\001\032W\n\rSynchEx" +
-      "change\022\n\n\002a1\030\001 \001(\001\022\n\n\002a2\030\002 \001(\001\022\n\n\002a3\030\003 \001" +
-      "(\001\022\n\n\002b1\030\004 \001(\001\022\n\n\002b2\030\005 \001(\001\022\n\n\002b3\030\006 \001(\001\032\240" +
-      "\035\n\016SensorChannels\022]\n\022microphone_channel\030" +
-      "\001 \001(\0132A.redvox_api1000.RedvoxPacket1000." +
-      "SensorChannels.MicrophoneChannel\022X\n\021baro" +
-      "meter_channel\030\002 \001(\0132=.redvox_api1000.Red" +
-      "voxPacket1000.SensorChannels.SingleChann" +
-      "el\022Y\n\020location_channel\030\003 \001(\0132?.redvox_ap" +
-      "i1000.RedvoxPacket1000.SensorChannels.Lo" +
-      "cationChannel\022Y\n\025accelerometer_channel\030\004" +
-      " \001(\0132:.redvox_api1000.RedvoxPacket1000.S" +
-      "ensorChannels.XyzChannel\022U\n\021gyroscope_ch" +
-      "annel\030\005 \001(\0132:.redvox_api1000.RedvoxPacke" +
-      "t1000.SensorChannels.XyzChannel\022X\n\024magne" +
-      "tometer_channel\030\006 \001(\0132:.redvox_api1000.R" +
-      "edvoxPacket1000.SensorChannels.XyzChanne" +
-      "l\022T\n\rlight_channel\030\007 \001(\0132=.redvox_api100" +
-      "0.RedvoxPacket1000.SensorChannels.Single" +
-      "Channel\022W\n\020infrared_channel\030\010 \001(\0132=.redv" +
-      "ox_api1000.RedvoxPacket1000.SensorChanne" +
-      "ls.SingleChannel\022S\n\rimage_channel\030\t \001(\0132" +
-      "<.redvox_api1000.RedvoxPacket1000.Sensor" +
-      "Channels.ImageChannel\032\355\002\n\021MicrophoneChan" +
-      "nel\022\032\n\022sensor_description\030\001 \001(\t\022\032\n\022first" +
-      "_sample_ts_us\030\002 \001(\001\022\026\n\016sample_rate_hz\030\003 " +
-      "\001(\001\022\024\n\014is_scrambled\030\004 \001(\010\022\017\n\007samples\030\005 \003" +
-      "(\001\022M\n\021sample_statistics\030\006 \001(\01322.redvox_a" +
-      "pi1000.RedvoxPacket1000.SummaryStatistic" +
-      "s\022a\n\010metadata\030\007 \003(\0132O.redvox_api1000.Red" +
-      "voxPacket1000.SensorChannels.MicrophoneC" +
-      "hannel.MetadataEntry\032/\n\rMetadataEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\003\n\rSingle" +
-      "Channel\022\032\n\022sensor_description\030\001 \001(\t\022\033\n\023m" +
-      "ean_sample_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us" +
-      "\030\003 \003(\001\022\017\n\007samples\030\004 \003(\001\022R\n\026sample_rate_s" +
-      "tatistics\030\005 \001(\01322.redvox_api1000.RedvoxP" +
-      "acket1000.SummaryStatistics\022M\n\021sample_st" +
-      "atistics\030\006 \001(\01322.redvox_api1000.RedvoxPa" +
-      "cket1000.SummaryStatistics\022]\n\010metadata\030\007" +
-      " \003(\0132K.redvox_api1000.RedvoxPacket1000.S" +
-      "ensorChannels.SingleChannel.MetadataEntr" +
-      "y\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\032\225\t\n\017LocationChannel\022\032\n\022sensor" +
-      "_description\030\001 \001(\t\022\033\n\023mean_sample_rate_h" +
-      "z\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\030\n\020latitud" +
-      "e_samples\030\004 \003(\001\022\031\n\021longitude_samples\030\005 \003" +
-      "(\001\022\030\n\020altitude_samples\030\006 \003(\001\022\025\n\rspeed_sa" +
-      "mples\030\007 \003(\001\022\030\n\020accuracy_samples\030\010 \003(\001\022$\n" +
-      "\034location_permissions_granted\030\t \001(\010\022#\n\033l" +
-      "ocation_services_requested\030\n \001(\010\022!\n\031loca" +
-      "tion_services_enabled\030\013 \001(\010\022k\n\021location_" +
-      "provider\030\014 \001(\0162P.redvox_api1000.RedvoxPa" +
-      "cket1000.SensorChannels.LocationChannel." +
-      "LocationProvider\022R\n\026sample_rate_statisti" +
-      "cs\030\r \001(\01322.redvox_api1000.RedvoxPacket10" +
-      "00.SummaryStatistics\022V\n\032latitude_sample_" +
-      "statistics\030\016 \001(\01322.redvox_api1000.Redvox" +
-      "Packet1000.SummaryStatistics\022W\n\033longitud" +
-      "e_sample_statistics\030\017 \001(\01322.redvox_api10" +
-      "00.RedvoxPacket1000.SummaryStatistics\022V\n" +
-      "\032altitude_sample_statistics\030\020 \001(\01322.redv" +
-      "ox_api1000.RedvoxPacket1000.SummaryStati" +
-      "stics\022S\n\027speed_sample_statistics\030\021 \001(\01322" +
-      ".redvox_api1000.RedvoxPacket1000.Summary" +
-      "Statistics\022V\n\032accuracy_sample_statistics" +
-      "\030\022 \001(\01322.redvox_api1000.RedvoxPacket1000" +
-      ".SummaryStatistics\022_\n\010metadata\030\023 \003(\0132M.r" +
+      "MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7\n\021AudioSamplingR" +
+      "ate\022\t\n\005HZ_80\020\000\022\n\n\006HZ_800\020\001\022\013\n\007HZ_8000\020\002\"" +
+      "=\n\021AudioSourceTuning\022\016\n\nINFRASOUND\020\000\022\r\n\t" +
+      "LOW_AUDIO\020\001\022\t\n\005AUDIO\020\002\"\243\001\n\013InputSensor\022\r" +
+      "\n\tBAROMETER\020\000\022\021\n\rACCELEROMETER\020\001\022\026\n\022ACCE" +
+      "LEROMETER_FAST\020\002\022\020\n\014MAGNETOMETER\020\003\022\025\n\021MA" +
+      "GNETOMETER_FAST\020\004\022\r\n\tGYROSCOPE\020\005\022\022\n\016GYRO" +
+      "SCOPE_FAST\020\006\022\016\n\nLUMINOSITY\020\007\"/\n\013NetworkT" +
+      "ype\022\010\n\004WIFI\020\000\022\014\n\010CELLULAR\020\001\022\010\n\004NONE\020\002\"6\n" +
+      "\006OsType\022\013\n\007ANDROID\020\000\022\007\n\003IOS\020\001\022\t\n\005LINUX\020\002" +
+      "\022\013\n\007WINDOWS\020\003\032\303\001\n\021PacketInformation\022\025\n\ri" +
+      "s_backfilled\030\001 \001(\010\022\022\n\nis_private\030\002 \001(\010\022R" +
+      "\n\010metadata\030\003 \003(\0132@.redvox_api1000.Redvox" +
+      "Packet1000.PacketInformation.MetadataEnt" +
+      "ry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\032\331\005\n\021TimingInformation\022\037\n\027pac" +
+      "ket_start_ts_us_wall\030\001 \001(\001\022\037\n\027packet_sta" +
+      "rt_ts_us_mach\030\002 \001(\001\022\035\n\025packet_end_ts_us_" +
+      "wall\030\003 \001(\001\022\035\n\025packet_end_ts_us_mach\030\004 \001(" +
+      "\001\022(\n server_acquisition_arrival_ts_us\030\005 " +
+      "\001(\001\022\034\n\024app_start_ts_us_mach\030\006 \001(\001\022Y\n\017syn" +
+      "ch_exchanges\030\007 \003(\0132@.redvox_api1000.Redv" +
+      "oxPacket1000.TimingInformation.SynchExch" +
+      "ange\022\027\n\017best_latency_us\030\010 \001(\001\022\026\n\016best_of" +
+      "fset_us\030\t \001(\001\022R\n\010metadata\030\n \003(\0132@.redvox" +
+      "_api1000.RedvoxPacket1000.TimingInformat" +
+      "ion.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\352\001\n\rSynchExch" +
+      "ange\022\n\n\002a1\030\001 \001(\001\022\n\n\002a2\030\002 \001(\001\022\n\n\002a3\030\003 \001(\001" +
+      "\022\n\n\002b1\030\004 \001(\001\022\n\n\002b2\030\005 \001(\001\022\n\n\002b3\030\006 \001(\001\022`\n\010" +
+      "metadata\030\007 \003(\0132N.redvox_api1000.RedvoxPa" +
+      "cket1000.TimingInformation.SynchExchange" +
+      ".MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\036\n\016SensorChanne" +
+      "ls\022]\n\022microphone_channel\030\001 \001(\0132A.redvox_" +
+      "api1000.RedvoxPacket1000.SensorChannels." +
+      "MicrophoneChannel\022X\n\021barometer_channel\030\002" +
+      " \001(\0132=.redvox_api1000.RedvoxPacket1000.S" +
+      "ensorChannels.SingleChannel\022Y\n\020location_" +
+      "channel\030\003 \001(\0132?.redvox_api1000.RedvoxPac" +
+      "ket1000.SensorChannels.LocationChannel\022Y" +
+      "\n\025accelerometer_channel\030\004 \001(\0132:.redvox_a" +
+      "pi1000.RedvoxPacket1000.SensorChannels.X" +
+      "yzChannel\022U\n\021gyroscope_channel\030\005 \001(\0132:.r" +
       "edvox_api1000.RedvoxPacket1000.SensorCha" +
-      "nnels.LocationChannel.MetadataEntry\032/\n\rM" +
-      "etadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"<\n\020LocationProvider\022\010\n\004NONE\020\000\022\010\n\004US" +
-      "ER\020\001\022\007\n\003GPS\020\002\022\013\n\007NETWORK\020\003\032\350\004\n\nXyzChanne" +
-      "l\022\032\n\022sensor_description\030\001 \001(\t\022\033\n\023mean_sa" +
-      "mple_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001" +
-      "\022\021\n\tx_samples\030\004 \003(\001\022\021\n\ty_samples\030\005 \003(\001\022\021" +
-      "\n\tz_samples\030\006 \003(\001\022R\n\026sample_rate_statist" +
-      "ics\030\007 \001(\01322.redvox_api1000.RedvoxPacket1" +
-      "000.SummaryStatistics\022O\n\023x_sample_statis" +
-      "tics\030\010 \001(\01322.redvox_api1000.RedvoxPacket" +
-      "1000.SummaryStatistics\022O\n\023y_sample_stati" +
-      "stics\030\t \001(\01322.redvox_api1000.RedvoxPacke" +
-      "t1000.SummaryStatistics\022O\n\023z_sample_stat" +
-      "istics\030\n \001(\01322.redvox_api1000.RedvoxPack" +
-      "et1000.SummaryStatistics\022Z\n\010metadata\030\013 \003" +
-      "(\0132H.redvox_api1000.RedvoxPacket1000.Sen" +
-      "sorChannels.XyzChannel.MetadataEntry\032/\n\r" +
+      "nnels.XyzChannel\022X\n\024magnetometer_channel" +
+      "\030\006 \001(\0132:.redvox_api1000.RedvoxPacket1000" +
+      ".SensorChannels.XyzChannel\022T\n\rlight_chan" +
+      "nel\030\007 \001(\0132=.redvox_api1000.RedvoxPacket1" +
+      "000.SensorChannels.SingleChannel\022W\n\020infr" +
+      "ared_channel\030\010 \001(\0132=.redvox_api1000.Redv" +
+      "oxPacket1000.SensorChannels.SingleChanne" +
+      "l\022S\n\rimage_channel\030\t \001(\0132<.redvox_api100" +
+      "0.RedvoxPacket1000.SensorChannels.ImageC" +
+      "hannel\022O\n\010metadata\030\n \003(\0132=.redvox_api100" +
+      "0.RedvoxPacket1000.SensorChannels.Metada" +
+      "taEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\032\355\002\n\021MicrophoneChannel\022\032" +
+      "\n\022sensor_description\030\001 \001(\t\022\032\n\022first_samp" +
+      "le_ts_us\030\002 \001(\001\022\026\n\016sample_rate_hz\030\003 \001(\001\022\024" +
+      "\n\014is_scrambled\030\004 \001(\010\022\017\n\007samples\030\005 \003(\001\022M\n" +
+      "\021sample_statistics\030\006 \001(\01322.redvox_api100" +
+      "0.RedvoxPacket1000.SummaryStatistics\022a\n\010" +
+      "metadata\030\007 \003(\0132O.redvox_api1000.RedvoxPa" +
+      "cket1000.SensorChannels.MicrophoneChanne" +
+      "l.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\003\n\rSingleChann" +
+      "el\022\032\n\022sensor_description\030\001 \001(\t\022\033\n\023mean_s" +
+      "ample_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(" +
+      "\001\022\017\n\007samples\030\004 \003(\001\022R\n\026sample_rate_statis" +
+      "tics\030\005 \001(\01322.redvox_api1000.RedvoxPacket" +
+      "1000.SummaryStatistics\022M\n\021sample_statist" +
+      "ics\030\006 \001(\01322.redvox_api1000.RedvoxPacket1" +
+      "000.SummaryStatistics\022]\n\010metadata\030\007 \003(\0132" +
+      "K.redvox_api1000.RedvoxPacket1000.Sensor" +
+      "Channels.SingleChannel.MetadataEntry\032/\n\r" +
       "MetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\032\321\002\n\014ImageChannel\022\032\n\022sensor_descrip" +
-      "tion\030\001 \001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001(\001\022" +
-      "\024\n\014sample_ts_us\030\003 \003(\001\022\017\n\007samples\030\004 \003(\014\022R" +
-      "\n\026sample_rate_statistics\030\005 \001(\01322.redvox_" +
-      "api1000.RedvoxPacket1000.SummaryStatisti" +
-      "cs\022\\\n\010metadata\030\006 \003(\0132J.redvox_api1000.Re" +
-      "dvoxPacket1000.SensorChannels.ImageChann" +
-      "el.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\216\002\n\021SummarySta" +
-      "tistics\022\r\n\005count\030\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\016\n\006" +
-      "median\030\003 \001(\001\022\014\n\004mode\030\004 \001(\001\022\020\n\010variance\030\005" +
-      " \001(\001\022\013\n\003min\030\006 \001(\001\022\013\n\003max\030\007 \001(\001\022\r\n\005range\030" +
-      "\010 \001(\001\022R\n\010metadata\030\t \003(\0132@.redvox_api1000" +
-      ".RedvoxPacket1000.SummaryStatistics.Meta" +
-      "dataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"M\n\022AcquisitionRequest" +
-      "\022%\n\035compressed_redvox_packet_1000\030\001 \001(\014\022" +
-      "\020\n\010checksum\030\002 \001(\003\"\332\001\n\023AcquisitionRespons" +
-      "e\022G\n\rresponse_type\030\001 \001(\01620.redvox_api100" +
-      "0.AcquisitionResponse.ResponseType\022\020\n\010ch" +
-      "ecksum\030\002 \001(\003\022\017\n\007details\030\003 \001(\t\022\016\n\006resend\030" +
-      "\004 \001(\010\"G\n\014ResponseType\022\006\n\002OK\020\000\022\016\n\nAUTH_ER" +
-      "ROR\020\001\022\016\n\nDATA_ERROR\020\002\022\017\n\013OTHER_ERROR\020\003\"2" +
-      "\n\014SynchRequest\022\016\n\006seq_id\030\001 \001(\004\022\022\n\nsub_se" +
-      "q_id\030\002 \001(\r\"[\n\rSynchResponse\022\016\n\006seq_id\030\001 " +
-      "\001(\004\022\022\n\nsub_seq_id\030\002 \001(\r\022\022\n\nrecv_ts_us\030\003 " +
-      "\001(\004\022\022\n\nsend_ts_us\030\004 \001(\004B\032\n\030io.redvox.red" +
-      "vox_api1000b\006proto3"
+      "\t:\0028\001\032\225\t\n\017LocationChannel\022\032\n\022sensor_desc" +
+      "ription\030\001 \001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001" +
+      "(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\030\n\020latitude_sam" +
+      "ples\030\004 \003(\001\022\031\n\021longitude_samples\030\005 \003(\001\022\030\n" +
+      "\020altitude_samples\030\006 \003(\001\022\025\n\rspeed_samples" +
+      "\030\007 \003(\001\022\030\n\020accuracy_samples\030\010 \003(\001\022$\n\034loca" +
+      "tion_permissions_granted\030\t \001(\010\022#\n\033locati" +
+      "on_services_requested\030\n \001(\010\022!\n\031location_" +
+      "services_enabled\030\013 \001(\010\022k\n\021location_provi" +
+      "der\030\014 \001(\0162P.redvox_api1000.RedvoxPacket1" +
+      "000.SensorChannels.LocationChannel.Locat" +
+      "ionProvider\022R\n\026sample_rate_statistics\030\r " +
+      "\001(\01322.redvox_api1000.RedvoxPacket1000.Su" +
+      "mmaryStatistics\022V\n\032latitude_sample_stati" +
+      "stics\030\016 \001(\01322.redvox_api1000.RedvoxPacke" +
+      "t1000.SummaryStatistics\022W\n\033longitude_sam" +
+      "ple_statistics\030\017 \001(\01322.redvox_api1000.Re" +
+      "dvoxPacket1000.SummaryStatistics\022V\n\032alti" +
+      "tude_sample_statistics\030\020 \001(\01322.redvox_ap" +
+      "i1000.RedvoxPacket1000.SummaryStatistics" +
+      "\022S\n\027speed_sample_statistics\030\021 \001(\01322.redv" +
+      "ox_api1000.RedvoxPacket1000.SummaryStati" +
+      "stics\022V\n\032accuracy_sample_statistics\030\022 \001(" +
+      "\01322.redvox_api1000.RedvoxPacket1000.Summ" +
+      "aryStatistics\022_\n\010metadata\030\023 \003(\0132M.redvox" +
+      "_api1000.RedvoxPacket1000.SensorChannels" +
+      ".LocationChannel.MetadataEntry\032/\n\rMetada" +
+      "taEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "<\n\020LocationProvider\022\010\n\004NONE\020\000\022\010\n\004USER\020\001\022" +
+      "\007\n\003GPS\020\002\022\013\n\007NETWORK\020\003\032\350\004\n\nXyzChannel\022\032\n\022" +
+      "sensor_description\030\001 \001(\t\022\033\n\023mean_sample_" +
+      "rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\021\n\tx" +
+      "_samples\030\004 \003(\001\022\021\n\ty_samples\030\005 \003(\001\022\021\n\tz_s" +
+      "amples\030\006 \003(\001\022R\n\026sample_rate_statistics\030\007" +
+      " \001(\01322.redvox_api1000.RedvoxPacket1000.S" +
+      "ummaryStatistics\022O\n\023x_sample_statistics\030" +
+      "\010 \001(\01322.redvox_api1000.RedvoxPacket1000." +
+      "SummaryStatistics\022O\n\023y_sample_statistics" +
+      "\030\t \001(\01322.redvox_api1000.RedvoxPacket1000" +
+      ".SummaryStatistics\022O\n\023z_sample_statistic" +
+      "s\030\n \001(\01322.redvox_api1000.RedvoxPacket100" +
+      "0.SummaryStatistics\022Z\n\010metadata\030\013 \003(\0132H." +
+      "redvox_api1000.RedvoxPacket1000.SensorCh" +
+      "annels.XyzChannel.MetadataEntry\032/\n\rMetad" +
+      "ataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\032\321\002\n\014ImageChannel\022\032\n\022sensor_description\030" +
+      "\001 \001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001(\001\022\024\n\014sa" +
+      "mple_ts_us\030\003 \003(\001\022\017\n\007samples\030\004 \003(\014\022R\n\026sam" +
+      "ple_rate_statistics\030\005 \001(\01322.redvox_api10" +
+      "00.RedvoxPacket1000.SummaryStatistics\022\\\n" +
+      "\010metadata\030\006 \003(\0132J.redvox_api1000.RedvoxP" +
+      "acket1000.SensorChannels.ImageChannel.Me" +
+      "tadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\216\002\n\021SummaryStatisti" +
+      "cs\022\r\n\005count\030\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\016\n\006media" +
+      "n\030\003 \001(\001\022\014\n\004mode\030\004 \001(\001\022\020\n\010variance\030\005 \001(\001\022" +
+      "\013\n\003min\030\006 \001(\001\022\013\n\003max\030\007 \001(\001\022\r\n\005range\030\010 \001(\001" +
+      "\022R\n\010metadata\030\t \003(\0132@.redvox_api1000.Redv" +
+      "oxPacket1000.SummaryStatistics.MetadataE" +
+      "ntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\"M\n\022AcquisitionRequest\022%\n\035c" +
+      "ompressed_redvox_packet_1000\030\001 \001(\014\022\020\n\010ch" +
+      "ecksum\030\002 \001(\003\"\332\001\n\023AcquisitionResponse\022G\n\r" +
+      "response_type\030\001 \001(\01620.redvox_api1000.Acq" +
+      "uisitionResponse.ResponseType\022\020\n\010checksu" +
+      "m\030\002 \001(\003\022\017\n\007details\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010" +
+      "\"G\n\014ResponseType\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001" +
+      "\022\016\n\nDATA_ERROR\020\002\022\017\n\013OTHER_ERROR\020\003\"2\n\014Syn" +
+      "chRequest\022\016\n\006seq_id\030\001 \001(\004\022\022\n\nsub_seq_id\030" +
+      "\002 \001(\r\"[\n\rSynchResponse\022\016\n\006seq_id\030\001 \001(\004\022\022" +
+      "\n\nsub_seq_id\030\002 \001(\r\022\022\n\nrecv_ts_us\030\003 \001(\004\022\022" +
+      "\n\nsend_ts_us\030\004 \001(\004B\032\n\030io.redvox.redvox_a" +
+      "pi1000b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -32452,45 +35133,87 @@ public final class RedvoxApi1000 {
     internal_static_redvox_api1000_RedvoxPacket1000_UserInformation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_UserInformation_descriptor,
-        new java.lang.String[] { "AuthEmail", "AuthToken", "FirebaseToken", });
+        new java.lang.String[] { "AuthEmail", "AuthToken", "FirebaseToken", "Metadata", });
+    internal_static_redvox_api1000_RedvoxPacket1000_UserInformation_MetadataEntry_descriptor =
+      internal_static_redvox_api1000_RedvoxPacket1000_UserInformation_descriptor.getNestedTypes().get(0);
+    internal_static_redvox_api1000_RedvoxPacket1000_UserInformation_MetadataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_redvox_api1000_RedvoxPacket1000_UserInformation_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_descriptor =
       internal_static_redvox_api1000_RedvoxPacket1000_descriptor.getNestedTypes().get(2);
     internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_descriptor,
-        new java.lang.String[] { "DeviceId", "DeviceUuid", "DeviceMake", "DeviceModel", "DeviceOs", "DeviceOsVersion", "DeviceAppVersion", "AppSettings", "NetworkType", "NetworkStrengthDb", "DeviceTempC", "DeviceBatteryPercent", "AvailableRamBytes", "AvailableDiskBytes", "CpuUtilization", });
-    internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_descriptor =
+        new java.lang.String[] { "DeviceId", "DeviceUuid", "DeviceMake", "DeviceModel", "DeviceOs", "DeviceOsVersion", "DeviceAppVersion", "AppSettings", "NetworkType", "NetworkStrengthDb", "DeviceTempC", "DeviceBatteryPercent", "AvailableRamBytes", "AvailableDiskBytes", "CpuUtilization", "Metadata", });
+    internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_MetadataEntry_descriptor =
       internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_descriptor.getNestedTypes().get(0);
+    internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_MetadataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_descriptor =
+      internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_descriptor.getNestedTypes().get(1);
     internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_descriptor,
-        new java.lang.String[] { "AudioSamplingRate", "AudioSourceTuning", "AdditionalInputSensors", "AutomaticallyRecord", "LaunchAtPowerUp", "RedvoxId", "PushToServer", "PublishDataAsPrivate", "ScrambledVoiceData", "ProvideBackfill", "UseCustomTimeSyncServer", "TimeSynchServerUrl", "UseCustomDataServer", "DataServerUrl", "AutoDeleteDataFiles", "StorageSpaceAllowance", "UseSdCardForDataStorage", "UseLocationServices", "UseLatitude", "UseLongitude", });
+        new java.lang.String[] { "AudioSamplingRate", "AudioSourceTuning", "AdditionalInputSensors", "AutomaticallyRecord", "LaunchAtPowerUp", "RedvoxId", "PushToServer", "PublishDataAsPrivate", "ScrambledVoiceData", "ProvideBackfill", "UseCustomTimeSyncServer", "TimeSynchServerUrl", "UseCustomDataServer", "DataServerUrl", "AutoDeleteDataFiles", "StorageSpaceAllowance", "UseSdCardForDataStorage", "UseLocationServices", "UseLatitude", "UseLongitude", "Metadata", });
+    internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_MetadataEntry_descriptor =
+      internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_descriptor.getNestedTypes().get(0);
+    internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_MetadataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_redvox_api1000_RedvoxPacket1000_DeviceInformation_AppSettings_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_redvox_api1000_RedvoxPacket1000_PacketInformation_descriptor =
       internal_static_redvox_api1000_RedvoxPacket1000_descriptor.getNestedTypes().get(3);
     internal_static_redvox_api1000_RedvoxPacket1000_PacketInformation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_PacketInformation_descriptor,
-        new java.lang.String[] { "IsBackfilled", "IsPrivate", });
+        new java.lang.String[] { "IsBackfilled", "IsPrivate", "Metadata", });
+    internal_static_redvox_api1000_RedvoxPacket1000_PacketInformation_MetadataEntry_descriptor =
+      internal_static_redvox_api1000_RedvoxPacket1000_PacketInformation_descriptor.getNestedTypes().get(0);
+    internal_static_redvox_api1000_RedvoxPacket1000_PacketInformation_MetadataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_redvox_api1000_RedvoxPacket1000_PacketInformation_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_descriptor =
       internal_static_redvox_api1000_RedvoxPacket1000_descriptor.getNestedTypes().get(4);
     internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_descriptor,
-        new java.lang.String[] { "PacketStartTsUsWall", "PacketStartTsUsMach", "PacketEndTsUsWall", "PacketEndTsUsMach", "ServerAcquisitionArrivalTsUs", "AppStartTsUsMach", "SynchExchanges", "BestLatencyUs", "BestOffsetUs", });
-    internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_descriptor =
+        new java.lang.String[] { "PacketStartTsUsWall", "PacketStartTsUsMach", "PacketEndTsUsWall", "PacketEndTsUsMach", "ServerAcquisitionArrivalTsUs", "AppStartTsUsMach", "SynchExchanges", "BestLatencyUs", "BestOffsetUs", "Metadata", });
+    internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_MetadataEntry_descriptor =
       internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_descriptor.getNestedTypes().get(0);
+    internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_MetadataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_descriptor =
+      internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_descriptor.getNestedTypes().get(1);
     internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_descriptor,
-        new java.lang.String[] { "A1", "A2", "A3", "B1", "B2", "B3", });
+        new java.lang.String[] { "A1", "A2", "A3", "B1", "B2", "B3", "Metadata", });
+    internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_MetadataEntry_descriptor =
+      internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_descriptor.getNestedTypes().get(0);
+    internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_MetadataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor =
       internal_static_redvox_api1000_RedvoxPacket1000_descriptor.getNestedTypes().get(5);
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor,
-        new java.lang.String[] { "MicrophoneChannel", "BarometerChannel", "LocationChannel", "AccelerometerChannel", "GyroscopeChannel", "MagnetometerChannel", "LightChannel", "InfraredChannel", "ImageChannel", });
-    internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_MicrophoneChannel_descriptor =
+        new java.lang.String[] { "MicrophoneChannel", "BarometerChannel", "LocationChannel", "AccelerometerChannel", "GyroscopeChannel", "MagnetometerChannel", "LightChannel", "InfraredChannel", "ImageChannel", "Metadata", });
+    internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_MetadataEntry_descriptor =
       internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor.getNestedTypes().get(0);
+    internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_MetadataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_MicrophoneChannel_descriptor =
+      internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor.getNestedTypes().get(1);
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_MicrophoneChannel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_MicrophoneChannel_descriptor,
@@ -32502,7 +35225,7 @@ public final class RedvoxApi1000 {
         internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_MicrophoneChannel_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_SingleChannel_descriptor =
-      internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor.getNestedTypes().get(1);
+      internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor.getNestedTypes().get(2);
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_SingleChannel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_SingleChannel_descriptor,
@@ -32514,7 +35237,7 @@ public final class RedvoxApi1000 {
         internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_SingleChannel_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_LocationChannel_descriptor =
-      internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor.getNestedTypes().get(2);
+      internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor.getNestedTypes().get(3);
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_LocationChannel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_LocationChannel_descriptor,
@@ -32526,7 +35249,7 @@ public final class RedvoxApi1000 {
         internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_LocationChannel_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_XyzChannel_descriptor =
-      internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor.getNestedTypes().get(3);
+      internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor.getNestedTypes().get(4);
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_XyzChannel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_XyzChannel_descriptor,
@@ -32538,7 +35261,7 @@ public final class RedvoxApi1000 {
         internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_XyzChannel_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_ImageChannel_descriptor =
-      internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor.getNestedTypes().get(4);
+      internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor.getNestedTypes().get(5);
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_ImageChannel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_ImageChannel_descriptor,
