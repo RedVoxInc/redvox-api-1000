@@ -53,6 +53,7 @@ static GPBFileDescriptor *RedvoxApi1000Root_FileDescriptor(void) {
 @dynamic hasDeviceInformation, deviceInformation;
 @dynamic hasPacketInformation, packetInformation;
 @dynamic hasTimingInformation, timingInformation;
+@dynamic hasServerInformation, serverInformation;
 @dynamic hasSensorChannels, sensorChannels;
 @dynamic metadata, metadata_Count;
 
@@ -62,6 +63,7 @@ typedef struct RedvoxPacket1000__storage_ {
   RedvoxPacket1000_DeviceInformation *deviceInformation;
   RedvoxPacket1000_PacketInformation *packetInformation;
   RedvoxPacket1000_TimingInformation *timingInformation;
+  RedvoxPacket1000_ServerInformation *serverInformation;
   RedvoxPacket1000_SensorChannels *sensorChannels;
   NSMutableDictionary *metadata;
   double api;
@@ -119,10 +121,19 @@ typedef struct RedvoxPacket1000__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
+        .name = "serverInformation",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_ServerInformation),
+        .number = RedvoxPacket1000_FieldNumber_ServerInformation,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, serverInformation),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
         .name = "sensorChannels",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SensorChannels),
         .number = RedvoxPacket1000_FieldNumber_SensorChannels,
-        .hasIndex = 5,
+        .hasIndex = 6,
         .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, sensorChannels),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -1255,6 +1266,88 @@ typedef struct RedvoxPacket1000_TimingInformation_SynchExchange__storage_ {
                                    storageSize:sizeof(RedvoxPacket1000_TimingInformation_SynchExchange__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacket1000_TimingInformation)];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - RedvoxPacket1000_ServerInformation
+
+@implementation RedvoxPacket1000_ServerInformation
+
+@dynamic authServerURL;
+@dynamic synchServerURL;
+@dynamic acquisitionServerURL;
+@dynamic metadata, metadata_Count;
+
+typedef struct RedvoxPacket1000_ServerInformation__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *authServerURL;
+  NSString *synchServerURL;
+  NSString *acquisitionServerURL;
+  NSMutableDictionary *metadata;
+} RedvoxPacket1000_ServerInformation__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "authServerURL",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_ServerInformation_FieldNumber_AuthServerURL,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_ServerInformation__storage_, authServerURL),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "synchServerURL",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_ServerInformation_FieldNumber_SynchServerURL,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_ServerInformation__storage_, synchServerURL),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "acquisitionServerURL",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_ServerInformation_FieldNumber_AcquisitionServerURL,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_ServerInformation__storage_, acquisitionServerURL),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "metadata",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_ServerInformation_FieldNumber_Metadata,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_ServerInformation__storage_, metadata),
+        .flags = GPBFieldMapKeyString,
+        .dataType = GPBDataTypeString,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[RedvoxPacket1000_ServerInformation class]
+                                     rootClass:[RedvoxApi1000Root class]
+                                          file:RedvoxApi1000Root_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(RedvoxPacket1000_ServerInformation__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\003\001\004\246\241!!\000\002\005\246\241!!\000\003\013\246\241!!\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacket1000)];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }

@@ -128,11 +128,24 @@ public final class RedvoxApi1000 {
     io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimingInformationOrBuilder getTimingInformationOrBuilder();
 
     /**
+     * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+     */
+    boolean hasServerInformation();
+    /**
+     * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+     */
+    io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation getServerInformation();
+    /**
+     * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+     */
+    io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformationOrBuilder getServerInformationOrBuilder();
+
+    /**
      * <pre>
      * Sensor channels
      * </pre>
      *
-     * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+     * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
      */
     boolean hasSensorChannels();
     /**
@@ -140,7 +153,7 @@ public final class RedvoxApi1000 {
      * Sensor channels
      * </pre>
      *
-     * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+     * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
      */
     io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels getSensorChannels();
     /**
@@ -148,7 +161,7 @@ public final class RedvoxApi1000 {
      * Sensor channels
      * </pre>
      *
-     * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+     * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
      */
     io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannelsOrBuilder getSensorChannelsOrBuilder();
 
@@ -157,7 +170,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 7;</code>
+     * <code>map&lt;string, string&gt; metadata = 8;</code>
      */
     int getMetadataCount();
     /**
@@ -165,7 +178,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 7;</code>
+     * <code>map&lt;string, string&gt; metadata = 8;</code>
      */
     boolean containsMetadata(
         java.lang.String key);
@@ -180,7 +193,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 7;</code>
+     * <code>map&lt;string, string&gt; metadata = 8;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getMetadataMap();
@@ -189,7 +202,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 7;</code>
+     * <code>map&lt;string, string&gt; metadata = 8;</code>
      */
 
     java.lang.String getMetadataOrDefault(
@@ -200,7 +213,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 7;</code>
+     * <code>map&lt;string, string&gt; metadata = 8;</code>
      */
 
     java.lang.String getMetadataOrThrow(
@@ -304,6 +317,19 @@ public final class RedvoxApi1000 {
               break;
             }
             case 50: {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.Builder subBuilder = null;
+              if (serverInformation_ != null) {
+                subBuilder = serverInformation_.toBuilder();
+              }
+              serverInformation_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(serverInformation_);
+                serverInformation_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
               io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels.Builder subBuilder = null;
               if (sensorChannels_ != null) {
                 subBuilder = sensorChannels_.toBuilder();
@@ -316,11 +342,11 @@ public final class RedvoxApi1000 {
 
               break;
             }
-            case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
                 metadata_ = com.google.protobuf.MapField.newMapField(
                     MetadataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000080;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               metadata__ = input.readMessage(
@@ -358,7 +384,7 @@ public final class RedvoxApi1000 {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 7:
+        case 8:
           return internalGetMetadata();
         default:
           throw new RuntimeException(
@@ -12773,6 +12799,1206 @@ public final class RedvoxApi1000 {
 
       @java.lang.Override
       public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimingInformation getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ServerInformationOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:redvox_api1000.RedvoxPacket1000.ServerInformation)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string auth_server_url = 1;</code>
+       */
+      java.lang.String getAuthServerUrl();
+      /**
+       * <code>string auth_server_url = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getAuthServerUrlBytes();
+
+      /**
+       * <code>string synch_server_url = 2;</code>
+       */
+      java.lang.String getSynchServerUrl();
+      /**
+       * <code>string synch_server_url = 2;</code>
+       */
+      com.google.protobuf.ByteString
+          getSynchServerUrlBytes();
+
+      /**
+       * <code>string acquisition_server_url = 3;</code>
+       */
+      java.lang.String getAcquisitionServerUrl();
+      /**
+       * <code>string acquisition_server_url = 3;</code>
+       */
+      com.google.protobuf.ByteString
+          getAcquisitionServerUrlBytes();
+
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      int getMetadataCount();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      boolean containsMetadata(
+          java.lang.String key);
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.String, java.lang.String>
+      getMetadata();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      java.util.Map<java.lang.String, java.lang.String>
+      getMetadataMap();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue);
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      java.lang.String getMetadataOrThrow(
+          java.lang.String key);
+    }
+    /**
+     * Protobuf type {@code redvox_api1000.RedvoxPacket1000.ServerInformation}
+     */
+    public  static final class ServerInformation extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:redvox_api1000.RedvoxPacket1000.ServerInformation)
+        ServerInformationOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ServerInformation.newBuilder() to construct.
+      private ServerInformation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ServerInformation() {
+        authServerUrl_ = "";
+        synchServerUrl_ = "";
+        acquisitionServerUrl_ = "";
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ServerInformation(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                authServerUrl_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                synchServerUrl_ = s;
+                break;
+              }
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                acquisitionServerUrl_ = s;
+                break;
+              }
+              case 34: {
+                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                  metadata_ = com.google.protobuf.MapField.newMapField(
+                      MetadataDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000008;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                metadata__ = input.readMessage(
+                    MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                metadata_.getMutableMap().put(
+                    metadata__.getKey(), metadata__.getValue());
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      @java.lang.Override
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.class, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int AUTH_SERVER_URL_FIELD_NUMBER = 1;
+      private volatile java.lang.Object authServerUrl_;
+      /**
+       * <code>string auth_server_url = 1;</code>
+       */
+      public java.lang.String getAuthServerUrl() {
+        java.lang.Object ref = authServerUrl_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authServerUrl_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string auth_server_url = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAuthServerUrlBytes() {
+        java.lang.Object ref = authServerUrl_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authServerUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int SYNCH_SERVER_URL_FIELD_NUMBER = 2;
+      private volatile java.lang.Object synchServerUrl_;
+      /**
+       * <code>string synch_server_url = 2;</code>
+       */
+      public java.lang.String getSynchServerUrl() {
+        java.lang.Object ref = synchServerUrl_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          synchServerUrl_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string synch_server_url = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSynchServerUrlBytes() {
+        java.lang.Object ref = synchServerUrl_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          synchServerUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int ACQUISITION_SERVER_URL_FIELD_NUMBER = 3;
+      private volatile java.lang.Object acquisitionServerUrl_;
+      /**
+       * <code>string acquisition_server_url = 3;</code>
+       */
+      public java.lang.String getAcquisitionServerUrl() {
+        java.lang.Object ref = acquisitionServerUrl_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          acquisitionServerUrl_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string acquisition_server_url = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAcquisitionServerUrlBytes() {
+        java.lang.Object ref = acquisitionServerUrl_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          acquisitionServerUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int METADATA_FIELD_NUMBER = 4;
+      private static final class MetadataDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.String, java.lang.String> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.String, java.lang.String>newDefaultInstance(
+                    io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_MetadataEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "",
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "");
+      }
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> metadata_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMetadata() {
+        if (metadata_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        return metadata_;
+      }
+
+      public int getMetadataCount() {
+        return internalGetMetadata().getMap().size();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      public boolean containsMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetMetadata().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+        return getMetadataMap();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+        return internalGetMetadata().getMap();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      public java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      public java.lang.String getMetadataOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getAuthServerUrlBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authServerUrl_);
+        }
+        if (!getSynchServerUrlBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, synchServerUrl_);
+        }
+        if (!getAcquisitionServerUrlBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, acquisitionServerUrl_);
+        }
+        com.google.protobuf.GeneratedMessageV3
+          .serializeStringMapTo(
+            output,
+            internalGetMetadata(),
+            MetadataDefaultEntryHolder.defaultEntry,
+            4);
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getAuthServerUrlBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authServerUrl_);
+        }
+        if (!getSynchServerUrlBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, synchServerUrl_);
+        }
+        if (!getAcquisitionServerUrlBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, acquisitionServerUrl_);
+        }
+        for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+             : internalGetMetadata().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+          metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(4, metadata__);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation)) {
+          return super.equals(obj);
+        }
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation other = (io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation) obj;
+
+        boolean result = true;
+        result = result && getAuthServerUrl()
+            .equals(other.getAuthServerUrl());
+        result = result && getSynchServerUrl()
+            .equals(other.getSynchServerUrl());
+        result = result && getAcquisitionServerUrl()
+            .equals(other.getAcquisitionServerUrl());
+        result = result && internalGetMetadata().equals(
+            other.internalGetMetadata());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + AUTH_SERVER_URL_FIELD_NUMBER;
+        hash = (53 * hash) + getAuthServerUrl().hashCode();
+        hash = (37 * hash) + SYNCH_SERVER_URL_FIELD_NUMBER;
+        hash = (53 * hash) + getSynchServerUrl().hashCode();
+        hash = (37 * hash) + ACQUISITION_SERVER_URL_FIELD_NUMBER;
+        hash = (53 * hash) + getAcquisitionServerUrl().hashCode();
+        if (!internalGetMetadata().getMap().isEmpty()) {
+          hash = (37 * hash) + METADATA_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetMetadata().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code redvox_api1000.RedvoxPacket1000.ServerInformation}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:redvox_api1000.RedvoxPacket1000.ServerInformation)
+          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformationOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_descriptor;
+        }
+
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 4:
+              return internalGetMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMutableMapField(
+            int number) {
+          switch (number) {
+            case 4:
+              return internalGetMutableMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.class, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.Builder.class);
+        }
+
+        // Construct using io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          authServerUrl_ = "";
+
+          synchServerUrl_ = "";
+
+          acquisitionServerUrl_ = "";
+
+          internalGetMutableMetadata().clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_descriptor;
+        }
+
+        @java.lang.Override
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation getDefaultInstanceForType() {
+          return io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation build() {
+          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation buildPartial() {
+          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation result = new io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          result.authServerUrl_ = authServerUrl_;
+          result.synchServerUrl_ = synchServerUrl_;
+          result.acquisitionServerUrl_ = acquisitionServerUrl_;
+          result.metadata_ = internalGetMetadata();
+          result.metadata_.makeImmutable();
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation) {
+            return mergeFrom((io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation other) {
+          if (other == io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.getDefaultInstance()) return this;
+          if (!other.getAuthServerUrl().isEmpty()) {
+            authServerUrl_ = other.authServerUrl_;
+            onChanged();
+          }
+          if (!other.getSynchServerUrl().isEmpty()) {
+            synchServerUrl_ = other.synchServerUrl_;
+            onChanged();
+          }
+          if (!other.getAcquisitionServerUrl().isEmpty()) {
+            acquisitionServerUrl_ = other.acquisitionServerUrl_;
+            onChanged();
+          }
+          internalGetMutableMetadata().mergeFrom(
+              other.internalGetMetadata());
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object authServerUrl_ = "";
+        /**
+         * <code>string auth_server_url = 1;</code>
+         */
+        public java.lang.String getAuthServerUrl() {
+          java.lang.Object ref = authServerUrl_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            authServerUrl_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string auth_server_url = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getAuthServerUrlBytes() {
+          java.lang.Object ref = authServerUrl_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            authServerUrl_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string auth_server_url = 1;</code>
+         */
+        public Builder setAuthServerUrl(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          authServerUrl_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string auth_server_url = 1;</code>
+         */
+        public Builder clearAuthServerUrl() {
+          
+          authServerUrl_ = getDefaultInstance().getAuthServerUrl();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string auth_server_url = 1;</code>
+         */
+        public Builder setAuthServerUrlBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          authServerUrl_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object synchServerUrl_ = "";
+        /**
+         * <code>string synch_server_url = 2;</code>
+         */
+        public java.lang.String getSynchServerUrl() {
+          java.lang.Object ref = synchServerUrl_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            synchServerUrl_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string synch_server_url = 2;</code>
+         */
+        public com.google.protobuf.ByteString
+            getSynchServerUrlBytes() {
+          java.lang.Object ref = synchServerUrl_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            synchServerUrl_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string synch_server_url = 2;</code>
+         */
+        public Builder setSynchServerUrl(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          synchServerUrl_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string synch_server_url = 2;</code>
+         */
+        public Builder clearSynchServerUrl() {
+          
+          synchServerUrl_ = getDefaultInstance().getSynchServerUrl();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string synch_server_url = 2;</code>
+         */
+        public Builder setSynchServerUrlBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          synchServerUrl_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object acquisitionServerUrl_ = "";
+        /**
+         * <code>string acquisition_server_url = 3;</code>
+         */
+        public java.lang.String getAcquisitionServerUrl() {
+          java.lang.Object ref = acquisitionServerUrl_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            acquisitionServerUrl_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string acquisition_server_url = 3;</code>
+         */
+        public com.google.protobuf.ByteString
+            getAcquisitionServerUrlBytes() {
+          java.lang.Object ref = acquisitionServerUrl_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            acquisitionServerUrl_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string acquisition_server_url = 3;</code>
+         */
+        public Builder setAcquisitionServerUrl(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          acquisitionServerUrl_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string acquisition_server_url = 3;</code>
+         */
+        public Builder clearAcquisitionServerUrl() {
+          
+          acquisitionServerUrl_ = getDefaultInstance().getAcquisitionServerUrl();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string acquisition_server_url = 3;</code>
+         */
+        public Builder setAcquisitionServerUrlBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          acquisitionServerUrl_ = value;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.MapField<
+            java.lang.String, java.lang.String> metadata_;
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMetadata() {
+          if (metadata_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          return metadata_;
+        }
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableMetadata() {
+          onChanged();;
+          if (metadata_ == null) {
+            metadata_ = com.google.protobuf.MapField.newMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          if (!metadata_.isMutable()) {
+            metadata_ = metadata_.copy();
+          }
+          return metadata_;
+        }
+
+        public int getMetadataCount() {
+          return internalGetMetadata().getMap().size();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        public boolean containsMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          return internalGetMetadata().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getMetadataMap()} instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+          return getMetadataMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+          return internalGetMetadata().getMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        public java.lang.String getMetadataOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        public java.lang.String getMetadataOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
+        public Builder clearMetadata() {
+          internalGetMutableMetadata().getMutableMap()
+              .clear();
+          return this;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        public Builder removeMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableMetadata().getMutableMap()
+              .remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String>
+        getMutableMetadata() {
+          return internalGetMutableMetadata().getMutableMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+        public Builder putMetadata(
+            java.lang.String key,
+            java.lang.String value) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (value == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableMetadata().getMutableMap()
+              .put(key, value);
+          return this;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        public Builder putAllMetadata(
+            java.util.Map<java.lang.String, java.lang.String> values) {
+          internalGetMutableMetadata().getMutableMap()
+              .putAll(values);
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:redvox_api1000.RedvoxPacket1000.ServerInformation)
+      }
+
+      // @@protoc_insertion_point(class_scope:redvox_api1000.RedvoxPacket1000.ServerInformation)
+      private static final io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation();
+      }
+
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ServerInformation>
+          PARSER = new com.google.protobuf.AbstractParser<ServerInformation>() {
+        @java.lang.Override
+        public ServerInformation parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ServerInformation(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ServerInformation> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ServerInformation> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -30231,14 +31457,35 @@ public final class RedvoxApi1000 {
       return getTimingInformation();
     }
 
-    public static final int SENSOR_CHANNELS_FIELD_NUMBER = 6;
+    public static final int SERVER_INFORMATION_FIELD_NUMBER = 6;
+    private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation serverInformation_;
+    /**
+     * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+     */
+    public boolean hasServerInformation() {
+      return serverInformation_ != null;
+    }
+    /**
+     * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+     */
+    public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation getServerInformation() {
+      return serverInformation_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.getDefaultInstance() : serverInformation_;
+    }
+    /**
+     * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+     */
+    public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformationOrBuilder getServerInformationOrBuilder() {
+      return getServerInformation();
+    }
+
+    public static final int SENSOR_CHANNELS_FIELD_NUMBER = 7;
     private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels sensorChannels_;
     /**
      * <pre>
      * Sensor channels
      * </pre>
      *
-     * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+     * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
      */
     public boolean hasSensorChannels() {
       return sensorChannels_ != null;
@@ -30248,7 +31495,7 @@ public final class RedvoxApi1000 {
      * Sensor channels
      * </pre>
      *
-     * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+     * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
      */
     public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels getSensorChannels() {
       return sensorChannels_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels.getDefaultInstance() : sensorChannels_;
@@ -30258,13 +31505,13 @@ public final class RedvoxApi1000 {
      * Sensor channels
      * </pre>
      *
-     * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+     * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
      */
     public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannelsOrBuilder getSensorChannelsOrBuilder() {
       return getSensorChannels();
     }
 
-    public static final int METADATA_FIELD_NUMBER = 7;
+    public static final int METADATA_FIELD_NUMBER = 8;
     private static final class MetadataDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.String, java.lang.String> defaultEntry =
@@ -30295,7 +31542,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 7;</code>
+     * <code>map&lt;string, string&gt; metadata = 8;</code>
      */
 
     public boolean containsMetadata(
@@ -30315,7 +31562,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 7;</code>
+     * <code>map&lt;string, string&gt; metadata = 8;</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -30326,7 +31573,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 7;</code>
+     * <code>map&lt;string, string&gt; metadata = 8;</code>
      */
 
     public java.lang.String getMetadataOrDefault(
@@ -30342,7 +31589,7 @@ public final class RedvoxApi1000 {
      * A map from string to string for including untyped metadata
      * </pre>
      *
-     * <code>map&lt;string, string&gt; metadata = 7;</code>
+     * <code>map&lt;string, string&gt; metadata = 8;</code>
      */
 
     public java.lang.String getMetadataOrThrow(
@@ -30385,15 +31632,18 @@ public final class RedvoxApi1000 {
       if (timingInformation_ != null) {
         output.writeMessage(5, getTimingInformation());
       }
+      if (serverInformation_ != null) {
+        output.writeMessage(6, getServerInformation());
+      }
       if (sensorChannels_ != null) {
-        output.writeMessage(6, getSensorChannels());
+        output.writeMessage(7, getSensorChannels());
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
           internalGetMetadata(),
           MetadataDefaultEntryHolder.defaultEntry,
-          7);
+          8);
       unknownFields.writeTo(output);
     }
 
@@ -30423,9 +31673,13 @@ public final class RedvoxApi1000 {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTimingInformation());
       }
+      if (serverInformation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getServerInformation());
+      }
       if (sensorChannels_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getSensorChannels());
+          .computeMessageSize(7, getSensorChannels());
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetMetadata().getMap().entrySet()) {
@@ -30435,7 +31689,7 @@ public final class RedvoxApi1000 {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(7, metadata__);
+            .computeMessageSize(8, metadata__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -30477,6 +31731,11 @@ public final class RedvoxApi1000 {
         result = result && getTimingInformation()
             .equals(other.getTimingInformation());
       }
+      result = result && (hasServerInformation() == other.hasServerInformation());
+      if (hasServerInformation()) {
+        result = result && getServerInformation()
+            .equals(other.getServerInformation());
+      }
       result = result && (hasSensorChannels() == other.hasSensorChannels());
       if (hasSensorChannels()) {
         result = result && getSensorChannels()
@@ -30513,6 +31772,10 @@ public final class RedvoxApi1000 {
       if (hasTimingInformation()) {
         hash = (37 * hash) + TIMING_INFORMATION_FIELD_NUMBER;
         hash = (53 * hash) + getTimingInformation().hashCode();
+      }
+      if (hasServerInformation()) {
+        hash = (37 * hash) + SERVER_INFORMATION_FIELD_NUMBER;
+        hash = (53 * hash) + getServerInformation().hashCode();
       }
       if (hasSensorChannels()) {
         hash = (37 * hash) + SENSOR_CHANNELS_FIELD_NUMBER;
@@ -30633,7 +31896,7 @@ public final class RedvoxApi1000 {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 7:
+          case 8:
             return internalGetMetadata();
           default:
             throw new RuntimeException(
@@ -30644,7 +31907,7 @@ public final class RedvoxApi1000 {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 7:
+          case 8:
             return internalGetMutableMetadata();
           default:
             throw new RuntimeException(
@@ -30703,6 +31966,12 @@ public final class RedvoxApi1000 {
           timingInformation_ = null;
           timingInformationBuilder_ = null;
         }
+        if (serverInformationBuilder_ == null) {
+          serverInformation_ = null;
+        } else {
+          serverInformation_ = null;
+          serverInformationBuilder_ = null;
+        }
         if (sensorChannelsBuilder_ == null) {
           sensorChannels_ = null;
         } else {
@@ -30758,6 +32027,11 @@ public final class RedvoxApi1000 {
           result.timingInformation_ = timingInformation_;
         } else {
           result.timingInformation_ = timingInformationBuilder_.build();
+        }
+        if (serverInformationBuilder_ == null) {
+          result.serverInformation_ = serverInformation_;
+        } else {
+          result.serverInformation_ = serverInformationBuilder_.build();
         }
         if (sensorChannelsBuilder_ == null) {
           result.sensorChannels_ = sensorChannels_;
@@ -30829,6 +32103,9 @@ public final class RedvoxApi1000 {
         }
         if (other.hasTimingInformation()) {
           mergeTimingInformation(other.getTimingInformation());
+        }
+        if (other.hasServerInformation()) {
+          mergeServerInformation(other.getServerInformation());
         }
         if (other.hasSensorChannels()) {
           mergeSensorChannels(other.getSensorChannels());
@@ -31515,6 +32792,123 @@ public final class RedvoxApi1000 {
         return timingInformationBuilder_;
       }
 
+      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation serverInformation_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformationOrBuilder> serverInformationBuilder_;
+      /**
+       * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+       */
+      public boolean hasServerInformation() {
+        return serverInformationBuilder_ != null || serverInformation_ != null;
+      }
+      /**
+       * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+       */
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation getServerInformation() {
+        if (serverInformationBuilder_ == null) {
+          return serverInformation_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.getDefaultInstance() : serverInformation_;
+        } else {
+          return serverInformationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+       */
+      public Builder setServerInformation(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation value) {
+        if (serverInformationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          serverInformation_ = value;
+          onChanged();
+        } else {
+          serverInformationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+       */
+      public Builder setServerInformation(
+          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.Builder builderForValue) {
+        if (serverInformationBuilder_ == null) {
+          serverInformation_ = builderForValue.build();
+          onChanged();
+        } else {
+          serverInformationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+       */
+      public Builder mergeServerInformation(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation value) {
+        if (serverInformationBuilder_ == null) {
+          if (serverInformation_ != null) {
+            serverInformation_ =
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.newBuilder(serverInformation_).mergeFrom(value).buildPartial();
+          } else {
+            serverInformation_ = value;
+          }
+          onChanged();
+        } else {
+          serverInformationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+       */
+      public Builder clearServerInformation() {
+        if (serverInformationBuilder_ == null) {
+          serverInformation_ = null;
+          onChanged();
+        } else {
+          serverInformation_ = null;
+          serverInformationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+       */
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.Builder getServerInformationBuilder() {
+        
+        onChanged();
+        return getServerInformationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+       */
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformationOrBuilder getServerInformationOrBuilder() {
+        if (serverInformationBuilder_ != null) {
+          return serverInformationBuilder_.getMessageOrBuilder();
+        } else {
+          return serverInformation_ == null ?
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.getDefaultInstance() : serverInformation_;
+        }
+      }
+      /**
+       * <code>.redvox_api1000.RedvoxPacket1000.ServerInformation server_information = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformationOrBuilder> 
+          getServerInformationFieldBuilder() {
+        if (serverInformationBuilder_ == null) {
+          serverInformationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformation.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.ServerInformationOrBuilder>(
+                  getServerInformation(),
+                  getParentForChildren(),
+                  isClean());
+          serverInformation_ = null;
+        }
+        return serverInformationBuilder_;
+      }
+
       private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels sensorChannels_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannelsOrBuilder> sensorChannelsBuilder_;
@@ -31523,7 +32917,7 @@ public final class RedvoxApi1000 {
        * Sensor channels
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
        */
       public boolean hasSensorChannels() {
         return sensorChannelsBuilder_ != null || sensorChannels_ != null;
@@ -31533,7 +32927,7 @@ public final class RedvoxApi1000 {
        * Sensor channels
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
        */
       public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels getSensorChannels() {
         if (sensorChannelsBuilder_ == null) {
@@ -31547,7 +32941,7 @@ public final class RedvoxApi1000 {
        * Sensor channels
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
        */
       public Builder setSensorChannels(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels value) {
         if (sensorChannelsBuilder_ == null) {
@@ -31567,7 +32961,7 @@ public final class RedvoxApi1000 {
        * Sensor channels
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
        */
       public Builder setSensorChannels(
           io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels.Builder builderForValue) {
@@ -31585,7 +32979,7 @@ public final class RedvoxApi1000 {
        * Sensor channels
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
        */
       public Builder mergeSensorChannels(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels value) {
         if (sensorChannelsBuilder_ == null) {
@@ -31607,7 +33001,7 @@ public final class RedvoxApi1000 {
        * Sensor channels
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
        */
       public Builder clearSensorChannels() {
         if (sensorChannelsBuilder_ == null) {
@@ -31625,7 +33019,7 @@ public final class RedvoxApi1000 {
        * Sensor channels
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
        */
       public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels.Builder getSensorChannelsBuilder() {
         
@@ -31637,7 +33031,7 @@ public final class RedvoxApi1000 {
        * Sensor channels
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
        */
       public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannelsOrBuilder getSensorChannelsOrBuilder() {
         if (sensorChannelsBuilder_ != null) {
@@ -31652,7 +33046,7 @@ public final class RedvoxApi1000 {
        * Sensor channels
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 6;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SensorChannels sensor_channels = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannels.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SensorChannelsOrBuilder> 
@@ -31699,7 +33093,7 @@ public final class RedvoxApi1000 {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 7;</code>
+       * <code>map&lt;string, string&gt; metadata = 8;</code>
        */
 
       public boolean containsMetadata(
@@ -31719,7 +33113,7 @@ public final class RedvoxApi1000 {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 7;</code>
+       * <code>map&lt;string, string&gt; metadata = 8;</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -31730,7 +33124,7 @@ public final class RedvoxApi1000 {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 7;</code>
+       * <code>map&lt;string, string&gt; metadata = 8;</code>
        */
 
       public java.lang.String getMetadataOrDefault(
@@ -31746,7 +33140,7 @@ public final class RedvoxApi1000 {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 7;</code>
+       * <code>map&lt;string, string&gt; metadata = 8;</code>
        */
 
       public java.lang.String getMetadataOrThrow(
@@ -31770,7 +33164,7 @@ public final class RedvoxApi1000 {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 7;</code>
+       * <code>map&lt;string, string&gt; metadata = 8;</code>
        */
 
       public Builder removeMetadata(
@@ -31793,7 +33187,7 @@ public final class RedvoxApi1000 {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 7;</code>
+       * <code>map&lt;string, string&gt; metadata = 8;</code>
        */
       public Builder putMetadata(
           java.lang.String key,
@@ -31809,7 +33203,7 @@ public final class RedvoxApi1000 {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 7;</code>
+       * <code>map&lt;string, string&gt; metadata = 8;</code>
        */
 
       public Builder putAllMetadata(
@@ -34785,6 +36179,16 @@ public final class RedvoxApi1000 {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_MetadataEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_MetadataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_MetadataEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -34884,7 +36288,7 @@ public final class RedvoxApi1000 {
   static {
     java.lang.String[] descriptorData = {
       "\n(src/redvox_api1000/redvox_api_1000.pro" +
-      "to\022\016redvox_api1000\"\246@\n\020RedvoxPacket1000\022" +
+      "to\022\016redvox_api1000\"\344B\n\020RedvoxPacket1000\022" +
       "\013\n\003api\030\001 \001(\001\022J\n\020user_information\030\002 \001(\01320" +
       ".redvox_api1000.RedvoxPacket1000.UserInf" +
       "ormation\022N\n\022device_information\030\003 \001(\01322.r" +
@@ -34893,9 +36297,11 @@ public final class RedvoxApi1000 {
       "edvox_api1000.RedvoxPacket1000.PacketInf" +
       "ormation\022N\n\022timing_information\030\005 \001(\01322.r" +
       "edvox_api1000.RedvoxPacket1000.TimingInf" +
-      "ormation\022H\n\017sensor_channels\030\006 \001(\0132/.redv" +
+      "ormation\022N\n\022server_information\030\006 \001(\01322.r" +
+      "edvox_api1000.RedvoxPacket1000.ServerInf" +
+      "ormation\022H\n\017sensor_channels\030\007 \001(\0132/.redv" +
       "ox_api1000.RedvoxPacket1000.SensorChanne" +
-      "ls\022@\n\010metadata\030\007 \003(\0132..redvox_api1000.Re" +
+      "ls\022@\n\010metadata\030\010 \003(\0132..redvox_api1000.Re" +
       "dvoxPacket1000.MetadataEntry\032/\n\rMetadata" +
       "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\324\001" +
       "\n\017UserInformation\022\022\n\nauth_email\030\001 \001(\t\022\022\n" +
@@ -34986,123 +36392,129 @@ public final class RedvoxApi1000 {
       "tadata\030\007 \003(\0132N.redvox_api1000.RedvoxPack" +
       "et1000.TimingInformation.SynchExchange.M" +
       "etadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\036\n\016SensorChannels" +
-      "\022]\n\022microphone_channel\030\001 \001(\0132A.redvox_ap" +
-      "i1000.RedvoxPacket1000.SensorChannels.Mi" +
-      "crophoneChannel\022X\n\021barometer_channel\030\002 \001" +
-      "(\0132=.redvox_api1000.RedvoxPacket1000.Sen" +
-      "sorChannels.SingleChannel\022Y\n\020location_ch" +
-      "annel\030\003 \001(\0132?.redvox_api1000.RedvoxPacke" +
-      "t1000.SensorChannels.LocationChannel\022Y\n\025" +
-      "accelerometer_channel\030\004 \001(\0132:.redvox_api" +
-      "1000.RedvoxPacket1000.SensorChannels.Xyz" +
-      "Channel\022U\n\021gyroscope_channel\030\005 \001(\0132:.red" +
-      "vox_api1000.RedvoxPacket1000.SensorChann" +
-      "els.XyzChannel\022X\n\024magnetometer_channel\030\006" +
-      " \001(\0132:.redvox_api1000.RedvoxPacket1000.S" +
-      "ensorChannels.XyzChannel\022T\n\rlight_channe" +
-      "l\030\007 \001(\0132=.redvox_api1000.RedvoxPacket100" +
-      "0.SensorChannels.SingleChannel\022W\n\020infrar" +
-      "ed_channel\030\010 \001(\0132=.redvox_api1000.Redvox" +
-      "Packet1000.SensorChannels.SingleChannel\022" +
-      "S\n\rimage_channel\030\t \001(\0132<.redvox_api1000." +
-      "RedvoxPacket1000.SensorChannels.ImageCha" +
-      "nnel\022O\n\010metadata\030\n \003(\0132=.redvox_api1000." +
-      "RedvoxPacket1000.SensorChannels.Metadata" +
-      "Entry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\032\355\002\n\021MicrophoneChannel\022\032\n\022" +
-      "sensor_description\030\001 \001(\t\022\032\n\022first_sample" +
-      "_ts_us\030\002 \001(\001\022\026\n\016sample_rate_hz\030\003 \001(\001\022\024\n\014" +
-      "is_scrambled\030\004 \001(\010\022\017\n\007samples\030\005 \003(\001\022M\n\021s" +
-      "ample_statistics\030\006 \001(\01322.redvox_api1000." +
-      "RedvoxPacket1000.SummaryStatistics\022a\n\010me" +
-      "tadata\030\007 \003(\0132O.redvox_api1000.RedvoxPack" +
-      "et1000.SensorChannels.MicrophoneChannel." +
-      "MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\003\n\rSingleChannel" +
-      "\022\032\n\022sensor_description\030\001 \001(\t\022\033\n\023mean_sam" +
-      "ple_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022" +
-      "\017\n\007samples\030\004 \003(\001\022R\n\026sample_rate_statisti" +
-      "cs\030\005 \001(\01322.redvox_api1000.RedvoxPacket10" +
-      "00.SummaryStatistics\022M\n\021sample_statistic" +
-      "s\030\006 \001(\01322.redvox_api1000.RedvoxPacket100" +
-      "0.SummaryStatistics\022]\n\010metadata\030\007 \003(\0132K." +
-      "redvox_api1000.RedvoxPacket1000.SensorCh" +
-      "annels.SingleChannel.MetadataEntry\032/\n\rMe" +
-      "tadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\032\225\t\n\017LocationChannel\022\032\n\022sensor_descri" +
-      "ption\030\001 \001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001(\001" +
-      "\022\024\n\014sample_ts_us\030\003 \003(\001\022\030\n\020latitude_sampl" +
-      "es\030\004 \003(\001\022\031\n\021longitude_samples\030\005 \003(\001\022\030\n\020a" +
-      "ltitude_samples\030\006 \003(\001\022\025\n\rspeed_samples\030\007" +
-      " \003(\001\022\030\n\020accuracy_samples\030\010 \003(\001\022$\n\034locati" +
-      "on_permissions_granted\030\t \001(\010\022#\n\033location" +
-      "_services_requested\030\n \001(\010\022!\n\031location_se" +
-      "rvices_enabled\030\013 \001(\010\022k\n\021location_provide" +
-      "r\030\014 \001(\0162P.redvox_api1000.RedvoxPacket100" +
-      "0.SensorChannels.LocationChannel.Locatio" +
-      "nProvider\022R\n\026sample_rate_statistics\030\r \001(" +
-      "\01322.redvox_api1000.RedvoxPacket1000.Summ" +
-      "aryStatistics\022V\n\032latitude_sample_statist" +
-      "ics\030\016 \001(\01322.redvox_api1000.RedvoxPacket1" +
-      "000.SummaryStatistics\022W\n\033longitude_sampl" +
-      "e_statistics\030\017 \001(\01322.redvox_api1000.Redv" +
-      "oxPacket1000.SummaryStatistics\022V\n\032altitu" +
-      "de_sample_statistics\030\020 \001(\01322.redvox_api1" +
-      "000.RedvoxPacket1000.SummaryStatistics\022S" +
-      "\n\027speed_sample_statistics\030\021 \001(\01322.redvox" +
-      "_api1000.RedvoxPacket1000.SummaryStatist" +
-      "ics\022V\n\032accuracy_sample_statistics\030\022 \001(\0132" +
-      "2.redvox_api1000.RedvoxPacket1000.Summar" +
-      "yStatistics\022_\n\010metadata\030\023 \003(\0132M.redvox_a" +
-      "pi1000.RedvoxPacket1000.SensorChannels.L" +
-      "ocationChannel.MetadataEntry\032/\n\rMetadata" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"<\n" +
-      "\020LocationProvider\022\010\n\004NONE\020\000\022\010\n\004USER\020\001\022\007\n" +
-      "\003GPS\020\002\022\013\n\007NETWORK\020\003\032\350\004\n\nXyzChannel\022\032\n\022se" +
-      "nsor_description\030\001 \001(\t\022\033\n\023mean_sample_ra" +
-      "te_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\021\n\tx_s" +
-      "amples\030\004 \003(\001\022\021\n\ty_samples\030\005 \003(\001\022\021\n\tz_sam" +
-      "ples\030\006 \003(\001\022R\n\026sample_rate_statistics\030\007 \001" +
-      "(\01322.redvox_api1000.RedvoxPacket1000.Sum" +
-      "maryStatistics\022O\n\023x_sample_statistics\030\010 " +
-      "\001(\01322.redvox_api1000.RedvoxPacket1000.Su" +
-      "mmaryStatistics\022O\n\023y_sample_statistics\030\t" +
-      " \001(\01322.redvox_api1000.RedvoxPacket1000.S" +
-      "ummaryStatistics\022O\n\023z_sample_statistics\030" +
-      "\n \001(\01322.redvox_api1000.RedvoxPacket1000." +
-      "SummaryStatistics\022Z\n\010metadata\030\013 \003(\0132H.re" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\353\001\n\021ServerInformat" +
+      "ion\022\027\n\017auth_server_url\030\001 \001(\t\022\030\n\020synch_se" +
+      "rver_url\030\002 \001(\t\022\036\n\026acquisition_server_url" +
+      "\030\003 \001(\t\022R\n\010metadata\030\004 \003(\0132@.redvox_api100" +
+      "0.RedvoxPacket1000.ServerInformation.Met" +
+      "adataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\036\n\016SensorChannels\022]" +
+      "\n\022microphone_channel\030\001 \001(\0132A.redvox_api1" +
+      "000.RedvoxPacket1000.SensorChannels.Micr" +
+      "ophoneChannel\022X\n\021barometer_channel\030\002 \001(\013" +
+      "2=.redvox_api1000.RedvoxPacket1000.Senso" +
+      "rChannels.SingleChannel\022Y\n\020location_chan" +
+      "nel\030\003 \001(\0132?.redvox_api1000.RedvoxPacket1" +
+      "000.SensorChannels.LocationChannel\022Y\n\025ac" +
+      "celerometer_channel\030\004 \001(\0132:.redvox_api10" +
+      "00.RedvoxPacket1000.SensorChannels.XyzCh" +
+      "annel\022U\n\021gyroscope_channel\030\005 \001(\0132:.redvo" +
+      "x_api1000.RedvoxPacket1000.SensorChannel" +
+      "s.XyzChannel\022X\n\024magnetometer_channel\030\006 \001" +
+      "(\0132:.redvox_api1000.RedvoxPacket1000.Sen" +
+      "sorChannels.XyzChannel\022T\n\rlight_channel\030" +
+      "\007 \001(\0132=.redvox_api1000.RedvoxPacket1000." +
+      "SensorChannels.SingleChannel\022W\n\020infrared" +
+      "_channel\030\010 \001(\0132=.redvox_api1000.RedvoxPa" +
+      "cket1000.SensorChannels.SingleChannel\022S\n" +
+      "\rimage_channel\030\t \001(\0132<.redvox_api1000.Re" +
+      "dvoxPacket1000.SensorChannels.ImageChann" +
+      "el\022O\n\010metadata\030\n \003(\0132=.redvox_api1000.Re" +
+      "dvoxPacket1000.SensorChannels.MetadataEn" +
+      "try\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\032\355\002\n\021MicrophoneChannel\022\032\n\022se" +
+      "nsor_description\030\001 \001(\t\022\032\n\022first_sample_t" +
+      "s_us\030\002 \001(\001\022\026\n\016sample_rate_hz\030\003 \001(\001\022\024\n\014is" +
+      "_scrambled\030\004 \001(\010\022\017\n\007samples\030\005 \003(\001\022M\n\021sam" +
+      "ple_statistics\030\006 \001(\01322.redvox_api1000.Re" +
+      "dvoxPacket1000.SummaryStatistics\022a\n\010meta" +
+      "data\030\007 \003(\0132O.redvox_api1000.RedvoxPacket" +
+      "1000.SensorChannels.MicrophoneChannel.Me" +
+      "tadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\242\003\n\rSingleChannel\022\032" +
+      "\n\022sensor_description\030\001 \001(\t\022\033\n\023mean_sampl" +
+      "e_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\017\n" +
+      "\007samples\030\004 \003(\001\022R\n\026sample_rate_statistics" +
+      "\030\005 \001(\01322.redvox_api1000.RedvoxPacket1000" +
+      ".SummaryStatistics\022M\n\021sample_statistics\030" +
+      "\006 \001(\01322.redvox_api1000.RedvoxPacket1000." +
+      "SummaryStatistics\022]\n\010metadata\030\007 \003(\0132K.re" +
       "dvox_api1000.RedvoxPacket1000.SensorChan" +
-      "nels.XyzChannel.MetadataEntry\032/\n\rMetadat" +
-      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321" +
-      "\002\n\014ImageChannel\022\032\n\022sensor_description\030\001 " +
-      "\001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001(\001\022\024\n\014samp" +
-      "le_ts_us\030\003 \003(\001\022\017\n\007samples\030\004 \003(\014\022R\n\026sampl" +
-      "e_rate_statistics\030\005 \001(\01322.redvox_api1000" +
-      ".RedvoxPacket1000.SummaryStatistics\022\\\n\010m" +
-      "etadata\030\006 \003(\0132J.redvox_api1000.RedvoxPac" +
-      "ket1000.SensorChannels.ImageChannel.Meta" +
-      "dataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\032\216\002\n\021SummaryStatistics" +
-      "\022\r\n\005count\030\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\016\n\006median\030" +
-      "\003 \001(\001\022\014\n\004mode\030\004 \001(\001\022\020\n\010variance\030\005 \001(\001\022\013\n" +
-      "\003min\030\006 \001(\001\022\013\n\003max\030\007 \001(\001\022\r\n\005range\030\010 \001(\001\022R" +
-      "\n\010metadata\030\t \003(\0132@.redvox_api1000.Redvox" +
-      "Packet1000.SummaryStatistics.MetadataEnt" +
-      "ry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\"M\n\022AcquisitionRequest\022%\n\035com" +
-      "pressed_redvox_packet_1000\030\001 \001(\014\022\020\n\010chec" +
-      "ksum\030\002 \001(\003\"\332\001\n\023AcquisitionResponse\022G\n\rre" +
-      "sponse_type\030\001 \001(\01620.redvox_api1000.Acqui" +
-      "sitionResponse.ResponseType\022\020\n\010checksum\030" +
-      "\002 \001(\003\022\017\n\007details\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"G" +
-      "\n\014ResponseType\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001\022\016" +
-      "\n\nDATA_ERROR\020\002\022\017\n\013OTHER_ERROR\020\003\"2\n\014Synch" +
-      "Request\022\016\n\006seq_id\030\001 \001(\004\022\022\n\nsub_seq_id\030\002 " +
-      "\001(\r\"[\n\rSynchResponse\022\016\n\006seq_id\030\001 \001(\004\022\022\n\n" +
-      "sub_seq_id\030\002 \001(\r\022\022\n\nrecv_ts_us\030\003 \001(\004\022\022\n\n" +
-      "send_ts_us\030\004 \001(\004B\032\n\030io.redvox.redvox_api" +
-      "1000b\006proto3"
+      "nels.SingleChannel.MetadataEntry\032/\n\rMeta" +
+      "dataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\032\225\t\n\017LocationChannel\022\032\n\022sensor_descript" +
+      "ion\030\001 \001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001(\001\022\024" +
+      "\n\014sample_ts_us\030\003 \003(\001\022\030\n\020latitude_samples" +
+      "\030\004 \003(\001\022\031\n\021longitude_samples\030\005 \003(\001\022\030\n\020alt" +
+      "itude_samples\030\006 \003(\001\022\025\n\rspeed_samples\030\007 \003" +
+      "(\001\022\030\n\020accuracy_samples\030\010 \003(\001\022$\n\034location" +
+      "_permissions_granted\030\t \001(\010\022#\n\033location_s" +
+      "ervices_requested\030\n \001(\010\022!\n\031location_serv" +
+      "ices_enabled\030\013 \001(\010\022k\n\021location_provider\030" +
+      "\014 \001(\0162P.redvox_api1000.RedvoxPacket1000." +
+      "SensorChannels.LocationChannel.LocationP" +
+      "rovider\022R\n\026sample_rate_statistics\030\r \001(\0132" +
+      "2.redvox_api1000.RedvoxPacket1000.Summar" +
+      "yStatistics\022V\n\032latitude_sample_statistic" +
+      "s\030\016 \001(\01322.redvox_api1000.RedvoxPacket100" +
+      "0.SummaryStatistics\022W\n\033longitude_sample_" +
+      "statistics\030\017 \001(\01322.redvox_api1000.Redvox" +
+      "Packet1000.SummaryStatistics\022V\n\032altitude" +
+      "_sample_statistics\030\020 \001(\01322.redvox_api100" +
+      "0.RedvoxPacket1000.SummaryStatistics\022S\n\027" +
+      "speed_sample_statistics\030\021 \001(\01322.redvox_a" +
+      "pi1000.RedvoxPacket1000.SummaryStatistic" +
+      "s\022V\n\032accuracy_sample_statistics\030\022 \001(\01322." +
+      "redvox_api1000.RedvoxPacket1000.SummaryS" +
+      "tatistics\022_\n\010metadata\030\023 \003(\0132M.redvox_api" +
+      "1000.RedvoxPacket1000.SensorChannels.Loc" +
+      "ationChannel.MetadataEntry\032/\n\rMetadataEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"<\n\020L" +
+      "ocationProvider\022\010\n\004NONE\020\000\022\010\n\004USER\020\001\022\007\n\003G" +
+      "PS\020\002\022\013\n\007NETWORK\020\003\032\350\004\n\nXyzChannel\022\032\n\022sens" +
+      "or_description\030\001 \001(\t\022\033\n\023mean_sample_rate" +
+      "_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003(\001\022\021\n\tx_sam" +
+      "ples\030\004 \003(\001\022\021\n\ty_samples\030\005 \003(\001\022\021\n\tz_sampl" +
+      "es\030\006 \003(\001\022R\n\026sample_rate_statistics\030\007 \001(\013" +
+      "22.redvox_api1000.RedvoxPacket1000.Summa" +
+      "ryStatistics\022O\n\023x_sample_statistics\030\010 \001(" +
+      "\01322.redvox_api1000.RedvoxPacket1000.Summ" +
+      "aryStatistics\022O\n\023y_sample_statistics\030\t \001" +
+      "(\01322.redvox_api1000.RedvoxPacket1000.Sum" +
+      "maryStatistics\022O\n\023z_sample_statistics\030\n " +
+      "\001(\01322.redvox_api1000.RedvoxPacket1000.Su" +
+      "mmaryStatistics\022Z\n\010metadata\030\013 \003(\0132H.redv" +
+      "ox_api1000.RedvoxPacket1000.SensorChanne" +
+      "ls.XyzChannel.MetadataEntry\032/\n\rMetadataE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321\002\n" +
+      "\014ImageChannel\022\032\n\022sensor_description\030\001 \001(" +
+      "\t\022\033\n\023mean_sample_rate_hz\030\002 \001(\001\022\024\n\014sample" +
+      "_ts_us\030\003 \003(\001\022\017\n\007samples\030\004 \003(\014\022R\n\026sample_" +
+      "rate_statistics\030\005 \001(\01322.redvox_api1000.R" +
+      "edvoxPacket1000.SummaryStatistics\022\\\n\010met" +
+      "adata\030\006 \003(\0132J.redvox_api1000.RedvoxPacke" +
+      "t1000.SensorChannels.ImageChannel.Metada" +
+      "taEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\032\216\002\n\021SummaryStatistics\022\r" +
+      "\n\005count\030\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\016\n\006median\030\003 " +
+      "\001(\001\022\014\n\004mode\030\004 \001(\001\022\020\n\010variance\030\005 \001(\001\022\013\n\003m" +
+      "in\030\006 \001(\001\022\013\n\003max\030\007 \001(\001\022\r\n\005range\030\010 \001(\001\022R\n\010" +
+      "metadata\030\t \003(\0132@.redvox_api1000.RedvoxPa" +
+      "cket1000.SummaryStatistics.MetadataEntry" +
+      "\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"M\n\022AcquisitionRequest\022%\n\035compr" +
+      "essed_redvox_packet_1000\030\001 \001(\014\022\020\n\010checks" +
+      "um\030\002 \001(\003\"\332\001\n\023AcquisitionResponse\022G\n\rresp" +
+      "onse_type\030\001 \001(\01620.redvox_api1000.Acquisi" +
+      "tionResponse.ResponseType\022\020\n\010checksum\030\002 " +
+      "\001(\003\022\017\n\007details\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"G\n\014" +
+      "ResponseType\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001\022\016\n\n" +
+      "DATA_ERROR\020\002\022\017\n\013OTHER_ERROR\020\003\"2\n\014SynchRe" +
+      "quest\022\016\n\006seq_id\030\001 \001(\004\022\022\n\nsub_seq_id\030\002 \001(" +
+      "\r\"[\n\rSynchResponse\022\016\n\006seq_id\030\001 \001(\004\022\022\n\nsu" +
+      "b_seq_id\030\002 \001(\r\022\022\n\nrecv_ts_us\030\003 \001(\004\022\022\n\nse" +
+      "nd_ts_us\030\004 \001(\004B\032\n\030io.redvox.redvox_api10" +
+      "00b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -35121,7 +36533,7 @@ public final class RedvoxApi1000 {
     internal_static_redvox_api1000_RedvoxPacket1000_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_descriptor,
-        new java.lang.String[] { "Api", "UserInformation", "DeviceInformation", "PacketInformation", "TimingInformation", "SensorChannels", "Metadata", });
+        new java.lang.String[] { "Api", "UserInformation", "DeviceInformation", "PacketInformation", "TimingInformation", "ServerInformation", "SensorChannels", "Metadata", });
     internal_static_redvox_api1000_RedvoxPacket1000_MetadataEntry_descriptor =
       internal_static_redvox_api1000_RedvoxPacket1000_descriptor.getNestedTypes().get(0);
     internal_static_redvox_api1000_RedvoxPacket1000_MetadataEntry_fieldAccessorTable = new
@@ -35200,8 +36612,20 @@ public final class RedvoxApi1000 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_TimingInformation_SynchExchange_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor =
+    internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_descriptor =
       internal_static_redvox_api1000_RedvoxPacket1000_descriptor.getNestedTypes().get(5);
+    internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_descriptor,
+        new java.lang.String[] { "AuthServerUrl", "SynchServerUrl", "AcquisitionServerUrl", "Metadata", });
+    internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_MetadataEntry_descriptor =
+      internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_descriptor.getNestedTypes().get(0);
+    internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_MetadataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_redvox_api1000_RedvoxPacket1000_ServerInformation_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor =
+      internal_static_redvox_api1000_RedvoxPacket1000_descriptor.getNestedTypes().get(6);
     internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_descriptor,
@@ -35273,7 +36697,7 @@ public final class RedvoxApi1000 {
         internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_ImageChannel_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_redvox_api1000_RedvoxPacket1000_SummaryStatistics_descriptor =
-      internal_static_redvox_api1000_RedvoxPacket1000_descriptor.getNestedTypes().get(6);
+      internal_static_redvox_api1000_RedvoxPacket1000_descriptor.getNestedTypes().get(7);
     internal_static_redvox_api1000_RedvoxPacket1000_SummaryStatistics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_SummaryStatistics_descriptor,

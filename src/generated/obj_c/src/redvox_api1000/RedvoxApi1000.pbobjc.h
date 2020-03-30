@@ -36,6 +36,7 @@ CF_EXTERN_C_BEGIN
 @class RedvoxPacket1000_SensorChannels_MicrophoneChannel;
 @class RedvoxPacket1000_SensorChannels_SingleChannel;
 @class RedvoxPacket1000_SensorChannels_XyzChannel;
+@class RedvoxPacket1000_ServerInformation;
 @class RedvoxPacket1000_SummaryStatistics;
 @class RedvoxPacket1000_TimingInformation;
 @class RedvoxPacket1000_TimingInformation_SynchExchange;
@@ -236,8 +237,9 @@ typedef GPB_ENUM(RedvoxPacket1000_FieldNumber) {
   RedvoxPacket1000_FieldNumber_DeviceInformation = 3,
   RedvoxPacket1000_FieldNumber_PacketInformation = 4,
   RedvoxPacket1000_FieldNumber_TimingInformation = 5,
-  RedvoxPacket1000_FieldNumber_SensorChannels = 6,
-  RedvoxPacket1000_FieldNumber_Metadata = 7,
+  RedvoxPacket1000_FieldNumber_ServerInformation = 6,
+  RedvoxPacket1000_FieldNumber_SensorChannels = 7,
+  RedvoxPacket1000_FieldNumber_Metadata = 8,
 };
 
 @interface RedvoxPacket1000 : GPBMessage
@@ -264,6 +266,10 @@ typedef GPB_ENUM(RedvoxPacket1000_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_TimingInformation *timingInformation;
 /** Test to see if @c timingInformation has been set. */
 @property(nonatomic, readwrite) BOOL hasTimingInformation;
+
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_ServerInformation *serverInformation;
+/** Test to see if @c serverInformation has been set. */
+@property(nonatomic, readwrite) BOOL hasServerInformation;
 
 /** Sensor channels */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels *sensorChannels;
@@ -620,6 +626,30 @@ typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber) {
 @property(nonatomic, readwrite) double b2;
 
 @property(nonatomic, readwrite) double b3;
+
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
+
+@end
+
+#pragma mark - RedvoxPacket1000_ServerInformation
+
+typedef GPB_ENUM(RedvoxPacket1000_ServerInformation_FieldNumber) {
+  RedvoxPacket1000_ServerInformation_FieldNumber_AuthServerURL = 1,
+  RedvoxPacket1000_ServerInformation_FieldNumber_SynchServerURL = 2,
+  RedvoxPacket1000_ServerInformation_FieldNumber_AcquisitionServerURL = 3,
+  RedvoxPacket1000_ServerInformation_FieldNumber_Metadata = 4,
+};
+
+@interface RedvoxPacket1000_ServerInformation : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *authServerURL;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *synchServerURL;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *acquisitionServerURL;
 
 /** A map from string to string for including untyped metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
