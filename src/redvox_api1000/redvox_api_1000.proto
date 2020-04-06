@@ -61,7 +61,7 @@ message RedvoxPacket1000 {
         }
 
         message AppSettings {
-            AudioSamplingRate audio_sampling_rate = 1;
+            AudioSamplingRate audio_sampling_rate_hz = 1;
             AudioSourceTuning audio_source_tuning = 2;
             repeated InputSensor additional_input_sensors = 3;
             bool automatically_record = 4;
@@ -117,10 +117,10 @@ message RedvoxPacket1000 {
     }
 
     message TimingInformation {
-        double packet_start_ts_us_wall = 1;                // Start timestamp of the packet using the wall clock (corresponding to first microphone sample)
-        double packet_start_ts_us_mach = 2;                // Start timestamp of the packet using machine time (corresponding to the first microphone sample)
-        double packet_end_ts_us_wall = 3;                  // End timestamp of the packet using the wall clock (corresponding to the last microphone sample)
-        double packet_end_ts_us_mach = 4;                  // End timestamp of the packet using machine time (corresponding to the last microphone sample)
+        double packet_start_ts_us_wall = 1;                // Start timestamp of the packet using the wall clock (corresponding to first audio sample)
+        double packet_start_ts_us_mach = 2;                // Start timestamp of the packet using machine time (corresponding to the first audio sample)
+        double packet_end_ts_us_wall = 3;                  // End timestamp of the packet using the wall clock (corresponding to the last audio sample)
+        double packet_end_ts_us_mach = 4;                  // End timestamp of the packet using machine time (corresponding to the last audio sample)
         double server_acquisition_arrival_ts_us = 5;       // Timestamp that the packet arrived at the acquisition server
         double app_start_ts_us_mach = 6;                   // The start of the app as machine time
         repeated SynchExchange synch_exchanges = 7;        // An array of synchronization params from the synch server
@@ -147,24 +147,24 @@ message RedvoxPacket1000 {
     }
 
     message SensorChannels {
-        MicrophoneChannel microphone_channel = 1;          // The microphone channel
-        SingleChannel barometer_channel = 2;               // The barometer channel
-        LocationChannel location_channel = 3;              // The location channel
-        XyzChannel accelerometer_channel = 4;              // The accelerometer channel
-        XyzChannel gyroscope_channel = 5;                  // The gyroscope channel
-        XyzChannel magnetometer_channel = 6;               // The magnetometer channel
-        SingleChannel light_channel = 7;                   // The light channel
-        SingleChannel infrared_channel = 8;                // The infrared channel
-        ImageChannel image_channel = 9;                    // The image channel
-        map<string, string> metadata = 10;                 // A map from string to string for including untyped metadata
+        AudioChannel audio_channel = 1; // The audio channel
+        SingleChannel barometer_channel = 2; // The barometer channel
+        LocationChannel location_channel = 3; // The location channel
+        XyzChannel accelerometer_channel = 4; // The accelerometer channel
+        XyzChannel gyroscope_channel = 5; // The gyroscope channel
+        XyzChannel magnetometer_channel = 6; // The magnetometer channel
+        SingleChannel light_channel = 7; // The light channel
+        SingleChannel infrared_channel = 8; // The infrared channel
+        ImageChannel image_channel = 9; // The image channel
+        map<string, string> metadata = 10; // A map from string to string for including untyped metadata
 
-        message MicrophoneChannel {
-            string sensor_description = 1;                      // The name or description of the microphone sensor
-            double first_sample_ts_us = 2;                      // Timestamp of the first microphone sample
+        message AudioChannel {
+            string sensor_description = 1;                      // The name or description of the audio sensor
+            double first_sample_ts_us = 2;                      // Timestamp of the first audio sample
             double sample_rate_hz = 3;                          // Microphone sample rate in Hz
             bool is_scrambled = 4;                              // If audio data has been scrambled to remove voice
-            repeated double samples = 5;                        // List of microphone samples
-            SummaryStatistics sample_statistics = 6;            // Statistics for microphone samples
+            repeated double samples = 5;                        // List of audio samples
+            SummaryStatistics sample_statistics = 6;            // Statistics for audio samples
             map<string, string> metadata = 7;                   // A map from string to string for including untyped metadata
         }
 
