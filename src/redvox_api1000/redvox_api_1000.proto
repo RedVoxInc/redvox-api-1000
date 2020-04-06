@@ -117,16 +117,16 @@ message RedvoxPacket1000 {
     }
 
     message TimingInformation {
-        double packet_start_ts_us_wall = 1;                // Start timestamp of the packet using the wall clock (corresponding to first audio sample)
-        double packet_start_ts_us_mach = 2;                // Start timestamp of the packet using machine time (corresponding to the first audio sample)
-        double packet_end_ts_us_wall = 3;                  // End timestamp of the packet using the wall clock (corresponding to the last audio sample)
-        double packet_end_ts_us_mach = 4;                  // End timestamp of the packet using machine time (corresponding to the last audio sample)
-        double server_acquisition_arrival_ts_us = 5;       // Timestamp that the packet arrived at the acquisition server
-        double app_start_ts_us_mach = 6;                   // The start of the app as machine time
-        repeated SynchExchange synch_exchanges = 7;        // An array of synchronization params from the synch server
-        double best_latency_us = 8;                        // The best latency as determined from the synch params
-        double best_offset_us = 9;                         // The best offset as determined from the synch params
-        map<string, string> metadata = 10;                   // A map from string to string for including untyped metadata
+        double packet_start_ts_us_os = 1; // Start timestamp of the packet using the os clock (corresponding to first audio sample)
+        double packet_start_ts_us_mach = 2; // Start timestamp of the packet using machine time (corresponding to the first audio sample)
+        double packet_end_ts_us_os = 3; // End timestamp of the packet using the os clock (corresponding to the last audio sample)
+        double packet_end_ts_us_mach = 4; // End timestamp of the packet using machine time (corresponding to the last audio sample)
+        double server_acquisition_arrival_ts_us = 5; // Timestamp that the packet arrived at the acquisition server
+        double app_start_ts_us_mach = 6; // The start of the app as machine time
+        repeated SynchExchange synch_exchanges = 7; // An array of synchronization params from the synch server
+        double best_latency_us = 8; // The best latency as determined from the synch params
+        double best_offset_us = 9; // The best offset as determined from the synch params
+        map<string, string> metadata = 10; // A map from string to string for including untyped metadata
 
         message SynchExchange {
             double a1 = 1;
