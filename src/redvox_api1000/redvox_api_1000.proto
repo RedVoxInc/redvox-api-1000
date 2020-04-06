@@ -8,37 +8,37 @@ option java_package = "io.redvox.redvox_api1000";
 
 message RedvoxPacket1000 {
     // Top level packet fields
-    double api = 1;                                      // The API version, should always be 1000
-    UserInformation user_information = 2;               // User information
-    DeviceInformation device_information = 3;           // Device information
-    PacketInformation packet_information = 4;           // Packet information
-    TimingInformation timing_information = 5;           // Timing information
+    double api = 1;                             // The API version, should always be 1000
+    UserInformation user_information = 2;       // User information
+    StationInformation station_information = 3; // Station information
+    PacketInformation packet_information = 4;   // Packet information
+    TimingInformation timing_information = 5;   // Timing information
     ServerInformation server_information = 6;
-    SensorChannels sensor_channels = 7;                 // Sensor channels
-    map<string, string> metadata = 8;                   // A map from string to string for including untyped metadata
+    SensorChannels sensor_channels = 7;         // Sensor channels
+    map<string, string> metadata = 8;           // A map from string to string for including untyped metadata
 
     // --------- The rest of this message contains embedded message types
 
     message UserInformation {
-        string auth_email = 1;                          // The e-mail the user used to authenticate with
-        string auth_token = 2;                          // The JWT token used for authentication
-        string firebase_token = 3;                      // The assigned firebase token
-        map<string, string> metadata = 4;               // A map from string to string for including untyped metadata
+        string auth_email = 1;              // The e-mail the user used to authenticate with
+        string auth_token = 2;              // The JWT token used for authentication
+        string firebase_token = 3;          // The assigned firebase token
+        map<string, string> metadata = 4;   // A map from string to string for including untyped metadata
     }
 
-    message DeviceInformation {
-        string device_id = 1;                           // The user selectable device id
-        string device_uuid = 2;                         // The app provided UUID
-        string device_make = 3;                         // Make of the device
-        string device_model = 4;                        // Model of the device
-        OsType device_os = 5;                           // OS of the device
-        string device_os_version = 6;                   // OS version of the device
-        string device_app_version = 7;                  // App version on the device
+    message StationInformation {
+        string id = 1;                                  // The user selectable station id
+        string uuid = 2;                                // The app provided UUID
+        string make = 3;                                // Make of the station
+        string model = 4;                               // Model of the station
+        OsType os = 5;                                  // OS of the station
+        string os_version = 6;                          // OS version of the station
+        string app_version = 7;                         // App version on the station
         AppSettings app_settings = 8;                   // A copy of the App's settings
         NetworkType network_type = 9;                   // Type of network connection
         SummaryStatistics network_strength_db = 10;     // A value representing the strength of the network connection
-        SummaryStatistics device_temp_c = 11;           // Temperature of the device in degrees centigrade
-        SummaryStatistics device_battery_percent = 12;  // Device battery level as a percentage between 0% and 100%
+        SummaryStatistics temp_c = 11;                  // Temperature of the station in degrees centigrade
+        SummaryStatistics battery_percent = 12;         // Device battery level as a percentage between 0% and 100%
         SummaryStatistics available_ram_bytes = 13;     // Available RAM in bytes
         SummaryStatistics available_disk_bytes = 14;    // Available disk space in bytes
         SummaryStatistics cpu_utilization = 15;         // CPU utilization
