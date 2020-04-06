@@ -2,6 +2,7 @@
 * This file contains the protobuf message definitions for RedVox API 1000 data and network communications.
 * All times in microseconds.
 * Start and end OS and machine times in UTC relative to the Unix epoch (1970/01/01/0Z).
+* Location (lat, lon, height) relative to WGS 84
 */
 
 syntax = "proto3";
