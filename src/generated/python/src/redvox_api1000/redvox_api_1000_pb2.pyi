@@ -200,9 +200,13 @@ class RedvoxPacket1000(google___protobuf___message___Message):
                 HZ_80 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 0)
                 HZ_800 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 1)
                 HZ_8000 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 2)
+                HZ_16000 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 3)
+                HZ_48000 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 4)
             HZ_80 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 0)
             HZ_800 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 1)
             HZ_8000 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 2)
+            HZ_16000 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 3)
+            HZ_48000 = typing___cast('RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate', 4)
 
             class AudioSourceTuning(builtin___int):
                 DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...

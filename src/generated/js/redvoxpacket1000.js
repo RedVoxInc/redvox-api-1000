@@ -1199,7 +1199,9 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.serializeBin
 proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate = {
   HZ_80: 0,
   HZ_800: 1,
-  HZ_8000: 2
+  HZ_8000: 2,
+  HZ_16000: 3,
+  HZ_48000: 4
 };
 
 /**

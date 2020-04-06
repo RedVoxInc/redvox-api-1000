@@ -838,13 +838,15 @@ GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingR
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Hz80\000Hz800\000Hz8000\000";
+        "Hz80\000Hz800\000Hz8000\000Hz16000\000Hz48000\000";
     static const int32_t values[] = {
         RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz80,
         RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz800,
         RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz8000,
+        RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz16000,
+        RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz48000,
     };
-    static const char *extraTextFormatInfo = "\003\000b\202\000\001b\203\000\002b\204\000";
+    static const char *extraTextFormatInfo = "\005\000b\202\000\001b\203\000\002b\204\000\003b\205\000\004b\205\000";
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate)
                                        valueNames:valueNames
@@ -865,6 +867,8 @@ BOOL RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_IsValidVal
     case RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz80:
     case RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz800:
     case RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz8000:
+    case RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz16000:
+    case RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz48000:
       return YES;
     default:
       return NO;

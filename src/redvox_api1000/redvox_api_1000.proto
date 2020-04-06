@@ -74,7 +74,7 @@ message RedvoxPacket1000 {
             string data_server_url = 14;
             bool auto_delete_data_files = 15;
             double storage_space_allowance = 16;
-            bool use_sd_card_for_data_storage = 17;1
+            bool use_sd_card_for_data_storage = 17;
             bool use_location_services = 18;
             double use_latitude = 19;
             double use_longitude = 20;

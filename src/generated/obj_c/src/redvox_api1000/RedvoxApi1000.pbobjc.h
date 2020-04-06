@@ -101,6 +101,8 @@ typedef GPB_ENUM(RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRat
   RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz80 = 0,
   RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz800 = 1,
   RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz8000 = 2,
+  RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz16000 = 3,
+  RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz48000 = 4,
 };
 
 GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_EnumDescriptor(void);
