@@ -1,6 +1,6 @@
 /**
 * This file contains the protobuf message definitions for RedVox API 1000 data and network communications.
-* All times are in microseconds
+* All times are in microseconds relative to the Unix epoch.
 */
 
 syntax = "proto3";
