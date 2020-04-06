@@ -244,6 +244,21 @@ message RedvoxPacket1000 {
     }
 }
 
+// Message type for providing E2E encryption.
+// The header is encrypted via RedVox keys.
+// The body is encrypted via user keys.
+// Each payload consists of bytes from the following transformations
+//   Serialization: Object -> serialize to bytes -> LZ4 frame compress -> encrypt -> payload bytes
+//   Deserialization: Payload bytes -> decrypt -> LZ4 frame decompress -> deserialize from bytes -> object
+message EncryptedRedvoxPacket1000 {
+    bytes header = 1;
+    message Header {
+        string station_id = 1;
+        string station_uuid = 2;
+        string auth_token = 3;
+        string auth_email = 4;
+    }
+}
 
 // Message for sending RedVox data to a redvox.io data acquisition service.
 message AcquisitionRequest {
