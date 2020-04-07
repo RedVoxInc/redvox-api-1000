@@ -8,25 +8,28 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 goog.provide('proto.redvox_api1000.RedvoxPacket1000');
-goog.provide('proto.redvox_api1000.RedvoxPacket1000.DeviceInformation');
-goog.provide('proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings');
-goog.provide('proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate');
-goog.provide('proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning');
-goog.provide('proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor');
-goog.provide('proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.NetworkType');
-goog.provide('proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.OsType');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.PacketInformation');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.Samples');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider');
-goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.ServerInformation');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.StationInformation');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.AudioSamplingRate');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.AudioSourceTuning');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.InputSensor');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.StationInformation.NetworkType');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.StationInformation.OsType');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.Timestamps');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.TimingInformation');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.Unit');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.UserInformation');
 
 goog.require('jspb.BinaryReader');
@@ -83,7 +86,7 @@ proto.redvox_api1000.RedvoxPacket1000.toObject = function(includeInstance, msg) 
   var f, obj = {
     api: +jspb.Message.getFieldWithDefault(msg, 1, 0.0),
     userInformation: (f = msg.getUserInformation()) && proto.redvox_api1000.RedvoxPacket1000.UserInformation.toObject(includeInstance, f),
-    deviceInformation: (f = msg.getDeviceInformation()) && proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.toObject(includeInstance, f),
+    stationInformation: (f = msg.getStationInformation()) && proto.redvox_api1000.RedvoxPacket1000.StationInformation.toObject(includeInstance, f),
     packetInformation: (f = msg.getPacketInformation()) && proto.redvox_api1000.RedvoxPacket1000.PacketInformation.toObject(includeInstance, f),
     timingInformation: (f = msg.getTimingInformation()) && proto.redvox_api1000.RedvoxPacket1000.TimingInformation.toObject(includeInstance, f),
     serverInformation: (f = msg.getServerInformation()) && proto.redvox_api1000.RedvoxPacket1000.ServerInformation.toObject(includeInstance, f),
@@ -135,9 +138,9 @@ proto.redvox_api1000.RedvoxPacket1000.deserializeBinaryFromReader = function(msg
       msg.setUserInformation(value);
       break;
     case 3:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.DeviceInformation;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.deserializeBinaryFromReader);
-      msg.setDeviceInformation(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.StationInformation;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.StationInformation.deserializeBinaryFromReader);
+      msg.setStationInformation(value);
       break;
     case 4:
       var value = new proto.redvox_api1000.RedvoxPacket1000.PacketInformation;
@@ -209,12 +212,12 @@ proto.redvox_api1000.RedvoxPacket1000.serializeBinaryToWriter = function(message
       proto.redvox_api1000.RedvoxPacket1000.UserInformation.serializeBinaryToWriter
     );
   }
-  f = message.getDeviceInformation();
+  f = message.getStationInformation();
   if (f != null) {
     writer.writeMessage(
       3,
       f,
-      proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.serializeBinaryToWriter
+      proto.redvox_api1000.RedvoxPacket1000.StationInformation.serializeBinaryToWriter
     );
   }
   f = message.getPacketInformation();
@@ -255,6 +258,24 @@ proto.redvox_api1000.RedvoxPacket1000.serializeBinaryToWriter = function(message
   }
 };
 
+
+/**
+ * @enum {number}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Unit = {
+  METERS_PER_SECOND_SQUARED: 0,
+  KILOPASCAL: 1,
+  RADIANS_PER_SECOND: 2,
+  DECIMAL_DEGREES: 3,
+  METERS: 4,
+  METERS_PER_SECOND: 5,
+  MICROTESLA: 6,
+  LSB_PLUS_MINUS_COUNTS: 7,
+  MICROSECONDS_SINCE_UNIX_EPOCH: 8,
+  DECIBEL: 9,
+  DEGREES_CELSIUS: 10,
+  BYTE: 11
+};
 
 
 /**
@@ -492,12 +513,12 @@ proto.redvox_api1000.RedvoxPacket1000.UserInformation.prototype.clearMetadataMap
  * @extends {jspb.Message}
  * @constructor
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation = function(opt_data) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.redvox_api1000.RedvoxPacket1000.DeviceInformation, jspb.Message);
+goog.inherits(proto.redvox_api1000.RedvoxPacket1000.StationInformation, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.displayName = 'proto.redvox_api1000.RedvoxPacket1000.DeviceInformation';
+  proto.redvox_api1000.RedvoxPacket1000.StationInformation.displayName = 'proto.redvox_api1000.RedvoxPacket1000.StationInformation';
 }
 
 
@@ -512,8 +533,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.toObject = function(opt_includeInstance) {
-  return proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.toObject(opt_includeInstance, this);
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.toObject = function(opt_includeInstance) {
+  return proto.redvox_api1000.RedvoxPacket1000.StationInformation.toObject(opt_includeInstance, this);
 };
 
 
@@ -522,27 +543,28 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.toObject = fun
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation} msg The msg instance to transform.
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.StationInformation} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.toObject = function(includeInstance, msg) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.toObject = function(includeInstance, msg) {
   var f, obj = {
-    deviceId: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    deviceUuid: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    deviceMake: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    deviceModel: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    deviceOs: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    deviceOsVersion: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    deviceAppVersion: jspb.Message.getFieldWithDefault(msg, 7, ""),
-    appSettings: (f = msg.getAppSettings()) && proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.toObject(includeInstance, f),
+    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    uuid: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    make: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    model: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    os: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    osVersion: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    appVersion: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    appSettings: (f = msg.getAppSettings()) && proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.toObject(includeInstance, f),
     networkType: jspb.Message.getFieldWithDefault(msg, 9, 0),
-    networkStrengthDb: (f = msg.getNetworkStrengthDb()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    deviceTempC: (f = msg.getDeviceTempC()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    deviceBatteryPercent: (f = msg.getDeviceBatteryPercent()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    availableRamBytes: (f = msg.getAvailableRamBytes()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    availableDiskBytes: (f = msg.getAvailableDiskBytes()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    cpuUtilization: (f = msg.getCpuUtilization()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
+    stationInformationTimestamps: (f = msg.getStationInformationTimestamps()) && proto.redvox_api1000.RedvoxPacket1000.Timestamps.toObject(includeInstance, f),
+    networkStrength: (f = msg.getNetworkStrength()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    temperature: (f = msg.getTemperature()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    battery: (f = msg.getBattery()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    availableRam: (f = msg.getAvailableRam()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    availableDisk: (f = msg.getAvailableDisk()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    cpuUtilization: (f = msg.getCpuUtilization()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -557,23 +579,23 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.toObject = function(incl
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation}
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.StationInformation}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.deserializeBinary = function(bytes) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.redvox_api1000.RedvoxPacket1000.DeviceInformation;
-  return proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.redvox_api1000.RedvoxPacket1000.StationInformation;
+  return proto.redvox_api1000.RedvoxPacket1000.StationInformation.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation} msg The message object to deserialize into.
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.StationInformation} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation}
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.StationInformation}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.deserializeBinaryFromReader = function(msg, reader) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -582,72 +604,77 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.deserializeBinaryFromRea
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDeviceId(value);
+      msg.setId(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDeviceUuid(value);
+      msg.setUuid(value);
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDeviceMake(value);
+      msg.setMake(value);
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDeviceModel(value);
+      msg.setModel(value);
       break;
     case 5:
-      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.OsType} */ (reader.readEnum());
-      msg.setDeviceOs(value);
+      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.OsType} */ (reader.readEnum());
+      msg.setOs(value);
       break;
     case 6:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDeviceOsVersion(value);
+      msg.setOsVersion(value);
       break;
     case 7:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDeviceAppVersion(value);
+      msg.setAppVersion(value);
       break;
     case 8:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.deserializeBinaryFromReader);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.deserializeBinaryFromReader);
       msg.setAppSettings(value);
       break;
     case 9:
-      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.NetworkType} */ (reader.readEnum());
+      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.NetworkType} */ (reader.readEnum());
       msg.setNetworkType(value);
       break;
     case 10:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setNetworkStrengthDb(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Timestamps;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Timestamps.deserializeBinaryFromReader);
+      msg.setStationInformationTimestamps(value);
       break;
     case 11:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setDeviceTempC(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setNetworkStrength(value);
       break;
     case 12:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setDeviceBatteryPercent(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setTemperature(value);
       break;
     case 13:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setAvailableRamBytes(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setBattery(value);
       break;
     case 14:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setAvailableDiskBytes(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setAvailableRam(value);
       break;
     case 15:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setCpuUtilization(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setAvailableDisk(value);
       break;
     case 16:
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setCpuUtilization(value);
+      break;
+    case 17:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
@@ -666,9 +693,9 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.deserializeBinaryFromRea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.serializeBinary = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.serializeBinaryToWriter(this, writer);
+  proto.redvox_api1000.RedvoxPacket1000.StationInformation.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -676,55 +703,55 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.serializeBinar
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation} message
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.StationInformation} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.serializeBinaryToWriter = function(message, writer) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getDeviceId();
+  f = message.getId();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getDeviceUuid();
+  f = message.getUuid();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getDeviceMake();
+  f = message.getMake();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
     );
   }
-  f = message.getDeviceModel();
+  f = message.getModel();
   if (f.length > 0) {
     writer.writeString(
       4,
       f
     );
   }
-  f = message.getDeviceOs();
+  f = message.getOs();
   if (f !== 0.0) {
     writer.writeEnum(
       5,
       f
     );
   }
-  f = message.getDeviceOsVersion();
+  f = message.getOsVersion();
   if (f.length > 0) {
     writer.writeString(
       6,
       f
     );
   }
-  f = message.getDeviceAppVersion();
+  f = message.getAppVersion();
   if (f.length > 0) {
     writer.writeString(
       7,
@@ -736,7 +763,7 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.serializeBinaryToWriter 
     writer.writeMessage(
       8,
       f,
-      proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.serializeBinaryToWriter
+      proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.serializeBinaryToWriter
     );
   }
   f = message.getNetworkType();
@@ -746,57 +773,65 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.serializeBinaryToWriter 
       f
     );
   }
-  f = message.getNetworkStrengthDb();
+  f = message.getStationInformationTimestamps();
   if (f != null) {
     writer.writeMessage(
       10,
       f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
+      proto.redvox_api1000.RedvoxPacket1000.Timestamps.serializeBinaryToWriter
     );
   }
-  f = message.getDeviceTempC();
+  f = message.getNetworkStrength();
   if (f != null) {
     writer.writeMessage(
       11,
       f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
-  f = message.getDeviceBatteryPercent();
+  f = message.getTemperature();
   if (f != null) {
     writer.writeMessage(
       12,
       f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
-  f = message.getAvailableRamBytes();
+  f = message.getBattery();
   if (f != null) {
     writer.writeMessage(
       13,
       f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
-  f = message.getAvailableDiskBytes();
+  f = message.getAvailableRam();
   if (f != null) {
     writer.writeMessage(
       14,
       f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
+    );
+  }
+  f = message.getAvailableDisk();
+  if (f != null) {
+    writer.writeMessage(
+      15,
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
   f = message.getCpuUtilization();
   if (f != null) {
     writer.writeMessage(
-      15,
+      16,
       f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(16, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(17, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -804,7 +839,7 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.serializeBinaryToWriter 
 /**
  * @enum {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.NetworkType = {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.NetworkType = {
   WIFI: 0,
   CELLULAR: 1,
   NONE: 2
@@ -813,7 +848,7 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.NetworkType = {
 /**
  * @enum {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.OsType = {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.OsType = {
   ANDROID: 0,
   IOS: 1,
   LINUX: 2,
@@ -831,19 +866,19 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.OsType = {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.repeatedFields_, null);
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.repeatedFields_, null);
 };
-goog.inherits(proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings, jspb.Message);
+goog.inherits(proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.displayName = 'proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings';
+  proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.displayName = 'proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings';
 }
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.repeatedFields_ = [3];
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.repeatedFields_ = [3];
 
 
 
@@ -858,8 +893,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.toObject = function(opt_includeInstance) {
-  return proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.toObject(opt_includeInstance, this);
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.toObject = function(opt_includeInstance) {
+  return proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.toObject(opt_includeInstance, this);
 };
 
 
@@ -868,13 +903,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.to
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings} msg The msg instance to transform.
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.toObject = function(includeInstance, msg) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.toObject = function(includeInstance, msg) {
   var f, obj = {
-    audioSamplingRate: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    audioSamplingRateHz: jspb.Message.getFieldWithDefault(msg, 1, 0),
     audioSourceTuning: jspb.Message.getFieldWithDefault(msg, 2, 0),
     additionalInputSensorsList: jspb.Message.getRepeatedField(msg, 3),
     automaticallyRecord: jspb.Message.getFieldWithDefault(msg, 4, false),
@@ -908,23 +943,23 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.toObject = f
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings}
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.deserializeBinary = function(bytes) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings;
-  return proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings;
+  return proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings} msg The message object to deserialize into.
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings}
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.deserializeBinaryFromReader = function(msg, reader) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -932,15 +967,15 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.deserializeB
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate} */ (reader.readEnum());
-      msg.setAudioSamplingRate(value);
+      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.AudioSamplingRate} */ (reader.readEnum());
+      msg.setAudioSamplingRateHz(value);
       break;
     case 2:
-      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning} */ (reader.readEnum());
+      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.AudioSourceTuning} */ (reader.readEnum());
       msg.setAudioSourceTuning(value);
       break;
     case 3:
-      var value = /** @type {!Array<!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor>} */ (reader.readPackedEnum());
+      var value = /** @type {!Array<!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.InputSensor>} */ (reader.readPackedEnum());
       msg.setAdditionalInputSensorsList(value);
       break;
     case 4:
@@ -1030,9 +1065,9 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.deserializeB
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.serializeBinary = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.serializeBinaryToWriter(this, writer);
+  proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1040,13 +1075,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings} message
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.serializeBinaryToWriter = function(message, writer) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getAudioSamplingRate();
+  f = message.getAudioSamplingRateHz();
   if (f !== 0.0) {
     writer.writeEnum(
       1,
@@ -1196,7 +1231,7 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.serializeBin
 /**
  * @enum {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate = {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.AudioSamplingRate = {
   HZ_80: 0,
   HZ_800: 1,
   HZ_8000: 2,
@@ -1207,7 +1242,7 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplin
 /**
  * @enum {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning = {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.AudioSourceTuning = {
   INFRASOUND: 0,
   LOW_AUDIO: 1,
   AUDIO: 2
@@ -1216,7 +1251,7 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceT
 /**
  * @enum {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor = {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.InputSensor = {
   BAROMETER: 0,
   ACCELEROMETER: 1,
   ACCELEROMETER_FAST: 2,
@@ -1228,60 +1263,60 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor 
 };
 
 /**
- * optional AudioSamplingRate audio_sampling_rate = 1;
- * @return {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate}
+ * optional AudioSamplingRate audio_sampling_rate_hz = 1;
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.AudioSamplingRate}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getAudioSamplingRate = function() {
-  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getAudioSamplingRateHz = function() {
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.AudioSamplingRate} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
-/** @param {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSamplingRate} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setAudioSamplingRate = function(value) {
+/** @param {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.AudioSamplingRate} value */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setAudioSamplingRateHz = function(value) {
   jspb.Message.setProto3EnumField(this, 1, value);
 };
 
 
 /**
  * optional AudioSourceTuning audio_source_tuning = 2;
- * @return {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning}
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.AudioSourceTuning}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getAudioSourceTuning = function() {
-  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getAudioSourceTuning = function() {
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.AudioSourceTuning} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
-/** @param {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.AudioSourceTuning} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setAudioSourceTuning = function(value) {
+/** @param {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.AudioSourceTuning} value */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setAudioSourceTuning = function(value) {
   jspb.Message.setProto3EnumField(this, 2, value);
 };
 
 
 /**
  * repeated InputSensor additional_input_sensors = 3;
- * @return {!Array<!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor>}
+ * @return {!Array<!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.InputSensor>}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getAdditionalInputSensorsList = function() {
-  return /** @type {!Array<!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor>} */ (jspb.Message.getRepeatedField(this, 3));
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getAdditionalInputSensorsList = function() {
+  return /** @type {!Array<!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.InputSensor>} */ (jspb.Message.getRepeatedField(this, 3));
 };
 
 
-/** @param {!Array<!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor>} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setAdditionalInputSensorsList = function(value) {
+/** @param {!Array<!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.InputSensor>} value */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setAdditionalInputSensorsList = function(value) {
   jspb.Message.setField(this, 3, value || []);
 };
 
 
 /**
- * @param {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.InputSensor} value
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.InputSensor} value
  * @param {number=} opt_index
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.addAdditionalInputSensors = function(value, opt_index) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.addAdditionalInputSensors = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.clearAdditionalInputSensorsList = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.clearAdditionalInputSensorsList = function() {
   this.setAdditionalInputSensorsList([]);
 };
 
@@ -1292,13 +1327,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.cl
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getAutomaticallyRecord = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getAutomaticallyRecord = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 4, false));
 };
 
 
 /** @param {boolean} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setAutomaticallyRecord = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setAutomaticallyRecord = function(value) {
   jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
@@ -1309,13 +1344,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getLaunchAtPowerUp = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getLaunchAtPowerUp = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 5, false));
 };
 
 
 /** @param {boolean} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setLaunchAtPowerUp = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setLaunchAtPowerUp = function(value) {
   jspb.Message.setProto3BooleanField(this, 5, value);
 };
 
@@ -1324,13 +1359,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * optional string redvox_id = 6;
  * @return {string}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getRedvoxId = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getRedvoxId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setRedvoxId = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setRedvoxId = function(value) {
   jspb.Message.setProto3StringField(this, 6, value);
 };
 
@@ -1341,13 +1376,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getPushToServer = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getPushToServer = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 7, false));
 };
 
 
 /** @param {boolean} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setPushToServer = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setPushToServer = function(value) {
   jspb.Message.setProto3BooleanField(this, 7, value);
 };
 
@@ -1358,13 +1393,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getPublishDataAsPrivate = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getPublishDataAsPrivate = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 8, false));
 };
 
 
 /** @param {boolean} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setPublishDataAsPrivate = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setPublishDataAsPrivate = function(value) {
   jspb.Message.setProto3BooleanField(this, 8, value);
 };
 
@@ -1375,13 +1410,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getScrambleVoiceData = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getScrambleVoiceData = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 9, false));
 };
 
 
 /** @param {boolean} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setScrambleVoiceData = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setScrambleVoiceData = function(value) {
   jspb.Message.setProto3BooleanField(this, 9, value);
 };
 
@@ -1392,13 +1427,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getProvideBackfill = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getProvideBackfill = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 10, false));
 };
 
 
 /** @param {boolean} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setProvideBackfill = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setProvideBackfill = function(value) {
   jspb.Message.setProto3BooleanField(this, 10, value);
 };
 
@@ -1409,13 +1444,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getUseCustomTimeSyncServer = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getUseCustomTimeSyncServer = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 11, false));
 };
 
 
 /** @param {boolean} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setUseCustomTimeSyncServer = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setUseCustomTimeSyncServer = function(value) {
   jspb.Message.setProto3BooleanField(this, 11, value);
 };
 
@@ -1424,13 +1459,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * optional string time_sync_server_url = 12;
  * @return {string}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getTimeSyncServerUrl = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getTimeSyncServerUrl = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setTimeSyncServerUrl = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setTimeSyncServerUrl = function(value) {
   jspb.Message.setProto3StringField(this, 12, value);
 };
 
@@ -1441,13 +1476,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getUseCustomDataServer = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getUseCustomDataServer = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 13, false));
 };
 
 
 /** @param {boolean} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setUseCustomDataServer = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setUseCustomDataServer = function(value) {
   jspb.Message.setProto3BooleanField(this, 13, value);
 };
 
@@ -1456,13 +1491,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * optional string data_server_url = 14;
  * @return {string}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getDataServerUrl = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getDataServerUrl = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setDataServerUrl = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setDataServerUrl = function(value) {
   jspb.Message.setProto3StringField(this, 14, value);
 };
 
@@ -1473,13 +1508,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getAutoDeleteDataFiles = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getAutoDeleteDataFiles = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 15, false));
 };
 
 
 /** @param {boolean} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setAutoDeleteDataFiles = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setAutoDeleteDataFiles = function(value) {
   jspb.Message.setProto3BooleanField(this, 15, value);
 };
 
@@ -1488,13 +1523,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * optional double storage_space_allowance = 16;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getStorageSpaceAllowance = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getStorageSpaceAllowance = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 16, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setStorageSpaceAllowance = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setStorageSpaceAllowance = function(value) {
   jspb.Message.setProto3FloatField(this, 16, value);
 };
 
@@ -1505,13 +1540,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getUseSdCardForDataStorage = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getUseSdCardForDataStorage = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 17, false));
 };
 
 
 /** @param {boolean} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setUseSdCardForDataStorage = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setUseSdCardForDataStorage = function(value) {
   jspb.Message.setProto3BooleanField(this, 17, value);
 };
 
@@ -1522,13 +1557,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getUseLocationServices = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getUseLocationServices = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 18, false));
 };
 
 
 /** @param {boolean} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setUseLocationServices = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setUseLocationServices = function(value) {
   jspb.Message.setProto3BooleanField(this, 18, value);
 };
 
@@ -1537,13 +1572,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * optional double use_latitude = 19;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getUseLatitude = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getUseLatitude = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 19, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setUseLatitude = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setUseLatitude = function(value) {
   jspb.Message.setProto3FloatField(this, 19, value);
 };
 
@@ -1552,13 +1587,13 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * optional double use_longitude = 20;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getUseLongitude = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getUseLongitude = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 20, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.setUseLongitude = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.setUseLongitude = function(value) {
   jspb.Message.setProto3FloatField(this, 20, value);
 };
 
@@ -1569,140 +1604,140 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.se
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.getMetadataMap = function(opt_noLazyCreate) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 21, opt_noLazyCreate,
       null));
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings.prototype.clearMetadataMap = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings.prototype.clearMetadataMap = function() {
   this.getMetadataMap().clear();
 };
 
 
 /**
- * optional string device_id = 1;
+ * optional string id = 1;
  * @return {string}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getDeviceId = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setDeviceId = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string device_uuid = 2;
+ * optional string uuid = 2;
  * @return {string}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getDeviceUuid = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getUuid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setDeviceUuid = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setUuid = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * optional string device_make = 3;
+ * optional string make = 3;
  * @return {string}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getDeviceMake = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getMake = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setDeviceMake = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setMake = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
- * optional string device_model = 4;
+ * optional string model = 4;
  * @return {string}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getDeviceModel = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getModel = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setDeviceModel = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setModel = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
 /**
- * optional OsType device_os = 5;
- * @return {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.OsType}
+ * optional OsType os = 5;
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.OsType}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getDeviceOs = function() {
-  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.OsType} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getOs = function() {
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.OsType} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 
-/** @param {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.OsType} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setDeviceOs = function(value) {
+/** @param {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.OsType} value */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setOs = function(value) {
   jspb.Message.setProto3EnumField(this, 5, value);
 };
 
 
 /**
- * optional string device_os_version = 6;
+ * optional string os_version = 6;
  * @return {string}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getDeviceOsVersion = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getOsVersion = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setDeviceOsVersion = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setOsVersion = function(value) {
   jspb.Message.setProto3StringField(this, 6, value);
 };
 
 
 /**
- * optional string device_app_version = 7;
+ * optional string app_version = 7;
  * @return {string}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getDeviceAppVersion = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getAppVersion = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setDeviceAppVersion = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setAppVersion = function(value) {
   jspb.Message.setProto3StringField(this, 7, value);
 };
 
 
 /**
  * optional AppSettings app_settings = 8;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings}
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getAppSettings = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings, 8));
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getAppSettings = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings, 8));
 };
 
 
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.AppSettings|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setAppSettings = function(value) {
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.StationInformation.AppSettings|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setAppSettings = function(value) {
   jspb.Message.setWrapperField(this, 8, value);
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearAppSettings = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.clearAppSettings = function() {
   this.setAppSettings(undefined);
 };
 
@@ -1711,44 +1746,44 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearAppSettin
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.hasAppSettings = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.hasAppSettings = function() {
   return jspb.Message.getField(this, 8) != null;
 };
 
 
 /**
  * optional NetworkType network_type = 9;
- * @return {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.NetworkType}
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.NetworkType}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getNetworkType = function() {
-  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.NetworkType} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getNetworkType = function() {
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.NetworkType} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
 };
 
 
-/** @param {!proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.NetworkType} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setNetworkType = function(value) {
+/** @param {!proto.redvox_api1000.RedvoxPacket1000.StationInformation.NetworkType} value */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setNetworkType = function(value) {
   jspb.Message.setProto3EnumField(this, 9, value);
 };
 
 
 /**
- * optional SummaryStatistics network_strength_db = 10;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
+ * optional Timestamps station_information_timestamps = 10;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Timestamps}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getNetworkStrengthDb = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 10));
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getStationInformationTimestamps = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Timestamps} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Timestamps, 10));
 };
 
 
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setNetworkStrengthDb = function(value) {
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Timestamps|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setStationInformationTimestamps = function(value) {
   jspb.Message.setWrapperField(this, 10, value);
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearNetworkStrengthDb = function() {
-  this.setNetworkStrengthDb(undefined);
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.clearStationInformationTimestamps = function() {
+  this.setStationInformationTimestamps(undefined);
 };
 
 
@@ -1756,29 +1791,29 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearNetworkSt
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.hasNetworkStrengthDb = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.hasStationInformationTimestamps = function() {
   return jspb.Message.getField(this, 10) != null;
 };
 
 
 /**
- * optional SummaryStatistics device_temp_c = 11;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
+ * optional Samples network_strength = 11;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getDeviceTempC = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 11));
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getNetworkStrength = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 11));
 };
 
 
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setDeviceTempC = function(value) {
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setNetworkStrength = function(value) {
   jspb.Message.setWrapperField(this, 11, value);
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearDeviceTempC = function() {
-  this.setDeviceTempC(undefined);
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.clearNetworkStrength = function() {
+  this.setNetworkStrength(undefined);
 };
 
 
@@ -1786,29 +1821,29 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearDeviceTem
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.hasDeviceTempC = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.hasNetworkStrength = function() {
   return jspb.Message.getField(this, 11) != null;
 };
 
 
 /**
- * optional SummaryStatistics device_battery_percent = 12;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
+ * optional Samples temperature = 12;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getDeviceBatteryPercent = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 12));
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getTemperature = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 12));
 };
 
 
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setDeviceBatteryPercent = function(value) {
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setTemperature = function(value) {
   jspb.Message.setWrapperField(this, 12, value);
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearDeviceBatteryPercent = function() {
-  this.setDeviceBatteryPercent(undefined);
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.clearTemperature = function() {
+  this.setTemperature(undefined);
 };
 
 
@@ -1816,29 +1851,29 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearDeviceBat
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.hasDeviceBatteryPercent = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.hasTemperature = function() {
   return jspb.Message.getField(this, 12) != null;
 };
 
 
 /**
- * optional SummaryStatistics available_ram_bytes = 13;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
+ * optional Samples battery = 13;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getAvailableRamBytes = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 13));
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getBattery = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 13));
 };
 
 
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setAvailableRamBytes = function(value) {
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setBattery = function(value) {
   jspb.Message.setWrapperField(this, 13, value);
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearAvailableRamBytes = function() {
-  this.setAvailableRamBytes(undefined);
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.clearBattery = function() {
+  this.setBattery(undefined);
 };
 
 
@@ -1846,29 +1881,29 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearAvailable
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.hasAvailableRamBytes = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.hasBattery = function() {
   return jspb.Message.getField(this, 13) != null;
 };
 
 
 /**
- * optional SummaryStatistics available_disk_bytes = 14;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
+ * optional Samples available_ram = 14;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getAvailableDiskBytes = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 14));
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getAvailableRam = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 14));
 };
 
 
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setAvailableDiskBytes = function(value) {
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setAvailableRam = function(value) {
   jspb.Message.setWrapperField(this, 14, value);
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearAvailableDiskBytes = function() {
-  this.setAvailableDiskBytes(undefined);
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.clearAvailableRam = function() {
+  this.setAvailableRam(undefined);
 };
 
 
@@ -1876,28 +1911,58 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearAvailable
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.hasAvailableDiskBytes = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.hasAvailableRam = function() {
   return jspb.Message.getField(this, 14) != null;
 };
 
 
 /**
- * optional SummaryStatistics cpu_utilization = 15;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
+ * optional Samples available_disk = 15;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getCpuUtilization = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 15));
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getAvailableDisk = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 15));
 };
 
 
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.setCpuUtilization = function(value) {
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setAvailableDisk = function(value) {
   jspb.Message.setWrapperField(this, 15, value);
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearCpuUtilization = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.clearAvailableDisk = function() {
+  this.setAvailableDisk(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.hasAvailableDisk = function() {
+  return jspb.Message.getField(this, 15) != null;
+};
+
+
+/**
+ * optional Samples cpu_utilization = 16;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
+ */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getCpuUtilization = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 16));
+};
+
+
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.setCpuUtilization = function(value) {
+  jspb.Message.setWrapperField(this, 16, value);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.clearCpuUtilization = function() {
   this.setCpuUtilization(undefined);
 };
 
@@ -1906,25 +1971,25 @@ proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearCpuUtiliz
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.hasCpuUtilization = function() {
-  return jspb.Message.getField(this, 15) != null;
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.hasCpuUtilization = function() {
+  return jspb.Message.getField(this, 16) != null;
 };
 
 
 /**
- * map<string, string> metadata = 16;
+ * map<string, string> metadata = 17;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.getMetadataMap = function(opt_noLazyCreate) {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 16, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 17, opt_noLazyCreate,
       null));
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.DeviceInformation.prototype.clearMetadataMap = function() {
+proto.redvox_api1000.RedvoxPacket1000.StationInformation.prototype.clearMetadataMap = function() {
   this.getMetadataMap().clear();
 };
 
@@ -2185,9 +2250,9 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.toObject = fun
  */
 proto.redvox_api1000.RedvoxPacket1000.TimingInformation.toObject = function(includeInstance, msg) {
   var f, obj = {
-    packetStartTsUsWall: +jspb.Message.getFieldWithDefault(msg, 1, 0.0),
+    packetStartTsUsOs: +jspb.Message.getFieldWithDefault(msg, 1, 0.0),
     packetStartTsUsMach: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
-    packetEndTsUsWall: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
+    packetEndTsUsOs: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
     packetEndTsUsMach: +jspb.Message.getFieldWithDefault(msg, 4, 0.0),
     serverAcquisitionArrivalTsUs: +jspb.Message.getFieldWithDefault(msg, 5, 0.0),
     appStartTsUsMach: +jspb.Message.getFieldWithDefault(msg, 6, 0.0),
@@ -2234,7 +2299,7 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.deserializeBinaryFromRea
     switch (field) {
     case 1:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setPacketStartTsUsWall(value);
+      msg.setPacketStartTsUsOs(value);
       break;
     case 2:
       var value = /** @type {number} */ (reader.readDouble());
@@ -2242,7 +2307,7 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.deserializeBinaryFromRea
       break;
     case 3:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setPacketEndTsUsWall(value);
+      msg.setPacketEndTsUsOs(value);
       break;
     case 4:
       var value = /** @type {number} */ (reader.readDouble());
@@ -2304,7 +2369,7 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.serializeBinar
  */
 proto.redvox_api1000.RedvoxPacket1000.TimingInformation.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getPacketStartTsUsWall();
+  f = message.getPacketStartTsUsOs();
   if (f !== 0.0) {
     writer.writeDouble(
       1,
@@ -2318,7 +2383,7 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.serializeBinaryToWriter 
       f
     );
   }
-  f = message.getPacketEndTsUsWall();
+  f = message.getPacketEndTsUsOs();
   if (f !== 0.0) {
     writer.writeDouble(
       3,
@@ -2682,16 +2747,16 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.prototype.
 
 
 /**
- * optional double packet_start_ts_us_wall = 1;
+ * optional double packet_start_ts_us_os = 1;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getPacketStartTsUsWall = function() {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getPacketStartTsUsOs = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 1, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setPacketStartTsUsWall = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setPacketStartTsUsOs = function(value) {
   jspb.Message.setProto3FloatField(this, 1, value);
 };
 
@@ -2712,16 +2777,16 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setPacketStart
 
 
 /**
- * optional double packet_end_ts_us_wall = 3;
+ * optional double packet_end_ts_us_os = 3;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getPacketEndTsUsWall = function() {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getPacketEndTsUsOs = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 3, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setPacketEndTsUsWall = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setPacketEndTsUsOs = function(value) {
   jspb.Message.setProto3FloatField(this, 3, value);
 };
 
@@ -3122,7 +3187,7 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.toObject = functi
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.toObject = function(includeInstance, msg) {
   var f, obj = {
-    microphoneChannel: (f = msg.getMicrophoneChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.toObject(includeInstance, f),
+    audioChannel: (f = msg.getAudioChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.toObject(includeInstance, f),
     barometerChannel: (f = msg.getBarometerChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.toObject(includeInstance, f),
     locationChannel: (f = msg.getLocationChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.toObject(includeInstance, f),
     accelerometerChannel: (f = msg.getAccelerometerChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.toObject(includeInstance, f),
@@ -3169,9 +3234,9 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.deserializeBinaryFromReader
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.deserializeBinaryFromReader);
-      msg.setMicrophoneChannel(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.deserializeBinaryFromReader);
+      msg.setAudioChannel(value);
       break;
     case 2:
       var value = new proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel;
@@ -3248,12 +3313,12 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.serializeBinary =
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getMicrophoneChannel();
+  f = message.getAudioChannel();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.serializeBinaryToWriter
+      proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.serializeBinaryToWriter
     );
   }
   f = message.getBarometerChannel();
@@ -3338,20 +3403,13 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.serializeBinaryToWriter = f
  * @extends {jspb.Message}
  * @constructor
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.repeatedFields_, null);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel, jspb.Message);
+goog.inherits(proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.displayName = 'proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel';
+  proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.displayName = 'proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel';
 }
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.repeatedFields_ = [5];
-
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -3365,8 +3423,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.toObject = function(opt_includeInstance) {
-  return proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.toObject(opt_includeInstance, this);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.toObject = function(opt_includeInstance) {
+  return proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.toObject(opt_includeInstance, this);
 };
 
 
@@ -3375,18 +3433,17 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel} msg The msg instance to transform.
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.toObject = function(includeInstance, msg) {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.toObject = function(includeInstance, msg) {
   var f, obj = {
     sensorDescription: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    firstSampleTsUs: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
+    firstSampleTimestamp: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
     sampleRateHz: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
     isScrambled: jspb.Message.getFieldWithDefault(msg, 4, false),
-    samplesList: jspb.Message.getRepeatedFloatingPointField(msg, 5),
-    sampleStatistics: (f = msg.getSampleStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
+    samples: (f = msg.getSamples()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -3401,23 +3458,23 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.toObject 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel}
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.deserializeBinary = function(bytes) {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel;
-  return proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel;
+  return proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel} msg The message object to deserialize into.
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel}
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.deserializeBinaryFromReader = function(msg, reader) {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3430,7 +3487,7 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.deseriali
       break;
     case 2:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setFirstSampleTsUs(value);
+      msg.setFirstSampleTimestamp(value);
       break;
     case 3:
       var value = /** @type {number} */ (reader.readDouble());
@@ -3441,15 +3498,11 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.deseriali
       msg.setIsScrambled(value);
       break;
     case 5:
-      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setSamplesList(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setSamples(value);
       break;
     case 6:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setSampleStatistics(value);
-      break;
-    case 7:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
@@ -3468,9 +3521,9 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.deseriali
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.serializeBinary = function() {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.serializeBinaryToWriter(this, writer);
+  proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3478,11 +3531,11 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel} message
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.serializeBinaryToWriter = function(message, writer) {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getSensorDescription();
   if (f.length > 0) {
@@ -3491,7 +3544,7 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.serialize
       f
     );
   }
-  f = message.getFirstSampleTsUs();
+  f = message.getFirstSampleTimestamp();
   if (f !== 0.0) {
     writer.writeDouble(
       2,
@@ -3512,24 +3565,17 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.serialize
       f
     );
   }
-  f = message.getSamplesList();
-  if (f.length > 0) {
-    writer.writePackedDouble(
-      5,
-      f
-    );
-  }
-  f = message.getSampleStatistics();
+  f = message.getSamples();
   if (f != null) {
     writer.writeMessage(
-      6,
+      5,
       f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(7, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(6, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -3538,28 +3584,28 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.serialize
  * optional string sensor_description = 1;
  * @return {string}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.getSensorDescription = function() {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.getSensorDescription = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.setSensorDescription = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.setSensorDescription = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional double first_sample_ts_us = 2;
+ * optional double first_sample_timestamp = 2;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.getFirstSampleTsUs = function() {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.getFirstSampleTimestamp = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 2, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.setFirstSampleTsUs = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.setFirstSampleTimestamp = function(value) {
   jspb.Message.setProto3FloatField(this, 2, value);
 };
 
@@ -3568,13 +3614,13 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype
  * optional double sample_rate_hz = 3;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.getSampleRateHz = function() {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.getSampleRateHz = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 3, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.setSampleRateHz = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.setSampleRateHz = function(value) {
   jspb.Message.setProto3FloatField(this, 3, value);
 };
 
@@ -3585,64 +3631,35 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.getIsScrambled = function() {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.getIsScrambled = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 4, false));
 };
 
 
 /** @param {boolean} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.setIsScrambled = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.setIsScrambled = function(value) {
   jspb.Message.setProto3BooleanField(this, 4, value);
 };
 
 
 /**
- * repeated double samples = 5;
- * @return {!Array<number>}
+ * optional Samples samples = 5;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.getSamplesList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 5));
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.getSamples = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 5));
 };
 
 
-/** @param {!Array<number>} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.setSamplesList = function(value) {
-  jspb.Message.setField(this, 5, value || []);
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.setSamples = function(value) {
+  jspb.Message.setWrapperField(this, 5, value);
 };
 
 
-/**
- * @param {!number} value
- * @param {number=} opt_index
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.addSamples = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 5, value, opt_index);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.clearSamplesList = function() {
-  this.setSamplesList([]);
-};
-
-
-/**
- * optional SummaryStatistics sample_statistics = 6;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.getSampleStatistics = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 6));
-};
-
-
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.setSampleStatistics = function(value) {
-  jspb.Message.setWrapperField(this, 6, value);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.clearSampleStatistics = function() {
-  this.setSampleStatistics(undefined);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.clearSamples = function() {
+  this.setSamples(undefined);
 };
 
 
@@ -3650,25 +3667,25 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.hasSampleStatistics = function() {
-  return jspb.Message.getField(this, 6) != null;
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.hasSamples = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 
 /**
- * map<string, string> metadata = 7;
+ * map<string, string> metadata = 6;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.getMetadataMap = function(opt_noLazyCreate) {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 7, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 6, opt_noLazyCreate,
       null));
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype.clearMetadataMap = function() {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.clearMetadataMap = function() {
   this.getMetadataMap().clear();
 };
 
@@ -3685,19 +3702,12 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel.prototype
  * @constructor
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.repeatedFields_, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.displayName = 'proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel';
 }
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.repeatedFields_ = [3,4];
-
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -3728,11 +3738,8 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.toO
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.toObject = function(includeInstance, msg) {
   var f, obj = {
     sensorDescription: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    meanSampleRateHz: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
-    sampleTsUsList: jspb.Message.getRepeatedFloatingPointField(msg, 3),
-    samplesList: jspb.Message.getRepeatedFloatingPointField(msg, 4),
-    sampleRateStatistics: (f = msg.getSampleRateStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    sampleStatistics: (f = msg.getSampleStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
+    timestamps: (f = msg.getTimestamps()) && proto.redvox_api1000.RedvoxPacket1000.Timestamps.toObject(includeInstance, f),
+    samples: (f = msg.getSamples()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -3775,28 +3782,16 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.deserializeBi
       msg.setSensorDescription(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readDouble());
-      msg.setMeanSampleRateHz(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Timestamps;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Timestamps.deserializeBinaryFromReader);
+      msg.setTimestamps(value);
       break;
     case 3:
-      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setSampleTsUsList(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setSamples(value);
       break;
     case 4:
-      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setSamplesList(value);
-      break;
-    case 5:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setSampleRateStatistics(value);
-      break;
-    case 6:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setSampleStatistics(value);
-      break;
-    case 7:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
@@ -3838,46 +3833,25 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.serializeBina
       f
     );
   }
-  f = message.getMeanSampleRateHz();
-  if (f !== 0.0) {
-    writer.writeDouble(
+  f = message.getTimestamps();
+  if (f != null) {
+    writer.writeMessage(
       2,
-      f
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Timestamps.serializeBinaryToWriter
     );
   }
-  f = message.getSampleTsUsList();
-  if (f.length > 0) {
-    writer.writePackedDouble(
+  f = message.getSamples();
+  if (f != null) {
+    writer.writeMessage(
       3,
-      f
-    );
-  }
-  f = message.getSamplesList();
-  if (f.length > 0) {
-    writer.writePackedDouble(
-      4,
-      f
-    );
-  }
-  f = message.getSampleRateStatistics();
-  if (f != null) {
-    writer.writeMessage(
-      5,
       f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
-    );
-  }
-  f = message.getSampleStatistics();
-  if (f != null) {
-    writer.writeMessage(
-      6,
-      f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(7, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(4, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -3898,96 +3872,23 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.set
 
 
 /**
- * optional double mean_sample_rate_hz = 2;
- * @return {number}
+ * optional Timestamps timestamps = 2;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Timestamps}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.getMeanSampleRateHz = function() {
-  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 2, 0.0));
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.getTimestamps = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Timestamps} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Timestamps, 2));
 };
 
 
-/** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.setMeanSampleRateHz = function(value) {
-  jspb.Message.setProto3FloatField(this, 2, value);
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Timestamps|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.setTimestamps = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
 };
 
 
-/**
- * repeated double sample_ts_us = 3;
- * @return {!Array<number>}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.getSampleTsUsList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 3));
-};
-
-
-/** @param {!Array<number>} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.setSampleTsUsList = function(value) {
-  jspb.Message.setField(this, 3, value || []);
-};
-
-
-/**
- * @param {!number} value
- * @param {number=} opt_index
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.addSampleTsUs = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 3, value, opt_index);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.clearSampleTsUsList = function() {
-  this.setSampleTsUsList([]);
-};
-
-
-/**
- * repeated double samples = 4;
- * @return {!Array<number>}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.getSamplesList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 4));
-};
-
-
-/** @param {!Array<number>} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.setSamplesList = function(value) {
-  jspb.Message.setField(this, 4, value || []);
-};
-
-
-/**
- * @param {!number} value
- * @param {number=} opt_index
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.addSamples = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 4, value, opt_index);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.clearSamplesList = function() {
-  this.setSamplesList([]);
-};
-
-
-/**
- * optional SummaryStatistics sample_rate_statistics = 5;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.getSampleRateStatistics = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 5));
-};
-
-
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.setSampleRateStatistics = function(value) {
-  jspb.Message.setWrapperField(this, 5, value);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.clearSampleRateStatistics = function() {
-  this.setSampleRateStatistics(undefined);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.clearTimestamps = function() {
+  this.setTimestamps(undefined);
 };
 
 
@@ -3995,29 +3896,29 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.cle
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.hasSampleRateStatistics = function() {
-  return jspb.Message.getField(this, 5) != null;
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.hasTimestamps = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
- * optional SummaryStatistics sample_statistics = 6;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
+ * optional Samples samples = 3;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.getSampleStatistics = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 6));
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.getSamples = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 3));
 };
 
 
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.setSampleStatistics = function(value) {
-  jspb.Message.setWrapperField(this, 6, value);
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.setSamples = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.clearSampleStatistics = function() {
-  this.setSampleStatistics(undefined);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.clearSamples = function() {
+  this.setSamples(undefined);
 };
 
 
@@ -4025,20 +3926,20 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.cle
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.hasSampleStatistics = function() {
-  return jspb.Message.getField(this, 6) != null;
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.hasSamples = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
 /**
- * map<string, string> metadata = 7;
+ * map<string, string> metadata = 4;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 7, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 4, opt_noLazyCreate,
       null));
 };
 
@@ -4060,19 +3961,12 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.prototype.cle
  * @constructor
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.repeatedFields_, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.displayName = 'proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel';
 }
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.repeatedFields_ = [3,4,5,6,7,8];
-
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -4103,23 +3997,20 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.t
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.toObject = function(includeInstance, msg) {
   var f, obj = {
     sensorDescription: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    meanSampleRateHz: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
-    sampleTsUsList: jspb.Message.getRepeatedFloatingPointField(msg, 3),
-    latitudeSamplesList: jspb.Message.getRepeatedFloatingPointField(msg, 4),
-    longitudeSamplesList: jspb.Message.getRepeatedFloatingPointField(msg, 5),
-    altitudeSamplesList: jspb.Message.getRepeatedFloatingPointField(msg, 6),
-    speedSamplesList: jspb.Message.getRepeatedFloatingPointField(msg, 7),
-    accuracySamplesList: jspb.Message.getRepeatedFloatingPointField(msg, 8),
-    locationPermissionsGranted: jspb.Message.getFieldWithDefault(msg, 9, false),
-    locationServicesRequested: jspb.Message.getFieldWithDefault(msg, 10, false),
-    locationServicesEnabled: jspb.Message.getFieldWithDefault(msg, 11, false),
-    locationProvider: jspb.Message.getFieldWithDefault(msg, 12, 0),
-    sampleRateStatistics: (f = msg.getSampleRateStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    latitudeSampleStatistics: (f = msg.getLatitudeSampleStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    longitudeSampleStatistics: (f = msg.getLongitudeSampleStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    altitudeSampleStatistics: (f = msg.getAltitudeSampleStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    speedSampleStatistics: (f = msg.getSpeedSampleStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    accuracySampleStatistics: (f = msg.getAccuracySampleStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
+    timestamps: (f = msg.getTimestamps()) && proto.redvox_api1000.RedvoxPacket1000.Timestamps.toObject(includeInstance, f),
+    latitudeSamples: (f = msg.getLatitudeSamples()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    longitudeSamples: (f = msg.getLongitudeSamples()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    altitudeSamples: (f = msg.getAltitudeSamples()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    speedSamples: (f = msg.getSpeedSamples()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    bearingSamples: (f = msg.getBearingSamples()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    horizontalAccuracySamples: (f = msg.getHorizontalAccuracySamples()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    verticalAccuracySamples: (f = msg.getVerticalAccuracySamples()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    speedAccuracySamples: (f = msg.getSpeedAccuracySamples()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    bearingAccuracySamples: (f = msg.getBearingAccuracySamples()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    locationPermissionsGranted: jspb.Message.getFieldWithDefault(msg, 12, false),
+    locationServicesRequested: jspb.Message.getFieldWithDefault(msg, 13, false),
+    locationServicesEnabled: jspb.Message.getFieldWithDefault(msg, 14, false),
+    locationProvider: jspb.Message.getFieldWithDefault(msg, 15, 0),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -4162,80 +4053,72 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.deserialize
       msg.setSensorDescription(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readDouble());
-      msg.setMeanSampleRateHz(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Timestamps;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Timestamps.deserializeBinaryFromReader);
+      msg.setTimestamps(value);
       break;
     case 3:
-      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setSampleTsUsList(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setLatitudeSamples(value);
       break;
     case 4:
-      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setLatitudeSamplesList(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setLongitudeSamples(value);
       break;
     case 5:
-      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setLongitudeSamplesList(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setAltitudeSamples(value);
       break;
     case 6:
-      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setAltitudeSamplesList(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setSpeedSamples(value);
       break;
     case 7:
-      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setSpeedSamplesList(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setBearingSamples(value);
       break;
     case 8:
-      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setAccuracySamplesList(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setHorizontalAccuracySamples(value);
       break;
     case 9:
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setVerticalAccuracySamples(value);
+      break;
+    case 10:
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setSpeedAccuracySamples(value);
+      break;
+    case 11:
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setBearingAccuracySamples(value);
+      break;
+    case 12:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setLocationPermissionsGranted(value);
       break;
-    case 10:
+    case 13:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setLocationServicesRequested(value);
       break;
-    case 11:
+    case 14:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setLocationServicesEnabled(value);
       break;
-    case 12:
+    case 15:
       var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider} */ (reader.readEnum());
       msg.setLocationProvider(value);
       break;
-    case 13:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setSampleRateStatistics(value);
-      break;
-    case 14:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setLatitudeSampleStatistics(value);
-      break;
-    case 15:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setLongitudeSampleStatistics(value);
-      break;
-    case 16:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setAltitudeSampleStatistics(value);
-      break;
-    case 17:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setSpeedSampleStatistics(value);
-      break;
-    case 18:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setAccuracySampleStatistics(value);
-      break;
-    case 19:
+    case 26:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
@@ -4277,134 +4160,117 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.serializeBi
       f
     );
   }
-  f = message.getMeanSampleRateHz();
-  if (f !== 0.0) {
-    writer.writeDouble(
+  f = message.getTimestamps();
+  if (f != null) {
+    writer.writeMessage(
       2,
-      f
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Timestamps.serializeBinaryToWriter
     );
   }
-  f = message.getSampleTsUsList();
-  if (f.length > 0) {
-    writer.writePackedDouble(
+  f = message.getLatitudeSamples();
+  if (f != null) {
+    writer.writeMessage(
       3,
-      f
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
-  f = message.getLatitudeSamplesList();
-  if (f.length > 0) {
-    writer.writePackedDouble(
+  f = message.getLongitudeSamples();
+  if (f != null) {
+    writer.writeMessage(
       4,
-      f
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
-  f = message.getLongitudeSamplesList();
-  if (f.length > 0) {
-    writer.writePackedDouble(
+  f = message.getAltitudeSamples();
+  if (f != null) {
+    writer.writeMessage(
       5,
-      f
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
-  f = message.getAltitudeSamplesList();
-  if (f.length > 0) {
-    writer.writePackedDouble(
+  f = message.getSpeedSamples();
+  if (f != null) {
+    writer.writeMessage(
       6,
-      f
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
-  f = message.getSpeedSamplesList();
-  if (f.length > 0) {
-    writer.writePackedDouble(
+  f = message.getBearingSamples();
+  if (f != null) {
+    writer.writeMessage(
       7,
-      f
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
-  f = message.getAccuracySamplesList();
-  if (f.length > 0) {
-    writer.writePackedDouble(
+  f = message.getHorizontalAccuracySamples();
+  if (f != null) {
+    writer.writeMessage(
       8,
-      f
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
+    );
+  }
+  f = message.getVerticalAccuracySamples();
+  if (f != null) {
+    writer.writeMessage(
+      9,
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
+    );
+  }
+  f = message.getSpeedAccuracySamples();
+  if (f != null) {
+    writer.writeMessage(
+      10,
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
+    );
+  }
+  f = message.getBearingAccuracySamples();
+  if (f != null) {
+    writer.writeMessage(
+      11,
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
   f = message.getLocationPermissionsGranted();
   if (f) {
     writer.writeBool(
-      9,
+      12,
       f
     );
   }
   f = message.getLocationServicesRequested();
   if (f) {
     writer.writeBool(
-      10,
+      13,
       f
     );
   }
   f = message.getLocationServicesEnabled();
   if (f) {
     writer.writeBool(
-      11,
+      14,
       f
     );
   }
   f = message.getLocationProvider();
   if (f !== 0.0) {
     writer.writeEnum(
-      12,
-      f
-    );
-  }
-  f = message.getSampleRateStatistics();
-  if (f != null) {
-    writer.writeMessage(
-      13,
-      f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
-    );
-  }
-  f = message.getLatitudeSampleStatistics();
-  if (f != null) {
-    writer.writeMessage(
-      14,
-      f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
-    );
-  }
-  f = message.getLongitudeSampleStatistics();
-  if (f != null) {
-    writer.writeMessage(
       15,
-      f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
-    );
-  }
-  f = message.getAltitudeSampleStatistics();
-  if (f != null) {
-    writer.writeMessage(
-      16,
-      f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
-    );
-  }
-  f = message.getSpeedSampleStatistics();
-  if (f != null) {
-    writer.writeMessage(
-      17,
-      f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
-    );
-  }
-  f = message.getAccuracySampleStatistics();
-  if (f != null) {
-    writer.writeMessage(
-      18,
-      f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
+      f
     );
   }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(19, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(26, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -4435,449 +4301,380 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.s
 
 
 /**
- * optional double mean_sample_rate_hz = 2;
- * @return {number}
+ * optional Timestamps timestamps = 2;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Timestamps}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getMeanSampleRateHz = function() {
-  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 2, 0.0));
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getTimestamps = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Timestamps} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Timestamps, 2));
 };
 
 
-/** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setMeanSampleRateHz = function(value) {
-  jspb.Message.setProto3FloatField(this, 2, value);
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Timestamps|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setTimestamps = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearTimestamps = function() {
+  this.setTimestamps(undefined);
 };
 
 
 /**
- * repeated double sample_ts_us = 3;
- * @return {!Array<number>}
+ * Returns whether this field is set.
+ * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getSampleTsUsList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 3));
-};
-
-
-/** @param {!Array<number>} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setSampleTsUsList = function(value) {
-  jspb.Message.setField(this, 3, value || []);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasTimestamps = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
- * @param {!number} value
- * @param {number=} opt_index
+ * optional Samples latitude_samples = 3;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.addSampleTsUs = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 3, value, opt_index);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLatitudeSamples = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 3));
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearSampleTsUsList = function() {
-  this.setSampleTsUsList([]);
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLatitudeSamples = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearLatitudeSamples = function() {
+  this.setLatitudeSamples(undefined);
 };
 
 
 /**
- * repeated double latitude_samples = 4;
- * @return {!Array<number>}
+ * Returns whether this field is set.
+ * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLatitudeSamplesList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 4));
-};
-
-
-/** @param {!Array<number>} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLatitudeSamplesList = function(value) {
-  jspb.Message.setField(this, 4, value || []);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasLatitudeSamples = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
 /**
- * @param {!number} value
- * @param {number=} opt_index
+ * optional Samples longitude_samples = 4;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.addLatitudeSamples = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 4, value, opt_index);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLongitudeSamples = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 4));
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearLatitudeSamplesList = function() {
-  this.setLatitudeSamplesList([]);
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLongitudeSamples = function(value) {
+  jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearLongitudeSamples = function() {
+  this.setLongitudeSamples(undefined);
 };
 
 
 /**
- * repeated double longitude_samples = 5;
- * @return {!Array<number>}
+ * Returns whether this field is set.
+ * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLongitudeSamplesList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 5));
-};
-
-
-/** @param {!Array<number>} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLongitudeSamplesList = function(value) {
-  jspb.Message.setField(this, 5, value || []);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasLongitudeSamples = function() {
+  return jspb.Message.getField(this, 4) != null;
 };
 
 
 /**
- * @param {!number} value
- * @param {number=} opt_index
+ * optional Samples altitude_samples = 5;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.addLongitudeSamples = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 5, value, opt_index);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getAltitudeSamples = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 5));
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearLongitudeSamplesList = function() {
-  this.setLongitudeSamplesList([]);
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setAltitudeSamples = function(value) {
+  jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearAltitudeSamples = function() {
+  this.setAltitudeSamples(undefined);
 };
 
 
 /**
- * repeated double altitude_samples = 6;
- * @return {!Array<number>}
+ * Returns whether this field is set.
+ * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getAltitudeSamplesList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 6));
-};
-
-
-/** @param {!Array<number>} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setAltitudeSamplesList = function(value) {
-  jspb.Message.setField(this, 6, value || []);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasAltitudeSamples = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 
 /**
- * @param {!number} value
- * @param {number=} opt_index
+ * optional Samples speed_samples = 6;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.addAltitudeSamples = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 6, value, opt_index);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getSpeedSamples = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 6));
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearAltitudeSamplesList = function() {
-  this.setAltitudeSamplesList([]);
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setSpeedSamples = function(value) {
+  jspb.Message.setWrapperField(this, 6, value);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearSpeedSamples = function() {
+  this.setSpeedSamples(undefined);
 };
 
 
 /**
- * repeated double speed_samples = 7;
- * @return {!Array<number>}
+ * Returns whether this field is set.
+ * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getSpeedSamplesList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 7));
-};
-
-
-/** @param {!Array<number>} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setSpeedSamplesList = function(value) {
-  jspb.Message.setField(this, 7, value || []);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasSpeedSamples = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 
 /**
- * @param {!number} value
- * @param {number=} opt_index
+ * optional Samples bearing_samples = 7;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.addSpeedSamples = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 7, value, opt_index);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getBearingSamples = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 7));
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearSpeedSamplesList = function() {
-  this.setSpeedSamplesList([]);
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setBearingSamples = function(value) {
+  jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearBearingSamples = function() {
+  this.setBearingSamples(undefined);
 };
 
 
 /**
- * repeated double accuracy_samples = 8;
- * @return {!Array<number>}
+ * Returns whether this field is set.
+ * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getAccuracySamplesList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 8));
-};
-
-
-/** @param {!Array<number>} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setAccuracySamplesList = function(value) {
-  jspb.Message.setField(this, 8, value || []);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasBearingSamples = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 
 /**
- * @param {!number} value
- * @param {number=} opt_index
+ * optional Samples horizontal_accuracy_samples = 8;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.addAccuracySamples = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 8, value, opt_index);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getHorizontalAccuracySamples = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 8));
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearAccuracySamplesList = function() {
-  this.setAccuracySamplesList([]);
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setHorizontalAccuracySamples = function(value) {
+  jspb.Message.setWrapperField(this, 8, value);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearHorizontalAccuracySamples = function() {
+  this.setHorizontalAccuracySamples(undefined);
 };
 
 
 /**
- * optional bool location_permissions_granted = 9;
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasHorizontalAccuracySamples = function() {
+  return jspb.Message.getField(this, 8) != null;
+};
+
+
+/**
+ * optional Samples vertical_accuracy_samples = 9;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getVerticalAccuracySamples = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 9));
+};
+
+
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setVerticalAccuracySamples = function(value) {
+  jspb.Message.setWrapperField(this, 9, value);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearVerticalAccuracySamples = function() {
+  this.setVerticalAccuracySamples(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasVerticalAccuracySamples = function() {
+  return jspb.Message.getField(this, 9) != null;
+};
+
+
+/**
+ * optional Samples speed_accuracy_samples = 10;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getSpeedAccuracySamples = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 10));
+};
+
+
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setSpeedAccuracySamples = function(value) {
+  jspb.Message.setWrapperField(this, 10, value);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearSpeedAccuracySamples = function() {
+  this.setSpeedAccuracySamples(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasSpeedAccuracySamples = function() {
+  return jspb.Message.getField(this, 10) != null;
+};
+
+
+/**
+ * optional Samples bearing_accuracy_samples = 11;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getBearingAccuracySamples = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 11));
+};
+
+
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setBearingAccuracySamples = function(value) {
+  jspb.Message.setWrapperField(this, 11, value);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearBearingAccuracySamples = function() {
+  this.setBearingAccuracySamples(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasBearingAccuracySamples = function() {
+  return jspb.Message.getField(this, 11) != null;
+};
+
+
+/**
+ * optional bool location_permissions_granted = 12;
  * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLocationPermissionsGranted = function() {
-  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 9, false));
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 12, false));
 };
 
 
 /** @param {boolean} value */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLocationPermissionsGranted = function(value) {
-  jspb.Message.setProto3BooleanField(this, 9, value);
+  jspb.Message.setProto3BooleanField(this, 12, value);
 };
 
 
 /**
- * optional bool location_services_requested = 10;
+ * optional bool location_services_requested = 13;
  * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLocationServicesRequested = function() {
-  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 10, false));
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 13, false));
 };
 
 
 /** @param {boolean} value */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLocationServicesRequested = function(value) {
-  jspb.Message.setProto3BooleanField(this, 10, value);
+  jspb.Message.setProto3BooleanField(this, 13, value);
 };
 
 
 /**
- * optional bool location_services_enabled = 11;
+ * optional bool location_services_enabled = 14;
  * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLocationServicesEnabled = function() {
-  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 11, false));
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 14, false));
 };
 
 
 /** @param {boolean} value */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLocationServicesEnabled = function(value) {
-  jspb.Message.setProto3BooleanField(this, 11, value);
+  jspb.Message.setProto3BooleanField(this, 14, value);
 };
 
 
 /**
- * optional LocationProvider location_provider = 12;
+ * optional LocationProvider location_provider = 15;
  * @return {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider}
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLocationProvider = function() {
-  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider} */ (jspb.Message.getFieldWithDefault(this, 12, 0));
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider} */ (jspb.Message.getFieldWithDefault(this, 15, 0));
 };
 
 
 /** @param {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider} value */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLocationProvider = function(value) {
-  jspb.Message.setProto3EnumField(this, 12, value);
+  jspb.Message.setProto3EnumField(this, 15, value);
 };
 
 
 /**
- * optional SummaryStatistics sample_rate_statistics = 13;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getSampleRateStatistics = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 13));
-};
-
-
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setSampleRateStatistics = function(value) {
-  jspb.Message.setWrapperField(this, 13, value);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearSampleRateStatistics = function() {
-  this.setSampleRateStatistics(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasSampleRateStatistics = function() {
-  return jspb.Message.getField(this, 13) != null;
-};
-
-
-/**
- * optional SummaryStatistics latitude_sample_statistics = 14;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLatitudeSampleStatistics = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 14));
-};
-
-
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLatitudeSampleStatistics = function(value) {
-  jspb.Message.setWrapperField(this, 14, value);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearLatitudeSampleStatistics = function() {
-  this.setLatitudeSampleStatistics(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasLatitudeSampleStatistics = function() {
-  return jspb.Message.getField(this, 14) != null;
-};
-
-
-/**
- * optional SummaryStatistics longitude_sample_statistics = 15;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLongitudeSampleStatistics = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 15));
-};
-
-
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLongitudeSampleStatistics = function(value) {
-  jspb.Message.setWrapperField(this, 15, value);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearLongitudeSampleStatistics = function() {
-  this.setLongitudeSampleStatistics(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasLongitudeSampleStatistics = function() {
-  return jspb.Message.getField(this, 15) != null;
-};
-
-
-/**
- * optional SummaryStatistics altitude_sample_statistics = 16;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getAltitudeSampleStatistics = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 16));
-};
-
-
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setAltitudeSampleStatistics = function(value) {
-  jspb.Message.setWrapperField(this, 16, value);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearAltitudeSampleStatistics = function() {
-  this.setAltitudeSampleStatistics(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasAltitudeSampleStatistics = function() {
-  return jspb.Message.getField(this, 16) != null;
-};
-
-
-/**
- * optional SummaryStatistics speed_sample_statistics = 17;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getSpeedSampleStatistics = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 17));
-};
-
-
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setSpeedSampleStatistics = function(value) {
-  jspb.Message.setWrapperField(this, 17, value);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearSpeedSampleStatistics = function() {
-  this.setSpeedSampleStatistics(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasSpeedSampleStatistics = function() {
-  return jspb.Message.getField(this, 17) != null;
-};
-
-
-/**
- * optional SummaryStatistics accuracy_sample_statistics = 18;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getAccuracySampleStatistics = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 18));
-};
-
-
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setAccuracySampleStatistics = function(value) {
-  jspb.Message.setWrapperField(this, 18, value);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.clearAccuracySampleStatistics = function() {
-  this.setAccuracySampleStatistics(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.hasAccuracySampleStatistics = function() {
-  return jspb.Message.getField(this, 18) != null;
-};
-
-
-/**
- * map<string, string> metadata = 19;
+ * map<string, string> metadata = 26;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 19, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 26, opt_noLazyCreate,
       null));
 };
 
@@ -4899,19 +4696,12 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.c
  * @constructor
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.repeatedFields_, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.displayName = 'proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel';
 }
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.repeatedFields_ = [3,4,5,6];
-
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -4942,15 +4732,10 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.toObje
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.toObject = function(includeInstance, msg) {
   var f, obj = {
     sensorDescription: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    meanSampleRateHz: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
-    sampleTsUsList: jspb.Message.getRepeatedFloatingPointField(msg, 3),
-    xSamplesList: jspb.Message.getRepeatedFloatingPointField(msg, 4),
-    ySamplesList: jspb.Message.getRepeatedFloatingPointField(msg, 5),
-    zSamplesList: jspb.Message.getRepeatedFloatingPointField(msg, 6),
-    sampleRateStatistics: (f = msg.getSampleRateStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    xSampleStatistics: (f = msg.getXSampleStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    ySampleStatistics: (f = msg.getYSampleStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
-    zSampleStatistics: (f = msg.getZSampleStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
+    timestamps: (f = msg.getTimestamps()) && proto.redvox_api1000.RedvoxPacket1000.Timestamps.toObject(includeInstance, f),
+    xSamples: (f = msg.getXSamples()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    ySamples: (f = msg.getYSamples()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
+    zSamples: (f = msg.getZSamples()) && proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(includeInstance, f),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -4993,44 +4778,24 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.deserializeBinar
       msg.setSensorDescription(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readDouble());
-      msg.setMeanSampleRateHz(value);
-      break;
-    case 3:
-      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setSampleTsUsList(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Timestamps;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Timestamps.deserializeBinaryFromReader);
+      msg.setTimestamps(value);
       break;
     case 4:
-      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setXSamplesList(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setXSamples(value);
       break;
     case 5:
-      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setYSamplesList(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setYSamples(value);
       break;
     case 6:
-      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setZSamplesList(value);
-      break;
-    case 7:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setSampleRateStatistics(value);
-      break;
-    case 8:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setXSampleStatistics(value);
-      break;
-    case 9:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setYSampleStatistics(value);
-      break;
-    case 10:
-      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
-      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setZSampleStatistics(value);
+      var value = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader);
+      msg.setZSamples(value);
       break;
     case 11:
       var value = msg.getMetadataMap();
@@ -5074,71 +4839,36 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.serializeBinaryT
       f
     );
   }
-  f = message.getMeanSampleRateHz();
-  if (f !== 0.0) {
-    writer.writeDouble(
+  f = message.getTimestamps();
+  if (f != null) {
+    writer.writeMessage(
       2,
-      f
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Timestamps.serializeBinaryToWriter
     );
   }
-  f = message.getSampleTsUsList();
-  if (f.length > 0) {
-    writer.writePackedDouble(
-      3,
-      f
-    );
-  }
-  f = message.getXSamplesList();
-  if (f.length > 0) {
-    writer.writePackedDouble(
+  f = message.getXSamples();
+  if (f != null) {
+    writer.writeMessage(
       4,
-      f
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
-  f = message.getYSamplesList();
-  if (f.length > 0) {
-    writer.writePackedDouble(
+  f = message.getYSamples();
+  if (f != null) {
+    writer.writeMessage(
       5,
-      f
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
-  f = message.getZSamplesList();
-  if (f.length > 0) {
-    writer.writePackedDouble(
+  f = message.getZSamples();
+  if (f != null) {
+    writer.writeMessage(
       6,
-      f
-    );
-  }
-  f = message.getSampleRateStatistics();
-  if (f != null) {
-    writer.writeMessage(
-      7,
       f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
-    );
-  }
-  f = message.getXSampleStatistics();
-  if (f != null) {
-    writer.writeMessage(
-      8,
-      f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
-    );
-  }
-  f = message.getYSampleStatistics();
-  if (f != null) {
-    writer.writeMessage(
-      9,
-      f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
-    );
-  }
-  f = message.getZSampleStatistics();
-  if (f != null) {
-    writer.writeMessage(
-      10,
-      f,
-      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
+      proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter
     );
   }
   f = message.getMetadataMap(true);
@@ -5164,154 +4894,23 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.setSen
 
 
 /**
- * optional double mean_sample_rate_hz = 2;
- * @return {number}
+ * optional Timestamps timestamps = 2;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Timestamps}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.getMeanSampleRateHz = function() {
-  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 2, 0.0));
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.getTimestamps = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Timestamps} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Timestamps, 2));
 };
 
 
-/** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.setMeanSampleRateHz = function(value) {
-  jspb.Message.setProto3FloatField(this, 2, value);
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Timestamps|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.setTimestamps = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
 };
 
 
-/**
- * repeated double sample_ts_us = 3;
- * @return {!Array<number>}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.getSampleTsUsList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 3));
-};
-
-
-/** @param {!Array<number>} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.setSampleTsUsList = function(value) {
-  jspb.Message.setField(this, 3, value || []);
-};
-
-
-/**
- * @param {!number} value
- * @param {number=} opt_index
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.addSampleTsUs = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 3, value, opt_index);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearSampleTsUsList = function() {
-  this.setSampleTsUsList([]);
-};
-
-
-/**
- * repeated double x_samples = 4;
- * @return {!Array<number>}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.getXSamplesList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 4));
-};
-
-
-/** @param {!Array<number>} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.setXSamplesList = function(value) {
-  jspb.Message.setField(this, 4, value || []);
-};
-
-
-/**
- * @param {!number} value
- * @param {number=} opt_index
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.addXSamples = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 4, value, opt_index);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearXSamplesList = function() {
-  this.setXSamplesList([]);
-};
-
-
-/**
- * repeated double y_samples = 5;
- * @return {!Array<number>}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.getYSamplesList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 5));
-};
-
-
-/** @param {!Array<number>} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.setYSamplesList = function(value) {
-  jspb.Message.setField(this, 5, value || []);
-};
-
-
-/**
- * @param {!number} value
- * @param {number=} opt_index
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.addYSamples = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 5, value, opt_index);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearYSamplesList = function() {
-  this.setYSamplesList([]);
-};
-
-
-/**
- * repeated double z_samples = 6;
- * @return {!Array<number>}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.getZSamplesList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 6));
-};
-
-
-/** @param {!Array<number>} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.setZSamplesList = function(value) {
-  jspb.Message.setField(this, 6, value || []);
-};
-
-
-/**
- * @param {!number} value
- * @param {number=} opt_index
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.addZSamples = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 6, value, opt_index);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearZSamplesList = function() {
-  this.setZSamplesList([]);
-};
-
-
-/**
- * optional SummaryStatistics sample_rate_statistics = 7;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.getSampleRateStatistics = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 7));
-};
-
-
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.setSampleRateStatistics = function(value) {
-  jspb.Message.setWrapperField(this, 7, value);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearSampleRateStatistics = function() {
-  this.setSampleRateStatistics(undefined);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearTimestamps = function() {
+  this.setTimestamps(undefined);
 };
 
 
@@ -5319,59 +4918,29 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearS
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.hasSampleRateStatistics = function() {
-  return jspb.Message.getField(this, 7) != null;
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.hasTimestamps = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
- * optional SummaryStatistics x_sample_statistics = 8;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
+ * optional Samples x_samples = 4;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.getXSampleStatistics = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 8));
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.getXSamples = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 4));
 };
 
 
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.setXSampleStatistics = function(value) {
-  jspb.Message.setWrapperField(this, 8, value);
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.setXSamples = function(value) {
+  jspb.Message.setWrapperField(this, 4, value);
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearXSampleStatistics = function() {
-  this.setXSampleStatistics(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.hasXSampleStatistics = function() {
-  return jspb.Message.getField(this, 8) != null;
-};
-
-
-/**
- * optional SummaryStatistics y_sample_statistics = 9;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
- */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.getYSampleStatistics = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 9));
-};
-
-
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.setYSampleStatistics = function(value) {
-  jspb.Message.setWrapperField(this, 9, value);
-};
-
-
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearYSampleStatistics = function() {
-  this.setYSampleStatistics(undefined);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearXSamples = function() {
+  this.setXSamples(undefined);
 };
 
 
@@ -5379,29 +4948,29 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearY
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.hasYSampleStatistics = function() {
-  return jspb.Message.getField(this, 9) != null;
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.hasXSamples = function() {
+  return jspb.Message.getField(this, 4) != null;
 };
 
 
 /**
- * optional SummaryStatistics z_sample_statistics = 10;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
+ * optional Samples y_samples = 5;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.getZSampleStatistics = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 10));
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.getYSamples = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 5));
 };
 
 
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.setZSampleStatistics = function(value) {
-  jspb.Message.setWrapperField(this, 10, value);
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.setYSamples = function(value) {
+  jspb.Message.setWrapperField(this, 5, value);
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearZSampleStatistics = function() {
-  this.setZSampleStatistics(undefined);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearYSamples = function() {
+  this.setYSamples(undefined);
 };
 
 
@@ -5409,8 +4978,38 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearZ
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.hasZSampleStatistics = function() {
-  return jspb.Message.getField(this, 10) != null;
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.hasYSamples = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional Samples z_samples = 6;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.Samples}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.getZSamples = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.Samples} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.Samples, 6));
+};
+
+
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.Samples|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.setZSamples = function(value) {
+  jspb.Message.setWrapperField(this, 6, value);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.clearZSamples = function() {
+  this.setZSamples(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.prototype.hasZSamples = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 
@@ -5788,23 +5387,23 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.prototype.clea
 
 
 /**
- * optional MicrophoneChannel microphone_channel = 1;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel}
+ * optional AudioChannel audio_channel = 1;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.getMicrophoneChannel = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel, 1));
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.getAudioChannel = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel, 1));
 };
 
 
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.SensorChannels.MicrophoneChannel|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.setMicrophoneChannel = function(value) {
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.setAudioChannel = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.clearMicrophoneChannel = function() {
-  this.setMicrophoneChannel(undefined);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.clearAudioChannel = function() {
+  this.setAudioChannel(undefined);
 };
 
 
@@ -5812,7 +5411,7 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.clearMicrophoneCh
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.hasMicrophoneChannel = function() {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.hasAudioChannel = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -6072,6 +5671,474 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.getMetadataMap = 
 
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.clearMetadataMap = function() {
   this.getMetadataMap().clear();
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.redvox_api1000.RedvoxPacket1000.Samples = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.redvox_api1000.RedvoxPacket1000.Samples.repeatedFields_, null);
+};
+goog.inherits(proto.redvox_api1000.RedvoxPacket1000.Samples, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.redvox_api1000.RedvoxPacket1000.Samples.displayName = 'proto.redvox_api1000.RedvoxPacket1000.Samples';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.redvox_api1000.RedvoxPacket1000.Samples.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Samples.prototype.toObject = function(opt_includeInstance) {
+  return proto.redvox_api1000.RedvoxPacket1000.Samples.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.Samples} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.redvox_api1000.RedvoxPacket1000.Samples.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    unit: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    samplesList: jspb.Message.getRepeatedFloatingPointField(msg, 2),
+    sampleStatistics: (f = msg.getSampleStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.Samples}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.redvox_api1000.RedvoxPacket1000.Samples;
+  return proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.Samples} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.Samples}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Samples.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.Unit} */ (reader.readEnum());
+      msg.setUnit(value);
+      break;
+    case 2:
+      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
+      msg.setSamplesList(value);
+      break;
+    case 3:
+      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
+      msg.setSampleStatistics(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Samples.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.Samples} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.redvox_api1000.RedvoxPacket1000.Samples.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getUnit();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      1,
+      f
+    );
+  }
+  f = message.getSamplesList();
+  if (f.length > 0) {
+    writer.writePackedDouble(
+      2,
+      f
+    );
+  }
+  f = message.getSampleStatistics();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Unit unit = 1;
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.Unit}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Samples.prototype.getUnit = function() {
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.Unit} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {!proto.redvox_api1000.RedvoxPacket1000.Unit} value */
+proto.redvox_api1000.RedvoxPacket1000.Samples.prototype.setUnit = function(value) {
+  jspb.Message.setProto3EnumField(this, 1, value);
+};
+
+
+/**
+ * repeated double samples = 2;
+ * @return {!Array<number>}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Samples.prototype.getSamplesList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 2));
+};
+
+
+/** @param {!Array<number>} value */
+proto.redvox_api1000.RedvoxPacket1000.Samples.prototype.setSamplesList = function(value) {
+  jspb.Message.setField(this, 2, value || []);
+};
+
+
+/**
+ * @param {!number} value
+ * @param {number=} opt_index
+ */
+proto.redvox_api1000.RedvoxPacket1000.Samples.prototype.addSamples = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 2, value, opt_index);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.Samples.prototype.clearSamplesList = function() {
+  this.setSamplesList([]);
+};
+
+
+/**
+ * optional SummaryStatistics sample_statistics = 3;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Samples.prototype.getSampleStatistics = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 3));
+};
+
+
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.Samples.prototype.setSampleStatistics = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.Samples.prototype.clearSampleStatistics = function() {
+  this.setSampleStatistics(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Samples.prototype.hasSampleStatistics = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.redvox_api1000.RedvoxPacket1000.Timestamps.repeatedFields_, null);
+};
+goog.inherits(proto.redvox_api1000.RedvoxPacket1000.Timestamps, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.redvox_api1000.RedvoxPacket1000.Timestamps.displayName = 'proto.redvox_api1000.RedvoxPacket1000.Timestamps';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.prototype.toObject = function(opt_includeInstance) {
+  return proto.redvox_api1000.RedvoxPacket1000.Timestamps.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.Timestamps} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    unit: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    timestampsList: jspb.Message.getRepeatedFloatingPointField(msg, 2),
+    timestampStatistics: (f = msg.getTimestampStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.Timestamps}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.redvox_api1000.RedvoxPacket1000.Timestamps;
+  return proto.redvox_api1000.RedvoxPacket1000.Timestamps.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.Timestamps} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.Timestamps}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.Unit} */ (reader.readEnum());
+      msg.setUnit(value);
+      break;
+    case 2:
+      var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
+      msg.setTimestampsList(value);
+      break;
+    case 3:
+      var value = new proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics;
+      reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.deserializeBinaryFromReader);
+      msg.setTimestampStatistics(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.redvox_api1000.RedvoxPacket1000.Timestamps.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.Timestamps} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getUnit();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      1,
+      f
+    );
+  }
+  f = message.getTimestampsList();
+  if (f.length > 0) {
+    writer.writePackedDouble(
+      2,
+      f
+    );
+  }
+  f = message.getTimestampStatistics();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional Unit unit = 1;
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.Unit}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.prototype.getUnit = function() {
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.Unit} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {!proto.redvox_api1000.RedvoxPacket1000.Unit} value */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.prototype.setUnit = function(value) {
+  jspb.Message.setProto3EnumField(this, 1, value);
+};
+
+
+/**
+ * repeated double timestamps = 2;
+ * @return {!Array<number>}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.prototype.getTimestampsList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 2));
+};
+
+
+/** @param {!Array<number>} value */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.prototype.setTimestampsList = function(value) {
+  jspb.Message.setField(this, 2, value || []);
+};
+
+
+/**
+ * @param {!number} value
+ * @param {number=} opt_index
+ */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.prototype.addTimestamps = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 2, value, opt_index);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.prototype.clearTimestampsList = function() {
+  this.setTimestampsList([]);
+};
+
+
+/**
+ * optional SummaryStatistics timestamp_statistics = 3;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.prototype.getTimestampStatistics = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics, 3));
+};
+
+
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.prototype.setTimestampStatistics = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.prototype.clearTimestampStatistics = function() {
+  this.setTimestampStatistics(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.redvox_api1000.RedvoxPacket1000.Timestamps.prototype.hasTimestampStatistics = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
@@ -6481,23 +6548,23 @@ proto.redvox_api1000.RedvoxPacket1000.prototype.hasUserInformation = function() 
 
 
 /**
- * optional DeviceInformation device_information = 3;
- * @return {?proto.redvox_api1000.RedvoxPacket1000.DeviceInformation}
+ * optional StationInformation station_information = 3;
+ * @return {?proto.redvox_api1000.RedvoxPacket1000.StationInformation}
  */
-proto.redvox_api1000.RedvoxPacket1000.prototype.getDeviceInformation = function() {
-  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.DeviceInformation} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.DeviceInformation, 3));
+proto.redvox_api1000.RedvoxPacket1000.prototype.getStationInformation = function() {
+  return /** @type{?proto.redvox_api1000.RedvoxPacket1000.StationInformation} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.StationInformation, 3));
 };
 
 
-/** @param {?proto.redvox_api1000.RedvoxPacket1000.DeviceInformation|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.prototype.setDeviceInformation = function(value) {
+/** @param {?proto.redvox_api1000.RedvoxPacket1000.StationInformation|undefined} value */
+proto.redvox_api1000.RedvoxPacket1000.prototype.setStationInformation = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.prototype.clearDeviceInformation = function() {
-  this.setDeviceInformation(undefined);
+proto.redvox_api1000.RedvoxPacket1000.prototype.clearStationInformation = function() {
+  this.setStationInformation(undefined);
 };
 
 
@@ -6505,7 +6572,7 @@ proto.redvox_api1000.RedvoxPacket1000.prototype.clearDeviceInformation = functio
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.prototype.hasDeviceInformation = function() {
+proto.redvox_api1000.RedvoxPacket1000.prototype.hasStationInformation = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 

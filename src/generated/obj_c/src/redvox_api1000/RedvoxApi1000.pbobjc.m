@@ -50,7 +50,7 @@ static GPBFileDescriptor *RedvoxApi1000Root_FileDescriptor(void) {
 
 @dynamic api;
 @dynamic hasUserInformation, userInformation;
-@dynamic hasDeviceInformation, deviceInformation;
+@dynamic hasStationInformation, stationInformation;
 @dynamic hasPacketInformation, packetInformation;
 @dynamic hasTimingInformation, timingInformation;
 @dynamic hasServerInformation, serverInformation;
@@ -60,7 +60,7 @@ static GPBFileDescriptor *RedvoxApi1000Root_FileDescriptor(void) {
 typedef struct RedvoxPacket1000__storage_ {
   uint32_t _has_storage_[1];
   RedvoxPacket1000_UserInformation *userInformation;
-  RedvoxPacket1000_DeviceInformation *deviceInformation;
+  RedvoxPacket1000_StationInformation *stationInformation;
   RedvoxPacket1000_PacketInformation *packetInformation;
   RedvoxPacket1000_TimingInformation *timingInformation;
   RedvoxPacket1000_ServerInformation *serverInformation;
@@ -94,11 +94,11 @@ typedef struct RedvoxPacket1000__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "deviceInformation",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_DeviceInformation),
-        .number = RedvoxPacket1000_FieldNumber_DeviceInformation,
+        .name = "stationInformation",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_StationInformation),
+        .number = RedvoxPacket1000_FieldNumber_StationInformation,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, deviceInformation),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000__storage_, stationInformation),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -163,6 +163,65 @@ typedef struct RedvoxPacket1000__storage_ {
 }
 
 @end
+
+#pragma mark - Enum RedvoxPacket1000_Unit
+
+GPBEnumDescriptor *RedvoxPacket1000_Unit_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "MetersPerSecondSquared\000Kilopascal\000Radian"
+        "sPerSecond\000DecimalDegrees\000Meters\000MetersP"
+        "erSecond\000Microtesla\000LsbPlusMinusCounts\000M"
+        "icrosecondsSinceUnixEpoch\000Decibel\000Degree"
+        "sCelsius\000Byte\000";
+    static const int32_t values[] = {
+        RedvoxPacket1000_Unit_MetersPerSecondSquared,
+        RedvoxPacket1000_Unit_Kilopascal,
+        RedvoxPacket1000_Unit_RadiansPerSecond,
+        RedvoxPacket1000_Unit_DecimalDegrees,
+        RedvoxPacket1000_Unit_Meters,
+        RedvoxPacket1000_Unit_MetersPerSecond,
+        RedvoxPacket1000_Unit_Microtesla,
+        RedvoxPacket1000_Unit_LsbPlusMinusCounts,
+        RedvoxPacket1000_Unit_MicrosecondsSinceUnixEpoch,
+        RedvoxPacket1000_Unit_Decibel,
+        RedvoxPacket1000_Unit_DegreesCelsius,
+        RedvoxPacket1000_Unit_Byte,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_Unit)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:RedvoxPacket1000_Unit_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL RedvoxPacket1000_Unit_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case RedvoxPacket1000_Unit_MetersPerSecondSquared:
+    case RedvoxPacket1000_Unit_Kilopascal:
+    case RedvoxPacket1000_Unit_RadiansPerSecond:
+    case RedvoxPacket1000_Unit_DecimalDegrees:
+    case RedvoxPacket1000_Unit_Meters:
+    case RedvoxPacket1000_Unit_MetersPerSecond:
+    case RedvoxPacket1000_Unit_Microtesla:
+    case RedvoxPacket1000_Unit_LsbPlusMinusCounts:
+    case RedvoxPacket1000_Unit_MicrosecondsSinceUnixEpoch:
+    case RedvoxPacket1000_Unit_Decibel:
+    case RedvoxPacket1000_Unit_DegreesCelsius:
+    case RedvoxPacket1000_Unit_Byte:
+      return YES;
+    default:
+      return NO;
+  }
+}
 
 #pragma mark - RedvoxPacket1000_UserInformation
 
@@ -241,46 +300,48 @@ typedef struct RedvoxPacket1000_UserInformation__storage_ {
 
 @end
 
-#pragma mark - RedvoxPacket1000_DeviceInformation
+#pragma mark - RedvoxPacket1000_StationInformation
 
-@implementation RedvoxPacket1000_DeviceInformation
+@implementation RedvoxPacket1000_StationInformation
 
-@dynamic deviceId;
-@dynamic deviceUuid;
-@dynamic deviceMake;
-@dynamic deviceModel;
-@dynamic deviceOs;
-@dynamic deviceOsVersion;
-@dynamic deviceAppVersion;
+@dynamic id_p;
+@dynamic uuid;
+@dynamic make;
+@dynamic model;
+@dynamic os;
+@dynamic osVersion;
+@dynamic appVersion;
 @dynamic hasAppSettings, appSettings;
 @dynamic networkType;
-@dynamic hasNetworkStrengthDb, networkStrengthDb;
-@dynamic hasDeviceTempC, deviceTempC;
-@dynamic hasDeviceBatteryPercent, deviceBatteryPercent;
-@dynamic hasAvailableRamBytes, availableRamBytes;
-@dynamic hasAvailableDiskBytes, availableDiskBytes;
+@dynamic hasStationInformationTimestamps, stationInformationTimestamps;
+@dynamic hasNetworkStrength, networkStrength;
+@dynamic hasTemperature, temperature;
+@dynamic hasBattery, battery;
+@dynamic hasAvailableRam, availableRam;
+@dynamic hasAvailableDisk, availableDisk;
 @dynamic hasCpuUtilization, cpuUtilization;
 @dynamic metadata, metadata_Count;
 
-typedef struct RedvoxPacket1000_DeviceInformation__storage_ {
+typedef struct RedvoxPacket1000_StationInformation__storage_ {
   uint32_t _has_storage_[1];
-  RedvoxPacket1000_DeviceInformation_OsType deviceOs;
-  RedvoxPacket1000_DeviceInformation_NetworkType networkType;
-  NSString *deviceId;
-  NSString *deviceUuid;
-  NSString *deviceMake;
-  NSString *deviceModel;
-  NSString *deviceOsVersion;
-  NSString *deviceAppVersion;
-  RedvoxPacket1000_DeviceInformation_AppSettings *appSettings;
-  RedvoxPacket1000_SummaryStatistics *networkStrengthDb;
-  RedvoxPacket1000_SummaryStatistics *deviceTempC;
-  RedvoxPacket1000_SummaryStatistics *deviceBatteryPercent;
-  RedvoxPacket1000_SummaryStatistics *availableRamBytes;
-  RedvoxPacket1000_SummaryStatistics *availableDiskBytes;
-  RedvoxPacket1000_SummaryStatistics *cpuUtilization;
+  RedvoxPacket1000_StationInformation_OsType os;
+  RedvoxPacket1000_StationInformation_NetworkType networkType;
+  NSString *id_p;
+  NSString *uuid;
+  NSString *make;
+  NSString *model;
+  NSString *osVersion;
+  NSString *appVersion;
+  RedvoxPacket1000_StationInformation_AppSettings *appSettings;
+  RedvoxPacket1000_Timestamps *stationInformationTimestamps;
+  RedvoxPacket1000_Samples *networkStrength;
+  RedvoxPacket1000_Samples *temperature;
+  RedvoxPacket1000_Samples *battery;
+  RedvoxPacket1000_Samples *availableRam;
+  RedvoxPacket1000_Samples *availableDisk;
+  RedvoxPacket1000_Samples *cpuUtilization;
   NSMutableDictionary *metadata;
-} RedvoxPacket1000_DeviceInformation__storage_;
+} RedvoxPacket1000_StationInformation__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -289,157 +350,166 @@ typedef struct RedvoxPacket1000_DeviceInformation__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "deviceId",
+        .name = "id_p",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceId,
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_Id_p,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, deviceId),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, id_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
-        .name = "deviceUuid",
+        .name = "uuid",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceUuid,
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_Uuid,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, deviceUuid),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, uuid),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
-        .name = "deviceMake",
+        .name = "make",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceMake,
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_Make,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, deviceMake),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, make),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
-        .name = "deviceModel",
+        .name = "model",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceModel,
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_Model,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, deviceModel),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, model),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
-        .name = "deviceOs",
-        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_DeviceInformation_OsType_EnumDescriptor,
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceOs,
+        .name = "os",
+        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_StationInformation_OsType_EnumDescriptor,
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_Os,
         .hasIndex = 4,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, deviceOs),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, os),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
       },
       {
-        .name = "deviceOsVersion",
+        .name = "osVersion",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceOsVersion,
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_OsVersion,
         .hasIndex = 5,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, deviceOsVersion),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, osVersion),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
-        .name = "deviceAppVersion",
+        .name = "appVersion",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceAppVersion,
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_AppVersion,
         .hasIndex = 6,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, deviceAppVersion),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, appVersion),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "appSettings",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_DeviceInformation_AppSettings),
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_AppSettings,
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_StationInformation_AppSettings),
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_AppSettings,
         .hasIndex = 7,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, appSettings),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, appSettings),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "networkType",
-        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_DeviceInformation_NetworkType_EnumDescriptor,
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_NetworkType,
+        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_StationInformation_NetworkType_EnumDescriptor,
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_NetworkType,
         .hasIndex = 8,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, networkType),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, networkType),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
       },
       {
-        .name = "networkStrengthDb",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_NetworkStrengthDb,
+        .name = "stationInformationTimestamps",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Timestamps),
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_StationInformationTimestamps,
         .hasIndex = 9,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, networkStrengthDb),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, stationInformationTimestamps),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "deviceTempC",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceTempC,
+        .name = "networkStrength",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_NetworkStrength,
         .hasIndex = 10,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, deviceTempC),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, networkStrength),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "deviceBatteryPercent",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceBatteryPercent,
+        .name = "temperature",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_Temperature,
         .hasIndex = 11,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, deviceBatteryPercent),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, temperature),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "availableRamBytes",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_AvailableRamBytes,
+        .name = "battery",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_Battery,
         .hasIndex = 12,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, availableRamBytes),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, battery),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "availableDiskBytes",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_AvailableDiskBytes,
+        .name = "availableRam",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_AvailableRam,
         .hasIndex = 13,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, availableDiskBytes),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, availableRam),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "availableDisk",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_AvailableDisk,
+        .hasIndex = 14,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, availableDisk),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "cpuUtilization",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_CpuUtilization,
-        .hasIndex = 14,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, cpuUtilization),
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_CpuUtilization,
+        .hasIndex = 15,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, cpuUtilization),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "metadata",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_FieldNumber_Metadata,
+        .number = RedvoxPacket1000_StationInformation_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation__storage_, metadata),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation__storage_, metadata),
         .flags = GPBFieldMapKeyString,
         .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RedvoxPacket1000_DeviceInformation class]
+        [GPBDescriptor allocDescriptorForClass:[RedvoxPacket1000_StationInformation class]
                                      rootClass:[RedvoxApi1000Root class]
                                           file:RedvoxApi1000Root_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RedvoxPacket1000_DeviceInformation__storage_)
+                                   storageSize:sizeof(RedvoxPacket1000_StationInformation__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacket1000)];
     NSAssert(descriptor == nil, @"Startup recursed!");
@@ -450,48 +520,48 @@ typedef struct RedvoxPacket1000_DeviceInformation__storage_ {
 
 @end
 
-int32_t RedvoxPacket1000_DeviceInformation_DeviceOs_RawValue(RedvoxPacket1000_DeviceInformation *message) {
-  GPBDescriptor *descriptor = [RedvoxPacket1000_DeviceInformation descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceOs];
+int32_t RedvoxPacket1000_StationInformation_Os_RawValue(RedvoxPacket1000_StationInformation *message) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_StationInformation descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_StationInformation_FieldNumber_Os];
   return GPBGetMessageInt32Field(message, field);
 }
 
-void SetRedvoxPacket1000_DeviceInformation_DeviceOs_RawValue(RedvoxPacket1000_DeviceInformation *message, int32_t value) {
-  GPBDescriptor *descriptor = [RedvoxPacket1000_DeviceInformation descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_DeviceInformation_FieldNumber_DeviceOs];
+void SetRedvoxPacket1000_StationInformation_Os_RawValue(RedvoxPacket1000_StationInformation *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_StationInformation descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_StationInformation_FieldNumber_Os];
   GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
 }
 
-int32_t RedvoxPacket1000_DeviceInformation_NetworkType_RawValue(RedvoxPacket1000_DeviceInformation *message) {
-  GPBDescriptor *descriptor = [RedvoxPacket1000_DeviceInformation descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_DeviceInformation_FieldNumber_NetworkType];
+int32_t RedvoxPacket1000_StationInformation_NetworkType_RawValue(RedvoxPacket1000_StationInformation *message) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_StationInformation descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_StationInformation_FieldNumber_NetworkType];
   return GPBGetMessageInt32Field(message, field);
 }
 
-void SetRedvoxPacket1000_DeviceInformation_NetworkType_RawValue(RedvoxPacket1000_DeviceInformation *message, int32_t value) {
-  GPBDescriptor *descriptor = [RedvoxPacket1000_DeviceInformation descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_DeviceInformation_FieldNumber_NetworkType];
+void SetRedvoxPacket1000_StationInformation_NetworkType_RawValue(RedvoxPacket1000_StationInformation *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_StationInformation descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_StationInformation_FieldNumber_NetworkType];
   GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
 }
 
-#pragma mark - Enum RedvoxPacket1000_DeviceInformation_NetworkType
+#pragma mark - Enum RedvoxPacket1000_StationInformation_NetworkType
 
-GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_NetworkType_EnumDescriptor(void) {
+GPBEnumDescriptor *RedvoxPacket1000_StationInformation_NetworkType_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
         "Wifi\000Cellular\000None\000";
     static const int32_t values[] = {
-        RedvoxPacket1000_DeviceInformation_NetworkType_Wifi,
-        RedvoxPacket1000_DeviceInformation_NetworkType_Cellular,
-        RedvoxPacket1000_DeviceInformation_NetworkType_None,
+        RedvoxPacket1000_StationInformation_NetworkType_Wifi,
+        RedvoxPacket1000_StationInformation_NetworkType_Cellular,
+        RedvoxPacket1000_StationInformation_NetworkType_None,
     };
     GPBEnumDescriptor *worker =
-        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_DeviceInformation_NetworkType)
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_StationInformation_NetworkType)
                                        valueNames:valueNames
                                            values:values
                                             count:(uint32_t)(sizeof(values) / sizeof(int32_t))
-                                     enumVerifier:RedvoxPacket1000_DeviceInformation_NetworkType_IsValidValue];
+                                     enumVerifier:RedvoxPacket1000_StationInformation_NetworkType_IsValidValue];
     GPBEnumDescriptor *expected = nil;
     if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
       [worker release];
@@ -500,36 +570,36 @@ GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_NetworkType_EnumDescriptor
   return descriptor;
 }
 
-BOOL RedvoxPacket1000_DeviceInformation_NetworkType_IsValidValue(int32_t value__) {
+BOOL RedvoxPacket1000_StationInformation_NetworkType_IsValidValue(int32_t value__) {
   switch (value__) {
-    case RedvoxPacket1000_DeviceInformation_NetworkType_Wifi:
-    case RedvoxPacket1000_DeviceInformation_NetworkType_Cellular:
-    case RedvoxPacket1000_DeviceInformation_NetworkType_None:
+    case RedvoxPacket1000_StationInformation_NetworkType_Wifi:
+    case RedvoxPacket1000_StationInformation_NetworkType_Cellular:
+    case RedvoxPacket1000_StationInformation_NetworkType_None:
       return YES;
     default:
       return NO;
   }
 }
 
-#pragma mark - Enum RedvoxPacket1000_DeviceInformation_OsType
+#pragma mark - Enum RedvoxPacket1000_StationInformation_OsType
 
-GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_OsType_EnumDescriptor(void) {
+GPBEnumDescriptor *RedvoxPacket1000_StationInformation_OsType_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
         "Android\000Ios\000Linux\000Windows\000";
     static const int32_t values[] = {
-        RedvoxPacket1000_DeviceInformation_OsType_Android,
-        RedvoxPacket1000_DeviceInformation_OsType_Ios,
-        RedvoxPacket1000_DeviceInformation_OsType_Linux,
-        RedvoxPacket1000_DeviceInformation_OsType_Windows,
+        RedvoxPacket1000_StationInformation_OsType_Android,
+        RedvoxPacket1000_StationInformation_OsType_Ios,
+        RedvoxPacket1000_StationInformation_OsType_Linux,
+        RedvoxPacket1000_StationInformation_OsType_Windows,
     };
     GPBEnumDescriptor *worker =
-        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_DeviceInformation_OsType)
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_StationInformation_OsType)
                                        valueNames:valueNames
                                            values:values
                                             count:(uint32_t)(sizeof(values) / sizeof(int32_t))
-                                     enumVerifier:RedvoxPacket1000_DeviceInformation_OsType_IsValidValue];
+                                     enumVerifier:RedvoxPacket1000_StationInformation_OsType_IsValidValue];
     GPBEnumDescriptor *expected = nil;
     if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
       [worker release];
@@ -538,23 +608,23 @@ GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_OsType_EnumDescriptor(void
   return descriptor;
 }
 
-BOOL RedvoxPacket1000_DeviceInformation_OsType_IsValidValue(int32_t value__) {
+BOOL RedvoxPacket1000_StationInformation_OsType_IsValidValue(int32_t value__) {
   switch (value__) {
-    case RedvoxPacket1000_DeviceInformation_OsType_Android:
-    case RedvoxPacket1000_DeviceInformation_OsType_Ios:
-    case RedvoxPacket1000_DeviceInformation_OsType_Linux:
-    case RedvoxPacket1000_DeviceInformation_OsType_Windows:
+    case RedvoxPacket1000_StationInformation_OsType_Android:
+    case RedvoxPacket1000_StationInformation_OsType_Ios:
+    case RedvoxPacket1000_StationInformation_OsType_Linux:
+    case RedvoxPacket1000_StationInformation_OsType_Windows:
       return YES;
     default:
       return NO;
   }
 }
 
-#pragma mark - RedvoxPacket1000_DeviceInformation_AppSettings
+#pragma mark - RedvoxPacket1000_StationInformation_AppSettings
 
-@implementation RedvoxPacket1000_DeviceInformation_AppSettings
+@implementation RedvoxPacket1000_StationInformation_AppSettings
 
-@dynamic audioSamplingRate;
+@dynamic audioSamplingRateHz;
 @dynamic audioSourceTuning;
 @dynamic additionalInputSensorsArray, additionalInputSensorsArray_Count;
 @dynamic automaticallyRecord;
@@ -576,10 +646,10 @@ BOOL RedvoxPacket1000_DeviceInformation_OsType_IsValidValue(int32_t value__) {
 @dynamic useLongitude;
 @dynamic metadata, metadata_Count;
 
-typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
+typedef struct RedvoxPacket1000_StationInformation_AppSettings__storage_ {
   uint32_t _has_storage_[1];
-  RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate audioSamplingRate;
-  RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning audioSourceTuning;
+  RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate audioSamplingRateHz;
+  RedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning audioSourceTuning;
   GPBEnumArray *additionalInputSensorsArray;
   NSString *redvoxId;
   NSString *timeSyncServerURL;
@@ -588,7 +658,7 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
   double storageSpaceAllowance;
   double useLatitude;
   double useLongitude;
-} RedvoxPacket1000_DeviceInformation_AppSettings__storage_;
+} RedvoxPacket1000_StationInformation_AppSettings__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -597,36 +667,36 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "audioSamplingRate",
-        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_EnumDescriptor,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AudioSamplingRate,
+        .name = "audioSamplingRateHz",
+        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate_EnumDescriptor,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_AudioSamplingRateHz,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation_AppSettings__storage_, audioSamplingRate),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation_AppSettings__storage_, audioSamplingRateHz),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "audioSourceTuning",
-        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_EnumDescriptor,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AudioSourceTuning,
+        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning_EnumDescriptor,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_AudioSourceTuning,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation_AppSettings__storage_, audioSourceTuning),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation_AppSettings__storage_, audioSourceTuning),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "additionalInputSensorsArray",
-        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_EnumDescriptor,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AdditionalInputSensorsArray,
+        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_StationInformation_AppSettings_InputSensor_EnumDescriptor,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_AdditionalInputSensorsArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation_AppSettings__storage_, additionalInputSensorsArray),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation_AppSettings__storage_, additionalInputSensorsArray),
         .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "automaticallyRecord",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AutomaticallyRecord,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_AutomaticallyRecord,
         .hasIndex = 2,
         .offset = 3,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
@@ -635,7 +705,7 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
       {
         .name = "launchAtPowerUp",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_LaunchAtPowerUp,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_LaunchAtPowerUp,
         .hasIndex = 4,
         .offset = 5,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
@@ -644,16 +714,16 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
       {
         .name = "redvoxId",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_RedvoxId,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_RedvoxId,
         .hasIndex = 6,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation_AppSettings__storage_, redvoxId),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation_AppSettings__storage_, redvoxId),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "pushToServer",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_PushToServer,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_PushToServer,
         .hasIndex = 7,
         .offset = 8,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
@@ -662,7 +732,7 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
       {
         .name = "publishDataAsPrivate",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_PublishDataAsPrivate,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_PublishDataAsPrivate,
         .hasIndex = 9,
         .offset = 10,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
@@ -671,7 +741,7 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
       {
         .name = "scrambleVoiceData",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_ScrambleVoiceData,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_ScrambleVoiceData,
         .hasIndex = 11,
         .offset = 12,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
@@ -680,7 +750,7 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
       {
         .name = "provideBackfill",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_ProvideBackfill,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_ProvideBackfill,
         .hasIndex = 13,
         .offset = 14,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
@@ -689,7 +759,7 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
       {
         .name = "useCustomTimeSyncServer",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseCustomTimeSyncServer,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_UseCustomTimeSyncServer,
         .hasIndex = 15,
         .offset = 16,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
@@ -698,16 +768,16 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
       {
         .name = "timeSyncServerURL",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_TimeSyncServerURL,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_TimeSyncServerURL,
         .hasIndex = 17,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation_AppSettings__storage_, timeSyncServerURL),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation_AppSettings__storage_, timeSyncServerURL),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "useCustomDataServer",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseCustomDataServer,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_UseCustomDataServer,
         .hasIndex = 18,
         .offset = 19,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
@@ -716,16 +786,16 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
       {
         .name = "dataServerURL",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_DataServerURL,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_DataServerURL,
         .hasIndex = 20,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation_AppSettings__storage_, dataServerURL),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation_AppSettings__storage_, dataServerURL),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "autoDeleteDataFiles",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AutoDeleteDataFiles,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_AutoDeleteDataFiles,
         .hasIndex = 21,
         .offset = 22,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
@@ -734,16 +804,16 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
       {
         .name = "storageSpaceAllowance",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_StorageSpaceAllowance,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_StorageSpaceAllowance,
         .hasIndex = 23,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation_AppSettings__storage_, storageSpaceAllowance),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation_AppSettings__storage_, storageSpaceAllowance),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "useSdCardForDataStorage",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseSdCardForDataStorage,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_UseSdCardForDataStorage,
         .hasIndex = 24,
         .offset = 25,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
@@ -752,7 +822,7 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
       {
         .name = "useLocationServices",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseLocationServices,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_UseLocationServices,
         .hasIndex = 26,
         .offset = 27,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
@@ -761,45 +831,45 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
       {
         .name = "useLatitude",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseLatitude,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_UseLatitude,
         .hasIndex = 28,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation_AppSettings__storage_, useLatitude),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation_AppSettings__storage_, useLatitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "useLongitude",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_UseLongitude,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_UseLongitude,
         .hasIndex = 29,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation_AppSettings__storage_, useLongitude),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation_AppSettings__storage_, useLongitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "metadata",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_Metadata,
+        .number = RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_DeviceInformation_AppSettings__storage_, metadata),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_StationInformation_AppSettings__storage_, metadata),
         .flags = GPBFieldMapKeyString,
         .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RedvoxPacket1000_DeviceInformation_AppSettings class]
+        [GPBDescriptor allocDescriptorForClass:[RedvoxPacket1000_StationInformation_AppSettings class]
                                      rootClass:[RedvoxApi1000Root class]
                                           file:RedvoxApi1000Root_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RedvoxPacket1000_DeviceInformation_AppSettings__storage_)
+                                   storageSize:sizeof(RedvoxPacket1000_StationInformation_AppSettings__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
         "\002\014\004\244\246\241!!\000\016\004\246\241!!\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacket1000_DeviceInformation)];
+    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacket1000_StationInformation)];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -808,51 +878,51 @@ typedef struct RedvoxPacket1000_DeviceInformation_AppSettings__storage_ {
 
 @end
 
-int32_t RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_RawValue(RedvoxPacket1000_DeviceInformation_AppSettings *message) {
-  GPBDescriptor *descriptor = [RedvoxPacket1000_DeviceInformation_AppSettings descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AudioSamplingRate];
+int32_t RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRateHz_RawValue(RedvoxPacket1000_StationInformation_AppSettings *message) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_StationInformation_AppSettings descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_AudioSamplingRateHz];
   return GPBGetMessageInt32Field(message, field);
 }
 
-void SetRedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_RawValue(RedvoxPacket1000_DeviceInformation_AppSettings *message, int32_t value) {
-  GPBDescriptor *descriptor = [RedvoxPacket1000_DeviceInformation_AppSettings descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AudioSamplingRate];
+void SetRedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRateHz_RawValue(RedvoxPacket1000_StationInformation_AppSettings *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_StationInformation_AppSettings descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_AudioSamplingRateHz];
   GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
 }
 
-int32_t RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_RawValue(RedvoxPacket1000_DeviceInformation_AppSettings *message) {
-  GPBDescriptor *descriptor = [RedvoxPacket1000_DeviceInformation_AppSettings descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AudioSourceTuning];
+int32_t RedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning_RawValue(RedvoxPacket1000_StationInformation_AppSettings *message) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_StationInformation_AppSettings descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_AudioSourceTuning];
   return GPBGetMessageInt32Field(message, field);
 }
 
-void SetRedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_RawValue(RedvoxPacket1000_DeviceInformation_AppSettings *message, int32_t value) {
-  GPBDescriptor *descriptor = [RedvoxPacket1000_DeviceInformation_AppSettings descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_DeviceInformation_AppSettings_FieldNumber_AudioSourceTuning];
+void SetRedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning_RawValue(RedvoxPacket1000_StationInformation_AppSettings *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_StationInformation_AppSettings descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_StationInformation_AppSettings_FieldNumber_AudioSourceTuning];
   GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
 }
 
-#pragma mark - Enum RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate
+#pragma mark - Enum RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate
 
-GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_EnumDescriptor(void) {
+GPBEnumDescriptor *RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
         "Hz80\000Hz800\000Hz8000\000Hz16000\000Hz48000\000";
     static const int32_t values[] = {
-        RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz80,
-        RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz800,
-        RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz8000,
-        RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz16000,
-        RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz48000,
+        RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate_Hz80,
+        RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate_Hz800,
+        RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate_Hz8000,
+        RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate_Hz16000,
+        RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate_Hz48000,
     };
     static const char *extraTextFormatInfo = "\005\000b\202\000\001b\203\000\002b\204\000\003b\205\000\004b\205\000";
     GPBEnumDescriptor *worker =
-        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate)
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate)
                                        valueNames:valueNames
                                            values:values
                                             count:(uint32_t)(sizeof(values) / sizeof(int32_t))
-                                     enumVerifier:RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_IsValidValue
+                                     enumVerifier:RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate_IsValidValue
                               extraTextFormatInfo:extraTextFormatInfo];
     GPBEnumDescriptor *expected = nil;
     if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
@@ -862,37 +932,37 @@ GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingR
   return descriptor;
 }
 
-BOOL RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_IsValidValue(int32_t value__) {
+BOOL RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate_IsValidValue(int32_t value__) {
   switch (value__) {
-    case RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz80:
-    case RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz800:
-    case RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz8000:
-    case RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz16000:
-    case RedvoxPacket1000_DeviceInformation_AppSettings_AudioSamplingRate_Hz48000:
+    case RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate_Hz80:
+    case RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate_Hz800:
+    case RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate_Hz8000:
+    case RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate_Hz16000:
+    case RedvoxPacket1000_StationInformation_AppSettings_AudioSamplingRate_Hz48000:
       return YES;
     default:
       return NO;
   }
 }
 
-#pragma mark - Enum RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning
+#pragma mark - Enum RedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning
 
-GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_EnumDescriptor(void) {
+GPBEnumDescriptor *RedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
         "Infrasound\000LowAudio\000Audio\000";
     static const int32_t values[] = {
-        RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_Infrasound,
-        RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_LowAudio,
-        RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_Audio,
+        RedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning_Infrasound,
+        RedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning_LowAudio,
+        RedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning_Audio,
     };
     GPBEnumDescriptor *worker =
-        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning)
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning)
                                        valueNames:valueNames
                                            values:values
                                             count:(uint32_t)(sizeof(values) / sizeof(int32_t))
-                                     enumVerifier:RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_IsValidValue];
+                                     enumVerifier:RedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning_IsValidValue];
     GPBEnumDescriptor *expected = nil;
     if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
       [worker release];
@@ -901,20 +971,20 @@ GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTun
   return descriptor;
 }
 
-BOOL RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_IsValidValue(int32_t value__) {
+BOOL RedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning_IsValidValue(int32_t value__) {
   switch (value__) {
-    case RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_Infrasound:
-    case RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_LowAudio:
-    case RedvoxPacket1000_DeviceInformation_AppSettings_AudioSourceTuning_Audio:
+    case RedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning_Infrasound:
+    case RedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning_LowAudio:
+    case RedvoxPacket1000_StationInformation_AppSettings_AudioSourceTuning_Audio:
       return YES;
     default:
       return NO;
   }
 }
 
-#pragma mark - Enum RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor
+#pragma mark - Enum RedvoxPacket1000_StationInformation_AppSettings_InputSensor
 
-GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_EnumDescriptor(void) {
+GPBEnumDescriptor *RedvoxPacket1000_StationInformation_AppSettings_InputSensor_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
@@ -922,21 +992,21 @@ GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_En
         "t\000Magnetometer\000MagnetometerFast\000Gyroscop"
         "e\000GyroscopeFast\000Luminosity\000";
     static const int32_t values[] = {
-        RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Barometer,
-        RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Accelerometer,
-        RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_AccelerometerFast,
-        RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Magnetometer,
-        RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_MagnetometerFast,
-        RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Gyroscope,
-        RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_GyroscopeFast,
-        RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Luminosity,
+        RedvoxPacket1000_StationInformation_AppSettings_InputSensor_Barometer,
+        RedvoxPacket1000_StationInformation_AppSettings_InputSensor_Accelerometer,
+        RedvoxPacket1000_StationInformation_AppSettings_InputSensor_AccelerometerFast,
+        RedvoxPacket1000_StationInformation_AppSettings_InputSensor_Magnetometer,
+        RedvoxPacket1000_StationInformation_AppSettings_InputSensor_MagnetometerFast,
+        RedvoxPacket1000_StationInformation_AppSettings_InputSensor_Gyroscope,
+        RedvoxPacket1000_StationInformation_AppSettings_InputSensor_GyroscopeFast,
+        RedvoxPacket1000_StationInformation_AppSettings_InputSensor_Luminosity,
     };
     GPBEnumDescriptor *worker =
-        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor)
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_StationInformation_AppSettings_InputSensor)
                                        valueNames:valueNames
                                            values:values
                                             count:(uint32_t)(sizeof(values) / sizeof(int32_t))
-                                     enumVerifier:RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_IsValidValue];
+                                     enumVerifier:RedvoxPacket1000_StationInformation_AppSettings_InputSensor_IsValidValue];
     GPBEnumDescriptor *expected = nil;
     if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
       [worker release];
@@ -945,16 +1015,16 @@ GPBEnumDescriptor *RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_En
   return descriptor;
 }
 
-BOOL RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_IsValidValue(int32_t value__) {
+BOOL RedvoxPacket1000_StationInformation_AppSettings_InputSensor_IsValidValue(int32_t value__) {
   switch (value__) {
-    case RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Barometer:
-    case RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Accelerometer:
-    case RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_AccelerometerFast:
-    case RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Magnetometer:
-    case RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_MagnetometerFast:
-    case RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Gyroscope:
-    case RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_GyroscopeFast:
-    case RedvoxPacket1000_DeviceInformation_AppSettings_InputSensor_Luminosity:
+    case RedvoxPacket1000_StationInformation_AppSettings_InputSensor_Barometer:
+    case RedvoxPacket1000_StationInformation_AppSettings_InputSensor_Accelerometer:
+    case RedvoxPacket1000_StationInformation_AppSettings_InputSensor_AccelerometerFast:
+    case RedvoxPacket1000_StationInformation_AppSettings_InputSensor_Magnetometer:
+    case RedvoxPacket1000_StationInformation_AppSettings_InputSensor_MagnetometerFast:
+    case RedvoxPacket1000_StationInformation_AppSettings_InputSensor_Gyroscope:
+    case RedvoxPacket1000_StationInformation_AppSettings_InputSensor_GyroscopeFast:
+    case RedvoxPacket1000_StationInformation_AppSettings_InputSensor_Luminosity:
       return YES;
     default:
       return NO;
@@ -1029,9 +1099,9 @@ typedef struct RedvoxPacket1000_PacketInformation__storage_ {
 
 @implementation RedvoxPacket1000_TimingInformation
 
-@dynamic packetStartTsUsWall;
+@dynamic packetStartTsUsOs;
 @dynamic packetStartTsUsMach;
-@dynamic packetEndTsUsWall;
+@dynamic packetEndTsUsOs;
 @dynamic packetEndTsUsMach;
 @dynamic serverAcquisitionArrivalTsUs;
 @dynamic appStartTsUsMach;
@@ -1044,9 +1114,9 @@ typedef struct RedvoxPacket1000_TimingInformation__storage_ {
   uint32_t _has_storage_[1];
   NSMutableArray *synchExchangesArray;
   NSMutableDictionary *metadata;
-  double packetStartTsUsWall;
+  double packetStartTsUsOs;
   double packetStartTsUsMach;
-  double packetEndTsUsWall;
+  double packetEndTsUsOs;
   double packetEndTsUsMach;
   double serverAcquisitionArrivalTsUs;
   double appStartTsUsMach;
@@ -1061,11 +1131,11 @@ typedef struct RedvoxPacket1000_TimingInformation__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "packetStartTsUsWall",
+        .name = "packetStartTsUsOs",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_TimingInformation_FieldNumber_PacketStartTsUsWall,
+        .number = RedvoxPacket1000_TimingInformation_FieldNumber_PacketStartTsUsOs,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, packetStartTsUsWall),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, packetStartTsUsOs),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
@@ -1079,11 +1149,11 @@ typedef struct RedvoxPacket1000_TimingInformation__storage_ {
         .dataType = GPBDataTypeDouble,
       },
       {
-        .name = "packetEndTsUsWall",
+        .name = "packetEndTsUsOs",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_TimingInformation_FieldNumber_PacketEndTsUsWall,
+        .number = RedvoxPacket1000_TimingInformation_FieldNumber_PacketEndTsUsOs,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, packetEndTsUsWall),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, packetEndTsUsOs),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
@@ -1364,7 +1434,7 @@ typedef struct RedvoxPacket1000_ServerInformation__storage_ {
 
 @implementation RedvoxPacket1000_SensorChannels
 
-@dynamic hasMicrophoneChannel, microphoneChannel;
+@dynamic hasAudioChannel, audioChannel;
 @dynamic hasBarometerChannel, barometerChannel;
 @dynamic hasLocationChannel, locationChannel;
 @dynamic hasAccelerometerChannel, accelerometerChannel;
@@ -1377,7 +1447,7 @@ typedef struct RedvoxPacket1000_ServerInformation__storage_ {
 
 typedef struct RedvoxPacket1000_SensorChannels__storage_ {
   uint32_t _has_storage_[1];
-  RedvoxPacket1000_SensorChannels_MicrophoneChannel *microphoneChannel;
+  RedvoxPacket1000_SensorChannels_AudioChannel *audioChannel;
   RedvoxPacket1000_SensorChannels_SingleChannel *barometerChannel;
   RedvoxPacket1000_SensorChannels_LocationChannel *locationChannel;
   RedvoxPacket1000_SensorChannels_XyzChannel *accelerometerChannel;
@@ -1396,11 +1466,11 @@ typedef struct RedvoxPacket1000_SensorChannels__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "microphoneChannel",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SensorChannels_MicrophoneChannel),
-        .number = RedvoxPacket1000_SensorChannels_FieldNumber_MicrophoneChannel,
+        .name = "audioChannel",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SensorChannels_AudioChannel),
+        .number = RedvoxPacket1000_SensorChannels_FieldNumber_AudioChannel,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels__storage_, microphoneChannel),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels__storage_, audioChannel),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -1503,27 +1573,25 @@ typedef struct RedvoxPacket1000_SensorChannels__storage_ {
 
 @end
 
-#pragma mark - RedvoxPacket1000_SensorChannels_MicrophoneChannel
+#pragma mark - RedvoxPacket1000_SensorChannels_AudioChannel
 
-@implementation RedvoxPacket1000_SensorChannels_MicrophoneChannel
+@implementation RedvoxPacket1000_SensorChannels_AudioChannel
 
 @dynamic sensorDescription;
-@dynamic firstSampleTsUs;
+@dynamic firstSampleTimestamp;
 @dynamic sampleRateHz;
 @dynamic isScrambled;
-@dynamic samplesArray, samplesArray_Count;
-@dynamic hasSampleStatistics, sampleStatistics;
+@dynamic hasSamples, samples;
 @dynamic metadata, metadata_Count;
 
-typedef struct RedvoxPacket1000_SensorChannels_MicrophoneChannel__storage_ {
+typedef struct RedvoxPacket1000_SensorChannels_AudioChannel__storage_ {
   uint32_t _has_storage_[1];
   NSString *sensorDescription;
-  GPBDoubleArray *samplesArray;
-  RedvoxPacket1000_SummaryStatistics *sampleStatistics;
+  RedvoxPacket1000_Samples *samples;
   NSMutableDictionary *metadata;
-  double firstSampleTsUs;
+  double firstSampleTimestamp;
   double sampleRateHz;
-} RedvoxPacket1000_SensorChannels_MicrophoneChannel__storage_;
+} RedvoxPacket1000_SensorChannels_AudioChannel__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -1534,74 +1602,65 @@ typedef struct RedvoxPacket1000_SensorChannels_MicrophoneChannel__storage_ {
       {
         .name = "sensorDescription",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_SensorDescription,
+        .number = RedvoxPacket1000_SensorChannels_AudioChannel_FieldNumber_SensorDescription,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_MicrophoneChannel__storage_, sensorDescription),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_AudioChannel__storage_, sensorDescription),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
-        .name = "firstSampleTsUs",
+        .name = "firstSampleTimestamp",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_FirstSampleTsUs,
+        .number = RedvoxPacket1000_SensorChannels_AudioChannel_FieldNumber_FirstSampleTimestamp,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_MicrophoneChannel__storage_, firstSampleTsUs),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_AudioChannel__storage_, firstSampleTimestamp),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "sampleRateHz",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_SampleRateHz,
+        .number = RedvoxPacket1000_SensorChannels_AudioChannel_FieldNumber_SampleRateHz,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_MicrophoneChannel__storage_, sampleRateHz),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_AudioChannel__storage_, sampleRateHz),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "isScrambled",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_IsScrambled,
+        .number = RedvoxPacket1000_SensorChannels_AudioChannel_FieldNumber_IsScrambled,
         .hasIndex = 3,
         .offset = 4,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
       {
-        .name = "samplesArray",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_SamplesArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_MicrophoneChannel__storage_, samplesArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeDouble,
-      },
-      {
-        .name = "sampleStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_SampleStatistics,
+        .name = "samples",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_SensorChannels_AudioChannel_FieldNumber_Samples,
         .hasIndex = 5,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_MicrophoneChannel__storage_, sampleStatistics),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_AudioChannel__storage_, samples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "metadata",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_MicrophoneChannel_FieldNumber_Metadata,
+        .number = RedvoxPacket1000_SensorChannels_AudioChannel_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_MicrophoneChannel__storage_, metadata),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_AudioChannel__storage_, metadata),
         .flags = GPBFieldMapKeyString,
         .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RedvoxPacket1000_SensorChannels_MicrophoneChannel class]
+        [GPBDescriptor allocDescriptorForClass:[RedvoxPacket1000_SensorChannels_AudioChannel class]
                                      rootClass:[RedvoxApi1000Root class]
                                           file:RedvoxApi1000Root_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RedvoxPacket1000_SensorChannels_MicrophoneChannel__storage_)
+                                   storageSize:sizeof(RedvoxPacket1000_SensorChannels_AudioChannel__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacket1000_SensorChannels)];
     NSAssert(descriptor == nil, @"Startup recursed!");
@@ -1617,22 +1676,16 @@ typedef struct RedvoxPacket1000_SensorChannels_MicrophoneChannel__storage_ {
 @implementation RedvoxPacket1000_SensorChannels_SingleChannel
 
 @dynamic sensorDescription;
-@dynamic meanSampleRateHz;
-@dynamic sampleTsUsArray, sampleTsUsArray_Count;
-@dynamic samplesArray, samplesArray_Count;
-@dynamic hasSampleRateStatistics, sampleRateStatistics;
-@dynamic hasSampleStatistics, sampleStatistics;
+@dynamic hasTimestamps, timestamps;
+@dynamic hasSamples, samples;
 @dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacket1000_SensorChannels_SingleChannel__storage_ {
   uint32_t _has_storage_[1];
   NSString *sensorDescription;
-  GPBDoubleArray *sampleTsUsArray;
-  GPBDoubleArray *samplesArray;
-  RedvoxPacket1000_SummaryStatistics *sampleRateStatistics;
-  RedvoxPacket1000_SummaryStatistics *sampleStatistics;
+  RedvoxPacket1000_Timestamps *timestamps;
+  RedvoxPacket1000_Samples *samples;
   NSMutableDictionary *metadata;
-  double meanSampleRateHz;
 } RedvoxPacket1000_SensorChannels_SingleChannel__storage_;
 
 // This method is threadsafe because it is initially called
@@ -1651,47 +1704,20 @@ typedef struct RedvoxPacket1000_SensorChannels_SingleChannel__storage_ {
         .dataType = GPBDataTypeString,
       },
       {
-        .name = "meanSampleRateHz",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_SingleChannel_FieldNumber_MeanSampleRateHz,
+        .name = "timestamps",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Timestamps),
+        .number = RedvoxPacket1000_SensorChannels_SingleChannel_FieldNumber_Timestamps,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_SingleChannel__storage_, meanSampleRateHz),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeDouble,
-      },
-      {
-        .name = "sampleTsUsArray",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_SingleChannel_FieldNumber_SampleTsUsArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_SingleChannel__storage_, sampleTsUsArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeDouble,
-      },
-      {
-        .name = "samplesArray",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_SingleChannel_FieldNumber_SamplesArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_SingleChannel__storage_, samplesArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeDouble,
-      },
-      {
-        .name = "sampleRateStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_SensorChannels_SingleChannel_FieldNumber_SampleRateStatistics,
-        .hasIndex = 2,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_SingleChannel__storage_, sampleRateStatistics),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_SingleChannel__storage_, timestamps),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "sampleStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_SensorChannels_SingleChannel_FieldNumber_SampleStatistics,
-        .hasIndex = 3,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_SingleChannel__storage_, sampleStatistics),
+        .name = "samples",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_SensorChannels_SingleChannel_FieldNumber_Samples,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_SingleChannel__storage_, samples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -1727,43 +1753,37 @@ typedef struct RedvoxPacket1000_SensorChannels_SingleChannel__storage_ {
 @implementation RedvoxPacket1000_SensorChannels_LocationChannel
 
 @dynamic sensorDescription;
-@dynamic meanSampleRateHz;
-@dynamic sampleTsUsArray, sampleTsUsArray_Count;
-@dynamic latitudeSamplesArray, latitudeSamplesArray_Count;
-@dynamic longitudeSamplesArray, longitudeSamplesArray_Count;
-@dynamic altitudeSamplesArray, altitudeSamplesArray_Count;
-@dynamic speedSamplesArray, speedSamplesArray_Count;
-@dynamic accuracySamplesArray, accuracySamplesArray_Count;
+@dynamic hasTimestamps, timestamps;
+@dynamic hasLatitudeSamples, latitudeSamples;
+@dynamic hasLongitudeSamples, longitudeSamples;
+@dynamic hasAltitudeSamples, altitudeSamples;
+@dynamic hasSpeedSamples, speedSamples;
+@dynamic hasBearingSamples, bearingSamples;
+@dynamic hasHorizontalAccuracySamples, horizontalAccuracySamples;
+@dynamic hasVerticalAccuracySamples, verticalAccuracySamples;
+@dynamic hasSpeedAccuracySamples, speedAccuracySamples;
+@dynamic hasBearingAccuracySamples, bearingAccuracySamples;
 @dynamic locationPermissionsGranted;
 @dynamic locationServicesRequested;
 @dynamic locationServicesEnabled;
 @dynamic locationProvider;
-@dynamic hasSampleRateStatistics, sampleRateStatistics;
-@dynamic hasLatitudeSampleStatistics, latitudeSampleStatistics;
-@dynamic hasLongitudeSampleStatistics, longitudeSampleStatistics;
-@dynamic hasAltitudeSampleStatistics, altitudeSampleStatistics;
-@dynamic hasSpeedSampleStatistics, speedSampleStatistics;
-@dynamic hasAccuracySampleStatistics, accuracySampleStatistics;
 @dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacket1000_SensorChannels_LocationChannel__storage_ {
   uint32_t _has_storage_[1];
   RedvoxPacket1000_SensorChannels_LocationChannel_LocationProvider locationProvider;
   NSString *sensorDescription;
-  GPBDoubleArray *sampleTsUsArray;
-  GPBDoubleArray *latitudeSamplesArray;
-  GPBDoubleArray *longitudeSamplesArray;
-  GPBDoubleArray *altitudeSamplesArray;
-  GPBDoubleArray *speedSamplesArray;
-  GPBDoubleArray *accuracySamplesArray;
-  RedvoxPacket1000_SummaryStatistics *sampleRateStatistics;
-  RedvoxPacket1000_SummaryStatistics *latitudeSampleStatistics;
-  RedvoxPacket1000_SummaryStatistics *longitudeSampleStatistics;
-  RedvoxPacket1000_SummaryStatistics *altitudeSampleStatistics;
-  RedvoxPacket1000_SummaryStatistics *speedSampleStatistics;
-  RedvoxPacket1000_SummaryStatistics *accuracySampleStatistics;
+  RedvoxPacket1000_Timestamps *timestamps;
+  RedvoxPacket1000_Samples *latitudeSamples;
+  RedvoxPacket1000_Samples *longitudeSamples;
+  RedvoxPacket1000_Samples *altitudeSamples;
+  RedvoxPacket1000_Samples *speedSamples;
+  RedvoxPacket1000_Samples *bearingSamples;
+  RedvoxPacket1000_Samples *horizontalAccuracySamples;
+  RedvoxPacket1000_Samples *verticalAccuracySamples;
+  RedvoxPacket1000_Samples *speedAccuracySamples;
+  RedvoxPacket1000_Samples *bearingAccuracySamples;
   NSMutableDictionary *metadata;
-  double meanSampleRateHz;
 } RedvoxPacket1000_SensorChannels_LocationChannel__storage_;
 
 // This method is threadsafe because it is initially called
@@ -1782,74 +1802,101 @@ typedef struct RedvoxPacket1000_SensorChannels_LocationChannel__storage_ {
         .dataType = GPBDataTypeString,
       },
       {
-        .name = "meanSampleRateHz",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_MeanSampleRateHz,
+        .name = "timestamps",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Timestamps),
+        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_Timestamps,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, meanSampleRateHz),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, timestamps),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeDouble,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "sampleTsUsArray",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_SampleTsUsArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, sampleTsUsArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeDouble,
+        .name = "latitudeSamples",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LatitudeSamples,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, latitudeSamples),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "latitudeSamplesArray",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LatitudeSamplesArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, latitudeSamplesArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeDouble,
+        .name = "longitudeSamples",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LongitudeSamples,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, longitudeSamples),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "longitudeSamplesArray",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LongitudeSamplesArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, longitudeSamplesArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeDouble,
+        .name = "altitudeSamples",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_AltitudeSamples,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, altitudeSamples),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "altitudeSamplesArray",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_AltitudeSamplesArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, altitudeSamplesArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeDouble,
+        .name = "speedSamples",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_SpeedSamples,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, speedSamples),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "speedSamplesArray",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_SpeedSamplesArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, speedSamplesArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeDouble,
+        .name = "bearingSamples",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_BearingSamples,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, bearingSamples),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "accuracySamplesArray",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_AccuracySamplesArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, accuracySamplesArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeDouble,
+        .name = "horizontalAccuracySamples",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_HorizontalAccuracySamples,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, horizontalAccuracySamples),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "verticalAccuracySamples",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_VerticalAccuracySamples,
+        .hasIndex = 8,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, verticalAccuracySamples),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "speedAccuracySamples",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_SpeedAccuracySamples,
+        .hasIndex = 9,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, speedAccuracySamples),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "bearingAccuracySamples",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_BearingAccuracySamples,
+        .hasIndex = 10,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, bearingAccuracySamples),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
       {
         .name = "locationPermissionsGranted",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LocationPermissionsGranted,
-        .hasIndex = 2,
-        .offset = 3,  // Stored in _has_storage_ to save space.
+        .hasIndex = 11,
+        .offset = 12,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1857,8 +1904,8 @@ typedef struct RedvoxPacket1000_SensorChannels_LocationChannel__storage_ {
         .name = "locationServicesRequested",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LocationServicesRequested,
-        .hasIndex = 4,
-        .offset = 5,  // Stored in _has_storage_ to save space.
+        .hasIndex = 13,
+        .offset = 14,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1866,8 +1913,8 @@ typedef struct RedvoxPacket1000_SensorChannels_LocationChannel__storage_ {
         .name = "locationServicesEnabled",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LocationServicesEnabled,
-        .hasIndex = 6,
-        .offset = 7,  // Stored in _has_storage_ to save space.
+        .hasIndex = 15,
+        .offset = 16,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1875,64 +1922,10 @@ typedef struct RedvoxPacket1000_SensorChannels_LocationChannel__storage_ {
         .name = "locationProvider",
         .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_SensorChannels_LocationChannel_LocationProvider_EnumDescriptor,
         .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LocationProvider,
-        .hasIndex = 8,
+        .hasIndex = 17,
         .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, locationProvider),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
-      },
-      {
-        .name = "sampleRateStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_SampleRateStatistics,
-        .hasIndex = 9,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, sampleRateStatistics),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
-      },
-      {
-        .name = "latitudeSampleStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LatitudeSampleStatistics,
-        .hasIndex = 10,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, latitudeSampleStatistics),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
-      },
-      {
-        .name = "longitudeSampleStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LongitudeSampleStatistics,
-        .hasIndex = 11,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, longitudeSampleStatistics),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
-      },
-      {
-        .name = "altitudeSampleStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_AltitudeSampleStatistics,
-        .hasIndex = 12,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, altitudeSampleStatistics),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
-      },
-      {
-        .name = "speedSampleStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_SpeedSampleStatistics,
-        .hasIndex = 13,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, speedSampleStatistics),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
-      },
-      {
-        .name = "accuracySampleStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_AccuracySampleStatistics,
-        .hasIndex = 14,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_LocationChannel__storage_, accuracySampleStatistics),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
       },
       {
         .name = "metadata",
@@ -2017,30 +2010,20 @@ BOOL RedvoxPacket1000_SensorChannels_LocationChannel_LocationProvider_IsValidVal
 @implementation RedvoxPacket1000_SensorChannels_XyzChannel
 
 @dynamic sensorDescription;
-@dynamic meanSampleRateHz;
-@dynamic sampleTsUsArray, sampleTsUsArray_Count;
-@dynamic xSamplesArray, xSamplesArray_Count;
-@dynamic ySamplesArray, ySamplesArray_Count;
-@dynamic zSamplesArray, zSamplesArray_Count;
-@dynamic hasSampleRateStatistics, sampleRateStatistics;
-@dynamic hasXSampleStatistics, xSampleStatistics;
-@dynamic hasYSampleStatistics, ySampleStatistics;
-@dynamic hasZSampleStatistics, zSampleStatistics;
+@dynamic hasTimestamps, timestamps;
+@dynamic hasXSamples, xSamples;
+@dynamic hasYSamples, ySamples;
+@dynamic hasZSamples, zSamples;
 @dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacket1000_SensorChannels_XyzChannel__storage_ {
   uint32_t _has_storage_[1];
   NSString *sensorDescription;
-  GPBDoubleArray *sampleTsUsArray;
-  GPBDoubleArray *xSamplesArray;
-  GPBDoubleArray *ySamplesArray;
-  GPBDoubleArray *zSamplesArray;
-  RedvoxPacket1000_SummaryStatistics *sampleRateStatistics;
-  RedvoxPacket1000_SummaryStatistics *xSampleStatistics;
-  RedvoxPacket1000_SummaryStatistics *ySampleStatistics;
-  RedvoxPacket1000_SummaryStatistics *zSampleStatistics;
+  RedvoxPacket1000_Timestamps *timestamps;
+  RedvoxPacket1000_Samples *xSamples;
+  RedvoxPacket1000_Samples *ySamples;
+  RedvoxPacket1000_Samples *zSamples;
   NSMutableDictionary *metadata;
-  double meanSampleRateHz;
 } RedvoxPacket1000_SensorChannels_XyzChannel__storage_;
 
 // This method is threadsafe because it is initially called
@@ -2059,83 +2042,38 @@ typedef struct RedvoxPacket1000_SensorChannels_XyzChannel__storage_ {
         .dataType = GPBDataTypeString,
       },
       {
-        .name = "meanSampleRateHz",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_XyzChannel_FieldNumber_MeanSampleRateHz,
+        .name = "timestamps",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Timestamps),
+        .number = RedvoxPacket1000_SensorChannels_XyzChannel_FieldNumber_Timestamps,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_XyzChannel__storage_, meanSampleRateHz),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_XyzChannel__storage_, timestamps),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeDouble,
+        .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "sampleTsUsArray",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_XyzChannel_FieldNumber_SampleTsUsArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_XyzChannel__storage_, sampleTsUsArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeDouble,
-      },
-      {
-        .name = "xSamplesArray",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_XyzChannel_FieldNumber_XSamplesArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_XyzChannel__storage_, xSamplesArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeDouble,
-      },
-      {
-        .name = "ySamplesArray",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_XyzChannel_FieldNumber_YSamplesArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_XyzChannel__storage_, ySamplesArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeDouble,
-      },
-      {
-        .name = "zSamplesArray",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_SensorChannels_XyzChannel_FieldNumber_ZSamplesArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_XyzChannel__storage_, zSamplesArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeDouble,
-      },
-      {
-        .name = "sampleRateStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_SensorChannels_XyzChannel_FieldNumber_SampleRateStatistics,
+        .name = "xSamples",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_SensorChannels_XyzChannel_FieldNumber_XSamples,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_XyzChannel__storage_, sampleRateStatistics),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_XyzChannel__storage_, xSamples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "xSampleStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_SensorChannels_XyzChannel_FieldNumber_XSampleStatistics,
+        .name = "ySamples",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_SensorChannels_XyzChannel_FieldNumber_YSamples,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_XyzChannel__storage_, xSampleStatistics),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_XyzChannel__storage_, ySamples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "ySampleStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_SensorChannels_XyzChannel_FieldNumber_YSampleStatistics,
+        .name = "zSamples",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_Samples),
+        .number = RedvoxPacket1000_SensorChannels_XyzChannel_FieldNumber_ZSamples,
         .hasIndex = 4,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_XyzChannel__storage_, ySampleStatistics),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
-      },
-      {
-        .name = "zSampleStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
-        .number = RedvoxPacket1000_SensorChannels_XyzChannel_FieldNumber_ZSampleStatistics,
-        .hasIndex = 5,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_XyzChannel__storage_, zSampleStatistics),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_SensorChannels_XyzChannel__storage_, zSamples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -2265,6 +2203,162 @@ typedef struct RedvoxPacket1000_SensorChannels_ImageChannel__storage_ {
 
 @end
 
+#pragma mark - RedvoxPacket1000_Samples
+
+@implementation RedvoxPacket1000_Samples
+
+@dynamic unit;
+@dynamic samplesArray, samplesArray_Count;
+@dynamic hasSampleStatistics, sampleStatistics;
+
+typedef struct RedvoxPacket1000_Samples__storage_ {
+  uint32_t _has_storage_[1];
+  RedvoxPacket1000_Unit unit;
+  GPBDoubleArray *samplesArray;
+  RedvoxPacket1000_SummaryStatistics *sampleStatistics;
+} RedvoxPacket1000_Samples__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "unit",
+        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_Unit_EnumDescriptor,
+        .number = RedvoxPacket1000_Samples_FieldNumber_Unit,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_Samples__storage_, unit),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "samplesArray",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_Samples_FieldNumber_SamplesArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_Samples__storage_, samplesArray),
+        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "sampleStatistics",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
+        .number = RedvoxPacket1000_Samples_FieldNumber_SampleStatistics,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_Samples__storage_, sampleStatistics),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[RedvoxPacket1000_Samples class]
+                                     rootClass:[RedvoxApi1000Root class]
+                                          file:RedvoxApi1000Root_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(RedvoxPacket1000_Samples__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacket1000)];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+int32_t RedvoxPacket1000_Samples_Unit_RawValue(RedvoxPacket1000_Samples *message) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_Samples descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_Samples_FieldNumber_Unit];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetRedvoxPacket1000_Samples_Unit_RawValue(RedvoxPacket1000_Samples *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_Samples descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_Samples_FieldNumber_Unit];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
+
+#pragma mark - RedvoxPacket1000_Timestamps
+
+@implementation RedvoxPacket1000_Timestamps
+
+@dynamic unit;
+@dynamic timestampsArray, timestampsArray_Count;
+@dynamic hasTimestampStatistics, timestampStatistics;
+
+typedef struct RedvoxPacket1000_Timestamps__storage_ {
+  uint32_t _has_storage_[1];
+  RedvoxPacket1000_Unit unit;
+  GPBDoubleArray *timestampsArray;
+  RedvoxPacket1000_SummaryStatistics *timestampStatistics;
+} RedvoxPacket1000_Timestamps__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "unit",
+        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_Unit_EnumDescriptor,
+        .number = RedvoxPacket1000_Timestamps_FieldNumber_Unit,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_Timestamps__storage_, unit),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "timestampsArray",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_Timestamps_FieldNumber_TimestampsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_Timestamps__storage_, timestampsArray),
+        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "timestampStatistics",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacket1000_SummaryStatistics),
+        .number = RedvoxPacket1000_Timestamps_FieldNumber_TimestampStatistics,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_Timestamps__storage_, timestampStatistics),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[RedvoxPacket1000_Timestamps class]
+                                     rootClass:[RedvoxApi1000Root class]
+                                          file:RedvoxApi1000Root_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(RedvoxPacket1000_Timestamps__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacket1000)];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+int32_t RedvoxPacket1000_Timestamps_Unit_RawValue(RedvoxPacket1000_Timestamps *message) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_Timestamps descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_Timestamps_FieldNumber_Unit];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetRedvoxPacket1000_Timestamps_Unit_RawValue(RedvoxPacket1000_Timestamps *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_Timestamps descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_Timestamps_FieldNumber_Unit];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
+
 #pragma mark - RedvoxPacket1000_SummaryStatistics
 
 @implementation RedvoxPacket1000_SummaryStatistics
@@ -2389,6 +2483,137 @@ typedef struct RedvoxPacket1000_SummaryStatistics__storage_ {
                                    storageSize:sizeof(RedvoxPacket1000_SummaryStatistics__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacket1000)];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - EncryptedRedvoxPacket1000
+
+@implementation EncryptedRedvoxPacket1000
+
+@dynamic header;
+@dynamic packet;
+
+typedef struct EncryptedRedvoxPacket1000__storage_ {
+  uint32_t _has_storage_[1];
+  NSData *header;
+  NSData *packet;
+} EncryptedRedvoxPacket1000__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "header",
+        .dataTypeSpecific.className = NULL,
+        .number = EncryptedRedvoxPacket1000_FieldNumber_Header,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(EncryptedRedvoxPacket1000__storage_, header),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBytes,
+      },
+      {
+        .name = "packet",
+        .dataTypeSpecific.className = NULL,
+        .number = EncryptedRedvoxPacket1000_FieldNumber_Packet,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(EncryptedRedvoxPacket1000__storage_, packet),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBytes,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[EncryptedRedvoxPacket1000 class]
+                                     rootClass:[RedvoxApi1000Root class]
+                                          file:RedvoxApi1000Root_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(EncryptedRedvoxPacket1000__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - EncryptedRedvoxPacket1000_Header
+
+@implementation EncryptedRedvoxPacket1000_Header
+
+@dynamic stationId;
+@dynamic stationUuid;
+@dynamic authToken;
+@dynamic authEmail;
+
+typedef struct EncryptedRedvoxPacket1000_Header__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *stationId;
+  NSString *stationUuid;
+  NSString *authToken;
+  NSString *authEmail;
+} EncryptedRedvoxPacket1000_Header__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "stationId",
+        .dataTypeSpecific.className = NULL,
+        .number = EncryptedRedvoxPacket1000_Header_FieldNumber_StationId,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(EncryptedRedvoxPacket1000_Header__storage_, stationId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "stationUuid",
+        .dataTypeSpecific.className = NULL,
+        .number = EncryptedRedvoxPacket1000_Header_FieldNumber_StationUuid,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(EncryptedRedvoxPacket1000_Header__storage_, stationUuid),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "authToken",
+        .dataTypeSpecific.className = NULL,
+        .number = EncryptedRedvoxPacket1000_Header_FieldNumber_AuthToken,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(EncryptedRedvoxPacket1000_Header__storage_, authToken),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "authEmail",
+        .dataTypeSpecific.className = NULL,
+        .number = EncryptedRedvoxPacket1000_Header_FieldNumber_AuthEmail,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(EncryptedRedvoxPacket1000_Header__storage_, authEmail),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[EncryptedRedvoxPacket1000_Header class]
+                                     rootClass:[RedvoxApi1000Root class]
+                                          file:RedvoxApi1000Root_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(EncryptedRedvoxPacket1000_Header__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(EncryptedRedvoxPacket1000)];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
