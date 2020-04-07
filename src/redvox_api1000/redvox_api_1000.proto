@@ -39,13 +39,14 @@ message RedvoxPacket1000 {
         string app_version = 7;                         // App version on the station
         AppSettings app_settings = 8;                   // A copy of the App's settings
         NetworkType network_type = 9;                   // Type of network connection
-        SummaryStatistics network_strength_db = 10;     // A value representing the strength of the network connection
-        SummaryStatistics temp_c = 11;                  // Temperature of the station in degrees centigrade
-        SummaryStatistics battery_percent = 12;         // Device battery level as a percentage between 0% and 100%
-        SummaryStatistics available_ram_bytes = 13;     // Available RAM in bytes
-        SummaryStatistics available_disk_bytes = 14;    // Available disk space in bytes
-        SummaryStatistics cpu_utilization = 15;         // CPU utilization
-        map<string, string> metadata = 16;              // A map from string to string for including untyped metadata
+        Timestamps station_information_timestamps = 10;
+        Samples network_strength = 11;     // A value representing the strength of the network connection
+        Samples temperature = 12;
+        Samples battery = 13;
+        Samples available_ram = 14;
+        Samples available_disk = 15;
+        Samples cpu_utilization = 16;
+        map<string, string> metadata = 17;              // A map from string to string for including untyped metadata
 
         enum NetworkType {
             WIFI = 0;
@@ -243,6 +244,9 @@ message RedvoxPacket1000 {
         MICROTESLA = 6;
         LSB_PLUS_MINUS_COUNTS = 7;
         MICROSECONDS_SINCE_UNIX_EPOCH = 8;
+        DECIBEL = 9;
+        DEGREES_CELSIUS = 10;
+        BYTE = 11;
     }
 
     message SummaryStatistics {
