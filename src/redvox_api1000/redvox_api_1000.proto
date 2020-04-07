@@ -39,13 +39,13 @@ message RedvoxPacket1000 {
         string app_version = 7;                         // App version on the station
         AppSettings app_settings = 8;                   // A copy of the App's settings
         NetworkType network_type = 9;                   // Type of network connection
-        Timestamps station_information_timestamps = 10;
-        Samples network_strength = 11;     // A value representing the strength of the network connection
-        Samples temperature = 12;
-        Samples battery = 13;
-        Samples available_ram = 14;
-        Samples available_disk = 15;
-        Samples cpu_utilization = 16;
+        Payload station_information_timestamps = 10;
+        Payload network_strength = 11;     // A value representing the strength of the network connection
+        Payload temperature = 12;
+        Payload battery = 13;
+        Payload available_ram = 14;
+        Payload available_disk = 15;
+        Payload cpu_utilization = 16;
         map<string, string> metadata = 17;              // A map from string to string for including untyped metadata
 
         enum NetworkType {
@@ -164,29 +164,29 @@ message RedvoxPacket1000 {
             double first_sample_timestamp = 2;              // Timestamp of the first audio sample
             double sample_rate_hz = 3;                  // Microphone sample rate in Hz
             bool is_scrambled = 4;                      // If audio data has been scrambled to remove voice
-            Samples samples = 5;                // List of audio samples
+            Payload samples = 5;                // List of audio samples
             map<string, string> metadata = 6;           // A map from string to string for including untyped metadata
         }
 
         message SingleChannel {
             string sensor_description = 1;                  // The name or description of the sensor
-            Timestamps timestamps = 2;
-            Samples samples = 3;
+            Payload timestamps = 2;
+            Payload samples = 3;
             map<string, string> metadata = 4;               // A map from string to string for including untyped metadata
         }
 
         message LocationChannel {
             string sensor_description = 1;                      // The name or description of the sensor
-            Timestamps timestamps = 2;
-            Samples latitude_samples = 3;               // A list of latitude samples
-            Samples longitude_samples = 4;              // A list of longitude samples
-            Samples altitude_samples = 5;               // A list of altitude samples
-            Samples speed_samples = 6;                  // A list of speed samples
-            Samples bearing_samples = 7;
-            Samples horizontal_accuracy_samples = 8;    // A list of accuracy samples
-            Samples vertical_accuracy_samples = 9;
-            Samples speed_accuracy_samples = 10;
-            Samples bearing_accuracy_samples = 11;
+            Payload timestamps = 2;
+            Payload latitude_samples = 3;               // A list of latitude samples
+            Payload longitude_samples = 4;              // A list of longitude samples
+            Payload altitude_samples = 5;               // A list of altitude samples
+            Payload speed_samples = 6;                  // A list of speed samples
+            Payload bearing_samples = 7;
+            Payload horizontal_accuracy_samples = 8;    // A list of accuracy samples
+            Payload vertical_accuracy_samples = 9;
+            Payload speed_accuracy_samples = 10;
+            Payload bearing_accuracy_samples = 11;
 
             bool location_permissions_granted = 12;             // Have location permissions been granted by the user?
             bool location_services_requested = 13;              // Has location services been requested by the user?
@@ -205,10 +205,10 @@ message RedvoxPacket1000 {
 
         message XyzChannel {
             string sensor_description = 1;                  // The name or description of the sensor
-            Timestamps timestamps = 2;
-            Samples x_samples = 4;                  // A list of samples for the X-channel
-            Samples y_samples = 5;                  // A list of samples for the Y-channel
-            Samples z_samples = 6;                  // A list of samples for the Z-channel
+            Payload timestamps = 2;
+            Payload x_samples = 4;                  // A list of samples for the X-channel
+            Payload y_samples = 5;                  // A list of samples for the Y-channel
+            Payload z_samples = 6;                  // A list of samples for the Z-channel
             map<string, string> metadata = 11;              // A map from string to string for including untyped metadata
         }
 
@@ -222,17 +222,10 @@ message RedvoxPacket1000 {
         }
     }
 
-    message Samples {
+    message Payload {
         Unit unit = 1;
-        repeated double samples = 2;
-        SummaryStatistics sample_statistics = 3;
-        map<string, string> metadata = 4;
-    }
-
-    message Timestamps {
-        Unit unit = 1;
-        repeated double timestamps = 2;
-        SummaryStatistics timestamp_statistics = 3;
+        repeated double values = 2;
+        SummaryStatistics value_statistics = 3;
         map<string, string> metadata = 4;
     }
 

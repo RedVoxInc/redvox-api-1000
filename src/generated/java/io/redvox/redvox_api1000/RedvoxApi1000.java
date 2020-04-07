@@ -2067,24 +2067,24 @@ public final class RedvoxApi1000 {
       io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.StationInformation.NetworkType getNetworkType();
 
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
        */
       boolean hasStationInformationTimestamps();
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getStationInformationTimestamps();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getStationInformationTimestamps();
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder getStationInformationTimestampsOrBuilder();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getStationInformationTimestampsOrBuilder();
 
       /**
        * <pre>
        * A value representing the strength of the network connection
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
        */
       boolean hasNetworkStrength();
       /**
@@ -2092,82 +2092,82 @@ public final class RedvoxApi1000 {
        * A value representing the strength of the network connection
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getNetworkStrength();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getNetworkStrength();
       /**
        * <pre>
        * A value representing the strength of the network connection
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getNetworkStrengthOrBuilder();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getNetworkStrengthOrBuilder();
 
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
        */
       boolean hasTemperature();
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getTemperature();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getTemperature();
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getTemperatureOrBuilder();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getTemperatureOrBuilder();
 
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
        */
       boolean hasBattery();
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getBattery();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getBattery();
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getBatteryOrBuilder();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getBatteryOrBuilder();
 
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
        */
       boolean hasAvailableRam();
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getAvailableRam();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getAvailableRam();
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getAvailableRamOrBuilder();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getAvailableRamOrBuilder();
 
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
        */
       boolean hasAvailableDisk();
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getAvailableDisk();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getAvailableDisk();
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getAvailableDiskOrBuilder();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getAvailableDiskOrBuilder();
 
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
        */
       boolean hasCpuUtilization();
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getCpuUtilization();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getCpuUtilization();
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getCpuUtilizationOrBuilder();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getCpuUtilizationOrBuilder();
 
       /**
        * <pre>
@@ -2332,11 +2332,11 @@ public final class RedvoxApi1000 {
                 break;
               }
               case 82: {
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder subBuilder = null;
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                 if (stationInformationTimestamps_ != null) {
                   subBuilder = stationInformationTimestamps_.toBuilder();
                 }
-                stationInformationTimestamps_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.parser(), extensionRegistry);
+                stationInformationTimestamps_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(stationInformationTimestamps_);
                   stationInformationTimestamps_ = subBuilder.buildPartial();
@@ -2345,11 +2345,11 @@ public final class RedvoxApi1000 {
                 break;
               }
               case 90: {
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                 if (networkStrength_ != null) {
                   subBuilder = networkStrength_.toBuilder();
                 }
-                networkStrength_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                networkStrength_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(networkStrength_);
                   networkStrength_ = subBuilder.buildPartial();
@@ -2358,11 +2358,11 @@ public final class RedvoxApi1000 {
                 break;
               }
               case 98: {
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                 if (temperature_ != null) {
                   subBuilder = temperature_.toBuilder();
                 }
-                temperature_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                temperature_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(temperature_);
                   temperature_ = subBuilder.buildPartial();
@@ -2371,11 +2371,11 @@ public final class RedvoxApi1000 {
                 break;
               }
               case 106: {
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                 if (battery_ != null) {
                   subBuilder = battery_.toBuilder();
                 }
-                battery_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                battery_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(battery_);
                   battery_ = subBuilder.buildPartial();
@@ -2384,11 +2384,11 @@ public final class RedvoxApi1000 {
                 break;
               }
               case 114: {
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                 if (availableRam_ != null) {
                   subBuilder = availableRam_.toBuilder();
                 }
-                availableRam_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                availableRam_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(availableRam_);
                   availableRam_ = subBuilder.buildPartial();
@@ -2397,11 +2397,11 @@ public final class RedvoxApi1000 {
                 break;
               }
               case 122: {
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                 if (availableDisk_ != null) {
                   subBuilder = availableDisk_.toBuilder();
                 }
-                availableDisk_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                availableDisk_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(availableDisk_);
                   availableDisk_ = subBuilder.buildPartial();
@@ -2410,11 +2410,11 @@ public final class RedvoxApi1000 {
                 break;
               }
               case 130: {
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                 if (cpuUtilization_ != null) {
                   subBuilder = cpuUtilization_.toBuilder();
                 }
-                cpuUtilization_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                cpuUtilization_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(cpuUtilization_);
                   cpuUtilization_ = subBuilder.buildPartial();
@@ -5968,34 +5968,34 @@ public final class RedvoxApi1000 {
       }
 
       public static final int STATION_INFORMATION_TIMESTAMPS_FIELD_NUMBER = 10;
-      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps stationInformationTimestamps_;
+      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload stationInformationTimestamps_;
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
        */
       public boolean hasStationInformationTimestamps() {
         return stationInformationTimestamps_ != null;
       }
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getStationInformationTimestamps() {
-        return stationInformationTimestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.getDefaultInstance() : stationInformationTimestamps_;
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getStationInformationTimestamps() {
+        return stationInformationTimestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : stationInformationTimestamps_;
       }
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder getStationInformationTimestampsOrBuilder() {
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getStationInformationTimestampsOrBuilder() {
         return getStationInformationTimestamps();
       }
 
       public static final int NETWORK_STRENGTH_FIELD_NUMBER = 11;
-      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples networkStrength_;
+      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload networkStrength_;
       /**
        * <pre>
        * A value representing the strength of the network connection
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
        */
       public boolean hasNetworkStrength() {
         return networkStrength_ != null;
@@ -6005,124 +6005,124 @@ public final class RedvoxApi1000 {
        * A value representing the strength of the network connection
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getNetworkStrength() {
-        return networkStrength_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : networkStrength_;
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getNetworkStrength() {
+        return networkStrength_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : networkStrength_;
       }
       /**
        * <pre>
        * A value representing the strength of the network connection
        * </pre>
        *
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getNetworkStrengthOrBuilder() {
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getNetworkStrengthOrBuilder() {
         return getNetworkStrength();
       }
 
       public static final int TEMPERATURE_FIELD_NUMBER = 12;
-      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples temperature_;
+      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload temperature_;
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
        */
       public boolean hasTemperature() {
         return temperature_ != null;
       }
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getTemperature() {
-        return temperature_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : temperature_;
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getTemperature() {
+        return temperature_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : temperature_;
       }
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getTemperatureOrBuilder() {
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getTemperatureOrBuilder() {
         return getTemperature();
       }
 
       public static final int BATTERY_FIELD_NUMBER = 13;
-      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples battery_;
+      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload battery_;
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
        */
       public boolean hasBattery() {
         return battery_ != null;
       }
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getBattery() {
-        return battery_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : battery_;
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getBattery() {
+        return battery_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : battery_;
       }
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getBatteryOrBuilder() {
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getBatteryOrBuilder() {
         return getBattery();
       }
 
       public static final int AVAILABLE_RAM_FIELD_NUMBER = 14;
-      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples availableRam_;
+      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload availableRam_;
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
        */
       public boolean hasAvailableRam() {
         return availableRam_ != null;
       }
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getAvailableRam() {
-        return availableRam_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : availableRam_;
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getAvailableRam() {
+        return availableRam_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : availableRam_;
       }
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getAvailableRamOrBuilder() {
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getAvailableRamOrBuilder() {
         return getAvailableRam();
       }
 
       public static final int AVAILABLE_DISK_FIELD_NUMBER = 15;
-      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples availableDisk_;
+      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload availableDisk_;
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
        */
       public boolean hasAvailableDisk() {
         return availableDisk_ != null;
       }
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getAvailableDisk() {
-        return availableDisk_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : availableDisk_;
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getAvailableDisk() {
+        return availableDisk_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : availableDisk_;
       }
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getAvailableDiskOrBuilder() {
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getAvailableDiskOrBuilder() {
         return getAvailableDisk();
       }
 
       public static final int CPU_UTILIZATION_FIELD_NUMBER = 16;
-      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples cpuUtilization_;
+      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload cpuUtilization_;
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
        */
       public boolean hasCpuUtilization() {
         return cpuUtilization_ != null;
       }
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getCpuUtilization() {
-        return cpuUtilization_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : cpuUtilization_;
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getCpuUtilization() {
+        return cpuUtilization_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : cpuUtilization_;
       }
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getCpuUtilizationOrBuilder() {
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getCpuUtilizationOrBuilder() {
         return getCpuUtilization();
       }
 
@@ -7748,29 +7748,29 @@ public final class RedvoxApi1000 {
           return this;
         }
 
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps stationInformationTimestamps_ = null;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload stationInformationTimestamps_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder> stationInformationTimestampsBuilder_;
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> stationInformationTimestampsBuilder_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
          */
         public boolean hasStationInformationTimestamps() {
           return stationInformationTimestampsBuilder_ != null || stationInformationTimestamps_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getStationInformationTimestamps() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getStationInformationTimestamps() {
           if (stationInformationTimestampsBuilder_ == null) {
-            return stationInformationTimestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.getDefaultInstance() : stationInformationTimestamps_;
+            return stationInformationTimestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : stationInformationTimestamps_;
           } else {
             return stationInformationTimestampsBuilder_.getMessage();
           }
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
          */
-        public Builder setStationInformationTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps value) {
+        public Builder setStationInformationTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
           if (stationInformationTimestampsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -7784,10 +7784,10 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
          */
         public Builder setStationInformationTimestamps(
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder builderForValue) {
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
           if (stationInformationTimestampsBuilder_ == null) {
             stationInformationTimestamps_ = builderForValue.build();
             onChanged();
@@ -7798,13 +7798,13 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
          */
-        public Builder mergeStationInformationTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps value) {
+        public Builder mergeStationInformationTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
           if (stationInformationTimestampsBuilder_ == null) {
             if (stationInformationTimestamps_ != null) {
               stationInformationTimestamps_ =
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.newBuilder(stationInformationTimestamps_).mergeFrom(value).buildPartial();
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(stationInformationTimestamps_).mergeFrom(value).buildPartial();
             } else {
               stationInformationTimestamps_ = value;
             }
@@ -7816,7 +7816,7 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
          */
         public Builder clearStationInformationTimestamps() {
           if (stationInformationTimestampsBuilder_ == null) {
@@ -7830,33 +7830,33 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder getStationInformationTimestampsBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getStationInformationTimestampsBuilder() {
           
           onChanged();
           return getStationInformationTimestampsFieldBuilder().getBuilder();
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder getStationInformationTimestampsOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getStationInformationTimestampsOrBuilder() {
           if (stationInformationTimestampsBuilder_ != null) {
             return stationInformationTimestampsBuilder_.getMessageOrBuilder();
           } else {
             return stationInformationTimestamps_ == null ?
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.getDefaultInstance() : stationInformationTimestamps_;
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : stationInformationTimestamps_;
           }
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps station_information_timestamps = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload station_information_timestamps = 10;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder> 
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
             getStationInformationTimestampsFieldBuilder() {
           if (stationInformationTimestampsBuilder_ == null) {
             stationInformationTimestampsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder>(
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                     getStationInformationTimestamps(),
                     getParentForChildren(),
                     isClean());
@@ -7865,15 +7865,15 @@ public final class RedvoxApi1000 {
           return stationInformationTimestampsBuilder_;
         }
 
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples networkStrength_ = null;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload networkStrength_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> networkStrengthBuilder_;
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> networkStrengthBuilder_;
         /**
          * <pre>
          * A value representing the strength of the network connection
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
          */
         public boolean hasNetworkStrength() {
           return networkStrengthBuilder_ != null || networkStrength_ != null;
@@ -7883,11 +7883,11 @@ public final class RedvoxApi1000 {
          * A value representing the strength of the network connection
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getNetworkStrength() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getNetworkStrength() {
           if (networkStrengthBuilder_ == null) {
-            return networkStrength_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : networkStrength_;
+            return networkStrength_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : networkStrength_;
           } else {
             return networkStrengthBuilder_.getMessage();
           }
@@ -7897,9 +7897,9 @@ public final class RedvoxApi1000 {
          * A value representing the strength of the network connection
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
          */
-        public Builder setNetworkStrength(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+        public Builder setNetworkStrength(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
           if (networkStrengthBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -7917,10 +7917,10 @@ public final class RedvoxApi1000 {
          * A value representing the strength of the network connection
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
          */
         public Builder setNetworkStrength(
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
           if (networkStrengthBuilder_ == null) {
             networkStrength_ = builderForValue.build();
             onChanged();
@@ -7935,13 +7935,13 @@ public final class RedvoxApi1000 {
          * A value representing the strength of the network connection
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
          */
-        public Builder mergeNetworkStrength(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+        public Builder mergeNetworkStrength(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
           if (networkStrengthBuilder_ == null) {
             if (networkStrength_ != null) {
               networkStrength_ =
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(networkStrength_).mergeFrom(value).buildPartial();
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(networkStrength_).mergeFrom(value).buildPartial();
             } else {
               networkStrength_ = value;
             }
@@ -7957,7 +7957,7 @@ public final class RedvoxApi1000 {
          * A value representing the strength of the network connection
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
          */
         public Builder clearNetworkStrength() {
           if (networkStrengthBuilder_ == null) {
@@ -7975,9 +7975,9 @@ public final class RedvoxApi1000 {
          * A value representing the strength of the network connection
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getNetworkStrengthBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getNetworkStrengthBuilder() {
           
           onChanged();
           return getNetworkStrengthFieldBuilder().getBuilder();
@@ -7987,14 +7987,14 @@ public final class RedvoxApi1000 {
          * A value representing the strength of the network connection
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getNetworkStrengthOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getNetworkStrengthOrBuilder() {
           if (networkStrengthBuilder_ != null) {
             return networkStrengthBuilder_.getMessageOrBuilder();
           } else {
             return networkStrength_ == null ?
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : networkStrength_;
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : networkStrength_;
           }
         }
         /**
@@ -8002,14 +8002,14 @@ public final class RedvoxApi1000 {
          * A value representing the strength of the network connection
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples network_strength = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload network_strength = 11;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
             getNetworkStrengthFieldBuilder() {
           if (networkStrengthBuilder_ == null) {
             networkStrengthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                     getNetworkStrength(),
                     getParentForChildren(),
                     isClean());
@@ -8018,29 +8018,29 @@ public final class RedvoxApi1000 {
           return networkStrengthBuilder_;
         }
 
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples temperature_ = null;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload temperature_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> temperatureBuilder_;
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> temperatureBuilder_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
          */
         public boolean hasTemperature() {
           return temperatureBuilder_ != null || temperature_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getTemperature() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getTemperature() {
           if (temperatureBuilder_ == null) {
-            return temperature_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : temperature_;
+            return temperature_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : temperature_;
           } else {
             return temperatureBuilder_.getMessage();
           }
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
          */
-        public Builder setTemperature(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+        public Builder setTemperature(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
           if (temperatureBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -8054,10 +8054,10 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
          */
         public Builder setTemperature(
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
           if (temperatureBuilder_ == null) {
             temperature_ = builderForValue.build();
             onChanged();
@@ -8068,13 +8068,13 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
          */
-        public Builder mergeTemperature(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+        public Builder mergeTemperature(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
           if (temperatureBuilder_ == null) {
             if (temperature_ != null) {
               temperature_ =
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(temperature_).mergeFrom(value).buildPartial();
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(temperature_).mergeFrom(value).buildPartial();
             } else {
               temperature_ = value;
             }
@@ -8086,7 +8086,7 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
          */
         public Builder clearTemperature() {
           if (temperatureBuilder_ == null) {
@@ -8100,33 +8100,33 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getTemperatureBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getTemperatureBuilder() {
           
           onChanged();
           return getTemperatureFieldBuilder().getBuilder();
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getTemperatureOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getTemperatureOrBuilder() {
           if (temperatureBuilder_ != null) {
             return temperatureBuilder_.getMessageOrBuilder();
           } else {
             return temperature_ == null ?
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : temperature_;
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : temperature_;
           }
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples temperature = 12;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload temperature = 12;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
             getTemperatureFieldBuilder() {
           if (temperatureBuilder_ == null) {
             temperatureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                     getTemperature(),
                     getParentForChildren(),
                     isClean());
@@ -8135,29 +8135,29 @@ public final class RedvoxApi1000 {
           return temperatureBuilder_;
         }
 
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples battery_ = null;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload battery_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> batteryBuilder_;
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> batteryBuilder_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
          */
         public boolean hasBattery() {
           return batteryBuilder_ != null || battery_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getBattery() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getBattery() {
           if (batteryBuilder_ == null) {
-            return battery_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : battery_;
+            return battery_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : battery_;
           } else {
             return batteryBuilder_.getMessage();
           }
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
          */
-        public Builder setBattery(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+        public Builder setBattery(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
           if (batteryBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -8171,10 +8171,10 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
          */
         public Builder setBattery(
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
           if (batteryBuilder_ == null) {
             battery_ = builderForValue.build();
             onChanged();
@@ -8185,13 +8185,13 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
          */
-        public Builder mergeBattery(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+        public Builder mergeBattery(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
           if (batteryBuilder_ == null) {
             if (battery_ != null) {
               battery_ =
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(battery_).mergeFrom(value).buildPartial();
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(battery_).mergeFrom(value).buildPartial();
             } else {
               battery_ = value;
             }
@@ -8203,7 +8203,7 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
          */
         public Builder clearBattery() {
           if (batteryBuilder_ == null) {
@@ -8217,33 +8217,33 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getBatteryBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getBatteryBuilder() {
           
           onChanged();
           return getBatteryFieldBuilder().getBuilder();
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getBatteryOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getBatteryOrBuilder() {
           if (batteryBuilder_ != null) {
             return batteryBuilder_.getMessageOrBuilder();
           } else {
             return battery_ == null ?
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : battery_;
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : battery_;
           }
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples battery = 13;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload battery = 13;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
             getBatteryFieldBuilder() {
           if (batteryBuilder_ == null) {
             batteryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                     getBattery(),
                     getParentForChildren(),
                     isClean());
@@ -8252,29 +8252,29 @@ public final class RedvoxApi1000 {
           return batteryBuilder_;
         }
 
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples availableRam_ = null;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload availableRam_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> availableRamBuilder_;
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> availableRamBuilder_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
          */
         public boolean hasAvailableRam() {
           return availableRamBuilder_ != null || availableRam_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getAvailableRam() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getAvailableRam() {
           if (availableRamBuilder_ == null) {
-            return availableRam_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : availableRam_;
+            return availableRam_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : availableRam_;
           } else {
             return availableRamBuilder_.getMessage();
           }
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
          */
-        public Builder setAvailableRam(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+        public Builder setAvailableRam(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
           if (availableRamBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -8288,10 +8288,10 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
          */
         public Builder setAvailableRam(
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
           if (availableRamBuilder_ == null) {
             availableRam_ = builderForValue.build();
             onChanged();
@@ -8302,13 +8302,13 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
          */
-        public Builder mergeAvailableRam(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+        public Builder mergeAvailableRam(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
           if (availableRamBuilder_ == null) {
             if (availableRam_ != null) {
               availableRam_ =
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(availableRam_).mergeFrom(value).buildPartial();
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(availableRam_).mergeFrom(value).buildPartial();
             } else {
               availableRam_ = value;
             }
@@ -8320,7 +8320,7 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
          */
         public Builder clearAvailableRam() {
           if (availableRamBuilder_ == null) {
@@ -8334,33 +8334,33 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getAvailableRamBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getAvailableRamBuilder() {
           
           onChanged();
           return getAvailableRamFieldBuilder().getBuilder();
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getAvailableRamOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getAvailableRamOrBuilder() {
           if (availableRamBuilder_ != null) {
             return availableRamBuilder_.getMessageOrBuilder();
           } else {
             return availableRam_ == null ?
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : availableRam_;
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : availableRam_;
           }
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_ram = 14;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_ram = 14;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
             getAvailableRamFieldBuilder() {
           if (availableRamBuilder_ == null) {
             availableRamBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                     getAvailableRam(),
                     getParentForChildren(),
                     isClean());
@@ -8369,29 +8369,29 @@ public final class RedvoxApi1000 {
           return availableRamBuilder_;
         }
 
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples availableDisk_ = null;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload availableDisk_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> availableDiskBuilder_;
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> availableDiskBuilder_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
          */
         public boolean hasAvailableDisk() {
           return availableDiskBuilder_ != null || availableDisk_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getAvailableDisk() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getAvailableDisk() {
           if (availableDiskBuilder_ == null) {
-            return availableDisk_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : availableDisk_;
+            return availableDisk_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : availableDisk_;
           } else {
             return availableDiskBuilder_.getMessage();
           }
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
          */
-        public Builder setAvailableDisk(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+        public Builder setAvailableDisk(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
           if (availableDiskBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -8405,10 +8405,10 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
          */
         public Builder setAvailableDisk(
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
           if (availableDiskBuilder_ == null) {
             availableDisk_ = builderForValue.build();
             onChanged();
@@ -8419,13 +8419,13 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
          */
-        public Builder mergeAvailableDisk(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+        public Builder mergeAvailableDisk(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
           if (availableDiskBuilder_ == null) {
             if (availableDisk_ != null) {
               availableDisk_ =
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(availableDisk_).mergeFrom(value).buildPartial();
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(availableDisk_).mergeFrom(value).buildPartial();
             } else {
               availableDisk_ = value;
             }
@@ -8437,7 +8437,7 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
          */
         public Builder clearAvailableDisk() {
           if (availableDiskBuilder_ == null) {
@@ -8451,33 +8451,33 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getAvailableDiskBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getAvailableDiskBuilder() {
           
           onChanged();
           return getAvailableDiskFieldBuilder().getBuilder();
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getAvailableDiskOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getAvailableDiskOrBuilder() {
           if (availableDiskBuilder_ != null) {
             return availableDiskBuilder_.getMessageOrBuilder();
           } else {
             return availableDisk_ == null ?
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : availableDisk_;
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : availableDisk_;
           }
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples available_disk = 15;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload available_disk = 15;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
             getAvailableDiskFieldBuilder() {
           if (availableDiskBuilder_ == null) {
             availableDiskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                     getAvailableDisk(),
                     getParentForChildren(),
                     isClean());
@@ -8486,29 +8486,29 @@ public final class RedvoxApi1000 {
           return availableDiskBuilder_;
         }
 
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples cpuUtilization_ = null;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload cpuUtilization_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> cpuUtilizationBuilder_;
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> cpuUtilizationBuilder_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
          */
         public boolean hasCpuUtilization() {
           return cpuUtilizationBuilder_ != null || cpuUtilization_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getCpuUtilization() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getCpuUtilization() {
           if (cpuUtilizationBuilder_ == null) {
-            return cpuUtilization_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : cpuUtilization_;
+            return cpuUtilization_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : cpuUtilization_;
           } else {
             return cpuUtilizationBuilder_.getMessage();
           }
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
          */
-        public Builder setCpuUtilization(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+        public Builder setCpuUtilization(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
           if (cpuUtilizationBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -8522,10 +8522,10 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
          */
         public Builder setCpuUtilization(
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
           if (cpuUtilizationBuilder_ == null) {
             cpuUtilization_ = builderForValue.build();
             onChanged();
@@ -8536,13 +8536,13 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
          */
-        public Builder mergeCpuUtilization(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+        public Builder mergeCpuUtilization(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
           if (cpuUtilizationBuilder_ == null) {
             if (cpuUtilization_ != null) {
               cpuUtilization_ =
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(cpuUtilization_).mergeFrom(value).buildPartial();
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(cpuUtilization_).mergeFrom(value).buildPartial();
             } else {
               cpuUtilization_ = value;
             }
@@ -8554,7 +8554,7 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
          */
         public Builder clearCpuUtilization() {
           if (cpuUtilizationBuilder_ == null) {
@@ -8568,33 +8568,33 @@ public final class RedvoxApi1000 {
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getCpuUtilizationBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getCpuUtilizationBuilder() {
           
           onChanged();
           return getCpuUtilizationFieldBuilder().getBuilder();
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getCpuUtilizationOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getCpuUtilizationOrBuilder() {
           if (cpuUtilizationBuilder_ != null) {
             return cpuUtilizationBuilder_.getMessageOrBuilder();
           } else {
             return cpuUtilization_ == null ?
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : cpuUtilization_;
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : cpuUtilization_;
           }
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples cpu_utilization = 16;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload cpu_utilization = 16;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
             getCpuUtilizationFieldBuilder() {
           if (cpuUtilizationBuilder_ == null) {
             cpuUtilizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                     getCpuUtilization(),
                     getParentForChildren(),
                     isClean());
@@ -14762,7 +14762,7 @@ public final class RedvoxApi1000 {
          * List of audio samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
          */
         boolean hasSamples();
         /**
@@ -14770,17 +14770,17 @@ public final class RedvoxApi1000 {
          * List of audio samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getSamples();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getSamples();
         /**
          * <pre>
          * List of audio samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getSamplesOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getSamplesOrBuilder();
 
         /**
          * <pre>
@@ -14901,11 +14901,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 42: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (samples_ != null) {
                     subBuilder = samples_.toBuilder();
                   }
-                  samples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                  samples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(samples_);
                     samples_ = subBuilder.buildPartial();
@@ -15053,13 +15053,13 @@ public final class RedvoxApi1000 {
         }
 
         public static final int SAMPLES_FIELD_NUMBER = 5;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples samples_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload samples_;
         /**
          * <pre>
          * List of audio samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
          */
         public boolean hasSamples() {
           return samples_ != null;
@@ -15069,19 +15069,19 @@ public final class RedvoxApi1000 {
          * List of audio samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getSamples() {
-          return samples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : samples_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getSamples() {
+          return samples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : samples_;
         }
         /**
          * <pre>
          * List of audio samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getSamplesOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getSamplesOrBuilder() {
           return getSamples();
         }
 
@@ -15824,15 +15824,15 @@ public final class RedvoxApi1000 {
             return this;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples samples_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload samples_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> samplesBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> samplesBuilder_;
           /**
            * <pre>
            * List of audio samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
            */
           public boolean hasSamples() {
             return samplesBuilder_ != null || samples_ != null;
@@ -15842,11 +15842,11 @@ public final class RedvoxApi1000 {
            * List of audio samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getSamples() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getSamples() {
             if (samplesBuilder_ == null) {
-              return samples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : samples_;
+              return samples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : samples_;
             } else {
               return samplesBuilder_.getMessage();
             }
@@ -15856,9 +15856,9 @@ public final class RedvoxApi1000 {
            * List of audio samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
            */
-          public Builder setSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder setSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (samplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -15876,10 +15876,10 @@ public final class RedvoxApi1000 {
            * List of audio samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
            */
           public Builder setSamples(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (samplesBuilder_ == null) {
               samples_ = builderForValue.build();
               onChanged();
@@ -15894,13 +15894,13 @@ public final class RedvoxApi1000 {
            * List of audio samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
            */
-          public Builder mergeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder mergeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (samplesBuilder_ == null) {
               if (samples_ != null) {
                 samples_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(samples_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(samples_).mergeFrom(value).buildPartial();
               } else {
                 samples_ = value;
               }
@@ -15916,7 +15916,7 @@ public final class RedvoxApi1000 {
            * List of audio samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
            */
           public Builder clearSamples() {
             if (samplesBuilder_ == null) {
@@ -15934,9 +15934,9 @@ public final class RedvoxApi1000 {
            * List of audio samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getSamplesBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getSamplesBuilder() {
             
             onChanged();
             return getSamplesFieldBuilder().getBuilder();
@@ -15946,14 +15946,14 @@ public final class RedvoxApi1000 {
            * List of audio samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getSamplesOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getSamplesOrBuilder() {
             if (samplesBuilder_ != null) {
               return samplesBuilder_.getMessageOrBuilder();
             } else {
               return samples_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : samples_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : samples_;
             }
           }
           /**
@@ -15961,14 +15961,14 @@ public final class RedvoxApi1000 {
            * List of audio samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 5;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getSamplesFieldBuilder() {
             if (samplesBuilder_ == null) {
               samplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getSamples(),
                       getParentForChildren(),
                       isClean());
@@ -16203,30 +16203,30 @@ public final class RedvoxApi1000 {
             getSensorDescriptionBytes();
 
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
         boolean hasTimestamps();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getTimestamps();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getTimestamps();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder getTimestampsOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getTimestampsOrBuilder();
 
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
          */
         boolean hasSamples();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getSamples();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getSamples();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getSamplesOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getSamplesOrBuilder();
 
         /**
          * <pre>
@@ -16329,11 +16329,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 18: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (timestamps_ != null) {
                     subBuilder = timestamps_.toBuilder();
                   }
-                  timestamps_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.parser(), extensionRegistry);
+                  timestamps_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(timestamps_);
                     timestamps_ = subBuilder.buildPartial();
@@ -16342,11 +16342,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 26: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (samples_ != null) {
                     subBuilder = samples_.toBuilder();
                   }
-                  samples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                  samples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(samples_);
                     samples_ = subBuilder.buildPartial();
@@ -16455,44 +16455,44 @@ public final class RedvoxApi1000 {
         }
 
         public static final int TIMESTAMPS_FIELD_NUMBER = 2;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps timestamps_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload timestamps_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
         public boolean hasTimestamps() {
           return timestamps_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getTimestamps() {
-          return timestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.getDefaultInstance() : timestamps_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getTimestamps() {
+          return timestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : timestamps_;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder getTimestampsOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getTimestampsOrBuilder() {
           return getTimestamps();
         }
 
         public static final int SAMPLES_FIELD_NUMBER = 3;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples samples_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload samples_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
          */
         public boolean hasSamples() {
           return samples_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getSamples() {
-          return samples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : samples_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getSamples() {
+          return samples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : samples_;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getSamplesOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getSamplesOrBuilder() {
           return getSamples();
         }
 
@@ -17093,29 +17093,29 @@ public final class RedvoxApi1000 {
             return this;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps timestamps_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload timestamps_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder> timestampsBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> timestampsBuilder_;
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
           public boolean hasTimestamps() {
             return timestampsBuilder_ != null || timestamps_ != null;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getTimestamps() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getTimestamps() {
             if (timestampsBuilder_ == null) {
-              return timestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.getDefaultInstance() : timestamps_;
+              return timestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : timestamps_;
             } else {
               return timestampsBuilder_.getMessage();
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public Builder setTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps value) {
+          public Builder setTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (timestampsBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -17129,10 +17129,10 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
           public Builder setTimestamps(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (timestampsBuilder_ == null) {
               timestamps_ = builderForValue.build();
               onChanged();
@@ -17143,13 +17143,13 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public Builder mergeTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps value) {
+          public Builder mergeTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (timestampsBuilder_ == null) {
               if (timestamps_ != null) {
                 timestamps_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.newBuilder(timestamps_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(timestamps_).mergeFrom(value).buildPartial();
               } else {
                 timestamps_ = value;
               }
@@ -17161,7 +17161,7 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
           public Builder clearTimestamps() {
             if (timestampsBuilder_ == null) {
@@ -17175,33 +17175,33 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder getTimestampsBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getTimestampsBuilder() {
             
             onChanged();
             return getTimestampsFieldBuilder().getBuilder();
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder getTimestampsOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getTimestampsOrBuilder() {
             if (timestampsBuilder_ != null) {
               return timestampsBuilder_.getMessageOrBuilder();
             } else {
               return timestamps_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.getDefaultInstance() : timestamps_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : timestamps_;
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getTimestampsFieldBuilder() {
             if (timestampsBuilder_ == null) {
               timestampsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getTimestamps(),
                       getParentForChildren(),
                       isClean());
@@ -17210,29 +17210,29 @@ public final class RedvoxApi1000 {
             return timestampsBuilder_;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples samples_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload samples_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> samplesBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> samplesBuilder_;
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
            */
           public boolean hasSamples() {
             return samplesBuilder_ != null || samples_ != null;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getSamples() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getSamples() {
             if (samplesBuilder_ == null) {
-              return samples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : samples_;
+              return samples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : samples_;
             } else {
               return samplesBuilder_.getMessage();
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
            */
-          public Builder setSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder setSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (samplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -17246,10 +17246,10 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
            */
           public Builder setSamples(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (samplesBuilder_ == null) {
               samples_ = builderForValue.build();
               onChanged();
@@ -17260,13 +17260,13 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
            */
-          public Builder mergeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder mergeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (samplesBuilder_ == null) {
               if (samples_ != null) {
                 samples_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(samples_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(samples_).mergeFrom(value).buildPartial();
               } else {
                 samples_ = value;
               }
@@ -17278,7 +17278,7 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
            */
           public Builder clearSamples() {
             if (samplesBuilder_ == null) {
@@ -17292,33 +17292,33 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getSamplesBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getSamplesBuilder() {
             
             onChanged();
             return getSamplesFieldBuilder().getBuilder();
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getSamplesOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getSamplesOrBuilder() {
             if (samplesBuilder_ != null) {
               return samplesBuilder_.getMessageOrBuilder();
             } else {
               return samples_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : samples_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : samples_;
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload samples = 3;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getSamplesFieldBuilder() {
             if (samplesBuilder_ == null) {
               samplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getSamples(),
                       getParentForChildren(),
                       isClean());
@@ -17553,24 +17553,24 @@ public final class RedvoxApi1000 {
             getSensorDescriptionBytes();
 
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
         boolean hasTimestamps();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getTimestamps();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getTimestamps();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder getTimestampsOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getTimestampsOrBuilder();
 
         /**
          * <pre>
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
          */
         boolean hasLatitudeSamples();
         /**
@@ -17578,24 +17578,24 @@ public final class RedvoxApi1000 {
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getLatitudeSamples();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getLatitudeSamples();
         /**
          * <pre>
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getLatitudeSamplesOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getLatitudeSamplesOrBuilder();
 
         /**
          * <pre>
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
          */
         boolean hasLongitudeSamples();
         /**
@@ -17603,24 +17603,24 @@ public final class RedvoxApi1000 {
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getLongitudeSamples();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getLongitudeSamples();
         /**
          * <pre>
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getLongitudeSamplesOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getLongitudeSamplesOrBuilder();
 
         /**
          * <pre>
          * A list of altitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
          */
         boolean hasAltitudeSamples();
         /**
@@ -17628,24 +17628,24 @@ public final class RedvoxApi1000 {
          * A list of altitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getAltitudeSamples();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getAltitudeSamples();
         /**
          * <pre>
          * A list of altitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getAltitudeSamplesOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getAltitudeSamplesOrBuilder();
 
         /**
          * <pre>
          * A list of speed samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
          */
         boolean hasSpeedSamples();
         /**
@@ -17653,37 +17653,37 @@ public final class RedvoxApi1000 {
          * A list of speed samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getSpeedSamples();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getSpeedSamples();
         /**
          * <pre>
          * A list of speed samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getSpeedSamplesOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getSpeedSamplesOrBuilder();
 
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
          */
         boolean hasBearingSamples();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getBearingSamples();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getBearingSamples();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getBearingSamplesOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getBearingSamplesOrBuilder();
 
         /**
          * <pre>
          * A list of accuracy samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
          */
         boolean hasHorizontalAccuracySamples();
         /**
@@ -17691,56 +17691,56 @@ public final class RedvoxApi1000 {
          * A list of accuracy samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getHorizontalAccuracySamples();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getHorizontalAccuracySamples();
         /**
          * <pre>
          * A list of accuracy samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getHorizontalAccuracySamplesOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getHorizontalAccuracySamplesOrBuilder();
 
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
          */
         boolean hasVerticalAccuracySamples();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getVerticalAccuracySamples();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getVerticalAccuracySamples();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getVerticalAccuracySamplesOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getVerticalAccuracySamplesOrBuilder();
 
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
          */
         boolean hasSpeedAccuracySamples();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getSpeedAccuracySamples();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getSpeedAccuracySamples();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getSpeedAccuracySamplesOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getSpeedAccuracySamplesOrBuilder();
 
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
          */
         boolean hasBearingAccuracySamples();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getBearingAccuracySamples();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getBearingAccuracySamples();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getBearingAccuracySamplesOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getBearingAccuracySamplesOrBuilder();
 
         /**
          * <pre>
@@ -17891,11 +17891,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 18: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (timestamps_ != null) {
                     subBuilder = timestamps_.toBuilder();
                   }
-                  timestamps_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.parser(), extensionRegistry);
+                  timestamps_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(timestamps_);
                     timestamps_ = subBuilder.buildPartial();
@@ -17904,11 +17904,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 26: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (latitudeSamples_ != null) {
                     subBuilder = latitudeSamples_.toBuilder();
                   }
-                  latitudeSamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                  latitudeSamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(latitudeSamples_);
                     latitudeSamples_ = subBuilder.buildPartial();
@@ -17917,11 +17917,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 34: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (longitudeSamples_ != null) {
                     subBuilder = longitudeSamples_.toBuilder();
                   }
-                  longitudeSamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                  longitudeSamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(longitudeSamples_);
                     longitudeSamples_ = subBuilder.buildPartial();
@@ -17930,11 +17930,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 42: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (altitudeSamples_ != null) {
                     subBuilder = altitudeSamples_.toBuilder();
                   }
-                  altitudeSamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                  altitudeSamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(altitudeSamples_);
                     altitudeSamples_ = subBuilder.buildPartial();
@@ -17943,11 +17943,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 50: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (speedSamples_ != null) {
                     subBuilder = speedSamples_.toBuilder();
                   }
-                  speedSamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                  speedSamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(speedSamples_);
                     speedSamples_ = subBuilder.buildPartial();
@@ -17956,11 +17956,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 58: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (bearingSamples_ != null) {
                     subBuilder = bearingSamples_.toBuilder();
                   }
-                  bearingSamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                  bearingSamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(bearingSamples_);
                     bearingSamples_ = subBuilder.buildPartial();
@@ -17969,11 +17969,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 66: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (horizontalAccuracySamples_ != null) {
                     subBuilder = horizontalAccuracySamples_.toBuilder();
                   }
-                  horizontalAccuracySamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                  horizontalAccuracySamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(horizontalAccuracySamples_);
                     horizontalAccuracySamples_ = subBuilder.buildPartial();
@@ -17982,11 +17982,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 74: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (verticalAccuracySamples_ != null) {
                     subBuilder = verticalAccuracySamples_.toBuilder();
                   }
-                  verticalAccuracySamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                  verticalAccuracySamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(verticalAccuracySamples_);
                     verticalAccuracySamples_ = subBuilder.buildPartial();
@@ -17995,11 +17995,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 82: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (speedAccuracySamples_ != null) {
                     subBuilder = speedAccuracySamples_.toBuilder();
                   }
-                  speedAccuracySamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                  speedAccuracySamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(speedAccuracySamples_);
                     speedAccuracySamples_ = subBuilder.buildPartial();
@@ -18008,11 +18008,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 90: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (bearingAccuracySamples_ != null) {
                     subBuilder = bearingAccuracySamples_.toBuilder();
                   }
-                  bearingAccuracySamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                  bearingAccuracySamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(bearingAccuracySamples_);
                     bearingAccuracySamples_ = subBuilder.buildPartial();
@@ -18258,34 +18258,34 @@ public final class RedvoxApi1000 {
         }
 
         public static final int TIMESTAMPS_FIELD_NUMBER = 2;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps timestamps_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload timestamps_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
         public boolean hasTimestamps() {
           return timestamps_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getTimestamps() {
-          return timestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.getDefaultInstance() : timestamps_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getTimestamps() {
+          return timestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : timestamps_;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder getTimestampsOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getTimestampsOrBuilder() {
           return getTimestamps();
         }
 
         public static final int LATITUDE_SAMPLES_FIELD_NUMBER = 3;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples latitudeSamples_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload latitudeSamples_;
         /**
          * <pre>
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
          */
         public boolean hasLatitudeSamples() {
           return latitudeSamples_ != null;
@@ -18295,30 +18295,30 @@ public final class RedvoxApi1000 {
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getLatitudeSamples() {
-          return latitudeSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : latitudeSamples_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getLatitudeSamples() {
+          return latitudeSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : latitudeSamples_;
         }
         /**
          * <pre>
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getLatitudeSamplesOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getLatitudeSamplesOrBuilder() {
           return getLatitudeSamples();
         }
 
         public static final int LONGITUDE_SAMPLES_FIELD_NUMBER = 4;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples longitudeSamples_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload longitudeSamples_;
         /**
          * <pre>
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
          */
         public boolean hasLongitudeSamples() {
           return longitudeSamples_ != null;
@@ -18328,30 +18328,30 @@ public final class RedvoxApi1000 {
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getLongitudeSamples() {
-          return longitudeSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : longitudeSamples_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getLongitudeSamples() {
+          return longitudeSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : longitudeSamples_;
         }
         /**
          * <pre>
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getLongitudeSamplesOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getLongitudeSamplesOrBuilder() {
           return getLongitudeSamples();
         }
 
         public static final int ALTITUDE_SAMPLES_FIELD_NUMBER = 5;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples altitudeSamples_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload altitudeSamples_;
         /**
          * <pre>
          * A list of altitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
          */
         public boolean hasAltitudeSamples() {
           return altitudeSamples_ != null;
@@ -18361,30 +18361,30 @@ public final class RedvoxApi1000 {
          * A list of altitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getAltitudeSamples() {
-          return altitudeSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : altitudeSamples_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getAltitudeSamples() {
+          return altitudeSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : altitudeSamples_;
         }
         /**
          * <pre>
          * A list of altitude samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getAltitudeSamplesOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getAltitudeSamplesOrBuilder() {
           return getAltitudeSamples();
         }
 
         public static final int SPEED_SAMPLES_FIELD_NUMBER = 6;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples speedSamples_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload speedSamples_;
         /**
          * <pre>
          * A list of speed samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
          */
         public boolean hasSpeedSamples() {
           return speedSamples_ != null;
@@ -18394,51 +18394,51 @@ public final class RedvoxApi1000 {
          * A list of speed samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getSpeedSamples() {
-          return speedSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : speedSamples_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getSpeedSamples() {
+          return speedSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : speedSamples_;
         }
         /**
          * <pre>
          * A list of speed samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getSpeedSamplesOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getSpeedSamplesOrBuilder() {
           return getSpeedSamples();
         }
 
         public static final int BEARING_SAMPLES_FIELD_NUMBER = 7;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples bearingSamples_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload bearingSamples_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
          */
         public boolean hasBearingSamples() {
           return bearingSamples_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getBearingSamples() {
-          return bearingSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : bearingSamples_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getBearingSamples() {
+          return bearingSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : bearingSamples_;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getBearingSamplesOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getBearingSamplesOrBuilder() {
           return getBearingSamples();
         }
 
         public static final int HORIZONTAL_ACCURACY_SAMPLES_FIELD_NUMBER = 8;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples horizontalAccuracySamples_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload horizontalAccuracySamples_;
         /**
          * <pre>
          * A list of accuracy samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
          */
         public boolean hasHorizontalAccuracySamples() {
           return horizontalAccuracySamples_ != null;
@@ -18448,82 +18448,82 @@ public final class RedvoxApi1000 {
          * A list of accuracy samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getHorizontalAccuracySamples() {
-          return horizontalAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : horizontalAccuracySamples_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getHorizontalAccuracySamples() {
+          return horizontalAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : horizontalAccuracySamples_;
         }
         /**
          * <pre>
          * A list of accuracy samples
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getHorizontalAccuracySamplesOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getHorizontalAccuracySamplesOrBuilder() {
           return getHorizontalAccuracySamples();
         }
 
         public static final int VERTICAL_ACCURACY_SAMPLES_FIELD_NUMBER = 9;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples verticalAccuracySamples_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload verticalAccuracySamples_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
          */
         public boolean hasVerticalAccuracySamples() {
           return verticalAccuracySamples_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getVerticalAccuracySamples() {
-          return verticalAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : verticalAccuracySamples_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getVerticalAccuracySamples() {
+          return verticalAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : verticalAccuracySamples_;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getVerticalAccuracySamplesOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getVerticalAccuracySamplesOrBuilder() {
           return getVerticalAccuracySamples();
         }
 
         public static final int SPEED_ACCURACY_SAMPLES_FIELD_NUMBER = 10;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples speedAccuracySamples_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload speedAccuracySamples_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
          */
         public boolean hasSpeedAccuracySamples() {
           return speedAccuracySamples_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getSpeedAccuracySamples() {
-          return speedAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : speedAccuracySamples_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getSpeedAccuracySamples() {
+          return speedAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : speedAccuracySamples_;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getSpeedAccuracySamplesOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getSpeedAccuracySamplesOrBuilder() {
           return getSpeedAccuracySamples();
         }
 
         public static final int BEARING_ACCURACY_SAMPLES_FIELD_NUMBER = 11;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples bearingAccuracySamples_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload bearingAccuracySamples_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
          */
         public boolean hasBearingAccuracySamples() {
           return bearingAccuracySamples_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getBearingAccuracySamples() {
-          return bearingAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : bearingAccuracySamples_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getBearingAccuracySamples() {
+          return bearingAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : bearingAccuracySamples_;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getBearingAccuracySamplesOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getBearingAccuracySamplesOrBuilder() {
           return getBearingAccuracySamples();
         }
 
@@ -19498,29 +19498,29 @@ public final class RedvoxApi1000 {
             return this;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps timestamps_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload timestamps_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder> timestampsBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> timestampsBuilder_;
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
           public boolean hasTimestamps() {
             return timestampsBuilder_ != null || timestamps_ != null;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getTimestamps() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getTimestamps() {
             if (timestampsBuilder_ == null) {
-              return timestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.getDefaultInstance() : timestamps_;
+              return timestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : timestamps_;
             } else {
               return timestampsBuilder_.getMessage();
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public Builder setTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps value) {
+          public Builder setTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (timestampsBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -19534,10 +19534,10 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
           public Builder setTimestamps(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (timestampsBuilder_ == null) {
               timestamps_ = builderForValue.build();
               onChanged();
@@ -19548,13 +19548,13 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public Builder mergeTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps value) {
+          public Builder mergeTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (timestampsBuilder_ == null) {
               if (timestamps_ != null) {
                 timestamps_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.newBuilder(timestamps_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(timestamps_).mergeFrom(value).buildPartial();
               } else {
                 timestamps_ = value;
               }
@@ -19566,7 +19566,7 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
           public Builder clearTimestamps() {
             if (timestampsBuilder_ == null) {
@@ -19580,33 +19580,33 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder getTimestampsBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getTimestampsBuilder() {
             
             onChanged();
             return getTimestampsFieldBuilder().getBuilder();
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder getTimestampsOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getTimestampsOrBuilder() {
             if (timestampsBuilder_ != null) {
               return timestampsBuilder_.getMessageOrBuilder();
             } else {
               return timestamps_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.getDefaultInstance() : timestamps_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : timestamps_;
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getTimestampsFieldBuilder() {
             if (timestampsBuilder_ == null) {
               timestampsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getTimestamps(),
                       getParentForChildren(),
                       isClean());
@@ -19615,15 +19615,15 @@ public final class RedvoxApi1000 {
             return timestampsBuilder_;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples latitudeSamples_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload latitudeSamples_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> latitudeSamplesBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> latitudeSamplesBuilder_;
           /**
            * <pre>
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
            */
           public boolean hasLatitudeSamples() {
             return latitudeSamplesBuilder_ != null || latitudeSamples_ != null;
@@ -19633,11 +19633,11 @@ public final class RedvoxApi1000 {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getLatitudeSamples() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getLatitudeSamples() {
             if (latitudeSamplesBuilder_ == null) {
-              return latitudeSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : latitudeSamples_;
+              return latitudeSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : latitudeSamples_;
             } else {
               return latitudeSamplesBuilder_.getMessage();
             }
@@ -19647,9 +19647,9 @@ public final class RedvoxApi1000 {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
            */
-          public Builder setLatitudeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder setLatitudeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (latitudeSamplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -19667,10 +19667,10 @@ public final class RedvoxApi1000 {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
            */
           public Builder setLatitudeSamples(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (latitudeSamplesBuilder_ == null) {
               latitudeSamples_ = builderForValue.build();
               onChanged();
@@ -19685,13 +19685,13 @@ public final class RedvoxApi1000 {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
            */
-          public Builder mergeLatitudeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder mergeLatitudeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (latitudeSamplesBuilder_ == null) {
               if (latitudeSamples_ != null) {
                 latitudeSamples_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(latitudeSamples_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(latitudeSamples_).mergeFrom(value).buildPartial();
               } else {
                 latitudeSamples_ = value;
               }
@@ -19707,7 +19707,7 @@ public final class RedvoxApi1000 {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
            */
           public Builder clearLatitudeSamples() {
             if (latitudeSamplesBuilder_ == null) {
@@ -19725,9 +19725,9 @@ public final class RedvoxApi1000 {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getLatitudeSamplesBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getLatitudeSamplesBuilder() {
             
             onChanged();
             return getLatitudeSamplesFieldBuilder().getBuilder();
@@ -19737,14 +19737,14 @@ public final class RedvoxApi1000 {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getLatitudeSamplesOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getLatitudeSamplesOrBuilder() {
             if (latitudeSamplesBuilder_ != null) {
               return latitudeSamplesBuilder_.getMessageOrBuilder();
             } else {
               return latitudeSamples_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : latitudeSamples_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : latitudeSamples_;
             }
           }
           /**
@@ -19752,14 +19752,14 @@ public final class RedvoxApi1000 {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples latitude_samples = 3;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload latitude_samples = 3;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getLatitudeSamplesFieldBuilder() {
             if (latitudeSamplesBuilder_ == null) {
               latitudeSamplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getLatitudeSamples(),
                       getParentForChildren(),
                       isClean());
@@ -19768,15 +19768,15 @@ public final class RedvoxApi1000 {
             return latitudeSamplesBuilder_;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples longitudeSamples_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload longitudeSamples_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> longitudeSamplesBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> longitudeSamplesBuilder_;
           /**
            * <pre>
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
            */
           public boolean hasLongitudeSamples() {
             return longitudeSamplesBuilder_ != null || longitudeSamples_ != null;
@@ -19786,11 +19786,11 @@ public final class RedvoxApi1000 {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getLongitudeSamples() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getLongitudeSamples() {
             if (longitudeSamplesBuilder_ == null) {
-              return longitudeSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : longitudeSamples_;
+              return longitudeSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : longitudeSamples_;
             } else {
               return longitudeSamplesBuilder_.getMessage();
             }
@@ -19800,9 +19800,9 @@ public final class RedvoxApi1000 {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
            */
-          public Builder setLongitudeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder setLongitudeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (longitudeSamplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -19820,10 +19820,10 @@ public final class RedvoxApi1000 {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
            */
           public Builder setLongitudeSamples(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (longitudeSamplesBuilder_ == null) {
               longitudeSamples_ = builderForValue.build();
               onChanged();
@@ -19838,13 +19838,13 @@ public final class RedvoxApi1000 {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
            */
-          public Builder mergeLongitudeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder mergeLongitudeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (longitudeSamplesBuilder_ == null) {
               if (longitudeSamples_ != null) {
                 longitudeSamples_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(longitudeSamples_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(longitudeSamples_).mergeFrom(value).buildPartial();
               } else {
                 longitudeSamples_ = value;
               }
@@ -19860,7 +19860,7 @@ public final class RedvoxApi1000 {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
            */
           public Builder clearLongitudeSamples() {
             if (longitudeSamplesBuilder_ == null) {
@@ -19878,9 +19878,9 @@ public final class RedvoxApi1000 {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getLongitudeSamplesBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getLongitudeSamplesBuilder() {
             
             onChanged();
             return getLongitudeSamplesFieldBuilder().getBuilder();
@@ -19890,14 +19890,14 @@ public final class RedvoxApi1000 {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getLongitudeSamplesOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getLongitudeSamplesOrBuilder() {
             if (longitudeSamplesBuilder_ != null) {
               return longitudeSamplesBuilder_.getMessageOrBuilder();
             } else {
               return longitudeSamples_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : longitudeSamples_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : longitudeSamples_;
             }
           }
           /**
@@ -19905,14 +19905,14 @@ public final class RedvoxApi1000 {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples longitude_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload longitude_samples = 4;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getLongitudeSamplesFieldBuilder() {
             if (longitudeSamplesBuilder_ == null) {
               longitudeSamplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getLongitudeSamples(),
                       getParentForChildren(),
                       isClean());
@@ -19921,15 +19921,15 @@ public final class RedvoxApi1000 {
             return longitudeSamplesBuilder_;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples altitudeSamples_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload altitudeSamples_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> altitudeSamplesBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> altitudeSamplesBuilder_;
           /**
            * <pre>
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
            */
           public boolean hasAltitudeSamples() {
             return altitudeSamplesBuilder_ != null || altitudeSamples_ != null;
@@ -19939,11 +19939,11 @@ public final class RedvoxApi1000 {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getAltitudeSamples() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getAltitudeSamples() {
             if (altitudeSamplesBuilder_ == null) {
-              return altitudeSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : altitudeSamples_;
+              return altitudeSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : altitudeSamples_;
             } else {
               return altitudeSamplesBuilder_.getMessage();
             }
@@ -19953,9 +19953,9 @@ public final class RedvoxApi1000 {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
            */
-          public Builder setAltitudeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder setAltitudeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (altitudeSamplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -19973,10 +19973,10 @@ public final class RedvoxApi1000 {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
            */
           public Builder setAltitudeSamples(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (altitudeSamplesBuilder_ == null) {
               altitudeSamples_ = builderForValue.build();
               onChanged();
@@ -19991,13 +19991,13 @@ public final class RedvoxApi1000 {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
            */
-          public Builder mergeAltitudeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder mergeAltitudeSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (altitudeSamplesBuilder_ == null) {
               if (altitudeSamples_ != null) {
                 altitudeSamples_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(altitudeSamples_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(altitudeSamples_).mergeFrom(value).buildPartial();
               } else {
                 altitudeSamples_ = value;
               }
@@ -20013,7 +20013,7 @@ public final class RedvoxApi1000 {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
            */
           public Builder clearAltitudeSamples() {
             if (altitudeSamplesBuilder_ == null) {
@@ -20031,9 +20031,9 @@ public final class RedvoxApi1000 {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getAltitudeSamplesBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getAltitudeSamplesBuilder() {
             
             onChanged();
             return getAltitudeSamplesFieldBuilder().getBuilder();
@@ -20043,14 +20043,14 @@ public final class RedvoxApi1000 {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getAltitudeSamplesOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getAltitudeSamplesOrBuilder() {
             if (altitudeSamplesBuilder_ != null) {
               return altitudeSamplesBuilder_.getMessageOrBuilder();
             } else {
               return altitudeSamples_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : altitudeSamples_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : altitudeSamples_;
             }
           }
           /**
@@ -20058,14 +20058,14 @@ public final class RedvoxApi1000 {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples altitude_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload altitude_samples = 5;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getAltitudeSamplesFieldBuilder() {
             if (altitudeSamplesBuilder_ == null) {
               altitudeSamplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getAltitudeSamples(),
                       getParentForChildren(),
                       isClean());
@@ -20074,15 +20074,15 @@ public final class RedvoxApi1000 {
             return altitudeSamplesBuilder_;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples speedSamples_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload speedSamples_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> speedSamplesBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> speedSamplesBuilder_;
           /**
            * <pre>
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
            */
           public boolean hasSpeedSamples() {
             return speedSamplesBuilder_ != null || speedSamples_ != null;
@@ -20092,11 +20092,11 @@ public final class RedvoxApi1000 {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getSpeedSamples() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getSpeedSamples() {
             if (speedSamplesBuilder_ == null) {
-              return speedSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : speedSamples_;
+              return speedSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : speedSamples_;
             } else {
               return speedSamplesBuilder_.getMessage();
             }
@@ -20106,9 +20106,9 @@ public final class RedvoxApi1000 {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
            */
-          public Builder setSpeedSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder setSpeedSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (speedSamplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -20126,10 +20126,10 @@ public final class RedvoxApi1000 {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
            */
           public Builder setSpeedSamples(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (speedSamplesBuilder_ == null) {
               speedSamples_ = builderForValue.build();
               onChanged();
@@ -20144,13 +20144,13 @@ public final class RedvoxApi1000 {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
            */
-          public Builder mergeSpeedSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder mergeSpeedSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (speedSamplesBuilder_ == null) {
               if (speedSamples_ != null) {
                 speedSamples_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(speedSamples_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(speedSamples_).mergeFrom(value).buildPartial();
               } else {
                 speedSamples_ = value;
               }
@@ -20166,7 +20166,7 @@ public final class RedvoxApi1000 {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
            */
           public Builder clearSpeedSamples() {
             if (speedSamplesBuilder_ == null) {
@@ -20184,9 +20184,9 @@ public final class RedvoxApi1000 {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getSpeedSamplesBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getSpeedSamplesBuilder() {
             
             onChanged();
             return getSpeedSamplesFieldBuilder().getBuilder();
@@ -20196,14 +20196,14 @@ public final class RedvoxApi1000 {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getSpeedSamplesOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getSpeedSamplesOrBuilder() {
             if (speedSamplesBuilder_ != null) {
               return speedSamplesBuilder_.getMessageOrBuilder();
             } else {
               return speedSamples_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : speedSamples_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : speedSamples_;
             }
           }
           /**
@@ -20211,14 +20211,14 @@ public final class RedvoxApi1000 {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_samples = 6;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getSpeedSamplesFieldBuilder() {
             if (speedSamplesBuilder_ == null) {
               speedSamplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getSpeedSamples(),
                       getParentForChildren(),
                       isClean());
@@ -20227,29 +20227,29 @@ public final class RedvoxApi1000 {
             return speedSamplesBuilder_;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples bearingSamples_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload bearingSamples_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> bearingSamplesBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> bearingSamplesBuilder_;
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
            */
           public boolean hasBearingSamples() {
             return bearingSamplesBuilder_ != null || bearingSamples_ != null;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getBearingSamples() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getBearingSamples() {
             if (bearingSamplesBuilder_ == null) {
-              return bearingSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : bearingSamples_;
+              return bearingSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : bearingSamples_;
             } else {
               return bearingSamplesBuilder_.getMessage();
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
            */
-          public Builder setBearingSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder setBearingSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (bearingSamplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -20263,10 +20263,10 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
            */
           public Builder setBearingSamples(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (bearingSamplesBuilder_ == null) {
               bearingSamples_ = builderForValue.build();
               onChanged();
@@ -20277,13 +20277,13 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
            */
-          public Builder mergeBearingSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder mergeBearingSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (bearingSamplesBuilder_ == null) {
               if (bearingSamples_ != null) {
                 bearingSamples_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(bearingSamples_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(bearingSamples_).mergeFrom(value).buildPartial();
               } else {
                 bearingSamples_ = value;
               }
@@ -20295,7 +20295,7 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
            */
           public Builder clearBearingSamples() {
             if (bearingSamplesBuilder_ == null) {
@@ -20309,33 +20309,33 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getBearingSamplesBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getBearingSamplesBuilder() {
             
             onChanged();
             return getBearingSamplesFieldBuilder().getBuilder();
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getBearingSamplesOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getBearingSamplesOrBuilder() {
             if (bearingSamplesBuilder_ != null) {
               return bearingSamplesBuilder_.getMessageOrBuilder();
             } else {
               return bearingSamples_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : bearingSamples_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : bearingSamples_;
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_samples = 7;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_samples = 7;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getBearingSamplesFieldBuilder() {
             if (bearingSamplesBuilder_ == null) {
               bearingSamplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getBearingSamples(),
                       getParentForChildren(),
                       isClean());
@@ -20344,15 +20344,15 @@ public final class RedvoxApi1000 {
             return bearingSamplesBuilder_;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples horizontalAccuracySamples_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload horizontalAccuracySamples_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> horizontalAccuracySamplesBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> horizontalAccuracySamplesBuilder_;
           /**
            * <pre>
            * A list of accuracy samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
            */
           public boolean hasHorizontalAccuracySamples() {
             return horizontalAccuracySamplesBuilder_ != null || horizontalAccuracySamples_ != null;
@@ -20362,11 +20362,11 @@ public final class RedvoxApi1000 {
            * A list of accuracy samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getHorizontalAccuracySamples() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getHorizontalAccuracySamples() {
             if (horizontalAccuracySamplesBuilder_ == null) {
-              return horizontalAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : horizontalAccuracySamples_;
+              return horizontalAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : horizontalAccuracySamples_;
             } else {
               return horizontalAccuracySamplesBuilder_.getMessage();
             }
@@ -20376,9 +20376,9 @@ public final class RedvoxApi1000 {
            * A list of accuracy samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
            */
-          public Builder setHorizontalAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder setHorizontalAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (horizontalAccuracySamplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -20396,10 +20396,10 @@ public final class RedvoxApi1000 {
            * A list of accuracy samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
            */
           public Builder setHorizontalAccuracySamples(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (horizontalAccuracySamplesBuilder_ == null) {
               horizontalAccuracySamples_ = builderForValue.build();
               onChanged();
@@ -20414,13 +20414,13 @@ public final class RedvoxApi1000 {
            * A list of accuracy samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
            */
-          public Builder mergeHorizontalAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder mergeHorizontalAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (horizontalAccuracySamplesBuilder_ == null) {
               if (horizontalAccuracySamples_ != null) {
                 horizontalAccuracySamples_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(horizontalAccuracySamples_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(horizontalAccuracySamples_).mergeFrom(value).buildPartial();
               } else {
                 horizontalAccuracySamples_ = value;
               }
@@ -20436,7 +20436,7 @@ public final class RedvoxApi1000 {
            * A list of accuracy samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
            */
           public Builder clearHorizontalAccuracySamples() {
             if (horizontalAccuracySamplesBuilder_ == null) {
@@ -20454,9 +20454,9 @@ public final class RedvoxApi1000 {
            * A list of accuracy samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getHorizontalAccuracySamplesBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getHorizontalAccuracySamplesBuilder() {
             
             onChanged();
             return getHorizontalAccuracySamplesFieldBuilder().getBuilder();
@@ -20466,14 +20466,14 @@ public final class RedvoxApi1000 {
            * A list of accuracy samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getHorizontalAccuracySamplesOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getHorizontalAccuracySamplesOrBuilder() {
             if (horizontalAccuracySamplesBuilder_ != null) {
               return horizontalAccuracySamplesBuilder_.getMessageOrBuilder();
             } else {
               return horizontalAccuracySamples_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : horizontalAccuracySamples_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : horizontalAccuracySamples_;
             }
           }
           /**
@@ -20481,14 +20481,14 @@ public final class RedvoxApi1000 {
            * A list of accuracy samples
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload horizontal_accuracy_samples = 8;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getHorizontalAccuracySamplesFieldBuilder() {
             if (horizontalAccuracySamplesBuilder_ == null) {
               horizontalAccuracySamplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getHorizontalAccuracySamples(),
                       getParentForChildren(),
                       isClean());
@@ -20497,29 +20497,29 @@ public final class RedvoxApi1000 {
             return horizontalAccuracySamplesBuilder_;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples verticalAccuracySamples_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload verticalAccuracySamples_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> verticalAccuracySamplesBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> verticalAccuracySamplesBuilder_;
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
            */
           public boolean hasVerticalAccuracySamples() {
             return verticalAccuracySamplesBuilder_ != null || verticalAccuracySamples_ != null;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getVerticalAccuracySamples() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getVerticalAccuracySamples() {
             if (verticalAccuracySamplesBuilder_ == null) {
-              return verticalAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : verticalAccuracySamples_;
+              return verticalAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : verticalAccuracySamples_;
             } else {
               return verticalAccuracySamplesBuilder_.getMessage();
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
            */
-          public Builder setVerticalAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder setVerticalAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (verticalAccuracySamplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -20533,10 +20533,10 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
            */
           public Builder setVerticalAccuracySamples(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (verticalAccuracySamplesBuilder_ == null) {
               verticalAccuracySamples_ = builderForValue.build();
               onChanged();
@@ -20547,13 +20547,13 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
            */
-          public Builder mergeVerticalAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder mergeVerticalAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (verticalAccuracySamplesBuilder_ == null) {
               if (verticalAccuracySamples_ != null) {
                 verticalAccuracySamples_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(verticalAccuracySamples_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(verticalAccuracySamples_).mergeFrom(value).buildPartial();
               } else {
                 verticalAccuracySamples_ = value;
               }
@@ -20565,7 +20565,7 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
            */
           public Builder clearVerticalAccuracySamples() {
             if (verticalAccuracySamplesBuilder_ == null) {
@@ -20579,33 +20579,33 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getVerticalAccuracySamplesBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getVerticalAccuracySamplesBuilder() {
             
             onChanged();
             return getVerticalAccuracySamplesFieldBuilder().getBuilder();
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getVerticalAccuracySamplesOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getVerticalAccuracySamplesOrBuilder() {
             if (verticalAccuracySamplesBuilder_ != null) {
               return verticalAccuracySamplesBuilder_.getMessageOrBuilder();
             } else {
               return verticalAccuracySamples_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : verticalAccuracySamples_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : verticalAccuracySamples_;
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload vertical_accuracy_samples = 9;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getVerticalAccuracySamplesFieldBuilder() {
             if (verticalAccuracySamplesBuilder_ == null) {
               verticalAccuracySamplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getVerticalAccuracySamples(),
                       getParentForChildren(),
                       isClean());
@@ -20614,29 +20614,29 @@ public final class RedvoxApi1000 {
             return verticalAccuracySamplesBuilder_;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples speedAccuracySamples_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload speedAccuracySamples_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> speedAccuracySamplesBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> speedAccuracySamplesBuilder_;
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
            */
           public boolean hasSpeedAccuracySamples() {
             return speedAccuracySamplesBuilder_ != null || speedAccuracySamples_ != null;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getSpeedAccuracySamples() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getSpeedAccuracySamples() {
             if (speedAccuracySamplesBuilder_ == null) {
-              return speedAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : speedAccuracySamples_;
+              return speedAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : speedAccuracySamples_;
             } else {
               return speedAccuracySamplesBuilder_.getMessage();
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
            */
-          public Builder setSpeedAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder setSpeedAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (speedAccuracySamplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -20650,10 +20650,10 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
            */
           public Builder setSpeedAccuracySamples(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (speedAccuracySamplesBuilder_ == null) {
               speedAccuracySamples_ = builderForValue.build();
               onChanged();
@@ -20664,13 +20664,13 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
            */
-          public Builder mergeSpeedAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder mergeSpeedAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (speedAccuracySamplesBuilder_ == null) {
               if (speedAccuracySamples_ != null) {
                 speedAccuracySamples_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(speedAccuracySamples_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(speedAccuracySamples_).mergeFrom(value).buildPartial();
               } else {
                 speedAccuracySamples_ = value;
               }
@@ -20682,7 +20682,7 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
            */
           public Builder clearSpeedAccuracySamples() {
             if (speedAccuracySamplesBuilder_ == null) {
@@ -20696,33 +20696,33 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getSpeedAccuracySamplesBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getSpeedAccuracySamplesBuilder() {
             
             onChanged();
             return getSpeedAccuracySamplesFieldBuilder().getBuilder();
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getSpeedAccuracySamplesOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getSpeedAccuracySamplesOrBuilder() {
             if (speedAccuracySamplesBuilder_ != null) {
               return speedAccuracySamplesBuilder_.getMessageOrBuilder();
             } else {
               return speedAccuracySamples_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : speedAccuracySamples_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : speedAccuracySamples_;
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload speed_accuracy_samples = 10;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getSpeedAccuracySamplesFieldBuilder() {
             if (speedAccuracySamplesBuilder_ == null) {
               speedAccuracySamplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getSpeedAccuracySamples(),
                       getParentForChildren(),
                       isClean());
@@ -20731,29 +20731,29 @@ public final class RedvoxApi1000 {
             return speedAccuracySamplesBuilder_;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples bearingAccuracySamples_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload bearingAccuracySamples_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> bearingAccuracySamplesBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> bearingAccuracySamplesBuilder_;
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
            */
           public boolean hasBearingAccuracySamples() {
             return bearingAccuracySamplesBuilder_ != null || bearingAccuracySamples_ != null;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getBearingAccuracySamples() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getBearingAccuracySamples() {
             if (bearingAccuracySamplesBuilder_ == null) {
-              return bearingAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : bearingAccuracySamples_;
+              return bearingAccuracySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : bearingAccuracySamples_;
             } else {
               return bearingAccuracySamplesBuilder_.getMessage();
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
            */
-          public Builder setBearingAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder setBearingAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (bearingAccuracySamplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -20767,10 +20767,10 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
            */
           public Builder setBearingAccuracySamples(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (bearingAccuracySamplesBuilder_ == null) {
               bearingAccuracySamples_ = builderForValue.build();
               onChanged();
@@ -20781,13 +20781,13 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
            */
-          public Builder mergeBearingAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder mergeBearingAccuracySamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (bearingAccuracySamplesBuilder_ == null) {
               if (bearingAccuracySamples_ != null) {
                 bearingAccuracySamples_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(bearingAccuracySamples_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(bearingAccuracySamples_).mergeFrom(value).buildPartial();
               } else {
                 bearingAccuracySamples_ = value;
               }
@@ -20799,7 +20799,7 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
            */
           public Builder clearBearingAccuracySamples() {
             if (bearingAccuracySamplesBuilder_ == null) {
@@ -20813,33 +20813,33 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getBearingAccuracySamplesBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getBearingAccuracySamplesBuilder() {
             
             onChanged();
             return getBearingAccuracySamplesFieldBuilder().getBuilder();
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getBearingAccuracySamplesOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getBearingAccuracySamplesOrBuilder() {
             if (bearingAccuracySamplesBuilder_ != null) {
               return bearingAccuracySamplesBuilder_.getMessageOrBuilder();
             } else {
               return bearingAccuracySamples_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : bearingAccuracySamples_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : bearingAccuracySamples_;
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload bearing_accuracy_samples = 11;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getBearingAccuracySamplesFieldBuilder() {
             if (bearingAccuracySamplesBuilder_ == null) {
               bearingAccuracySamplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getBearingAccuracySamples(),
                       getParentForChildren(),
                       isClean());
@@ -21253,24 +21253,24 @@ public final class RedvoxApi1000 {
             getSensorDescriptionBytes();
 
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
         boolean hasTimestamps();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getTimestamps();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getTimestamps();
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder getTimestampsOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getTimestampsOrBuilder();
 
         /**
          * <pre>
          * A list of samples for the X-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
          */
         boolean hasXSamples();
         /**
@@ -21278,24 +21278,24 @@ public final class RedvoxApi1000 {
          * A list of samples for the X-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getXSamples();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getXSamples();
         /**
          * <pre>
          * A list of samples for the X-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getXSamplesOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getXSamplesOrBuilder();
 
         /**
          * <pre>
          * A list of samples for the Y-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
          */
         boolean hasYSamples();
         /**
@@ -21303,24 +21303,24 @@ public final class RedvoxApi1000 {
          * A list of samples for the Y-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getYSamples();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getYSamples();
         /**
          * <pre>
          * A list of samples for the Y-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getYSamplesOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getYSamplesOrBuilder();
 
         /**
          * <pre>
          * A list of samples for the Z-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
          */
         boolean hasZSamples();
         /**
@@ -21328,17 +21328,17 @@ public final class RedvoxApi1000 {
          * A list of samples for the Z-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getZSamples();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getZSamples();
         /**
          * <pre>
          * A list of samples for the Z-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
          */
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getZSamplesOrBuilder();
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getZSamplesOrBuilder();
 
         /**
          * <pre>
@@ -21441,11 +21441,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 18: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (timestamps_ != null) {
                     subBuilder = timestamps_.toBuilder();
                   }
-                  timestamps_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.parser(), extensionRegistry);
+                  timestamps_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(timestamps_);
                     timestamps_ = subBuilder.buildPartial();
@@ -21454,11 +21454,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 34: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (xSamples_ != null) {
                     subBuilder = xSamples_.toBuilder();
                   }
-                  xSamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                  xSamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(xSamples_);
                     xSamples_ = subBuilder.buildPartial();
@@ -21467,11 +21467,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 42: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (ySamples_ != null) {
                     subBuilder = ySamples_.toBuilder();
                   }
-                  ySamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                  ySamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(ySamples_);
                     ySamples_ = subBuilder.buildPartial();
@@ -21480,11 +21480,11 @@ public final class RedvoxApi1000 {
                   break;
                 }
                 case 50: {
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder subBuilder = null;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder subBuilder = null;
                   if (zSamples_ != null) {
                     subBuilder = zSamples_.toBuilder();
                   }
-                  zSamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.parser(), extensionRegistry);
+                  zSamples_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(zSamples_);
                     zSamples_ = subBuilder.buildPartial();
@@ -21593,34 +21593,34 @@ public final class RedvoxApi1000 {
         }
 
         public static final int TIMESTAMPS_FIELD_NUMBER = 2;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps timestamps_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload timestamps_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
         public boolean hasTimestamps() {
           return timestamps_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getTimestamps() {
-          return timestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.getDefaultInstance() : timestamps_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getTimestamps() {
+          return timestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : timestamps_;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder getTimestampsOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getTimestampsOrBuilder() {
           return getTimestamps();
         }
 
         public static final int X_SAMPLES_FIELD_NUMBER = 4;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples xSamples_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload xSamples_;
         /**
          * <pre>
          * A list of samples for the X-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
          */
         public boolean hasXSamples() {
           return xSamples_ != null;
@@ -21630,30 +21630,30 @@ public final class RedvoxApi1000 {
          * A list of samples for the X-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getXSamples() {
-          return xSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : xSamples_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getXSamples() {
+          return xSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : xSamples_;
         }
         /**
          * <pre>
          * A list of samples for the X-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getXSamplesOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getXSamplesOrBuilder() {
           return getXSamples();
         }
 
         public static final int Y_SAMPLES_FIELD_NUMBER = 5;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples ySamples_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload ySamples_;
         /**
          * <pre>
          * A list of samples for the Y-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
          */
         public boolean hasYSamples() {
           return ySamples_ != null;
@@ -21663,30 +21663,30 @@ public final class RedvoxApi1000 {
          * A list of samples for the Y-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getYSamples() {
-          return ySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : ySamples_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getYSamples() {
+          return ySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : ySamples_;
         }
         /**
          * <pre>
          * A list of samples for the Y-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getYSamplesOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getYSamplesOrBuilder() {
           return getYSamples();
         }
 
         public static final int Z_SAMPLES_FIELD_NUMBER = 6;
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples zSamples_;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload zSamples_;
         /**
          * <pre>
          * A list of samples for the Z-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
          */
         public boolean hasZSamples() {
           return zSamples_ != null;
@@ -21696,19 +21696,19 @@ public final class RedvoxApi1000 {
          * A list of samples for the Z-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getZSamples() {
-          return zSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : zSamples_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getZSamples() {
+          return zSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : zSamples_;
         }
         /**
          * <pre>
          * A list of samples for the Z-channel
          * </pre>
          *
-         * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getZSamplesOrBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getZSamplesOrBuilder() {
           return getZSamples();
         }
 
@@ -22369,29 +22369,29 @@ public final class RedvoxApi1000 {
             return this;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps timestamps_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload timestamps_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder> timestampsBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> timestampsBuilder_;
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
           public boolean hasTimestamps() {
             return timestampsBuilder_ != null || timestamps_ != null;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getTimestamps() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getTimestamps() {
             if (timestampsBuilder_ == null) {
-              return timestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.getDefaultInstance() : timestamps_;
+              return timestamps_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : timestamps_;
             } else {
               return timestampsBuilder_.getMessage();
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public Builder setTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps value) {
+          public Builder setTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (timestampsBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -22405,10 +22405,10 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
           public Builder setTimestamps(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (timestampsBuilder_ == null) {
               timestamps_ = builderForValue.build();
               onChanged();
@@ -22419,13 +22419,13 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public Builder mergeTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps value) {
+          public Builder mergeTimestamps(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (timestampsBuilder_ == null) {
               if (timestamps_ != null) {
                 timestamps_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.newBuilder(timestamps_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(timestamps_).mergeFrom(value).buildPartial();
               } else {
                 timestamps_ = value;
               }
@@ -22437,7 +22437,7 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
           public Builder clearTimestamps() {
             if (timestampsBuilder_ == null) {
@@ -22451,33 +22451,33 @@ public final class RedvoxApi1000 {
             return this;
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder getTimestampsBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getTimestampsBuilder() {
             
             onChanged();
             return getTimestampsFieldBuilder().getBuilder();
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder getTimestampsOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getTimestampsOrBuilder() {
             if (timestampsBuilder_ != null) {
               return timestampsBuilder_.getMessageOrBuilder();
             } else {
               return timestamps_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.getDefaultInstance() : timestamps_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : timestamps_;
             }
           }
           /**
-           * <code>.redvox_api1000.RedvoxPacket1000.Timestamps timestamps = 2;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload timestamps = 2;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getTimestampsFieldBuilder() {
             if (timestampsBuilder_ == null) {
               timestampsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getTimestamps(),
                       getParentForChildren(),
                       isClean());
@@ -22486,15 +22486,15 @@ public final class RedvoxApi1000 {
             return timestampsBuilder_;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples xSamples_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload xSamples_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> xSamplesBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> xSamplesBuilder_;
           /**
            * <pre>
            * A list of samples for the X-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
            */
           public boolean hasXSamples() {
             return xSamplesBuilder_ != null || xSamples_ != null;
@@ -22504,11 +22504,11 @@ public final class RedvoxApi1000 {
            * A list of samples for the X-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getXSamples() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getXSamples() {
             if (xSamplesBuilder_ == null) {
-              return xSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : xSamples_;
+              return xSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : xSamples_;
             } else {
               return xSamplesBuilder_.getMessage();
             }
@@ -22518,9 +22518,9 @@ public final class RedvoxApi1000 {
            * A list of samples for the X-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
            */
-          public Builder setXSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder setXSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (xSamplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -22538,10 +22538,10 @@ public final class RedvoxApi1000 {
            * A list of samples for the X-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
            */
           public Builder setXSamples(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (xSamplesBuilder_ == null) {
               xSamples_ = builderForValue.build();
               onChanged();
@@ -22556,13 +22556,13 @@ public final class RedvoxApi1000 {
            * A list of samples for the X-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
            */
-          public Builder mergeXSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder mergeXSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (xSamplesBuilder_ == null) {
               if (xSamples_ != null) {
                 xSamples_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(xSamples_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(xSamples_).mergeFrom(value).buildPartial();
               } else {
                 xSamples_ = value;
               }
@@ -22578,7 +22578,7 @@ public final class RedvoxApi1000 {
            * A list of samples for the X-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
            */
           public Builder clearXSamples() {
             if (xSamplesBuilder_ == null) {
@@ -22596,9 +22596,9 @@ public final class RedvoxApi1000 {
            * A list of samples for the X-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getXSamplesBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getXSamplesBuilder() {
             
             onChanged();
             return getXSamplesFieldBuilder().getBuilder();
@@ -22608,14 +22608,14 @@ public final class RedvoxApi1000 {
            * A list of samples for the X-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getXSamplesOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getXSamplesOrBuilder() {
             if (xSamplesBuilder_ != null) {
               return xSamplesBuilder_.getMessageOrBuilder();
             } else {
               return xSamples_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : xSamples_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : xSamples_;
             }
           }
           /**
@@ -22623,14 +22623,14 @@ public final class RedvoxApi1000 {
            * A list of samples for the X-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples x_samples = 4;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload x_samples = 4;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getXSamplesFieldBuilder() {
             if (xSamplesBuilder_ == null) {
               xSamplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getXSamples(),
                       getParentForChildren(),
                       isClean());
@@ -22639,15 +22639,15 @@ public final class RedvoxApi1000 {
             return xSamplesBuilder_;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples ySamples_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload ySamples_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> ySamplesBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> ySamplesBuilder_;
           /**
            * <pre>
            * A list of samples for the Y-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
            */
           public boolean hasYSamples() {
             return ySamplesBuilder_ != null || ySamples_ != null;
@@ -22657,11 +22657,11 @@ public final class RedvoxApi1000 {
            * A list of samples for the Y-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getYSamples() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getYSamples() {
             if (ySamplesBuilder_ == null) {
-              return ySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : ySamples_;
+              return ySamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : ySamples_;
             } else {
               return ySamplesBuilder_.getMessage();
             }
@@ -22671,9 +22671,9 @@ public final class RedvoxApi1000 {
            * A list of samples for the Y-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
            */
-          public Builder setYSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder setYSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (ySamplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -22691,10 +22691,10 @@ public final class RedvoxApi1000 {
            * A list of samples for the Y-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
            */
           public Builder setYSamples(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (ySamplesBuilder_ == null) {
               ySamples_ = builderForValue.build();
               onChanged();
@@ -22709,13 +22709,13 @@ public final class RedvoxApi1000 {
            * A list of samples for the Y-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
            */
-          public Builder mergeYSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder mergeYSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (ySamplesBuilder_ == null) {
               if (ySamples_ != null) {
                 ySamples_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(ySamples_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(ySamples_).mergeFrom(value).buildPartial();
               } else {
                 ySamples_ = value;
               }
@@ -22731,7 +22731,7 @@ public final class RedvoxApi1000 {
            * A list of samples for the Y-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
            */
           public Builder clearYSamples() {
             if (ySamplesBuilder_ == null) {
@@ -22749,9 +22749,9 @@ public final class RedvoxApi1000 {
            * A list of samples for the Y-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getYSamplesBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getYSamplesBuilder() {
             
             onChanged();
             return getYSamplesFieldBuilder().getBuilder();
@@ -22761,14 +22761,14 @@ public final class RedvoxApi1000 {
            * A list of samples for the Y-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getYSamplesOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getYSamplesOrBuilder() {
             if (ySamplesBuilder_ != null) {
               return ySamplesBuilder_.getMessageOrBuilder();
             } else {
               return ySamples_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : ySamples_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : ySamples_;
             }
           }
           /**
@@ -22776,14 +22776,14 @@ public final class RedvoxApi1000 {
            * A list of samples for the Y-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples y_samples = 5;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload y_samples = 5;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getYSamplesFieldBuilder() {
             if (ySamplesBuilder_ == null) {
               ySamplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getYSamples(),
                       getParentForChildren(),
                       isClean());
@@ -22792,15 +22792,15 @@ public final class RedvoxApi1000 {
             return ySamplesBuilder_;
           }
 
-          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples zSamples_ = null;
+          private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload zSamples_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> zSamplesBuilder_;
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> zSamplesBuilder_;
           /**
            * <pre>
            * A list of samples for the Z-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
            */
           public boolean hasZSamples() {
             return zSamplesBuilder_ != null || zSamples_ != null;
@@ -22810,11 +22810,11 @@ public final class RedvoxApi1000 {
            * A list of samples for the Z-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getZSamples() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getZSamples() {
             if (zSamplesBuilder_ == null) {
-              return zSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : zSamples_;
+              return zSamples_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : zSamples_;
             } else {
               return zSamplesBuilder_.getMessage();
             }
@@ -22824,9 +22824,9 @@ public final class RedvoxApi1000 {
            * A list of samples for the Z-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
            */
-          public Builder setZSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder setZSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (zSamplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -22844,10 +22844,10 @@ public final class RedvoxApi1000 {
            * A list of samples for the Z-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
            */
           public Builder setZSamples(
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder builderForValue) {
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder builderForValue) {
             if (zSamplesBuilder_ == null) {
               zSamples_ = builderForValue.build();
               onChanged();
@@ -22862,13 +22862,13 @@ public final class RedvoxApi1000 {
            * A list of samples for the Z-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
            */
-          public Builder mergeZSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples value) {
+          public Builder mergeZSamples(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload value) {
             if (zSamplesBuilder_ == null) {
               if (zSamples_ != null) {
                 zSamples_ =
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder(zSamples_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder(zSamples_).mergeFrom(value).buildPartial();
               } else {
                 zSamples_ = value;
               }
@@ -22884,7 +22884,7 @@ public final class RedvoxApi1000 {
            * A list of samples for the Z-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
            */
           public Builder clearZSamples() {
             if (zSamplesBuilder_ == null) {
@@ -22902,9 +22902,9 @@ public final class RedvoxApi1000 {
            * A list of samples for the Z-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder getZSamplesBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder getZSamplesBuilder() {
             
             onChanged();
             return getZSamplesFieldBuilder().getBuilder();
@@ -22914,14 +22914,14 @@ public final class RedvoxApi1000 {
            * A list of samples for the Z-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
            */
-          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder getZSamplesOrBuilder() {
+          public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder getZSamplesOrBuilder() {
             if (zSamplesBuilder_ != null) {
               return zSamplesBuilder_.getMessageOrBuilder();
             } else {
               return zSamples_ == null ?
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance() : zSamples_;
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance() : zSamples_;
             }
           }
           /**
@@ -22929,14 +22929,14 @@ public final class RedvoxApi1000 {
            * A list of samples for the Z-channel
            * </pre>
            *
-           * <code>.redvox_api1000.RedvoxPacket1000.Samples z_samples = 6;</code>
+           * <code>.redvox_api1000.RedvoxPacket1000.Payload z_samples = 6;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder> 
+              io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder> 
               getZSamplesFieldBuilder() {
             if (zSamplesBuilder_ == null) {
               zSamplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder>(
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder>(
                       getZSamples(),
                       getParentForChildren(),
                       isClean());
@@ -27456,8 +27456,8 @@ public final class RedvoxApi1000 {
 
     }
 
-    public interface SamplesOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:redvox_api1000.RedvoxPacket1000.Samples)
+    public interface PayloadOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:redvox_api1000.RedvoxPacket1000.Payload)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -27470,30 +27470,30 @@ public final class RedvoxApi1000 {
       io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit getUnit();
 
       /**
-       * <code>repeated double samples = 2;</code>
+       * <code>repeated double values = 2;</code>
        */
-      java.util.List<java.lang.Double> getSamplesList();
+      java.util.List<java.lang.Double> getValuesList();
       /**
-       * <code>repeated double samples = 2;</code>
+       * <code>repeated double values = 2;</code>
        */
-      int getSamplesCount();
+      int getValuesCount();
       /**
-       * <code>repeated double samples = 2;</code>
+       * <code>repeated double values = 2;</code>
        */
-      double getSamples(int index);
+      double getValues(int index);
 
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
        */
-      boolean hasSampleStatistics();
+      boolean hasValueStatistics();
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics getSampleStatistics();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics getValueStatistics();
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
        */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder getSampleStatisticsOrBuilder();
+      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder getValueStatisticsOrBuilder();
 
       /**
        * <code>map&lt;string, string&gt; metadata = 4;</code>
@@ -27530,20 +27530,20 @@ public final class RedvoxApi1000 {
           java.lang.String key);
     }
     /**
-     * Protobuf type {@code redvox_api1000.RedvoxPacket1000.Samples}
+     * Protobuf type {@code redvox_api1000.RedvoxPacket1000.Payload}
      */
-    public  static final class Samples extends
+    public  static final class Payload extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:redvox_api1000.RedvoxPacket1000.Samples)
-        SamplesOrBuilder {
+        // @@protoc_insertion_point(message_implements:redvox_api1000.RedvoxPacket1000.Payload)
+        PayloadOrBuilder {
     private static final long serialVersionUID = 0L;
-      // Use Samples.newBuilder() to construct.
-      private Samples(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // Use Payload.newBuilder() to construct.
+      private Payload(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-      private Samples() {
+      private Payload() {
         unit_ = 0;
-        samples_ = java.util.Collections.emptyList();
+        values_ = java.util.Collections.emptyList();
       }
 
       @java.lang.Override
@@ -27551,7 +27551,7 @@ public final class RedvoxApi1000 {
       getUnknownFields() {
         return this.unknownFields;
       }
-      private Samples(
+      private Payload(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -27578,34 +27578,34 @@ public final class RedvoxApi1000 {
               }
               case 17: {
                 if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                  samples_ = new java.util.ArrayList<java.lang.Double>();
+                  values_ = new java.util.ArrayList<java.lang.Double>();
                   mutable_bitField0_ |= 0x00000002;
                 }
-                samples_.add(input.readDouble());
+                values_.add(input.readDouble());
                 break;
               }
               case 18: {
                 int length = input.readRawVarint32();
                 int limit = input.pushLimit(length);
                 if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
-                  samples_ = new java.util.ArrayList<java.lang.Double>();
+                  values_ = new java.util.ArrayList<java.lang.Double>();
                   mutable_bitField0_ |= 0x00000002;
                 }
                 while (input.getBytesUntilLimit() > 0) {
-                  samples_.add(input.readDouble());
+                  values_.add(input.readDouble());
                 }
                 input.popLimit(limit);
                 break;
               }
               case 26: {
                 io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.Builder subBuilder = null;
-                if (sampleStatistics_ != null) {
-                  subBuilder = sampleStatistics_.toBuilder();
+                if (valueStatistics_ != null) {
+                  subBuilder = valueStatistics_.toBuilder();
                 }
-                sampleStatistics_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.parser(), extensionRegistry);
+                valueStatistics_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.parser(), extensionRegistry);
                 if (subBuilder != null) {
-                  subBuilder.mergeFrom(sampleStatistics_);
-                  sampleStatistics_ = subBuilder.buildPartial();
+                  subBuilder.mergeFrom(valueStatistics_);
+                  valueStatistics_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -27639,7 +27639,7 @@ public final class RedvoxApi1000 {
               e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-            samples_ = java.util.Collections.unmodifiableList(samples_);
+            values_ = java.util.Collections.unmodifiableList(values_);
           }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
@@ -27647,7 +27647,7 @@ public final class RedvoxApi1000 {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Samples_descriptor;
+        return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Payload_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -27665,9 +27665,9 @@ public final class RedvoxApi1000 {
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Samples_fieldAccessorTable
+        return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Payload_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.class, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder.class);
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.class, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder.class);
       }
 
       private int bitField0_;
@@ -27688,48 +27688,48 @@ public final class RedvoxApi1000 {
         return result == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit.UNRECOGNIZED : result;
       }
 
-      public static final int SAMPLES_FIELD_NUMBER = 2;
-      private java.util.List<java.lang.Double> samples_;
+      public static final int VALUES_FIELD_NUMBER = 2;
+      private java.util.List<java.lang.Double> values_;
       /**
-       * <code>repeated double samples = 2;</code>
+       * <code>repeated double values = 2;</code>
        */
       public java.util.List<java.lang.Double>
-          getSamplesList() {
-        return samples_;
+          getValuesList() {
+        return values_;
       }
       /**
-       * <code>repeated double samples = 2;</code>
+       * <code>repeated double values = 2;</code>
        */
-      public int getSamplesCount() {
-        return samples_.size();
+      public int getValuesCount() {
+        return values_.size();
       }
       /**
-       * <code>repeated double samples = 2;</code>
+       * <code>repeated double values = 2;</code>
        */
-      public double getSamples(int index) {
-        return samples_.get(index);
+      public double getValues(int index) {
+        return values_.get(index);
       }
-      private int samplesMemoizedSerializedSize = -1;
+      private int valuesMemoizedSerializedSize = -1;
 
-      public static final int SAMPLE_STATISTICS_FIELD_NUMBER = 3;
-      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics sampleStatistics_;
+      public static final int VALUE_STATISTICS_FIELD_NUMBER = 3;
+      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics valueStatistics_;
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
        */
-      public boolean hasSampleStatistics() {
-        return sampleStatistics_ != null;
+      public boolean hasValueStatistics() {
+        return valueStatistics_ != null;
       }
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics getSampleStatistics() {
-        return sampleStatistics_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.getDefaultInstance() : sampleStatistics_;
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics getValueStatistics() {
+        return valueStatistics_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.getDefaultInstance() : valueStatistics_;
       }
       /**
-       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
        */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder getSampleStatisticsOrBuilder() {
-        return getSampleStatistics();
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder getValueStatisticsOrBuilder() {
+        return getValueStatistics();
       }
 
       public static final int METADATA_FIELD_NUMBER = 4;
@@ -27738,7 +27738,7 @@ public final class RedvoxApi1000 {
             java.lang.String, java.lang.String> defaultEntry =
                 com.google.protobuf.MapEntry
                 .<java.lang.String, java.lang.String>newDefaultInstance(
-                    io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Samples_MetadataEntry_descriptor, 
+                    io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Payload_MetadataEntry_descriptor, 
                     com.google.protobuf.WireFormat.FieldType.STRING,
                     "",
                     com.google.protobuf.WireFormat.FieldType.STRING,
@@ -27826,15 +27826,15 @@ public final class RedvoxApi1000 {
         if (unit_ != io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit.METERS_PER_SECOND_SQUARED.getNumber()) {
           output.writeEnum(1, unit_);
         }
-        if (getSamplesList().size() > 0) {
+        if (getValuesList().size() > 0) {
           output.writeUInt32NoTag(18);
-          output.writeUInt32NoTag(samplesMemoizedSerializedSize);
+          output.writeUInt32NoTag(valuesMemoizedSerializedSize);
         }
-        for (int i = 0; i < samples_.size(); i++) {
-          output.writeDoubleNoTag(samples_.get(i));
+        for (int i = 0; i < values_.size(); i++) {
+          output.writeDoubleNoTag(values_.get(i));
         }
-        if (sampleStatistics_ != null) {
-          output.writeMessage(3, getSampleStatistics());
+        if (valueStatistics_ != null) {
+          output.writeMessage(3, getValueStatistics());
         }
         com.google.protobuf.GeneratedMessageV3
           .serializeStringMapTo(
@@ -27857,18 +27857,18 @@ public final class RedvoxApi1000 {
         }
         {
           int dataSize = 0;
-          dataSize = 8 * getSamplesList().size();
+          dataSize = 8 * getValuesList().size();
           size += dataSize;
-          if (!getSamplesList().isEmpty()) {
+          if (!getValuesList().isEmpty()) {
             size += 1;
             size += com.google.protobuf.CodedOutputStream
                 .computeInt32SizeNoTag(dataSize);
           }
-          samplesMemoizedSerializedSize = dataSize;
+          valuesMemoizedSerializedSize = dataSize;
         }
-        if (sampleStatistics_ != null) {
+        if (valueStatistics_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(3, getSampleStatistics());
+            .computeMessageSize(3, getValueStatistics());
         }
         for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
              : internalGetMetadata().getMap().entrySet()) {
@@ -27890,19 +27890,19 @@ public final class RedvoxApi1000 {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples)) {
+        if (!(obj instanceof io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload)) {
           return super.equals(obj);
         }
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples other = (io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples) obj;
+        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload other = (io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload) obj;
 
         boolean result = true;
         result = result && unit_ == other.unit_;
-        result = result && getSamplesList()
-            .equals(other.getSamplesList());
-        result = result && (hasSampleStatistics() == other.hasSampleStatistics());
-        if (hasSampleStatistics()) {
-          result = result && getSampleStatistics()
-              .equals(other.getSampleStatistics());
+        result = result && getValuesList()
+            .equals(other.getValuesList());
+        result = result && (hasValueStatistics() == other.hasValueStatistics());
+        if (hasValueStatistics()) {
+          result = result && getValueStatistics()
+              .equals(other.getValueStatistics());
         }
         result = result && internalGetMetadata().equals(
             other.internalGetMetadata());
@@ -27919,13 +27919,13 @@ public final class RedvoxApi1000 {
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + UNIT_FIELD_NUMBER;
         hash = (53 * hash) + unit_;
-        if (getSamplesCount() > 0) {
-          hash = (37 * hash) + SAMPLES_FIELD_NUMBER;
-          hash = (53 * hash) + getSamplesList().hashCode();
+        if (getValuesCount() > 0) {
+          hash = (37 * hash) + VALUES_FIELD_NUMBER;
+          hash = (53 * hash) + getValuesList().hashCode();
         }
-        if (hasSampleStatistics()) {
-          hash = (37 * hash) + SAMPLE_STATISTICS_FIELD_NUMBER;
-          hash = (53 * hash) + getSampleStatistics().hashCode();
+        if (hasValueStatistics()) {
+          hash = (37 * hash) + VALUE_STATISTICS_FIELD_NUMBER;
+          hash = (53 * hash) + getValueStatistics().hashCode();
         }
         if (!internalGetMetadata().getMap().isEmpty()) {
           hash = (37 * hash) + METADATA_FIELD_NUMBER;
@@ -27936,69 +27936,69 @@ public final class RedvoxApi1000 {
         return hash;
       }
 
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples parseFrom(
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples parseFrom(
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples parseFrom(
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples parseFrom(
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples parseFrom(byte[] data)
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples parseFrom(
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples parseFrom(java.io.InputStream input)
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples parseFrom(
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples parseDelimitedFrom(java.io.InputStream input)
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples parseDelimitedFrom(
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples parseFrom(
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples parseFrom(
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -28011,7 +28011,7 @@ public final class RedvoxApi1000 {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples prototype) {
+      public static Builder newBuilder(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -28027,15 +28027,15 @@ public final class RedvoxApi1000 {
         return builder;
       }
       /**
-       * Protobuf type {@code redvox_api1000.RedvoxPacket1000.Samples}
+       * Protobuf type {@code redvox_api1000.RedvoxPacket1000.Payload}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:redvox_api1000.RedvoxPacket1000.Samples)
-          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SamplesOrBuilder {
+          // @@protoc_insertion_point(builder_implements:redvox_api1000.RedvoxPacket1000.Payload)
+          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.PayloadOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Samples_descriptor;
+          return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Payload_descriptor;
         }
 
         @SuppressWarnings({"rawtypes"})
@@ -28063,12 +28063,12 @@ public final class RedvoxApi1000 {
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Samples_fieldAccessorTable
+          return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Payload_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.class, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.Builder.class);
+                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.class, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.Builder.class);
         }
 
-        // Construct using io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.newBuilder()
+        // Construct using io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -28088,13 +28088,13 @@ public final class RedvoxApi1000 {
           super.clear();
           unit_ = 0;
 
-          samples_ = java.util.Collections.emptyList();
+          values_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
-          if (sampleStatisticsBuilder_ == null) {
-            sampleStatistics_ = null;
+          if (valueStatisticsBuilder_ == null) {
+            valueStatistics_ = null;
           } else {
-            sampleStatistics_ = null;
-            sampleStatisticsBuilder_ = null;
+            valueStatistics_ = null;
+            valueStatisticsBuilder_ = null;
           }
           internalGetMutableMetadata().clear();
           return this;
@@ -28103,17 +28103,17 @@ public final class RedvoxApi1000 {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Samples_descriptor;
+          return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Payload_descriptor;
         }
 
         @java.lang.Override
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getDefaultInstanceForType() {
-          return io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance();
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getDefaultInstanceForType() {
+          return io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance();
         }
 
         @java.lang.Override
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples build() {
-          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples result = buildPartial();
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload build() {
+          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -28121,20 +28121,20 @@ public final class RedvoxApi1000 {
         }
 
         @java.lang.Override
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples buildPartial() {
-          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples result = new io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples(this);
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload buildPartial() {
+          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload result = new io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           result.unit_ = unit_;
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            samples_ = java.util.Collections.unmodifiableList(samples_);
+            values_ = java.util.Collections.unmodifiableList(values_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
-          result.samples_ = samples_;
-          if (sampleStatisticsBuilder_ == null) {
-            result.sampleStatistics_ = sampleStatistics_;
+          result.values_ = values_;
+          if (valueStatisticsBuilder_ == null) {
+            result.valueStatistics_ = valueStatistics_;
           } else {
-            result.sampleStatistics_ = sampleStatisticsBuilder_.build();
+            result.valueStatistics_ = valueStatisticsBuilder_.build();
           }
           result.metadata_ = internalGetMetadata();
           result.metadata_.makeImmutable();
@@ -28177,31 +28177,31 @@ public final class RedvoxApi1000 {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples) {
-            return mergeFrom((io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples)other);
+          if (other instanceof io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload) {
+            return mergeFrom((io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples other) {
-          if (other == io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples.getDefaultInstance()) return this;
+        public Builder mergeFrom(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload other) {
+          if (other == io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload.getDefaultInstance()) return this;
           if (other.unit_ != 0) {
             setUnitValue(other.getUnitValue());
           }
-          if (!other.samples_.isEmpty()) {
-            if (samples_.isEmpty()) {
-              samples_ = other.samples_;
+          if (!other.values_.isEmpty()) {
+            if (values_.isEmpty()) {
+              values_ = other.values_;
               bitField0_ = (bitField0_ & ~0x00000002);
             } else {
-              ensureSamplesIsMutable();
-              samples_.addAll(other.samples_);
+              ensureValuesIsMutable();
+              values_.addAll(other.values_);
             }
             onChanged();
           }
-          if (other.hasSampleStatistics()) {
-            mergeSampleStatistics(other.getSampleStatistics());
+          if (other.hasValueStatistics()) {
+            mergeValueStatistics(other.getValueStatistics());
           }
           internalGetMutableMetadata().mergeFrom(
               other.internalGetMetadata());
@@ -28220,11 +28220,11 @@ public final class RedvoxApi1000 {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples parsedMessage = null;
+          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples) e.getUnfinishedMessage();
+            parsedMessage = (io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -28280,187 +28280,187 @@ public final class RedvoxApi1000 {
           return this;
         }
 
-        private java.util.List<java.lang.Double> samples_ = java.util.Collections.emptyList();
-        private void ensureSamplesIsMutable() {
+        private java.util.List<java.lang.Double> values_ = java.util.Collections.emptyList();
+        private void ensureValuesIsMutable() {
           if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-            samples_ = new java.util.ArrayList<java.lang.Double>(samples_);
+            values_ = new java.util.ArrayList<java.lang.Double>(values_);
             bitField0_ |= 0x00000002;
            }
         }
         /**
-         * <code>repeated double samples = 2;</code>
+         * <code>repeated double values = 2;</code>
          */
         public java.util.List<java.lang.Double>
-            getSamplesList() {
-          return java.util.Collections.unmodifiableList(samples_);
+            getValuesList() {
+          return java.util.Collections.unmodifiableList(values_);
         }
         /**
-         * <code>repeated double samples = 2;</code>
+         * <code>repeated double values = 2;</code>
          */
-        public int getSamplesCount() {
-          return samples_.size();
+        public int getValuesCount() {
+          return values_.size();
         }
         /**
-         * <code>repeated double samples = 2;</code>
+         * <code>repeated double values = 2;</code>
          */
-        public double getSamples(int index) {
-          return samples_.get(index);
+        public double getValues(int index) {
+          return values_.get(index);
         }
         /**
-         * <code>repeated double samples = 2;</code>
+         * <code>repeated double values = 2;</code>
          */
-        public Builder setSamples(
+        public Builder setValues(
             int index, double value) {
-          ensureSamplesIsMutable();
-          samples_.set(index, value);
+          ensureValuesIsMutable();
+          values_.set(index, value);
           onChanged();
           return this;
         }
         /**
-         * <code>repeated double samples = 2;</code>
+         * <code>repeated double values = 2;</code>
          */
-        public Builder addSamples(double value) {
-          ensureSamplesIsMutable();
-          samples_.add(value);
+        public Builder addValues(double value) {
+          ensureValuesIsMutable();
+          values_.add(value);
           onChanged();
           return this;
         }
         /**
-         * <code>repeated double samples = 2;</code>
+         * <code>repeated double values = 2;</code>
          */
-        public Builder addAllSamples(
+        public Builder addAllValues(
             java.lang.Iterable<? extends java.lang.Double> values) {
-          ensureSamplesIsMutable();
+          ensureValuesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, samples_);
+              values, values_);
           onChanged();
           return this;
         }
         /**
-         * <code>repeated double samples = 2;</code>
+         * <code>repeated double values = 2;</code>
          */
-        public Builder clearSamples() {
-          samples_ = java.util.Collections.emptyList();
+        public Builder clearValues() {
+          values_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
 
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics sampleStatistics_ = null;
+        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics valueStatistics_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder> sampleStatisticsBuilder_;
+            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder> valueStatisticsBuilder_;
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
          */
-        public boolean hasSampleStatistics() {
-          return sampleStatisticsBuilder_ != null || sampleStatistics_ != null;
+        public boolean hasValueStatistics() {
+          return valueStatisticsBuilder_ != null || valueStatistics_ != null;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics getSampleStatistics() {
-          if (sampleStatisticsBuilder_ == null) {
-            return sampleStatistics_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.getDefaultInstance() : sampleStatistics_;
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics getValueStatistics() {
+          if (valueStatisticsBuilder_ == null) {
+            return valueStatistics_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.getDefaultInstance() : valueStatistics_;
           } else {
-            return sampleStatisticsBuilder_.getMessage();
+            return valueStatisticsBuilder_.getMessage();
           }
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
          */
-        public Builder setSampleStatistics(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics value) {
-          if (sampleStatisticsBuilder_ == null) {
+        public Builder setValueStatistics(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics value) {
+          if (valueStatisticsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
             }
-            sampleStatistics_ = value;
+            valueStatistics_ = value;
             onChanged();
           } else {
-            sampleStatisticsBuilder_.setMessage(value);
+            valueStatisticsBuilder_.setMessage(value);
           }
 
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
          */
-        public Builder setSampleStatistics(
+        public Builder setValueStatistics(
             io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.Builder builderForValue) {
-          if (sampleStatisticsBuilder_ == null) {
-            sampleStatistics_ = builderForValue.build();
+          if (valueStatisticsBuilder_ == null) {
+            valueStatistics_ = builderForValue.build();
             onChanged();
           } else {
-            sampleStatisticsBuilder_.setMessage(builderForValue.build());
+            valueStatisticsBuilder_.setMessage(builderForValue.build());
           }
 
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
          */
-        public Builder mergeSampleStatistics(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics value) {
-          if (sampleStatisticsBuilder_ == null) {
-            if (sampleStatistics_ != null) {
-              sampleStatistics_ =
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.newBuilder(sampleStatistics_).mergeFrom(value).buildPartial();
+        public Builder mergeValueStatistics(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics value) {
+          if (valueStatisticsBuilder_ == null) {
+            if (valueStatistics_ != null) {
+              valueStatistics_ =
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.newBuilder(valueStatistics_).mergeFrom(value).buildPartial();
             } else {
-              sampleStatistics_ = value;
+              valueStatistics_ = value;
             }
             onChanged();
           } else {
-            sampleStatisticsBuilder_.mergeFrom(value);
+            valueStatisticsBuilder_.mergeFrom(value);
           }
 
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
          */
-        public Builder clearSampleStatistics() {
-          if (sampleStatisticsBuilder_ == null) {
-            sampleStatistics_ = null;
+        public Builder clearValueStatistics() {
+          if (valueStatisticsBuilder_ == null) {
+            valueStatistics_ = null;
             onChanged();
           } else {
-            sampleStatistics_ = null;
-            sampleStatisticsBuilder_ = null;
+            valueStatistics_ = null;
+            valueStatisticsBuilder_ = null;
           }
 
           return this;
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.Builder getSampleStatisticsBuilder() {
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.Builder getValueStatisticsBuilder() {
           
           onChanged();
-          return getSampleStatisticsFieldBuilder().getBuilder();
+          return getValueStatisticsFieldBuilder().getBuilder();
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
          */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder getSampleStatisticsOrBuilder() {
-          if (sampleStatisticsBuilder_ != null) {
-            return sampleStatisticsBuilder_.getMessageOrBuilder();
+        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder getValueStatisticsOrBuilder() {
+          if (valueStatisticsBuilder_ != null) {
+            return valueStatisticsBuilder_.getMessageOrBuilder();
           } else {
-            return sampleStatistics_ == null ?
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.getDefaultInstance() : sampleStatistics_;
+            return valueStatistics_ == null ?
+                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.getDefaultInstance() : valueStatistics_;
           }
         }
         /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics sample_statistics = 3;</code>
+         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics value_statistics = 3;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder> 
-            getSampleStatisticsFieldBuilder() {
-          if (sampleStatisticsBuilder_ == null) {
-            sampleStatisticsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            getValueStatisticsFieldBuilder() {
+          if (valueStatisticsBuilder_ == null) {
+            valueStatisticsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
                 io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder>(
-                    getSampleStatistics(),
+                    getValueStatistics(),
                     getParentForChildren(),
                     isClean());
-            sampleStatistics_ = null;
+            valueStatistics_ = null;
           }
-          return sampleStatisticsBuilder_;
+          return valueStatisticsBuilder_;
         }
 
         private com.google.protobuf.MapField<
@@ -28598,1223 +28598,41 @@ public final class RedvoxApi1000 {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:redvox_api1000.RedvoxPacket1000.Samples)
+        // @@protoc_insertion_point(builder_scope:redvox_api1000.RedvoxPacket1000.Payload)
       }
 
-      // @@protoc_insertion_point(class_scope:redvox_api1000.RedvoxPacket1000.Samples)
-      private static final io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:redvox_api1000.RedvoxPacket1000.Payload)
+      private static final io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples();
+        DEFAULT_INSTANCE = new io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload();
       }
 
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getDefaultInstance() {
+      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<Samples>
-          PARSER = new com.google.protobuf.AbstractParser<Samples>() {
+      private static final com.google.protobuf.Parser<Payload>
+          PARSER = new com.google.protobuf.AbstractParser<Payload>() {
         @java.lang.Override
-        public Samples parsePartialFrom(
+        public Payload parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Samples(input, extensionRegistry);
+          return new Payload(input, extensionRegistry);
         }
       };
 
-      public static com.google.protobuf.Parser<Samples> parser() {
+      public static com.google.protobuf.Parser<Payload> parser() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Parser<Samples> getParserForType() {
+      public com.google.protobuf.Parser<Payload> getParserForType() {
         return PARSER;
       }
 
       @java.lang.Override
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Samples getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    public interface TimestampsOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:redvox_api1000.RedvoxPacket1000.Timestamps)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Unit unit = 1;</code>
-       */
-      int getUnitValue();
-      /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Unit unit = 1;</code>
-       */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit getUnit();
-
-      /**
-       * <code>repeated double timestamps = 2;</code>
-       */
-      java.util.List<java.lang.Double> getTimestampsList();
-      /**
-       * <code>repeated double timestamps = 2;</code>
-       */
-      int getTimestampsCount();
-      /**
-       * <code>repeated double timestamps = 2;</code>
-       */
-      double getTimestamps(int index);
-
-      /**
-       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-       */
-      boolean hasTimestampStatistics();
-      /**
-       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-       */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics getTimestampStatistics();
-      /**
-       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-       */
-      io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder getTimestampStatisticsOrBuilder();
-
-      /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
-       */
-      int getMetadataCount();
-      /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
-       */
-      boolean containsMetadata(
-          java.lang.String key);
-      /**
-       * Use {@link #getMetadataMap()} instead.
-       */
-      @java.lang.Deprecated
-      java.util.Map<java.lang.String, java.lang.String>
-      getMetadata();
-      /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
-       */
-      java.util.Map<java.lang.String, java.lang.String>
-      getMetadataMap();
-      /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
-       */
-
-      java.lang.String getMetadataOrDefault(
-          java.lang.String key,
-          java.lang.String defaultValue);
-      /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
-       */
-
-      java.lang.String getMetadataOrThrow(
-          java.lang.String key);
-    }
-    /**
-     * Protobuf type {@code redvox_api1000.RedvoxPacket1000.Timestamps}
-     */
-    public  static final class Timestamps extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:redvox_api1000.RedvoxPacket1000.Timestamps)
-        TimestampsOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Timestamps.newBuilder() to construct.
-      private Timestamps(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Timestamps() {
-        unit_ = 0;
-        timestamps_ = java.util.Collections.emptyList();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Timestamps(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                int rawValue = input.readEnum();
-
-                unit_ = rawValue;
-                break;
-              }
-              case 17: {
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                  timestamps_ = new java.util.ArrayList<java.lang.Double>();
-                  mutable_bitField0_ |= 0x00000002;
-                }
-                timestamps_.add(input.readDouble());
-                break;
-              }
-              case 18: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
-                  timestamps_ = new java.util.ArrayList<java.lang.Double>();
-                  mutable_bitField0_ |= 0x00000002;
-                }
-                while (input.getBytesUntilLimit() > 0) {
-                  timestamps_.add(input.readDouble());
-                }
-                input.popLimit(limit);
-                break;
-              }
-              case 26: {
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.Builder subBuilder = null;
-                if (timestampStatistics_ != null) {
-                  subBuilder = timestampStatistics_.toBuilder();
-                }
-                timestampStatistics_ = input.readMessage(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(timestampStatistics_);
-                  timestampStatistics_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              case 34: {
-                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                  metadata_ = com.google.protobuf.MapField.newMapField(
-                      MetadataDefaultEntryHolder.defaultEntry);
-                  mutable_bitField0_ |= 0x00000008;
-                }
-                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-                metadata__ = input.readMessage(
-                    MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                metadata_.getMutableMap().put(
-                    metadata__.getKey(), metadata__.getValue());
-                break;
-              }
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-            timestamps_ = java.util.Collections.unmodifiableList(timestamps_);
-          }
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_descriptor;
-      }
-
-      @SuppressWarnings({"rawtypes"})
-      @java.lang.Override
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 4:
-            return internalGetMetadata();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.class, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder.class);
-      }
-
-      private int bitField0_;
-      public static final int UNIT_FIELD_NUMBER = 1;
-      private int unit_;
-      /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Unit unit = 1;</code>
-       */
-      public int getUnitValue() {
-        return unit_;
-      }
-      /**
-       * <code>.redvox_api1000.RedvoxPacket1000.Unit unit = 1;</code>
-       */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit getUnit() {
-        @SuppressWarnings("deprecation")
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit result = io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit.valueOf(unit_);
-        return result == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit.UNRECOGNIZED : result;
-      }
-
-      public static final int TIMESTAMPS_FIELD_NUMBER = 2;
-      private java.util.List<java.lang.Double> timestamps_;
-      /**
-       * <code>repeated double timestamps = 2;</code>
-       */
-      public java.util.List<java.lang.Double>
-          getTimestampsList() {
-        return timestamps_;
-      }
-      /**
-       * <code>repeated double timestamps = 2;</code>
-       */
-      public int getTimestampsCount() {
-        return timestamps_.size();
-      }
-      /**
-       * <code>repeated double timestamps = 2;</code>
-       */
-      public double getTimestamps(int index) {
-        return timestamps_.get(index);
-      }
-      private int timestampsMemoizedSerializedSize = -1;
-
-      public static final int TIMESTAMP_STATISTICS_FIELD_NUMBER = 3;
-      private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics timestampStatistics_;
-      /**
-       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-       */
-      public boolean hasTimestampStatistics() {
-        return timestampStatistics_ != null;
-      }
-      /**
-       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-       */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics getTimestampStatistics() {
-        return timestampStatistics_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.getDefaultInstance() : timestampStatistics_;
-      }
-      /**
-       * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-       */
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder getTimestampStatisticsOrBuilder() {
-        return getTimestampStatistics();
-      }
-
-      public static final int METADATA_FIELD_NUMBER = 4;
-      private static final class MetadataDefaultEntryHolder {
-        static final com.google.protobuf.MapEntry<
-            java.lang.String, java.lang.String> defaultEntry =
-                com.google.protobuf.MapEntry
-                .<java.lang.String, java.lang.String>newDefaultInstance(
-                    io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_MetadataEntry_descriptor, 
-                    com.google.protobuf.WireFormat.FieldType.STRING,
-                    "",
-                    com.google.protobuf.WireFormat.FieldType.STRING,
-                    "");
-      }
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> metadata_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMetadata() {
-        if (metadata_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              MetadataDefaultEntryHolder.defaultEntry);
-        }
-        return metadata_;
-      }
-
-      public int getMetadataCount() {
-        return internalGetMetadata().getMap().size();
-      }
-      /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
-       */
-
-      public boolean containsMetadata(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        return internalGetMetadata().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getMetadataMap()} instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
-        return getMetadataMap();
-      }
-      /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
-       */
-
-      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
-        return internalGetMetadata().getMap();
-      }
-      /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
-       */
-
-      public java.lang.String getMetadataOrDefault(
-          java.lang.String key,
-          java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetMetadata().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
-       */
-
-      public java.lang.String getMetadataOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetMetadata().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        getSerializedSize();
-        if (unit_ != io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit.METERS_PER_SECOND_SQUARED.getNumber()) {
-          output.writeEnum(1, unit_);
-        }
-        if (getTimestampsList().size() > 0) {
-          output.writeUInt32NoTag(18);
-          output.writeUInt32NoTag(timestampsMemoizedSerializedSize);
-        }
-        for (int i = 0; i < timestamps_.size(); i++) {
-          output.writeDoubleNoTag(timestamps_.get(i));
-        }
-        if (timestampStatistics_ != null) {
-          output.writeMessage(3, getTimestampStatistics());
-        }
-        com.google.protobuf.GeneratedMessageV3
-          .serializeStringMapTo(
-            output,
-            internalGetMetadata(),
-            MetadataDefaultEntryHolder.defaultEntry,
-            4);
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (unit_ != io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit.METERS_PER_SECOND_SQUARED.getNumber()) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeEnumSize(1, unit_);
-        }
-        {
-          int dataSize = 0;
-          dataSize = 8 * getTimestampsList().size();
-          size += dataSize;
-          if (!getTimestampsList().isEmpty()) {
-            size += 1;
-            size += com.google.protobuf.CodedOutputStream
-                .computeInt32SizeNoTag(dataSize);
-          }
-          timestampsMemoizedSerializedSize = dataSize;
-        }
-        if (timestampStatistics_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(3, getTimestampStatistics());
-        }
-        for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-             : internalGetMetadata().getMap().entrySet()) {
-          com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-          metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
-              .setKey(entry.getKey())
-              .setValue(entry.getValue())
-              .build();
-          size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(4, metadata__);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps)) {
-          return super.equals(obj);
-        }
-        io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps other = (io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps) obj;
-
-        boolean result = true;
-        result = result && unit_ == other.unit_;
-        result = result && getTimestampsList()
-            .equals(other.getTimestampsList());
-        result = result && (hasTimestampStatistics() == other.hasTimestampStatistics());
-        if (hasTimestampStatistics()) {
-          result = result && getTimestampStatistics()
-              .equals(other.getTimestampStatistics());
-        }
-        result = result && internalGetMetadata().equals(
-            other.internalGetMetadata());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + UNIT_FIELD_NUMBER;
-        hash = (53 * hash) + unit_;
-        if (getTimestampsCount() > 0) {
-          hash = (37 * hash) + TIMESTAMPS_FIELD_NUMBER;
-          hash = (53 * hash) + getTimestampsList().hashCode();
-        }
-        if (hasTimestampStatistics()) {
-          hash = (37 * hash) + TIMESTAMP_STATISTICS_FIELD_NUMBER;
-          hash = (53 * hash) + getTimestampStatistics().hashCode();
-        }
-        if (!internalGetMetadata().getMap().isEmpty()) {
-          hash = (37 * hash) + METADATA_FIELD_NUMBER;
-          hash = (53 * hash) + internalGetMetadata().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code redvox_api1000.RedvoxPacket1000.Timestamps}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:redvox_api1000.RedvoxPacket1000.Timestamps)
-          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.TimestampsOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_descriptor;
-        }
-
-        @SuppressWarnings({"rawtypes"})
-        protected com.google.protobuf.MapField internalGetMapField(
-            int number) {
-          switch (number) {
-            case 4:
-              return internalGetMetadata();
-            default:
-              throw new RuntimeException(
-                  "Invalid map field number: " + number);
-          }
-        }
-        @SuppressWarnings({"rawtypes"})
-        protected com.google.protobuf.MapField internalGetMutableMapField(
-            int number) {
-          switch (number) {
-            case 4:
-              return internalGetMutableMetadata();
-            default:
-              throw new RuntimeException(
-                  "Invalid map field number: " + number);
-          }
-        }
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.class, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.Builder.class);
-        }
-
-        // Construct using io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          unit_ = 0;
-
-          timestamps_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          if (timestampStatisticsBuilder_ == null) {
-            timestampStatistics_ = null;
-          } else {
-            timestampStatistics_ = null;
-            timestampStatisticsBuilder_ = null;
-          }
-          internalGetMutableMetadata().clear();
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return io.redvox.redvox_api1000.RedvoxApi1000.internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_descriptor;
-        }
-
-        @java.lang.Override
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getDefaultInstanceForType() {
-          return io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps build() {
-          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps buildPartial() {
-          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps result = new io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          result.unit_ = unit_;
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            timestamps_ = java.util.Collections.unmodifiableList(timestamps_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.timestamps_ = timestamps_;
-          if (timestampStatisticsBuilder_ == null) {
-            result.timestampStatistics_ = timestampStatistics_;
-          } else {
-            result.timestampStatistics_ = timestampStatisticsBuilder_.build();
-          }
-          result.metadata_ = internalGetMetadata();
-          result.metadata_.makeImmutable();
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps) {
-            return mergeFrom((io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps other) {
-          if (other == io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps.getDefaultInstance()) return this;
-          if (other.unit_ != 0) {
-            setUnitValue(other.getUnitValue());
-          }
-          if (!other.timestamps_.isEmpty()) {
-            if (timestamps_.isEmpty()) {
-              timestamps_ = other.timestamps_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureTimestampsIsMutable();
-              timestamps_.addAll(other.timestamps_);
-            }
-            onChanged();
-          }
-          if (other.hasTimestampStatistics()) {
-            mergeTimestampStatistics(other.getTimestampStatistics());
-          }
-          internalGetMutableMetadata().mergeFrom(
-              other.internalGetMetadata());
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private int unit_ = 0;
-        /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Unit unit = 1;</code>
-         */
-        public int getUnitValue() {
-          return unit_;
-        }
-        /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Unit unit = 1;</code>
-         */
-        public Builder setUnitValue(int value) {
-          unit_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Unit unit = 1;</code>
-         */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit getUnit() {
-          @SuppressWarnings("deprecation")
-          io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit result = io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit.valueOf(unit_);
-          return result == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit.UNRECOGNIZED : result;
-        }
-        /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Unit unit = 1;</code>
-         */
-        public Builder setUnit(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Unit value) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          
-          unit_ = value.getNumber();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>.redvox_api1000.RedvoxPacket1000.Unit unit = 1;</code>
-         */
-        public Builder clearUnit() {
-          
-          unit_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private java.util.List<java.lang.Double> timestamps_ = java.util.Collections.emptyList();
-        private void ensureTimestampsIsMutable() {
-          if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-            timestamps_ = new java.util.ArrayList<java.lang.Double>(timestamps_);
-            bitField0_ |= 0x00000002;
-           }
-        }
-        /**
-         * <code>repeated double timestamps = 2;</code>
-         */
-        public java.util.List<java.lang.Double>
-            getTimestampsList() {
-          return java.util.Collections.unmodifiableList(timestamps_);
-        }
-        /**
-         * <code>repeated double timestamps = 2;</code>
-         */
-        public int getTimestampsCount() {
-          return timestamps_.size();
-        }
-        /**
-         * <code>repeated double timestamps = 2;</code>
-         */
-        public double getTimestamps(int index) {
-          return timestamps_.get(index);
-        }
-        /**
-         * <code>repeated double timestamps = 2;</code>
-         */
-        public Builder setTimestamps(
-            int index, double value) {
-          ensureTimestampsIsMutable();
-          timestamps_.set(index, value);
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>repeated double timestamps = 2;</code>
-         */
-        public Builder addTimestamps(double value) {
-          ensureTimestampsIsMutable();
-          timestamps_.add(value);
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>repeated double timestamps = 2;</code>
-         */
-        public Builder addAllTimestamps(
-            java.lang.Iterable<? extends java.lang.Double> values) {
-          ensureTimestampsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, timestamps_);
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>repeated double timestamps = 2;</code>
-         */
-        public Builder clearTimestamps() {
-          timestamps_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-          return this;
-        }
-
-        private io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics timestampStatistics_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder> timestampStatisticsBuilder_;
-        /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-         */
-        public boolean hasTimestampStatistics() {
-          return timestampStatisticsBuilder_ != null || timestampStatistics_ != null;
-        }
-        /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-         */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics getTimestampStatistics() {
-          if (timestampStatisticsBuilder_ == null) {
-            return timestampStatistics_ == null ? io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.getDefaultInstance() : timestampStatistics_;
-          } else {
-            return timestampStatisticsBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-         */
-        public Builder setTimestampStatistics(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics value) {
-          if (timestampStatisticsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            timestampStatistics_ = value;
-            onChanged();
-          } else {
-            timestampStatisticsBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-         */
-        public Builder setTimestampStatistics(
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.Builder builderForValue) {
-          if (timestampStatisticsBuilder_ == null) {
-            timestampStatistics_ = builderForValue.build();
-            onChanged();
-          } else {
-            timestampStatisticsBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-         */
-        public Builder mergeTimestampStatistics(io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics value) {
-          if (timestampStatisticsBuilder_ == null) {
-            if (timestampStatistics_ != null) {
-              timestampStatistics_ =
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.newBuilder(timestampStatistics_).mergeFrom(value).buildPartial();
-            } else {
-              timestampStatistics_ = value;
-            }
-            onChanged();
-          } else {
-            timestampStatisticsBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-         */
-        public Builder clearTimestampStatistics() {
-          if (timestampStatisticsBuilder_ == null) {
-            timestampStatistics_ = null;
-            onChanged();
-          } else {
-            timestampStatistics_ = null;
-            timestampStatisticsBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-         */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.Builder getTimestampStatisticsBuilder() {
-          
-          onChanged();
-          return getTimestampStatisticsFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-         */
-        public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder getTimestampStatisticsOrBuilder() {
-          if (timestampStatisticsBuilder_ != null) {
-            return timestampStatisticsBuilder_.getMessageOrBuilder();
-          } else {
-            return timestampStatistics_ == null ?
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.getDefaultInstance() : timestampStatistics_;
-          }
-        }
-        /**
-         * <code>.redvox_api1000.RedvoxPacket1000.SummaryStatistics timestamp_statistics = 3;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder> 
-            getTimestampStatisticsFieldBuilder() {
-          if (timestampStatisticsBuilder_ == null) {
-            timestampStatisticsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatistics.Builder, io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.SummaryStatisticsOrBuilder>(
-                    getTimestampStatistics(),
-                    getParentForChildren(),
-                    isClean());
-            timestampStatistics_ = null;
-          }
-          return timestampStatisticsBuilder_;
-        }
-
-        private com.google.protobuf.MapField<
-            java.lang.String, java.lang.String> metadata_;
-        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMetadata() {
-          if (metadata_ == null) {
-            return com.google.protobuf.MapField.emptyMapField(
-                MetadataDefaultEntryHolder.defaultEntry);
-          }
-          return metadata_;
-        }
-        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableMetadata() {
-          onChanged();;
-          if (metadata_ == null) {
-            metadata_ = com.google.protobuf.MapField.newMapField(
-                MetadataDefaultEntryHolder.defaultEntry);
-          }
-          if (!metadata_.isMutable()) {
-            metadata_ = metadata_.copy();
-          }
-          return metadata_;
-        }
-
-        public int getMetadataCount() {
-          return internalGetMetadata().getMap().size();
-        }
-        /**
-         * <code>map&lt;string, string&gt; metadata = 4;</code>
-         */
-
-        public boolean containsMetadata(
-            java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          return internalGetMetadata().getMap().containsKey(key);
-        }
-        /**
-         * Use {@link #getMetadataMap()} instead.
-         */
-        @java.lang.Deprecated
-        public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
-          return getMetadataMap();
-        }
-        /**
-         * <code>map&lt;string, string&gt; metadata = 4;</code>
-         */
-
-        public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
-          return internalGetMetadata().getMap();
-        }
-        /**
-         * <code>map&lt;string, string&gt; metadata = 4;</code>
-         */
-
-        public java.lang.String getMetadataOrDefault(
-            java.lang.String key,
-            java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          java.util.Map<java.lang.String, java.lang.String> map =
-              internalGetMetadata().getMap();
-          return map.containsKey(key) ? map.get(key) : defaultValue;
-        }
-        /**
-         * <code>map&lt;string, string&gt; metadata = 4;</code>
-         */
-
-        public java.lang.String getMetadataOrThrow(
-            java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          java.util.Map<java.lang.String, java.lang.String> map =
-              internalGetMetadata().getMap();
-          if (!map.containsKey(key)) {
-            throw new java.lang.IllegalArgumentException();
-          }
-          return map.get(key);
-        }
-
-        public Builder clearMetadata() {
-          internalGetMutableMetadata().getMutableMap()
-              .clear();
-          return this;
-        }
-        /**
-         * <code>map&lt;string, string&gt; metadata = 4;</code>
-         */
-
-        public Builder removeMetadata(
-            java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          internalGetMutableMetadata().getMutableMap()
-              .remove(key);
-          return this;
-        }
-        /**
-         * Use alternate mutation accessors instead.
-         */
-        @java.lang.Deprecated
-        public java.util.Map<java.lang.String, java.lang.String>
-        getMutableMetadata() {
-          return internalGetMutableMetadata().getMutableMap();
-        }
-        /**
-         * <code>map&lt;string, string&gt; metadata = 4;</code>
-         */
-        public Builder putMetadata(
-            java.lang.String key,
-            java.lang.String value) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          if (value == null) { throw new java.lang.NullPointerException(); }
-          internalGetMutableMetadata().getMutableMap()
-              .put(key, value);
-          return this;
-        }
-        /**
-         * <code>map&lt;string, string&gt; metadata = 4;</code>
-         */
-
-        public Builder putAllMetadata(
-            java.util.Map<java.lang.String, java.lang.String> values) {
-          internalGetMutableMetadata().getMutableMap()
-              .putAll(values);
-          return this;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:redvox_api1000.RedvoxPacket1000.Timestamps)
-      }
-
-      // @@protoc_insertion_point(class_scope:redvox_api1000.RedvoxPacket1000.Timestamps)
-      private static final io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps();
-      }
-
-      public static io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Timestamps>
-          PARSER = new com.google.protobuf.AbstractParser<Timestamps>() {
-        @java.lang.Override
-        public Timestamps parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Timestamps(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Timestamps> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Timestamps> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Timestamps getDefaultInstanceForType() {
+      public io.redvox.redvox_api1000.RedvoxApi1000.RedvoxPacket1000.Payload getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -37795,25 +36613,15 @@ public final class RedvoxApi1000 {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_ImageChannel_MetadataEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_redvox_api1000_RedvoxPacket1000_Samples_descriptor;
+    internal_static_redvox_api1000_RedvoxPacket1000_Payload_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_redvox_api1000_RedvoxPacket1000_Samples_fieldAccessorTable;
+      internal_static_redvox_api1000_RedvoxPacket1000_Payload_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_redvox_api1000_RedvoxPacket1000_Samples_MetadataEntry_descriptor;
+    internal_static_redvox_api1000_RedvoxPacket1000_Payload_MetadataEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_redvox_api1000_RedvoxPacket1000_Samples_MetadataEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_MetadataEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_MetadataEntry_fieldAccessorTable;
+      internal_static_redvox_api1000_RedvoxPacket1000_Payload_MetadataEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_redvox_api1000_RedvoxPacket1000_SummaryStatistics_descriptor;
   private static final 
@@ -37864,7 +36672,7 @@ public final class RedvoxApi1000 {
   static {
     java.lang.String[] descriptorData = {
       "\n(src/redvox_api1000/redvox_api_1000.pro" +
-      "to\022\016redvox_api1000\"\304F\n\020RedvoxPacket1000\022" +
+      "to\022\016redvox_api1000\"\216D\n\020RedvoxPacket1000\022" +
       "\013\n\003api\030\001 \001(\001\022J\n\020user_information\030\002 \001(\01320" +
       ".redvox_api1000.RedvoxPacket1000.UserInf" +
       "ormation\022P\n\023station_information\030\003 \001(\01323." +
@@ -37885,7 +36693,7 @@ public final class RedvoxApi1000 {
       "\001(\t\022P\n\010metadata\030\004 \003(\0132>.redvox_api1000.R" +
       "edvoxPacket1000.UserInformation.Metadata" +
       "Entry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\032\314\022\n\022StationInformation\022\n\n" +
+      "alue\030\002 \001(\t:\0028\001\032\311\022\n\022StationInformation\022\n\n" +
       "\002id\030\001 \001(\t\022\014\n\004uuid\030\002 \001(\t\022\014\n\004make\030\003 \001(\t\022\r\n" +
       "\005model\030\004 \001(\t\022F\n\002os\030\005 \001(\0162:.redvox_api100" +
       "0.RedvoxPacket1000.StationInformation.Os" +
@@ -37894,219 +36702,211 @@ public final class RedvoxApi1000 {
       "1000.RedvoxPacket1000.StationInformation" +
       ".AppSettings\022U\n\014network_type\030\t \001(\0162?.red" +
       "vox_api1000.RedvoxPacket1000.StationInfo" +
-      "rmation.NetworkType\022S\n\036station_informati" +
-      "on_timestamps\030\n \001(\0132+.redvox_api1000.Red" +
-      "voxPacket1000.Timestamps\022B\n\020network_stre" +
-      "ngth\030\013 \001(\0132(.redvox_api1000.RedvoxPacket" +
-      "1000.Samples\022=\n\013temperature\030\014 \001(\0132(.redv" +
-      "ox_api1000.RedvoxPacket1000.Samples\0229\n\007b" +
-      "attery\030\r \001(\0132(.redvox_api1000.RedvoxPack" +
-      "et1000.Samples\022?\n\ravailable_ram\030\016 \001(\0132(." +
-      "redvox_api1000.RedvoxPacket1000.Samples\022" +
-      "@\n\016available_disk\030\017 \001(\0132(.redvox_api1000" +
-      ".RedvoxPacket1000.Samples\022A\n\017cpu_utiliza" +
-      "tion\030\020 \001(\0132(.redvox_api1000.RedvoxPacket" +
-      "1000.Samples\022S\n\010metadata\030\021 \003(\0132A.redvox_" +
-      "api1000.RedvoxPacket1000.StationInformat" +
-      "ion.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\227\n\n\013AppSettin" +
-      "gs\022q\n\026audio_sampling_rate_hz\030\001 \001(\0162Q.red" +
-      "vox_api1000.RedvoxPacket1000.StationInfo" +
-      "rmation.AppSettings.AudioSamplingRate\022n\n" +
-      "\023audio_source_tuning\030\002 \001(\0162Q.redvox_api1" +
-      "000.RedvoxPacket1000.StationInformation." +
-      "AppSettings.AudioSourceTuning\022m\n\030additio" +
-      "nal_input_sensors\030\003 \003(\0162K.redvox_api1000" +
-      ".RedvoxPacket1000.StationInformation.App" +
-      "Settings.InputSensor\022\034\n\024automatically_re" +
-      "cord\030\004 \001(\010\022\032\n\022launch_at_power_up\030\005 \001(\010\022\021" +
-      "\n\tredvox_id\030\006 \001(\t\022\026\n\016push_to_server\030\007 \001(" +
-      "\010\022\037\n\027publish_data_as_private\030\010 \001(\010\022\033\n\023sc" +
-      "ramble_voice_data\030\t \001(\010\022\030\n\020provide_backf" +
-      "ill\030\n \001(\010\022#\n\033use_custom_time_sync_server" +
-      "\030\013 \001(\010\022\034\n\024time_sync_server_url\030\014 \001(\t\022\036\n\026" +
-      "use_custom_data_server\030\r \001(\010\022\027\n\017data_ser" +
-      "ver_url\030\016 \001(\t\022\036\n\026auto_delete_data_files\030" +
-      "\017 \001(\010\022\037\n\027storage_space_allowance\030\020 \001(\001\022$" +
-      "\n\034use_sd_card_for_data_storage\030\021 \001(\010\022\035\n\025" +
-      "use_location_services\030\022 \001(\010\022\024\n\014use_latit" +
-      "ude\030\023 \001(\001\022\025\n\ruse_longitude\030\024 \001(\001\022_\n\010meta" +
-      "data\030\025 \003(\0132M.redvox_api1000.RedvoxPacket" +
-      "1000.StationInformation.AppSettings.Meta" +
-      "dataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"S\n\021AudioSamplingRate\022" +
-      "\t\n\005HZ_80\020\000\022\n\n\006HZ_800\020\001\022\013\n\007HZ_8000\020\002\022\014\n\010H" +
-      "Z_16000\020\003\022\014\n\010HZ_48000\020\004\"=\n\021AudioSourceTu" +
-      "ning\022\016\n\nINFRASOUND\020\000\022\r\n\tLOW_AUDIO\020\001\022\t\n\005A" +
-      "UDIO\020\002\"\243\001\n\013InputSensor\022\r\n\tBAROMETER\020\000\022\021\n" +
-      "\rACCELEROMETER\020\001\022\026\n\022ACCELEROMETER_FAST\020\002" +
-      "\022\020\n\014MAGNETOMETER\020\003\022\025\n\021MAGNETOMETER_FAST\020" +
-      "\004\022\r\n\tGYROSCOPE\020\005\022\022\n\016GYROSCOPE_FAST\020\006\022\016\n\n" +
-      "LUMINOSITY\020\007\"/\n\013NetworkType\022\010\n\004WIFI\020\000\022\014\n" +
-      "\010CELLULAR\020\001\022\010\n\004NONE\020\002\"6\n\006OsType\022\013\n\007ANDRO" +
-      "ID\020\000\022\007\n\003IOS\020\001\022\t\n\005LINUX\020\002\022\013\n\007WINDOWS\020\003\032\303\001" +
-      "\n\021PacketInformation\022\025\n\ris_backfilled\030\001 \001" +
-      "(\010\022\022\n\nis_private\030\002 \001(\010\022R\n\010metadata\030\003 \003(\013" +
-      "2@.redvox_api1000.RedvoxPacket1000.Packe" +
-      "tInformation.MetadataEntry\032/\n\rMetadataEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\325\005\n\021" +
-      "TimingInformation\022\035\n\025packet_start_ts_us_" +
-      "os\030\001 \001(\001\022\037\n\027packet_start_ts_us_mach\030\002 \001(" +
-      "\001\022\033\n\023packet_end_ts_us_os\030\003 \001(\001\022\035\n\025packet" +
-      "_end_ts_us_mach\030\004 \001(\001\022(\n server_acquisit" +
-      "ion_arrival_ts_us\030\005 \001(\001\022\034\n\024app_start_ts_" +
-      "us_mach\030\006 \001(\001\022Y\n\017synch_exchanges\030\007 \003(\0132@" +
-      ".redvox_api1000.RedvoxPacket1000.TimingI" +
-      "nformation.SynchExchange\022\027\n\017best_latency" +
-      "_us\030\010 \001(\001\022\026\n\016best_offset_us\030\t \001(\001\022R\n\010met" +
-      "adata\030\n \003(\0132@.redvox_api1000.RedvoxPacke" +
-      "t1000.TimingInformation.MetadataEntry\032/\n" +
-      "\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\032\352\001\n\rSynchExchange\022\n\n\002a1\030\001 \001(\001\022\n\n\002" +
-      "a2\030\002 \001(\001\022\n\n\002a3\030\003 \001(\001\022\n\n\002b1\030\004 \001(\001\022\n\n\002b2\030\005" +
-      " \001(\001\022\n\n\002b3\030\006 \001(\001\022`\n\010metadata\030\007 \003(\0132N.red" +
-      "vox_api1000.RedvoxPacket1000.TimingInfor" +
-      "mation.SynchExchange.MetadataEntry\032/\n\rMe" +
-      "tadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\032\353\001\n\021ServerInformation\022\027\n\017auth_server" +
-      "_url\030\001 \001(\t\022\030\n\020synch_server_url\030\002 \001(\t\022\036\n\026" +
-      "acquisition_server_url\030\003 \001(\t\022R\n\010metadata" +
-      "\030\004 \003(\0132@.redvox_api1000.RedvoxPacket1000" +
-      ".ServerInformation.MetadataEntry\032/\n\rMeta" +
-      "dataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\032\316\033\n\016SensorChannels\022S\n\raudio_channel\030\001 " +
-      "\001(\0132<.redvox_api1000.RedvoxPacket1000.Se" +
-      "nsorChannels.AudioChannel\022X\n\021barometer_c" +
-      "hannel\030\002 \001(\0132=.redvox_api1000.RedvoxPack" +
-      "et1000.SensorChannels.SingleChannel\022Y\n\020l" +
-      "ocation_channel\030\003 \001(\0132?.redvox_api1000.R" +
-      "edvoxPacket1000.SensorChannels.LocationC" +
-      "hannel\022Y\n\025accelerometer_channel\030\004 \001(\0132:." +
-      "redvox_api1000.RedvoxPacket1000.SensorCh" +
-      "annels.XyzChannel\022U\n\021gyroscope_channel\030\005" +
-      " \001(\0132:.redvox_api1000.RedvoxPacket1000.S" +
-      "ensorChannels.XyzChannel\022X\n\024magnetometer" +
-      "_channel\030\006 \001(\0132:.redvox_api1000.RedvoxPa" +
-      "cket1000.SensorChannels.XyzChannel\022T\n\rli" +
-      "ght_channel\030\007 \001(\0132=.redvox_api1000.Redvo" +
-      "xPacket1000.SensorChannels.SingleChannel" +
-      "\022W\n\020infrared_channel\030\010 \001(\0132=.redvox_api1" +
-      "000.RedvoxPacket1000.SensorChannels.Sing" +
-      "leChannel\022S\n\rimage_channel\030\t \001(\0132<.redvo" +
-      "x_api1000.RedvoxPacket1000.SensorChannel" +
-      "s.ImageChannel\022O\n\010metadata\030\n \003(\0132=.redvo" +
-      "x_api1000.RedvoxPacket1000.SensorChannel" +
-      "s.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\302\002\n\014AudioChanne" +
-      "l\022\032\n\022sensor_description\030\001 \001(\t\022\036\n\026first_s" +
-      "ample_timestamp\030\002 \001(\001\022\026\n\016sample_rate_hz\030" +
-      "\003 \001(\001\022\024\n\014is_scrambled\030\004 \001(\010\0229\n\007samples\030\005" +
-      " \001(\0132(.redvox_api1000.RedvoxPacket1000.S" +
-      "amples\022\\\n\010metadata\030\006 \003(\0132J.redvox_api100" +
-      "0.RedvoxPacket1000.SensorChannels.AudioC" +
-      "hannel.MetadataEntry\032/\n\rMetadataEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\267\002\n\rSingle" +
-      "Channel\022\032\n\022sensor_description\030\001 \001(\t\022?\n\nt" +
-      "imestamps\030\002 \001(\0132+.redvox_api1000.RedvoxP" +
-      "acket1000.Timestamps\0229\n\007samples\030\003 \001(\0132(." +
-      "redvox_api1000.RedvoxPacket1000.Samples\022" +
-      "]\n\010metadata\030\004 \003(\0132K.redvox_api1000.Redvo" +
-      "xPacket1000.SensorChannels.SingleChannel" +
+      "rmation.NetworkType\022P\n\036station_informati" +
+      "on_timestamps\030\n \001(\0132(.redvox_api1000.Red" +
+      "voxPacket1000.Payload\022B\n\020network_strengt" +
+      "h\030\013 \001(\0132(.redvox_api1000.RedvoxPacket100" +
+      "0.Payload\022=\n\013temperature\030\014 \001(\0132(.redvox_" +
+      "api1000.RedvoxPacket1000.Payload\0229\n\007batt" +
+      "ery\030\r \001(\0132(.redvox_api1000.RedvoxPacket1" +
+      "000.Payload\022?\n\ravailable_ram\030\016 \001(\0132(.red" +
+      "vox_api1000.RedvoxPacket1000.Payload\022@\n\016" +
+      "available_disk\030\017 \001(\0132(.redvox_api1000.Re" +
+      "dvoxPacket1000.Payload\022A\n\017cpu_utilizatio" +
+      "n\030\020 \001(\0132(.redvox_api1000.RedvoxPacket100" +
+      "0.Payload\022S\n\010metadata\030\021 \003(\0132A.redvox_api" +
+      "1000.RedvoxPacket1000.StationInformation" +
       ".MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\234\t\n\017LocationChan" +
-      "nel\022\032\n\022sensor_description\030\001 \001(\t\022?\n\ntimes" +
-      "tamps\030\002 \001(\0132+.redvox_api1000.RedvoxPacke" +
-      "t1000.Timestamps\022B\n\020latitude_samples\030\003 \001" +
-      "(\0132(.redvox_api1000.RedvoxPacket1000.Sam" +
-      "ples\022C\n\021longitude_samples\030\004 \001(\0132(.redvox" +
-      "_api1000.RedvoxPacket1000.Samples\022B\n\020alt" +
-      "itude_samples\030\005 \001(\0132(.redvox_api1000.Red" +
-      "voxPacket1000.Samples\022?\n\rspeed_samples\030\006" +
-      " \001(\0132(.redvox_api1000.RedvoxPacket1000.S" +
-      "amples\022A\n\017bearing_samples\030\007 \001(\0132(.redvox" +
-      "_api1000.RedvoxPacket1000.Samples\022M\n\033hor" +
-      "izontal_accuracy_samples\030\010 \001(\0132(.redvox_" +
-      "api1000.RedvoxPacket1000.Samples\022K\n\031vert" +
-      "ical_accuracy_samples\030\t \001(\0132(.redvox_api" +
-      "1000.RedvoxPacket1000.Samples\022H\n\026speed_a" +
-      "ccuracy_samples\030\n \001(\0132(.redvox_api1000.R" +
-      "edvoxPacket1000.Samples\022J\n\030bearing_accur" +
-      "acy_samples\030\013 \001(\0132(.redvox_api1000.Redvo" +
-      "xPacket1000.Samples\022$\n\034location_permissi" +
-      "ons_granted\030\014 \001(\010\022#\n\033location_services_r" +
-      "equested\030\r \001(\010\022!\n\031location_services_enab" +
-      "led\030\016 \001(\010\022k\n\021location_provider\030\017 \001(\0162P.r" +
-      "edvox_api1000.RedvoxPacket1000.SensorCha" +
-      "nnels.LocationChannel.LocationProvider\022_" +
-      "\n\010metadata\030\032 \003(\0132M.redvox_api1000.Redvox" +
-      "Packet1000.SensorChannels.LocationChanne" +
-      "l.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"<\n\020LocationProv" +
-      "ider\022\010\n\004NONE\020\000\022\010\n\004USER\020\001\022\007\n\003GPS\020\002\022\013\n\007NET" +
-      "WORK\020\003\032\255\003\n\nXyzChannel\022\032\n\022sensor_descript" +
-      "ion\030\001 \001(\t\022?\n\ntimestamps\030\002 \001(\0132+.redvox_a" +
-      "pi1000.RedvoxPacket1000.Timestamps\022;\n\tx_" +
-      "samples\030\004 \001(\0132(.redvox_api1000.RedvoxPac" +
-      "ket1000.Samples\022;\n\ty_samples\030\005 \001(\0132(.red" +
-      "vox_api1000.RedvoxPacket1000.Samples\022;\n\t" +
-      "z_samples\030\006 \001(\0132(.redvox_api1000.RedvoxP" +
-      "acket1000.Samples\022Z\n\010metadata\030\013 \003(\0132H.re" +
-      "dvox_api1000.RedvoxPacket1000.SensorChan" +
-      "nels.XyzChannel.MetadataEntry\032/\n\rMetadat" +
-      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321" +
-      "\002\n\014ImageChannel\022\032\n\022sensor_description\030\001 " +
-      "\001(\t\022\033\n\023mean_sample_rate_hz\030\002 \001(\001\022\024\n\014samp" +
-      "le_ts_us\030\003 \003(\001\022\017\n\007samples\030\004 \003(\014\022R\n\026sampl" +
-      "e_rate_statistics\030\005 \001(\01322.redvox_api1000" +
-      ".RedvoxPacket1000.SummaryStatistics\022\\\n\010m" +
-      "etadata\030\006 \003(\0132J.redvox_api1000.RedvoxPac" +
-      "ket1000.SensorChannels.ImageChannel.Meta" +
-      "dataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\032\231\002\n\007Samples\0223\n\004unit\030\001" +
-      " \001(\0162%.redvox_api1000.RedvoxPacket1000.U" +
-      "nit\022\017\n\007samples\030\002 \003(\001\022M\n\021sample_statistic" +
-      "s\030\003 \001(\01322.redvox_api1000.RedvoxPacket100" +
-      "0.SummaryStatistics\022H\n\010metadata\030\004 \003(\01326." +
-      "redvox_api1000.RedvoxPacket1000.Samples." +
-      "MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\245\002\n\nTimestamps\0223\n" +
-      "\004unit\030\001 \001(\0162%.redvox_api1000.RedvoxPacke" +
-      "t1000.Unit\022\022\n\ntimestamps\030\002 \003(\001\022P\n\024timest" +
-      "amp_statistics\030\003 \001(\01322.redvox_api1000.Re" +
-      "dvoxPacket1000.SummaryStatistics\022K\n\010meta" +
-      "data\030\004 \003(\01329.redvox_api1000.RedvoxPacket" +
-      "1000.Timestamps.MetadataEntry\032/\n\rMetadat" +
-      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\216" +
-      "\002\n\021SummaryStatistics\022\r\n\005count\030\001 \001(\001\022\014\n\004m" +
-      "ean\030\002 \001(\001\022\016\n\006median\030\003 \001(\001\022\014\n\004mode\030\004 \001(\001\022" +
-      "\020\n\010variance\030\005 \001(\001\022\013\n\003min\030\006 \001(\001\022\013\n\003max\030\007 " +
-      "\001(\001\022\r\n\005range\030\010 \001(\001\022R\n\010metadata\030\t \003(\0132@.r" +
-      "edvox_api1000.RedvoxPacket1000.SummarySt" +
-      "atistics.MetadataEntry\032/\n\rMetadataEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\377\001\n\004Unit" +
-      "\022\035\n\031METERS_PER_SECOND_SQUARED\020\000\022\016\n\nKILOP" +
-      "ASCAL\020\001\022\026\n\022RADIANS_PER_SECOND\020\002\022\023\n\017DECIM" +
-      "AL_DEGREES\020\003\022\n\n\006METERS\020\004\022\025\n\021METERS_PER_S" +
-      "ECOND\020\005\022\016\n\nMICROTESLA\020\006\022\031\n\025LSB_PLUS_MINU" +
-      "S_COUNTS\020\007\022!\n\035MICROSECONDS_SINCE_UNIX_EP" +
-      "OCH\020\010\022\013\n\007DECIBEL\020\t\022\023\n\017DEGREES_CELSIUS\020\n\022" +
-      "\010\n\004BYTE\020\013\"\227\001\n\031EncryptedRedvoxPacket1000\022" +
-      "\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014\032Z\n\006Heade" +
-      "r\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 " +
-      "\001(\t\022\022\n\nauth_token\030\003 \001(\t\022\022\n\nauth_email\030\004 " +
-      "\001(\t\"M\n\022AcquisitionRequest\022%\n\035compressed_" +
-      "redvox_packet_1000\030\001 \001(\014\022\020\n\010checksum\030\002 \001" +
-      "(\003\"\332\001\n\023AcquisitionResponse\022G\n\rresponse_t" +
-      "ype\030\001 \001(\01620.redvox_api1000.AcquisitionRe" +
-      "sponse.ResponseType\022\020\n\010checksum\030\002 \001(\003\022\017\n" +
-      "\007details\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"G\n\014Respon" +
-      "seType\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001\022\016\n\nDATA_E" +
-      "RROR\020\002\022\017\n\013OTHER_ERROR\020\003\"2\n\014SynchRequest\022" +
-      "\016\n\006seq_id\030\001 \001(\004\022\022\n\nsub_seq_id\030\002 \001(\r\"[\n\rS" +
-      "ynchResponse\022\016\n\006seq_id\030\001 \001(\004\022\022\n\nsub_seq_" +
-      "id\030\002 \001(\r\022\022\n\nrecv_ts_us\030\003 \001(\004\022\022\n\nsend_ts_" +
-      "us\030\004 \001(\004B\032\n\030io.redvox.redvox_api1000b\006pr" +
-      "oto3"
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\227\n\n\013AppSettings\022" +
+      "q\n\026audio_sampling_rate_hz\030\001 \001(\0162Q.redvox" +
+      "_api1000.RedvoxPacket1000.StationInforma" +
+      "tion.AppSettings.AudioSamplingRate\022n\n\023au" +
+      "dio_source_tuning\030\002 \001(\0162Q.redvox_api1000" +
+      ".RedvoxPacket1000.StationInformation.App" +
+      "Settings.AudioSourceTuning\022m\n\030additional" +
+      "_input_sensors\030\003 \003(\0162K.redvox_api1000.Re" +
+      "dvoxPacket1000.StationInformation.AppSet" +
+      "tings.InputSensor\022\034\n\024automatically_recor" +
+      "d\030\004 \001(\010\022\032\n\022launch_at_power_up\030\005 \001(\010\022\021\n\tr" +
+      "edvox_id\030\006 \001(\t\022\026\n\016push_to_server\030\007 \001(\010\022\037" +
+      "\n\027publish_data_as_private\030\010 \001(\010\022\033\n\023scram" +
+      "ble_voice_data\030\t \001(\010\022\030\n\020provide_backfill" +
+      "\030\n \001(\010\022#\n\033use_custom_time_sync_server\030\013 " +
+      "\001(\010\022\034\n\024time_sync_server_url\030\014 \001(\t\022\036\n\026use" +
+      "_custom_data_server\030\r \001(\010\022\027\n\017data_server" +
+      "_url\030\016 \001(\t\022\036\n\026auto_delete_data_files\030\017 \001" +
+      "(\010\022\037\n\027storage_space_allowance\030\020 \001(\001\022$\n\034u" +
+      "se_sd_card_for_data_storage\030\021 \001(\010\022\035\n\025use" +
+      "_location_services\030\022 \001(\010\022\024\n\014use_latitude" +
+      "\030\023 \001(\001\022\025\n\ruse_longitude\030\024 \001(\001\022_\n\010metadat" +
+      "a\030\025 \003(\0132M.redvox_api1000.RedvoxPacket100" +
+      "0.StationInformation.AppSettings.Metadat" +
+      "aEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"S\n\021AudioSamplingRate\022\t\n\005" +
+      "HZ_80\020\000\022\n\n\006HZ_800\020\001\022\013\n\007HZ_8000\020\002\022\014\n\010HZ_1" +
+      "6000\020\003\022\014\n\010HZ_48000\020\004\"=\n\021AudioSourceTunin" +
+      "g\022\016\n\nINFRASOUND\020\000\022\r\n\tLOW_AUDIO\020\001\022\t\n\005AUDI" +
+      "O\020\002\"\243\001\n\013InputSensor\022\r\n\tBAROMETER\020\000\022\021\n\rAC" +
+      "CELEROMETER\020\001\022\026\n\022ACCELEROMETER_FAST\020\002\022\020\n" +
+      "\014MAGNETOMETER\020\003\022\025\n\021MAGNETOMETER_FAST\020\004\022\r" +
+      "\n\tGYROSCOPE\020\005\022\022\n\016GYROSCOPE_FAST\020\006\022\016\n\nLUM" +
+      "INOSITY\020\007\"/\n\013NetworkType\022\010\n\004WIFI\020\000\022\014\n\010CE" +
+      "LLULAR\020\001\022\010\n\004NONE\020\002\"6\n\006OsType\022\013\n\007ANDROID\020" +
+      "\000\022\007\n\003IOS\020\001\022\t\n\005LINUX\020\002\022\013\n\007WINDOWS\020\003\032\303\001\n\021P" +
+      "acketInformation\022\025\n\ris_backfilled\030\001 \001(\010\022" +
+      "\022\n\nis_private\030\002 \001(\010\022R\n\010metadata\030\003 \003(\0132@." +
+      "redvox_api1000.RedvoxPacket1000.PacketIn" +
+      "formation.MetadataEntry\032/\n\rMetadataEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\325\005\n\021Tim" +
+      "ingInformation\022\035\n\025packet_start_ts_us_os\030" +
+      "\001 \001(\001\022\037\n\027packet_start_ts_us_mach\030\002 \001(\001\022\033" +
+      "\n\023packet_end_ts_us_os\030\003 \001(\001\022\035\n\025packet_en" +
+      "d_ts_us_mach\030\004 \001(\001\022(\n server_acquisition" +
+      "_arrival_ts_us\030\005 \001(\001\022\034\n\024app_start_ts_us_" +
+      "mach\030\006 \001(\001\022Y\n\017synch_exchanges\030\007 \003(\0132@.re" +
+      "dvox_api1000.RedvoxPacket1000.TimingInfo" +
+      "rmation.SynchExchange\022\027\n\017best_latency_us" +
+      "\030\010 \001(\001\022\026\n\016best_offset_us\030\t \001(\001\022R\n\010metada" +
+      "ta\030\n \003(\0132@.redvox_api1000.RedvoxPacket10" +
+      "00.TimingInformation.MetadataEntry\032/\n\rMe" +
+      "tadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\032\352\001\n\rSynchExchange\022\n\n\002a1\030\001 \001(\001\022\n\n\002a2\030" +
+      "\002 \001(\001\022\n\n\002a3\030\003 \001(\001\022\n\n\002b1\030\004 \001(\001\022\n\n\002b2\030\005 \001(" +
+      "\001\022\n\n\002b3\030\006 \001(\001\022`\n\010metadata\030\007 \003(\0132N.redvox" +
+      "_api1000.RedvoxPacket1000.TimingInformat" +
+      "ion.SynchExchange.MetadataEntry\032/\n\rMetad" +
+      "ataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\032\353\001\n\021ServerInformation\022\027\n\017auth_server_ur" +
+      "l\030\001 \001(\t\022\030\n\020synch_server_url\030\002 \001(\t\022\036\n\026acq" +
+      "uisition_server_url\030\003 \001(\t\022R\n\010metadata\030\004 " +
+      "\003(\0132@.redvox_api1000.RedvoxPacket1000.Se" +
+      "rverInformation.MetadataEntry\032/\n\rMetadat" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\305" +
+      "\033\n\016SensorChannels\022S\n\raudio_channel\030\001 \001(\013" +
+      "2<.redvox_api1000.RedvoxPacket1000.Senso" +
+      "rChannels.AudioChannel\022X\n\021barometer_chan" +
+      "nel\030\002 \001(\0132=.redvox_api1000.RedvoxPacket1" +
+      "000.SensorChannels.SingleChannel\022Y\n\020loca" +
+      "tion_channel\030\003 \001(\0132?.redvox_api1000.Redv" +
+      "oxPacket1000.SensorChannels.LocationChan" +
+      "nel\022Y\n\025accelerometer_channel\030\004 \001(\0132:.red" +
+      "vox_api1000.RedvoxPacket1000.SensorChann" +
+      "els.XyzChannel\022U\n\021gyroscope_channel\030\005 \001(" +
+      "\0132:.redvox_api1000.RedvoxPacket1000.Sens" +
+      "orChannels.XyzChannel\022X\n\024magnetometer_ch" +
+      "annel\030\006 \001(\0132:.redvox_api1000.RedvoxPacke" +
+      "t1000.SensorChannels.XyzChannel\022T\n\rlight" +
+      "_channel\030\007 \001(\0132=.redvox_api1000.RedvoxPa" +
+      "cket1000.SensorChannels.SingleChannel\022W\n" +
+      "\020infrared_channel\030\010 \001(\0132=.redvox_api1000" +
+      ".RedvoxPacket1000.SensorChannels.SingleC" +
+      "hannel\022S\n\rimage_channel\030\t \001(\0132<.redvox_a" +
+      "pi1000.RedvoxPacket1000.SensorChannels.I" +
+      "mageChannel\022O\n\010metadata\030\n \003(\0132=.redvox_a" +
+      "pi1000.RedvoxPacket1000.SensorChannels.M" +
+      "etadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\302\002\n\014AudioChannel\022\032" +
+      "\n\022sensor_description\030\001 \001(\t\022\036\n\026first_samp" +
+      "le_timestamp\030\002 \001(\001\022\026\n\016sample_rate_hz\030\003 \001" +
+      "(\001\022\024\n\014is_scrambled\030\004 \001(\010\0229\n\007samples\030\005 \001(" +
+      "\0132(.redvox_api1000.RedvoxPacket1000.Payl" +
+      "oad\022\\\n\010metadata\030\006 \003(\0132J.redvox_api1000.R" +
+      "edvoxPacket1000.SensorChannels.AudioChan" +
+      "nel.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\264\002\n\rSingleCha" +
+      "nnel\022\032\n\022sensor_description\030\001 \001(\t\022<\n\ntime" +
+      "stamps\030\002 \001(\0132(.redvox_api1000.RedvoxPack" +
+      "et1000.Payload\0229\n\007samples\030\003 \001(\0132(.redvox" +
+      "_api1000.RedvoxPacket1000.Payload\022]\n\010met" +
+      "adata\030\004 \003(\0132K.redvox_api1000.RedvoxPacke" +
+      "t1000.SensorChannels.SingleChannel.Metad" +
+      "ataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\032\231\t\n\017LocationChannel\022\032\n" +
+      "\022sensor_description\030\001 \001(\t\022<\n\ntimestamps\030" +
+      "\002 \001(\0132(.redvox_api1000.RedvoxPacket1000." +
+      "Payload\022B\n\020latitude_samples\030\003 \001(\0132(.redv" +
+      "ox_api1000.RedvoxPacket1000.Payload\022C\n\021l" +
+      "ongitude_samples\030\004 \001(\0132(.redvox_api1000." +
+      "RedvoxPacket1000.Payload\022B\n\020altitude_sam" +
+      "ples\030\005 \001(\0132(.redvox_api1000.RedvoxPacket" +
+      "1000.Payload\022?\n\rspeed_samples\030\006 \001(\0132(.re" +
+      "dvox_api1000.RedvoxPacket1000.Payload\022A\n" +
+      "\017bearing_samples\030\007 \001(\0132(.redvox_api1000." +
+      "RedvoxPacket1000.Payload\022M\n\033horizontal_a" +
+      "ccuracy_samples\030\010 \001(\0132(.redvox_api1000.R" +
+      "edvoxPacket1000.Payload\022K\n\031vertical_accu" +
+      "racy_samples\030\t \001(\0132(.redvox_api1000.Redv" +
+      "oxPacket1000.Payload\022H\n\026speed_accuracy_s" +
+      "amples\030\n \001(\0132(.redvox_api1000.RedvoxPack" +
+      "et1000.Payload\022J\n\030bearing_accuracy_sampl" +
+      "es\030\013 \001(\0132(.redvox_api1000.RedvoxPacket10" +
+      "00.Payload\022$\n\034location_permissions_grant" +
+      "ed\030\014 \001(\010\022#\n\033location_services_requested\030" +
+      "\r \001(\010\022!\n\031location_services_enabled\030\016 \001(\010" +
+      "\022k\n\021location_provider\030\017 \001(\0162P.redvox_api" +
+      "1000.RedvoxPacket1000.SensorChannels.Loc" +
+      "ationChannel.LocationProvider\022_\n\010metadat" +
+      "a\030\032 \003(\0132M.redvox_api1000.RedvoxPacket100" +
+      "0.SensorChannels.LocationChannel.Metadat" +
+      "aEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"<\n\020LocationProvider\022\010\n\004N" +
+      "ONE\020\000\022\010\n\004USER\020\001\022\007\n\003GPS\020\002\022\013\n\007NETWORK\020\003\032\252\003" +
+      "\n\nXyzChannel\022\032\n\022sensor_description\030\001 \001(\t" +
+      "\022<\n\ntimestamps\030\002 \001(\0132(.redvox_api1000.Re" +
+      "dvoxPacket1000.Payload\022;\n\tx_samples\030\004 \001(" +
+      "\0132(.redvox_api1000.RedvoxPacket1000.Payl" +
+      "oad\022;\n\ty_samples\030\005 \001(\0132(.redvox_api1000." +
+      "RedvoxPacket1000.Payload\022;\n\tz_samples\030\006 " +
+      "\001(\0132(.redvox_api1000.RedvoxPacket1000.Pa" +
+      "yload\022Z\n\010metadata\030\013 \003(\0132H.redvox_api1000" +
+      ".RedvoxPacket1000.SensorChannels.XyzChan" +
+      "nel.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321\002\n\014ImageChan" +
+      "nel\022\032\n\022sensor_description\030\001 \001(\t\022\033\n\023mean_" +
+      "sample_rate_hz\030\002 \001(\001\022\024\n\014sample_ts_us\030\003 \003" +
+      "(\001\022\017\n\007samples\030\004 \003(\014\022R\n\026sample_rate_stati" +
+      "stics\030\005 \001(\01322.redvox_api1000.RedvoxPacke" +
+      "t1000.SummaryStatistics\022\\\n\010metadata\030\006 \003(" +
+      "\0132J.redvox_api1000.RedvoxPacket1000.Sens" +
+      "orChannels.ImageChannel.MetadataEntry\032/\n" +
+      "\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\032\227\002\n\007Payload\0223\n\004unit\030\001 \001(\0162%.redvo" +
+      "x_api1000.RedvoxPacket1000.Unit\022\016\n\006value" +
+      "s\030\002 \003(\001\022L\n\020value_statistics\030\003 \001(\01322.redv" +
+      "ox_api1000.RedvoxPacket1000.SummaryStati" +
+      "stics\022H\n\010metadata\030\004 \003(\01326.redvox_api1000" +
+      ".RedvoxPacket1000.Payload.MetadataEntry\032" +
+      "/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\032\216\002\n\021SummaryStatistics\022\r\n\005count\030" +
+      "\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\016\n\006median\030\003 \001(\001\022\014\n\004m" +
+      "ode\030\004 \001(\001\022\020\n\010variance\030\005 \001(\001\022\013\n\003min\030\006 \001(\001" +
+      "\022\013\n\003max\030\007 \001(\001\022\r\n\005range\030\010 \001(\001\022R\n\010metadata" +
+      "\030\t \003(\0132@.redvox_api1000.RedvoxPacket1000" +
+      ".SummaryStatistics.MetadataEntry\032/\n\rMeta" +
+      "dataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"\377\001\n\004Unit\022\035\n\031METERS_PER_SECOND_SQUARED\020" +
+      "\000\022\016\n\nKILOPASCAL\020\001\022\026\n\022RADIANS_PER_SECOND\020" +
+      "\002\022\023\n\017DECIMAL_DEGREES\020\003\022\n\n\006METERS\020\004\022\025\n\021ME" +
+      "TERS_PER_SECOND\020\005\022\016\n\nMICROTESLA\020\006\022\031\n\025LSB" +
+      "_PLUS_MINUS_COUNTS\020\007\022!\n\035MICROSECONDS_SIN" +
+      "CE_UNIX_EPOCH\020\010\022\013\n\007DECIBEL\020\t\022\023\n\017DEGREES_" +
+      "CELSIUS\020\n\022\010\n\004BYTE\020\013\"\227\001\n\031EncryptedRedvoxP" +
+      "acket1000\022\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001(" +
+      "\014\032Z\n\006Header\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014stati" +
+      "on_uuid\030\002 \001(\t\022\022\n\nauth_token\030\003 \001(\t\022\022\n\naut" +
+      "h_email\030\004 \001(\t\"M\n\022AcquisitionRequest\022%\n\035c" +
+      "ompressed_redvox_packet_1000\030\001 \001(\014\022\020\n\010ch" +
+      "ecksum\030\002 \001(\003\"\332\001\n\023AcquisitionResponse\022G\n\r" +
+      "response_type\030\001 \001(\01620.redvox_api1000.Acq" +
+      "uisitionResponse.ResponseType\022\020\n\010checksu" +
+      "m\030\002 \001(\003\022\017\n\007details\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010" +
+      "\"G\n\014ResponseType\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001" +
+      "\022\016\n\nDATA_ERROR\020\002\022\017\n\013OTHER_ERROR\020\003\"2\n\014Syn" +
+      "chRequest\022\016\n\006seq_id\030\001 \001(\004\022\022\n\nsub_seq_id\030" +
+      "\002 \001(\r\"[\n\rSynchResponse\022\016\n\006seq_id\030\001 \001(\004\022\022" +
+      "\n\nsub_seq_id\030\002 \001(\r\022\022\n\nrecv_ts_us\030\003 \001(\004\022\022" +
+      "\n\nsend_ts_us\030\004 \001(\004B\032\n\030io.redvox.redvox_a" +
+      "pi1000b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -38288,32 +37088,20 @@ public final class RedvoxApi1000 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_SensorChannels_ImageChannel_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_redvox_api1000_RedvoxPacket1000_Samples_descriptor =
+    internal_static_redvox_api1000_RedvoxPacket1000_Payload_descriptor =
       internal_static_redvox_api1000_RedvoxPacket1000_descriptor.getNestedTypes().get(7);
-    internal_static_redvox_api1000_RedvoxPacket1000_Samples_fieldAccessorTable = new
+    internal_static_redvox_api1000_RedvoxPacket1000_Payload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_redvox_api1000_RedvoxPacket1000_Samples_descriptor,
-        new java.lang.String[] { "Unit", "Samples", "SampleStatistics", "Metadata", });
-    internal_static_redvox_api1000_RedvoxPacket1000_Samples_MetadataEntry_descriptor =
-      internal_static_redvox_api1000_RedvoxPacket1000_Samples_descriptor.getNestedTypes().get(0);
-    internal_static_redvox_api1000_RedvoxPacket1000_Samples_MetadataEntry_fieldAccessorTable = new
+        internal_static_redvox_api1000_RedvoxPacket1000_Payload_descriptor,
+        new java.lang.String[] { "Unit", "Values", "ValueStatistics", "Metadata", });
+    internal_static_redvox_api1000_RedvoxPacket1000_Payload_MetadataEntry_descriptor =
+      internal_static_redvox_api1000_RedvoxPacket1000_Payload_descriptor.getNestedTypes().get(0);
+    internal_static_redvox_api1000_RedvoxPacket1000_Payload_MetadataEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_redvox_api1000_RedvoxPacket1000_Samples_MetadataEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_descriptor =
-      internal_static_redvox_api1000_RedvoxPacket1000_descriptor.getNestedTypes().get(8);
-    internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_descriptor,
-        new java.lang.String[] { "Unit", "Timestamps", "TimestampStatistics", "Metadata", });
-    internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_MetadataEntry_descriptor =
-      internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_descriptor.getNestedTypes().get(0);
-    internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_MetadataEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_redvox_api1000_RedvoxPacket1000_Timestamps_MetadataEntry_descriptor,
+        internal_static_redvox_api1000_RedvoxPacket1000_Payload_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_redvox_api1000_RedvoxPacket1000_SummaryStatistics_descriptor =
-      internal_static_redvox_api1000_RedvoxPacket1000_descriptor.getNestedTypes().get(9);
+      internal_static_redvox_api1000_RedvoxPacket1000_descriptor.getNestedTypes().get(8);
     internal_static_redvox_api1000_RedvoxPacket1000_SummaryStatistics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api1000_RedvoxPacket1000_SummaryStatistics_descriptor,
