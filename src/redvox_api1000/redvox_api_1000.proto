@@ -182,22 +182,33 @@ message RedvoxPacket1000 {
             string sensor_description = 1;                      // The name or description of the sensor
             double mean_sample_rate_hz = 2;                     // The mean sample rate in Hz
             repeated double sample_ts_us = 3;                   // A list of timestamps, one for each sample
+
             repeated double latitude_samples = 4;               // A list of latitude samples
             repeated double longitude_samples = 5;              // A list of longitude samples
             repeated double altitude_samples = 6;               // A list of altitude samples
             repeated double speed_samples = 7;                  // A list of speed samples
-            repeated double accuracy_samples = 8;               // A list of accuracy samples
-            bool location_permissions_granted = 9;              // Have location permissions been granted by the user?
-            bool location_services_requested = 10;              // Has location services been requested by the user?
-            bool location_services_enabled = 11;                // Are location services enabled and working?
-            LocationProvider location_provider = 12;            // Location provider enumeration
-            SummaryStatistics sample_rate_statistics = 13;      // Statistics for sample timestamps
-            SummaryStatistics latitude_sample_statistics = 14;  // Statistics for latitude samples
-            SummaryStatistics longitude_sample_statistics = 15; // Statistics for longitude samples
-            SummaryStatistics altitude_sample_statistics = 16;  // Statistics for altitude samples
-            SummaryStatistics speed_sample_statistics = 17;     // Statistics for speed samples
-            SummaryStatistics accuracy_sample_statistics = 18;  // Statistics for accuracy samples
-            map<string, string> metadata = 19;                  // A map from string to string for including untyped metadata
+            repeated double bearing_samples = 8;
+            repeated double horizontal_accuracy_samples = 9;    // A list of accuracy samples
+            repeated double vertical_accuracy_samples = 10;
+            repeated double speed_accuracy_samples = 11;
+            repeated double bearing_accuracy_samples = 12;
+
+            bool location_permissions_granted = 13;             // Have location permissions been granted by the user?
+            bool location_services_requested = 14;              // Has location services been requested by the user?
+            bool location_services_enabled = 15;                // Are location services enabled and working?
+            LocationProvider location_provider = 16;            // Location provider enumeration
+            SummaryStatistics sample_rate_statistics = 17;      // Statistics for sample timestamps
+
+            SummaryStatistics latitude_sample_statistics = 18;  // Statistics for latitude samples
+            SummaryStatistics longitude_sample_statistics = 19; // Statistics for longitude samples
+            SummaryStatistics altitude_sample_statistics = 20;  // Statistics for altitude samples
+            SummaryStatistics speed_sample_statistics = 21;     // Statistics for speed samples
+            SummaryStatistics bearing_sample_statistics = 22;   // Statistics for speed samples
+            SummaryStatistics horizontal_accuracy_sample_statistics = 23;   // Statistics for accuracy samples
+            SummaryStatistics vertical_accuracy_sample_statistics = 24;     // Statistics for accuracy samples
+            SummaryStatistics speed_accuracy_sample_statistics = 25;        // Statistics for accuracy samples
+            SummaryStatistics bearing_accuracy_sample_statistics = 26;      // Statistics for accuracy samples
+            map<string, string> metadata = 27;                              // A map from string to string for including untyped metadata
 
             enum LocationProvider {
                 NONE = 0;
