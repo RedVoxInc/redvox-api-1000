@@ -160,55 +160,39 @@ message RedvoxPacket1000 {
 
         message AudioChannel {
             string sensor_description = 1;              // The name or description of the audio sensor
-            double first_sample_ts_us = 2;              // Timestamp of the first audio sample
+            double first_sample_timestamp = 2;              // Timestamp of the first audio sample
             double sample_rate_hz = 3;                  // Microphone sample rate in Hz
             bool is_scrambled = 4;                      // If audio data has been scrambled to remove voice
-            repeated double samples = 5;                // List of audio samples
-            SummaryStatistics sample_statistics = 6;    // Statistics for audio samples
-            map<string, string> metadata = 7;           // A map from string to string for including untyped metadata
+            Samples samples = 5;                // List of audio samples
+            map<string, string> metadata = 6;           // A map from string to string for including untyped metadata
         }
 
         message SingleChannel {
             string sensor_description = 1;                  // The name or description of the sensor
-            double mean_sample_rate_hz = 2;                 // The mean sample rate in Hz
-            repeated double sample_ts_us = 3;               // A list of timestamps, one for each sample
-            repeated double samples = 4;                    // A list of samples
-            SummaryStatistics sample_rate_statistics = 5;   // Statistics for sample timestamps
-            SummaryStatistics sample_statistics = 6;        // Statistics for samples
-            map<string, string> metadata = 7;               // A map from string to string for including untyped metadata
+            Timestamps timestamps = 2;
+            Samples samples = 3;
+            map<string, string> metadata = 4;               // A map from string to string for including untyped metadata
         }
 
         message LocationChannel {
             string sensor_description = 1;                      // The name or description of the sensor
-            double mean_sample_rate_hz = 2;                     // The mean sample rate in Hz
-            repeated double sample_ts_us = 3;                   // A list of timestamps, one for each sample
+            Timestamps timestamps = 2;
+            Samples latitude_samples = 3;               // A list of latitude samples
+            Samples longitude_samples = 4;              // A list of longitude samples
+            Samples altitude_samples = 5;               // A list of altitude samples
+            Samples speed_samples = 6;                  // A list of speed samples
+            Samples bearing_samples = 7;
+            Samples horizontal_accuracy_samples = 8;    // A list of accuracy samples
+            Samples vertical_accuracy_samples = 9;
+            Samples speed_accuracy_samples = 10;
+            Samples bearing_accuracy_samples = 11;
 
-            repeated double latitude_samples = 4;               // A list of latitude samples
-            repeated double longitude_samples = 5;              // A list of longitude samples
-            repeated double altitude_samples = 6;               // A list of altitude samples
-            repeated double speed_samples = 7;                  // A list of speed samples
-            repeated double bearing_samples = 8;
-            repeated double horizontal_accuracy_samples = 9;    // A list of accuracy samples
-            repeated double vertical_accuracy_samples = 10;
-            repeated double speed_accuracy_samples = 11;
-            repeated double bearing_accuracy_samples = 12;
+            bool location_permissions_granted = 12;             // Have location permissions been granted by the user?
+            bool location_services_requested = 13;              // Has location services been requested by the user?
+            bool location_services_enabled = 14;                // Are location services enabled and working?
+            LocationProvider location_provider = 15;            // Location provider enumeration
 
-            bool location_permissions_granted = 13;             // Have location permissions been granted by the user?
-            bool location_services_requested = 14;              // Has location services been requested by the user?
-            bool location_services_enabled = 15;                // Are location services enabled and working?
-            LocationProvider location_provider = 16;            // Location provider enumeration
-            SummaryStatistics sample_rate_statistics = 17;      // Statistics for sample timestamps
-
-            SummaryStatistics latitude_sample_statistics = 18;  // Statistics for latitude samples
-            SummaryStatistics longitude_sample_statistics = 19; // Statistics for longitude samples
-            SummaryStatistics altitude_sample_statistics = 20;  // Statistics for altitude samples
-            SummaryStatistics speed_sample_statistics = 21;     // Statistics for speed samples
-            SummaryStatistics bearing_sample_statistics = 22;   // Statistics for speed samples
-            SummaryStatistics horizontal_accuracy_sample_statistics = 23;   // Statistics for accuracy samples
-            SummaryStatistics vertical_accuracy_sample_statistics = 24;     // Statistics for accuracy samples
-            SummaryStatistics speed_accuracy_sample_statistics = 25;        // Statistics for accuracy samples
-            SummaryStatistics bearing_accuracy_sample_statistics = 26;      // Statistics for accuracy samples
-            map<string, string> metadata = 27;                              // A map from string to string for including untyped metadata
+            map<string, string> metadata = 26;                              // A map from string to string for including untyped metadata
 
             enum LocationProvider {
                 NONE = 0;
@@ -220,15 +204,10 @@ message RedvoxPacket1000 {
 
         message XyzChannel {
             string sensor_description = 1;                  // The name or description of the sensor
-            double mean_sample_rate_hz = 2;                 // The mean sample rate in Hz
-            repeated double sample_ts_us = 3;               // A list of timestamps, one for each sample
-            repeated double x_samples = 4;                  // A list of samples for the X-channel
-            repeated double y_samples = 5;                  // A list of samples for the Y-channel
-            repeated double z_samples = 6;                  // A list of samples for the Z-channel
-            SummaryStatistics sample_rate_statistics = 7;   // Statistics for sample timestamps
-            SummaryStatistics x_sample_statistics = 8;      // Statistics for X-channel
-            SummaryStatistics y_sample_statistics = 9;      // Statistics for Y-channel
-            SummaryStatistics z_sample_statistics = 10;     // Statistics for Z-channel
+            Timestamps timestamps = 2;
+            Samples x_samples = 4;                  // A list of samples for the X-channel
+            Samples y_samples = 5;                  // A list of samples for the Y-channel
+            Samples z_samples = 6;                  // A list of samples for the Z-channel
             map<string, string> metadata = 11;              // A map from string to string for including untyped metadata
         }
 
@@ -240,6 +219,30 @@ message RedvoxPacket1000 {
             SummaryStatistics sample_rate_statistics = 5;   // Statistics for sample timestamps
             map<string, string> metadata = 6;               // A map from string to string for including untyped metadata
         }
+    }
+
+    message Samples {
+        Unit unit = 1;
+        repeated double samples = 2;
+        SummaryStatistics sample_statistics = 3;
+    }
+
+    message Timestamps {
+        Unit unit = 1;
+        repeated double timestamps = 2;
+        SummaryStatistics timestamp_statistics = 3;
+    }
+
+    enum Unit {
+        METERS_PER_SECOND_SQUARED = 0;
+        KILOPASCAL = 1;
+        RADIANS_PER_SECOND = 2;
+        DECIMAL_DEGREES = 3;
+        METERS = 4;
+        METERS_PER_SECOND = 5;
+        MICROTESLA = 6;
+        LSB_PLUS_MINUS_COUNTS = 7;
+        MICROSECONDS_SINCE_UNIX_EPOCH = 8;
     }
 
     message SummaryStatistics {
@@ -262,8 +265,8 @@ message RedvoxPacket1000 {
 //   Serialization: Object -> serialize to bytes -> LZ4 frame compress -> encrypt -> payload bytes
 //   Deserialization: Payload bytes -> decrypt -> LZ4 frame decompress -> deserialize from bytes -> object
 message EncryptedRedvoxPacket1000 {
-    bytes header = 1;   // redvox encrypted(compressed(Header))
-    bytes packet = 2;   // user encrypted(compressed(RedvoxPacketApi1000))
+    bytes header = 1;   // redvox encrypt(compress(EncryptedRedvoxPacket1000.Header))
+    bytes packet = 2;   // user encrypt(compress(RedvoxPacketApi1000))
 
     message Header {
         string station_id = 1;
