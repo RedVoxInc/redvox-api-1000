@@ -262,8 +262,8 @@ message RedvoxPacket1000 {
 //   Serialization: Object -> serialize to bytes -> LZ4 frame compress -> encrypt -> payload bytes
 //   Deserialization: Payload bytes -> decrypt -> LZ4 frame decompress -> deserialize from bytes -> object
 message EncryptedRedvoxPacket1000 {
-    bytes header = 1;
-    bytes packet = 2;
+    bytes header = 1;   // redvox encrypted(compressed(Header))
+    bytes packet = 2;   // user encrypted(compressed(RedvoxPacketApi1000))
 
     message Header {
         string station_id = 1;
