@@ -264,7 +264,7 @@ message RedvoxPacket1000 {
 message EncryptedRedvoxPacket1000 {
     bytes header = 1;
     bytes packet = 2;
-    
+
     message Header {
         string station_id = 1;
         string station_uuid = 2;
