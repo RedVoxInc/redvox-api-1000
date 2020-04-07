@@ -226,12 +226,14 @@ message RedvoxPacket1000 {
         Unit unit = 1;
         repeated double samples = 2;
         SummaryStatistics sample_statistics = 3;
+        map<string, string> metadata = 4;
     }
 
     message Timestamps {
         Unit unit = 1;
         repeated double timestamps = 2;
         SummaryStatistics timestamp_statistics = 3;
+        map<string, string> metadata = 4;
     }
 
     enum Unit {

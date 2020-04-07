@@ -1021,6 +1021,7 @@ typedef GPB_ENUM(RedvoxPacket1000_Samples_FieldNumber) {
   RedvoxPacket1000_Samples_FieldNumber_Unit = 1,
   RedvoxPacket1000_Samples_FieldNumber_SamplesArray = 2,
   RedvoxPacket1000_Samples_FieldNumber_SampleStatistics = 3,
+  RedvoxPacket1000_Samples_FieldNumber_Metadata = 4,
 };
 
 @interface RedvoxPacket1000_Samples : GPBMessage
@@ -1034,6 +1035,10 @@ typedef GPB_ENUM(RedvoxPacket1000_Samples_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *sampleStatistics;
 /** Test to see if @c sampleStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasSampleStatistics;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
 
 @end
 
@@ -1055,6 +1060,7 @@ typedef GPB_ENUM(RedvoxPacket1000_Timestamps_FieldNumber) {
   RedvoxPacket1000_Timestamps_FieldNumber_Unit = 1,
   RedvoxPacket1000_Timestamps_FieldNumber_TimestampsArray = 2,
   RedvoxPacket1000_Timestamps_FieldNumber_TimestampStatistics = 3,
+  RedvoxPacket1000_Timestamps_FieldNumber_Metadata = 4,
 };
 
 @interface RedvoxPacket1000_Timestamps : GPBMessage
@@ -1068,6 +1074,10 @@ typedef GPB_ENUM(RedvoxPacket1000_Timestamps_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SummaryStatistics *timestampStatistics;
 /** Test to see if @c timestampStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasTimestampStatistics;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
 
 @end
 

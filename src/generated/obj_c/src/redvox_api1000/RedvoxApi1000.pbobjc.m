@@ -2210,12 +2210,14 @@ typedef struct RedvoxPacket1000_SensorChannels_ImageChannel__storage_ {
 @dynamic unit;
 @dynamic samplesArray, samplesArray_Count;
 @dynamic hasSampleStatistics, sampleStatistics;
+@dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacket1000_Samples__storage_ {
   uint32_t _has_storage_[1];
   RedvoxPacket1000_Unit unit;
   GPBDoubleArray *samplesArray;
   RedvoxPacket1000_SummaryStatistics *sampleStatistics;
+  NSMutableDictionary *metadata;
 } RedvoxPacket1000_Samples__storage_;
 
 // This method is threadsafe because it is initially called
@@ -2250,6 +2252,15 @@ typedef struct RedvoxPacket1000_Samples__storage_ {
         .offset = (uint32_t)offsetof(RedvoxPacket1000_Samples__storage_, sampleStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "metadata",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_Samples_FieldNumber_Metadata,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_Samples__storage_, metadata),
+        .flags = GPBFieldMapKeyString,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -2288,12 +2299,14 @@ void SetRedvoxPacket1000_Samples_Unit_RawValue(RedvoxPacket1000_Samples *message
 @dynamic unit;
 @dynamic timestampsArray, timestampsArray_Count;
 @dynamic hasTimestampStatistics, timestampStatistics;
+@dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacket1000_Timestamps__storage_ {
   uint32_t _has_storage_[1];
   RedvoxPacket1000_Unit unit;
   GPBDoubleArray *timestampsArray;
   RedvoxPacket1000_SummaryStatistics *timestampStatistics;
+  NSMutableDictionary *metadata;
 } RedvoxPacket1000_Timestamps__storage_;
 
 // This method is threadsafe because it is initially called
@@ -2328,6 +2341,15 @@ typedef struct RedvoxPacket1000_Timestamps__storage_ {
         .offset = (uint32_t)offsetof(RedvoxPacket1000_Timestamps__storage_, timestampStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "metadata",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacket1000_Timestamps_FieldNumber_Metadata,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_Timestamps__storage_, metadata),
+        .flags = GPBFieldMapKeyString,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
