@@ -584,37 +584,38 @@ typedef GPB_ENUM(RedvoxPacket1000_PacketInformation_FieldNumber) {
 #pragma mark - RedvoxPacket1000_TimingInformation
 
 typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_FieldNumber) {
-  RedvoxPacket1000_TimingInformation_FieldNumber_PacketStartTsUsOs = 1,
-  RedvoxPacket1000_TimingInformation_FieldNumber_PacketStartTsUsMach = 2,
-  RedvoxPacket1000_TimingInformation_FieldNumber_PacketEndTsUsOs = 3,
-  RedvoxPacket1000_TimingInformation_FieldNumber_PacketEndTsUsMach = 4,
-  RedvoxPacket1000_TimingInformation_FieldNumber_ServerAcquisitionArrivalTsUs = 5,
-  RedvoxPacket1000_TimingInformation_FieldNumber_AppStartTsUsMach = 6,
+  RedvoxPacket1000_TimingInformation_FieldNumber_PacketStartOsTimestamp = 1,
+  RedvoxPacket1000_TimingInformation_FieldNumber_PacketStartMachTimestamp = 2,
+  RedvoxPacket1000_TimingInformation_FieldNumber_PacketEndOsTimestamp = 3,
+  RedvoxPacket1000_TimingInformation_FieldNumber_PacketEndMachTimestamp = 4,
+  RedvoxPacket1000_TimingInformation_FieldNumber_ServerAcquisitionArrivalTimestamp = 5,
+  RedvoxPacket1000_TimingInformation_FieldNumber_AppStartMachTimestamp = 6,
   RedvoxPacket1000_TimingInformation_FieldNumber_SynchExchangesArray = 7,
-  RedvoxPacket1000_TimingInformation_FieldNumber_BestLatencyUs = 8,
-  RedvoxPacket1000_TimingInformation_FieldNumber_BestOffsetUs = 9,
-  RedvoxPacket1000_TimingInformation_FieldNumber_Metadata = 10,
+  RedvoxPacket1000_TimingInformation_FieldNumber_BestLatency = 8,
+  RedvoxPacket1000_TimingInformation_FieldNumber_BestOffset = 9,
+  RedvoxPacket1000_TimingInformation_FieldNumber_Unit = 10,
+  RedvoxPacket1000_TimingInformation_FieldNumber_Metadata = 11,
 };
 
 @interface RedvoxPacket1000_TimingInformation : GPBMessage
 
 /** Start timestamp of the packet using the os clock (corresponding to first audio sample) */
-@property(nonatomic, readwrite) double packetStartTsUsOs;
+@property(nonatomic, readwrite) double packetStartOsTimestamp;
 
 /** Start timestamp of the packet using machine time (corresponding to the first audio sample) */
-@property(nonatomic, readwrite) double packetStartTsUsMach;
+@property(nonatomic, readwrite) double packetStartMachTimestamp;
 
 /** End timestamp of the packet using the os clock (corresponding to the last audio sample) */
-@property(nonatomic, readwrite) double packetEndTsUsOs;
+@property(nonatomic, readwrite) double packetEndOsTimestamp;
 
 /** End timestamp of the packet using machine time (corresponding to the last audio sample) */
-@property(nonatomic, readwrite) double packetEndTsUsMach;
+@property(nonatomic, readwrite) double packetEndMachTimestamp;
 
 /** Timestamp that the packet arrived at the acquisition server */
-@property(nonatomic, readwrite) double serverAcquisitionArrivalTsUs;
+@property(nonatomic, readwrite) double serverAcquisitionArrivalTimestamp;
 
 /** The start of the app as machine time */
-@property(nonatomic, readwrite) double appStartTsUsMach;
+@property(nonatomic, readwrite) double appStartMachTimestamp;
 
 /** An array of synchronization params from the synch server */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<RedvoxPacket1000_TimingInformation_SynchExchange*> *synchExchangesArray;
@@ -622,10 +623,12 @@ typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_FieldNumber) {
 @property(nonatomic, readonly) NSUInteger synchExchangesArray_Count;
 
 /** The best latency as determined from the synch params */
-@property(nonatomic, readwrite) double bestLatencyUs;
+@property(nonatomic, readwrite) double bestLatency;
 
 /** The best offset as determined from the synch params */
-@property(nonatomic, readwrite) double bestOffsetUs;
+@property(nonatomic, readwrite) double bestOffset;
+
+@property(nonatomic, readwrite) RedvoxPacket1000_Unit unit;
 
 /** A map from string to string for including untyped metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
@@ -633,6 +636,18 @@ typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_FieldNumber) {
 @property(nonatomic, readonly) NSUInteger metadata_Count;
 
 @end
+
+/**
+ * Fetches the raw value of a @c RedvoxPacket1000_TimingInformation's @c unit property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacket1000_TimingInformation_Unit_RawValue(RedvoxPacket1000_TimingInformation *message);
+/**
+ * Sets the raw value of an @c RedvoxPacket1000_TimingInformation's @c unit property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacket1000_TimingInformation_Unit_RawValue(RedvoxPacket1000_TimingInformation *message, int32_t value);
 
 #pragma mark - RedvoxPacket1000_TimingInformation_SynchExchange
 
@@ -643,7 +658,8 @@ typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber) {
   RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_B1 = 4,
   RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_B2 = 5,
   RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_B3 = 6,
-  RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_Metadata = 7,
+  RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_Unit = 7,
+  RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_Metadata = 8,
 };
 
 @interface RedvoxPacket1000_TimingInformation_SynchExchange : GPBMessage
@@ -660,12 +676,26 @@ typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber) {
 
 @property(nonatomic, readwrite) double b3;
 
+@property(nonatomic, readwrite) RedvoxPacket1000_Unit unit;
+
 /** A map from string to string for including untyped metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
 /** The number of items in @c metadata without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger metadata_Count;
 
 @end
+
+/**
+ * Fetches the raw value of a @c RedvoxPacket1000_TimingInformation_SynchExchange's @c unit property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacket1000_TimingInformation_SynchExchange_Unit_RawValue(RedvoxPacket1000_TimingInformation_SynchExchange *message);
+/**
+ * Sets the raw value of an @c RedvoxPacket1000_TimingInformation_SynchExchange's @c unit property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacket1000_TimingInformation_SynchExchange_Unit_RawValue(RedvoxPacket1000_TimingInformation_SynchExchange *message, int32_t value);
 
 #pragma mark - RedvoxPacket1000_ServerInformation
 

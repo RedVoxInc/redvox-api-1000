@@ -1099,29 +1099,31 @@ typedef struct RedvoxPacket1000_PacketInformation__storage_ {
 
 @implementation RedvoxPacket1000_TimingInformation
 
-@dynamic packetStartTsUsOs;
-@dynamic packetStartTsUsMach;
-@dynamic packetEndTsUsOs;
-@dynamic packetEndTsUsMach;
-@dynamic serverAcquisitionArrivalTsUs;
-@dynamic appStartTsUsMach;
+@dynamic packetStartOsTimestamp;
+@dynamic packetStartMachTimestamp;
+@dynamic packetEndOsTimestamp;
+@dynamic packetEndMachTimestamp;
+@dynamic serverAcquisitionArrivalTimestamp;
+@dynamic appStartMachTimestamp;
 @dynamic synchExchangesArray, synchExchangesArray_Count;
-@dynamic bestLatencyUs;
-@dynamic bestOffsetUs;
+@dynamic bestLatency;
+@dynamic bestOffset;
+@dynamic unit;
 @dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacket1000_TimingInformation__storage_ {
   uint32_t _has_storage_[1];
+  RedvoxPacket1000_Unit unit;
   NSMutableArray *synchExchangesArray;
   NSMutableDictionary *metadata;
-  double packetStartTsUsOs;
-  double packetStartTsUsMach;
-  double packetEndTsUsOs;
-  double packetEndTsUsMach;
-  double serverAcquisitionArrivalTsUs;
-  double appStartTsUsMach;
-  double bestLatencyUs;
-  double bestOffsetUs;
+  double packetStartOsTimestamp;
+  double packetStartMachTimestamp;
+  double packetEndOsTimestamp;
+  double packetEndMachTimestamp;
+  double serverAcquisitionArrivalTimestamp;
+  double appStartMachTimestamp;
+  double bestLatency;
+  double bestOffset;
 } RedvoxPacket1000_TimingInformation__storage_;
 
 // This method is threadsafe because it is initially called
@@ -1131,56 +1133,56 @@ typedef struct RedvoxPacket1000_TimingInformation__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "packetStartTsUsOs",
+        .name = "packetStartOsTimestamp",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_TimingInformation_FieldNumber_PacketStartTsUsOs,
+        .number = RedvoxPacket1000_TimingInformation_FieldNumber_PacketStartOsTimestamp,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, packetStartTsUsOs),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, packetStartOsTimestamp),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
       {
-        .name = "packetStartTsUsMach",
+        .name = "packetStartMachTimestamp",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_TimingInformation_FieldNumber_PacketStartTsUsMach,
+        .number = RedvoxPacket1000_TimingInformation_FieldNumber_PacketStartMachTimestamp,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, packetStartTsUsMach),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, packetStartMachTimestamp),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
       {
-        .name = "packetEndTsUsOs",
+        .name = "packetEndOsTimestamp",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_TimingInformation_FieldNumber_PacketEndTsUsOs,
+        .number = RedvoxPacket1000_TimingInformation_FieldNumber_PacketEndOsTimestamp,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, packetEndTsUsOs),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, packetEndOsTimestamp),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
       {
-        .name = "packetEndTsUsMach",
+        .name = "packetEndMachTimestamp",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_TimingInformation_FieldNumber_PacketEndTsUsMach,
+        .number = RedvoxPacket1000_TimingInformation_FieldNumber_PacketEndMachTimestamp,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, packetEndTsUsMach),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, packetEndMachTimestamp),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
       {
-        .name = "serverAcquisitionArrivalTsUs",
+        .name = "serverAcquisitionArrivalTimestamp",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_TimingInformation_FieldNumber_ServerAcquisitionArrivalTsUs,
+        .number = RedvoxPacket1000_TimingInformation_FieldNumber_ServerAcquisitionArrivalTimestamp,
         .hasIndex = 4,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, serverAcquisitionArrivalTsUs),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, serverAcquisitionArrivalTimestamp),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
       {
-        .name = "appStartTsUsMach",
+        .name = "appStartMachTimestamp",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_TimingInformation_FieldNumber_AppStartTsUsMach,
+        .number = RedvoxPacket1000_TimingInformation_FieldNumber_AppStartMachTimestamp,
         .hasIndex = 5,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, appStartTsUsMach),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, appStartMachTimestamp),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
@@ -1194,22 +1196,31 @@ typedef struct RedvoxPacket1000_TimingInformation__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "bestLatencyUs",
+        .name = "bestLatency",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_TimingInformation_FieldNumber_BestLatencyUs,
+        .number = RedvoxPacket1000_TimingInformation_FieldNumber_BestLatency,
         .hasIndex = 6,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, bestLatencyUs),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, bestLatency),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
       },
       {
-        .name = "bestOffsetUs",
+        .name = "bestOffset",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacket1000_TimingInformation_FieldNumber_BestOffsetUs,
+        .number = RedvoxPacket1000_TimingInformation_FieldNumber_BestOffset,
         .hasIndex = 7,
-        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, bestOffsetUs),
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, bestOffset),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "unit",
+        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_Unit_EnumDescriptor,
+        .number = RedvoxPacket1000_TimingInformation_FieldNumber_Unit,
+        .hasIndex = 8,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation__storage_, unit),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
       },
       {
         .name = "metadata",
@@ -1238,6 +1249,18 @@ typedef struct RedvoxPacket1000_TimingInformation__storage_ {
 
 @end
 
+int32_t RedvoxPacket1000_TimingInformation_Unit_RawValue(RedvoxPacket1000_TimingInformation *message) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_TimingInformation descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_TimingInformation_FieldNumber_Unit];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetRedvoxPacket1000_TimingInformation_Unit_RawValue(RedvoxPacket1000_TimingInformation *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_TimingInformation descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_TimingInformation_FieldNumber_Unit];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
+
 #pragma mark - RedvoxPacket1000_TimingInformation_SynchExchange
 
 @implementation RedvoxPacket1000_TimingInformation_SynchExchange
@@ -1248,10 +1271,12 @@ typedef struct RedvoxPacket1000_TimingInformation__storage_ {
 @dynamic b1;
 @dynamic b2;
 @dynamic b3;
+@dynamic unit;
 @dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacket1000_TimingInformation_SynchExchange__storage_ {
   uint32_t _has_storage_[1];
+  RedvoxPacket1000_Unit unit;
   NSMutableDictionary *metadata;
   double a1;
   double a2;
@@ -1322,6 +1347,15 @@ typedef struct RedvoxPacket1000_TimingInformation_SynchExchange__storage_ {
         .dataType = GPBDataTypeDouble,
       },
       {
+        .name = "unit",
+        .dataTypeSpecific.enumDescFunc = RedvoxPacket1000_Unit_EnumDescriptor,
+        .number = RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_Unit,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(RedvoxPacket1000_TimingInformation_SynchExchange__storage_, unit),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
         .name = "metadata",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_Metadata,
@@ -1347,6 +1381,18 @@ typedef struct RedvoxPacket1000_TimingInformation_SynchExchange__storage_ {
 }
 
 @end
+
+int32_t RedvoxPacket1000_TimingInformation_SynchExchange_Unit_RawValue(RedvoxPacket1000_TimingInformation_SynchExchange *message) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_TimingInformation_SynchExchange descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_Unit];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetRedvoxPacket1000_TimingInformation_SynchExchange_Unit_RawValue(RedvoxPacket1000_TimingInformation_SynchExchange *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacket1000_TimingInformation_SynchExchange descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacket1000_TimingInformation_SynchExchange_FieldNumber_Unit];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
 
 #pragma mark - RedvoxPacket1000_ServerInformation
 

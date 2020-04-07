@@ -118,16 +118,17 @@ message RedvoxPacket1000 {
     }
 
     message TimingInformation {
-        double packet_start_ts_us_os = 1;               // Start timestamp of the packet using the os clock (corresponding to first audio sample)
-        double packet_start_ts_us_mach = 2;             // Start timestamp of the packet using machine time (corresponding to the first audio sample)
-        double packet_end_ts_us_os = 3;                 // End timestamp of the packet using the os clock (corresponding to the last audio sample)
-        double packet_end_ts_us_mach = 4;               // End timestamp of the packet using machine time (corresponding to the last audio sample)
-        double server_acquisition_arrival_ts_us = 5;    // Timestamp that the packet arrived at the acquisition server
-        double app_start_ts_us_mach = 6;                // The start of the app as machine time
+        double packet_start_os_timestamp = 1;               // Start timestamp of the packet using the os clock (corresponding to first audio sample)
+        double packet_start_mach_timestamp = 2;             // Start timestamp of the packet using machine time (corresponding to the first audio sample)
+        double packet_end_os_timestamp = 3;                 // End timestamp of the packet using the os clock (corresponding to the last audio sample)
+        double packet_end_mach_timestamp = 4;               // End timestamp of the packet using machine time (corresponding to the last audio sample)
+        double server_acquisition_arrival_timestamp = 5;    // Timestamp that the packet arrived at the acquisition server
+        double app_start_mach_timestamp = 6;                // The start of the app as machine time
         repeated SynchExchange synch_exchanges = 7;     // An array of synchronization params from the synch server
-        double best_latency_us = 8;                     // The best latency as determined from the synch params
-        double best_offset_us = 9;                      // The best offset as determined from the synch params
-        map<string, string> metadata = 10;              // A map from string to string for including untyped metadata
+        double best_latency = 8;                     // The best latency as determined from the synch params
+        double best_offset = 9;                      // The best offset as determined from the synch params
+        Unit unit = 10;
+        map<string, string> metadata = 11;              // A map from string to string for including untyped metadata
 
         message SynchExchange {
             double a1 = 1;
@@ -136,7 +137,8 @@ message RedvoxPacket1000 {
             double b1 = 4;
             double b2 = 5;
             double b3 = 6;
-            map<string, string> metadata = 7;   // A map from string to string for including untyped metadata
+            Unit unit = 7;
+            map<string, string> metadata = 8;   // A map from string to string for including untyped metadata
         }
     }
 

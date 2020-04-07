@@ -2249,16 +2249,17 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.toObject = fun
  */
 proto.redvox_api1000.RedvoxPacket1000.TimingInformation.toObject = function(includeInstance, msg) {
   var f, obj = {
-    packetStartTsUsOs: +jspb.Message.getFieldWithDefault(msg, 1, 0.0),
-    packetStartTsUsMach: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
-    packetEndTsUsOs: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
-    packetEndTsUsMach: +jspb.Message.getFieldWithDefault(msg, 4, 0.0),
-    serverAcquisitionArrivalTsUs: +jspb.Message.getFieldWithDefault(msg, 5, 0.0),
-    appStartTsUsMach: +jspb.Message.getFieldWithDefault(msg, 6, 0.0),
+    packetStartOsTimestamp: +jspb.Message.getFieldWithDefault(msg, 1, 0.0),
+    packetStartMachTimestamp: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
+    packetEndOsTimestamp: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
+    packetEndMachTimestamp: +jspb.Message.getFieldWithDefault(msg, 4, 0.0),
+    serverAcquisitionArrivalTimestamp: +jspb.Message.getFieldWithDefault(msg, 5, 0.0),
+    appStartMachTimestamp: +jspb.Message.getFieldWithDefault(msg, 6, 0.0),
     synchExchangesList: jspb.Message.toObjectList(msg.getSynchExchangesList(),
     proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.toObject, includeInstance),
-    bestLatencyUs: +jspb.Message.getFieldWithDefault(msg, 8, 0.0),
-    bestOffsetUs: +jspb.Message.getFieldWithDefault(msg, 9, 0.0),
+    bestLatency: +jspb.Message.getFieldWithDefault(msg, 8, 0.0),
+    bestOffset: +jspb.Message.getFieldWithDefault(msg, 9, 0.0),
+    unit: jspb.Message.getFieldWithDefault(msg, 10, 0),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -2298,27 +2299,27 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.deserializeBinaryFromRea
     switch (field) {
     case 1:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setPacketStartTsUsOs(value);
+      msg.setPacketStartOsTimestamp(value);
       break;
     case 2:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setPacketStartTsUsMach(value);
+      msg.setPacketStartMachTimestamp(value);
       break;
     case 3:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setPacketEndTsUsOs(value);
+      msg.setPacketEndOsTimestamp(value);
       break;
     case 4:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setPacketEndTsUsMach(value);
+      msg.setPacketEndMachTimestamp(value);
       break;
     case 5:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setServerAcquisitionArrivalTsUs(value);
+      msg.setServerAcquisitionArrivalTimestamp(value);
       break;
     case 6:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setAppStartTsUsMach(value);
+      msg.setAppStartMachTimestamp(value);
       break;
     case 7:
       var value = new proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange;
@@ -2327,13 +2328,17 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.deserializeBinaryFromRea
       break;
     case 8:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setBestLatencyUs(value);
+      msg.setBestLatency(value);
       break;
     case 9:
       var value = /** @type {number} */ (reader.readDouble());
-      msg.setBestOffsetUs(value);
+      msg.setBestOffset(value);
       break;
     case 10:
+      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.Unit} */ (reader.readEnum());
+      msg.setUnit(value);
+      break;
+    case 11:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
@@ -2368,42 +2373,42 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.serializeBinar
  */
 proto.redvox_api1000.RedvoxPacket1000.TimingInformation.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getPacketStartTsUsOs();
+  f = message.getPacketStartOsTimestamp();
   if (f !== 0.0) {
     writer.writeDouble(
       1,
       f
     );
   }
-  f = message.getPacketStartTsUsMach();
+  f = message.getPacketStartMachTimestamp();
   if (f !== 0.0) {
     writer.writeDouble(
       2,
       f
     );
   }
-  f = message.getPacketEndTsUsOs();
+  f = message.getPacketEndOsTimestamp();
   if (f !== 0.0) {
     writer.writeDouble(
       3,
       f
     );
   }
-  f = message.getPacketEndTsUsMach();
+  f = message.getPacketEndMachTimestamp();
   if (f !== 0.0) {
     writer.writeDouble(
       4,
       f
     );
   }
-  f = message.getServerAcquisitionArrivalTsUs();
+  f = message.getServerAcquisitionArrivalTimestamp();
   if (f !== 0.0) {
     writer.writeDouble(
       5,
       f
     );
   }
-  f = message.getAppStartTsUsMach();
+  f = message.getAppStartMachTimestamp();
   if (f !== 0.0) {
     writer.writeDouble(
       6,
@@ -2418,23 +2423,30 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.serializeBinaryToWriter 
       proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.serializeBinaryToWriter
     );
   }
-  f = message.getBestLatencyUs();
+  f = message.getBestLatency();
   if (f !== 0.0) {
     writer.writeDouble(
       8,
       f
     );
   }
-  f = message.getBestOffsetUs();
+  f = message.getBestOffset();
   if (f !== 0.0) {
     writer.writeDouble(
       9,
       f
     );
   }
+  f = message.getUnit();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      10,
+      f
+    );
+  }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(10, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(11, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -2492,6 +2504,7 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.toObject =
     b1: +jspb.Message.getFieldWithDefault(msg, 4, 0.0),
     b2: +jspb.Message.getFieldWithDefault(msg, 5, 0.0),
     b3: +jspb.Message.getFieldWithDefault(msg, 6, 0.0),
+    unit: jspb.Message.getFieldWithDefault(msg, 7, 0),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -2554,6 +2567,10 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.deserializ
       msg.setB3(value);
       break;
     case 7:
+      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.Unit} */ (reader.readEnum());
+      msg.setUnit(value);
+      break;
+    case 8:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
@@ -2630,9 +2647,16 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.serializeB
       f
     );
   }
+  f = message.getUnit();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      7,
+      f
+    );
+  }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(7, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(8, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -2728,14 +2752,29 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.prototype.
 
 
 /**
- * map<string, string> metadata = 7;
+ * optional Unit unit = 7;
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.Unit}
+ */
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.prototype.getUnit = function() {
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.Unit} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/** @param {!proto.redvox_api1000.RedvoxPacket1000.Unit} value */
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.prototype.setUnit = function(value) {
+  jspb.Message.setProto3EnumField(this, 7, value);
+};
+
+
+/**
+ * map<string, string> metadata = 8;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 7, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 8, opt_noLazyCreate,
       null));
 };
 
@@ -2746,91 +2785,91 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.prototype.
 
 
 /**
- * optional double packet_start_ts_us_os = 1;
+ * optional double packet_start_os_timestamp = 1;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getPacketStartTsUsOs = function() {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getPacketStartOsTimestamp = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 1, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setPacketStartTsUsOs = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setPacketStartOsTimestamp = function(value) {
   jspb.Message.setProto3FloatField(this, 1, value);
 };
 
 
 /**
- * optional double packet_start_ts_us_mach = 2;
+ * optional double packet_start_mach_timestamp = 2;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getPacketStartTsUsMach = function() {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getPacketStartMachTimestamp = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 2, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setPacketStartTsUsMach = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setPacketStartMachTimestamp = function(value) {
   jspb.Message.setProto3FloatField(this, 2, value);
 };
 
 
 /**
- * optional double packet_end_ts_us_os = 3;
+ * optional double packet_end_os_timestamp = 3;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getPacketEndTsUsOs = function() {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getPacketEndOsTimestamp = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 3, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setPacketEndTsUsOs = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setPacketEndOsTimestamp = function(value) {
   jspb.Message.setProto3FloatField(this, 3, value);
 };
 
 
 /**
- * optional double packet_end_ts_us_mach = 4;
+ * optional double packet_end_mach_timestamp = 4;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getPacketEndTsUsMach = function() {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getPacketEndMachTimestamp = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 4, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setPacketEndTsUsMach = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setPacketEndMachTimestamp = function(value) {
   jspb.Message.setProto3FloatField(this, 4, value);
 };
 
 
 /**
- * optional double server_acquisition_arrival_ts_us = 5;
+ * optional double server_acquisition_arrival_timestamp = 5;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getServerAcquisitionArrivalTsUs = function() {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getServerAcquisitionArrivalTimestamp = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 5, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setServerAcquisitionArrivalTsUs = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setServerAcquisitionArrivalTimestamp = function(value) {
   jspb.Message.setProto3FloatField(this, 5, value);
 };
 
 
 /**
- * optional double app_start_ts_us_mach = 6;
+ * optional double app_start_mach_timestamp = 6;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getAppStartTsUsMach = function() {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getAppStartMachTimestamp = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 6, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setAppStartTsUsMach = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setAppStartMachTimestamp = function(value) {
   jspb.Message.setProto3FloatField(this, 6, value);
 };
 
@@ -2867,44 +2906,59 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.clearSynchExch
 
 
 /**
- * optional double best_latency_us = 8;
+ * optional double best_latency = 8;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getBestLatencyUs = function() {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getBestLatency = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 8, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setBestLatencyUs = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setBestLatency = function(value) {
   jspb.Message.setProto3FloatField(this, 8, value);
 };
 
 
 /**
- * optional double best_offset_us = 9;
+ * optional double best_offset = 9;
  * @return {number}
  */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getBestOffsetUs = function() {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getBestOffset = function() {
   return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 9, 0.0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setBestOffsetUs = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setBestOffset = function(value) {
   jspb.Message.setProto3FloatField(this, 9, value);
 };
 
 
 /**
- * map<string, string> metadata = 10;
+ * optional Unit unit = 10;
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.Unit}
+ */
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getUnit = function() {
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.Unit} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
+};
+
+
+/** @param {!proto.redvox_api1000.RedvoxPacket1000.Unit} value */
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setUnit = function(value) {
+  jspb.Message.setProto3EnumField(this, 10, value);
+};
+
+
+/**
+ * map<string, string> metadata = 11;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 10, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 11, opt_noLazyCreate,
       null));
 };
 

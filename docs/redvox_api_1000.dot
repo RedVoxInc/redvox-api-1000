@@ -1,0 +1,11 @@
+digraph api_m {
+    WrappedRedvoxPacketApi1000;
+
+    WrappedRedvoxPacketApi1000 -> UserInformation;
+    WrappedRedvoxPacketApi1000 -> StationInformation;
+    WrappedRedvoxPacketApi1000 -> PacketInformation;
+    WrappedRedvoxPacketApi1000 -> TimingInformation;
+    WrappedRedvoxPacketApi1000 -> ServerInformation;
+    WrappedRedvoxPacketApi1000 -> SensorChannels;
+
+}

@@ -554,6 +554,7 @@ class RedvoxPacket1000(google___protobuf___message___Message):
             b1 = ... # type: builtin___float
             b2 = ... # type: builtin___float
             b3 = ... # type: builtin___float
+            unit = ... # type: RedvoxPacket1000.Unit
 
             @property
             def metadata(self) -> typing___MutableMapping[typing___Text, typing___Text]: ...
@@ -566,6 +567,7 @@ class RedvoxPacket1000(google___protobuf___message___Message):
                 b1 : typing___Optional[builtin___float] = None,
                 b2 : typing___Optional[builtin___float] = None,
                 b3 : typing___Optional[builtin___float] = None,
+                unit : typing___Optional[RedvoxPacket1000.Unit] = None,
                 metadata : typing___Optional[typing___Mapping[typing___Text, typing___Text]] = None,
                 ) -> None: ...
             if sys.version_info >= (3,):
@@ -577,18 +579,19 @@ class RedvoxPacket1000(google___protobuf___message___Message):
             def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
             def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
             if sys.version_info >= (3,):
-                def ClearField(self, field_name: typing_extensions___Literal[u"a1",u"a2",u"a3",u"b1",u"b2",u"b3",u"metadata"]) -> None: ...
+                def ClearField(self, field_name: typing_extensions___Literal[u"a1",u"a2",u"a3",u"b1",u"b2",u"b3",u"metadata",u"unit"]) -> None: ...
             else:
-                def ClearField(self, field_name: typing_extensions___Literal[u"a1",b"a1",u"a2",b"a2",u"a3",b"a3",u"b1",b"b1",u"b2",b"b2",u"b3",b"b3",u"metadata",b"metadata"]) -> None: ...
+                def ClearField(self, field_name: typing_extensions___Literal[u"a1",b"a1",u"a2",b"a2",u"a3",b"a3",u"b1",b"b1",u"b2",b"b2",u"b3",b"b3",u"metadata",b"metadata",u"unit",b"unit"]) -> None: ...
 
-        packet_start_ts_us_os = ... # type: builtin___float
-        packet_start_ts_us_mach = ... # type: builtin___float
-        packet_end_ts_us_os = ... # type: builtin___float
-        packet_end_ts_us_mach = ... # type: builtin___float
-        server_acquisition_arrival_ts_us = ... # type: builtin___float
-        app_start_ts_us_mach = ... # type: builtin___float
-        best_latency_us = ... # type: builtin___float
-        best_offset_us = ... # type: builtin___float
+        packet_start_os_timestamp = ... # type: builtin___float
+        packet_start_mach_timestamp = ... # type: builtin___float
+        packet_end_os_timestamp = ... # type: builtin___float
+        packet_end_mach_timestamp = ... # type: builtin___float
+        server_acquisition_arrival_timestamp = ... # type: builtin___float
+        app_start_mach_timestamp = ... # type: builtin___float
+        best_latency = ... # type: builtin___float
+        best_offset = ... # type: builtin___float
+        unit = ... # type: RedvoxPacket1000.Unit
 
         @property
         def synch_exchanges(self) -> google___protobuf___internal___containers___RepeatedCompositeFieldContainer[RedvoxPacket1000.TimingInformation.SynchExchange]: ...
@@ -598,15 +601,16 @@ class RedvoxPacket1000(google___protobuf___message___Message):
 
         def __init__(self,
             *,
-            packet_start_ts_us_os : typing___Optional[builtin___float] = None,
-            packet_start_ts_us_mach : typing___Optional[builtin___float] = None,
-            packet_end_ts_us_os : typing___Optional[builtin___float] = None,
-            packet_end_ts_us_mach : typing___Optional[builtin___float] = None,
-            server_acquisition_arrival_ts_us : typing___Optional[builtin___float] = None,
-            app_start_ts_us_mach : typing___Optional[builtin___float] = None,
+            packet_start_os_timestamp : typing___Optional[builtin___float] = None,
+            packet_start_mach_timestamp : typing___Optional[builtin___float] = None,
+            packet_end_os_timestamp : typing___Optional[builtin___float] = None,
+            packet_end_mach_timestamp : typing___Optional[builtin___float] = None,
+            server_acquisition_arrival_timestamp : typing___Optional[builtin___float] = None,
+            app_start_mach_timestamp : typing___Optional[builtin___float] = None,
             synch_exchanges : typing___Optional[typing___Iterable[RedvoxPacket1000.TimingInformation.SynchExchange]] = None,
-            best_latency_us : typing___Optional[builtin___float] = None,
-            best_offset_us : typing___Optional[builtin___float] = None,
+            best_latency : typing___Optional[builtin___float] = None,
+            best_offset : typing___Optional[builtin___float] = None,
+            unit : typing___Optional[RedvoxPacket1000.Unit] = None,
             metadata : typing___Optional[typing___Mapping[typing___Text, typing___Text]] = None,
             ) -> None: ...
         if sys.version_info >= (3,):
@@ -618,9 +622,9 @@ class RedvoxPacket1000(google___protobuf___message___Message):
         def MergeFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
         def CopyFrom(self, other_msg: google___protobuf___message___Message) -> None: ...
         if sys.version_info >= (3,):
-            def ClearField(self, field_name: typing_extensions___Literal[u"app_start_ts_us_mach",u"best_latency_us",u"best_offset_us",u"metadata",u"packet_end_ts_us_mach",u"packet_end_ts_us_os",u"packet_start_ts_us_mach",u"packet_start_ts_us_os",u"server_acquisition_arrival_ts_us",u"synch_exchanges"]) -> None: ...
+            def ClearField(self, field_name: typing_extensions___Literal[u"app_start_mach_timestamp",u"best_latency",u"best_offset",u"metadata",u"packet_end_mach_timestamp",u"packet_end_os_timestamp",u"packet_start_mach_timestamp",u"packet_start_os_timestamp",u"server_acquisition_arrival_timestamp",u"synch_exchanges",u"unit"]) -> None: ...
         else:
-            def ClearField(self, field_name: typing_extensions___Literal[u"app_start_ts_us_mach",b"app_start_ts_us_mach",u"best_latency_us",b"best_latency_us",u"best_offset_us",b"best_offset_us",u"metadata",b"metadata",u"packet_end_ts_us_mach",b"packet_end_ts_us_mach",u"packet_end_ts_us_os",b"packet_end_ts_us_os",u"packet_start_ts_us_mach",b"packet_start_ts_us_mach",u"packet_start_ts_us_os",b"packet_start_ts_us_os",u"server_acquisition_arrival_ts_us",b"server_acquisition_arrival_ts_us",u"synch_exchanges",b"synch_exchanges"]) -> None: ...
+            def ClearField(self, field_name: typing_extensions___Literal[u"app_start_mach_timestamp",b"app_start_mach_timestamp",u"best_latency",b"best_latency",u"best_offset",b"best_offset",u"metadata",b"metadata",u"packet_end_mach_timestamp",b"packet_end_mach_timestamp",u"packet_end_os_timestamp",b"packet_end_os_timestamp",u"packet_start_mach_timestamp",b"packet_start_mach_timestamp",u"packet_start_os_timestamp",b"packet_start_os_timestamp",u"server_acquisition_arrival_timestamp",b"server_acquisition_arrival_timestamp",u"synch_exchanges",b"synch_exchanges",u"unit",b"unit"]) -> None: ...
 
     class ServerInformation(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
