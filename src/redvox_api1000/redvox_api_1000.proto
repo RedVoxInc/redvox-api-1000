@@ -244,6 +244,7 @@ message RedvoxPacket1000 {
         DECIBEL = 9;
         DEGREES_CELSIUS = 10;
         BYTE = 11;
+        PERCENTAGE = 12;
     }
 
     message SummaryStatistics {

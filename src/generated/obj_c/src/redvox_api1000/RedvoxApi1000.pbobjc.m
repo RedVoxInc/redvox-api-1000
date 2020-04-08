@@ -174,7 +174,7 @@ GPBEnumDescriptor *RedvoxPacket1000_Unit_EnumDescriptor(void) {
         "sPerSecond\000DecimalDegrees\000Meters\000MetersP"
         "erSecond\000Microtesla\000LsbPlusMinusCounts\000M"
         "icrosecondsSinceUnixEpoch\000Decibel\000Degree"
-        "sCelsius\000Byte\000";
+        "sCelsius\000Byte\000Percentage\000";
     static const int32_t values[] = {
         RedvoxPacket1000_Unit_MetersPerSecondSquared,
         RedvoxPacket1000_Unit_Kilopascal,
@@ -188,6 +188,7 @@ GPBEnumDescriptor *RedvoxPacket1000_Unit_EnumDescriptor(void) {
         RedvoxPacket1000_Unit_Decibel,
         RedvoxPacket1000_Unit_DegreesCelsius,
         RedvoxPacket1000_Unit_Byte,
+        RedvoxPacket1000_Unit_Percentage,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacket1000_Unit)
@@ -217,6 +218,7 @@ BOOL RedvoxPacket1000_Unit_IsValidValue(int32_t value__) {
     case RedvoxPacket1000_Unit_Decibel:
     case RedvoxPacket1000_Unit_DegreesCelsius:
     case RedvoxPacket1000_Unit_Byte:
+    case RedvoxPacket1000_Unit_Percentage:
       return YES;
     default:
       return NO;

@@ -66,6 +66,7 @@ typedef GPB_ENUM(RedvoxPacket1000_Unit) {
   RedvoxPacket1000_Unit_Decibel = 9,
   RedvoxPacket1000_Unit_DegreesCelsius = 10,
   RedvoxPacket1000_Unit_Byte = 11,
+  RedvoxPacket1000_Unit_Percentage = 12,
 };
 
 GPBEnumDescriptor *RedvoxPacket1000_Unit_EnumDescriptor(void);

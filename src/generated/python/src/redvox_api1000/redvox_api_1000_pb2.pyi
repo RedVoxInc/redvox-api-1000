@@ -67,6 +67,7 @@ class RedvoxPacket1000(google___protobuf___message___Message):
         DECIBEL = typing___cast('RedvoxPacket1000.Unit', 9)
         DEGREES_CELSIUS = typing___cast('RedvoxPacket1000.Unit', 10)
         BYTE = typing___cast('RedvoxPacket1000.Unit', 11)
+        PERCENTAGE = typing___cast('RedvoxPacket1000.Unit', 12)
     METERS_PER_SECOND_SQUARED = typing___cast('RedvoxPacket1000.Unit', 0)
     KILOPASCAL = typing___cast('RedvoxPacket1000.Unit', 1)
     RADIANS_PER_SECOND = typing___cast('RedvoxPacket1000.Unit', 2)
@@ -79,6 +80,7 @@ class RedvoxPacket1000(google___protobuf___message___Message):
     DECIBEL = typing___cast('RedvoxPacket1000.Unit', 9)
     DEGREES_CELSIUS = typing___cast('RedvoxPacket1000.Unit', 10)
     BYTE = typing___cast('RedvoxPacket1000.Unit', 11)
+    PERCENTAGE = typing___cast('RedvoxPacket1000.Unit', 12)
 
     class MetadataEntry(google___protobuf___message___Message):
         DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...

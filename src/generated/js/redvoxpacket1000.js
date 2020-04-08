@@ -273,7 +273,8 @@ proto.redvox_api1000.RedvoxPacket1000.Unit = {
   MICROSECONDS_SINCE_UNIX_EPOCH: 8,
   DECIBEL: 9,
   DEGREES_CELSIUS: 10,
-  BYTE: 11
+  BYTE: 11,
+  PERCENTAGE: 12
 };
 
 
