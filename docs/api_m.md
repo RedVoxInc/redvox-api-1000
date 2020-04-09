@@ -18,6 +18,24 @@ The following example shows a UTC date and time and its corresponding timestamp:
 
 TODO
 
+## Filenames
+
+The default filename for an API M packet follows the following format:
+
+```
+[station ID]_[packet start mach timestamp]_m.rdvxz
+```
+
+Here `station ID` is the station ID prepended with zeros so that the length is exactly 10 characters and `packet start mach timestamp` corresponds to the `timing_information.packet_start_mach_timestamp` but is truncated to milliseconds and converted to an integer for the purpose of outputting to a filename.
+
+If the packet is encrypted, it will have the following format:
+
+```
+[chksum]_m.rdvxz.gpg
+```
+
+where `chksum` is the unsigned sim of bytes that make up the contents of the file.
+
 ## Audio Sampling Rates / Packet Length
 
 Audio samples drive the construction and timing of all API M data packets. The packet time window is directly related to the sampling rate of the audio sensor. The following audio sampling rates and constraints are supported under API M.
@@ -62,6 +80,8 @@ _Note:_ The image channel does not have a specified unit in the traditional sens
 
 ## Performing Time Synchronization Exchanges
 
+TODO
+
 ## Storing Data
 
 #### Audio data
@@ -94,6 +114,10 @@ Each timestamp must correspond to exactly one of each channel type presented abo
 
 Further, the location metadata should be populated to provide information on location permissions, user location requests, and location provider information.
 
+Calculations for determining the best location metrics per packet are provided next.
+
+TODO
+
 #### Image data
 
 TODO
@@ -110,11 +134,60 @@ API M introduces improved system metric collection. Using the same period as syn
 
 ## Compressing and Decompressing API M Data
 
+API M utilizes the [LZ4 frame specification](https://github.com/lz4/lz4/blob/master/doc/lz4_Frame_format.md) for compression and decompression of data. 
+
+##### Compression
+
+Compression should be used in the following scenarios:
+
+* Serialized `RedvoxPacket1000` messages should be compressed before storing in an `AcqusitionRequest`
+* When using E2E encryption
+  * serialized `Header` messages should be compressed before being encrypted and stored in `EncryptedRedvoxPacket1000` 
+  * serialized `RedvoxPacket1000` messages should be compressed before being encrypted and stored in `EncryptedRedvoxPacket1000` 
+  
+Please note that the `EncryptedRedvoxPacket1000` is _not_ compressed before storing in an `AcqusitionRequest`.
+
 ## Client/Server Communications
+
+All station/server communications must take place over encrypted WebSockets (wss). The following URL endpoints are provided for API M. All messages are encoded in binary as bytes.
+
+__redvox.io__
+
+| Service                    | Endpoint                            |
+|----------------------------|-------------------------------------|
+| Data acquisition API M     | wss://redvox.io/acquisition/v1000   |
+| Data acquisition API M E2E | wss://redvox.io/acquisition/x/v1000 |
+| Synch exchanges v3         | wss://redvox.io/synch/v3            |
+
+__Testing__
+
+| Service                    | Endpoint                                               |
+|----------------------------|--------------------------------------------------------|
+| Data acquisition API M     | wss://milton.soest.hawaii.edu:8000/acquisition/v1000   |
+| Data acquisition API M E2E | wss://milton.soest.hawaii.edu:8000/acquisition/x/v1000 |
+| Synch exchanges v3         | wss://milton.soest.hawaii.edu:8000/synch/v3            |
 
 #### Communicating with the data acquisition server
 
+Sending API M packets to a RedVox data acquisition server requires using the `AcquisitionRequest` message type.
+
+The payload field takes a collection of bytes and can take two items:
+* compressed(serialized(RedvoxPacket1000))
+* encrypted(compressed(serialized(RedvoxPacket1000)))
+
+The checksum is calculated by summing all payload bytes into a signed 64-bit integer.
+
+The server will respond with an `AcquisitionResponse` message. This will contain a response type of `OK` or various errors. 
+
+There is a boolean field `resend` that when set the client should attempt to resent the failed packet. If the `resend` is false, the client should not attempt to resent the failed packet. 
+
+A `details` field will optionally provide a more detailed error description from the acquisition server. 
+
+Finally, a `chksum` exists from the server computed checksum.
+
 #### Communicating with the time synchronization server
+
+The `SynchRequest` and `SynchResponse` message types are used to communicate with v3 of the time synchronization service.
 
 ## Enabling End-to-End encryption
 

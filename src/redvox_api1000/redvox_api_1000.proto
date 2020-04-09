@@ -280,8 +280,9 @@ message EncryptedRedvoxPacket1000 {
 
 // Message for sending RedVox data to a redvox.io data acquisition service.
 message AcquisitionRequest {
-    bytes compressed_redvox_packet_1000 = 1;    // The compressed packet to send.
-    int64 checksum = 2;                         // A checksum of the bytes in field 1.
+    bytes payload = 1;    // The compressed packet to send.
+    bool is_encrypted = 2;
+    int64 checksum = 3;                         // A checksum of the bytes in field 1.
 }
 
 // Response from data acquisition services.
@@ -301,12 +302,12 @@ message AcquisitionResponse {
 }
 
 message SynchRequest {
-    uint64 seq_id = 1;
+    uint32 seq_id = 1;
     uint32 sub_seq_id = 2;
 }
 
 message SynchResponse {
-    uint64 seq_id = 1;
+    uint32 seq_id = 1;
     uint32 sub_seq_id = 2;
     uint64 recv_ts_us = 3;
     uint64 send_ts_us = 4;
