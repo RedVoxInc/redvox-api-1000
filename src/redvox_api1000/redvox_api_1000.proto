@@ -157,7 +157,7 @@ message RedvoxPacket1000 {
         XyzChannel gyroscope_channel = 5;       // The gyroscope channel
         XyzChannel magnetometer_channel = 6;    // The magnetometer channel
         SingleChannel light_channel = 7;        // The light channel
-        SingleChannel infrared_channel = 8;     // The infrared channel
+        SingleChannel proximity_channel = 8;    // The proximity channel
         ImageChannel image_channel = 9;         // The image channel
         map<string, string> metadata = 10;      // A map from string to string for including untyped metadata
 
