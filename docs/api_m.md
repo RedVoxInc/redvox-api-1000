@@ -193,6 +193,7 @@ The function `timestamp()` should return the number of microsconds since the epo
 
 __Exchange algorithm:__
 | Step | Client | Server | 
+|------|--------|----------|
 |      | Set `exchange` to a new `RedvoxPacket1000.TimingInformation.SynchExchange`
 | 1    | Set `synch_req` to a new `SynchRequest` | |
 | 2    | Set `synch_req.station_id` | |
