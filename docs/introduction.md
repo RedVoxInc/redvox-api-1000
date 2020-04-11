@@ -1,6 +1,6 @@
 # RedVox API M Introduction
 
-API M is a specification implemented using [protocol buffers](https://developers.google.com/protocol-buffers) for serializing next generation mobile sensor data. RedVox API M provides a specification for organizing a wide variety of structured metadata and sensor data collected from mobile platforms.
+API M is a specification implemented using [protocol buffers](https://developers.google.com/protocol-buffers) for serializing next generation mobile sensor data. RedVox API M provides a specification for organizing a wide variety of structured metadata and sensor data collected from mobile platforms. API 1000 (or API M for "[millenary](https://www.merriam-webster.com/dictionary/millenary)") provides a type safe way of serializing RedVox data. It roughly consists of three types of data. Typed metadata describing the sensor and sensor channels, typed sensor payload data and timestamps, and untyped metadata that can be used for extending the protocol. 
 
 Windows of data are collected into individual packets which can be saved or streamed elsewhere. Data produced using the RedVox API M format can be created, edited, and read using the RedVox open source suite of SDKs for API M. 
 
