@@ -192,38 +192,39 @@ Two sequence ids are kept: `seq_id` should start at zero when the app starts and
 The function `timestamp()` should return the number of microsconds since the epoch.
 
 __Exchange algorithm:__
+
 | Step | Client | Server | 
-|------|--------|----------|
-|      | Set `exchange` to a new `RedvoxPacket1000.TimingInformation.SynchExchange`
-| 1    | Set `synch_req` to a new `SynchRequest` | |
-| 2    | Set `synch_req.station_id` | |
-| 3    | Set `synch_req.station_uuid` | |
-| 3    | Set `synch_req.seq_id` to `N` | |
-| 4    | Set `synch_req.sub_seq_id` to 0 | |
-| 5    | Serialize `synch_req` to bytes | |
-| 6    | Send serialized bytes to server | | 
-| 7    | | Receive serialized bytes |
-| 8    | | Set `tmp` to `timestamp()` |
-| 9    | | Deserialize request bytes into a `SynchRequest` message called `synch_req` |
-| 9    | | Set `synch_resp` to a new `SynchResponse` |
-| 10   | | Set `synch_resp.station_id` to `synch_req.station_id`
-| 11   | | Set `synch_resp.station_uuid` to `synch_req.station_uuid` |
-| 12   | | Set `synch_resp.seq_id` to `synch_req.seq_id` |
-| 13   | | Set `synch_resp.sub_seq_id` to `synch_req.sub_seq_id + 1` |
-| 14   | | Set `synch_resp.recv_ts_us` to `tmp` |
-| 15   | | Set `synch_resp.send_ts_us` to `timestamp()` |
-| 16   | | Serialize `synch_resp` to bytes |
-| 17   | | Respond to the client with serialized response |
-| 18   | Receive serialized response | |
-| 19   | Set `tmp` to `timestamp()` | |
-| 20   | Deserialize response from bytes into a `SynchResponse` message call `synch_resp` | |
-| 21   | Confirm `synch_resp.station_id` is correct | |
-| 22   | Confirm `synch_resp.station_uuid` is correct | |
-| 23   | Confirm `synch_resp.seq_id` is still `N` | |
-| 24   | Confirm `synch_resp.sub_seq_id` is now `1` | |
-| 25   | Set `exchange.a1` to `synch_resp.recv_ts_us` | |
-| 26   | Set `exchange.b1` to `tmp` | |
-| 27   | Set `exchange.b2` to `timestamp()` | | 
+|------|--------|--------|
+| 1    | Set `exchange` to a new `RedvoxPacket1000.TimingInformation.SynchExchange` | |
+| 2    | Set `synch_req` to a new `SynchRequest` | |
+| 3    | Set `synch_req.station_id` | |
+| 4    | Set `synch_req.station_uuid` | |
+| 5    | Set `synch_req.seq_id` to `N` | |
+| 6    | Set `synch_req.sub_seq_id` to 0 | |
+| 7    | Serialize `synch_req` to bytes | |
+| 8    | Send serialized bytes to server | | 
+| 9    | | Receive serialized bytes |
+| 10   | | Set `tmp` to `timestamp()` |
+| 11   | | Deserialize request bytes into a `SynchRequest` message called `synch_req` |
+| 12   | | Set `synch_resp` to a new `SynchResponse` |
+| 13   | | Set `synch_resp.station_id` to `synch_req.station_id`
+| 14   | | Set `synch_resp.station_uuid` to `synch_req.station_uuid` |
+| 15   | | Set `synch_resp.seq_id` to `synch_req.seq_id` |
+| 16   | | Set `synch_resp.sub_seq_id` to `synch_req.sub_seq_id + 1` |
+| 17   | | Set `synch_resp.recv_ts_us` to `tmp` |
+| 18   | | Set `synch_resp.send_ts_us` to `timestamp()` |
+| 19   | | Serialize `synch_resp` to bytes |
+| 20   | | Respond to the client with serialized response |
+| 21   | Receive serialized response | |
+| 22   | Set `tmp` to `timestamp()` | |
+| 23   | Deserialize response from bytes into a `SynchResponse` message call `synch_resp` | |
+| 23   | Confirm `synch_resp.station_id` is correct | |
+| 25   | Confirm `synch_resp.station_uuid` is correct | |
+| 26   | Confirm `synch_resp.seq_id` is still `N` | |
+| 27   | Confirm `synch_resp.sub_seq_id` is now `1` | |
+| 28   | Set `exchange.a1` to `synch_resp.recv_ts_us` | |
+| 29   | Set `exchange.b1` to `tmp` | |
+| 30   | Set `exchange.b2` to `timestamp()` | | 
 
 for some exchange `N` where `N >= 0` starting with 0.
 
