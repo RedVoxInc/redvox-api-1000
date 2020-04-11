@@ -302,13 +302,17 @@ message AcquisitionResponse {
 }
 
 message SynchRequest {
-    uint32 seq_id = 1;
-    uint32 sub_seq_id = 2;
+    string station_id = 1;
+    string station_uuid = 2;
+    uint32 seq_id = 3;
+    uint32 sub_seq_id = 4;
 }
 
 message SynchResponse {
-    uint32 seq_id = 1;
-    uint32 sub_seq_id = 2;
-    uint64 recv_ts_us = 3;
-    uint64 send_ts_us = 4;
+    string station_id = 1;
+    string station_uuid = 2;
+    uint32 seq_id = 3;
+    uint32 sub_seq_id = 4;
+    uint64 recv_ts_us = 5;
+    uint64 send_ts_us = 6;
 }

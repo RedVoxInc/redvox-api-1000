@@ -78,10 +78,6 @@ _Note:_ The image channel does not have a specified unit in the traditional sens
 | available_disk   | bytes           |
 | cpu_utilization  | percentage      |
 
-## Performing Time Synchronization Exchanges
-
-TODO
-
 ## Storing Data
 
 #### Audio data
@@ -185,9 +181,52 @@ A `details` field will optionally provide a more detailed error description from
 
 Finally, a `chksum` exists from the server computed checksum.
 
-#### Communicating with the time synchronization server
+## RedVox Time Synchronization Specification v3
 
-The `SynchRequest` and `SynchResponse` message types are used to communicate with v3 of the time synchronization service.
+The goal of the time synchronization process is to exchange sets of timestamps between a client and server for the purpose of gathering the metrics required for performing timing correction. This section provides the relevant details for implementing a client or server that is compatible with version 3 of the RedVox synchronization specification. 
+
+Communication between clients and servers are provided over encrypted WebSockets using protocol buffer serialization. The `SynchRequest` and `SynchResponse` message types are used to serialized data. Further, the client is expected to build a list `RedvoxPacket1000.TimingInformation.SynchExchange` messages per packet. A client should perform a synchronization exchange once every 5 seconds. This may change in future revision of API M. Any exchanges that are not fully completed before a packet is closed should be discarded.
+
+Two sequence ids are kept: `seq_id` should start at zero when the app starts and increment by one on each full exchange. `sub_seq_id` starts at 0 for each new exchange and is incremented by one on each step within a full exchange. The following table outlines the algorithms for V3 of the time synchronization algorithm.
+
+The function `timestamp()` should return the number of microsconds since the epoch.
+
+__Exchange algorithm:__
+| Step | Client | Server | 
+|      | Set `exchange` to a new `RedvoxPacket1000.TimingInformation.SynchExchange`
+| 1    | Set `synch_req` to a new `SynchRequest` | |
+| 2    | Set `synch_req.station_id` | |
+| 3    | Set `synch_req.station_uuid` | |
+| 3    | Set `synch_req.seq_id` to `N` | |
+| 4    | Set `synch_req.sub_seq_id` to 0 | |
+| 5    | Serialize `synch_req` to bytes | |
+| 6    | Send serialized bytes to server | | 
+| 7    | | Receive serialized bytes |
+| 8    | | Set `tmp` to `timestamp()` |
+| 9    | | Deserialize request bytes into a `SynchRequest` message called `synch_req` |
+| 9    | | Set `synch_resp` to a new `SynchResponse` |
+| 10   | | Set `synch_resp.station_id` to `synch_req.station_id`
+| 11   | | Set `synch_resp.station_uuid` to `synch_req.station_uuid` |
+| 12   | | Set `synch_resp.seq_id` to `synch_req.seq_id` |
+| 13   | | Set `synch_resp.sub_seq_id` to `synch_req.sub_seq_id + 1` |
+| 14   | | Set `synch_resp.recv_ts_us` to `tmp` |
+| 15   | | Set `synch_resp.send_ts_us` to `timestamp()` |
+| 16   | | Serialize `synch_resp` to bytes |
+| 17   | | Respond to the client with serialized response |
+| 18   | Receive serialized response | |
+| 19   | Set `tmp` to `timestamp()` | |
+| 20   | Deserialize response from bytes into a `SynchResponse` message call `synch_resp` | |
+| 21   | Confirm `synch_resp.station_id` is correct | |
+| 22   | Confirm `synch_resp.station_uuid` is correct | |
+| 23   | Confirm `synch_resp.seq_id` is still `N` | |
+| 24   | Confirm `synch_resp.sub_seq_id` is now `1` | |
+| 25   | Set `exchange.a1` to `synch_resp.recv_ts_us` | |
+| 26   | Set `exchange.b1` to `tmp` | |
+| 27   | Set `exchange.b2` to `timestamp()` | | 
+
+for some exchange `N` where `N >= 0` starting with 0.
+
+#### Quality Assurance
 
 ## Enabling End-to-End encryption
 
