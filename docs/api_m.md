@@ -189,7 +189,7 @@ Communication between clients and servers are provided over encrypted WebSockets
 
 Two sequence ids are kept: `seq_id` should start at zero when the app starts and increment by one on each full exchange. `sub_seq_id` starts at 0 for each new exchange and is incremented by one on each step within a full exchange. The following table outlines the algorithms for V3 of the time synchronization algorithm.
 
-The function `timestamp()` should return the number of microsconds since the epoch.
+The function `timestamp()` should return the number of microsconds since the epoch. `N` represents the `Nth` complete message exchange where each message exchange is defined as follows.
 
 __Exchange algorithm:__
 
@@ -225,8 +225,37 @@ __Exchange algorithm:__
 | 28   | Set `exchange.a1` to `synch_resp.recv_ts_us` | |
 | 29   | Set `exchange.b1` to `tmp` | |
 | 30   | Set `exchange.b2` to `timestamp()` | | 
+| 31   | Set `synch_req` to a new `SynchRequest` | |
+| 32   | Set `synch_req.station_id` | |
+| 33   | Set `synch_req.station_uuid` | |
+| 34   | Set `synch_req.seq_id` to `N` | |
+| 35   | Set `synch_req.sub_seq_id` to 2 | |
+| 36   | Serialize `synch_req` to bytes | |
+| 37   | Send serialized bytes to server | | 
+| 38   | | Receive serialized bytes |
+| 39   | | Set `tmp` to `timestamp()` |
+| 40   | | Deserialize request bytes into a `SynchRequest` message called `synch_req` |
+| 41   | | Set `synch_resp` to a new `SynchResponse` |
+| 42   | | Set `synch_resp.station_id` to `synch_req.station_id`
+| 43   | | Set `synch_resp.station_uuid` to `synch_req.station_uuid` |
+| 44   | | Set `synch_resp.seq_id` to `synch_req.seq_id` |
+| 45   | | Set `synch_resp.sub_seq_id` to `synch_req.sub_seq_id + 1` |
+| 46   | | Set `synch_resp.recv_ts_us` to `tmp` |
+| 47   | | Set `synch_resp.send_ts_us` to `timestamp()` |
+| 48   | | Serialize `synch_resp` to bytes |
+| 49   | | Respond to the client with serialized response |
+| 50   | Receive serialized response | |
+| 51   | Set `tmp` to `timestamp()` | |
+| 52   | Deserialize response from bytes into a `SynchResponse` message call `synch_resp` | |
+| 53   | Confirm `synch_resp.station_id` is correct | |
+| 54   | Confirm `synch_resp.station_uuid` is correct | |
+| 55   | Confirm `synch_resp.seq_id` is still `N` | |
+| 56   | Confirm `synch_resp.sub_seq_id` is now `3` | |
+| 57   | Set `exchange.a2` to `synch_resp.recv_ts_us` | |
+| 58   | Set `exchange.a3` to `synch_resp.send_ts_us` | |
+| 59   | Set `exchange.b3` to `tmp` | | 
+| 60   | Congrats, you now have one full exchange. Add it to your list and go get some more. | |
 
-for some exchange `N` where `N >= 0` starting with 0.
 
 #### Quality Assurance
 
