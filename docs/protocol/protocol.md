@@ -22,12 +22,12 @@ The top-level protocol provides 6 message definitions.
 
 ### AcquisitionRequest
 
-* An AcquisitionRequest is created by stations and transferred to acquisition servers as part of the [data acquistiion process](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/client_server_comms.md).
+* An AcquisitionRequest is created by stations and transferred to acquisition servers as part of the [data acquistion process](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/client_server_comms.md).
 * These contain the packet payload, a flag for if the payload is encrypted, and a checksum.
 
 ### AcquisitionResponse
 
-* An AcquisitionResponse is created by acquisition servers and transferred to station clients as part of the [data acquistiion process](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/client_server_comms.md).
+* An AcquisitionResponse is created by acquisition servers and transferred to station clients as part of the [data acquistion process](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/client_server_comms.md).
 * The response contains a type indicating success or failure as well as additional details on errors. The response also contains a flag that instructs whether the station client should attempt to resend data on failure.
 
 ### SynchRequest
