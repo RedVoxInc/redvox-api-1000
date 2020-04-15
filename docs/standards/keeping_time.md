@@ -16,9 +16,15 @@ The `TimingInformation` message contains timestamps that delineate the start and
 
 The start and end timestamps represent the first and last sample of the audio channel respectively.
 
-Timestamps marked as `os_timestamp` refer to the time according to the operating system. This is sometimes refered to as the "wall clock". This time is generally disciplined by NTP and may not be monotonic or stable. Timestamps marked as `mach_timestamp` refer to timestamps collected from stable monotonic clocks provided by station hardware and accessed through the OS.  
+Timestamps marked as `os_timestamp` refer to the time according to the operating system. This is sometimes referred to as the "wall clock". This time is generally disciplined by NTP and may not be monotonic or stable. Timestamps marked as `mach_timestamp` refer to timestamps collected from stable monotonic clocks provided by station hardware and accessed through the OS.  
 
-TODO, how to get a real time from mach time?
+The station must track and adjust the start time of each recording session in the `app_start_mach_timestamp` field.
+
+The station must also compute the partial best latency and offset from each packet's synchronization exchanges.
+
+#### Calculating best latency and best offset
+
+TODO
 
 #### Timing Synchronization
 
