@@ -18,6 +18,7 @@ The top-level protocol provides 6 message definitions.
 ### EncryptedRedvoxPacket1000
 
 * This message provides fields for providing separately encrypted header (for routing and authentication) and packet data.
+* See the [E2E encryption standards](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/e2e_encryption.md) for more information.
 
 ### AcquisitionRequest
 
