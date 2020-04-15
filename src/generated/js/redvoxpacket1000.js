@@ -12,9 +12,13 @@ goog.provide('proto.redvox_api1000.RedvoxPacket1000.PacketInformation');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.Payload');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.AudioCodec');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.ImageCodec');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationScoreMethod');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.ServerInformation');
@@ -28,6 +32,7 @@ goog.provide('proto.redvox_api1000.RedvoxPacket1000.StationInformation.OsType');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.TimingInformation');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange');
+goog.provide('proto.redvox_api1000.RedvoxPacket1000.TimingInformation.TimingScoreMethod');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.Unit');
 goog.provide('proto.redvox_api1000.RedvoxPacket1000.UserInformation');
 
@@ -2260,7 +2265,9 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.toObject = function(incl
     proto.redvox_api1000.RedvoxPacket1000.TimingInformation.SynchExchange.toObject, includeInstance),
     bestLatency: +jspb.Message.getFieldWithDefault(msg, 8, 0.0),
     bestOffset: +jspb.Message.getFieldWithDefault(msg, 9, 0.0),
-    unit: jspb.Message.getFieldWithDefault(msg, 10, 0),
+    score: +jspb.Message.getFieldWithDefault(msg, 10, 0.0),
+    scoreMethod: jspb.Message.getFieldWithDefault(msg, 11, 0),
+    unit: jspb.Message.getFieldWithDefault(msg, 12, 0),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -2336,10 +2343,18 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.deserializeBinaryFromRea
       msg.setBestOffset(value);
       break;
     case 10:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setScore(value);
+      break;
+    case 11:
+      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.TimingInformation.TimingScoreMethod} */ (reader.readEnum());
+      msg.setScoreMethod(value);
+      break;
+    case 12:
       var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.Unit} */ (reader.readEnum());
       msg.setUnit(value);
       break;
-    case 11:
+    case 13:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
@@ -2438,19 +2453,40 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.serializeBinaryToWriter 
       f
     );
   }
+  f = message.getScore();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      10,
+      f
+    );
+  }
+  f = message.getScoreMethod();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      11,
+      f
+    );
+  }
   f = message.getUnit();
   if (f !== 0.0) {
     writer.writeEnum(
-      10,
+      12,
       f
     );
   }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(11, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(13, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
+
+/**
+ * @enum {number}
+ */
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.TimingScoreMethod = {
+  TODO: 0
+};
 
 
 /**
@@ -2937,29 +2973,59 @@ proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setBestOffset 
 
 
 /**
- * optional Unit unit = 10;
+ * optional double score = 10;
+ * @return {number}
+ */
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getScore = function() {
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 10, 0.0));
+};
+
+
+/** @param {number} value */
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setScore = function(value) {
+  jspb.Message.setProto3FloatField(this, 10, value);
+};
+
+
+/**
+ * optional TimingScoreMethod score_method = 11;
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.TimingInformation.TimingScoreMethod}
+ */
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getScoreMethod = function() {
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.TimingInformation.TimingScoreMethod} */ (jspb.Message.getFieldWithDefault(this, 11, 0));
+};
+
+
+/** @param {!proto.redvox_api1000.RedvoxPacket1000.TimingInformation.TimingScoreMethod} value */
+proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setScoreMethod = function(value) {
+  jspb.Message.setProto3EnumField(this, 11, value);
+};
+
+
+/**
+ * optional Unit unit = 12;
  * @return {!proto.redvox_api1000.RedvoxPacket1000.Unit}
  */
 proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getUnit = function() {
-  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.Unit} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.Unit} */ (jspb.Message.getFieldWithDefault(this, 12, 0));
 };
 
 
 /** @param {!proto.redvox_api1000.RedvoxPacket1000.Unit} value */
 proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.setUnit = function(value) {
-  jspb.Message.setProto3EnumField(this, 10, value);
+  jspb.Message.setProto3EnumField(this, 12, value);
 };
 
 
 /**
- * map<string, string> metadata = 11;
+ * map<string, string> metadata = 13;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.redvox_api1000.RedvoxPacket1000.TimingInformation.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 11, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 13, opt_noLazyCreate,
       null));
 };
 
@@ -3248,7 +3314,7 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.toObject = function(include
     gyroscopeChannel: (f = msg.getGyroscopeChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.toObject(includeInstance, f),
     magnetometerChannel: (f = msg.getMagnetometerChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.XyzChannel.toObject(includeInstance, f),
     lightChannel: (f = msg.getLightChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.toObject(includeInstance, f),
-    infraredChannel: (f = msg.getInfraredChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.toObject(includeInstance, f),
+    proximityChannel: (f = msg.getProximityChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.toObject(includeInstance, f),
     imageChannel: (f = msg.getImageChannel()) && proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.toObject(includeInstance, f),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
@@ -3325,7 +3391,7 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.deserializeBinaryFromReader
     case 8:
       var value = new proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel;
       reader.readMessage(value,proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.deserializeBinaryFromReader);
-      msg.setInfraredChannel(value);
+      msg.setProximityChannel(value);
       break;
     case 9:
       var value = new proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel;
@@ -3423,7 +3489,7 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.serializeBinaryToWriter = f
       proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel.serializeBinaryToWriter
     );
   }
-  f = message.getInfraredChannel();
+  f = message.getProximityChannel();
   if (f != null) {
     writer.writeMessage(
       8,
@@ -3755,6 +3821,345 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.AudioChannel.prototype.clea
  * @extends {jspb.Message}
  * @constructor
  */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.displayName = 'proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.toObject = function(opt_includeInstance) {
+  return proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    sensorDescription: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    firstSampleTimestamp: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
+    sampleRateHz: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
+    isScrambled: jspb.Message.getFieldWithDefault(msg, 4, false),
+    audioBytes: msg.getAudioBytes_asB64(),
+    audioCodec: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel;
+  return proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSensorDescription(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setFirstSampleTimestamp(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setSampleRateHz(value);
+      break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsScrambled(value);
+      break;
+    case 5:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setAudioBytes(value);
+      break;
+    case 6:
+      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.AudioCodec} */ (reader.readEnum());
+      msg.setAudioCodec(value);
+      break;
+    case 7:
+      var value = msg.getMetadataMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
+         });
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getSensorDescription();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getFirstSampleTimestamp();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      2,
+      f
+    );
+  }
+  f = message.getSampleRateHz();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      3,
+      f
+    );
+  }
+  f = message.getIsScrambled();
+  if (f) {
+    writer.writeBool(
+      4,
+      f
+    );
+  }
+  f = message.getAudioBytes_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      5,
+      f
+    );
+  }
+  f = message.getAudioCodec();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      6,
+      f
+    );
+  }
+  f = message.getMetadataMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(7, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+  }
+};
+
+
+/**
+ * @enum {number}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.AudioCodec = {
+  TODO: 0
+};
+
+/**
+ * optional string sensor_description = 1;
+ * @return {string}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.getSensorDescription = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.setSensorDescription = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional double first_sample_timestamp = 2;
+ * @return {number}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.getFirstSampleTimestamp = function() {
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 2, 0.0));
+};
+
+
+/** @param {number} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.setFirstSampleTimestamp = function(value) {
+  jspb.Message.setProto3FloatField(this, 2, value);
+};
+
+
+/**
+ * optional double sample_rate_hz = 3;
+ * @return {number}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.getSampleRateHz = function() {
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 3, 0.0));
+};
+
+
+/** @param {number} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.setSampleRateHz = function(value) {
+  jspb.Message.setProto3FloatField(this, 3, value);
+};
+
+
+/**
+ * optional bool is_scrambled = 4;
+ * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
+ * You should avoid comparisons like {@code val === true/false} in those cases.
+ * @return {boolean}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.getIsScrambled = function() {
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 4, false));
+};
+
+
+/** @param {boolean} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.setIsScrambled = function(value) {
+  jspb.Message.setProto3BooleanField(this, 4, value);
+};
+
+
+/**
+ * optional bytes audio_bytes = 5;
+ * @return {string}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.getAudioBytes = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * optional bytes audio_bytes = 5;
+ * This is a type-conversion wrapper around `getAudioBytes()`
+ * @return {string}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.getAudioBytes_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getAudioBytes()));
+};
+
+
+/**
+ * optional bytes audio_bytes = 5;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getAudioBytes()`
+ * @return {!Uint8Array}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.getAudioBytes_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getAudioBytes()));
+};
+
+
+/** @param {!(string|Uint8Array)} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.setAudioBytes = function(value) {
+  jspb.Message.setProto3BytesField(this, 5, value);
+};
+
+
+/**
+ * optional AudioCodec audio_codec = 6;
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.AudioCodec}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.getAudioCodec = function() {
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.AudioCodec} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/** @param {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.AudioCodec} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.setAudioCodec = function(value) {
+  jspb.Message.setProto3EnumField(this, 6, value);
+};
+
+
+/**
+ * map<string, string> metadata = 7;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.getMetadataMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 7, opt_noLazyCreate,
+      null));
+};
+
+
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.CompressedAudioChannel.prototype.clearMetadataMap = function() {
+  this.getMetadataMap().clear();
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
@@ -4061,10 +4466,17 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.toObject = 
     verticalAccuracySamples: (f = msg.getVerticalAccuracySamples()) && proto.redvox_api1000.RedvoxPacket1000.Payload.toObject(includeInstance, f),
     speedAccuracySamples: (f = msg.getSpeedAccuracySamples()) && proto.redvox_api1000.RedvoxPacket1000.Payload.toObject(includeInstance, f),
     bearingAccuracySamples: (f = msg.getBearingAccuracySamples()) && proto.redvox_api1000.RedvoxPacket1000.Payload.toObject(includeInstance, f),
-    locationPermissionsGranted: jspb.Message.getFieldWithDefault(msg, 12, false),
-    locationServicesRequested: jspb.Message.getFieldWithDefault(msg, 13, false),
-    locationServicesEnabled: jspb.Message.getFieldWithDefault(msg, 14, false),
-    locationProvider: jspb.Message.getFieldWithDefault(msg, 15, 0),
+    bestLatitude: +jspb.Message.getFieldWithDefault(msg, 12, 0.0),
+    bestLongitude: +jspb.Message.getFieldWithDefault(msg, 13, 0.0),
+    bestAltitude: +jspb.Message.getFieldWithDefault(msg, 14, 0.0),
+    bestSpeed: +jspb.Message.getFieldWithDefault(msg, 15, 0.0),
+    bestBearing: +jspb.Message.getFieldWithDefault(msg, 16, 0.0),
+    score: +jspb.Message.getFieldWithDefault(msg, 17, 0.0),
+    locationScoreMethod: jspb.Message.getFieldWithDefault(msg, 18, 0),
+    locationPermissionsGranted: jspb.Message.getFieldWithDefault(msg, 19, false),
+    locationServicesRequested: jspb.Message.getFieldWithDefault(msg, 20, false),
+    locationServicesEnabled: jspb.Message.getFieldWithDefault(msg, 21, false),
+    locationProvider: jspb.Message.getFieldWithDefault(msg, 22, 0),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -4157,18 +4569,46 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.deserialize
       msg.setBearingAccuracySamples(value);
       break;
     case 12:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setBestLatitude(value);
+      break;
+    case 13:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setBestLongitude(value);
+      break;
+    case 14:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setBestAltitude(value);
+      break;
+    case 15:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setBestSpeed(value);
+      break;
+    case 16:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setBestBearing(value);
+      break;
+    case 17:
+      var value = /** @type {number} */ (reader.readDouble());
+      msg.setScore(value);
+      break;
+    case 18:
+      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationScoreMethod} */ (reader.readEnum());
+      msg.setLocationScoreMethod(value);
+      break;
+    case 19:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setLocationPermissionsGranted(value);
       break;
-    case 13:
+    case 20:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setLocationServicesRequested(value);
       break;
-    case 14:
+    case 21:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setLocationServicesEnabled(value);
       break;
-    case 15:
+    case 22:
       var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider} */ (reader.readEnum());
       msg.setLocationProvider(value);
       break;
@@ -4294,31 +4734,80 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.serializeBi
       proto.redvox_api1000.RedvoxPacket1000.Payload.serializeBinaryToWriter
     );
   }
+  f = message.getBestLatitude();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      12,
+      f
+    );
+  }
+  f = message.getBestLongitude();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      13,
+      f
+    );
+  }
+  f = message.getBestAltitude();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      14,
+      f
+    );
+  }
+  f = message.getBestSpeed();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      15,
+      f
+    );
+  }
+  f = message.getBestBearing();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      16,
+      f
+    );
+  }
+  f = message.getScore();
+  if (f !== 0.0) {
+    writer.writeDouble(
+      17,
+      f
+    );
+  }
+  f = message.getLocationScoreMethod();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      18,
+      f
+    );
+  }
   f = message.getLocationPermissionsGranted();
   if (f) {
     writer.writeBool(
-      12,
+      19,
       f
     );
   }
   f = message.getLocationServicesRequested();
   if (f) {
     writer.writeBool(
-      13,
+      20,
       f
     );
   }
   f = message.getLocationServicesEnabled();
   if (f) {
     writer.writeBool(
-      14,
+      21,
       f
     );
   }
   f = message.getLocationProvider();
   if (f !== 0.0) {
     writer.writeEnum(
-      15,
+      22,
       f
     );
   }
@@ -4328,6 +4817,13 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.serializeBi
   }
 };
 
+
+/**
+ * @enum {number}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationScoreMethod = {
+  TODO: 0
+};
 
 /**
  * @enum {number}
@@ -4655,68 +5151,173 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.h
 
 
 /**
- * optional bool location_permissions_granted = 12;
+ * optional double best_latitude = 12;
+ * @return {number}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getBestLatitude = function() {
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 12, 0.0));
+};
+
+
+/** @param {number} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setBestLatitude = function(value) {
+  jspb.Message.setProto3FloatField(this, 12, value);
+};
+
+
+/**
+ * optional double best_longitude = 13;
+ * @return {number}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getBestLongitude = function() {
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 13, 0.0));
+};
+
+
+/** @param {number} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setBestLongitude = function(value) {
+  jspb.Message.setProto3FloatField(this, 13, value);
+};
+
+
+/**
+ * optional double best_altitude = 14;
+ * @return {number}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getBestAltitude = function() {
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 14, 0.0));
+};
+
+
+/** @param {number} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setBestAltitude = function(value) {
+  jspb.Message.setProto3FloatField(this, 14, value);
+};
+
+
+/**
+ * optional double best_speed = 15;
+ * @return {number}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getBestSpeed = function() {
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 15, 0.0));
+};
+
+
+/** @param {number} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setBestSpeed = function(value) {
+  jspb.Message.setProto3FloatField(this, 15, value);
+};
+
+
+/**
+ * optional double best_bearing = 16;
+ * @return {number}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getBestBearing = function() {
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 16, 0.0));
+};
+
+
+/** @param {number} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setBestBearing = function(value) {
+  jspb.Message.setProto3FloatField(this, 16, value);
+};
+
+
+/**
+ * optional double score = 17;
+ * @return {number}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getScore = function() {
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 17, 0.0));
+};
+
+
+/** @param {number} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setScore = function(value) {
+  jspb.Message.setProto3FloatField(this, 17, value);
+};
+
+
+/**
+ * optional LocationScoreMethod location_score_method = 18;
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationScoreMethod}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLocationScoreMethod = function() {
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationScoreMethod} */ (jspb.Message.getFieldWithDefault(this, 18, 0));
+};
+
+
+/** @param {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationScoreMethod} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLocationScoreMethod = function(value) {
+  jspb.Message.setProto3EnumField(this, 18, value);
+};
+
+
+/**
+ * optional bool location_permissions_granted = 19;
  * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLocationPermissionsGranted = function() {
-  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 12, false));
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 19, false));
 };
 
 
 /** @param {boolean} value */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLocationPermissionsGranted = function(value) {
-  jspb.Message.setProto3BooleanField(this, 12, value);
+  jspb.Message.setProto3BooleanField(this, 19, value);
 };
 
 
 /**
- * optional bool location_services_requested = 13;
+ * optional bool location_services_requested = 20;
  * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLocationServicesRequested = function() {
-  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 13, false));
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 20, false));
 };
 
 
 /** @param {boolean} value */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLocationServicesRequested = function(value) {
-  jspb.Message.setProto3BooleanField(this, 13, value);
+  jspb.Message.setProto3BooleanField(this, 20, value);
 };
 
 
 /**
- * optional bool location_services_enabled = 14;
+ * optional bool location_services_enabled = 21;
  * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLocationServicesEnabled = function() {
-  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 14, false));
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 21, false));
 };
 
 
 /** @param {boolean} value */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLocationServicesEnabled = function(value) {
-  jspb.Message.setProto3BooleanField(this, 14, value);
+  jspb.Message.setProto3BooleanField(this, 21, value);
 };
 
 
 /**
- * optional LocationProvider location_provider = 15;
+ * optional LocationProvider location_provider = 22;
  * @return {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider}
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.getLocationProvider = function() {
-  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider} */ (jspb.Message.getFieldWithDefault(this, 15, 0));
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider} */ (jspb.Message.getFieldWithDefault(this, 22, 0));
 };
 
 
 /** @param {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.LocationProvider} value */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.LocationChannel.prototype.setLocationProvider = function(value) {
-  jspb.Message.setProto3EnumField(this, 15, value);
+  jspb.Message.setProto3EnumField(this, 22, value);
 };
 
 
@@ -5144,6 +5745,7 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.toObject = fun
     sampleTsUsList: jspb.Message.getRepeatedFloatingPointField(msg, 3),
     samplesList: msg.getSamplesList_asB64(),
     sampleRateStatistics: (f = msg.getSampleRateStatistics()) && proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.toObject(includeInstance, f),
+    imageCodec: jspb.Message.getFieldWithDefault(msg, 6, 0),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -5203,6 +5805,10 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.deserializeBin
       msg.setSampleRateStatistics(value);
       break;
     case 6:
+      var value = /** @type {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.ImageCodec} */ (reader.readEnum());
+      msg.setImageCodec(value);
+      break;
+    case 7:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
@@ -5273,12 +5879,28 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.serializeBinar
       proto.redvox_api1000.RedvoxPacket1000.SummaryStatistics.serializeBinaryToWriter
     );
   }
+  f = message.getImageCodec();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      6,
+      f
+    );
+  }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(6, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(7, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
+
+/**
+ * @enum {number}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.ImageCodec = {
+  PNG: 0,
+  JPG: 1,
+  BMP: 2
+};
 
 /**
  * optional string sensor_description = 1;
@@ -5423,14 +6045,29 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.prototype.hasS
 
 
 /**
- * map<string, string> metadata = 6;
+ * optional ImageCodec image_codec = 6;
+ * @return {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.ImageCodec}
+ */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.prototype.getImageCodec = function() {
+  return /** @type {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.ImageCodec} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/** @param {!proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.ImageCodec} value */
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.prototype.setImageCodec = function(value) {
+  jspb.Message.setProto3EnumField(this, 6, value);
+};
+
+
+/**
+ * map<string, string> metadata = 7;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.redvox_api1000.RedvoxPacket1000.SensorChannels.ImageChannel.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 6, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 7, opt_noLazyCreate,
       null));
 };
 
@@ -5651,23 +6288,23 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.hasLightChannel =
 
 
 /**
- * optional SingleChannel infrared_channel = 8;
+ * optional SingleChannel proximity_channel = 8;
  * @return {?proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.getInfraredChannel = function() {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.getProximityChannel = function() {
   return /** @type{?proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel} */ (
     jspb.Message.getWrapperField(this, proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel, 8));
 };
 
 
 /** @param {?proto.redvox_api1000.RedvoxPacket1000.SensorChannels.SingleChannel|undefined} value */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.setInfraredChannel = function(value) {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.setProximityChannel = function(value) {
   jspb.Message.setWrapperField(this, 8, value);
 };
 
 
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.clearInfraredChannel = function() {
-  this.setInfraredChannel(undefined);
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.clearProximityChannel = function() {
+  this.setProximityChannel(undefined);
 };
 
 
@@ -5675,7 +6312,7 @@ proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.clearInfraredChan
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.hasInfraredChannel = function() {
+proto.redvox_api1000.RedvoxPacket1000.SensorChannels.prototype.hasProximityChannel = function() {
   return jspb.Message.getField(this, 8) != null;
 };
 

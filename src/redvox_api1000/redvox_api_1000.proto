@@ -124,11 +124,13 @@ message RedvoxPacket1000 {
         double packet_end_mach_timestamp = 4;               // End timestamp of the packet using machine time (corresponding to the last audio sample)
         double server_acquisition_arrival_timestamp = 5;    // Timestamp that the packet arrived at the acquisition server
         double app_start_mach_timestamp = 6;                // The start of the app as machine time
-        repeated SynchExchange synch_exchanges = 7;     // An array of synchronization params from the synch server
-        double best_latency = 8;                     // The best latency as determined from the synch params
-        double best_offset = 9;                      // The best offset as determined from the synch params
-        Unit unit = 10;
-        map<string, string> metadata = 11;              // A map from string to string for including untyped metadata
+        repeated SynchExchange synch_exchanges = 7;         // An array of synchronization params from the synch server
+        double best_latency = 8;                            // The best latency as determined from the synch params
+        double best_offset = 9;                             // The best offset as determined from the synch params
+        double score = 10;                                  // The overall timing score
+        TimingScoreMethod score_method = 11;                // Method used to provide score
+        Unit unit = 12;                                     // A unit describing the time (should always be MICROSECONDS_SINCE_UNIX_EPOCH)
+        map<string, string> metadata = 13;                  // A map from string to string for including untyped metadata
 
         message SynchExchange {
             double a1 = 1;
@@ -139,6 +141,11 @@ message RedvoxPacket1000 {
             double b3 = 6;
             Unit unit = 7;
             map<string, string> metadata = 8;   // A map from string to string for including untyped metadata
+        }
+
+        enum TimingScoreMethod {
+            // TODO
+            TODO = 0;
         }
     }
 
@@ -162,41 +169,71 @@ message RedvoxPacket1000 {
         map<string, string> metadata = 10;      // A map from string to string for including untyped metadata
 
         message AudioChannel {
-            string sensor_description = 1;              // The name or description of the audio sensor
-            double first_sample_timestamp = 2;              // Timestamp of the first audio sample
-            double sample_rate_hz = 3;                  // Microphone sample rate in Hz
-            bool is_scrambled = 4;                      // If audio data has been scrambled to remove voice
+            string sensor_description = 1;      // The name or description of the audio sensor
+            double first_sample_timestamp = 2;  // Timestamp of the first audio sample
+            double sample_rate_hz = 3;          // Microphone sample rate in Hz
+            bool is_scrambled = 4;              // If audio data has been scrambled to remove voice
             Payload samples = 5;                // List of audio samples
-            map<string, string> metadata = 6;           // A map from string to string for including untyped metadata
+            map<string, string> metadata = 6;   // A map from string to string for including untyped metadata
+        }
+
+        message CompressedAudioChannel {
+            string sensor_description = 1;      // The name or description of the audio sensor
+            double first_sample_timestamp = 2;  // Timestamp of the first audio sample
+            double sample_rate_hz = 3;          // Microphone sample rate in Hz
+            bool is_scrambled = 4;              // If audio data has been scrambled to remove voice
+            bytes audio_bytes = 5;
+            AudioCodec audio_codec = 6;
+            map<string, string> metadata = 7;   // A map from string to string for including untyped metadata
+
+            enum AudioCodec {
+                // TODO
+                TODO = 0;
+            }
         }
 
         message SingleChannel {
-            string sensor_description = 1;                  // The name or description of the sensor
-            Payload timestamps = 2;
-            Payload samples = 3;
-            map<string, string> metadata = 4;               // A map from string to string for including untyped metadata
+            string sensor_description = 1;      // The name or description of the sensor
+            Payload timestamps = 2;             // List of timestamps per sample and associated stats
+            Payload samples = 3;                // List of samples and associated stats
+            map<string, string> metadata = 4;   // A map from string to string for including untyped metadata
         }
 
         message LocationChannel {
-            string sensor_description = 1;                      // The name or description of the sensor
-            Payload timestamps = 2;
+            string sensor_description = 1;              // The name or description of the sensor
+            Payload timestamps = 2;                     // Timestamps and stats
             Payload latitude_samples = 3;               // A list of latitude samples
             Payload longitude_samples = 4;              // A list of longitude samples
             Payload altitude_samples = 5;               // A list of altitude samples
             Payload speed_samples = 6;                  // A list of speed samples
-            Payload bearing_samples = 7;
-            Payload horizontal_accuracy_samples = 8;    // A list of accuracy samples
-            Payload vertical_accuracy_samples = 9;
-            Payload speed_accuracy_samples = 10;
-            Payload bearing_accuracy_samples = 11;
+            Payload bearing_samples = 7;                // A list of bearing samples
+            Payload horizontal_accuracy_samples = 8;    // A list of horizontal accuracy samples
+            Payload vertical_accuracy_samples = 9;      // A list of vertical accuracy samples
+            Payload speed_accuracy_samples = 10;        // A list of speed accuracy samples
+            Payload bearing_accuracy_samples = 11;      // A list of bearing accuracy samples
 
-            bool location_permissions_granted = 12;             // Have location permissions been granted by the user?
-            bool location_services_requested = 13;              // Has location services been requested by the user?
-            bool location_services_enabled = 14;                // Are location services enabled and working?
-            LocationProvider location_provider = 15;            // Location provider enumeration
+            double best_latitude = 12;                  // The best latitude
+            double best_longitude = 13;                 // The best longitude
+            double best_altitude = 14;                  // The best altitude
+            double best_speed = 15;                     // The nest speed
+            double best_bearing = 16;                   // The best bearing
+            double score = 17;                          // An overall location QA score
+            LocationScoreMethod location_score_method = 18; // Method used to find location score
 
-            map<string, string> metadata = 26;                              // A map from string to string for including untyped metadata
+            bool location_permissions_granted = 19;     // Have location permissions been granted by the user?
+            bool location_services_requested = 20;      // Has location services been requested by the user?
+            bool location_services_enabled = 21;        // Are location services enabled and working?
+            LocationProvider location_provider = 22;    // Location provider enumeration
 
+            map<string, string> metadata = 26;          // A map from string to string for including untyped metadata
+
+            // An enumeration for the various scoring methods for the "best of" metrics
+            enum LocationScoreMethod {
+                // TODO
+                TODO = 0;
+            }
+
+            // An enumeration of location providers
             enum LocationProvider {
                 NONE = 0;
                 USER = 1;
@@ -220,7 +257,14 @@ message RedvoxPacket1000 {
             repeated double sample_ts_us = 3;               // A list of timestamps, one for each sample
             repeated bytes samples = 4;                     // A list of bytes each representing a single image
             SummaryStatistics sample_rate_statistics = 5;   // Statistics for sample timestamps
-            map<string, string> metadata = 6;               // A map from string to string for including untyped metadata
+            ImageCodec image_codec = 6;                     // The image codec being used
+            map<string, string> metadata = 7;               // A map from string to string for including untyped metadata
+
+            enum ImageCodec {
+                PNG = 0;
+                JPG = 1;
+                BMP = 2;
+            }
         }
     }
 

@@ -195,8 +195,73 @@ GPBEnumDescriptor *RedvoxPacket1000_StationInformation_AppSettings_InputSensor_E
  **/
 BOOL RedvoxPacket1000_StationInformation_AppSettings_InputSensor_IsValidValue(int32_t value);
 
+#pragma mark - Enum RedvoxPacket1000_TimingInformation_TimingScoreMethod
+
+typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_TimingScoreMethod) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  RedvoxPacket1000_TimingInformation_TimingScoreMethod_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  /** TODO */
+  RedvoxPacket1000_TimingInformation_TimingScoreMethod_Todo = 0,
+};
+
+GPBEnumDescriptor *RedvoxPacket1000_TimingInformation_TimingScoreMethod_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL RedvoxPacket1000_TimingInformation_TimingScoreMethod_IsValidValue(int32_t value);
+
+#pragma mark - Enum RedvoxPacket1000_SensorChannels_CompressedAudioChannel_AudioCodec
+
+typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_CompressedAudioChannel_AudioCodec) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  RedvoxPacket1000_SensorChannels_CompressedAudioChannel_AudioCodec_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  /** TODO */
+  RedvoxPacket1000_SensorChannels_CompressedAudioChannel_AudioCodec_Todo = 0,
+};
+
+GPBEnumDescriptor *RedvoxPacket1000_SensorChannels_CompressedAudioChannel_AudioCodec_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL RedvoxPacket1000_SensorChannels_CompressedAudioChannel_AudioCodec_IsValidValue(int32_t value);
+
+#pragma mark - Enum RedvoxPacket1000_SensorChannels_LocationChannel_LocationScoreMethod
+
+/** An enumeration for the various scoring methods for the "best of" metrics */
+typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_LocationChannel_LocationScoreMethod) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  RedvoxPacket1000_SensorChannels_LocationChannel_LocationScoreMethod_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  /** TODO */
+  RedvoxPacket1000_SensorChannels_LocationChannel_LocationScoreMethod_Todo = 0,
+};
+
+GPBEnumDescriptor *RedvoxPacket1000_SensorChannels_LocationChannel_LocationScoreMethod_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL RedvoxPacket1000_SensorChannels_LocationChannel_LocationScoreMethod_IsValidValue(int32_t value);
+
 #pragma mark - Enum RedvoxPacket1000_SensorChannels_LocationChannel_LocationProvider
 
+/** An enumeration of location providers */
 typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_LocationChannel_LocationProvider) {
   /**
    * Value used if any message's field encounters a value that is not defined
@@ -217,6 +282,28 @@ GPBEnumDescriptor *RedvoxPacket1000_SensorChannels_LocationChannel_LocationProvi
  * the time this source was generated.
  **/
 BOOL RedvoxPacket1000_SensorChannels_LocationChannel_LocationProvider_IsValidValue(int32_t value);
+
+#pragma mark - Enum RedvoxPacket1000_SensorChannels_ImageChannel_ImageCodec
+
+typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_ImageChannel_ImageCodec) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  RedvoxPacket1000_SensorChannels_ImageChannel_ImageCodec_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  RedvoxPacket1000_SensorChannels_ImageChannel_ImageCodec_Png = 0,
+  RedvoxPacket1000_SensorChannels_ImageChannel_ImageCodec_Jpg = 1,
+  RedvoxPacket1000_SensorChannels_ImageChannel_ImageCodec_Bmp = 2,
+};
+
+GPBEnumDescriptor *RedvoxPacket1000_SensorChannels_ImageChannel_ImageCodec_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL RedvoxPacket1000_SensorChannels_ImageChannel_ImageCodec_IsValidValue(int32_t value);
 
 #pragma mark - Enum AcquisitionResponse_ResponseType
 
@@ -594,8 +681,10 @@ typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_FieldNumber) {
   RedvoxPacket1000_TimingInformation_FieldNumber_SynchExchangesArray = 7,
   RedvoxPacket1000_TimingInformation_FieldNumber_BestLatency = 8,
   RedvoxPacket1000_TimingInformation_FieldNumber_BestOffset = 9,
-  RedvoxPacket1000_TimingInformation_FieldNumber_Unit = 10,
-  RedvoxPacket1000_TimingInformation_FieldNumber_Metadata = 11,
+  RedvoxPacket1000_TimingInformation_FieldNumber_Score = 10,
+  RedvoxPacket1000_TimingInformation_FieldNumber_ScoreMethod = 11,
+  RedvoxPacket1000_TimingInformation_FieldNumber_Unit = 12,
+  RedvoxPacket1000_TimingInformation_FieldNumber_Metadata = 13,
 };
 
 @interface RedvoxPacket1000_TimingInformation : GPBMessage
@@ -629,6 +718,13 @@ typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_FieldNumber) {
 /** The best offset as determined from the synch params */
 @property(nonatomic, readwrite) double bestOffset;
 
+/** The overall timing score */
+@property(nonatomic, readwrite) double score;
+
+/** Method used to provide score */
+@property(nonatomic, readwrite) RedvoxPacket1000_TimingInformation_TimingScoreMethod scoreMethod;
+
+/** A unit describing the time (should always be MICROSECONDS_SINCE_UNIX_EPOCH) */
 @property(nonatomic, readwrite) RedvoxPacket1000_Unit unit;
 
 /** A map from string to string for including untyped metadata */
@@ -637,6 +733,18 @@ typedef GPB_ENUM(RedvoxPacket1000_TimingInformation_FieldNumber) {
 @property(nonatomic, readonly) NSUInteger metadata_Count;
 
 @end
+
+/**
+ * Fetches the raw value of a @c RedvoxPacket1000_TimingInformation's @c scoreMethod property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacket1000_TimingInformation_ScoreMethod_RawValue(RedvoxPacket1000_TimingInformation *message);
+/**
+ * Sets the raw value of an @c RedvoxPacket1000_TimingInformation's @c scoreMethod property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacket1000_TimingInformation_ScoreMethod_RawValue(RedvoxPacket1000_TimingInformation *message, int32_t value);
 
 /**
  * Fetches the raw value of a @c RedvoxPacket1000_TimingInformation's @c unit property, even
@@ -735,7 +843,7 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_FieldNumber) {
   RedvoxPacket1000_SensorChannels_FieldNumber_GyroscopeChannel = 5,
   RedvoxPacket1000_SensorChannels_FieldNumber_MagnetometerChannel = 6,
   RedvoxPacket1000_SensorChannels_FieldNumber_LightChannel = 7,
-  RedvoxPacket1000_SensorChannels_FieldNumber_InfraredChannel = 8,
+  RedvoxPacket1000_SensorChannels_FieldNumber_ProximityChannel = 8,
   RedvoxPacket1000_SensorChannels_FieldNumber_ImageChannel = 9,
   RedvoxPacket1000_SensorChannels_FieldNumber_Metadata = 10,
 };
@@ -777,10 +885,10 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_FieldNumber) {
 /** Test to see if @c lightChannel has been set. */
 @property(nonatomic, readwrite) BOOL hasLightChannel;
 
-/** The infrared channel */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SingleChannel *infraredChannel;
-/** Test to see if @c infraredChannel has been set. */
-@property(nonatomic, readwrite) BOOL hasInfraredChannel;
+/** The proximity channel */
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_SingleChannel *proximityChannel;
+/** Test to see if @c proximityChannel has been set. */
+@property(nonatomic, readwrite) BOOL hasProximityChannel;
 
 /** The image channel */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_SensorChannels_ImageChannel *imageChannel;
@@ -831,6 +939,55 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_AudioChannel_FieldNumber) {
 
 @end
 
+#pragma mark - RedvoxPacket1000_SensorChannels_CompressedAudioChannel
+
+typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_CompressedAudioChannel_FieldNumber) {
+  RedvoxPacket1000_SensorChannels_CompressedAudioChannel_FieldNumber_SensorDescription = 1,
+  RedvoxPacket1000_SensorChannels_CompressedAudioChannel_FieldNumber_FirstSampleTimestamp = 2,
+  RedvoxPacket1000_SensorChannels_CompressedAudioChannel_FieldNumber_SampleRateHz = 3,
+  RedvoxPacket1000_SensorChannels_CompressedAudioChannel_FieldNumber_IsScrambled = 4,
+  RedvoxPacket1000_SensorChannels_CompressedAudioChannel_FieldNumber_AudioBytes = 5,
+  RedvoxPacket1000_SensorChannels_CompressedAudioChannel_FieldNumber_AudioCodec = 6,
+  RedvoxPacket1000_SensorChannels_CompressedAudioChannel_FieldNumber_Metadata = 7,
+};
+
+@interface RedvoxPacket1000_SensorChannels_CompressedAudioChannel : GPBMessage
+
+/** The name or description of the audio sensor */
+@property(nonatomic, readwrite, copy, null_resettable) NSString *sensorDescription;
+
+/** Timestamp of the first audio sample */
+@property(nonatomic, readwrite) double firstSampleTimestamp;
+
+/** Microphone sample rate in Hz */
+@property(nonatomic, readwrite) double sampleRateHz;
+
+/** If audio data has been scrambled to remove voice */
+@property(nonatomic, readwrite) BOOL isScrambled;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSData *audioBytes;
+
+@property(nonatomic, readwrite) RedvoxPacket1000_SensorChannels_CompressedAudioChannel_AudioCodec audioCodec;
+
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
+
+@end
+
+/**
+ * Fetches the raw value of a @c RedvoxPacket1000_SensorChannels_CompressedAudioChannel's @c audioCodec property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacket1000_SensorChannels_CompressedAudioChannel_AudioCodec_RawValue(RedvoxPacket1000_SensorChannels_CompressedAudioChannel *message);
+/**
+ * Sets the raw value of an @c RedvoxPacket1000_SensorChannels_CompressedAudioChannel's @c audioCodec property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacket1000_SensorChannels_CompressedAudioChannel_AudioCodec_RawValue(RedvoxPacket1000_SensorChannels_CompressedAudioChannel *message, int32_t value);
+
 #pragma mark - RedvoxPacket1000_SensorChannels_SingleChannel
 
 typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_SingleChannel_FieldNumber) {
@@ -845,10 +1002,12 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_SingleChannel_FieldNumber) {
 /** The name or description of the sensor */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *sensorDescription;
 
+/** List of timestamps per sample and associated stats */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_Payload *timestamps;
 /** Test to see if @c timestamps has been set. */
 @property(nonatomic, readwrite) BOOL hasTimestamps;
 
+/** List of samples and associated stats */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_Payload *samples;
 /** Test to see if @c samples has been set. */
 @property(nonatomic, readwrite) BOOL hasSamples;
@@ -874,10 +1033,17 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber) {
   RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_VerticalAccuracySamples = 9,
   RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_SpeedAccuracySamples = 10,
   RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_BearingAccuracySamples = 11,
-  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LocationPermissionsGranted = 12,
-  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LocationServicesRequested = 13,
-  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LocationServicesEnabled = 14,
-  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LocationProvider = 15,
+  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_BestLatitude = 12,
+  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_BestLongitude = 13,
+  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_BestAltitude = 14,
+  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_BestSpeed = 15,
+  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_BestBearing = 16,
+  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_Score = 17,
+  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LocationScoreMethod = 18,
+  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LocationPermissionsGranted = 19,
+  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LocationServicesRequested = 20,
+  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LocationServicesEnabled = 21,
+  RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_LocationProvider = 22,
   RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber_Metadata = 26,
 };
 
@@ -886,6 +1052,7 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber) {
 /** The name or description of the sensor */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *sensorDescription;
 
+/** Timestamps and stats */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_Payload *timestamps;
 /** Test to see if @c timestamps has been set. */
 @property(nonatomic, readwrite) BOOL hasTimestamps;
@@ -910,26 +1077,51 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber) {
 /** Test to see if @c speedSamples has been set. */
 @property(nonatomic, readwrite) BOOL hasSpeedSamples;
 
+/** A list of bearing samples */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_Payload *bearingSamples;
 /** Test to see if @c bearingSamples has been set. */
 @property(nonatomic, readwrite) BOOL hasBearingSamples;
 
-/** A list of accuracy samples */
+/** A list of horizontal accuracy samples */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_Payload *horizontalAccuracySamples;
 /** Test to see if @c horizontalAccuracySamples has been set. */
 @property(nonatomic, readwrite) BOOL hasHorizontalAccuracySamples;
 
+/** A list of vertical accuracy samples */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_Payload *verticalAccuracySamples;
 /** Test to see if @c verticalAccuracySamples has been set. */
 @property(nonatomic, readwrite) BOOL hasVerticalAccuracySamples;
 
+/** A list of speed accuracy samples */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_Payload *speedAccuracySamples;
 /** Test to see if @c speedAccuracySamples has been set. */
 @property(nonatomic, readwrite) BOOL hasSpeedAccuracySamples;
 
+/** A list of bearing accuracy samples */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacket1000_Payload *bearingAccuracySamples;
 /** Test to see if @c bearingAccuracySamples has been set. */
 @property(nonatomic, readwrite) BOOL hasBearingAccuracySamples;
+
+/** The best latitude */
+@property(nonatomic, readwrite) double bestLatitude;
+
+/** The best longitude */
+@property(nonatomic, readwrite) double bestLongitude;
+
+/** The best altitude */
+@property(nonatomic, readwrite) double bestAltitude;
+
+/** The nest speed */
+@property(nonatomic, readwrite) double bestSpeed;
+
+/** The best bearing */
+@property(nonatomic, readwrite) double bestBearing;
+
+/** An overall location QA score */
+@property(nonatomic, readwrite) double score;
+
+/** Method used to find location score */
+@property(nonatomic, readwrite) RedvoxPacket1000_SensorChannels_LocationChannel_LocationScoreMethod locationScoreMethod;
 
 /** Have location permissions been granted by the user? */
 @property(nonatomic, readwrite) BOOL locationPermissionsGranted;
@@ -949,6 +1141,18 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_LocationChannel_FieldNumber) {
 @property(nonatomic, readonly) NSUInteger metadata_Count;
 
 @end
+
+/**
+ * Fetches the raw value of a @c RedvoxPacket1000_SensorChannels_LocationChannel's @c locationScoreMethod property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacket1000_SensorChannels_LocationChannel_LocationScoreMethod_RawValue(RedvoxPacket1000_SensorChannels_LocationChannel *message);
+/**
+ * Sets the raw value of an @c RedvoxPacket1000_SensorChannels_LocationChannel's @c locationScoreMethod property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacket1000_SensorChannels_LocationChannel_LocationScoreMethod_RawValue(RedvoxPacket1000_SensorChannels_LocationChannel *message, int32_t value);
 
 /**
  * Fetches the raw value of a @c RedvoxPacket1000_SensorChannels_LocationChannel's @c locationProvider property, even
@@ -1012,7 +1216,8 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_ImageChannel_FieldNumber) {
   RedvoxPacket1000_SensorChannels_ImageChannel_FieldNumber_SampleTsUsArray = 3,
   RedvoxPacket1000_SensorChannels_ImageChannel_FieldNumber_SamplesArray = 4,
   RedvoxPacket1000_SensorChannels_ImageChannel_FieldNumber_SampleRateStatistics = 5,
-  RedvoxPacket1000_SensorChannels_ImageChannel_FieldNumber_Metadata = 6,
+  RedvoxPacket1000_SensorChannels_ImageChannel_FieldNumber_ImageCodec = 6,
+  RedvoxPacket1000_SensorChannels_ImageChannel_FieldNumber_Metadata = 7,
 };
 
 @interface RedvoxPacket1000_SensorChannels_ImageChannel : GPBMessage
@@ -1038,12 +1243,27 @@ typedef GPB_ENUM(RedvoxPacket1000_SensorChannels_ImageChannel_FieldNumber) {
 /** Test to see if @c sampleRateStatistics has been set. */
 @property(nonatomic, readwrite) BOOL hasSampleRateStatistics;
 
+/** The image codec being used */
+@property(nonatomic, readwrite) RedvoxPacket1000_SensorChannels_ImageChannel_ImageCodec imageCodec;
+
 /** A map from string to string for including untyped metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
 /** The number of items in @c metadata without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger metadata_Count;
 
 @end
+
+/**
+ * Fetches the raw value of a @c RedvoxPacket1000_SensorChannels_ImageChannel's @c imageCodec property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacket1000_SensorChannels_ImageChannel_ImageCodec_RawValue(RedvoxPacket1000_SensorChannels_ImageChannel *message);
+/**
+ * Sets the raw value of an @c RedvoxPacket1000_SensorChannels_ImageChannel's @c imageCodec property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacket1000_SensorChannels_ImageChannel_ImageCodec_RawValue(RedvoxPacket1000_SensorChannels_ImageChannel *message, int32_t value);
 
 #pragma mark - RedvoxPacket1000_Payload
 
@@ -1180,8 +1400,9 @@ typedef GPB_ENUM(EncryptedRedvoxPacket1000_Header_FieldNumber) {
 #pragma mark - AcquisitionRequest
 
 typedef GPB_ENUM(AcquisitionRequest_FieldNumber) {
-  AcquisitionRequest_FieldNumber_CompressedRedvoxPacket1000 = 1,
-  AcquisitionRequest_FieldNumber_Checksum = 2,
+  AcquisitionRequest_FieldNumber_Payload = 1,
+  AcquisitionRequest_FieldNumber_IsEncrypted = 2,
+  AcquisitionRequest_FieldNumber_Checksum = 3,
 };
 
 /**
@@ -1190,7 +1411,9 @@ typedef GPB_ENUM(AcquisitionRequest_FieldNumber) {
 @interface AcquisitionRequest : GPBMessage
 
 /** The compressed packet to send. */
-@property(nonatomic, readwrite, copy, null_resettable) NSData *compressedRedvoxPacket1000;
+@property(nonatomic, readwrite, copy, null_resettable) NSData *payload;
+
+@property(nonatomic, readwrite) BOOL isEncrypted;
 
 /** A checksum of the bytes in field 1. */
 @property(nonatomic, readwrite) int64_t checksum;
@@ -1240,13 +1463,19 @@ void SetAcquisitionResponse_ResponseType_RawValue(AcquisitionResponse *message, 
 #pragma mark - SynchRequest
 
 typedef GPB_ENUM(SynchRequest_FieldNumber) {
-  SynchRequest_FieldNumber_SeqId = 1,
-  SynchRequest_FieldNumber_SubSeqId = 2,
+  SynchRequest_FieldNumber_StationId = 1,
+  SynchRequest_FieldNumber_StationUuid = 2,
+  SynchRequest_FieldNumber_SeqId = 3,
+  SynchRequest_FieldNumber_SubSeqId = 4,
 };
 
 @interface SynchRequest : GPBMessage
 
-@property(nonatomic, readwrite) uint64_t seqId;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *stationId;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *stationUuid;
+
+@property(nonatomic, readwrite) uint32_t seqId;
 
 @property(nonatomic, readwrite) uint32_t subSeqId;
 
@@ -1255,15 +1484,21 @@ typedef GPB_ENUM(SynchRequest_FieldNumber) {
 #pragma mark - SynchResponse
 
 typedef GPB_ENUM(SynchResponse_FieldNumber) {
-  SynchResponse_FieldNumber_SeqId = 1,
-  SynchResponse_FieldNumber_SubSeqId = 2,
-  SynchResponse_FieldNumber_RecvTsUs = 3,
-  SynchResponse_FieldNumber_SendTsUs = 4,
+  SynchResponse_FieldNumber_StationId = 1,
+  SynchResponse_FieldNumber_StationUuid = 2,
+  SynchResponse_FieldNumber_SeqId = 3,
+  SynchResponse_FieldNumber_SubSeqId = 4,
+  SynchResponse_FieldNumber_RecvTsUs = 5,
+  SynchResponse_FieldNumber_SendTsUs = 6,
 };
 
 @interface SynchResponse : GPBMessage
 
-@property(nonatomic, readwrite) uint64_t seqId;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *stationId;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *stationUuid;
+
+@property(nonatomic, readwrite) uint32_t seqId;
 
 @property(nonatomic, readwrite) uint32_t subSeqId;
 

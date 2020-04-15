@@ -60,8 +60,9 @@ proto.redvox_api1000.AcquisitionRequest.prototype.toObject = function(opt_includ
  */
 proto.redvox_api1000.AcquisitionRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    compressedRedvoxPacket1000: msg.getCompressedRedvoxPacket1000_asB64(),
-    checksum: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    payload: msg.getPayload_asB64(),
+    isEncrypted: jspb.Message.getFieldWithDefault(msg, 2, false),
+    checksum: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -100,9 +101,13 @@ proto.redvox_api1000.AcquisitionRequest.deserializeBinaryFromReader = function(m
     switch (field) {
     case 1:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setCompressedRedvoxPacket1000(value);
+      msg.setPayload(value);
       break;
     case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsEncrypted(value);
+      break;
+    case 3:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setChecksum(value);
       break;
@@ -135,17 +140,24 @@ proto.redvox_api1000.AcquisitionRequest.prototype.serializeBinary = function() {
  */
 proto.redvox_api1000.AcquisitionRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getCompressedRedvoxPacket1000_asU8();
+  f = message.getPayload_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
       f
     );
   }
+  f = message.getIsEncrypted();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
   f = message.getChecksum();
   if (f !== 0) {
     writer.writeInt64(
-      2,
+      3,
       f
     );
   }
@@ -153,56 +165,73 @@ proto.redvox_api1000.AcquisitionRequest.serializeBinaryToWriter = function(messa
 
 
 /**
- * optional bytes compressed_redvox_packet_1000 = 1;
+ * optional bytes payload = 1;
  * @return {string}
  */
-proto.redvox_api1000.AcquisitionRequest.prototype.getCompressedRedvoxPacket1000 = function() {
+proto.redvox_api1000.AcquisitionRequest.prototype.getPayload = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
- * optional bytes compressed_redvox_packet_1000 = 1;
- * This is a type-conversion wrapper around `getCompressedRedvoxPacket1000()`
+ * optional bytes payload = 1;
+ * This is a type-conversion wrapper around `getPayload()`
  * @return {string}
  */
-proto.redvox_api1000.AcquisitionRequest.prototype.getCompressedRedvoxPacket1000_asB64 = function() {
+proto.redvox_api1000.AcquisitionRequest.prototype.getPayload_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getCompressedRedvoxPacket1000()));
+      this.getPayload()));
 };
 
 
 /**
- * optional bytes compressed_redvox_packet_1000 = 1;
+ * optional bytes payload = 1;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getCompressedRedvoxPacket1000()`
+ * This is a type-conversion wrapper around `getPayload()`
  * @return {!Uint8Array}
  */
-proto.redvox_api1000.AcquisitionRequest.prototype.getCompressedRedvoxPacket1000_asU8 = function() {
+proto.redvox_api1000.AcquisitionRequest.prototype.getPayload_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getCompressedRedvoxPacket1000()));
+      this.getPayload()));
 };
 
 
 /** @param {!(string|Uint8Array)} value */
-proto.redvox_api1000.AcquisitionRequest.prototype.setCompressedRedvoxPacket1000 = function(value) {
+proto.redvox_api1000.AcquisitionRequest.prototype.setPayload = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
 
 
 /**
- * optional int64 checksum = 2;
+ * optional bool is_encrypted = 2;
+ * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
+ * You should avoid comparisons like {@code val === true/false} in those cases.
+ * @return {boolean}
+ */
+proto.redvox_api1000.AcquisitionRequest.prototype.getIsEncrypted = function() {
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 2, false));
+};
+
+
+/** @param {boolean} value */
+proto.redvox_api1000.AcquisitionRequest.prototype.setIsEncrypted = function(value) {
+  jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional int64 checksum = 3;
  * @return {number}
  */
 proto.redvox_api1000.AcquisitionRequest.prototype.getChecksum = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /** @param {number} value */
 proto.redvox_api1000.AcquisitionRequest.prototype.setChecksum = function(value) {
-  jspb.Message.setProto3IntField(this, 2, value);
+  jspb.Message.setProto3IntField(this, 3, value);
 };
 
 

@@ -60,10 +60,12 @@ proto.redvox_api1000.SynchResponse.prototype.toObject = function(opt_includeInst
  */
 proto.redvox_api1000.SynchResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    seqId: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    subSeqId: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    recvTsUs: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    sendTsUs: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    stationId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    stationUuid: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    seqId: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    subSeqId: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    recvTsUs: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    sendTsUs: jspb.Message.getFieldWithDefault(msg, 6, 0)
   };
 
   if (includeInstance) {
@@ -101,18 +103,26 @@ proto.redvox_api1000.SynchResponse.deserializeBinaryFromReader = function(msg, r
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setSeqId(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setStationId(value);
       break;
     case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setStationUuid(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setSeqId(value);
+      break;
+    case 4:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setSubSeqId(value);
       break;
-    case 3:
+    case 5:
       var value = /** @type {number} */ (reader.readUint64());
       msg.setRecvTsUs(value);
       break;
-    case 4:
+    case 6:
       var value = /** @type {number} */ (reader.readUint64());
       msg.setSendTsUs(value);
       break;
@@ -145,31 +155,45 @@ proto.redvox_api1000.SynchResponse.prototype.serializeBinary = function() {
  */
 proto.redvox_api1000.SynchResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
+  f = message.getStationId();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getStationUuid();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
   f = message.getSeqId();
   if (f !== 0) {
-    writer.writeUint64(
-      1,
+    writer.writeUint32(
+      3,
       f
     );
   }
   f = message.getSubSeqId();
   if (f !== 0) {
     writer.writeUint32(
-      2,
+      4,
       f
     );
   }
   f = message.getRecvTsUs();
   if (f !== 0) {
     writer.writeUint64(
-      3,
+      5,
       f
     );
   }
   f = message.getSendTsUs();
   if (f !== 0) {
     writer.writeUint64(
-      4,
+      6,
       f
     );
   }
@@ -177,62 +201,92 @@ proto.redvox_api1000.SynchResponse.serializeBinaryToWriter = function(message, w
 
 
 /**
- * optional uint64 seq_id = 1;
+ * optional string station_id = 1;
+ * @return {string}
+ */
+proto.redvox_api1000.SynchResponse.prototype.getStationId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.redvox_api1000.SynchResponse.prototype.setStationId = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string station_uuid = 2;
+ * @return {string}
+ */
+proto.redvox_api1000.SynchResponse.prototype.getStationUuid = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.redvox_api1000.SynchResponse.prototype.setStationUuid = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional uint32 seq_id = 3;
  * @return {number}
  */
 proto.redvox_api1000.SynchResponse.prototype.getSeqId = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
-};
-
-
-/** @param {number} value */
-proto.redvox_api1000.SynchResponse.prototype.setSeqId = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value);
-};
-
-
-/**
- * optional uint32 sub_seq_id = 2;
- * @return {number}
- */
-proto.redvox_api1000.SynchResponse.prototype.getSubSeqId = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/** @param {number} value */
-proto.redvox_api1000.SynchResponse.prototype.setSubSeqId = function(value) {
-  jspb.Message.setProto3IntField(this, 2, value);
-};
-
-
-/**
- * optional uint64 recv_ts_us = 3;
- * @return {number}
- */
-proto.redvox_api1000.SynchResponse.prototype.getRecvTsUs = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.SynchResponse.prototype.setRecvTsUs = function(value) {
+proto.redvox_api1000.SynchResponse.prototype.setSeqId = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
 /**
- * optional uint64 send_ts_us = 4;
+ * optional uint32 sub_seq_id = 4;
  * @return {number}
  */
-proto.redvox_api1000.SynchResponse.prototype.getSendTsUs = function() {
+proto.redvox_api1000.SynchResponse.prototype.getSubSeqId = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.SynchResponse.prototype.setSendTsUs = function(value) {
+proto.redvox_api1000.SynchResponse.prototype.setSubSeqId = function(value) {
   jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional uint64 recv_ts_us = 5;
+ * @return {number}
+ */
+proto.redvox_api1000.SynchResponse.prototype.getRecvTsUs = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/** @param {number} value */
+proto.redvox_api1000.SynchResponse.prototype.setRecvTsUs = function(value) {
+  jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional uint64 send_ts_us = 6;
+ * @return {number}
+ */
+proto.redvox_api1000.SynchResponse.prototype.getSendTsUs = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/** @param {number} value */
+proto.redvox_api1000.SynchResponse.prototype.setSendTsUs = function(value) {
+  jspb.Message.setProto3IntField(this, 6, value);
 };
 
 
