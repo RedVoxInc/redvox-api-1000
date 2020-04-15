@@ -72,17 +72,25 @@ message RedvoxPacket1000 {
             bool publish_data_as_private = 8;
             bool scramble_voice_data = 9;
             bool provide_backfill = 10;
-            bool use_custom_time_sync_server = 11;
-            string time_sync_server_url = 12;
-            bool use_custom_data_server = 13;
-            string data_server_url = 14;
-            bool auto_delete_data_files = 15;
-            double storage_space_allowance = 16;
-            bool use_sd_card_for_data_storage = 17;
-            bool use_location_services = 18;
-            double use_latitude = 19;
-            double use_longitude = 20;
-            map<string, string> metadata = 21;                   // A map from string to string for including untyped metadata
+            bool remove_sensor_dc_offset = 11;
+            FftOverlap fft_overlap = 12;
+            bool use_custom_time_sync_server = 13;
+            string time_sync_server_url = 14;
+            bool use_custom_data_server = 15;
+            string data_server_url = 16;
+            bool auto_delete_data_files = 17;
+            double storage_space_allowance = 18;
+            bool use_sd_card_for_data_storage = 19;
+            bool use_location_services = 20;
+            double use_latitude = 21;
+            double use_longitude = 22;
+            map<string, string> metadata = 23;                   // A map from string to string for including untyped metadata
+
+            enum FftOverlap {
+                PERCENT_25 = 0;
+                PERCENT_50 = 1;
+                PERCENT_75 = 2;
+            }
 
             enum AudioSamplingRate {
                 HZ_80 = 0;
