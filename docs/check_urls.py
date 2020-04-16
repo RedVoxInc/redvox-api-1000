@@ -31,7 +31,7 @@ def identify_markdown_paths(base_path: str = "./") -> List[str]:
     :param base_path: The base path to start searching for markdown files (optional)
     :return: A list of paths to markdown files.
     """
-    return glob.glob(os.path.join(base_path, "**/*.md"), recursive=True)
+    return glob.glob(os.path.join(base_path, "**", "*.md"), recursive=True)
 
 
 def extract_url_at_idx(line: str, idx: int) -> str:
