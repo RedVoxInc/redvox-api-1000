@@ -3,6 +3,7 @@
 *
 * Standards and related documentation for API M is available at:
 *   - https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/README.md
+*
 */
 
 syntax = "proto3";
@@ -22,6 +23,7 @@ message RedvoxPacketM {
 
     // --------- The rest of this message contains embedded message types
 
+    // This message encapsulates station owner information and related authentication information
     message UserInformation {
         string auth_email = 1;              // The e-mail the user used to authenticate with
         string auth_token = 2;              // The JWT token used for authentication
@@ -29,6 +31,7 @@ message RedvoxPacketM {
         map<string, string> metadata = 4;   // A map from string to string for including untyped metadata
     }
 
+    // This message contains station metadata and related station state metrics
     message StationInformation {
         string id = 1;                                  // The user selectable station id
         string uuid = 2;                                // The app provided UUID
@@ -48,12 +51,14 @@ message RedvoxPacketM {
         Payload cpu_utilization = 16;                   // CPU utilization as a percentage
         map<string, string> metadata = 17;              // A map from string to string for including untyped metadata
 
+        // An enumeration specifying the available network types
         enum NetworkType {
             WIFI = 0;
             CELLULAR = 1;
             NONE = 2;
         }
 
+        // An enumeration specifying the available operating system types
         enum OsType {
             ANDROID = 0;
             IOS = 1;
@@ -61,6 +66,7 @@ message RedvoxPacketM {
             WINDOWS = 3;
         }
 
+        // A message the encapsulates the state of the app settings
         message AppSettings {
             AudioSamplingRate audio_sampling_rate_hz = 1;
             AudioSourceTuning audio_source_tuning = 2;
@@ -133,8 +139,8 @@ message RedvoxPacketM {
         double server_acquisition_arrival_timestamp = 5;    // Timestamp that the packet arrived at the acquisition server
         double app_start_mach_timestamp = 6;                // The start of the app as machine time
         repeated SynchExchange synch_exchanges = 7;         // An array of synchronization params from the synch server
-        double best_latency = 8;                            // The best latency as determined from the synch params
-        double best_offset = 9;                             // The best offset as determined from the synch params
+        double best_latency = 8;                            // The best latency as determined from the synch params in microseconds
+        double best_offset = 9;                             // The best offset as determined from the synch params in microseconds
         double score = 10;                                  // The overall timing score
         TimingScoreMethod score_method = 11;                // Method used to provide score
         Unit unit = 12;                                     // A unit describing the time (should always be MICROSECONDS_SINCE_UNIX_EPOCH)
@@ -175,6 +181,7 @@ message RedvoxPacketM {
         ImageChannel image_channel = 9;         // The image channel
         map<string, string> metadata = 10;      // A map from string to string for including untyped metadata
 
+        // This message describes a stable audio channel
         message AudioChannel {
             string sensor_description = 1;      // The name or description of the audio sensor
             double first_sample_timestamp = 2;  // Timestamp of the first audio sample
