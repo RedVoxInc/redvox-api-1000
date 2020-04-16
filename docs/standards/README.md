@@ -12,7 +12,7 @@ The following standards must be adhered to.
 * [Storing Image Data](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_image_data.md)
 * [Collecting station metrics](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/station_metrics.md)
 * [Compression/Decompression](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/compression.md)
-* [Filename Conventions](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/filenames.md)
+* [Filenames and Directory Layout](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/filenames.md)
 * [Client/Server Communications](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/client_server_comms.md)
 * [E2E Encrypting](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/e2e_encryption.md)
 
