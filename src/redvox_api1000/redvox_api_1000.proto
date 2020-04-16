@@ -380,3 +380,7 @@ message SynchResponse {
     uint64 recv_ts_us = 5;
     uint64 send_ts_us = 6;
 }
+
+// TODO
+// * Log messages?
+// * C3 messages?

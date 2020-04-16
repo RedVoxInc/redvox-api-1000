@@ -1,6 +1,6 @@
 # API M Standards
 
-The following standards must be adhered to.
+The following standards must be adhered to. When in doubt, please reach out for clarification.
 
 * [Audio sampling rate and packet lengths](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/audio_sampling_rates_packet_lengths.md)
 * [Keeping Time](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/keeping_time.md)
@@ -13,8 +13,11 @@ The following standards must be adhered to.
 * [Collecting station metrics](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/station_metrics.md)
 * [Compression/Decompression](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/compression.md)
 * [Filenames and Directory Layout](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/filenames.md)
+* [Command, Control, and Communication](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/c3po.md)
+* [Logging](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/logging.md)
 * [Client/Server Communications](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/client_server_comms.md)
 * [E2E Encrypting](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/e2e_encryption.md)
+* [User Tiers](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/user_tiers.md)
 
 
 
