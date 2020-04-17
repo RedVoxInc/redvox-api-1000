@@ -170,19 +170,28 @@ message RedvoxPacketM {
     }
 
     message Sensors {
-        AudioChannel audio_channel = 1;         // The audio channel
-        SingleChannel barometer_channel = 2;    // The barometer channel
-        LocationChannel location_channel = 3;   // The location channel
-        XyzChannel accelerometer_channel = 4;   // The accelerometer channel
-        XyzChannel gyroscope_channel = 5;       // The gyroscope channel
-        XyzChannel magnetometer_channel = 6;    // The magnetometer channel
-        SingleChannel light_channel = 7;        // The light channel
-        SingleChannel proximity_channel = 8;    // The proximity channel
-        ImageChannel image_channel = 9;         // The image channel
-        map<string, string> metadata = 10;      // A map from string to string for including untyped metadata
+        Xyz accelerometer = 1; // The accelerometer channel
+        Single ambient_temperature = 2; //
+        Audio audio = 3; // The audio channel
+        CompressedAudio compressed_audio = 4;
+        Xyz gravity = 5; //
+        Xyz gyroscope = 6; // The gyroscope channel
+        ImageChannel image = 7; // The image channel
+        Single light = 8; // The light channel
+        Xyz linear_acceleration = 9;
+        Location location = 10; // The location channel
+        Xyz magnetometer = 11; // The magnetometer channel
+        Xyz orientation = 12;
+        Single pressure = 13;
+        Single proximity =14; // The proximity channel
+        Single relative_humidity = 15;
+        Xyz rotation_vector = 16;
+
+
+        map<string, string> metadata = 17; // A map from string to string for including untyped metadata
 
         // This message describes a stable audio channel
-        message AudioChannel {
+        message Audio {
             string sensor_description = 1;      // The name or description of the audio sensor
             double first_sample_timestamp = 2;  // Timestamp of the first audio sample
             double sample_rate = 3;             // Microphone sample rate in Hz
@@ -191,7 +200,7 @@ message RedvoxPacketM {
             map<string, string> metadata = 6;   // A map from string to string for including untyped metadata
         }
 
-        message CompressedAudioChannel {
+        message CompressedAudio {
             string sensor_description = 1;      // The name or description of the audio sensor
             double first_sample_timestamp = 2;  // Timestamp of the first audio sample
             double sample_rate = 3;             // Microphone sample rate in Hz
@@ -206,7 +215,7 @@ message RedvoxPacketM {
             }
         }
 
-        message SingleChannel {
+        message Single {
             string sensor_description = 1;      // The name or description of the sensor
             Payload timestamps = 2;             // List of timestamps per sample and associated stats
             Payload samples = 3;                // List of samples and associated stats
@@ -215,7 +224,7 @@ message RedvoxPacketM {
             map<string, string> metadata = 6;   // A map from string to string for including untyped metadata
         }
 
-        message LocationChannel {
+        message Location {
             string sensor_description = 1;              // The name or description of the sensor
             Payload timestamps = 2;                     // Timestamps and stats
             Payload latitude_samples = 3;               // A list of latitude samples
@@ -262,7 +271,7 @@ message RedvoxPacketM {
             }
         }
 
-        message XyzChannel {
+        message Xyz {
             string sensor_description = 1;      // The name or description of the sensor
             Payload timestamps = 2;             //
             Payload x_samples = 4;              // A list of samples for the X-channel
