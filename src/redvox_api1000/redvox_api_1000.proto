@@ -41,29 +41,59 @@ message RedvoxPacketM {
         string os_version = 6;                          // OS version of the station
         string app_version = 7;                         // App version on the station
         AppSettings app_settings = 8;                   // A copy of the App's settings
-        NetworkType network_type = 9;                   // Type of network connection
-        Payload station_information_timestamps = 10;    // Timestamps associated with following sensor state metrics
-        Payload network_strength = 11;                  // A value representing the strength of the network connection
-        Payload temperature = 12;                       // Internal temperature of station in degrees Celsius
-        Payload battery = 13;                           // Remaining percentage of station's battery
-        Payload available_ram = 14;                     // Available ram in bytes
-        Payload available_disk = 15;                    // Available disk space in bytes
-        Payload cpu_utilization = 16;                   // CPU utilization as a percentage
-        map<string, string> metadata = 17;              // A map from string to string for including untyped metadata
+        StationMetrics station_metrics = 9;
+        map<string, string> metadata = 10; // A map from string to string for including untyped metadata
 
-        // An enumeration specifying the available network types
-        enum NetworkType {
-            WIFI = 0;
-            CELLULAR = 1;
-            NONE = 2;
-        }
+        message StationMetrics {
+            Payload station_information_timestamps = 1; // Timestamps associated with following sensor state metrics
+            repeated NetworkType network_type = 2; // Type of network connection
+            repeated CellServiceState cell_service_state = 3;
+            Payload network_strength = 4; // A value representing the strength of the network connection
+            Payload temperature = 5; // Internal temperature of station in degrees Celsius
+            Payload battery = 6; // Remaining percentage of station's battery
+            Payload available_ram = 7; // Available ram in bytes
+            Payload available_disk = 8; // Available disk space in bytes
+            Payload cpu_utilization = 9; // CPU utilization as a percentage
+            Payload battery_current = 10; // Current in microamperes
+            repeated PowerState power_state = 11;
+            WifiWakeLock wifi_wake_lock = 12;
+            map<string, string> metadata = 13; // A map from string to string for including untyped metadata
 
-        // An enumeration specifying the available operating system types
-        enum OsType {
-            ANDROID = 0;
-            IOS = 1;
-            LINUX = 2;
-            WINDOWS = 3;
+            // An enumeration specifying the available network types
+            enum NetworkType {
+                WIFI = 0;
+                CELLULAR = 1;
+                NONE = 2;
+            }
+
+            enum WifiWakeLock {
+                NONE = 0;
+                HIGH_PERF = 1;
+                LOW_LATENCY = 2;
+                OTHER = 3;
+            }
+
+            enum CellServiceState {
+                UNKNOWN = 0;
+                EMERGENCY = 1;
+                NOMINAL = 2;
+                OUT_OF_SERVICE = 3;
+                POWER_OFF = 4;
+            }
+
+            // An enumeration specifying the available operating system types
+            enum OsType {
+                ANDROID = 0;
+                IOS = 1;
+                LINUX = 2;
+                WINDOWS = 3;
+            }
+
+            enum PowerState {
+                UNPLUGGED = 0;
+                CHARGING = 1;
+                CHARGED = 2;
+            }
         }
 
         // A message the encapsulates the state of the app settings
@@ -186,7 +216,6 @@ message RedvoxPacketM {
         Single proximity =14; // The proximity channel
         Single relative_humidity = 15;
         Xyz rotation_vector = 16;
-
 
         map<string, string> metadata = 17; // A map from string to string for including untyped metadata
 
@@ -318,6 +347,10 @@ message RedvoxPacketM {
         DEGREES_CELSIUS = 10;
         BYTE = 11;
         PERCENTAGE = 12;
+        RADIANS = 13;
+        MICROAMPERES = 14;
+        CENTIMETERS = 15;
+        NORMALIZED_COUNTS = 16;
     }
 
     message SummaryStatistics {

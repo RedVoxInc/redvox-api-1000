@@ -51,3 +51,4 @@ All sample rates and associated statistics are to be represented in Hz.
 | available_ram    | bytes           |
 | available_disk   | bytes           |
 | cpu_utilization  | percentage      |
+| battery_current  | microamperes    |
