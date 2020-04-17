@@ -1,6 +1,6 @@
-## Keeping Time
+# Keeping Time
 
-#### Timestamp Standard
+### Timestamp Standard
 
 __All__ timestamps in API M should be represented as the number of microseconds since the [epoch](https://en.wikipedia.org/wiki/Unix_time) (1 January 1970 UTC).
 
@@ -10,7 +10,7 @@ The following example shows a UTC date and time and its corresponding timestamp:
 |---|---|
 |2020-04-09 21:30:51.820478 | 1586467851820478 |
 
-#### Timing Information
+### Timing Information
 
 The `TimingInformation` message contains timestamps that delineate the start and end of the data window as measured by the audio channel. 
 
@@ -22,11 +22,17 @@ The station must track and adjust the start time of each recording session in th
 
 The station must also compute the partial best latency and offset from each packet's synchronization exchanges.
 
-#### Calculating best latency and best offset
+### Calculating Sample Rates
+
+Only the audio sensor is stable enough that we don't store an associated timestamp with each sample. All other sensors include a timestamp per sample. These sensors also have `mean_sample_rate` and `stdev_sample_rate` fields. These values must be computed by stations using the provided timestamps. The following methods must be used to find these values. All sample rates are in Hz.
+
+
+
+### Calculating best latency and best offset
 
 TODO
 
-#### Timing Synchronization
+### Timing Synchronization
 
 When a client is collecting data, it should perform a synchronization exchange at a given interval (currently 5 seconds, but this may change). All exchanges that occur during the duration of a packet should be included in the exchanges section of the TimingInformation. Further, the client is expected to calculate the best latency and offest from these exchanges and store them in the TimingInformation metadata.
 

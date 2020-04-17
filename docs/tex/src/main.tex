@@ -1,0 +1,45 @@
+%! Author = RedVox, Inc
+%! Date = 4/16/20
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+
+% Document
+\begin{document}
+
+    \section{Sample Rate Equations}\label{sec:sample-rate-equations}
+    All timestamps and sample intervals are recorded as microseconds.
+    Sample rates are given in Hz (samples per second).
+
+    \subsection{Converting timestamps into sample intervals}\label{subsec:converting-timestamps-into-sample-intervals}
+
+    \begin{enumerate}
+        \item Let $timestamps$ be an array of consecutive timestamps
+        \item Let $diff()$ be a function that computes and returns the difference between consecutive items (e.g. $diff(1,3,9)=2,6$)
+        \item Let $len()$ be a function that returns the total number of items in a collection
+    \end{enumerate}
+
+    Then, the mean ($\mu SI$) and standard deviation ($\sigma SI$) of the sample interval ($SI$) can be found with
+
+    \begin{align}
+        SI &= diff(timestamps) \\
+        M &= len(SI) \\
+        \mu SI &= \frac{\sum_{i=0}^{M-1} SI_i}{M} \\ \label{eq:mu_si}
+        \sigma SI &= \sqrt{\frac{(\sum_{i=0}^{M-1} SI_i - \mu SI)^2}{M}}
+    \end{align}
+
+    \subsection{Converting sample intervals into sample rates}\label{subsec:converting-sample-intervals-into-sample-rates}
+
+    He we will find the mean sample rate ($\mu SR$) in Hz and the standard deviation of the sample rate ($\sigma SR$) in Hz.
+
+    If $\mu SI$ (eq~\ref{eq:mu_si}) $\leq 0$, then both $\mu SR$ and $\sigma SR$ should be set 0. Otherwise, these values can be found with the following equations:
+
+    \begin{align}
+        \mu SR &= \frac{1}{\mu SR * 10^{-6}} \\
+        \sigma SR &\approx \mu SR^2 * \sigma SI * 10^{-6}
+    \end{align}
+
+\end{document}
