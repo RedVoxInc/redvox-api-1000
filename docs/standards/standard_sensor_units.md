@@ -24,7 +24,7 @@ All sample rates and associated statistics are to be represented in Hz.
 | Gyroscope                      | radians/second               |                                                                                                     |
 | Image                          | bytes (codec specific)       |                                                                                                     |
 | Light                          | lux                          |                                                                                                     |
-| Linear Acceleration            | meters/second*2              |                                                                                                     |
+| Linear Acceleration            | meters/second^2              |                                                                                                     |
 | Location (Latitude)            | decimal degrees              |                                                                                                     |
 | Location (Longitude)           | decimal degrees              |                                                                                                     |
 | Location (Altitude)            | meters WGS 84                |                                                                                                     |
