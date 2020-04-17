@@ -24,9 +24,9 @@ The station must also compute the partial best latency and offset from each pack
 
 ### Calculating Sample Rates
 
-Only the audio sensor is stable enough that we don't store an associated timestamp with each sample. All other sensors include a timestamp per sample. These sensors also have `mean_sample_rate` and `stdev_sample_rate` fields. These values must be computed by stations using the provided timestamps. The following methods must be used to find these values. All sample rates are in Hz.
+Only the audio sensor is stable enough that we don't store an associated timestamp with each sample. All other sensors include a timestamp per sample. These sensors also have `mean_sample_rate` and `stdev_sample_rate` fields. These values must be computed by stations using the provided timestamps. 
 
-
+Equations for computing the sample interval and sample rates are provided in the following PDF: https://bitbucket.org/redvoxhi/redvox-api-1000/raw/master/docs/pdfs/sample_rate_eqs.pdf
 
 ### Calculating best latency and best offset
 
