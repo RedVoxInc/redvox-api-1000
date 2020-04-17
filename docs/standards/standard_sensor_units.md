@@ -30,12 +30,12 @@ All sample rates and associated statistics are to be represented in Hz.
 | Location (Altitude)            | meters WGS 84                |                                                                                                     |
 | Location (Speed)               | meters/second                |                                                                                                     |
 | Location (Bearing)             | degrees                      |                                                                                                     |
-| Location (Horizontal accuracy) | meters                       | https://developer.android.com/reference/android/location/Location#getAccuracy()                     |
-| Location (Vertical accuracy)   | meters                       | https://developer.android.com/reference/android/location/Location#getVerticalAccuracyMeters()       |
-| Location (Speed accuracy)      | meters/second                | https://developer.android.com/reference/android/location/Location#getSpeedAccuracyMetersPerSecond() |
-| Location (Bearing accuracy)    | decimal degrees              | https://developer.android.com/reference/android/location/Location#getBearingAccuracyDegrees()       |
+| Location (Horizontal accuracy) | meters                       | [see](https://developer.android.com/reference/android/location/Location#getAccuracy())              |
+| Location (Vertical accuracy)   | meters                       | [see](https://developer.android.com/reference/android/location/Location#getVerticalAccuracyMeters())       |
+| Location (Speed accuracy)      | meters/second                | [see](https://developer.android.com/reference/android/location/Location#getSpeedAccuracyMetersPerSecond()) |
+| Location (Bearing accuracy)    | decimal degrees              | [see](https://developer.android.com/reference/android/location/Location#getBearingAccuracyDegrees())       |
 | Magnetometer                   | microtesla                   |                                                                                                     |
-| Orientation                    | radians                      | https://developer.android.com/reference/android/hardware/SensorManager#getOrientation(float%5B%5D,%20float%5B%5D) |
+| Orientation                    | radians                      | [see](https://developer.android.com/reference/android/hardware/SensorManager#getOrientation(float%5B%5D,%20float%5B%5D)) |
 | Pressure                       | kilopascal                   |                                                                                                     |
 | Proximity                      | 0 (off) or 1 (on) or cm      |                                                                                                     |
 | Relative Humidity              | percentage                   |                                                                                                     |
