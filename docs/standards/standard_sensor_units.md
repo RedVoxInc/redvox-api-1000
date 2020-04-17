@@ -14,17 +14,32 @@ All sample rates and associated statistics are to be represented in Hz.
 
 ### Sensor channel units
 
-| Sensor        | Unit                         |
-|---------------|------------------------------|
-| Accelerometer | meters/second^2              |
-| Audio         | counts                       |
-| Barometer     | kilopascal                   |
-| Gyroscope     | radians/second               |
-| Light         | lux                          |
-| Magnetometer  | microtesla                   |
-| Proximity     | 0 (off) or 1 (on)            |
-
-_Note:_ The image channel does not have a specified unit in the traditional sensor. The image payload is made up of collections of bytes representing frames. These bytes are encoded using the specified encoding in the channel's metadata.
+| Sensor                         | Unit                         | Notes                                                                                               |
+|--------------------------------|------------------------------|-----------------------------------------------------------------------------------------------------|
+| Accelerometer                  | meters/second^2              |                                                                                                     |
+| Ambient Temperature            | degrees Celsius              |                                                                                                     |
+| Audio                          | normalized counts +/- 1      |                                                                                                     |
+| Compressed Audio               | bytes (codec specific)       |                                                                                                     |
+| Gravity                        | meters/second^2              |                                                                                                     |
+| Gyroscope                      | radians/second               |                                                                                                     |
+| Image                          | bytes (codec specific)       |                                                                                                     |
+| Light                          | lux                          |                                                                                                     |
+| Linear Acceleration            | meters/second*2              |                                                                                                     |
+| Location (Latitude)            | decimal degrees              |                                                                                                     |
+| Location (Longitude)           | decimal degrees              |                                                                                                     |
+| Location (Altitude)            | meters WGS 84                |                                                                                                     |
+| Location (Speed)               | meters/second                |                                                                                                     |
+| Location (Bearing)             | degrees                      |                                                                                                     |
+| Location (Horizontal accuracy) | meters                       | https://developer.android.com/reference/android/location/Location#getAccuracy()                     |
+| Location (Vertical accuracy)   | meters                       | https://developer.android.com/reference/android/location/Location#getVerticalAccuracyMeters()       |
+| Location (Speed accuracy)      | meters/second                | https://developer.android.com/reference/android/location/Location#getSpeedAccuracyMetersPerSecond() |
+| Location (Bearing accuracy)    | decimal degrees              | https://developer.android.com/reference/android/location/Location#getBearingAccuracyDegrees()       |
+| Magnetometer                   | microtesla                   |                                                                                                     |
+| Orientation                    | radians                      | https://developer.android.com/reference/android/hardware/SensorManager#getOrientation(float%5B%5D,%20float%5B%5D) |
+| Pressure                       | kilopascal                   |                                                                                                     |
+| Proximity                      | 0 (off) or 1 (on) or cm      |                                                                                                     |
+| Relative Humidity              | percentage                   |                                                                                                     |
+| Rotation Vector                | Unitless                     |                                                                                                     |
 
 ### Station metric units
 
