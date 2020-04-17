@@ -7,7 +7,7 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.redvox_api1000.SynchResponse');
+goog.provide('proto.redvox_api_m.SynchResponse');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -24,12 +24,12 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.redvox_api1000.SynchResponse = function(opt_data) {
+proto.redvox_api_m.SynchResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.redvox_api1000.SynchResponse, jspb.Message);
+goog.inherits(proto.redvox_api_m.SynchResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.redvox_api1000.SynchResponse.displayName = 'proto.redvox_api1000.SynchResponse';
+  proto.redvox_api_m.SynchResponse.displayName = 'proto.redvox_api_m.SynchResponse';
 }
 
 
@@ -44,8 +44,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.redvox_api1000.SynchResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.redvox_api1000.SynchResponse.toObject(opt_includeInstance, this);
+proto.redvox_api_m.SynchResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.redvox_api_m.SynchResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -54,11 +54,11 @@ proto.redvox_api1000.SynchResponse.prototype.toObject = function(opt_includeInst
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.redvox_api1000.SynchResponse} msg The msg instance to transform.
+ * @param {!proto.redvox_api_m.SynchResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.redvox_api1000.SynchResponse.toObject = function(includeInstance, msg) {
+proto.redvox_api_m.SynchResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     stationId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     stationUuid: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -79,23 +79,23 @@ proto.redvox_api1000.SynchResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.redvox_api1000.SynchResponse}
+ * @return {!proto.redvox_api_m.SynchResponse}
  */
-proto.redvox_api1000.SynchResponse.deserializeBinary = function(bytes) {
+proto.redvox_api_m.SynchResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.redvox_api1000.SynchResponse;
-  return proto.redvox_api1000.SynchResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.redvox_api_m.SynchResponse;
+  return proto.redvox_api_m.SynchResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.redvox_api1000.SynchResponse} msg The message object to deserialize into.
+ * @param {!proto.redvox_api_m.SynchResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.redvox_api1000.SynchResponse}
+ * @return {!proto.redvox_api_m.SynchResponse}
  */
-proto.redvox_api1000.SynchResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.redvox_api_m.SynchResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -139,9 +139,9 @@ proto.redvox_api1000.SynchResponse.deserializeBinaryFromReader = function(msg, r
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.redvox_api1000.SynchResponse.prototype.serializeBinary = function() {
+proto.redvox_api_m.SynchResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.redvox_api1000.SynchResponse.serializeBinaryToWriter(this, writer);
+  proto.redvox_api_m.SynchResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -149,11 +149,11 @@ proto.redvox_api1000.SynchResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.redvox_api1000.SynchResponse} message
+ * @param {!proto.redvox_api_m.SynchResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.redvox_api1000.SynchResponse.serializeBinaryToWriter = function(message, writer) {
+proto.redvox_api_m.SynchResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getStationId();
   if (f.length > 0) {
@@ -204,13 +204,13 @@ proto.redvox_api1000.SynchResponse.serializeBinaryToWriter = function(message, w
  * optional string station_id = 1;
  * @return {string}
  */
-proto.redvox_api1000.SynchResponse.prototype.getStationId = function() {
+proto.redvox_api_m.SynchResponse.prototype.getStationId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.SynchResponse.prototype.setStationId = function(value) {
+proto.redvox_api_m.SynchResponse.prototype.setStationId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -219,13 +219,13 @@ proto.redvox_api1000.SynchResponse.prototype.setStationId = function(value) {
  * optional string station_uuid = 2;
  * @return {string}
  */
-proto.redvox_api1000.SynchResponse.prototype.getStationUuid = function() {
+proto.redvox_api_m.SynchResponse.prototype.getStationUuid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.SynchResponse.prototype.setStationUuid = function(value) {
+proto.redvox_api_m.SynchResponse.prototype.setStationUuid = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -234,13 +234,13 @@ proto.redvox_api1000.SynchResponse.prototype.setStationUuid = function(value) {
  * optional uint32 seq_id = 3;
  * @return {number}
  */
-proto.redvox_api1000.SynchResponse.prototype.getSeqId = function() {
+proto.redvox_api_m.SynchResponse.prototype.getSeqId = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.SynchResponse.prototype.setSeqId = function(value) {
+proto.redvox_api_m.SynchResponse.prototype.setSeqId = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -249,13 +249,13 @@ proto.redvox_api1000.SynchResponse.prototype.setSeqId = function(value) {
  * optional uint32 sub_seq_id = 4;
  * @return {number}
  */
-proto.redvox_api1000.SynchResponse.prototype.getSubSeqId = function() {
+proto.redvox_api_m.SynchResponse.prototype.getSubSeqId = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.SynchResponse.prototype.setSubSeqId = function(value) {
+proto.redvox_api_m.SynchResponse.prototype.setSubSeqId = function(value) {
   jspb.Message.setProto3IntField(this, 4, value);
 };
 
@@ -264,13 +264,13 @@ proto.redvox_api1000.SynchResponse.prototype.setSubSeqId = function(value) {
  * optional uint64 recv_ts_us = 5;
  * @return {number}
  */
-proto.redvox_api1000.SynchResponse.prototype.getRecvTsUs = function() {
+proto.redvox_api_m.SynchResponse.prototype.getRecvTsUs = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.SynchResponse.prototype.setRecvTsUs = function(value) {
+proto.redvox_api_m.SynchResponse.prototype.setRecvTsUs = function(value) {
   jspb.Message.setProto3IntField(this, 5, value);
 };
 
@@ -279,13 +279,13 @@ proto.redvox_api1000.SynchResponse.prototype.setRecvTsUs = function(value) {
  * optional uint64 send_ts_us = 6;
  * @return {number}
  */
-proto.redvox_api1000.SynchResponse.prototype.getSendTsUs = function() {
+proto.redvox_api_m.SynchResponse.prototype.getSendTsUs = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
 
 /** @param {number} value */
-proto.redvox_api1000.SynchResponse.prototype.setSendTsUs = function(value) {
+proto.redvox_api_m.SynchResponse.prototype.setSendTsUs = function(value) {
   jspb.Message.setProto3IntField(this, 6, value);
 };
 

@@ -7,8 +7,8 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.redvox_api1000.EncryptedRedvoxPacket1000');
-goog.provide('proto.redvox_api1000.EncryptedRedvoxPacket1000.Header');
+goog.provide('proto.redvox_api_m.EncryptedRedvoxPacket1000');
+goog.provide('proto.redvox_api_m.EncryptedRedvoxPacket1000.Header');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -25,12 +25,12 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000 = function(opt_data) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.redvox_api1000.EncryptedRedvoxPacket1000, jspb.Message);
+goog.inherits(proto.redvox_api_m.EncryptedRedvoxPacket1000, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.redvox_api1000.EncryptedRedvoxPacket1000.displayName = 'proto.redvox_api1000.EncryptedRedvoxPacket1000';
+  proto.redvox_api_m.EncryptedRedvoxPacket1000.displayName = 'proto.redvox_api_m.EncryptedRedvoxPacket1000';
 }
 
 
@@ -45,8 +45,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.toObject = function(opt_includeInstance) {
-  return proto.redvox_api1000.EncryptedRedvoxPacket1000.toObject(opt_includeInstance, this);
+proto.redvox_api_m.EncryptedRedvoxPacket1000.prototype.toObject = function(opt_includeInstance) {
+  return proto.redvox_api_m.EncryptedRedvoxPacket1000.toObject(opt_includeInstance, this);
 };
 
 
@@ -55,11 +55,11 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.toObject = function(opt
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.redvox_api1000.EncryptedRedvoxPacket1000} msg The msg instance to transform.
+ * @param {!proto.redvox_api_m.EncryptedRedvoxPacket1000} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.toObject = function(includeInstance, msg) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.toObject = function(includeInstance, msg) {
   var f, obj = {
     header: msg.getHeader_asB64(),
     packet: msg.getPacket_asB64()
@@ -76,23 +76,23 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.toObject = function(includeInstan
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.redvox_api1000.EncryptedRedvoxPacket1000}
+ * @return {!proto.redvox_api_m.EncryptedRedvoxPacket1000}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.deserializeBinary = function(bytes) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.redvox_api1000.EncryptedRedvoxPacket1000;
-  return proto.redvox_api1000.EncryptedRedvoxPacket1000.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.redvox_api_m.EncryptedRedvoxPacket1000;
+  return proto.redvox_api_m.EncryptedRedvoxPacket1000.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.redvox_api1000.EncryptedRedvoxPacket1000} msg The message object to deserialize into.
+ * @param {!proto.redvox_api_m.EncryptedRedvoxPacket1000} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.redvox_api1000.EncryptedRedvoxPacket1000}
+ * @return {!proto.redvox_api_m.EncryptedRedvoxPacket1000}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.deserializeBinaryFromReader = function(msg, reader) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -120,9 +120,9 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.deserializeBinaryFromReader = fun
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.serializeBinary = function() {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.redvox_api1000.EncryptedRedvoxPacket1000.serializeBinaryToWriter(this, writer);
+  proto.redvox_api_m.EncryptedRedvoxPacket1000.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -130,11 +130,11 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.serializeBinary = funct
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.redvox_api1000.EncryptedRedvoxPacket1000} message
+ * @param {!proto.redvox_api_m.EncryptedRedvoxPacket1000} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.serializeBinaryToWriter = function(message, writer) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getHeader_asU8();
   if (f.length > 0) {
@@ -164,12 +164,12 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.serializeBinaryToWriter = functio
  * @extends {jspb.Message}
  * @constructor
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header = function(opt_data) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.redvox_api1000.EncryptedRedvoxPacket1000.Header, jspb.Message);
+goog.inherits(proto.redvox_api_m.EncryptedRedvoxPacket1000.Header, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.displayName = 'proto.redvox_api1000.EncryptedRedvoxPacket1000.Header';
+  proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.displayName = 'proto.redvox_api_m.EncryptedRedvoxPacket1000.Header';
 }
 
 
@@ -184,8 +184,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.toObject = function(opt_includeInstance) {
-  return proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.toObject(opt_includeInstance, this);
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.prototype.toObject = function(opt_includeInstance) {
+  return proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.toObject(opt_includeInstance, this);
 };
 
 
@@ -194,11 +194,11 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.toObject = funct
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.redvox_api1000.EncryptedRedvoxPacket1000.Header} msg The msg instance to transform.
+ * @param {!proto.redvox_api_m.EncryptedRedvoxPacket1000.Header} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.toObject = function(includeInstance, msg) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.toObject = function(includeInstance, msg) {
   var f, obj = {
     stationId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     stationUuid: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -217,23 +217,23 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.toObject = function(includ
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.redvox_api1000.EncryptedRedvoxPacket1000.Header}
+ * @return {!proto.redvox_api_m.EncryptedRedvoxPacket1000.Header}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.deserializeBinary = function(bytes) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.redvox_api1000.EncryptedRedvoxPacket1000.Header;
-  return proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.redvox_api_m.EncryptedRedvoxPacket1000.Header;
+  return proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.redvox_api1000.EncryptedRedvoxPacket1000.Header} msg The message object to deserialize into.
+ * @param {!proto.redvox_api_m.EncryptedRedvoxPacket1000.Header} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.redvox_api1000.EncryptedRedvoxPacket1000.Header}
+ * @return {!proto.redvox_api_m.EncryptedRedvoxPacket1000.Header}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.deserializeBinaryFromReader = function(msg, reader) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -269,9 +269,9 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.serializeBinary = function() {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.serializeBinaryToWriter(this, writer);
+  proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -279,11 +279,11 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.redvox_api1000.EncryptedRedvoxPacket1000.Header} message
+ * @param {!proto.redvox_api_m.EncryptedRedvoxPacket1000.Header} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.serializeBinaryToWriter = function(message, writer) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getStationId();
   if (f.length > 0) {
@@ -320,13 +320,13 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.serializeBinaryToWriter = 
  * optional string station_id = 1;
  * @return {string}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.getStationId = function() {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.prototype.getStationId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.setStationId = function(value) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.prototype.setStationId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -335,13 +335,13 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.setStationId = f
  * optional string station_uuid = 2;
  * @return {string}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.getStationUuid = function() {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.prototype.getStationUuid = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.setStationUuid = function(value) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.prototype.setStationUuid = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -350,13 +350,13 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.setStationUuid =
  * optional string auth_token = 3;
  * @return {string}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.getAuthToken = function() {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.prototype.getAuthToken = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.setAuthToken = function(value) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.prototype.setAuthToken = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -365,13 +365,13 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.setAuthToken = f
  * optional string auth_email = 4;
  * @return {string}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.getAuthEmail = function() {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.prototype.getAuthEmail = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.setAuthEmail = function(value) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.Header.prototype.setAuthEmail = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -380,7 +380,7 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.Header.prototype.setAuthEmail = f
  * optional bytes header = 1;
  * @return {string}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.getHeader = function() {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.prototype.getHeader = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -390,7 +390,7 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.getHeader = function() 
  * This is a type-conversion wrapper around `getHeader()`
  * @return {string}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.getHeader_asB64 = function() {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.prototype.getHeader_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getHeader()));
 };
@@ -403,14 +403,14 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.getHeader_asB64 = funct
  * This is a type-conversion wrapper around `getHeader()`
  * @return {!Uint8Array}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.getHeader_asU8 = function() {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.prototype.getHeader_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getHeader()));
 };
 
 
 /** @param {!(string|Uint8Array)} value */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.setHeader = function(value) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.prototype.setHeader = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -419,7 +419,7 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.setHeader = function(va
  * optional bytes packet = 2;
  * @return {string}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.getPacket = function() {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.prototype.getPacket = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -429,7 +429,7 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.getPacket = function() 
  * This is a type-conversion wrapper around `getPacket()`
  * @return {string}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.getPacket_asB64 = function() {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.prototype.getPacket_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getPacket()));
 };
@@ -442,14 +442,14 @@ proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.getPacket_asB64 = funct
  * This is a type-conversion wrapper around `getPacket()`
  * @return {!Uint8Array}
  */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.getPacket_asU8 = function() {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.prototype.getPacket_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getPacket()));
 };
 
 
 /** @param {!(string|Uint8Array)} value */
-proto.redvox_api1000.EncryptedRedvoxPacket1000.prototype.setPacket = function(value) {
+proto.redvox_api_m.EncryptedRedvoxPacket1000.prototype.setPacket = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
 

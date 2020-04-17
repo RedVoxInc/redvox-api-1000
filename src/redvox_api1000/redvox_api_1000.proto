@@ -69,7 +69,7 @@ message RedvoxPacketM {
 
             // An enumeration specifying the available network types
             enum NetworkType {
-                NONE = 0;
+                NO_NETWORK = 0;
                 WIFI = 1;
                 CELLULAR = 2;
             }
@@ -141,9 +141,9 @@ message RedvoxPacketM {
             }
 
             enum AudioSourceTuning {
-                INFRASOUND = 0;
-                LOW_AUDIO = 1;
-                AUDIO = 2;
+                INFRASOUND_TUNING = 0;
+                LOW_AUDIO_TUNING = 1;
+                AUDIO_TUNING = 2;
             }
 
             enum InputSensor {
