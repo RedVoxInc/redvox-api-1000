@@ -44,6 +44,14 @@ message RedvoxPacketM {
         StationMetrics station_metrics = 9;
         map<string, string> metadata = 10; // A map from string to string for including untyped metadata
 
+        // An enumeration specifying the available operating system types
+        enum OsType {
+            ANDROID = 0;
+            IOS = 1;
+            LINUX = 2;
+            WINDOWS = 3;
+        }
+
         message StationMetrics {
             Payload station_information_timestamps = 1; // Timestamps associated with following sensor state metrics
             repeated NetworkType network_type = 2; // Type of network connection
@@ -79,14 +87,6 @@ message RedvoxPacketM {
                 NOMINAL = 2;
                 OUT_OF_SERVICE = 3;
                 POWER_OFF = 4;
-            }
-
-            // An enumeration specifying the available operating system types
-            enum OsType {
-                ANDROID = 0;
-                IOS = 1;
-                LINUX = 2;
-                WINDOWS = 3;
             }
 
             enum PowerState {
@@ -143,14 +143,22 @@ message RedvoxPacketM {
             }
 
             enum InputSensor {
-                BAROMETER = 0;
-                ACCELEROMETER = 1;
-                ACCELEROMETER_FAST = 2;
-                MAGNETOMETER = 3;
-                MAGNETOMETER_FAST = 4;
+                ACCELEROMETER = 0;
+                AMBIENT_TEMPERATURE = 1;
+                AUDIO = 2;
+                COMPRESSED_AUDIO = 3;
+                GRAVITY = 4;
                 GYROSCOPE = 5;
-                GYROSCOPE_FAST = 6;
-                LUMINOSITY = 7;
+                IMAGE = 6;
+                LIGHT = 7;
+                LINEAR_ACCELERATION = 8;
+                LOCATION = 9;
+                MAGNETOMETER = 10;
+                ORIENTATION = 11;
+                PRESSURE = 12;
+                PROXIMITY = 13;
+                RELATIVE_HUMIDITY = 14;
+                ROTATION_VECTOR = 15;
             }
         }
     }
