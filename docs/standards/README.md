@@ -12,7 +12,7 @@ The following standards must be adhered to. When in doubt, please reach out for 
 * [Storing Image Data](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_image_data.md)
 * [Collecting station metrics](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/station_metrics.md)
 * [Compression/Decompression](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/compression.md)
-* [Filenames and Directory Layout](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/filenames.md)
+* [Filenames and Directory Layout](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/filenames_and_directory_structures.md)
 * [Command, Control, and Communication](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/c3po.md)
 * [Logging](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/logging.md)
 * [Client/Server Communications](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/client_server_comms.md)
