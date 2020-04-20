@@ -3131,8 +3131,8 @@ void SetRedvoxPacketM_SamplePayload_Unit_RawValue(RedvoxPacketM_SamplePayload *m
 @implementation RedvoxPacketM_TimingPayload
 
 @dynamic unit;
-@dynamic valuesArray, valuesArray_Count;
-@dynamic hasValueStatistics, valueStatistics;
+@dynamic timestampsArray, timestampsArray_Count;
+@dynamic hasTimestampStatistics, timestampStatistics;
 @dynamic meanSampleRate;
 @dynamic stdevSampleRate;
 @dynamic metadata, metadata_Count;
@@ -3142,8 +3142,8 @@ typedef struct RedvoxPacketM_TimingPayload__storage_ {
   RedvoxPacketM_Unit unit;
   float meanSampleRate;
   float stdevSampleRate;
-  GPBDoubleArray *valuesArray;
-  RedvoxPacketM_SummaryStatistics *valueStatistics;
+  GPBDoubleArray *timestampsArray;
+  RedvoxPacketM_SummaryStatistics *timestampStatistics;
   NSMutableDictionary *metadata;
 } RedvoxPacketM_TimingPayload__storage_;
 
@@ -3163,20 +3163,20 @@ typedef struct RedvoxPacketM_TimingPayload__storage_ {
         .dataType = GPBDataTypeEnum,
       },
       {
-        .name = "valuesArray",
+        .name = "timestampsArray",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_TimingPayload_FieldNumber_ValuesArray,
+        .number = RedvoxPacketM_TimingPayload_FieldNumber_TimestampsArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_TimingPayload__storage_, valuesArray),
+        .offset = (uint32_t)offsetof(RedvoxPacketM_TimingPayload__storage_, timestampsArray),
         .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
         .dataType = GPBDataTypeDouble,
       },
       {
-        .name = "valueStatistics",
+        .name = "timestampStatistics",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SummaryStatistics),
-        .number = RedvoxPacketM_TimingPayload_FieldNumber_ValueStatistics,
+        .number = RedvoxPacketM_TimingPayload_FieldNumber_TimestampStatistics,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_TimingPayload__storage_, valueStatistics),
+        .offset = (uint32_t)offsetof(RedvoxPacketM_TimingPayload__storage_, timestampStatistics),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },

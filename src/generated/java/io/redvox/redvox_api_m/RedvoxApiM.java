@@ -38141,50 +38141,50 @@ public final class RedvoxApiM {
        * Values in payload
        * </pre>
        *
-       * <code>repeated double values = 2;</code>
+       * <code>repeated double timestamps = 2;</code>
        */
-      java.util.List<java.lang.Double> getValuesList();
+      java.util.List<java.lang.Double> getTimestampsList();
       /**
        * <pre>
        * Values in payload
        * </pre>
        *
-       * <code>repeated double values = 2;</code>
+       * <code>repeated double timestamps = 2;</code>
        */
-      int getValuesCount();
+      int getTimestampsCount();
       /**
        * <pre>
        * Values in payload
        * </pre>
        *
-       * <code>repeated double values = 2;</code>
+       * <code>repeated double timestamps = 2;</code>
        */
-      double getValues(int index);
+      double getTimestamps(int index);
 
       /**
        * <pre>
        * Statistics of stored values
        * </pre>
        *
-       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
        */
-      boolean hasValueStatistics();
+      boolean hasTimestampStatistics();
       /**
        * <pre>
        * Statistics of stored values
        * </pre>
        *
-       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
        */
-      io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics getValueStatistics();
+      io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics getTimestampStatistics();
       /**
        * <pre>
        * Statistics of stored values
        * </pre>
        *
-       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
        */
-      io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder getValueStatisticsOrBuilder();
+      io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder getTimestampStatisticsOrBuilder();
 
       /**
        * <pre>
@@ -38277,7 +38277,7 @@ public final class RedvoxApiM {
       }
       private TimingPayload() {
         unit_ = 0;
-        values_ = java.util.Collections.emptyList();
+        timestamps_ = java.util.Collections.emptyList();
         meanSampleRate_ = 0F;
         stdevSampleRate_ = 0F;
       }
@@ -38314,34 +38314,34 @@ public final class RedvoxApiM {
               }
               case 17: {
                 if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                  values_ = new java.util.ArrayList<java.lang.Double>();
+                  timestamps_ = new java.util.ArrayList<java.lang.Double>();
                   mutable_bitField0_ |= 0x00000002;
                 }
-                values_.add(input.readDouble());
+                timestamps_.add(input.readDouble());
                 break;
               }
               case 18: {
                 int length = input.readRawVarint32();
                 int limit = input.pushLimit(length);
                 if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
-                  values_ = new java.util.ArrayList<java.lang.Double>();
+                  timestamps_ = new java.util.ArrayList<java.lang.Double>();
                   mutable_bitField0_ |= 0x00000002;
                 }
                 while (input.getBytesUntilLimit() > 0) {
-                  values_.add(input.readDouble());
+                  timestamps_.add(input.readDouble());
                 }
                 input.popLimit(limit);
                 break;
               }
               case 26: {
                 io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.Builder subBuilder = null;
-                if (valueStatistics_ != null) {
-                  subBuilder = valueStatistics_.toBuilder();
+                if (timestampStatistics_ != null) {
+                  subBuilder = timestampStatistics_.toBuilder();
                 }
-                valueStatistics_ = input.readMessage(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.parser(), extensionRegistry);
+                timestampStatistics_ = input.readMessage(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.parser(), extensionRegistry);
                 if (subBuilder != null) {
-                  subBuilder.mergeFrom(valueStatistics_);
-                  valueStatistics_ = subBuilder.buildPartial();
+                  subBuilder.mergeFrom(timestampStatistics_);
+                  timestampStatistics_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -38385,7 +38385,7 @@ public final class RedvoxApiM {
               e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-            values_ = java.util.Collections.unmodifiableList(values_);
+            timestamps_ = java.util.Collections.unmodifiableList(timestamps_);
           }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
@@ -38442,72 +38442,72 @@ public final class RedvoxApiM {
         return result == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
       }
 
-      public static final int VALUES_FIELD_NUMBER = 2;
-      private java.util.List<java.lang.Double> values_;
+      public static final int TIMESTAMPS_FIELD_NUMBER = 2;
+      private java.util.List<java.lang.Double> timestamps_;
       /**
        * <pre>
        * Values in payload
        * </pre>
        *
-       * <code>repeated double values = 2;</code>
+       * <code>repeated double timestamps = 2;</code>
        */
       public java.util.List<java.lang.Double>
-          getValuesList() {
-        return values_;
+          getTimestampsList() {
+        return timestamps_;
       }
       /**
        * <pre>
        * Values in payload
        * </pre>
        *
-       * <code>repeated double values = 2;</code>
+       * <code>repeated double timestamps = 2;</code>
        */
-      public int getValuesCount() {
-        return values_.size();
+      public int getTimestampsCount() {
+        return timestamps_.size();
       }
       /**
        * <pre>
        * Values in payload
        * </pre>
        *
-       * <code>repeated double values = 2;</code>
+       * <code>repeated double timestamps = 2;</code>
        */
-      public double getValues(int index) {
-        return values_.get(index);
+      public double getTimestamps(int index) {
+        return timestamps_.get(index);
       }
-      private int valuesMemoizedSerializedSize = -1;
+      private int timestampsMemoizedSerializedSize = -1;
 
-      public static final int VALUE_STATISTICS_FIELD_NUMBER = 3;
-      private io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics valueStatistics_;
+      public static final int TIMESTAMP_STATISTICS_FIELD_NUMBER = 3;
+      private io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics timestampStatistics_;
       /**
        * <pre>
        * Statistics of stored values
        * </pre>
        *
-       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
        */
-      public boolean hasValueStatistics() {
-        return valueStatistics_ != null;
+      public boolean hasTimestampStatistics() {
+        return timestampStatistics_ != null;
       }
       /**
        * <pre>
        * Statistics of stored values
        * </pre>
        *
-       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
        */
-      public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics getValueStatistics() {
-        return valueStatistics_ == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.getDefaultInstance() : valueStatistics_;
+      public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics getTimestampStatistics() {
+        return timestampStatistics_ == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.getDefaultInstance() : timestampStatistics_;
       }
       /**
        * <pre>
        * Statistics of stored values
        * </pre>
        *
-       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
        */
-      public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder getValueStatisticsOrBuilder() {
-        return getValueStatistics();
+      public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder getTimestampStatisticsOrBuilder() {
+        return getTimestampStatistics();
       }
 
       public static final int MEAN_SAMPLE_RATE_FIELD_NUMBER = 4;
@@ -38646,15 +38646,15 @@ public final class RedvoxApiM {
         if (unit_ != io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Unit.METERS_PER_SECOND_SQUARED.getNumber()) {
           output.writeEnum(1, unit_);
         }
-        if (getValuesList().size() > 0) {
+        if (getTimestampsList().size() > 0) {
           output.writeUInt32NoTag(18);
-          output.writeUInt32NoTag(valuesMemoizedSerializedSize);
+          output.writeUInt32NoTag(timestampsMemoizedSerializedSize);
         }
-        for (int i = 0; i < values_.size(); i++) {
-          output.writeDoubleNoTag(values_.get(i));
+        for (int i = 0; i < timestamps_.size(); i++) {
+          output.writeDoubleNoTag(timestamps_.get(i));
         }
-        if (valueStatistics_ != null) {
-          output.writeMessage(3, getValueStatistics());
+        if (timestampStatistics_ != null) {
+          output.writeMessage(3, getTimestampStatistics());
         }
         if (meanSampleRate_ != 0F) {
           output.writeFloat(4, meanSampleRate_);
@@ -38683,18 +38683,18 @@ public final class RedvoxApiM {
         }
         {
           int dataSize = 0;
-          dataSize = 8 * getValuesList().size();
+          dataSize = 8 * getTimestampsList().size();
           size += dataSize;
-          if (!getValuesList().isEmpty()) {
+          if (!getTimestampsList().isEmpty()) {
             size += 1;
             size += com.google.protobuf.CodedOutputStream
                 .computeInt32SizeNoTag(dataSize);
           }
-          valuesMemoizedSerializedSize = dataSize;
+          timestampsMemoizedSerializedSize = dataSize;
         }
-        if (valueStatistics_ != null) {
+        if (timestampStatistics_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(3, getValueStatistics());
+            .computeMessageSize(3, getTimestampStatistics());
         }
         if (meanSampleRate_ != 0F) {
           size += com.google.protobuf.CodedOutputStream
@@ -38731,12 +38731,12 @@ public final class RedvoxApiM {
 
         boolean result = true;
         result = result && unit_ == other.unit_;
-        result = result && getValuesList()
-            .equals(other.getValuesList());
-        result = result && (hasValueStatistics() == other.hasValueStatistics());
-        if (hasValueStatistics()) {
-          result = result && getValueStatistics()
-              .equals(other.getValueStatistics());
+        result = result && getTimestampsList()
+            .equals(other.getTimestampsList());
+        result = result && (hasTimestampStatistics() == other.hasTimestampStatistics());
+        if (hasTimestampStatistics()) {
+          result = result && getTimestampStatistics()
+              .equals(other.getTimestampStatistics());
         }
         result = result && (
             java.lang.Float.floatToIntBits(getMeanSampleRate())
@@ -38761,13 +38761,13 @@ public final class RedvoxApiM {
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + UNIT_FIELD_NUMBER;
         hash = (53 * hash) + unit_;
-        if (getValuesCount() > 0) {
-          hash = (37 * hash) + VALUES_FIELD_NUMBER;
-          hash = (53 * hash) + getValuesList().hashCode();
+        if (getTimestampsCount() > 0) {
+          hash = (37 * hash) + TIMESTAMPS_FIELD_NUMBER;
+          hash = (53 * hash) + getTimestampsList().hashCode();
         }
-        if (hasValueStatistics()) {
-          hash = (37 * hash) + VALUE_STATISTICS_FIELD_NUMBER;
-          hash = (53 * hash) + getValueStatistics().hashCode();
+        if (hasTimestampStatistics()) {
+          hash = (37 * hash) + TIMESTAMP_STATISTICS_FIELD_NUMBER;
+          hash = (53 * hash) + getTimestampStatistics().hashCode();
         }
         hash = (37 * hash) + MEAN_SAMPLE_RATE_FIELD_NUMBER;
         hash = (53 * hash) + java.lang.Float.floatToIntBits(
@@ -38941,13 +38941,13 @@ public final class RedvoxApiM {
           super.clear();
           unit_ = 0;
 
-          values_ = java.util.Collections.emptyList();
+          timestamps_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
-          if (valueStatisticsBuilder_ == null) {
-            valueStatistics_ = null;
+          if (timestampStatisticsBuilder_ == null) {
+            timestampStatistics_ = null;
           } else {
-            valueStatistics_ = null;
-            valueStatisticsBuilder_ = null;
+            timestampStatistics_ = null;
+            timestampStatisticsBuilder_ = null;
           }
           meanSampleRate_ = 0F;
 
@@ -38984,14 +38984,14 @@ public final class RedvoxApiM {
           int to_bitField0_ = 0;
           result.unit_ = unit_;
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            values_ = java.util.Collections.unmodifiableList(values_);
+            timestamps_ = java.util.Collections.unmodifiableList(timestamps_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
-          result.values_ = values_;
-          if (valueStatisticsBuilder_ == null) {
-            result.valueStatistics_ = valueStatistics_;
+          result.timestamps_ = timestamps_;
+          if (timestampStatisticsBuilder_ == null) {
+            result.timestampStatistics_ = timestampStatistics_;
           } else {
-            result.valueStatistics_ = valueStatisticsBuilder_.build();
+            result.timestampStatistics_ = timestampStatisticsBuilder_.build();
           }
           result.meanSampleRate_ = meanSampleRate_;
           result.stdevSampleRate_ = stdevSampleRate_;
@@ -39049,18 +39049,18 @@ public final class RedvoxApiM {
           if (other.unit_ != 0) {
             setUnitValue(other.getUnitValue());
           }
-          if (!other.values_.isEmpty()) {
-            if (values_.isEmpty()) {
-              values_ = other.values_;
+          if (!other.timestamps_.isEmpty()) {
+            if (timestamps_.isEmpty()) {
+              timestamps_ = other.timestamps_;
               bitField0_ = (bitField0_ & ~0x00000002);
             } else {
-              ensureValuesIsMutable();
-              values_.addAll(other.values_);
+              ensureTimestampsIsMutable();
+              timestamps_.addAll(other.timestamps_);
             }
             onChanged();
           }
-          if (other.hasValueStatistics()) {
-            mergeValueStatistics(other.getValueStatistics());
+          if (other.hasTimestampStatistics()) {
+            mergeTimestampStatistics(other.getTimestampStatistics());
           }
           if (other.getMeanSampleRate() != 0F) {
             setMeanSampleRate(other.getMeanSampleRate());
@@ -39165,10 +39165,10 @@ public final class RedvoxApiM {
           return this;
         }
 
-        private java.util.List<java.lang.Double> values_ = java.util.Collections.emptyList();
-        private void ensureValuesIsMutable() {
+        private java.util.List<java.lang.Double> timestamps_ = java.util.Collections.emptyList();
+        private void ensureTimestampsIsMutable() {
           if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-            values_ = new java.util.ArrayList<java.lang.Double>(values_);
+            timestamps_ = new java.util.ArrayList<java.lang.Double>(timestamps_);
             bitField0_ |= 0x00000002;
            }
         }
@@ -39177,43 +39177,43 @@ public final class RedvoxApiM {
          * Values in payload
          * </pre>
          *
-         * <code>repeated double values = 2;</code>
+         * <code>repeated double timestamps = 2;</code>
          */
         public java.util.List<java.lang.Double>
-            getValuesList() {
-          return java.util.Collections.unmodifiableList(values_);
+            getTimestampsList() {
+          return java.util.Collections.unmodifiableList(timestamps_);
         }
         /**
          * <pre>
          * Values in payload
          * </pre>
          *
-         * <code>repeated double values = 2;</code>
+         * <code>repeated double timestamps = 2;</code>
          */
-        public int getValuesCount() {
-          return values_.size();
+        public int getTimestampsCount() {
+          return timestamps_.size();
         }
         /**
          * <pre>
          * Values in payload
          * </pre>
          *
-         * <code>repeated double values = 2;</code>
+         * <code>repeated double timestamps = 2;</code>
          */
-        public double getValues(int index) {
-          return values_.get(index);
+        public double getTimestamps(int index) {
+          return timestamps_.get(index);
         }
         /**
          * <pre>
          * Values in payload
          * </pre>
          *
-         * <code>repeated double values = 2;</code>
+         * <code>repeated double timestamps = 2;</code>
          */
-        public Builder setValues(
+        public Builder setTimestamps(
             int index, double value) {
-          ensureValuesIsMutable();
-          values_.set(index, value);
+          ensureTimestampsIsMutable();
+          timestamps_.set(index, value);
           onChanged();
           return this;
         }
@@ -39222,11 +39222,11 @@ public final class RedvoxApiM {
          * Values in payload
          * </pre>
          *
-         * <code>repeated double values = 2;</code>
+         * <code>repeated double timestamps = 2;</code>
          */
-        public Builder addValues(double value) {
-          ensureValuesIsMutable();
-          values_.add(value);
+        public Builder addTimestamps(double value) {
+          ensureTimestampsIsMutable();
+          timestamps_.add(value);
           onChanged();
           return this;
         }
@@ -39235,13 +39235,13 @@ public final class RedvoxApiM {
          * Values in payload
          * </pre>
          *
-         * <code>repeated double values = 2;</code>
+         * <code>repeated double timestamps = 2;</code>
          */
-        public Builder addAllValues(
+        public Builder addAllTimestamps(
             java.lang.Iterable<? extends java.lang.Double> values) {
-          ensureValuesIsMutable();
+          ensureTimestampsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, values_);
+              values, timestamps_);
           onChanged();
           return this;
         }
@@ -39250,40 +39250,40 @@ public final class RedvoxApiM {
          * Values in payload
          * </pre>
          *
-         * <code>repeated double values = 2;</code>
+         * <code>repeated double timestamps = 2;</code>
          */
-        public Builder clearValues() {
-          values_ = java.util.Collections.emptyList();
+        public Builder clearTimestamps() {
+          timestamps_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
 
-        private io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics valueStatistics_ = null;
+        private io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics timestampStatistics_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder> valueStatisticsBuilder_;
+            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder> timestampStatisticsBuilder_;
         /**
          * <pre>
          * Statistics of stored values
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
          */
-        public boolean hasValueStatistics() {
-          return valueStatisticsBuilder_ != null || valueStatistics_ != null;
+        public boolean hasTimestampStatistics() {
+          return timestampStatisticsBuilder_ != null || timestampStatistics_ != null;
         }
         /**
          * <pre>
          * Statistics of stored values
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
          */
-        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics getValueStatistics() {
-          if (valueStatisticsBuilder_ == null) {
-            return valueStatistics_ == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.getDefaultInstance() : valueStatistics_;
+        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics getTimestampStatistics() {
+          if (timestampStatisticsBuilder_ == null) {
+            return timestampStatistics_ == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.getDefaultInstance() : timestampStatistics_;
           } else {
-            return valueStatisticsBuilder_.getMessage();
+            return timestampStatisticsBuilder_.getMessage();
           }
         }
         /**
@@ -39291,17 +39291,17 @@ public final class RedvoxApiM {
          * Statistics of stored values
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
          */
-        public Builder setValueStatistics(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics value) {
-          if (valueStatisticsBuilder_ == null) {
+        public Builder setTimestampStatistics(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics value) {
+          if (timestampStatisticsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
             }
-            valueStatistics_ = value;
+            timestampStatistics_ = value;
             onChanged();
           } else {
-            valueStatisticsBuilder_.setMessage(value);
+            timestampStatisticsBuilder_.setMessage(value);
           }
 
           return this;
@@ -39311,15 +39311,15 @@ public final class RedvoxApiM {
          * Statistics of stored values
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
          */
-        public Builder setValueStatistics(
+        public Builder setTimestampStatistics(
             io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.Builder builderForValue) {
-          if (valueStatisticsBuilder_ == null) {
-            valueStatistics_ = builderForValue.build();
+          if (timestampStatisticsBuilder_ == null) {
+            timestampStatistics_ = builderForValue.build();
             onChanged();
           } else {
-            valueStatisticsBuilder_.setMessage(builderForValue.build());
+            timestampStatisticsBuilder_.setMessage(builderForValue.build());
           }
 
           return this;
@@ -39329,19 +39329,19 @@ public final class RedvoxApiM {
          * Statistics of stored values
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
          */
-        public Builder mergeValueStatistics(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics value) {
-          if (valueStatisticsBuilder_ == null) {
-            if (valueStatistics_ != null) {
-              valueStatistics_ =
-                io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.newBuilder(valueStatistics_).mergeFrom(value).buildPartial();
+        public Builder mergeTimestampStatistics(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics value) {
+          if (timestampStatisticsBuilder_ == null) {
+            if (timestampStatistics_ != null) {
+              timestampStatistics_ =
+                io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.newBuilder(timestampStatistics_).mergeFrom(value).buildPartial();
             } else {
-              valueStatistics_ = value;
+              timestampStatistics_ = value;
             }
             onChanged();
           } else {
-            valueStatisticsBuilder_.mergeFrom(value);
+            timestampStatisticsBuilder_.mergeFrom(value);
           }
 
           return this;
@@ -39351,15 +39351,15 @@ public final class RedvoxApiM {
          * Statistics of stored values
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
          */
-        public Builder clearValueStatistics() {
-          if (valueStatisticsBuilder_ == null) {
-            valueStatistics_ = null;
+        public Builder clearTimestampStatistics() {
+          if (timestampStatisticsBuilder_ == null) {
+            timestampStatistics_ = null;
             onChanged();
           } else {
-            valueStatistics_ = null;
-            valueStatisticsBuilder_ = null;
+            timestampStatistics_ = null;
+            timestampStatisticsBuilder_ = null;
           }
 
           return this;
@@ -39369,26 +39369,26 @@ public final class RedvoxApiM {
          * Statistics of stored values
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
          */
-        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.Builder getValueStatisticsBuilder() {
+        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.Builder getTimestampStatisticsBuilder() {
           
           onChanged();
-          return getValueStatisticsFieldBuilder().getBuilder();
+          return getTimestampStatisticsFieldBuilder().getBuilder();
         }
         /**
          * <pre>
          * Statistics of stored values
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
          */
-        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder getValueStatisticsOrBuilder() {
-          if (valueStatisticsBuilder_ != null) {
-            return valueStatisticsBuilder_.getMessageOrBuilder();
+        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder getTimestampStatisticsOrBuilder() {
+          if (timestampStatisticsBuilder_ != null) {
+            return timestampStatisticsBuilder_.getMessageOrBuilder();
           } else {
-            return valueStatistics_ == null ?
-                io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.getDefaultInstance() : valueStatistics_;
+            return timestampStatistics_ == null ?
+                io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.getDefaultInstance() : timestampStatistics_;
           }
         }
         /**
@@ -39396,20 +39396,20 @@ public final class RedvoxApiM {
          * Statistics of stored values
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics timestamp_statistics = 3;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder> 
-            getValueStatisticsFieldBuilder() {
-          if (valueStatisticsBuilder_ == null) {
-            valueStatisticsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            getTimestampStatisticsFieldBuilder() {
+          if (timestampStatisticsBuilder_ == null) {
+            timestampStatisticsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
                 io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatistics.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder>(
-                    getValueStatistics(),
+                    getTimestampStatistics(),
                     getParentForChildren(),
                     isClean());
-            valueStatistics_ = null;
+            timestampStatistics_ = null;
           }
-          return valueStatisticsBuilder_;
+          return timestampStatisticsBuilder_;
         }
 
         private float meanSampleRate_ ;
@@ -48451,7 +48451,7 @@ public final class RedvoxApiM {
   static {
     java.lang.String[] descriptorData = {
       "\n#src/redvox_api_m/redvox_api_m.proto\022\014r" +
-      "edvox_api_m\"\335W\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
+      "edvox_api_m\"\345W\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
       "(\002\022E\n\020user_information\030\002 \001(\0132+.redvox_ap" +
       "i_m.RedvoxPacketM.UserInformation\022K\n\023sta" +
       "tion_information\030\003 \001(\0132..redvox_api_m.Re" +
@@ -48708,48 +48708,49 @@ public final class RedvoxApiM {
       "maryStatistics\022I\n\010metadata\030\004 \003(\01327.redvo" +
       "x_api_m.RedvoxPacketM.SamplePayload.Meta" +
       "dataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\032\311\002\n\rTimingPayload\022.\n\004" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\032\321\002\n\rTimingPayload\022.\n\004" +
       "unit\030\001 \001(\0162 .redvox_api_m.RedvoxPacketM." +
-      "Unit\022\016\n\006values\030\002 \003(\001\022G\n\020value_statistics" +
-      "\030\003 \001(\0132-.redvox_api_m.RedvoxPacketM.Summ" +
-      "aryStatistics\022\030\n\020mean_sample_rate\030\004 \001(\002\022" +
-      "\031\n\021stdev_sample_rate\030\005 \001(\002\022I\n\010metadata\030\006" +
-      " \003(\01327.redvox_api_m.RedvoxPacketM.Timing" +
-      "Payload.MetadataEntry\032/\n\rMetadataEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\211\002\n\021Summa" +
-      "ryStatistics\022\r\n\005count\030\001 \001(\002\022\014\n\004mean\030\002 \001(" +
-      "\002\022\016\n\006median\030\003 \001(\002\022\014\n\004mode\030\004 \001(\002\022\020\n\010varia" +
-      "nce\030\005 \001(\002\022\013\n\003min\030\006 \001(\002\022\013\n\003max\030\007 \001(\002\022\r\n\005r" +
-      "ange\030\010 \001(\002\022M\n\010metadata\030\t \003(\0132;.redvox_ap" +
-      "i_m.RedvoxPacketM.SummaryStatistics.Meta" +
-      "dataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"\326\002\n\004Unit\022\035\n\031METERS_PE" +
-      "R_SECOND_SQUARED\020\000\022\016\n\nKILOPASCAL\020\001\022\026\n\022RA" +
-      "DIANS_PER_SECOND\020\002\022\023\n\017DECIMAL_DEGREES\020\003\022" +
-      "\n\n\006METERS\020\004\022\025\n\021METERS_PER_SECOND\020\005\022\016\n\nMI" +
-      "CROTESLA\020\006\022\031\n\025LSB_PLUS_MINUS_COUNTS\020\007\022!\n" +
-      "\035MICROSECONDS_SINCE_UNIX_EPOCH\020\010\022\013\n\007DECI" +
-      "BEL\020\t\022\023\n\017DEGREES_CELSIUS\020\n\022\010\n\004BYTE\020\013\022\016\n\n" +
-      "PERCENTAGE\020\014\022\013\n\007RADIANS\020\r\022\020\n\014MICROAMPERE" +
-      "S\020\016\022\017\n\013CENTIMETERS\020\017\022\025\n\021NORMALIZED_COUNT" +
-      "S\020\020\"\227\001\n\031EncryptedRedvoxPacket1000\022\016\n\006hea" +
-      "der\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014\032Z\n\006Header\022\022\n\ns" +
-      "tation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\022\n" +
-      "\nauth_token\030\003 \001(\t\022\022\n\nauth_email\030\004 \001(\t\"M\n" +
-      "\022AcquisitionRequest\022\017\n\007payload\030\001 \001(\014\022\024\n\014" +
-      "is_encrypted\030\002 \001(\010\022\020\n\010checksum\030\003 \001(\003\"\330\001\n" +
-      "\023AcquisitionResponse\022E\n\rresponse_type\030\001 " +
-      "\001(\0162..redvox_api_m.AcquisitionResponse.R" +
-      "esponseType\022\020\n\010checksum\030\002 \001(\003\022\017\n\007details" +
-      "\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"G\n\014ResponseType\022\006" +
-      "\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001\022\016\n\nDATA_ERROR\020\002\022\017" +
-      "\n\013OTHER_ERROR\020\003\"\\\n\014SynchRequest\022\022\n\nstati" +
-      "on_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\016\n\006seq" +
-      "_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001\n\rSynchR" +
-      "esponse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_u" +
-      "uid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030" +
-      "\004 \001(\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsend_ts_us\030" +
-      "\006 \001(\004B\030\n\026io.redvox.redvox_api_mb\006proto3"
+      "Unit\022\022\n\ntimestamps\030\002 \003(\001\022K\n\024timestamp_st" +
+      "atistics\030\003 \001(\0132-.redvox_api_m.RedvoxPack" +
+      "etM.SummaryStatistics\022\030\n\020mean_sample_rat" +
+      "e\030\004 \001(\002\022\031\n\021stdev_sample_rate\030\005 \001(\002\022I\n\010me" +
+      "tadata\030\006 \003(\01327.redvox_api_m.RedvoxPacket" +
+      "M.TimingPayload.MetadataEntry\032/\n\rMetadat" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\211" +
+      "\002\n\021SummaryStatistics\022\r\n\005count\030\001 \001(\002\022\014\n\004m" +
+      "ean\030\002 \001(\002\022\016\n\006median\030\003 \001(\002\022\014\n\004mode\030\004 \001(\002\022" +
+      "\020\n\010variance\030\005 \001(\002\022\013\n\003min\030\006 \001(\002\022\013\n\003max\030\007 " +
+      "\001(\002\022\r\n\005range\030\010 \001(\002\022M\n\010metadata\030\t \003(\0132;.r" +
+      "edvox_api_m.RedvoxPacketM.SummaryStatist" +
+      "ics.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\326\002\n\004Unit\022\035\n\031M" +
+      "ETERS_PER_SECOND_SQUARED\020\000\022\016\n\nKILOPASCAL" +
+      "\020\001\022\026\n\022RADIANS_PER_SECOND\020\002\022\023\n\017DECIMAL_DE" +
+      "GREES\020\003\022\n\n\006METERS\020\004\022\025\n\021METERS_PER_SECOND" +
+      "\020\005\022\016\n\nMICROTESLA\020\006\022\031\n\025LSB_PLUS_MINUS_COU" +
+      "NTS\020\007\022!\n\035MICROSECONDS_SINCE_UNIX_EPOCH\020\010" +
+      "\022\013\n\007DECIBEL\020\t\022\023\n\017DEGREES_CELSIUS\020\n\022\010\n\004BY" +
+      "TE\020\013\022\016\n\nPERCENTAGE\020\014\022\013\n\007RADIANS\020\r\022\020\n\014MIC" +
+      "ROAMPERES\020\016\022\017\n\013CENTIMETERS\020\017\022\025\n\021NORMALIZ" +
+      "ED_COUNTS\020\020\"\227\001\n\031EncryptedRedvoxPacket100" +
+      "0\022\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014\032Z\n\006Hea" +
+      "der\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030" +
+      "\002 \001(\t\022\022\n\nauth_token\030\003 \001(\t\022\022\n\nauth_email\030" +
+      "\004 \001(\t\"M\n\022AcquisitionRequest\022\017\n\007payload\030\001" +
+      " \001(\014\022\024\n\014is_encrypted\030\002 \001(\010\022\020\n\010checksum\030\003" +
+      " \001(\003\"\330\001\n\023AcquisitionResponse\022E\n\rresponse" +
+      "_type\030\001 \001(\0162..redvox_api_m.AcquisitionRe" +
+      "sponse.ResponseType\022\020\n\010checksum\030\002 \001(\003\022\017\n" +
+      "\007details\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"G\n\014Respon" +
+      "seType\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001\022\016\n\nDATA_E" +
+      "RROR\020\002\022\017\n\013OTHER_ERROR\020\003\"\\\n\014SynchRequest\022" +
+      "\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(" +
+      "\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001" +
+      "\n\rSynchResponse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014s" +
+      "tation_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub" +
+      "_seq_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsen" +
+      "d_ts_us\030\006 \001(\004B\030\n\026io.redvox.redvox_api_mb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -48972,7 +48973,7 @@ public final class RedvoxApiM {
     internal_static_redvox_api_m_RedvoxPacketM_TimingPayload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_RedvoxPacketM_TimingPayload_descriptor,
-        new java.lang.String[] { "Unit", "Values", "ValueStatistics", "MeanSampleRate", "StdevSampleRate", "Metadata", });
+        new java.lang.String[] { "Unit", "Timestamps", "TimestampStatistics", "MeanSampleRate", "StdevSampleRate", "Metadata", });
     internal_static_redvox_api_m_RedvoxPacketM_TimingPayload_MetadataEntry_descriptor =
       internal_static_redvox_api_m_RedvoxPacketM_TimingPayload_descriptor.getNestedTypes().get(0);
     internal_static_redvox_api_m_RedvoxPacketM_TimingPayload_MetadataEntry_fieldAccessorTable = new

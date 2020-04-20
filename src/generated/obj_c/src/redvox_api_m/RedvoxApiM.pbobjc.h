@@ -1618,8 +1618,8 @@ void SetRedvoxPacketM_SamplePayload_Unit_RawValue(RedvoxPacketM_SamplePayload *m
 
 typedef GPB_ENUM(RedvoxPacketM_TimingPayload_FieldNumber) {
   RedvoxPacketM_TimingPayload_FieldNumber_Unit = 1,
-  RedvoxPacketM_TimingPayload_FieldNumber_ValuesArray = 2,
-  RedvoxPacketM_TimingPayload_FieldNumber_ValueStatistics = 3,
+  RedvoxPacketM_TimingPayload_FieldNumber_TimestampsArray = 2,
+  RedvoxPacketM_TimingPayload_FieldNumber_TimestampStatistics = 3,
   RedvoxPacketM_TimingPayload_FieldNumber_MeanSampleRate = 4,
   RedvoxPacketM_TimingPayload_FieldNumber_StdevSampleRate = 5,
   RedvoxPacketM_TimingPayload_FieldNumber_Metadata = 6,
@@ -1635,14 +1635,14 @@ typedef GPB_ENUM(RedvoxPacketM_TimingPayload_FieldNumber) {
 @property(nonatomic, readwrite) RedvoxPacketM_Unit unit;
 
 /** Values in payload */
-@property(nonatomic, readwrite, strong, null_resettable) GPBDoubleArray *valuesArray;
-/** The number of items in @c valuesArray without causing the array to be created. */
-@property(nonatomic, readonly) NSUInteger valuesArray_Count;
+@property(nonatomic, readwrite, strong, null_resettable) GPBDoubleArray *timestampsArray;
+/** The number of items in @c timestampsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger timestampsArray_Count;
 
 /** Statistics of stored values */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SummaryStatistics *valueStatistics;
-/** Test to see if @c valueStatistics has been set. */
-@property(nonatomic, readwrite) BOOL hasValueStatistics;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SummaryStatistics *timestampStatistics;
+/** Test to see if @c timestampStatistics has been set. */
+@property(nonatomic, readwrite) BOOL hasTimestampStatistics;
 
 /** Mean sample rate in Hz */
 @property(nonatomic, readwrite) float meanSampleRate;

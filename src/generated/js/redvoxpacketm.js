@@ -7425,8 +7425,8 @@ proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.toObject = function(opt
 proto.redvox_api_m.RedvoxPacketM.TimingPayload.toObject = function(includeInstance, msg) {
   var f, obj = {
     unit: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    valuesList: jspb.Message.getRepeatedFloatingPointField(msg, 2),
-    valueStatistics: (f = msg.getValueStatistics()) && proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.toObject(includeInstance, f),
+    timestampsList: jspb.Message.getRepeatedFloatingPointField(msg, 2),
+    timestampStatistics: (f = msg.getTimestampStatistics()) && proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.toObject(includeInstance, f),
     meanSampleRate: +jspb.Message.getFieldWithDefault(msg, 4, 0.0),
     stdevSampleRate: +jspb.Message.getFieldWithDefault(msg, 5, 0.0),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
@@ -7472,12 +7472,12 @@ proto.redvox_api_m.RedvoxPacketM.TimingPayload.deserializeBinaryFromReader = fun
       break;
     case 2:
       var value = /** @type {!Array<number>} */ (reader.readPackedDouble());
-      msg.setValuesList(value);
+      msg.setTimestampsList(value);
       break;
     case 3:
       var value = new proto.redvox_api_m.RedvoxPacketM.SummaryStatistics;
       reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.deserializeBinaryFromReader);
-      msg.setValueStatistics(value);
+      msg.setTimestampStatistics(value);
       break;
     case 4:
       var value = /** @type {number} */ (reader.readFloat());
@@ -7529,14 +7529,14 @@ proto.redvox_api_m.RedvoxPacketM.TimingPayload.serializeBinaryToWriter = functio
       f
     );
   }
-  f = message.getValuesList();
+  f = message.getTimestampsList();
   if (f.length > 0) {
     writer.writePackedDouble(
       2,
       f
     );
   }
-  f = message.getValueStatistics();
+  f = message.getTimestampStatistics();
   if (f != null) {
     writer.writeMessage(
       3,
@@ -7581,16 +7581,16 @@ proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.setUnit = function(valu
 
 
 /**
- * repeated double values = 2;
+ * repeated double timestamps = 2;
  * @return {!Array<number>}
  */
-proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.getValuesList = function() {
+proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.getTimestampsList = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 2));
 };
 
 
 /** @param {!Array<number>} value */
-proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.setValuesList = function(value) {
+proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.setTimestampsList = function(value) {
   jspb.Message.setField(this, 2, value || []);
 };
 
@@ -7599,34 +7599,34 @@ proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.setValuesList = functio
  * @param {!number} value
  * @param {number=} opt_index
  */
-proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.addValues = function(value, opt_index) {
+proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.addTimestamps = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 2, value, opt_index);
 };
 
 
-proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.clearValuesList = function() {
-  this.setValuesList([]);
+proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.clearTimestampsList = function() {
+  this.setTimestampsList([]);
 };
 
 
 /**
- * optional SummaryStatistics value_statistics = 3;
+ * optional SummaryStatistics timestamp_statistics = 3;
  * @return {?proto.redvox_api_m.RedvoxPacketM.SummaryStatistics}
  */
-proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.getValueStatistics = function() {
+proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.getTimestampStatistics = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.SummaryStatistics} */ (
     jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SummaryStatistics, 3));
 };
 
 
 /** @param {?proto.redvox_api_m.RedvoxPacketM.SummaryStatistics|undefined} value */
-proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.setValueStatistics = function(value) {
+proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.setTimestampStatistics = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
 
-proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.clearValueStatistics = function() {
-  this.setValueStatistics(undefined);
+proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.clearTimestampStatistics = function() {
+  this.setTimestampStatistics(undefined);
 };
 
 
@@ -7634,7 +7634,7 @@ proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.clearValueStatistics = 
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.hasValueStatistics = function() {
+proto.redvox_api_m.RedvoxPacketM.TimingPayload.prototype.hasTimestampStatistics = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
