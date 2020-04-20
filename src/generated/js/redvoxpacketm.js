@@ -14,8 +14,8 @@ goog.provide('proto.redvox_api_m.RedvoxPacketM.Sensors');
 goog.provide('proto.redvox_api_m.RedvoxPacketM.Sensors.Audio');
 goog.provide('proto.redvox_api_m.RedvoxPacketM.Sensors.CompressedAudio');
 goog.provide('proto.redvox_api_m.RedvoxPacketM.Sensors.CompressedAudio.AudioCodec');
-goog.provide('proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel');
-goog.provide('proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec');
+goog.provide('proto.redvox_api_m.RedvoxPacketM.Sensors.Image');
+goog.provide('proto.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec');
 goog.provide('proto.redvox_api_m.RedvoxPacketM.Sensors.Location');
 goog.provide('proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider');
 goog.provide('proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationScoreMethod');
@@ -3815,7 +3815,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.toObject = function(includeInstance, ms
     compressedAudio: (f = msg.getCompressedAudio()) && proto.redvox_api_m.RedvoxPacketM.Sensors.CompressedAudio.toObject(includeInstance, f),
     gravity: (f = msg.getGravity()) && proto.redvox_api_m.RedvoxPacketM.Sensors.Xyz.toObject(includeInstance, f),
     gyroscope: (f = msg.getGyroscope()) && proto.redvox_api_m.RedvoxPacketM.Sensors.Xyz.toObject(includeInstance, f),
-    image: (f = msg.getImage()) && proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.toObject(includeInstance, f),
+    image: (f = msg.getImage()) && proto.redvox_api_m.RedvoxPacketM.Sensors.Image.toObject(includeInstance, f),
     light: (f = msg.getLight()) && proto.redvox_api_m.RedvoxPacketM.Sensors.Single.toObject(includeInstance, f),
     linearAcceleration: (f = msg.getLinearAcceleration()) && proto.redvox_api_m.RedvoxPacketM.Sensors.Xyz.toObject(includeInstance, f),
     location: (f = msg.getLocation()) && proto.redvox_api_m.RedvoxPacketM.Sensors.Location.toObject(includeInstance, f),
@@ -3893,8 +3893,8 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.deserializeBinaryFromReader = function(
       msg.setGyroscope(value);
       break;
     case 7:
-      var value = new proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel;
-      reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.deserializeBinaryFromReader);
+      var value = new proto.redvox_api_m.RedvoxPacketM.Sensors.Image;
+      reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.Sensors.Image.deserializeBinaryFromReader);
       msg.setImage(value);
       break;
     case 8:
@@ -4030,7 +4030,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.serializeBinaryToWriter = function(mess
     writer.writeMessage(
       7,
       f,
-      proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.serializeBinaryToWriter
+      proto.redvox_api_m.RedvoxPacketM.Sensors.Image.serializeBinaryToWriter
     );
   }
   f = message.getLight();
@@ -6297,19 +6297,19 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Xyz.prototype.clearMetadataMap = functi
  * @extends {jspb.Message}
  * @constructor
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.repeatedFields_, null);
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.redvox_api_m.RedvoxPacketM.Sensors.Image.repeatedFields_, null);
 };
-goog.inherits(proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel, jspb.Message);
+goog.inherits(proto.redvox_api_m.RedvoxPacketM.Sensors.Image, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.displayName = 'proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel';
+  proto.redvox_api_m.RedvoxPacketM.Sensors.Image.displayName = 'proto.redvox_api_m.RedvoxPacketM.Sensors.Image';
 }
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.repeatedFields_ = [3];
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.repeatedFields_ = [3];
 
 
 
@@ -6324,8 +6324,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.toObject = function(opt_includeInstance) {
-  return proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.toObject(opt_includeInstance, this);
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.toObject = function(opt_includeInstance) {
+  return proto.redvox_api_m.RedvoxPacketM.Sensors.Image.toObject(opt_includeInstance, this);
 };
 
 
@@ -6334,11 +6334,11 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.toObject = funct
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel} msg The msg instance to transform.
+ * @param {!proto.redvox_api_m.RedvoxPacketM.Sensors.Image} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.toObject = function(includeInstance, msg) {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.toObject = function(includeInstance, msg) {
   var f, obj = {
     sensorDescription: jspb.Message.getFieldWithDefault(msg, 1, ""),
     timestamps: (f = msg.getTimestamps()) && proto.redvox_api_m.RedvoxPacketM.TimingPayload.toObject(includeInstance, f),
@@ -6358,23 +6358,23 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.toObject = function(includ
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel}
+ * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Image}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.deserializeBinary = function(bytes) {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel;
-  return proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.redvox_api_m.RedvoxPacketM.Sensors.Image;
+  return proto.redvox_api_m.RedvoxPacketM.Sensors.Image.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel} msg The message object to deserialize into.
+ * @param {!proto.redvox_api_m.RedvoxPacketM.Sensors.Image} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel}
+ * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Image}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.deserializeBinaryFromReader = function(msg, reader) {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6395,7 +6395,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.deserializeBinaryFromReade
       msg.addSamples(value);
       break;
     case 6:
-      var value = /** @type {!proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec} */ (reader.readEnum());
+      var value = /** @type {!proto.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec} */ (reader.readEnum());
       msg.setImageCodec(value);
       break;
     case 7:
@@ -6417,9 +6417,9 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.serializeBinary = function() {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.serializeBinaryToWriter(this, writer);
+  proto.redvox_api_m.RedvoxPacketM.Sensors.Image.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6427,11 +6427,11 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel} message
+ * @param {!proto.redvox_api_m.RedvoxPacketM.Sensors.Image} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.serializeBinaryToWriter = function(message, writer) {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getSensorDescription();
   if (f.length > 0) {
@@ -6472,7 +6472,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.serializeBinaryToWriter = 
 /**
  * @enum {number}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec = {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec = {
   PNG: 0,
   JPG: 1,
   BMP: 2
@@ -6482,13 +6482,13 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec = {
  * optional string sensor_description = 1;
  * @return {string}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.getSensorDescription = function() {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.getSensorDescription = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.setSensorDescription = function(value) {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.setSensorDescription = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -6497,19 +6497,19 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.setSensorDescrip
  * optional TimingPayload timestamps = 2;
  * @return {?proto.redvox_api_m.RedvoxPacketM.TimingPayload}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.getTimestamps = function() {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.getTimestamps = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.TimingPayload} */ (
     jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.TimingPayload, 2));
 };
 
 
 /** @param {?proto.redvox_api_m.RedvoxPacketM.TimingPayload|undefined} value */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.setTimestamps = function(value) {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.setTimestamps = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
 
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.clearTimestamps = function() {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.clearTimestamps = function() {
   this.setTimestamps(undefined);
 };
 
@@ -6518,7 +6518,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.clearTimestamps 
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.hasTimestamps = function() {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.hasTimestamps = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -6527,7 +6527,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.hasTimestamps = 
  * repeated bytes samples = 3;
  * @return {!Array<string>}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.getSamplesList = function() {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.getSamplesList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 3));
 };
 
@@ -6537,7 +6537,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.getSamplesList =
  * This is a type-conversion wrapper around `getSamplesList()`
  * @return {!Array<string>}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.getSamplesList_asB64 = function() {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.getSamplesList_asB64 = function() {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
       this.getSamplesList()));
 };
@@ -6550,14 +6550,14 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.getSamplesList_a
  * This is a type-conversion wrapper around `getSamplesList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.getSamplesList_asU8 = function() {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.getSamplesList_asU8 = function() {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
       this.getSamplesList()));
 };
 
 
 /** @param {!(Array<!Uint8Array>|Array<string>)} value */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.setSamplesList = function(value) {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.setSamplesList = function(value) {
   jspb.Message.setField(this, 3, value || []);
 };
 
@@ -6566,27 +6566,27 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.setSamplesList =
  * @param {!(string|Uint8Array)} value
  * @param {number=} opt_index
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.addSamples = function(value, opt_index) {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.addSamples = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
 
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.clearSamplesList = function() {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.clearSamplesList = function() {
   this.setSamplesList([]);
 };
 
 
 /**
  * optional ImageCodec image_codec = 6;
- * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec}
+ * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.getImageCodec = function() {
-  return /** @type {!proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.getImageCodec = function() {
+  return /** @type {!proto.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
 
-/** @param {!proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec} value */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.setImageCodec = function(value) {
+/** @param {!proto.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec} value */
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.setImageCodec = function(value) {
   jspb.Message.setProto3EnumField(this, 6, value);
 };
 
@@ -6597,14 +6597,14 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.setImageCodec = 
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.getMetadataMap = function(opt_noLazyCreate) {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 7, opt_noLazyCreate,
       null));
 };
 
 
-proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.prototype.clearMetadataMap = function() {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Image.prototype.clearMetadataMap = function() {
   this.getMetadataMap().clear();
 };
 
@@ -6790,16 +6790,16 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.prototype.hasGyroscope = function() {
 
 
 /**
- * optional ImageChannel image = 7;
- * @return {?proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel}
+ * optional Image image = 7;
+ * @return {?proto.redvox_api_m.RedvoxPacketM.Sensors.Image}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.prototype.getImage = function() {
-  return /** @type{?proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel, 7));
+  return /** @type{?proto.redvox_api_m.RedvoxPacketM.Sensors.Image} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.Sensors.Image, 7));
 };
 
 
-/** @param {?proto.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel|undefined} value */
+/** @param {?proto.redvox_api_m.RedvoxPacketM.Sensors.Image|undefined} value */
 proto.redvox_api_m.RedvoxPacketM.Sensors.prototype.setImage = function(value) {
   jspb.Message.setWrapperField(this, 7, value);
 };

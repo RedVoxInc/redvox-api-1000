@@ -1903,7 +1903,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
   RedvoxPacketM_Sensors_CompressedAudio *compressedAudio;
   RedvoxPacketM_Sensors_Xyz *gravity;
   RedvoxPacketM_Sensors_Xyz *gyroscope;
-  RedvoxPacketM_Sensors_ImageChannel *image;
+  RedvoxPacketM_Sensors_Image *image;
   RedvoxPacketM_Sensors_Single *light;
   RedvoxPacketM_Sensors_Xyz *linearAcceleration;
   RedvoxPacketM_Sensors_Location *location;
@@ -1978,7 +1978,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "image",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_ImageChannel),
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Image),
         .number = RedvoxPacketM_Sensors_FieldNumber_Image,
         .hasIndex = 6,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, image),
@@ -2900,9 +2900,9 @@ typedef struct RedvoxPacketM_Sensors_Xyz__storage_ {
 
 @end
 
-#pragma mark - RedvoxPacketM_Sensors_ImageChannel
+#pragma mark - RedvoxPacketM_Sensors_Image
 
-@implementation RedvoxPacketM_Sensors_ImageChannel
+@implementation RedvoxPacketM_Sensors_Image
 
 @dynamic sensorDescription;
 @dynamic hasTimestamps, timestamps;
@@ -2910,14 +2910,14 @@ typedef struct RedvoxPacketM_Sensors_Xyz__storage_ {
 @dynamic imageCodec;
 @dynamic metadata, metadata_Count;
 
-typedef struct RedvoxPacketM_Sensors_ImageChannel__storage_ {
+typedef struct RedvoxPacketM_Sensors_Image__storage_ {
   uint32_t _has_storage_[1];
-  RedvoxPacketM_Sensors_ImageChannel_ImageCodec imageCodec;
+  RedvoxPacketM_Sensors_Image_ImageCodec imageCodec;
   NSString *sensorDescription;
   RedvoxPacketM_TimingPayload *timestamps;
   NSMutableArray *samplesArray;
   NSMutableDictionary *metadata;
-} RedvoxPacketM_Sensors_ImageChannel__storage_;
+} RedvoxPacketM_Sensors_Image__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -2928,56 +2928,56 @@ typedef struct RedvoxPacketM_Sensors_ImageChannel__storage_ {
       {
         .name = "sensorDescription",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_Sensors_ImageChannel_FieldNumber_SensorDescription,
+        .number = RedvoxPacketM_Sensors_Image_FieldNumber_SensorDescription,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_ImageChannel__storage_, sensorDescription),
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Image__storage_, sensorDescription),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "timestamps",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_TimingPayload),
-        .number = RedvoxPacketM_Sensors_ImageChannel_FieldNumber_Timestamps,
+        .number = RedvoxPacketM_Sensors_Image_FieldNumber_Timestamps,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_ImageChannel__storage_, timestamps),
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Image__storage_, timestamps),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "samplesArray",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_Sensors_ImageChannel_FieldNumber_SamplesArray,
+        .number = RedvoxPacketM_Sensors_Image_FieldNumber_SamplesArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_ImageChannel__storage_, samplesArray),
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Image__storage_, samplesArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeBytes,
       },
       {
         .name = "imageCodec",
-        .dataTypeSpecific.enumDescFunc = RedvoxPacketM_Sensors_ImageChannel_ImageCodec_EnumDescriptor,
-        .number = RedvoxPacketM_Sensors_ImageChannel_FieldNumber_ImageCodec,
+        .dataTypeSpecific.enumDescFunc = RedvoxPacketM_Sensors_Image_ImageCodec_EnumDescriptor,
+        .number = RedvoxPacketM_Sensors_Image_FieldNumber_ImageCodec,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_ImageChannel__storage_, imageCodec),
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Image__storage_, imageCodec),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "metadata",
         .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_Sensors_ImageChannel_FieldNumber_Metadata,
+        .number = RedvoxPacketM_Sensors_Image_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_ImageChannel__storage_, metadata),
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Image__storage_, metadata),
         .flags = GPBFieldMapKeyString,
         .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RedvoxPacketM_Sensors_ImageChannel class]
+        [GPBDescriptor allocDescriptorForClass:[RedvoxPacketM_Sensors_Image class]
                                      rootClass:[RedvoxApiMRoot class]
                                           file:RedvoxApiMRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RedvoxPacketM_Sensors_ImageChannel__storage_)
+                                   storageSize:sizeof(RedvoxPacketM_Sensors_Image__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors)];
     NSAssert(descriptor == nil, @"Startup recursed!");
@@ -2988,36 +2988,36 @@ typedef struct RedvoxPacketM_Sensors_ImageChannel__storage_ {
 
 @end
 
-int32_t RedvoxPacketM_Sensors_ImageChannel_ImageCodec_RawValue(RedvoxPacketM_Sensors_ImageChannel *message) {
-  GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_ImageChannel descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_ImageChannel_FieldNumber_ImageCodec];
+int32_t RedvoxPacketM_Sensors_Image_ImageCodec_RawValue(RedvoxPacketM_Sensors_Image *message) {
+  GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Image descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Image_FieldNumber_ImageCodec];
   return GPBGetMessageInt32Field(message, field);
 }
 
-void SetRedvoxPacketM_Sensors_ImageChannel_ImageCodec_RawValue(RedvoxPacketM_Sensors_ImageChannel *message, int32_t value) {
-  GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_ImageChannel descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_ImageChannel_FieldNumber_ImageCodec];
+void SetRedvoxPacketM_Sensors_Image_ImageCodec_RawValue(RedvoxPacketM_Sensors_Image *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Image descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Image_FieldNumber_ImageCodec];
   GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
 }
 
-#pragma mark - Enum RedvoxPacketM_Sensors_ImageChannel_ImageCodec
+#pragma mark - Enum RedvoxPacketM_Sensors_Image_ImageCodec
 
-GPBEnumDescriptor *RedvoxPacketM_Sensors_ImageChannel_ImageCodec_EnumDescriptor(void) {
+GPBEnumDescriptor *RedvoxPacketM_Sensors_Image_ImageCodec_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
         "Png\000Jpg\000Bmp\000";
     static const int32_t values[] = {
-        RedvoxPacketM_Sensors_ImageChannel_ImageCodec_Png,
-        RedvoxPacketM_Sensors_ImageChannel_ImageCodec_Jpg,
-        RedvoxPacketM_Sensors_ImageChannel_ImageCodec_Bmp,
+        RedvoxPacketM_Sensors_Image_ImageCodec_Png,
+        RedvoxPacketM_Sensors_Image_ImageCodec_Jpg,
+        RedvoxPacketM_Sensors_Image_ImageCodec_Bmp,
     };
     GPBEnumDescriptor *worker =
-        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_Sensors_ImageChannel_ImageCodec)
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_Sensors_Image_ImageCodec)
                                        valueNames:valueNames
                                            values:values
                                             count:(uint32_t)(sizeof(values) / sizeof(int32_t))
-                                     enumVerifier:RedvoxPacketM_Sensors_ImageChannel_ImageCodec_IsValidValue];
+                                     enumVerifier:RedvoxPacketM_Sensors_Image_ImageCodec_IsValidValue];
     GPBEnumDescriptor *expected = nil;
     if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
       [worker release];
@@ -3026,11 +3026,11 @@ GPBEnumDescriptor *RedvoxPacketM_Sensors_ImageChannel_ImageCodec_EnumDescriptor(
   return descriptor;
 }
 
-BOOL RedvoxPacketM_Sensors_ImageChannel_ImageCodec_IsValidValue(int32_t value__) {
+BOOL RedvoxPacketM_Sensors_Image_ImageCodec_IsValidValue(int32_t value__) {
   switch (value__) {
-    case RedvoxPacketM_Sensors_ImageChannel_ImageCodec_Png:
-    case RedvoxPacketM_Sensors_ImageChannel_ImageCodec_Jpg:
-    case RedvoxPacketM_Sensors_ImageChannel_ImageCodec_Bmp:
+    case RedvoxPacketM_Sensors_Image_ImageCodec_Png:
+    case RedvoxPacketM_Sensors_Image_ImageCodec_Jpg:
+    case RedvoxPacketM_Sensors_Image_ImageCodec_Bmp:
       return YES;
     default:
       return NO;

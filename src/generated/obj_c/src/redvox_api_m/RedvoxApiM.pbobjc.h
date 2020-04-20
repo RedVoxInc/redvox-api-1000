@@ -32,7 +32,7 @@ CF_EXTERN_C_BEGIN
 @class RedvoxPacketM_Sensors;
 @class RedvoxPacketM_Sensors_Audio;
 @class RedvoxPacketM_Sensors_CompressedAudio;
-@class RedvoxPacketM_Sensors_ImageChannel;
+@class RedvoxPacketM_Sensors_Image;
 @class RedvoxPacketM_Sensors_Location;
 @class RedvoxPacketM_Sensors_Single;
 @class RedvoxPacketM_Sensors_Xyz;
@@ -404,28 +404,28 @@ GPBEnumDescriptor *RedvoxPacketM_Sensors_Location_LocationProvider_EnumDescripto
  **/
 BOOL RedvoxPacketM_Sensors_Location_LocationProvider_IsValidValue(int32_t value);
 
-#pragma mark - Enum RedvoxPacketM_Sensors_ImageChannel_ImageCodec
+#pragma mark - Enum RedvoxPacketM_Sensors_Image_ImageCodec
 
 /** Codec used to encode the image */
-typedef GPB_ENUM(RedvoxPacketM_Sensors_ImageChannel_ImageCodec) {
+typedef GPB_ENUM(RedvoxPacketM_Sensors_Image_ImageCodec) {
   /**
    * Value used if any message's field encounters a value that is not defined
    * by this enum. The message will also have C functions to get/set the rawValue
    * of the field.
    **/
-  RedvoxPacketM_Sensors_ImageChannel_ImageCodec_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  RedvoxPacketM_Sensors_ImageChannel_ImageCodec_Png = 0,
-  RedvoxPacketM_Sensors_ImageChannel_ImageCodec_Jpg = 1,
-  RedvoxPacketM_Sensors_ImageChannel_ImageCodec_Bmp = 2,
+  RedvoxPacketM_Sensors_Image_ImageCodec_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  RedvoxPacketM_Sensors_Image_ImageCodec_Png = 0,
+  RedvoxPacketM_Sensors_Image_ImageCodec_Jpg = 1,
+  RedvoxPacketM_Sensors_Image_ImageCodec_Bmp = 2,
 };
 
-GPBEnumDescriptor *RedvoxPacketM_Sensors_ImageChannel_ImageCodec_EnumDescriptor(void);
+GPBEnumDescriptor *RedvoxPacketM_Sensors_Image_ImageCodec_EnumDescriptor(void);
 
 /**
  * Checks to see if the given value is defined by the enum or was not known at
  * the time this source was generated.
  **/
-BOOL RedvoxPacketM_Sensors_ImageChannel_ImageCodec_IsValidValue(int32_t value);
+BOOL RedvoxPacketM_Sensors_Image_ImageCodec_IsValidValue(int32_t value);
 
 #pragma mark - Enum AcquisitionResponse_ResponseType
 
@@ -1137,7 +1137,7 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasGyroscope;
 
 /** bytes (codec specific) */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Sensors_ImageChannel *image;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Sensors_Image *image;
 /** Test to see if @c image has been set. */
 @property(nonatomic, readwrite) BOOL hasImage;
 
@@ -1516,21 +1516,21 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Xyz_FieldNumber) {
 
 @end
 
-#pragma mark - RedvoxPacketM_Sensors_ImageChannel
+#pragma mark - RedvoxPacketM_Sensors_Image
 
-typedef GPB_ENUM(RedvoxPacketM_Sensors_ImageChannel_FieldNumber) {
-  RedvoxPacketM_Sensors_ImageChannel_FieldNumber_SensorDescription = 1,
-  RedvoxPacketM_Sensors_ImageChannel_FieldNumber_Timestamps = 2,
-  RedvoxPacketM_Sensors_ImageChannel_FieldNumber_SamplesArray = 3,
-  RedvoxPacketM_Sensors_ImageChannel_FieldNumber_ImageCodec = 6,
-  RedvoxPacketM_Sensors_ImageChannel_FieldNumber_Metadata = 7,
+typedef GPB_ENUM(RedvoxPacketM_Sensors_Image_FieldNumber) {
+  RedvoxPacketM_Sensors_Image_FieldNumber_SensorDescription = 1,
+  RedvoxPacketM_Sensors_Image_FieldNumber_Timestamps = 2,
+  RedvoxPacketM_Sensors_Image_FieldNumber_SamplesArray = 3,
+  RedvoxPacketM_Sensors_Image_FieldNumber_ImageCodec = 6,
+  RedvoxPacketM_Sensors_Image_FieldNumber_Metadata = 7,
 };
 
 /**
  * Image/video channel
  * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_image_data.md
  **/
-@interface RedvoxPacketM_Sensors_ImageChannel : GPBMessage
+@interface RedvoxPacketM_Sensors_Image : GPBMessage
 
 /** The name or description of the sensor */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *sensorDescription;
@@ -1546,7 +1546,7 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_ImageChannel_FieldNumber) {
 @property(nonatomic, readonly) NSUInteger samplesArray_Count;
 
 /** The image codec being used */
-@property(nonatomic, readwrite) RedvoxPacketM_Sensors_ImageChannel_ImageCodec imageCodec;
+@property(nonatomic, readwrite) RedvoxPacketM_Sensors_Image_ImageCodec imageCodec;
 
 /** A map from string to string for including untyped metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
@@ -1556,16 +1556,16 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_ImageChannel_FieldNumber) {
 @end
 
 /**
- * Fetches the raw value of a @c RedvoxPacketM_Sensors_ImageChannel's @c imageCodec property, even
+ * Fetches the raw value of a @c RedvoxPacketM_Sensors_Image's @c imageCodec property, even
  * if the value was not defined by the enum at the time the code was generated.
  **/
-int32_t RedvoxPacketM_Sensors_ImageChannel_ImageCodec_RawValue(RedvoxPacketM_Sensors_ImageChannel *message);
+int32_t RedvoxPacketM_Sensors_Image_ImageCodec_RawValue(RedvoxPacketM_Sensors_Image *message);
 /**
- * Sets the raw value of an @c RedvoxPacketM_Sensors_ImageChannel's @c imageCodec property, allowing
+ * Sets the raw value of an @c RedvoxPacketM_Sensors_Image's @c imageCodec property, allowing
  * it to be set to a value that was not defined by the enum at the time the code
  * was generated.
  **/
-void SetRedvoxPacketM_Sensors_ImageChannel_ImageCodec_RawValue(RedvoxPacketM_Sensors_ImageChannel *message, int32_t value);
+void SetRedvoxPacketM_Sensors_Image_ImageCodec_RawValue(RedvoxPacketM_Sensors_Image *message, int32_t value);
 
 #pragma mark - RedvoxPacketM_SamplePayload
 

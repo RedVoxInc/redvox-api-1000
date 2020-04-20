@@ -19148,7 +19148,7 @@ public final class RedvoxApiM {
        * bytes (codec specific)
        * </pre>
        *
-       * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+       * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
        */
       boolean hasImage();
       /**
@@ -19156,17 +19156,17 @@ public final class RedvoxApiM {
        * bytes (codec specific)
        * </pre>
        *
-       * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+       * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
        */
-      io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel getImage();
+      io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image getImage();
       /**
        * <pre>
        * bytes (codec specific)
        * </pre>
        *
-       * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+       * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
        */
-      io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannelOrBuilder getImageOrBuilder();
+      io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageOrBuilder getImageOrBuilder();
 
       /**
        * <pre>
@@ -19570,11 +19570,11 @@ public final class RedvoxApiM {
                 break;
               }
               case 58: {
-                io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.Builder subBuilder = null;
+                io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.Builder subBuilder = null;
                 if (image_ != null) {
                   subBuilder = image_.toBuilder();
                 }
-                image_ = input.readMessage(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.parser(), extensionRegistry);
+                image_ = input.readMessage(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(image_);
                   image_ = subBuilder.buildPartial();
@@ -30942,8 +30942,8 @@ public final class RedvoxApiM {
 
       }
 
-      public interface ImageChannelOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:redvox_api_m.RedvoxPacketM.Sensors.ImageChannel)
+      public interface ImageOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:redvox_api_m.RedvoxPacketM.Sensors.Image)
           com.google.protobuf.MessageOrBuilder {
 
         /**
@@ -31019,7 +31019,7 @@ public final class RedvoxApiM {
          * The image codec being used
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec image_codec = 6;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec image_codec = 6;</code>
          */
         int getImageCodecValue();
         /**
@@ -31027,9 +31027,9 @@ public final class RedvoxApiM {
          * The image codec being used
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec image_codec = 6;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec image_codec = 6;</code>
          */
-        io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.ImageCodec getImageCodec();
+        io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec getImageCodec();
 
         /**
          * <pre>
@@ -31091,18 +31091,18 @@ public final class RedvoxApiM {
        * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_image_data.md
        * </pre>
        *
-       * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors.ImageChannel}
+       * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors.Image}
        */
-      public  static final class ImageChannel extends
+      public  static final class Image extends
           com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:redvox_api_m.RedvoxPacketM.Sensors.ImageChannel)
-          ImageChannelOrBuilder {
+          // @@protoc_insertion_point(message_implements:redvox_api_m.RedvoxPacketM.Sensors.Image)
+          ImageOrBuilder {
       private static final long serialVersionUID = 0L;
-        // Use ImageChannel.newBuilder() to construct.
-        private ImageChannel(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        // Use Image.newBuilder() to construct.
+        private Image(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
           super(builder);
         }
-        private ImageChannel() {
+        private Image() {
           sensorDescription_ = "";
           samples_ = java.util.Collections.emptyList();
           imageCodec_ = 0;
@@ -31113,7 +31113,7 @@ public final class RedvoxApiM {
         getUnknownFields() {
           return this.unknownFields;
         }
-        private ImageChannel(
+        private Image(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
@@ -31202,7 +31202,7 @@ public final class RedvoxApiM {
         }
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return io.redvox.redvox_api_m.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_descriptor;
+          return io.redvox.redvox_api_m.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_descriptor;
         }
 
         @SuppressWarnings({"rawtypes"})
@@ -31220,9 +31220,9 @@ public final class RedvoxApiM {
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return io.redvox.redvox_api_m.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_fieldAccessorTable
+          return io.redvox.redvox_api_m.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.class, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.Builder.class);
+                  io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.class, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.Builder.class);
         }
 
         /**
@@ -31230,7 +31230,7 @@ public final class RedvoxApiM {
          * Codec used to encode the image
          * </pre>
          *
-         * Protobuf enum {@code redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec}
+         * Protobuf enum {@code redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec}
          */
         public enum ImageCodec
             implements com.google.protobuf.ProtocolMessageEnum {
@@ -31310,7 +31310,7 @@ public final class RedvoxApiM {
           }
           public static final com.google.protobuf.Descriptors.EnumDescriptor
               getDescriptor() {
-            return io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.getDescriptor().getEnumTypes().get(0);
+            return io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.getDescriptor().getEnumTypes().get(0);
           }
 
           private static final ImageCodec[] VALUES = values();
@@ -31333,7 +31333,7 @@ public final class RedvoxApiM {
             this.value = value;
           }
 
-          // @@protoc_insertion_point(enum_scope:redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec)
+          // @@protoc_insertion_point(enum_scope:redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec)
         }
 
         private int bitField0_;
@@ -31453,7 +31453,7 @@ public final class RedvoxApiM {
          * The image codec being used
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec image_codec = 6;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec image_codec = 6;</code>
          */
         public int getImageCodecValue() {
           return imageCodec_;
@@ -31463,12 +31463,12 @@ public final class RedvoxApiM {
          * The image codec being used
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec image_codec = 6;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec image_codec = 6;</code>
          */
-        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.ImageCodec getImageCodec() {
+        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec getImageCodec() {
           @SuppressWarnings("deprecation")
-          io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.ImageCodec result = io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.ImageCodec.valueOf(imageCodec_);
-          return result == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.ImageCodec.UNRECOGNIZED : result;
+          io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec result = io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec.valueOf(imageCodec_);
+          return result == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec.UNRECOGNIZED : result;
         }
 
         public static final int METADATA_FIELD_NUMBER = 7;
@@ -31477,7 +31477,7 @@ public final class RedvoxApiM {
               java.lang.String, java.lang.String> defaultEntry =
                   com.google.protobuf.MapEntry
                   .<java.lang.String, java.lang.String>newDefaultInstance(
-                      io.redvox.redvox_api_m.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_MetadataEntry_descriptor, 
+                      io.redvox.redvox_api_m.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_MetadataEntry_descriptor, 
                       com.google.protobuf.WireFormat.FieldType.STRING,
                       "",
                       com.google.protobuf.WireFormat.FieldType.STRING,
@@ -31586,7 +31586,7 @@ public final class RedvoxApiM {
           for (int i = 0; i < samples_.size(); i++) {
             output.writeBytes(3, samples_.get(i));
           }
-          if (imageCodec_ != io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.ImageCodec.PNG.getNumber()) {
+          if (imageCodec_ != io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec.PNG.getNumber()) {
             output.writeEnum(6, imageCodec_);
           }
           com.google.protobuf.GeneratedMessageV3
@@ -31620,7 +31620,7 @@ public final class RedvoxApiM {
             size += dataSize;
             size += 1 * getSamplesList().size();
           }
-          if (imageCodec_ != io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.ImageCodec.PNG.getNumber()) {
+          if (imageCodec_ != io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec.PNG.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(6, imageCodec_);
           }
@@ -31644,10 +31644,10 @@ public final class RedvoxApiM {
           if (obj == this) {
            return true;
           }
-          if (!(obj instanceof io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel)) {
+          if (!(obj instanceof io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image)) {
             return super.equals(obj);
           }
-          io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel other = (io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel) obj;
+          io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image other = (io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image) obj;
 
           boolean result = true;
           result = result && getSensorDescription()
@@ -31694,69 +31694,69 @@ public final class RedvoxApiM {
           return hash;
         }
 
-        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel parseFrom(
+        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel parseFrom(
+        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel parseFrom(
+        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel parseFrom(
+        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel parseFrom(byte[] data)
+        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel parseFrom(
+        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel parseFrom(java.io.InputStream input)
+        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image parseFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
         }
-        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel parseFrom(
+        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
         }
-        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel parseDelimitedFrom(java.io.InputStream input)
+        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
         }
-        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel parseDelimitedFrom(
+        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
         }
-        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel parseFrom(
+        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
         }
-        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel parseFrom(
+        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -31769,7 +31769,7 @@ public final class RedvoxApiM {
         public static Builder newBuilder() {
           return DEFAULT_INSTANCE.toBuilder();
         }
-        public static Builder newBuilder(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel prototype) {
+        public static Builder newBuilder(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image prototype) {
           return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
         }
         @java.lang.Override
@@ -31790,15 +31790,15 @@ public final class RedvoxApiM {
          * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_image_data.md
          * </pre>
          *
-         * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors.ImageChannel}
+         * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors.Image}
          */
         public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:redvox_api_m.RedvoxPacketM.Sensors.ImageChannel)
-            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannelOrBuilder {
+            // @@protoc_insertion_point(builder_implements:redvox_api_m.RedvoxPacketM.Sensors.Image)
+            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageOrBuilder {
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return io.redvox.redvox_api_m.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_descriptor;
+            return io.redvox.redvox_api_m.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_descriptor;
           }
 
           @SuppressWarnings({"rawtypes"})
@@ -31826,12 +31826,12 @@ public final class RedvoxApiM {
           @java.lang.Override
           protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return io.redvox.redvox_api_m.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_fieldAccessorTable
+            return io.redvox.redvox_api_m.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.class, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.Builder.class);
+                    io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.class, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.Builder.class);
           }
 
-          // Construct using io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.newBuilder()
+          // Construct using io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -31868,17 +31868,17 @@ public final class RedvoxApiM {
           @java.lang.Override
           public com.google.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
-            return io.redvox.redvox_api_m.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_descriptor;
+            return io.redvox.redvox_api_m.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_descriptor;
           }
 
           @java.lang.Override
-          public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel getDefaultInstanceForType() {
-            return io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.getDefaultInstance();
+          public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image getDefaultInstanceForType() {
+            return io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.getDefaultInstance();
           }
 
           @java.lang.Override
-          public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel build() {
-            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel result = buildPartial();
+          public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image build() {
+            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image result = buildPartial();
             if (!result.isInitialized()) {
               throw newUninitializedMessageException(result);
             }
@@ -31886,8 +31886,8 @@ public final class RedvoxApiM {
           }
 
           @java.lang.Override
-          public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel buildPartial() {
-            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel result = new io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel(this);
+          public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image buildPartial() {
+            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image result = new io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image(this);
             int from_bitField0_ = bitField0_;
             int to_bitField0_ = 0;
             result.sensorDescription_ = sensorDescription_;
@@ -31943,16 +31943,16 @@ public final class RedvoxApiM {
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
-            if (other instanceof io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel) {
-              return mergeFrom((io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel)other);
+            if (other instanceof io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image) {
+              return mergeFrom((io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image)other);
             } else {
               super.mergeFrom(other);
               return this;
             }
           }
 
-          public Builder mergeFrom(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel other) {
-            if (other == io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.getDefaultInstance()) return this;
+          public Builder mergeFrom(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image other) {
+            if (other == io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.getDefaultInstance()) return this;
             if (!other.getSensorDescription().isEmpty()) {
               sensorDescription_ = other.sensorDescription_;
               onChanged();
@@ -31990,11 +31990,11 @@ public final class RedvoxApiM {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel parsedMessage = null;
+            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
             } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              parsedMessage = (io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel) e.getUnfinishedMessage();
+              parsedMessage = (io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image) e.getUnfinishedMessage();
               throw e.unwrapIOException();
             } finally {
               if (parsedMessage != null) {
@@ -32353,7 +32353,7 @@ public final class RedvoxApiM {
            * The image codec being used
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec image_codec = 6;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec image_codec = 6;</code>
            */
           public int getImageCodecValue() {
             return imageCodec_;
@@ -32363,7 +32363,7 @@ public final class RedvoxApiM {
            * The image codec being used
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec image_codec = 6;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec image_codec = 6;</code>
            */
           public Builder setImageCodecValue(int value) {
             imageCodec_ = value;
@@ -32375,21 +32375,21 @@ public final class RedvoxApiM {
            * The image codec being used
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec image_codec = 6;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec image_codec = 6;</code>
            */
-          public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.ImageCodec getImageCodec() {
+          public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec getImageCodec() {
             @SuppressWarnings("deprecation")
-            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.ImageCodec result = io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.ImageCodec.valueOf(imageCodec_);
-            return result == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.ImageCodec.UNRECOGNIZED : result;
+            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec result = io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec.valueOf(imageCodec_);
+            return result == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec.UNRECOGNIZED : result;
           }
           /**
            * <pre>
            * The image codec being used
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec image_codec = 6;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec image_codec = 6;</code>
            */
-          public Builder setImageCodec(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.ImageCodec value) {
+          public Builder setImageCodec(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec value) {
             if (value == null) {
               throw new NullPointerException();
             }
@@ -32403,7 +32403,7 @@ public final class RedvoxApiM {
            * The image codec being used
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel.ImageCodec image_codec = 6;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec image_codec = 6;</code>
            */
           public Builder clearImageCodec() {
             
@@ -32575,41 +32575,41 @@ public final class RedvoxApiM {
           }
 
 
-          // @@protoc_insertion_point(builder_scope:redvox_api_m.RedvoxPacketM.Sensors.ImageChannel)
+          // @@protoc_insertion_point(builder_scope:redvox_api_m.RedvoxPacketM.Sensors.Image)
         }
 
-        // @@protoc_insertion_point(class_scope:redvox_api_m.RedvoxPacketM.Sensors.ImageChannel)
-        private static final io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel DEFAULT_INSTANCE;
+        // @@protoc_insertion_point(class_scope:redvox_api_m.RedvoxPacketM.Sensors.Image)
+        private static final io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image DEFAULT_INSTANCE;
         static {
-          DEFAULT_INSTANCE = new io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel();
+          DEFAULT_INSTANCE = new io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image();
         }
 
-        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel getDefaultInstance() {
+        public static io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image getDefaultInstance() {
           return DEFAULT_INSTANCE;
         }
 
-        private static final com.google.protobuf.Parser<ImageChannel>
-            PARSER = new com.google.protobuf.AbstractParser<ImageChannel>() {
+        private static final com.google.protobuf.Parser<Image>
+            PARSER = new com.google.protobuf.AbstractParser<Image>() {
           @java.lang.Override
-          public ImageChannel parsePartialFrom(
+          public Image parsePartialFrom(
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new ImageChannel(input, extensionRegistry);
+            return new Image(input, extensionRegistry);
           }
         };
 
-        public static com.google.protobuf.Parser<ImageChannel> parser() {
+        public static com.google.protobuf.Parser<Image> parser() {
           return PARSER;
         }
 
         @java.lang.Override
-        public com.google.protobuf.Parser<ImageChannel> getParserForType() {
+        public com.google.protobuf.Parser<Image> getParserForType() {
           return PARSER;
         }
 
         @java.lang.Override
-        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel getDefaultInstanceForType() {
+        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image getDefaultInstanceForType() {
           return DEFAULT_INSTANCE;
         }
 
@@ -32815,13 +32815,13 @@ public final class RedvoxApiM {
       }
 
       public static final int IMAGE_FIELD_NUMBER = 7;
-      private io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel image_;
+      private io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image image_;
       /**
        * <pre>
        * bytes (codec specific)
        * </pre>
        *
-       * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+       * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
        */
       public boolean hasImage() {
         return image_ != null;
@@ -32831,19 +32831,19 @@ public final class RedvoxApiM {
        * bytes (codec specific)
        * </pre>
        *
-       * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+       * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
        */
-      public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel getImage() {
-        return image_ == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.getDefaultInstance() : image_;
+      public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image getImage() {
+        return image_ == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.getDefaultInstance() : image_;
       }
       /**
        * <pre>
        * bytes (codec specific)
        * </pre>
        *
-       * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+       * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
        */
-      public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannelOrBuilder getImageOrBuilder() {
+      public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageOrBuilder getImageOrBuilder() {
         return getImage();
       }
 
@@ -34978,15 +34978,15 @@ public final class RedvoxApiM {
           return gyroscopeBuilder_;
         }
 
-        private io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel image_ = null;
+        private io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image image_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannelOrBuilder> imageBuilder_;
+            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageOrBuilder> imageBuilder_;
         /**
          * <pre>
          * bytes (codec specific)
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
          */
         public boolean hasImage() {
           return imageBuilder_ != null || image_ != null;
@@ -34996,11 +34996,11 @@ public final class RedvoxApiM {
          * bytes (codec specific)
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
          */
-        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel getImage() {
+        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image getImage() {
           if (imageBuilder_ == null) {
-            return image_ == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.getDefaultInstance() : image_;
+            return image_ == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.getDefaultInstance() : image_;
           } else {
             return imageBuilder_.getMessage();
           }
@@ -35010,9 +35010,9 @@ public final class RedvoxApiM {
          * bytes (codec specific)
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
          */
-        public Builder setImage(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel value) {
+        public Builder setImage(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image value) {
           if (imageBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -35030,10 +35030,10 @@ public final class RedvoxApiM {
          * bytes (codec specific)
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
          */
         public Builder setImage(
-            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.Builder builderForValue) {
+            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.Builder builderForValue) {
           if (imageBuilder_ == null) {
             image_ = builderForValue.build();
             onChanged();
@@ -35048,13 +35048,13 @@ public final class RedvoxApiM {
          * bytes (codec specific)
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
          */
-        public Builder mergeImage(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel value) {
+        public Builder mergeImage(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image value) {
           if (imageBuilder_ == null) {
             if (image_ != null) {
               image_ =
-                io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.newBuilder(image_).mergeFrom(value).buildPartial();
+                io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.newBuilder(image_).mergeFrom(value).buildPartial();
             } else {
               image_ = value;
             }
@@ -35070,7 +35070,7 @@ public final class RedvoxApiM {
          * bytes (codec specific)
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
          */
         public Builder clearImage() {
           if (imageBuilder_ == null) {
@@ -35088,9 +35088,9 @@ public final class RedvoxApiM {
          * bytes (codec specific)
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
          */
-        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.Builder getImageBuilder() {
+        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.Builder getImageBuilder() {
           
           onChanged();
           return getImageFieldBuilder().getBuilder();
@@ -35100,14 +35100,14 @@ public final class RedvoxApiM {
          * bytes (codec specific)
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
          */
-        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannelOrBuilder getImageOrBuilder() {
+        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageOrBuilder getImageOrBuilder() {
           if (imageBuilder_ != null) {
             return imageBuilder_.getMessageOrBuilder();
           } else {
             return image_ == null ?
-                io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.getDefaultInstance() : image_;
+                io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.getDefaultInstance() : image_;
           }
         }
         /**
@@ -35115,14 +35115,14 @@ public final class RedvoxApiM {
          * bytes (codec specific)
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.ImageChannel image = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Image image = 7;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannelOrBuilder> 
+            io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageOrBuilder> 
             getImageFieldBuilder() {
           if (imageBuilder_ == null) {
             imageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannel.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageChannelOrBuilder>(
+                io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.Image.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.Sensors.ImageOrBuilder>(
                     getImage(),
                     getParentForChildren(),
                     isClean());
@@ -48372,15 +48372,15 @@ public final class RedvoxApiM {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_redvox_api_m_RedvoxPacketM_Sensors_Xyz_MetadataEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_descriptor;
+    internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_fieldAccessorTable;
+      internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_MetadataEntry_descriptor;
+    internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_MetadataEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_MetadataEntry_fieldAccessorTable;
+      internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_MetadataEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_redvox_api_m_RedvoxPacketM_SamplePayload_descriptor;
   private static final 
@@ -48451,7 +48451,7 @@ public final class RedvoxApiM {
   static {
     java.lang.String[] descriptorData = {
       "\n#src/redvox_api_m/redvox_api_m.proto\022\014r" +
-      "edvox_api_m\"\215X\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
+      "edvox_api_m\"\361W\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
       "(\002\022E\n\020user_information\030\002 \001(\0132+.redvox_ap" +
       "i_m.RedvoxPacketM.UserInformation\022K\n\023sta" +
       "tion_information\030\003 \001(\0132..redvox_api_m.Re" +
@@ -48594,7 +48594,7 @@ public final class RedvoxApiM {
       "ver_url\030\003 \001(\t\022M\n\010metadata\030\004 \003(\0132;.redvox" +
       "_api_m.RedvoxPacketM.ServerInformation.M" +
       "etadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\343!\n\007Sensors\022>\n\racc" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\307!\n\007Sensors\022>\n\racc" +
       "elerometer\030\001 \001(\0132\'.redvox_api_m.RedvoxPa" +
       "cketM.Sensors.Xyz\022G\n\023ambient_temperature" +
       "\030\002 \001(\0132*.redvox_api_m.RedvoxPacketM.Sens" +
@@ -48604,154 +48604,153 @@ public final class RedvoxApiM {
       "etM.Sensors.CompressedAudio\0228\n\007gravity\030\005" +
       " \001(\0132\'.redvox_api_m.RedvoxPacketM.Sensor" +
       "s.Xyz\022:\n\tgyroscope\030\006 \001(\0132\'.redvox_api_m." +
-      "RedvoxPacketM.Sensors.Xyz\022?\n\005image\030\007 \001(\013" +
-      "20.redvox_api_m.RedvoxPacketM.Sensors.Im" +
-      "ageChannel\0229\n\005light\030\010 \001(\0132*.redvox_api_m" +
-      ".RedvoxPacketM.Sensors.Single\022D\n\023linear_" +
-      "acceleration\030\t \001(\0132\'.redvox_api_m.Redvox" +
-      "PacketM.Sensors.Xyz\022>\n\010location\030\n \001(\0132,." +
-      "redvox_api_m.RedvoxPacketM.Sensors.Locat" +
-      "ion\022=\n\014magnetometer\030\013 \001(\0132\'.redvox_api_m" +
-      ".RedvoxPacketM.Sensors.Xyz\022<\n\013orientatio" +
-      "n\030\014 \001(\0132\'.redvox_api_m.RedvoxPacketM.Sen" +
-      "sors.Xyz\022<\n\010pressure\030\r \001(\0132*.redvox_api_" +
-      "m.RedvoxPacketM.Sensors.Single\022=\n\tproxim" +
-      "ity\030\016 \001(\0132*.redvox_api_m.RedvoxPacketM.S" +
-      "ensors.Single\022E\n\021relative_humidity\030\017 \001(\013" +
-      "2*.redvox_api_m.RedvoxPacketM.Sensors.Si" +
-      "ngle\022@\n\017rotation_vector\030\020 \001(\0132\'.redvox_a" +
-      "pi_m.RedvoxPacketM.Sensors.Xyz\022C\n\010metada" +
-      "ta\030\021 \003(\01321.redvox_api_m.RedvoxPacketM.Se" +
-      "nsors.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\246\002\n\005Audio\022\032" +
-      "\n\022sensor_description\030\001 \001(\t\022\036\n\026first_samp" +
-      "le_timestamp\030\002 \001(\001\022\023\n\013sample_rate\030\003 \001(\002\022" +
-      "\024\n\014is_scrambled\030\004 \001(\010\022:\n\007samples\030\005 \001(\0132)" +
-      ".redvox_api_m.RedvoxPacketM.SamplePayloa" +
-      "d\022I\n\010metadata\030\006 \003(\01327.redvox_api_m.Redvo" +
-      "xPacketM.Sensors.Audio.MetadataEntry\032/\n\r" +
-      "MetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\032\200\003\n\017CompressedAudio\022\032\n\022sensor_desc" +
-      "ription\030\001 \001(\t\022\036\n\026first_sample_timestamp\030" +
-      "\002 \001(\001\022\023\n\013sample_rate\030\003 \001(\002\022\024\n\014is_scrambl" +
-      "ed\030\004 \001(\010\022\023\n\013audio_bytes\030\005 \001(\014\022S\n\013audio_c" +
-      "odec\030\006 \001(\0162>.redvox_api_m.RedvoxPacketM." +
-      "Sensors.CompressedAudio.AudioCodec\022S\n\010me" +
-      "tadata\030\007 \003(\0132A.redvox_api_m.RedvoxPacket" +
-      "M.Sensors.CompressedAudio.MetadataEntry\032" +
-      "/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"\026\n\nAudioCodec\022\010\n\004TODO\020\000\032\234\002\n\006Sin" +
-      "gle\022\032\n\022sensor_description\030\001 \001(\t\022=\n\ntimes" +
-      "tamps\030\002 \001(\0132).redvox_api_m.RedvoxPacketM" +
-      ".TimingPayload\022:\n\007samples\030\003 \001(\0132).redvox" +
-      "_api_m.RedvoxPacketM.SamplePayload\022J\n\010me" +
-      "tadata\030\004 \003(\01328.redvox_api_m.RedvoxPacket" +
-      "M.Sensors.Single.MetadataEntry\032/\n\rMetada" +
-      "taEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032" +
-      "\367\n\n\010Location\022\032\n\022sensor_description\030\001 \001(\t" +
-      "\022=\n\ntimestamps\030\002 \001(\0132).redvox_api_m.Redv" +
-      "oxPacketM.TimingPayload\022C\n\020latitude_samp" +
-      "les\030\003 \001(\0132).redvox_api_m.RedvoxPacketM.S" +
-      "amplePayload\022D\n\021longitude_samples\030\004 \001(\0132" +
-      ").redvox_api_m.RedvoxPacketM.SamplePaylo" +
-      "ad\022C\n\020altitude_samples\030\005 \001(\0132).redvox_ap" +
-      "i_m.RedvoxPacketM.SamplePayload\022@\n\rspeed" +
-      "_samples\030\006 \001(\0132).redvox_api_m.RedvoxPack" +
-      "etM.SamplePayload\022B\n\017bearing_samples\030\007 \001" +
-      "(\0132).redvox_api_m.RedvoxPacketM.SamplePa" +
-      "yload\022N\n\033horizontal_accuracy_samples\030\010 \001" +
-      "(\0132).redvox_api_m.RedvoxPacketM.SamplePa" +
-      "yload\022L\n\031vertical_accuracy_samples\030\t \001(\013" +
-      "2).redvox_api_m.RedvoxPacketM.SamplePayl" +
-      "oad\022I\n\026speed_accuracy_samples\030\n \001(\0132).re" +
-      "dvox_api_m.RedvoxPacketM.SamplePayload\022K" +
-      "\n\030bearing_accuracy_samples\030\013 \001(\0132).redvo" +
-      "x_api_m.RedvoxPacketM.SamplePayload\022\025\n\rb" +
-      "est_latitude\030\016 \001(\002\022\026\n\016best_longitude\030\017 \001" +
-      "(\002\022\025\n\rbest_altitude\030\020 \001(\002\022\022\n\nbest_speed\030" +
-      "\021 \001(\002\022\024\n\014best_bearing\030\022 \001(\002\022\r\n\005score\030\023 \001" +
-      "(\002\022_\n\025location_score_method\030\024 \001(\0162@.redv" +
-      "ox_api_m.RedvoxPacketM.Sensors.Location." +
-      "LocationScoreMethod\022$\n\034location_permissi" +
-      "ons_granted\030\025 \001(\010\022#\n\033location_services_r" +
-      "equested\030\026 \001(\010\022!\n\031location_services_enab" +
-      "led\030\027 \001(\010\022X\n\021location_provider\030\030 \001(\0162=.r" +
-      "edvox_api_m.RedvoxPacketM.Sensors.Locati" +
-      "on.LocationProvider\022L\n\010metadata\030\031 \003(\0132:." +
-      "redvox_api_m.RedvoxPacketM.Sensors.Locat" +
-      "ion.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\037\n\023LocationSc" +
-      "oreMethod\022\010\n\004TODO\020\000\"<\n\020LocationProvider\022" +
-      "\010\n\004NONE\020\000\022\010\n\004USER\020\001\022\007\n\003GPS\020\002\022\013\n\007NETWORK\020" +
-      "\003\032\224\003\n\003Xyz\022\032\n\022sensor_description\030\001 \001(\t\022=\n" +
-      "\ntimestamps\030\002 \001(\0132).redvox_api_m.RedvoxP" +
-      "acketM.TimingPayload\022<\n\tx_samples\030\004 \001(\0132" +
-      ").redvox_api_m.RedvoxPacketM.SamplePaylo" +
-      "ad\022<\n\ty_samples\030\005 \001(\0132).redvox_api_m.Red" +
-      "voxPacketM.SamplePayload\022<\n\tz_samples\030\006 " +
-      "\001(\0132).redvox_api_m.RedvoxPacketM.SampleP" +
-      "ayload\022G\n\010metadata\030\007 \003(\01325.redvox_api_m." +
-      "RedvoxPacketM.Sensors.Xyz.MetadataEntry\032" +
-      "/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\032\370\002\n\014ImageChannel\022\032\n\022sensor_desc" +
-      "ription\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132).redv" +
-      "ox_api_m.RedvoxPacketM.TimingPayload\022\017\n\007" +
-      "samples\030\003 \003(\014\022P\n\013image_codec\030\006 \001(\0162;.red" +
-      "vox_api_m.RedvoxPacketM.Sensors.ImageCha" +
-      "nnel.ImageCodec\022P\n\010metadata\030\007 \003(\0132>.redv" +
-      "ox_api_m.RedvoxPacketM.Sensors.ImageChan" +
-      "nel.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\'\n\nImageCodec" +
-      "\022\007\n\003PNG\020\000\022\007\n\003JPG\020\001\022\007\n\003BMP\020\002\032\224\002\n\rSamplePa" +
-      "yload\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Redvo" +
-      "xPacketM.Unit\022\016\n\006values\030\002 \003(\002\022G\n\020value_s" +
-      "tatistics\030\003 \001(\0132-.redvox_api_m.RedvoxPac" +
-      "ketM.SummaryStatistics\022I\n\010metadata\030\004 \003(\013" +
-      "27.redvox_api_m.RedvoxPacketM.SamplePayl" +
-      "oad.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\311\002\n\rTimingPay" +
-      "load\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Redvox" +
-      "PacketM.Unit\022\016\n\006values\030\002 \003(\001\022G\n\020value_st" +
-      "atistics\030\003 \001(\0132-.redvox_api_m.RedvoxPack" +
-      "etM.SummaryStatistics\022\030\n\020mean_sample_rat" +
-      "e\030\004 \001(\002\022\031\n\021stdev_sample_rate\030\005 \001(\002\022I\n\010me" +
+      "RedvoxPacketM.Sensors.Xyz\0228\n\005image\030\007 \001(\013" +
+      "2).redvox_api_m.RedvoxPacketM.Sensors.Im" +
+      "age\0229\n\005light\030\010 \001(\0132*.redvox_api_m.Redvox" +
+      "PacketM.Sensors.Single\022D\n\023linear_acceler" +
+      "ation\030\t \001(\0132\'.redvox_api_m.RedvoxPacketM" +
+      ".Sensors.Xyz\022>\n\010location\030\n \001(\0132,.redvox_" +
+      "api_m.RedvoxPacketM.Sensors.Location\022=\n\014" +
+      "magnetometer\030\013 \001(\0132\'.redvox_api_m.Redvox" +
+      "PacketM.Sensors.Xyz\022<\n\013orientation\030\014 \001(\013" +
+      "2\'.redvox_api_m.RedvoxPacketM.Sensors.Xy" +
+      "z\022<\n\010pressure\030\r \001(\0132*.redvox_api_m.Redvo" +
+      "xPacketM.Sensors.Single\022=\n\tproximity\030\016 \001" +
+      "(\0132*.redvox_api_m.RedvoxPacketM.Sensors." +
+      "Single\022E\n\021relative_humidity\030\017 \001(\0132*.redv" +
+      "ox_api_m.RedvoxPacketM.Sensors.Single\022@\n" +
+      "\017rotation_vector\030\020 \001(\0132\'.redvox_api_m.Re" +
+      "dvoxPacketM.Sensors.Xyz\022C\n\010metadata\030\021 \003(" +
+      "\01321.redvox_api_m.RedvoxPacketM.Sensors.M" +
+      "etadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\246\002\n\005Audio\022\032\n\022senso" +
+      "r_description\030\001 \001(\t\022\036\n\026first_sample_time" +
+      "stamp\030\002 \001(\001\022\023\n\013sample_rate\030\003 \001(\002\022\024\n\014is_s" +
+      "crambled\030\004 \001(\010\022:\n\007samples\030\005 \001(\0132).redvox" +
+      "_api_m.RedvoxPacketM.SamplePayload\022I\n\010me" +
       "tadata\030\006 \003(\01327.redvox_api_m.RedvoxPacket" +
-      "M.TimingPayload.MetadataEntry\032/\n\rMetadat" +
-      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\211" +
-      "\002\n\021SummaryStatistics\022\r\n\005count\030\001 \001(\002\022\014\n\004m" +
-      "ean\030\002 \001(\002\022\016\n\006median\030\003 \001(\002\022\014\n\004mode\030\004 \001(\002\022" +
-      "\020\n\010variance\030\005 \001(\002\022\013\n\003min\030\006 \001(\002\022\013\n\003max\030\007 " +
-      "\001(\002\022\r\n\005range\030\010 \001(\002\022M\n\010metadata\030\t \003(\0132;.r" +
-      "edvox_api_m.RedvoxPacketM.SummaryStatist" +
-      "ics.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\326\002\n\004Unit\022\035\n\031M" +
-      "ETERS_PER_SECOND_SQUARED\020\000\022\016\n\nKILOPASCAL" +
-      "\020\001\022\026\n\022RADIANS_PER_SECOND\020\002\022\023\n\017DECIMAL_DE" +
-      "GREES\020\003\022\n\n\006METERS\020\004\022\025\n\021METERS_PER_SECOND" +
-      "\020\005\022\016\n\nMICROTESLA\020\006\022\031\n\025LSB_PLUS_MINUS_COU" +
-      "NTS\020\007\022!\n\035MICROSECONDS_SINCE_UNIX_EPOCH\020\010" +
-      "\022\013\n\007DECIBEL\020\t\022\023\n\017DEGREES_CELSIUS\020\n\022\010\n\004BY" +
-      "TE\020\013\022\016\n\nPERCENTAGE\020\014\022\013\n\007RADIANS\020\r\022\020\n\014MIC" +
-      "ROAMPERES\020\016\022\017\n\013CENTIMETERS\020\017\022\025\n\021NORMALIZ" +
-      "ED_COUNTS\020\020\"\227\001\n\031EncryptedRedvoxPacket100" +
-      "0\022\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014\032Z\n\006Hea" +
-      "der\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030" +
-      "\002 \001(\t\022\022\n\nauth_token\030\003 \001(\t\022\022\n\nauth_email\030" +
-      "\004 \001(\t\"M\n\022AcquisitionRequest\022\017\n\007payload\030\001" +
-      " \001(\014\022\024\n\014is_encrypted\030\002 \001(\010\022\020\n\010checksum\030\003" +
-      " \001(\003\"\330\001\n\023AcquisitionResponse\022E\n\rresponse" +
-      "_type\030\001 \001(\0162..redvox_api_m.AcquisitionRe" +
-      "sponse.ResponseType\022\020\n\010checksum\030\002 \001(\003\022\017\n" +
-      "\007details\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"G\n\014Respon" +
-      "seType\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001\022\016\n\nDATA_E" +
-      "RROR\020\002\022\017\n\013OTHER_ERROR\020\003\"\\\n\014SynchRequest\022" +
-      "\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(" +
-      "\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001" +
-      "\n\rSynchResponse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014s" +
-      "tation_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub" +
-      "_seq_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsen" +
-      "d_ts_us\030\006 \001(\004B\030\n\026io.redvox.redvox_api_mb" +
-      "\006proto3"
+      "M.Sensors.Audio.MetadataEntry\032/\n\rMetadat" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\200" +
+      "\003\n\017CompressedAudio\022\032\n\022sensor_description" +
+      "\030\001 \001(\t\022\036\n\026first_sample_timestamp\030\002 \001(\001\022\023" +
+      "\n\013sample_rate\030\003 \001(\002\022\024\n\014is_scrambled\030\004 \001(" +
+      "\010\022\023\n\013audio_bytes\030\005 \001(\014\022S\n\013audio_codec\030\006 " +
+      "\001(\0162>.redvox_api_m.RedvoxPacketM.Sensors" +
+      ".CompressedAudio.AudioCodec\022S\n\010metadata\030" +
+      "\007 \003(\0132A.redvox_api_m.RedvoxPacketM.Senso" +
+      "rs.CompressedAudio.MetadataEntry\032/\n\rMeta" +
+      "dataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"\026\n\nAudioCodec\022\010\n\004TODO\020\000\032\234\002\n\006Single\022\032\n\022" +
+      "sensor_description\030\001 \001(\t\022=\n\ntimestamps\030\002" +
+      " \001(\0132).redvox_api_m.RedvoxPacketM.Timing" +
+      "Payload\022:\n\007samples\030\003 \001(\0132).redvox_api_m." +
+      "RedvoxPacketM.SamplePayload\022J\n\010metadata\030" +
+      "\004 \003(\01328.redvox_api_m.RedvoxPacketM.Senso" +
+      "rs.Single.MetadataEntry\032/\n\rMetadataEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\367\n\n\010Loc" +
+      "ation\022\032\n\022sensor_description\030\001 \001(\t\022=\n\ntim" +
+      "estamps\030\002 \001(\0132).redvox_api_m.RedvoxPacke" +
+      "tM.TimingPayload\022C\n\020latitude_samples\030\003 \001" +
+      "(\0132).redvox_api_m.RedvoxPacketM.SamplePa" +
+      "yload\022D\n\021longitude_samples\030\004 \001(\0132).redvo" +
+      "x_api_m.RedvoxPacketM.SamplePayload\022C\n\020a" +
+      "ltitude_samples\030\005 \001(\0132).redvox_api_m.Red" +
+      "voxPacketM.SamplePayload\022@\n\rspeed_sample" +
+      "s\030\006 \001(\0132).redvox_api_m.RedvoxPacketM.Sam" +
+      "plePayload\022B\n\017bearing_samples\030\007 \001(\0132).re" +
+      "dvox_api_m.RedvoxPacketM.SamplePayload\022N" +
+      "\n\033horizontal_accuracy_samples\030\010 \001(\0132).re" +
+      "dvox_api_m.RedvoxPacketM.SamplePayload\022L" +
+      "\n\031vertical_accuracy_samples\030\t \001(\0132).redv" +
+      "ox_api_m.RedvoxPacketM.SamplePayload\022I\n\026" +
+      "speed_accuracy_samples\030\n \001(\0132).redvox_ap" +
+      "i_m.RedvoxPacketM.SamplePayload\022K\n\030beari" +
+      "ng_accuracy_samples\030\013 \001(\0132).redvox_api_m" +
+      ".RedvoxPacketM.SamplePayload\022\025\n\rbest_lat" +
+      "itude\030\016 \001(\002\022\026\n\016best_longitude\030\017 \001(\002\022\025\n\rb" +
+      "est_altitude\030\020 \001(\002\022\022\n\nbest_speed\030\021 \001(\002\022\024" +
+      "\n\014best_bearing\030\022 \001(\002\022\r\n\005score\030\023 \001(\002\022_\n\025l" +
+      "ocation_score_method\030\024 \001(\0162@.redvox_api_" +
+      "m.RedvoxPacketM.Sensors.Location.Locatio" +
+      "nScoreMethod\022$\n\034location_permissions_gra" +
+      "nted\030\025 \001(\010\022#\n\033location_services_requeste" +
+      "d\030\026 \001(\010\022!\n\031location_services_enabled\030\027 \001" +
+      "(\010\022X\n\021location_provider\030\030 \001(\0162=.redvox_a" +
+      "pi_m.RedvoxPacketM.Sensors.Location.Loca" +
+      "tionProvider\022L\n\010metadata\030\031 \003(\0132:.redvox_" +
+      "api_m.RedvoxPacketM.Sensors.Location.Met" +
+      "adataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\037\n\023LocationScoreMeth" +
+      "od\022\010\n\004TODO\020\000\"<\n\020LocationProvider\022\010\n\004NONE" +
+      "\020\000\022\010\n\004USER\020\001\022\007\n\003GPS\020\002\022\013\n\007NETWORK\020\003\032\224\003\n\003X" +
+      "yz\022\032\n\022sensor_description\030\001 \001(\t\022=\n\ntimest" +
+      "amps\030\002 \001(\0132).redvox_api_m.RedvoxPacketM." +
+      "TimingPayload\022<\n\tx_samples\030\004 \001(\0132).redvo" +
+      "x_api_m.RedvoxPacketM.SamplePayload\022<\n\ty" +
+      "_samples\030\005 \001(\0132).redvox_api_m.RedvoxPack" +
+      "etM.SamplePayload\022<\n\tz_samples\030\006 \001(\0132).r" +
+      "edvox_api_m.RedvoxPacketM.SamplePayload\022" +
+      "G\n\010metadata\030\007 \003(\01325.redvox_api_m.RedvoxP" +
+      "acketM.Sensors.Xyz.MetadataEntry\032/\n\rMeta" +
+      "dataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\032\343\002\n\005Image\022\032\n\022sensor_description\030\001 \001(\t\022" +
+      "=\n\ntimestamps\030\002 \001(\0132).redvox_api_m.Redvo" +
+      "xPacketM.TimingPayload\022\017\n\007samples\030\003 \003(\014\022" +
+      "I\n\013image_codec\030\006 \001(\01624.redvox_api_m.Redv" +
+      "oxPacketM.Sensors.Image.ImageCodec\022I\n\010me" +
+      "tadata\030\007 \003(\01327.redvox_api_m.RedvoxPacket" +
+      "M.Sensors.Image.MetadataEntry\032/\n\rMetadat" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\'" +
+      "\n\nImageCodec\022\007\n\003PNG\020\000\022\007\n\003JPG\020\001\022\007\n\003BMP\020\002\032" +
+      "\224\002\n\rSamplePayload\022.\n\004unit\030\001 \001(\0162 .redvox" +
+      "_api_m.RedvoxPacketM.Unit\022\016\n\006values\030\002 \003(" +
+      "\002\022G\n\020value_statistics\030\003 \001(\0132-.redvox_api" +
+      "_m.RedvoxPacketM.SummaryStatistics\022I\n\010me" +
+      "tadata\030\004 \003(\01327.redvox_api_m.RedvoxPacket" +
+      "M.SamplePayload.MetadataEntry\032/\n\rMetadat" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\311" +
+      "\002\n\rTimingPayload\022.\n\004unit\030\001 \001(\0162 .redvox_" +
+      "api_m.RedvoxPacketM.Unit\022\016\n\006values\030\002 \003(\001" +
+      "\022G\n\020value_statistics\030\003 \001(\0132-.redvox_api_" +
+      "m.RedvoxPacketM.SummaryStatistics\022\030\n\020mea" +
+      "n_sample_rate\030\004 \001(\002\022\031\n\021stdev_sample_rate" +
+      "\030\005 \001(\002\022I\n\010metadata\030\006 \003(\01327.redvox_api_m." +
+      "RedvoxPacketM.TimingPayload.MetadataEntr" +
+      "y\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\032\211\002\n\021SummaryStatistics\022\r\n\005coun" +
+      "t\030\001 \001(\002\022\014\n\004mean\030\002 \001(\002\022\016\n\006median\030\003 \001(\002\022\014\n" +
+      "\004mode\030\004 \001(\002\022\020\n\010variance\030\005 \001(\002\022\013\n\003min\030\006 \001" +
+      "(\002\022\013\n\003max\030\007 \001(\002\022\r\n\005range\030\010 \001(\002\022M\n\010metada" +
+      "ta\030\t \003(\0132;.redvox_api_m.RedvoxPacketM.Su" +
+      "mmaryStatistics.MetadataEntry\032/\n\rMetadat" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\326" +
+      "\002\n\004Unit\022\035\n\031METERS_PER_SECOND_SQUARED\020\000\022\016" +
+      "\n\nKILOPASCAL\020\001\022\026\n\022RADIANS_PER_SECOND\020\002\022\023" +
+      "\n\017DECIMAL_DEGREES\020\003\022\n\n\006METERS\020\004\022\025\n\021METER" +
+      "S_PER_SECOND\020\005\022\016\n\nMICROTESLA\020\006\022\031\n\025LSB_PL" +
+      "US_MINUS_COUNTS\020\007\022!\n\035MICROSECONDS_SINCE_" +
+      "UNIX_EPOCH\020\010\022\013\n\007DECIBEL\020\t\022\023\n\017DEGREES_CEL" +
+      "SIUS\020\n\022\010\n\004BYTE\020\013\022\016\n\nPERCENTAGE\020\014\022\013\n\007RADI" +
+      "ANS\020\r\022\020\n\014MICROAMPERES\020\016\022\017\n\013CENTIMETERS\020\017" +
+      "\022\025\n\021NORMALIZED_COUNTS\020\020\"\227\001\n\031EncryptedRed" +
+      "voxPacket1000\022\016\n\006header\030\001 \001(\014\022\016\n\006packet\030" +
+      "\002 \001(\014\032Z\n\006Header\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014s" +
+      "tation_uuid\030\002 \001(\t\022\022\n\nauth_token\030\003 \001(\t\022\022\n" +
+      "\nauth_email\030\004 \001(\t\"M\n\022AcquisitionRequest\022" +
+      "\017\n\007payload\030\001 \001(\014\022\024\n\014is_encrypted\030\002 \001(\010\022\020" +
+      "\n\010checksum\030\003 \001(\003\"\330\001\n\023AcquisitionResponse" +
+      "\022E\n\rresponse_type\030\001 \001(\0162..redvox_api_m.A" +
+      "cquisitionResponse.ResponseType\022\020\n\010check" +
+      "sum\030\002 \001(\003\022\017\n\007details\030\003 \001(\t\022\016\n\006resend\030\004 \001" +
+      "(\010\"G\n\014ResponseType\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR" +
+      "\020\001\022\016\n\nDATA_ERROR\020\002\022\017\n\013OTHER_ERROR\020\003\"\\\n\014S" +
+      "ynchRequest\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014stati" +
+      "on_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq" +
+      "_id\030\004 \001(\r\"\205\001\n\rSynchResponse\022\022\n\nstation_i" +
+      "d\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\016\n\006seq_id\030" +
+      "\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030" +
+      "\005 \001(\004\022\022\n\nsend_ts_us\030\006 \001(\004B\030\n\026io.redvox.r" +
+      "edvox_api_mb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -48945,17 +48944,17 @@ public final class RedvoxApiM {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_RedvoxPacketM_Sensors_Xyz_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_descriptor =
+    internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_descriptor =
       internal_static_redvox_api_m_RedvoxPacketM_Sensors_descriptor.getNestedTypes().get(6);
-    internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_fieldAccessorTable = new
+    internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_descriptor,
+        internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_descriptor,
         new java.lang.String[] { "SensorDescription", "Timestamps", "Samples", "ImageCodec", "Metadata", });
-    internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_MetadataEntry_descriptor =
-      internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_descriptor.getNestedTypes().get(0);
-    internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_MetadataEntry_fieldAccessorTable = new
+    internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_MetadataEntry_descriptor =
+      internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_descriptor.getNestedTypes().get(0);
+    internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_MetadataEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_redvox_api_m_RedvoxPacketM_Sensors_ImageChannel_MetadataEntry_descriptor,
+        internal_static_redvox_api_m_RedvoxPacketM_Sensors_Image_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_redvox_api_m_RedvoxPacketM_SamplePayload_descriptor =
       internal_static_redvox_api_m_RedvoxPacketM_descriptor.getNestedTypes().get(7);
