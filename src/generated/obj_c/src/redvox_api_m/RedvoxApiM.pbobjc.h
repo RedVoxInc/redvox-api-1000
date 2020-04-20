@@ -651,7 +651,7 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_StationMetrics_FieldNumber) {
 @interface RedvoxPacketM_StationInformation_StationMetrics : GPBMessage
 
 /** Timestamps associated with following sensor state metrics */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *timestamps;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_TimingPayload *timestamps;
 /** Test to see if @c timestamps has been set. */
 @property(nonatomic, readwrite) BOOL hasTimestamps;
 

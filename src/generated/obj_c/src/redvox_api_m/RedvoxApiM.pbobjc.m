@@ -526,7 +526,7 @@ BOOL RedvoxPacketM_StationInformation_OsType_IsValidValue(int32_t value__) {
 typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
   uint32_t _has_storage_[1];
   RedvoxPacketM_StationInformation_StationMetrics_WifiWakeLock wifiWakeLock;
-  RedvoxPacketM_SamplePayload *timestamps;
+  RedvoxPacketM_TimingPayload *timestamps;
   GPBEnumArray *networkTypeArray;
   GPBEnumArray *cellServiceStateArray;
   RedvoxPacketM_SamplePayload *networkStrength;
@@ -548,7 +548,7 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "timestamps",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_TimingPayload),
         .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_Timestamps,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, timestamps),

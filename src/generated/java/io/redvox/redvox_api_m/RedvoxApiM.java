@@ -2501,7 +2501,7 @@ public final class RedvoxApiM {
          * Timestamps associated with following sensor state metrics
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
          */
         boolean hasTimestamps();
         /**
@@ -2509,17 +2509,17 @@ public final class RedvoxApiM {
          * Timestamps associated with following sensor state metrics
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
          */
-        io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload getTimestamps();
+        io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload getTimestamps();
         /**
          * <pre>
          * Timestamps associated with following sensor state metrics
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
          */
-        io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getTimestampsOrBuilder();
+        io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder getTimestampsOrBuilder();
 
         /**
          * <pre>
@@ -2941,11 +2941,11 @@ public final class RedvoxApiM {
                   done = true;
                   break;
                 case 10: {
-                  io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder subBuilder = null;
+                  io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder subBuilder = null;
                   if (timestamps_ != null) {
                     subBuilder = timestamps_.toBuilder();
                   }
-                  timestamps_ = input.readMessage(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload.parser(), extensionRegistry);
+                  timestamps_ = input.readMessage(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(timestamps_);
                     timestamps_ = subBuilder.buildPartial();
@@ -3698,13 +3698,13 @@ public final class RedvoxApiM {
 
         private int bitField0_;
         public static final int TIMESTAMPS_FIELD_NUMBER = 1;
-        private io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload timestamps_;
+        private io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload timestamps_;
         /**
          * <pre>
          * Timestamps associated with following sensor state metrics
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
          */
         public boolean hasTimestamps() {
           return timestamps_ != null;
@@ -3714,19 +3714,19 @@ public final class RedvoxApiM {
          * Timestamps associated with following sensor state metrics
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
          */
-        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload getTimestamps() {
-          return timestamps_ == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload.getDefaultInstance() : timestamps_;
+        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload getTimestamps() {
+          return timestamps_ == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload.getDefaultInstance() : timestamps_;
         }
         /**
          * <pre>
          * Timestamps associated with following sensor state metrics
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
          */
-        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getTimestampsOrBuilder() {
+        public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder getTimestampsOrBuilder() {
           return getTimestamps();
         }
 
@@ -4999,15 +4999,15 @@ public final class RedvoxApiM {
           }
           private int bitField0_;
 
-          private io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload timestamps_ = null;
+          private io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload timestamps_ = null;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder> timestampsBuilder_;
+              io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder> timestampsBuilder_;
           /**
            * <pre>
            * Timestamps associated with following sensor state metrics
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
            */
           public boolean hasTimestamps() {
             return timestampsBuilder_ != null || timestamps_ != null;
@@ -5017,11 +5017,11 @@ public final class RedvoxApiM {
            * Timestamps associated with following sensor state metrics
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
            */
-          public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload getTimestamps() {
+          public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload getTimestamps() {
             if (timestampsBuilder_ == null) {
-              return timestamps_ == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload.getDefaultInstance() : timestamps_;
+              return timestamps_ == null ? io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload.getDefaultInstance() : timestamps_;
             } else {
               return timestampsBuilder_.getMessage();
             }
@@ -5031,9 +5031,9 @@ public final class RedvoxApiM {
            * Timestamps associated with following sensor state metrics
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
            */
-          public Builder setTimestamps(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
+          public Builder setTimestamps(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload value) {
             if (timestampsBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -5051,10 +5051,10 @@ public final class RedvoxApiM {
            * Timestamps associated with following sensor state metrics
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
            */
           public Builder setTimestamps(
-              io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder builderForValue) {
+              io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder builderForValue) {
             if (timestampsBuilder_ == null) {
               timestamps_ = builderForValue.build();
               onChanged();
@@ -5069,13 +5069,13 @@ public final class RedvoxApiM {
            * Timestamps associated with following sensor state metrics
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
            */
-          public Builder mergeTimestamps(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
+          public Builder mergeTimestamps(io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload value) {
             if (timestampsBuilder_ == null) {
               if (timestamps_ != null) {
                 timestamps_ =
-                  io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload.newBuilder(timestamps_).mergeFrom(value).buildPartial();
+                  io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload.newBuilder(timestamps_).mergeFrom(value).buildPartial();
               } else {
                 timestamps_ = value;
               }
@@ -5091,7 +5091,7 @@ public final class RedvoxApiM {
            * Timestamps associated with following sensor state metrics
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
            */
           public Builder clearTimestamps() {
             if (timestampsBuilder_ == null) {
@@ -5109,9 +5109,9 @@ public final class RedvoxApiM {
            * Timestamps associated with following sensor state metrics
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
            */
-          public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder getTimestampsBuilder() {
+          public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder getTimestampsBuilder() {
             
             onChanged();
             return getTimestampsFieldBuilder().getBuilder();
@@ -5121,14 +5121,14 @@ public final class RedvoxApiM {
            * Timestamps associated with following sensor state metrics
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
            */
-          public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getTimestampsOrBuilder() {
+          public io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder getTimestampsOrBuilder() {
             if (timestampsBuilder_ != null) {
               return timestampsBuilder_.getMessageOrBuilder();
             } else {
               return timestamps_ == null ?
-                  io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload.getDefaultInstance() : timestamps_;
+                  io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload.getDefaultInstance() : timestamps_;
             }
           }
           /**
@@ -5136,14 +5136,14 @@ public final class RedvoxApiM {
            * Timestamps associated with following sensor state metrics
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload timestamps = 1;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 1;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder> 
+              io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder> 
               getTimestampsFieldBuilder() {
             if (timestampsBuilder_ == null) {
               timestampsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder>(
+                  io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder, io.redvox.redvox_api_m.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder>(
                       getTimestamps(),
                       getParentForChildren(),
                       isClean());
@@ -48484,7 +48484,7 @@ public final class RedvoxApiM {
       "Information.MetadataEntry\032/\n\rMetadataEnt" +
       "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321\n\n\016S" +
       "tationMetrics\022=\n\ntimestamps\030\001 \001(\0132).redv" +
-      "ox_api_m.RedvoxPacketM.SamplePayload\022_\n\014" +
+      "ox_api_m.RedvoxPacketM.TimingPayload\022_\n\014" +
       "network_type\030\002 \003(\0162I.redvox_api_m.Redvox" +
       "PacketM.StationInformation.StationMetric" +
       "s.NetworkType\022j\n\022cell_service_state\030\003 \003(" +
