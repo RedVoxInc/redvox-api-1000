@@ -10,7 +10,7 @@ if ! [[ -x "$(command -v protoc-gen-mypy)" ]]; then
   exit 1
 fi
 
-SRC=src/redvox_api1000/redvox_api_1000.proto
+SRC=src/redvox_api_m/redvox_api_m.proto
 
 OUT=src/generated
 JAVA_OUT=${OUT}/java
