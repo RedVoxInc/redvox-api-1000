@@ -509,7 +509,7 @@ BOOL RedvoxPacketM_StationInformation_OsType_IsValidValue(int32_t value__) {
 
 @implementation RedvoxPacketM_StationInformation_StationMetrics
 
-@dynamic hasStationInformationTimestamps, stationInformationTimestamps;
+@dynamic hasTimestamps, timestamps;
 @dynamic networkTypeArray, networkTypeArray_Count;
 @dynamic cellServiceStateArray, cellServiceStateArray_Count;
 @dynamic hasNetworkStrength, networkStrength;
@@ -526,7 +526,7 @@ BOOL RedvoxPacketM_StationInformation_OsType_IsValidValue(int32_t value__) {
 typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
   uint32_t _has_storage_[1];
   RedvoxPacketM_StationInformation_StationMetrics_WifiWakeLock wifiWakeLock;
-  RedvoxPacketM_SamplePayload *stationInformationTimestamps;
+  RedvoxPacketM_SamplePayload *timestamps;
   GPBEnumArray *networkTypeArray;
   GPBEnumArray *cellServiceStateArray;
   RedvoxPacketM_SamplePayload *networkStrength;
@@ -547,11 +547,11 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "stationInformationTimestamps",
+        .name = "timestamps",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
-        .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_StationInformationTimestamps,
+        .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_Timestamps,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, stationInformationTimestamps),
+        .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, timestamps),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },

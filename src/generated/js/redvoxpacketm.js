@@ -819,7 +819,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.toO
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.toObject = function(includeInstance, msg) {
   var f, obj = {
-    stationInformationTimestamps: (f = msg.getStationInformationTimestamps()) && proto.redvox_api_m.RedvoxPacketM.SamplePayload.toObject(includeInstance, f),
+    timestamps: (f = msg.getTimestamps()) && proto.redvox_api_m.RedvoxPacketM.SamplePayload.toObject(includeInstance, f),
     networkTypeList: jspb.Message.getRepeatedField(msg, 2),
     cellServiceStateList: jspb.Message.getRepeatedField(msg, 3),
     networkStrength: (f = msg.getNetworkStrength()) && proto.redvox_api_m.RedvoxPacketM.SamplePayload.toObject(includeInstance, f),
@@ -871,7 +871,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.deserializeBi
     case 1:
       var value = new proto.redvox_api_m.RedvoxPacketM.SamplePayload;
       reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.SamplePayload.deserializeBinaryFromReader);
-      msg.setStationInformationTimestamps(value);
+      msg.setTimestamps(value);
       break;
     case 2:
       var value = /** @type {!Array<!proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.NetworkType>} */ (reader.readPackedEnum());
@@ -959,7 +959,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.ser
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getStationInformationTimestamps();
+  f = message.getTimestamps();
   if (f != null) {
     writer.writeMessage(
       1,
@@ -1098,23 +1098,23 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.PowerState = 
 };
 
 /**
- * optional SamplePayload station_information_timestamps = 1;
+ * optional SamplePayload timestamps = 1;
  * @return {?proto.redvox_api_m.RedvoxPacketM.SamplePayload}
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.getStationInformationTimestamps = function() {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.getTimestamps = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.SamplePayload} */ (
     jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 1));
 };
 
 
 /** @param {?proto.redvox_api_m.RedvoxPacketM.SamplePayload|undefined} value */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.setStationInformationTimestamps = function(value) {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.setTimestamps = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
 
-proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.clearStationInformationTimestamps = function() {
-  this.setStationInformationTimestamps(undefined);
+proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.clearTimestamps = function() {
+  this.setTimestamps(undefined);
 };
 
 
@@ -1122,7 +1122,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.cle
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.hasStationInformationTimestamps = function() {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.hasTimestamps = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 

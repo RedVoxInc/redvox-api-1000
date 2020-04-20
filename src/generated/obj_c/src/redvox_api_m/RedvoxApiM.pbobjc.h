@@ -630,7 +630,7 @@ void SetRedvoxPacketM_StationInformation_Os_RawValue(RedvoxPacketM_StationInform
 #pragma mark - RedvoxPacketM_StationInformation_StationMetrics
 
 typedef GPB_ENUM(RedvoxPacketM_StationInformation_StationMetrics_FieldNumber) {
-  RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_StationInformationTimestamps = 1,
+  RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_Timestamps = 1,
   RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_NetworkTypeArray = 2,
   RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_CellServiceStateArray = 3,
   RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_NetworkStrength = 4,
@@ -651,9 +651,9 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_StationMetrics_FieldNumber) {
 @interface RedvoxPacketM_StationInformation_StationMetrics : GPBMessage
 
 /** Timestamps associated with following sensor state metrics */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *stationInformationTimestamps;
-/** Test to see if @c stationInformationTimestamps has been set. */
-@property(nonatomic, readwrite) BOOL hasStationInformationTimestamps;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *timestamps;
+/** Test to see if @c timestamps has been set. */
+@property(nonatomic, readwrite) BOOL hasTimestamps;
 
 /** Type of network connection */
 // |networkTypeArray| contains |RedvoxPacketM_StationInformation_StationMetrics_NetworkType|
