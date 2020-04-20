@@ -28,7 +28,7 @@
 CF_EXTERN_C_BEGIN
 
 @class RedvoxPacketM_PacketInformation;
-@class RedvoxPacketM_Payload;
+@class RedvoxPacketM_SamplePayload;
 @class RedvoxPacketM_Sensors;
 @class RedvoxPacketM_Sensors_Audio;
 @class RedvoxPacketM_Sensors_CompressedAudio;
@@ -43,6 +43,7 @@ CF_EXTERN_C_BEGIN
 @class RedvoxPacketM_SummaryStatistics;
 @class RedvoxPacketM_TimingInformation;
 @class RedvoxPacketM_TimingInformation_SynchExchange;
+@class RedvoxPacketM_TimingPayload;
 @class RedvoxPacketM_UserInformation;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -487,7 +488,7 @@ typedef GPB_ENUM(RedvoxPacketM_FieldNumber) {
 @interface RedvoxPacketM : GPBMessage
 
 /** Top level packet fields */
-@property(nonatomic, readwrite) double api;
+@property(nonatomic, readwrite) float api;
 
 /** Station owner/authentication information */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_UserInformation *userInformation;
@@ -650,7 +651,7 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_StationMetrics_FieldNumber) {
 @interface RedvoxPacketM_StationInformation_StationMetrics : GPBMessage
 
 /** Timestamps associated with following sensor state metrics */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *stationInformationTimestamps;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *stationInformationTimestamps;
 /** Test to see if @c stationInformationTimestamps has been set. */
 @property(nonatomic, readwrite) BOOL hasStationInformationTimestamps;
 
@@ -667,37 +668,37 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_StationMetrics_FieldNumber) {
 @property(nonatomic, readonly) NSUInteger cellServiceStateArray_Count;
 
 /** A value representing the strength of the network connection in decibels */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *networkStrength;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *networkStrength;
 /** Test to see if @c networkStrength has been set. */
 @property(nonatomic, readwrite) BOOL hasNetworkStrength;
 
 /** Internal temperature of station in degrees Celsius */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *temperature;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *temperature;
 /** Test to see if @c temperature has been set. */
 @property(nonatomic, readwrite) BOOL hasTemperature;
 
 /** Remaining percentage of station's battery */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *battery;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *battery;
 /** Test to see if @c battery has been set. */
 @property(nonatomic, readwrite) BOOL hasBattery;
 
 /** Current in microamperes */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *batteryCurrent;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *batteryCurrent;
 /** Test to see if @c batteryCurrent has been set. */
 @property(nonatomic, readwrite) BOOL hasBatteryCurrent;
 
 /** Available ram in bytes */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *availableRam;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *availableRam;
 /** Test to see if @c availableRam has been set. */
 @property(nonatomic, readwrite) BOOL hasAvailableRam;
 
 /** Available disk space in bytes */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *availableDisk;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *availableDisk;
 /** Test to see if @c availableDisk has been set. */
 @property(nonatomic, readwrite) BOOL hasAvailableDisk;
 
 /** CPU utilization as a percentage */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *cpuUtilization;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *cpuUtilization;
 /** Test to see if @c cpuUtilization has been set. */
 @property(nonatomic, readwrite) BOOL hasCpuUtilization;
 
@@ -818,7 +819,7 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_AppSettings_FieldNumber) {
 @property(nonatomic, readwrite) BOOL autoDeleteDataFiles;
 
 /** Station data allowance in bytes */
-@property(nonatomic, readwrite) double storageSpaceAllowance;
+@property(nonatomic, readwrite) float storageSpaceAllowance;
 
 /** Should station use SD card for storage? */
 @property(nonatomic, readwrite) BOOL useSdCardForDataStorage;
@@ -827,13 +828,13 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_AppSettings_FieldNumber) {
 @property(nonatomic, readwrite) BOOL useLocationServices;
 
 /** User set latitude decimal degrees */
-@property(nonatomic, readwrite) double useLatitude;
+@property(nonatomic, readwrite) float useLatitude;
 
 /** User set longitude decimal degrees */
-@property(nonatomic, readwrite) double useLongitude;
+@property(nonatomic, readwrite) float useLongitude;
 
 /** User set altitude meters */
-@property(nonatomic, readwrite) double useAltitude;
+@property(nonatomic, readwrite) float useAltitude;
 
 /** A map from string to string for including untyped metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
@@ -951,13 +952,13 @@ typedef GPB_ENUM(RedvoxPacketM_TimingInformation_FieldNumber) {
 @property(nonatomic, readonly) NSUInteger synchExchangesArray_Count;
 
 /** The best latency as determined from the synch params in microseconds */
-@property(nonatomic, readwrite) double bestLatency;
+@property(nonatomic, readwrite) float bestLatency;
 
 /** The best offset as determined from the synch params in microseconds */
-@property(nonatomic, readwrite) double bestOffset;
+@property(nonatomic, readwrite) float bestOffset;
 
 /** The overall timing score */
-@property(nonatomic, readwrite) double score;
+@property(nonatomic, readwrite) float score;
 
 /** Method used to provide score */
 @property(nonatomic, readwrite) RedvoxPacketM_TimingInformation_TimingScoreMethod scoreMethod;
@@ -1216,13 +1217,13 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Audio_FieldNumber) {
 @property(nonatomic, readwrite) double firstSampleTimestamp;
 
 /** Microphone sample rate in Hz */
-@property(nonatomic, readwrite) double sampleRate;
+@property(nonatomic, readwrite) float sampleRate;
 
 /** If audio data has been scrambled to remove voice */
 @property(nonatomic, readwrite) BOOL isScrambled;
 
 /** List of audio samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *samples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *samples;
 /** Test to see if @c samples has been set. */
 @property(nonatomic, readwrite) BOOL hasSamples;
 
@@ -1254,7 +1255,7 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_CompressedAudio_FieldNumber) {
 @property(nonatomic, readwrite) double firstSampleTimestamp;
 
 /** Microphone sample rate in Hz */
-@property(nonatomic, readwrite) double sampleRate;
+@property(nonatomic, readwrite) float sampleRate;
 
 /** If audio data has been scrambled to remove voice */
 @property(nonatomic, readwrite) BOOL isScrambled;
@@ -1288,9 +1289,7 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Single_FieldNumber) {
   RedvoxPacketM_Sensors_Single_FieldNumber_SensorDescription = 1,
   RedvoxPacketM_Sensors_Single_FieldNumber_Timestamps = 2,
   RedvoxPacketM_Sensors_Single_FieldNumber_Samples = 3,
-  RedvoxPacketM_Sensors_Single_FieldNumber_MeanSampleRate = 4,
-  RedvoxPacketM_Sensors_Single_FieldNumber_StdevSampleRate = 5,
-  RedvoxPacketM_Sensors_Single_FieldNumber_Metadata = 6,
+  RedvoxPacketM_Sensors_Single_FieldNumber_Metadata = 4,
 };
 
 /**
@@ -1303,20 +1302,14 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Single_FieldNumber) {
 @property(nonatomic, readwrite, copy, null_resettable) NSString *sensorDescription;
 
 /** List of timestamps per sample and associated stats */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *timestamps;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_TimingPayload *timestamps;
 /** Test to see if @c timestamps has been set. */
 @property(nonatomic, readwrite) BOOL hasTimestamps;
 
 /** List of samples and associated stats */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *samples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *samples;
 /** Test to see if @c samples has been set. */
 @property(nonatomic, readwrite) BOOL hasSamples;
-
-/** Mean sample rate in Hz */
-@property(nonatomic, readwrite) double meanSampleRate;
-
-/** Standard deviation of sample rate in Hz */
-@property(nonatomic, readwrite) double stdevSampleRate;
 
 /** A map from string to string for including untyped metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
@@ -1339,8 +1332,6 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_FieldNumber) {
   RedvoxPacketM_Sensors_Location_FieldNumber_VerticalAccuracySamples = 9,
   RedvoxPacketM_Sensors_Location_FieldNumber_SpeedAccuracySamples = 10,
   RedvoxPacketM_Sensors_Location_FieldNumber_BearingAccuracySamples = 11,
-  RedvoxPacketM_Sensors_Location_FieldNumber_MeanSampleRate = 12,
-  RedvoxPacketM_Sensors_Location_FieldNumber_StdevSampleRate = 13,
   RedvoxPacketM_Sensors_Location_FieldNumber_BestLatitude = 14,
   RedvoxPacketM_Sensors_Location_FieldNumber_BestLongitude = 15,
   RedvoxPacketM_Sensors_Location_FieldNumber_BestAltitude = 16,
@@ -1365,78 +1356,72 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_FieldNumber) {
 @property(nonatomic, readwrite, copy, null_resettable) NSString *sensorDescription;
 
 /** Timestamps and stats */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *timestamps;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_TimingPayload *timestamps;
 /** Test to see if @c timestamps has been set. */
 @property(nonatomic, readwrite) BOOL hasTimestamps;
 
 /** A list of latitude samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *latitudeSamples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *latitudeSamples;
 /** Test to see if @c latitudeSamples has been set. */
 @property(nonatomic, readwrite) BOOL hasLatitudeSamples;
 
 /** A list of longitude samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *longitudeSamples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *longitudeSamples;
 /** Test to see if @c longitudeSamples has been set. */
 @property(nonatomic, readwrite) BOOL hasLongitudeSamples;
 
 /** A list of altitude samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *altitudeSamples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *altitudeSamples;
 /** Test to see if @c altitudeSamples has been set. */
 @property(nonatomic, readwrite) BOOL hasAltitudeSamples;
 
 /** A list of speed samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *speedSamples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *speedSamples;
 /** Test to see if @c speedSamples has been set. */
 @property(nonatomic, readwrite) BOOL hasSpeedSamples;
 
 /** A list of bearing samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *bearingSamples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *bearingSamples;
 /** Test to see if @c bearingSamples has been set. */
 @property(nonatomic, readwrite) BOOL hasBearingSamples;
 
 /** A list of horizontal accuracy samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *horizontalAccuracySamples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *horizontalAccuracySamples;
 /** Test to see if @c horizontalAccuracySamples has been set. */
 @property(nonatomic, readwrite) BOOL hasHorizontalAccuracySamples;
 
 /** A list of vertical accuracy samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *verticalAccuracySamples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *verticalAccuracySamples;
 /** Test to see if @c verticalAccuracySamples has been set. */
 @property(nonatomic, readwrite) BOOL hasVerticalAccuracySamples;
 
 /** A list of speed accuracy samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *speedAccuracySamples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *speedAccuracySamples;
 /** Test to see if @c speedAccuracySamples has been set. */
 @property(nonatomic, readwrite) BOOL hasSpeedAccuracySamples;
 
 /** A list of bearing accuracy samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *bearingAccuracySamples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *bearingAccuracySamples;
 /** Test to see if @c bearingAccuracySamples has been set. */
 @property(nonatomic, readwrite) BOOL hasBearingAccuracySamples;
 
-/** Mean sample rate in Hz */
-@property(nonatomic, readwrite) double meanSampleRate;
-
-/** Standard deviation of sample rate in Hz */
-@property(nonatomic, readwrite) double stdevSampleRate;
-
 /** The best latitude */
-@property(nonatomic, readwrite) double bestLatitude;
+@property(nonatomic, readwrite) float bestLatitude;
 
 /** The best longitude */
-@property(nonatomic, readwrite) double bestLongitude;
+@property(nonatomic, readwrite) float bestLongitude;
 
 /** The best altitude */
-@property(nonatomic, readwrite) double bestAltitude;
+@property(nonatomic, readwrite) float bestAltitude;
 
 /** The nest speed */
-@property(nonatomic, readwrite) double bestSpeed;
+@property(nonatomic, readwrite) float bestSpeed;
 
 /** The best bearing */
-@property(nonatomic, readwrite) double bestBearing;
+@property(nonatomic, readwrite) float bestBearing;
 
 /** An overall location QA score */
-@property(nonatomic, readwrite) double score;
+@property(nonatomic, readwrite) float score;
 
 /** Method used to find location score */
 @property(nonatomic, readwrite) RedvoxPacketM_Sensors_Location_LocationScoreMethod locationScoreMethod;
@@ -1492,9 +1477,7 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Xyz_FieldNumber) {
   RedvoxPacketM_Sensors_Xyz_FieldNumber_XSamples = 4,
   RedvoxPacketM_Sensors_Xyz_FieldNumber_YSamples = 5,
   RedvoxPacketM_Sensors_Xyz_FieldNumber_ZSamples = 6,
-  RedvoxPacketM_Sensors_Xyz_FieldNumber_MeanSampleRate = 7,
-  RedvoxPacketM_Sensors_Xyz_FieldNumber_StdevSampleRate = 8,
-  RedvoxPacketM_Sensors_Xyz_FieldNumber_Metadata = 9,
+  RedvoxPacketM_Sensors_Xyz_FieldNumber_Metadata = 7,
 };
 
 /**
@@ -1507,30 +1490,24 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Xyz_FieldNumber) {
 @property(nonatomic, readwrite, copy, null_resettable) NSString *sensorDescription;
 
 /** List of timestamps per sample */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *timestamps;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_TimingPayload *timestamps;
 /** Test to see if @c timestamps has been set. */
 @property(nonatomic, readwrite) BOOL hasTimestamps;
 
 /** A list of samples for the X-channel */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *xSamples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *xSamples;
 /** Test to see if @c xSamples has been set. */
 @property(nonatomic, readwrite) BOOL hasXSamples;
 
 /** A list of samples for the Y-channel */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *ySamples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *ySamples;
 /** Test to see if @c ySamples has been set. */
 @property(nonatomic, readwrite) BOOL hasYSamples;
 
 /** A list of samples for the Z-channel */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *zSamples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *zSamples;
 /** Test to see if @c zSamples has been set. */
 @property(nonatomic, readwrite) BOOL hasZSamples;
-
-/** Mean sample rate in Hz */
-@property(nonatomic, readwrite) double meanSampleRate;
-
-/** Standard deviation of sample rate in Hz */
-@property(nonatomic, readwrite) double stdevSampleRate;
 
 /** A map from string to string for including untyped metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
@@ -1559,7 +1536,7 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_ImageChannel_FieldNumber) {
 @property(nonatomic, readwrite, copy, null_resettable) NSString *sensorDescription;
 
 /** Timestamps per sample */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Payload *timestamps;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_TimingPayload *timestamps;
 /** Test to see if @c timestamps has been set. */
 @property(nonatomic, readwrite) BOOL hasTimestamps;
 
@@ -1590,27 +1567,26 @@ int32_t RedvoxPacketM_Sensors_ImageChannel_ImageCodec_RawValue(RedvoxPacketM_Sen
  **/
 void SetRedvoxPacketM_Sensors_ImageChannel_ImageCodec_RawValue(RedvoxPacketM_Sensors_ImageChannel *message, int32_t value);
 
-#pragma mark - RedvoxPacketM_Payload
+#pragma mark - RedvoxPacketM_SamplePayload
 
-typedef GPB_ENUM(RedvoxPacketM_Payload_FieldNumber) {
-  RedvoxPacketM_Payload_FieldNumber_Unit = 1,
-  RedvoxPacketM_Payload_FieldNumber_ValuesArray = 2,
-  RedvoxPacketM_Payload_FieldNumber_ValueStatistics = 3,
-  RedvoxPacketM_Payload_FieldNumber_Metadata = 4,
+typedef GPB_ENUM(RedvoxPacketM_SamplePayload_FieldNumber) {
+  RedvoxPacketM_SamplePayload_FieldNumber_Unit = 1,
+  RedvoxPacketM_SamplePayload_FieldNumber_ValuesArray = 2,
+  RedvoxPacketM_SamplePayload_FieldNumber_ValueStatistics = 3,
+  RedvoxPacketM_SamplePayload_FieldNumber_Metadata = 4,
 };
 
 /**
  * Combines a unit, sample values, and value statistics
- * This is meant to be generic, and as such is used for both timestamps and
- * data payloads.
+ * Used to store collections of samples, their unit, and the statistics for those samples.
  **/
-@interface RedvoxPacketM_Payload : GPBMessage
+@interface RedvoxPacketM_SamplePayload : GPBMessage
 
 /** Unit of payload values */
 @property(nonatomic, readwrite) RedvoxPacketM_Unit unit;
 
 /** Values in payload */
-@property(nonatomic, readwrite, strong, null_resettable) GPBDoubleArray *valuesArray;
+@property(nonatomic, readwrite, strong, null_resettable) GPBFloatArray *valuesArray;
 /** The number of items in @c valuesArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger valuesArray_Count;
 
@@ -1627,16 +1603,71 @@ typedef GPB_ENUM(RedvoxPacketM_Payload_FieldNumber) {
 @end
 
 /**
- * Fetches the raw value of a @c RedvoxPacketM_Payload's @c unit property, even
+ * Fetches the raw value of a @c RedvoxPacketM_SamplePayload's @c unit property, even
  * if the value was not defined by the enum at the time the code was generated.
  **/
-int32_t RedvoxPacketM_Payload_Unit_RawValue(RedvoxPacketM_Payload *message);
+int32_t RedvoxPacketM_SamplePayload_Unit_RawValue(RedvoxPacketM_SamplePayload *message);
 /**
- * Sets the raw value of an @c RedvoxPacketM_Payload's @c unit property, allowing
+ * Sets the raw value of an @c RedvoxPacketM_SamplePayload's @c unit property, allowing
  * it to be set to a value that was not defined by the enum at the time the code
  * was generated.
  **/
-void SetRedvoxPacketM_Payload_Unit_RawValue(RedvoxPacketM_Payload *message, int32_t value);
+void SetRedvoxPacketM_SamplePayload_Unit_RawValue(RedvoxPacketM_SamplePayload *message, int32_t value);
+
+#pragma mark - RedvoxPacketM_TimingPayload
+
+typedef GPB_ENUM(RedvoxPacketM_TimingPayload_FieldNumber) {
+  RedvoxPacketM_TimingPayload_FieldNumber_Unit = 1,
+  RedvoxPacketM_TimingPayload_FieldNumber_ValuesArray = 2,
+  RedvoxPacketM_TimingPayload_FieldNumber_ValueStatistics = 3,
+  RedvoxPacketM_TimingPayload_FieldNumber_MeanSampleRate = 4,
+  RedvoxPacketM_TimingPayload_FieldNumber_StdevSampleRate = 5,
+  RedvoxPacketM_TimingPayload_FieldNumber_Metadata = 6,
+};
+
+/**
+ * Combines a unit, sample values, and value statistics
+ * Used to store collections of samples, their unit, and the statistics for those samples.
+ **/
+@interface RedvoxPacketM_TimingPayload : GPBMessage
+
+/** Unit of payload values */
+@property(nonatomic, readwrite) RedvoxPacketM_Unit unit;
+
+/** Values in payload */
+@property(nonatomic, readwrite, strong, null_resettable) GPBDoubleArray *valuesArray;
+/** The number of items in @c valuesArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger valuesArray_Count;
+
+/** Statistics of stored values */
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SummaryStatistics *valueStatistics;
+/** Test to see if @c valueStatistics has been set. */
+@property(nonatomic, readwrite) BOOL hasValueStatistics;
+
+/** Mean sample rate in Hz */
+@property(nonatomic, readwrite) float meanSampleRate;
+
+/** Standard deviation of sample rate in Hz */
+@property(nonatomic, readwrite) float stdevSampleRate;
+
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
+
+@end
+
+/**
+ * Fetches the raw value of a @c RedvoxPacketM_TimingPayload's @c unit property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacketM_TimingPayload_Unit_RawValue(RedvoxPacketM_TimingPayload *message);
+/**
+ * Sets the raw value of an @c RedvoxPacketM_TimingPayload's @c unit property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacketM_TimingPayload_Unit_RawValue(RedvoxPacketM_TimingPayload *message, int32_t value);
 
 #pragma mark - RedvoxPacketM_SummaryStatistics
 
@@ -1658,28 +1689,28 @@ typedef GPB_ENUM(RedvoxPacketM_SummaryStatistics_FieldNumber) {
 @interface RedvoxPacketM_SummaryStatistics : GPBMessage
 
 /** The total count of values included in the statistics */
-@property(nonatomic, readwrite) double count;
+@property(nonatomic, readwrite) float count;
 
 /** The mean of the values */
-@property(nonatomic, readwrite) double mean;
+@property(nonatomic, readwrite) float mean;
 
 /** The median of the values */
-@property(nonatomic, readwrite) double median;
+@property(nonatomic, readwrite) float median;
 
 /** The mode of the values */
-@property(nonatomic, readwrite) double mode;
+@property(nonatomic, readwrite) float mode;
 
 /** The variance of the values */
-@property(nonatomic, readwrite) double variance;
+@property(nonatomic, readwrite) float variance;
 
 /** The minimum value */
-@property(nonatomic, readwrite) double min;
+@property(nonatomic, readwrite) float min;
 
 /** The maximum value */
-@property(nonatomic, readwrite) double max;
+@property(nonatomic, readwrite) float max;
 
 /** The range of the values */
-@property(nonatomic, readwrite) double range;
+@property(nonatomic, readwrite) float range;
 
 /** A map from string to string for including untyped metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
