@@ -289,7 +289,8 @@ proto.redvox_api_m.RedvoxPacketM.Unit = {
   RADIANS: 13,
   MICROAMPERES: 14,
   CENTIMETERS: 15,
-  NORMALIZED_COUNTS: 16
+  NORMALIZED_COUNTS: 16,
+  LUX: 17
 };
 
 
