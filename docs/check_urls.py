@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 Checks all URLs found in the markdown files to make sure they actually point to something.
 
@@ -83,9 +85,23 @@ def check_links(links: List[Link]) -> List[Link]:
     bad_links: List[Link] = []
     http = urllib3.PoolManager(cert_reqs="CERT_REQUIRED", ca_certs=certifi.where())
     for link in links:
-        status: int = http.request('GET', link.url).status
+        resp: urllib3.response.HTTPResponse = http.request('GET', link.url)
+
+        status: int = resp.status
         if status != 200:
             bad_links.append(link)
+            continue
+
+        # So, it turns out that BitBucket doesn't return a 4XX error when you ask for a missing page. Instead,
+        # it returns a 200 with a message "Hmm... can't find that one". How freaking stupid is that? We have standard
+        # HTTP response codes for a reason.
+        try:
+            body: str = resp.data.decode()
+            print(body)
+            # if "Hmm... can't find that one" in body:
+            #     bad_links.append(link)
+        except:
+            pass
 
     return bad_links
 

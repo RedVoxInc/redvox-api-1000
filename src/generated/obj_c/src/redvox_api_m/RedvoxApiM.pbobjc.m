@@ -474,12 +474,13 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_OsType_EnumDescriptor(void) 
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Android\000Ios\000Linux\000Windows\000";
+        "Android\000Ios\000Linux\000Windows\000UnknownOs\000";
     static const int32_t values[] = {
         RedvoxPacketM_StationInformation_OsType_Android,
         RedvoxPacketM_StationInformation_OsType_Ios,
         RedvoxPacketM_StationInformation_OsType_Linux,
         RedvoxPacketM_StationInformation_OsType_Windows,
+        RedvoxPacketM_StationInformation_OsType_UnknownOs,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_StationInformation_OsType)
@@ -501,6 +502,7 @@ BOOL RedvoxPacketM_StationInformation_OsType_IsValidValue(int32_t value__) {
     case RedvoxPacketM_StationInformation_OsType_Ios:
     case RedvoxPacketM_StationInformation_OsType_Linux:
     case RedvoxPacketM_StationInformation_OsType_Windows:
+    case RedvoxPacketM_StationInformation_OsType_UnknownOs:
       return YES;
     default:
       return NO;

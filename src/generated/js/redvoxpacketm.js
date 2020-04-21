@@ -763,7 +763,8 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.OsType = {
   ANDROID: 0,
   IOS: 1,
   LINUX: 2,
-  WINDOWS: 3
+  WINDOWS: 3,
+  UNKNOWN_OS: 4
 };
 
 

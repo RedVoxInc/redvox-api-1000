@@ -100,6 +100,7 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_OsType) {
   RedvoxPacketM_StationInformation_OsType_Ios = 1,
   RedvoxPacketM_StationInformation_OsType_Linux = 2,
   RedvoxPacketM_StationInformation_OsType_Windows = 3,
+  RedvoxPacketM_StationInformation_OsType_UnknownOs = 4,
 };
 
 GPBEnumDescriptor *RedvoxPacketM_StationInformation_OsType_EnumDescriptor(void);
