@@ -8,7 +8,7 @@
 #endif
 
 #if GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS
- #import <Protobuf/GPBProtocolBuffers_RuntimeSupport.h>
+ #import <protobuf/GPBProtocolBuffers_RuntimeSupport.h>
 #else
  #import "GPBProtocolBuffers_RuntimeSupport.h"
 #endif
@@ -49,22 +49,16 @@ static GPBFileDescriptor *RedvoxApiMRoot_FileDescriptor(void) {
 @implementation RedvoxPacketM
 
 @dynamic api;
-@dynamic hasUserInformation, userInformation;
 @dynamic hasStationInformation, stationInformation;
-@dynamic hasPacketInformation, packetInformation;
 @dynamic hasTimingInformation, timingInformation;
-@dynamic hasServerInformation, serverInformation;
 @dynamic hasSensors, sensors;
 @dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacketM__storage_ {
   uint32_t _has_storage_[1];
   float api;
-  RedvoxPacketM_UserInformation *userInformation;
   RedvoxPacketM_StationInformation *stationInformation;
-  RedvoxPacketM_PacketInformation *packetInformation;
   RedvoxPacketM_TimingInformation *timingInformation;
-  RedvoxPacketM_ServerInformation *serverInformation;
   RedvoxPacketM_Sensors *sensors;
   NSMutableDictionary *metadata;
 } RedvoxPacketM__storage_;
@@ -85,29 +79,11 @@ typedef struct RedvoxPacketM__storage_ {
         .dataType = GPBDataTypeFloat,
       },
       {
-        .name = "userInformation",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_UserInformation),
-        .number = RedvoxPacketM_FieldNumber_UserInformation,
-        .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RedvoxPacketM__storage_, userInformation),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
-      },
-      {
         .name = "stationInformation",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_StationInformation),
         .number = RedvoxPacketM_FieldNumber_StationInformation,
-        .hasIndex = 2,
+        .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM__storage_, stationInformation),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
-      },
-      {
-        .name = "packetInformation",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_PacketInformation),
-        .number = RedvoxPacketM_FieldNumber_PacketInformation,
-        .hasIndex = 3,
-        .offset = (uint32_t)offsetof(RedvoxPacketM__storage_, packetInformation),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -115,17 +91,8 @@ typedef struct RedvoxPacketM__storage_ {
         .name = "timingInformation",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_TimingInformation),
         .number = RedvoxPacketM_FieldNumber_TimingInformation,
-        .hasIndex = 4,
+        .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM__storage_, timingInformation),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
-      },
-      {
-        .name = "serverInformation",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_ServerInformation),
-        .number = RedvoxPacketM_FieldNumber_ServerInformation,
-        .hasIndex = 5,
-        .offset = (uint32_t)offsetof(RedvoxPacketM__storage_, serverInformation),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -133,7 +100,7 @@ typedef struct RedvoxPacketM__storage_ {
         .name = "sensors",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors),
         .number = RedvoxPacketM_FieldNumber_Sensors,
-        .hasIndex = 6,
+        .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM__storage_, sensors),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -156,7 +123,9 @@ typedef struct RedvoxPacketM__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -236,96 +205,22 @@ BOOL RedvoxPacketM_Unit_IsValidValue(int32_t value__) {
   }
 }
 
-#pragma mark - RedvoxPacketM_UserInformation
-
-@implementation RedvoxPacketM_UserInformation
-
-@dynamic authEmail;
-@dynamic authToken;
-@dynamic firebaseToken;
-@dynamic metadata, metadata_Count;
-
-typedef struct RedvoxPacketM_UserInformation__storage_ {
-  uint32_t _has_storage_[1];
-  NSString *authEmail;
-  NSString *authToken;
-  NSString *firebaseToken;
-  NSMutableDictionary *metadata;
-} RedvoxPacketM_UserInformation__storage_;
-
-// This method is threadsafe because it is initially called
-// in +initialize for each subclass.
-+ (GPBDescriptor *)descriptor {
-  static GPBDescriptor *descriptor = nil;
-  if (!descriptor) {
-    static GPBMessageFieldDescription fields[] = {
-      {
-        .name = "authEmail",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_UserInformation_FieldNumber_AuthEmail,
-        .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_UserInformation__storage_, authEmail),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
-      },
-      {
-        .name = "authToken",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_UserInformation_FieldNumber_AuthToken,
-        .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_UserInformation__storage_, authToken),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
-      },
-      {
-        .name = "firebaseToken",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_UserInformation_FieldNumber_FirebaseToken,
-        .hasIndex = 2,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_UserInformation__storage_, firebaseToken),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
-      },
-      {
-        .name = "metadata",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_UserInformation_FieldNumber_Metadata,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_UserInformation__storage_, metadata),
-        .flags = GPBFieldMapKeyString,
-        .dataType = GPBDataTypeString,
-      },
-    };
-    GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RedvoxPacketM_UserInformation class]
-                                     rootClass:[RedvoxApiMRoot class]
-                                          file:RedvoxApiMRoot_FileDescriptor()
-                                        fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RedvoxPacketM_UserInformation__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
-    descriptor = localDescriptor;
-  }
-  return descriptor;
-}
-
-@end
-
 #pragma mark - RedvoxPacketM_StationInformation
 
 @implementation RedvoxPacketM_StationInformation
 
 @dynamic id_p;
 @dynamic uuid;
+@dynamic authId;
 @dynamic make;
 @dynamic model;
 @dynamic os;
 @dynamic osVersion;
 @dynamic appVersion;
+@dynamic isPrivate;
 @dynamic hasAppSettings, appSettings;
 @dynamic hasStationMetrics, stationMetrics;
+@dynamic hasServiceUrls, serviceUrls;
 @dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacketM_StationInformation__storage_ {
@@ -333,12 +228,14 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
   RedvoxPacketM_StationInformation_OsType os;
   NSString *id_p;
   NSString *uuid;
+  NSString *authId;
   NSString *make;
   NSString *model;
   NSString *osVersion;
   NSString *appVersion;
   RedvoxPacketM_StationInformation_AppSettings *appSettings;
   RedvoxPacketM_StationInformation_StationMetrics *stationMetrics;
+  RedvoxPacketM_StationInformation_ServiceUrls *serviceUrls;
   NSMutableDictionary *metadata;
 } RedvoxPacketM_StationInformation__storage_;
 
@@ -367,10 +264,19 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
         .dataType = GPBDataTypeString,
       },
       {
+        .name = "authId",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacketM_StationInformation_FieldNumber_AuthId,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, authId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
         .name = "make",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_FieldNumber_Make,
-        .hasIndex = 2,
+        .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, make),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
@@ -379,7 +285,7 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
         .name = "model",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_FieldNumber_Model,
-        .hasIndex = 3,
+        .hasIndex = 4,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, model),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
@@ -388,7 +294,7 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
         .name = "os",
         .dataTypeSpecific.enumDescFunc = RedvoxPacketM_StationInformation_OsType_EnumDescriptor,
         .number = RedvoxPacketM_StationInformation_FieldNumber_Os,
-        .hasIndex = 4,
+        .hasIndex = 5,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, os),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
@@ -397,7 +303,7 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
         .name = "osVersion",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_FieldNumber_OsVersion,
-        .hasIndex = 5,
+        .hasIndex = 6,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, osVersion),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
@@ -406,16 +312,25 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
         .name = "appVersion",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_FieldNumber_AppVersion,
-        .hasIndex = 6,
+        .hasIndex = 7,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, appVersion),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
+        .name = "isPrivate",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacketM_StationInformation_FieldNumber_IsPrivate,
+        .hasIndex = 8,
+        .offset = 9,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
         .name = "appSettings",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_StationInformation_AppSettings),
         .number = RedvoxPacketM_StationInformation_FieldNumber_AppSettings,
-        .hasIndex = 7,
+        .hasIndex = 10,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, appSettings),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -424,8 +339,17 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
         .name = "stationMetrics",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_StationInformation_StationMetrics),
         .number = RedvoxPacketM_StationInformation_FieldNumber_StationMetrics,
-        .hasIndex = 8,
+        .hasIndex = 11,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, stationMetrics),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "serviceUrls",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_StationInformation_ServiceUrls),
+        .number = RedvoxPacketM_StationInformation_FieldNumber_ServiceUrls,
+        .hasIndex = 12,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, serviceUrls),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -448,7 +372,9 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
                                    storageSize:sizeof(RedvoxPacketM_StationInformation__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -508,6 +434,85 @@ BOOL RedvoxPacketM_StationInformation_OsType_IsValidValue(int32_t value__) {
       return NO;
   }
 }
+
+#pragma mark - RedvoxPacketM_StationInformation_ServiceUrls
+
+@implementation RedvoxPacketM_StationInformation_ServiceUrls
+
+@dynamic authServer;
+@dynamic synchServer;
+@dynamic acquisitionServer;
+@dynamic metadata, metadata_Count;
+
+typedef struct RedvoxPacketM_StationInformation_ServiceUrls__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *authServer;
+  NSString *synchServer;
+  NSString *acquisitionServer;
+  NSMutableDictionary *metadata;
+} RedvoxPacketM_StationInformation_ServiceUrls__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "authServer",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacketM_StationInformation_ServiceUrls_FieldNumber_AuthServer,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_ServiceUrls__storage_, authServer),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "synchServer",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacketM_StationInformation_ServiceUrls_FieldNumber_SynchServer,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_ServiceUrls__storage_, synchServer),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "acquisitionServer",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacketM_StationInformation_ServiceUrls_FieldNumber_AcquisitionServer,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_ServiceUrls__storage_, acquisitionServer),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "metadata",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacketM_StationInformation_ServiceUrls_FieldNumber_Metadata,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_ServiceUrls__storage_, metadata),
+        .flags = GPBFieldMapKeyString,
+        .dataType = GPBDataTypeString,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[RedvoxPacketM_StationInformation_ServiceUrls class]
+                                     rootClass:[RedvoxApiMRoot class]
+                                          file:RedvoxApiMRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(RedvoxPacketM_StationInformation_ServiceUrls__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_StationInformation)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
 
 #pragma mark - RedvoxPacketM_StationInformation_StationMetrics
 
@@ -677,7 +682,9 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
                                    storageSize:sizeof(RedvoxPacketM_StationInformation_StationMetrics__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_StationInformation)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -1134,7 +1141,9 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_StationInformation)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -1365,70 +1374,6 @@ BOOL RedvoxPacketM_StationInformation_AppSettings_InputSensor_IsValidValue(int32
   }
 }
 
-#pragma mark - RedvoxPacketM_PacketInformation
-
-@implementation RedvoxPacketM_PacketInformation
-
-@dynamic isBackfilled;
-@dynamic isPrivate;
-@dynamic metadata, metadata_Count;
-
-typedef struct RedvoxPacketM_PacketInformation__storage_ {
-  uint32_t _has_storage_[1];
-  NSMutableDictionary *metadata;
-} RedvoxPacketM_PacketInformation__storage_;
-
-// This method is threadsafe because it is initially called
-// in +initialize for each subclass.
-+ (GPBDescriptor *)descriptor {
-  static GPBDescriptor *descriptor = nil;
-  if (!descriptor) {
-    static GPBMessageFieldDescription fields[] = {
-      {
-        .name = "isBackfilled",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_PacketInformation_FieldNumber_IsBackfilled,
-        .hasIndex = 0,
-        .offset = 1,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeBool,
-      },
-      {
-        .name = "isPrivate",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_PacketInformation_FieldNumber_IsPrivate,
-        .hasIndex = 2,
-        .offset = 3,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeBool,
-      },
-      {
-        .name = "metadata",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_PacketInformation_FieldNumber_Metadata,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_PacketInformation__storage_, metadata),
-        .flags = GPBFieldMapKeyString,
-        .dataType = GPBDataTypeString,
-      },
-    };
-    GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RedvoxPacketM_PacketInformation class]
-                                     rootClass:[RedvoxApiMRoot class]
-                                          file:RedvoxApiMRoot_FileDescriptor()
-                                        fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RedvoxPacketM_PacketInformation__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
-    descriptor = localDescriptor;
-  }
-  return descriptor;
-}
-
-@end
-
 #pragma mark - RedvoxPacketM_TimingInformation
 
 @implementation RedvoxPacketM_TimingInformation
@@ -1597,7 +1542,9 @@ typedef struct RedvoxPacketM_TimingInformation__storage_ {
                                    storageSize:sizeof(RedvoxPacketM_TimingInformation__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -1775,7 +1722,9 @@ typedef struct RedvoxPacketM_TimingInformation_SynchExchange__storage_ {
                                    storageSize:sizeof(RedvoxPacketM_TimingInformation_SynchExchange__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_TimingInformation)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -1794,88 +1743,6 @@ void SetRedvoxPacketM_TimingInformation_SynchExchange_Unit_RawValue(RedvoxPacket
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_TimingInformation_SynchExchange_FieldNumber_Unit];
   GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
 }
-
-#pragma mark - RedvoxPacketM_ServerInformation
-
-@implementation RedvoxPacketM_ServerInformation
-
-@dynamic authServerURL;
-@dynamic synchServerURL;
-@dynamic acquisitionServerURL;
-@dynamic metadata, metadata_Count;
-
-typedef struct RedvoxPacketM_ServerInformation__storage_ {
-  uint32_t _has_storage_[1];
-  NSString *authServerURL;
-  NSString *synchServerURL;
-  NSString *acquisitionServerURL;
-  NSMutableDictionary *metadata;
-} RedvoxPacketM_ServerInformation__storage_;
-
-// This method is threadsafe because it is initially called
-// in +initialize for each subclass.
-+ (GPBDescriptor *)descriptor {
-  static GPBDescriptor *descriptor = nil;
-  if (!descriptor) {
-    static GPBMessageFieldDescription fields[] = {
-      {
-        .name = "authServerURL",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_ServerInformation_FieldNumber_AuthServerURL,
-        .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_ServerInformation__storage_, authServerURL),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
-        .dataType = GPBDataTypeString,
-      },
-      {
-        .name = "synchServerURL",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_ServerInformation_FieldNumber_SynchServerURL,
-        .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_ServerInformation__storage_, synchServerURL),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
-        .dataType = GPBDataTypeString,
-      },
-      {
-        .name = "acquisitionServerURL",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_ServerInformation_FieldNumber_AcquisitionServerURL,
-        .hasIndex = 2,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_ServerInformation__storage_, acquisitionServerURL),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
-        .dataType = GPBDataTypeString,
-      },
-      {
-        .name = "metadata",
-        .dataTypeSpecific.className = NULL,
-        .number = RedvoxPacketM_ServerInformation_FieldNumber_Metadata,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_ServerInformation__storage_, metadata),
-        .flags = GPBFieldMapKeyString,
-        .dataType = GPBDataTypeString,
-      },
-    };
-    GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RedvoxPacketM_ServerInformation class]
-                                     rootClass:[RedvoxApiMRoot class]
-                                          file:RedvoxApiMRoot_FileDescriptor()
-                                        fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RedvoxPacketM_ServerInformation__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    static const char *extraTextFormatInfo =
-        "\003\001\004\246\241!!\000\002\005\246\241!!\000\003\013\246\241!!\000";
-    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
-#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
-    descriptor = localDescriptor;
-  }
-  return descriptor;
-}
-
-@end
 
 #pragma mark - RedvoxPacketM_Sensors
 
@@ -2089,7 +1956,9 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
                                    storageSize:sizeof(RedvoxPacketM_Sensors__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -2104,14 +1973,18 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
 @dynamic sensorDescription;
 @dynamic firstSampleTimestamp;
 @dynamic sampleRate;
+@dynamic bitsOfPrecision;
 @dynamic isScrambled;
+@dynamic encoding;
 @dynamic hasSamples, samples;
 @dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacketM_Sensors_Audio__storage_ {
   uint32_t _has_storage_[1];
   float sampleRate;
+  float bitsOfPrecision;
   NSString *sensorDescription;
+  NSString *encoding;
   RedvoxPacketM_SamplePayload *samples;
   NSMutableDictionary *metadata;
   double firstSampleTimestamp;
@@ -2151,19 +2024,37 @@ typedef struct RedvoxPacketM_Sensors_Audio__storage_ {
         .dataType = GPBDataTypeFloat,
       },
       {
+        .name = "bitsOfPrecision",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacketM_Sensors_Audio_FieldNumber_BitsOfPrecision,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Audio__storage_, bitsOfPrecision),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
         .name = "isScrambled",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_Sensors_Audio_FieldNumber_IsScrambled,
-        .hasIndex = 3,
-        .offset = 4,  // Stored in _has_storage_ to save space.
+        .hasIndex = 4,
+        .offset = 5,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "encoding",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacketM_Sensors_Audio_FieldNumber_Encoding,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Audio__storage_, encoding),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
         .name = "samples",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Audio_FieldNumber_Samples,
-        .hasIndex = 5,
+        .hasIndex = 7,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Audio__storage_, samples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -2187,7 +2078,9 @@ typedef struct RedvoxPacketM_Sensors_Audio__storage_ {
                                    storageSize:sizeof(RedvoxPacketM_Sensors_Audio__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -2296,7 +2189,9 @@ typedef struct RedvoxPacketM_Sensors_CompressedAudio__storage_ {
                                    storageSize:sizeof(RedvoxPacketM_Sensors_CompressedAudio__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -2418,7 +2313,9 @@ typedef struct RedvoxPacketM_Sensors_Single__storage_ {
                                    storageSize:sizeof(RedvoxPacketM_Sensors_Single__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -2701,7 +2598,9 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
                                    storageSize:sizeof(RedvoxPacketM_Sensors_Location__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -2896,7 +2795,9 @@ typedef struct RedvoxPacketM_Sensors_Xyz__storage_ {
                                    storageSize:sizeof(RedvoxPacketM_Sensors_Xyz__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -2984,7 +2885,9 @@ typedef struct RedvoxPacketM_Sensors_Image__storage_ {
                                    storageSize:sizeof(RedvoxPacketM_Sensors_Image__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -3110,7 +3013,9 @@ typedef struct RedvoxPacketM_SamplePayload__storage_ {
                                    storageSize:sizeof(RedvoxPacketM_SamplePayload__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -3221,7 +3126,9 @@ typedef struct RedvoxPacketM_TimingPayload__storage_ {
                                    storageSize:sizeof(RedvoxPacketM_TimingPayload__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -3365,7 +3272,9 @@ typedef struct RedvoxPacketM_SummaryStatistics__storage_ {
                                    storageSize:sizeof(RedvoxPacketM_SummaryStatistics__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -3373,18 +3282,18 @@ typedef struct RedvoxPacketM_SummaryStatistics__storage_ {
 
 @end
 
-#pragma mark - EncryptedRedvoxPacket1000
+#pragma mark - EncryptedRedvoxPacketM
 
-@implementation EncryptedRedvoxPacket1000
+@implementation EncryptedRedvoxPacketM
 
 @dynamic header;
 @dynamic packet;
 
-typedef struct EncryptedRedvoxPacket1000__storage_ {
+typedef struct EncryptedRedvoxPacketM__storage_ {
   uint32_t _has_storage_[1];
   NSData *header;
   NSData *packet;
-} EncryptedRedvoxPacket1000__storage_;
+} EncryptedRedvoxPacketM__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -3395,31 +3304,33 @@ typedef struct EncryptedRedvoxPacket1000__storage_ {
       {
         .name = "header",
         .dataTypeSpecific.className = NULL,
-        .number = EncryptedRedvoxPacket1000_FieldNumber_Header,
+        .number = EncryptedRedvoxPacketM_FieldNumber_Header,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(EncryptedRedvoxPacket1000__storage_, header),
+        .offset = (uint32_t)offsetof(EncryptedRedvoxPacketM__storage_, header),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBytes,
       },
       {
         .name = "packet",
         .dataTypeSpecific.className = NULL,
-        .number = EncryptedRedvoxPacket1000_FieldNumber_Packet,
+        .number = EncryptedRedvoxPacketM_FieldNumber_Packet,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(EncryptedRedvoxPacket1000__storage_, packet),
+        .offset = (uint32_t)offsetof(EncryptedRedvoxPacketM__storage_, packet),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBytes,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[EncryptedRedvoxPacket1000 class]
+        [GPBDescriptor allocDescriptorForClass:[EncryptedRedvoxPacketM class]
                                      rootClass:[RedvoxApiMRoot class]
                                           file:RedvoxApiMRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(EncryptedRedvoxPacket1000__storage_)
+                                   storageSize:sizeof(EncryptedRedvoxPacketM__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -3427,22 +3338,24 @@ typedef struct EncryptedRedvoxPacket1000__storage_ {
 
 @end
 
-#pragma mark - EncryptedRedvoxPacket1000_Header
+#pragma mark - EncryptedRedvoxPacketM_Header
 
-@implementation EncryptedRedvoxPacket1000_Header
+@implementation EncryptedRedvoxPacketM_Header
 
 @dynamic stationId;
 @dynamic stationUuid;
 @dynamic authToken;
+@dynamic firebaseToken;
 @dynamic authEmail;
 
-typedef struct EncryptedRedvoxPacket1000_Header__storage_ {
+typedef struct EncryptedRedvoxPacketM_Header__storage_ {
   uint32_t _has_storage_[1];
   NSString *stationId;
   NSString *stationUuid;
   NSString *authToken;
+  NSString *firebaseToken;
   NSString *authEmail;
-} EncryptedRedvoxPacket1000_Header__storage_;
+} EncryptedRedvoxPacketM_Header__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -3453,50 +3366,61 @@ typedef struct EncryptedRedvoxPacket1000_Header__storage_ {
       {
         .name = "stationId",
         .dataTypeSpecific.className = NULL,
-        .number = EncryptedRedvoxPacket1000_Header_FieldNumber_StationId,
+        .number = EncryptedRedvoxPacketM_Header_FieldNumber_StationId,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(EncryptedRedvoxPacket1000_Header__storage_, stationId),
+        .offset = (uint32_t)offsetof(EncryptedRedvoxPacketM_Header__storage_, stationId),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "stationUuid",
         .dataTypeSpecific.className = NULL,
-        .number = EncryptedRedvoxPacket1000_Header_FieldNumber_StationUuid,
+        .number = EncryptedRedvoxPacketM_Header_FieldNumber_StationUuid,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(EncryptedRedvoxPacket1000_Header__storage_, stationUuid),
+        .offset = (uint32_t)offsetof(EncryptedRedvoxPacketM_Header__storage_, stationUuid),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "authToken",
         .dataTypeSpecific.className = NULL,
-        .number = EncryptedRedvoxPacket1000_Header_FieldNumber_AuthToken,
+        .number = EncryptedRedvoxPacketM_Header_FieldNumber_AuthToken,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(EncryptedRedvoxPacket1000_Header__storage_, authToken),
+        .offset = (uint32_t)offsetof(EncryptedRedvoxPacketM_Header__storage_, authToken),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "firebaseToken",
+        .dataTypeSpecific.className = NULL,
+        .number = EncryptedRedvoxPacketM_Header_FieldNumber_FirebaseToken,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(EncryptedRedvoxPacketM_Header__storage_, firebaseToken),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "authEmail",
         .dataTypeSpecific.className = NULL,
-        .number = EncryptedRedvoxPacket1000_Header_FieldNumber_AuthEmail,
-        .hasIndex = 3,
-        .offset = (uint32_t)offsetof(EncryptedRedvoxPacket1000_Header__storage_, authEmail),
+        .number = EncryptedRedvoxPacketM_Header_FieldNumber_AuthEmail,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(EncryptedRedvoxPacketM_Header__storage_, authEmail),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[EncryptedRedvoxPacket1000_Header class]
+        [GPBDescriptor allocDescriptorForClass:[EncryptedRedvoxPacketM_Header class]
                                      rootClass:[RedvoxApiMRoot class]
                                           file:RedvoxApiMRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(EncryptedRedvoxPacket1000_Header__storage_)
+                                   storageSize:sizeof(EncryptedRedvoxPacketM_Header__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(EncryptedRedvoxPacket1000)];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(EncryptedRedvoxPacketM)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -3508,12 +3432,16 @@ typedef struct EncryptedRedvoxPacket1000_Header__storage_ {
 
 @implementation AcquisitionRequest
 
-@dynamic payload;
-@dynamic isEncrypted;
+@dynamic authToken;
+@dynamic firebaseToken;
 @dynamic checksum;
+@dynamic isEncrypted;
+@dynamic payload;
 
 typedef struct AcquisitionRequest__storage_ {
   uint32_t _has_storage_[1];
+  NSString *authToken;
+  NSString *firebaseToken;
   NSData *payload;
   int64_t checksum;
 } AcquisitionRequest__storage_;
@@ -3525,31 +3453,49 @@ typedef struct AcquisitionRequest__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "payload",
+        .name = "authToken",
         .dataTypeSpecific.className = NULL,
-        .number = AcquisitionRequest_FieldNumber_Payload,
+        .number = AcquisitionRequest_FieldNumber_AuthToken,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(AcquisitionRequest__storage_, payload),
+        .offset = (uint32_t)offsetof(AcquisitionRequest__storage_, authToken),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeBytes,
+        .dataType = GPBDataTypeString,
       },
       {
-        .name = "isEncrypted",
+        .name = "firebaseToken",
         .dataTypeSpecific.className = NULL,
-        .number = AcquisitionRequest_FieldNumber_IsEncrypted,
+        .number = AcquisitionRequest_FieldNumber_FirebaseToken,
         .hasIndex = 1,
-        .offset = 2,  // Stored in _has_storage_ to save space.
+        .offset = (uint32_t)offsetof(AcquisitionRequest__storage_, firebaseToken),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeBool,
+        .dataType = GPBDataTypeString,
       },
       {
         .name = "checksum",
         .dataTypeSpecific.className = NULL,
         .number = AcquisitionRequest_FieldNumber_Checksum,
-        .hasIndex = 3,
+        .hasIndex = 2,
         .offset = (uint32_t)offsetof(AcquisitionRequest__storage_, checksum),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt64,
+      },
+      {
+        .name = "isEncrypted",
+        .dataTypeSpecific.className = NULL,
+        .number = AcquisitionRequest_FieldNumber_IsEncrypted,
+        .hasIndex = 3,
+        .offset = 4,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "payload",
+        .dataTypeSpecific.className = NULL,
+        .number = AcquisitionRequest_FieldNumber_Payload,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(AcquisitionRequest__storage_, payload),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBytes,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -3560,7 +3506,9 @@ typedef struct AcquisitionRequest__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(AcquisitionRequest__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -3635,7 +3583,9 @@ typedef struct AcquisitionResponse__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(AcquisitionResponse__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -3762,7 +3712,9 @@ typedef struct SynchRequest__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(SynchRequest__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;
@@ -3860,7 +3812,9 @@ typedef struct SynchResponse__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(SynchResponse__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
-    NSAssert(descriptor == nil, @"Startup recursed!");
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
     descriptor = localDescriptor;
   }
   return descriptor;

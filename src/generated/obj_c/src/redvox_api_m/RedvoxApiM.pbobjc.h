@@ -8,7 +8,7 @@
 #endif
 
 #if GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS
- #import <Protobuf/GPBProtocolBuffers.h>
+ #import <protobuf/GPBProtocolBuffers.h>
 #else
  #import "GPBProtocolBuffers.h"
 #endif
@@ -27,7 +27,6 @@
 
 CF_EXTERN_C_BEGIN
 
-@class RedvoxPacketM_PacketInformation;
 @class RedvoxPacketM_SamplePayload;
 @class RedvoxPacketM_Sensors;
 @class RedvoxPacketM_Sensors_Audio;
@@ -36,15 +35,14 @@ CF_EXTERN_C_BEGIN
 @class RedvoxPacketM_Sensors_Location;
 @class RedvoxPacketM_Sensors_Single;
 @class RedvoxPacketM_Sensors_Xyz;
-@class RedvoxPacketM_ServerInformation;
 @class RedvoxPacketM_StationInformation;
 @class RedvoxPacketM_StationInformation_AppSettings;
+@class RedvoxPacketM_StationInformation_ServiceUrls;
 @class RedvoxPacketM_StationInformation_StationMetrics;
 @class RedvoxPacketM_SummaryStatistics;
 @class RedvoxPacketM_TimingInformation;
 @class RedvoxPacketM_TimingInformation_SynchExchange;
 @class RedvoxPacketM_TimingPayload;
-@class RedvoxPacketM_UserInformation;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -478,13 +476,10 @@ BOOL AcquisitionResponse_ResponseType_IsValidValue(int32_t value);
 
 typedef GPB_ENUM(RedvoxPacketM_FieldNumber) {
   RedvoxPacketM_FieldNumber_Api = 1,
-  RedvoxPacketM_FieldNumber_UserInformation = 2,
-  RedvoxPacketM_FieldNumber_StationInformation = 3,
-  RedvoxPacketM_FieldNumber_PacketInformation = 4,
-  RedvoxPacketM_FieldNumber_TimingInformation = 5,
-  RedvoxPacketM_FieldNumber_ServerInformation = 6,
-  RedvoxPacketM_FieldNumber_Sensors = 7,
-  RedvoxPacketM_FieldNumber_Metadata = 8,
+  RedvoxPacketM_FieldNumber_StationInformation = 2,
+  RedvoxPacketM_FieldNumber_TimingInformation = 3,
+  RedvoxPacketM_FieldNumber_Sensors = 4,
+  RedvoxPacketM_FieldNumber_Metadata = 5,
 };
 
 @interface RedvoxPacketM : GPBMessage
@@ -492,65 +487,20 @@ typedef GPB_ENUM(RedvoxPacketM_FieldNumber) {
 /** Top level packet fields */
 @property(nonatomic, readwrite) float api;
 
-/** Station owner/authentication information */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_UserInformation *userInformation;
-/** Test to see if @c userInformation has been set. */
-@property(nonatomic, readwrite) BOOL hasUserInformation;
-
 /** Station metadata/metrics */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_StationInformation *stationInformation;
 /** Test to see if @c stationInformation has been set. */
 @property(nonatomic, readwrite) BOOL hasStationInformation;
-
-/** Packet flags */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_PacketInformation *packetInformation;
-/** Test to see if @c packetInformation has been set. */
-@property(nonatomic, readwrite) BOOL hasPacketInformation;
 
 /** Timing information, synch exchanges */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_TimingInformation *timingInformation;
 /** Test to see if @c timingInformation has been set. */
 @property(nonatomic, readwrite) BOOL hasTimingInformation;
 
-/** Server information/urls */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_ServerInformation *serverInformation;
-/** Test to see if @c serverInformation has been set. */
-@property(nonatomic, readwrite) BOOL hasServerInformation;
-
-/** Sensors */
+/** Sensors, payloads, etc */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Sensors *sensors;
 /** Test to see if @c sensors has been set. */
 @property(nonatomic, readwrite) BOOL hasSensors;
-
-/** A map from string to string for including untyped metadata */
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
-/** The number of items in @c metadata without causing the array to be created. */
-@property(nonatomic, readonly) NSUInteger metadata_Count;
-
-@end
-
-#pragma mark - RedvoxPacketM_UserInformation
-
-typedef GPB_ENUM(RedvoxPacketM_UserInformation_FieldNumber) {
-  RedvoxPacketM_UserInformation_FieldNumber_AuthEmail = 1,
-  RedvoxPacketM_UserInformation_FieldNumber_AuthToken = 2,
-  RedvoxPacketM_UserInformation_FieldNumber_FirebaseToken = 3,
-  RedvoxPacketM_UserInformation_FieldNumber_Metadata = 4,
-};
-
-/**
- * This message encapsulates station owner information and related authentication information
- **/
-@interface RedvoxPacketM_UserInformation : GPBMessage
-
-/** The e-mail the user used to authenticate with */
-@property(nonatomic, readwrite, copy, null_resettable) NSString *authEmail;
-
-/** The JWT token used for authentication */
-@property(nonatomic, readwrite, copy, null_resettable) NSString *authToken;
-
-/** The assigned firebase token */
-@property(nonatomic, readwrite, copy, null_resettable) NSString *firebaseToken;
 
 /** A map from string to string for including untyped metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
@@ -564,14 +514,17 @@ typedef GPB_ENUM(RedvoxPacketM_UserInformation_FieldNumber) {
 typedef GPB_ENUM(RedvoxPacketM_StationInformation_FieldNumber) {
   RedvoxPacketM_StationInformation_FieldNumber_Id_p = 1,
   RedvoxPacketM_StationInformation_FieldNumber_Uuid = 2,
-  RedvoxPacketM_StationInformation_FieldNumber_Make = 3,
-  RedvoxPacketM_StationInformation_FieldNumber_Model = 4,
-  RedvoxPacketM_StationInformation_FieldNumber_Os = 5,
-  RedvoxPacketM_StationInformation_FieldNumber_OsVersion = 6,
-  RedvoxPacketM_StationInformation_FieldNumber_AppVersion = 7,
-  RedvoxPacketM_StationInformation_FieldNumber_AppSettings = 8,
-  RedvoxPacketM_StationInformation_FieldNumber_StationMetrics = 9,
-  RedvoxPacketM_StationInformation_FieldNumber_Metadata = 10,
+  RedvoxPacketM_StationInformation_FieldNumber_AuthId = 3,
+  RedvoxPacketM_StationInformation_FieldNumber_Make = 4,
+  RedvoxPacketM_StationInformation_FieldNumber_Model = 5,
+  RedvoxPacketM_StationInformation_FieldNumber_Os = 6,
+  RedvoxPacketM_StationInformation_FieldNumber_OsVersion = 7,
+  RedvoxPacketM_StationInformation_FieldNumber_AppVersion = 8,
+  RedvoxPacketM_StationInformation_FieldNumber_IsPrivate = 9,
+  RedvoxPacketM_StationInformation_FieldNumber_AppSettings = 10,
+  RedvoxPacketM_StationInformation_FieldNumber_StationMetrics = 11,
+  RedvoxPacketM_StationInformation_FieldNumber_ServiceUrls = 12,
+  RedvoxPacketM_StationInformation_FieldNumber_Metadata = 13,
 };
 
 /**
@@ -584,6 +537,9 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_FieldNumber) {
 
 /** The app provided UUID */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *uuid;
+
+/** Authentication ID (user's email) */
+@property(nonatomic, readwrite, copy, null_resettable) NSString *authId;
 
 /** Make of the station */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *make;
@@ -600,6 +556,9 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_FieldNumber) {
 /** App version on the station */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *appVersion;
 
+/** If the station was set to record privately when this packet was recorded */
+@property(nonatomic, readwrite) BOOL isPrivate;
+
 /** A copy of the App's settings */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_StationInformation_AppSettings *appSettings;
 /** Test to see if @c appSettings has been set. */
@@ -609,6 +568,11 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_StationInformation_StationMetrics *stationMetrics;
 /** Test to see if @c stationMetrics has been set. */
 @property(nonatomic, readwrite) BOOL hasStationMetrics;
+
+/** URLs of remote services utilized by this statation */
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_StationInformation_ServiceUrls *serviceUrls;
+/** Test to see if @c serviceUrls has been set. */
+@property(nonatomic, readwrite) BOOL hasServiceUrls;
 
 /** A map from string to string for including untyped metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
@@ -628,6 +592,36 @@ int32_t RedvoxPacketM_StationInformation_Os_RawValue(RedvoxPacketM_StationInform
  * was generated.
  **/
 void SetRedvoxPacketM_StationInformation_Os_RawValue(RedvoxPacketM_StationInformation *message, int32_t value);
+
+#pragma mark - RedvoxPacketM_StationInformation_ServiceUrls
+
+typedef GPB_ENUM(RedvoxPacketM_StationInformation_ServiceUrls_FieldNumber) {
+  RedvoxPacketM_StationInformation_ServiceUrls_FieldNumber_AuthServer = 1,
+  RedvoxPacketM_StationInformation_ServiceUrls_FieldNumber_SynchServer = 2,
+  RedvoxPacketM_StationInformation_ServiceUrls_FieldNumber_AcquisitionServer = 3,
+  RedvoxPacketM_StationInformation_ServiceUrls_FieldNumber_Metadata = 4,
+};
+
+/**
+ * Collection of related service URLs
+ **/
+@interface RedvoxPacketM_StationInformation_ServiceUrls : GPBMessage
+
+/** The URL of the authentication server */
+@property(nonatomic, readwrite, copy, null_resettable) NSString *authServer;
+
+/** The URL of the synch server */
+@property(nonatomic, readwrite, copy, null_resettable) NSString *synchServer;
+
+/** The URL of the acquisition server */
+@property(nonatomic, readwrite, copy, null_resettable) NSString *acquisitionServer;
+
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
+
+@end
 
 #pragma mark - RedvoxPacketM_StationInformation_StationMetrics
 
@@ -881,32 +875,6 @@ int32_t RedvoxPacketM_StationInformation_AppSettings_FftOverlap_RawValue(RedvoxP
  **/
 void SetRedvoxPacketM_StationInformation_AppSettings_FftOverlap_RawValue(RedvoxPacketM_StationInformation_AppSettings *message, int32_t value);
 
-#pragma mark - RedvoxPacketM_PacketInformation
-
-typedef GPB_ENUM(RedvoxPacketM_PacketInformation_FieldNumber) {
-  RedvoxPacketM_PacketInformation_FieldNumber_IsBackfilled = 1,
-  RedvoxPacketM_PacketInformation_FieldNumber_IsPrivate = 2,
-  RedvoxPacketM_PacketInformation_FieldNumber_Metadata = 3,
-};
-
-/**
- * Packet metadata flags
- **/
-@interface RedvoxPacketM_PacketInformation : GPBMessage
-
-/** Field for if this packet has been backfilled or not */
-@property(nonatomic, readwrite) BOOL isBackfilled;
-
-/** Field for if this packet is private to the user or not */
-@property(nonatomic, readwrite) BOOL isPrivate;
-
-/** A map from string to string for including untyped metadata */
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
-/** The number of items in @c metadata without causing the array to be created. */
-@property(nonatomic, readonly) NSUInteger metadata_Count;
-
-@end
-
 #pragma mark - RedvoxPacketM_TimingInformation
 
 typedef GPB_ENUM(RedvoxPacketM_TimingInformation_FieldNumber) {
@@ -1050,36 +1018,6 @@ int32_t RedvoxPacketM_TimingInformation_SynchExchange_Unit_RawValue(RedvoxPacket
  **/
 void SetRedvoxPacketM_TimingInformation_SynchExchange_Unit_RawValue(RedvoxPacketM_TimingInformation_SynchExchange *message, int32_t value);
 
-#pragma mark - RedvoxPacketM_ServerInformation
-
-typedef GPB_ENUM(RedvoxPacketM_ServerInformation_FieldNumber) {
-  RedvoxPacketM_ServerInformation_FieldNumber_AuthServerURL = 1,
-  RedvoxPacketM_ServerInformation_FieldNumber_SynchServerURL = 2,
-  RedvoxPacketM_ServerInformation_FieldNumber_AcquisitionServerURL = 3,
-  RedvoxPacketM_ServerInformation_FieldNumber_Metadata = 4,
-};
-
-/**
- * Collection of related service URLs
- **/
-@interface RedvoxPacketM_ServerInformation : GPBMessage
-
-/** The URL of the authentication server */
-@property(nonatomic, readwrite, copy, null_resettable) NSString *authServerURL;
-
-/** The URL of the synch server */
-@property(nonatomic, readwrite, copy, null_resettable) NSString *synchServerURL;
-
-/** The URL of the acquisition server */
-@property(nonatomic, readwrite, copy, null_resettable) NSString *acquisitionServerURL;
-
-/** A map from string to string for including untyped metadata */
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
-/** The number of items in @c metadata without causing the array to be created. */
-@property(nonatomic, readonly) NSUInteger metadata_Count;
-
-@end
-
 #pragma mark - RedvoxPacketM_Sensors
 
 typedef GPB_ENUM(RedvoxPacketM_Sensors_FieldNumber) {
@@ -1201,9 +1139,11 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Audio_FieldNumber) {
   RedvoxPacketM_Sensors_Audio_FieldNumber_SensorDescription = 1,
   RedvoxPacketM_Sensors_Audio_FieldNumber_FirstSampleTimestamp = 2,
   RedvoxPacketM_Sensors_Audio_FieldNumber_SampleRate = 3,
-  RedvoxPacketM_Sensors_Audio_FieldNumber_IsScrambled = 4,
-  RedvoxPacketM_Sensors_Audio_FieldNumber_Samples = 5,
-  RedvoxPacketM_Sensors_Audio_FieldNumber_Metadata = 6,
+  RedvoxPacketM_Sensors_Audio_FieldNumber_BitsOfPrecision = 4,
+  RedvoxPacketM_Sensors_Audio_FieldNumber_IsScrambled = 5,
+  RedvoxPacketM_Sensors_Audio_FieldNumber_Encoding = 6,
+  RedvoxPacketM_Sensors_Audio_FieldNumber_Samples = 7,
+  RedvoxPacketM_Sensors_Audio_FieldNumber_Metadata = 8,
 };
 
 /**
@@ -1221,8 +1161,14 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Audio_FieldNumber) {
 /** Microphone sample rate in Hz */
 @property(nonatomic, readwrite) float sampleRate;
 
+/** Bits of precision for normalized audio samples */
+@property(nonatomic, readwrite) float bitsOfPrecision;
+
 /** If audio data has been scrambled to remove voice */
 @property(nonatomic, readwrite) BOOL isScrambled;
+
+/** The audio encoding used... TODO: Turn this into an enum! */
+@property(nonatomic, readwrite, copy, null_resettable) NSString *encoding;
 
 /** List of audio samples */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *samples;
@@ -1262,8 +1208,10 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_CompressedAudio_FieldNumber) {
 /** If audio data has been scrambled to remove voice */
 @property(nonatomic, readwrite) BOOL isScrambled;
 
+/** Bytes that make up audio payload */
 @property(nonatomic, readwrite, copy, null_resettable) NSData *audioBytes;
 
+/** Codec used to compress audio */
 @property(nonatomic, readwrite) RedvoxPacketM_Sensors_CompressedAudio_AudioCodec audioCodec;
 
 /** A map from string to string for including untyped metadata */
@@ -1476,10 +1424,10 @@ void SetRedvoxPacketM_Sensors_Location_LocationProvider_RawValue(RedvoxPacketM_S
 typedef GPB_ENUM(RedvoxPacketM_Sensors_Xyz_FieldNumber) {
   RedvoxPacketM_Sensors_Xyz_FieldNumber_SensorDescription = 1,
   RedvoxPacketM_Sensors_Xyz_FieldNumber_Timestamps = 2,
-  RedvoxPacketM_Sensors_Xyz_FieldNumber_XSamples = 4,
-  RedvoxPacketM_Sensors_Xyz_FieldNumber_YSamples = 5,
-  RedvoxPacketM_Sensors_Xyz_FieldNumber_ZSamples = 6,
-  RedvoxPacketM_Sensors_Xyz_FieldNumber_Metadata = 7,
+  RedvoxPacketM_Sensors_Xyz_FieldNumber_XSamples = 3,
+  RedvoxPacketM_Sensors_Xyz_FieldNumber_YSamples = 4,
+  RedvoxPacketM_Sensors_Xyz_FieldNumber_ZSamples = 5,
+  RedvoxPacketM_Sensors_Xyz_FieldNumber_Metadata = 6,
 };
 
 /**
@@ -1524,8 +1472,8 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Image_FieldNumber) {
   RedvoxPacketM_Sensors_Image_FieldNumber_SensorDescription = 1,
   RedvoxPacketM_Sensors_Image_FieldNumber_Timestamps = 2,
   RedvoxPacketM_Sensors_Image_FieldNumber_SamplesArray = 3,
-  RedvoxPacketM_Sensors_Image_FieldNumber_ImageCodec = 6,
-  RedvoxPacketM_Sensors_Image_FieldNumber_Metadata = 7,
+  RedvoxPacketM_Sensors_Image_FieldNumber_ImageCodec = 4,
+  RedvoxPacketM_Sensors_Image_FieldNumber_Metadata = 5,
 };
 
 /**
@@ -1721,11 +1669,11 @@ typedef GPB_ENUM(RedvoxPacketM_SummaryStatistics_FieldNumber) {
 
 @end
 
-#pragma mark - EncryptedRedvoxPacket1000
+#pragma mark - EncryptedRedvoxPacketM
 
-typedef GPB_ENUM(EncryptedRedvoxPacket1000_FieldNumber) {
-  EncryptedRedvoxPacket1000_FieldNumber_Header = 1,
-  EncryptedRedvoxPacket1000_FieldNumber_Packet = 2,
+typedef GPB_ENUM(EncryptedRedvoxPacketM_FieldNumber) {
+  EncryptedRedvoxPacketM_FieldNumber_Header = 1,
+  EncryptedRedvoxPacketM_FieldNumber_Packet = 2,
 };
 
 /**
@@ -1736,7 +1684,7 @@ typedef GPB_ENUM(EncryptedRedvoxPacket1000_FieldNumber) {
  *   Serialization: Object -> serialize to bytes -> LZ4 frame compress -> encrypt -> payload bytes
  *   Deserialization: Payload bytes -> decrypt -> LZ4 frame decompress -> deserialize from bytes -> object
  **/
-@interface EncryptedRedvoxPacket1000 : GPBMessage
+@interface EncryptedRedvoxPacketM : GPBMessage
 
 /** redvox encrypt(compress(EncryptedRedvoxPacket1000.Header)) */
 @property(nonatomic, readwrite, copy, null_resettable) NSData *header;
@@ -1746,22 +1694,25 @@ typedef GPB_ENUM(EncryptedRedvoxPacket1000_FieldNumber) {
 
 @end
 
-#pragma mark - EncryptedRedvoxPacket1000_Header
+#pragma mark - EncryptedRedvoxPacketM_Header
 
-typedef GPB_ENUM(EncryptedRedvoxPacket1000_Header_FieldNumber) {
-  EncryptedRedvoxPacket1000_Header_FieldNumber_StationId = 1,
-  EncryptedRedvoxPacket1000_Header_FieldNumber_StationUuid = 2,
-  EncryptedRedvoxPacket1000_Header_FieldNumber_AuthToken = 3,
-  EncryptedRedvoxPacket1000_Header_FieldNumber_AuthEmail = 4,
+typedef GPB_ENUM(EncryptedRedvoxPacketM_Header_FieldNumber) {
+  EncryptedRedvoxPacketM_Header_FieldNumber_StationId = 1,
+  EncryptedRedvoxPacketM_Header_FieldNumber_StationUuid = 2,
+  EncryptedRedvoxPacketM_Header_FieldNumber_AuthToken = 3,
+  EncryptedRedvoxPacketM_Header_FieldNumber_FirebaseToken = 4,
+  EncryptedRedvoxPacketM_Header_FieldNumber_AuthEmail = 5,
 };
 
-@interface EncryptedRedvoxPacket1000_Header : GPBMessage
+@interface EncryptedRedvoxPacketM_Header : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *stationId;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *stationUuid;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *authToken;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *firebaseToken;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *authEmail;
 
@@ -1770,9 +1721,11 @@ typedef GPB_ENUM(EncryptedRedvoxPacket1000_Header_FieldNumber) {
 #pragma mark - AcquisitionRequest
 
 typedef GPB_ENUM(AcquisitionRequest_FieldNumber) {
-  AcquisitionRequest_FieldNumber_Payload = 1,
-  AcquisitionRequest_FieldNumber_IsEncrypted = 2,
+  AcquisitionRequest_FieldNumber_AuthToken = 1,
+  AcquisitionRequest_FieldNumber_FirebaseToken = 2,
   AcquisitionRequest_FieldNumber_Checksum = 3,
+  AcquisitionRequest_FieldNumber_IsEncrypted = 4,
+  AcquisitionRequest_FieldNumber_Payload = 5,
 };
 
 /**
@@ -1781,14 +1734,20 @@ typedef GPB_ENUM(AcquisitionRequest_FieldNumber) {
  **/
 @interface AcquisitionRequest : GPBMessage
 
-/** The compressed packet to send. */
-@property(nonatomic, readwrite, copy, null_resettable) NSData *payload;
+/** The server provided authentication token */
+@property(nonatomic, readwrite, copy, null_resettable) NSString *authToken;
 
-/** Set if the payload is encrypted */
+/** The API provided firebase token */
+@property(nonatomic, readwrite, copy, null_resettable) NSString *firebaseToken;
+
+/** A checksum of the payload bytes */
+@property(nonatomic, readwrite) int64_t checksum;
+
+/** If set, then the payload contains */
 @property(nonatomic, readwrite) BOOL isEncrypted;
 
-/** A checksum of the bytes in field 1. */
-@property(nonatomic, readwrite) int64_t checksum;
+/** The compressed packet to send */
+@property(nonatomic, readwrite, copy, null_resettable) NSData *payload;
 
 @end
 
@@ -1846,12 +1805,16 @@ typedef GPB_ENUM(SynchRequest_FieldNumber) {
  **/
 @interface SynchRequest : GPBMessage
 
+/** Id of the station */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *stationId;
 
+/** Uuid of the station */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *stationUuid;
 
+/** The overall number of synch requests made. Starts at 0 on recording start. */
 @property(nonatomic, readwrite) uint32_t seqId;
 
+/** The seq id within a single exchange */
 @property(nonatomic, readwrite) uint32_t subSeqId;
 
 @end
@@ -1869,16 +1832,22 @@ typedef GPB_ENUM(SynchResponse_FieldNumber) {
 
 @interface SynchResponse : GPBMessage
 
+/** Should match same field from request */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *stationId;
 
+/** Should match same field from request */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *stationUuid;
 
+/** Should match same field from request */
 @property(nonatomic, readwrite) uint32_t seqId;
 
+/** Should be req field + 1 */
 @property(nonatomic, readwrite) uint32_t subSeqId;
 
+/** Time synch server received request */
 @property(nonatomic, readwrite) uint64_t recvTsUs;
 
+/** Time synch server sent response */
 @property(nonatomic, readwrite) uint64_t sendTsUs;
 
 @end
