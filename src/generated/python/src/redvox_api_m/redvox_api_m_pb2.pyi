@@ -73,6 +73,7 @@ class RedvoxPacketM(google___protobuf___message___Message):
         CENTIMETERS = typing___cast('RedvoxPacketM.Unit', 15)
         NORMALIZED_COUNTS = typing___cast('RedvoxPacketM.Unit', 16)
         LUX = typing___cast('RedvoxPacketM.Unit', 17)
+        UNITLESS = typing___cast('RedvoxPacketM.Unit', 18)
     METERS_PER_SECOND_SQUARED = typing___cast('RedvoxPacketM.Unit', 0)
     KILOPASCAL = typing___cast('RedvoxPacketM.Unit', 1)
     RADIANS_PER_SECOND = typing___cast('RedvoxPacketM.Unit', 2)
@@ -91,6 +92,7 @@ class RedvoxPacketM(google___protobuf___message___Message):
     CENTIMETERS = typing___cast('RedvoxPacketM.Unit', 15)
     NORMALIZED_COUNTS = typing___cast('RedvoxPacketM.Unit', 16)
     LUX = typing___cast('RedvoxPacketM.Unit', 17)
+    UNITLESS = typing___cast('RedvoxPacketM.Unit', 18)
     global___Unit = Unit
 
     class MetadataEntry(google___protobuf___message___Message):

@@ -144,7 +144,8 @@ GPBEnumDescriptor *RedvoxPacketM_Unit_EnumDescriptor(void) {
         "erSecond\000Microtesla\000LsbPlusMinusCounts\000M"
         "icrosecondsSinceUnixEpoch\000Decibel\000Degree"
         "sCelsius\000Byte\000Percentage\000Radians\000Microam"
-        "peres\000Centimeters\000NormalizedCounts\000Lux\000";
+        "peres\000Centimeters\000NormalizedCounts\000Lux\000U"
+        "nitless\000";
     static const int32_t values[] = {
         RedvoxPacketM_Unit_MetersPerSecondSquared,
         RedvoxPacketM_Unit_Kilopascal,
@@ -164,6 +165,7 @@ GPBEnumDescriptor *RedvoxPacketM_Unit_EnumDescriptor(void) {
         RedvoxPacketM_Unit_Centimeters,
         RedvoxPacketM_Unit_NormalizedCounts,
         RedvoxPacketM_Unit_Lux,
+        RedvoxPacketM_Unit_Unitless,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_Unit)
@@ -199,6 +201,7 @@ BOOL RedvoxPacketM_Unit_IsValidValue(int32_t value__) {
     case RedvoxPacketM_Unit_Centimeters:
     case RedvoxPacketM_Unit_NormalizedCounts:
     case RedvoxPacketM_Unit_Lux:
+    case RedvoxPacketM_Unit_Unitless:
       return YES;
     default:
       return NO;

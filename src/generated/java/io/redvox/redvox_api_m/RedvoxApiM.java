@@ -391,6 +391,10 @@ public final class RedvoxApiM {
        * <code>LUX = 17;</code>
        */
       LUX(17),
+      /**
+       * <code>UNITLESS = 18;</code>
+       */
+      UNITLESS(18),
       UNRECOGNIZED(-1),
       ;
 
@@ -466,6 +470,10 @@ public final class RedvoxApiM {
        * <code>LUX = 17;</code>
        */
       public static final int LUX_VALUE = 17;
+      /**
+       * <code>UNITLESS = 18;</code>
+       */
+      public static final int UNITLESS_VALUE = 18;
 
 
       public final int getNumber() {
@@ -510,6 +518,7 @@ public final class RedvoxApiM {
           case 15: return CENTIMETERS;
           case 16: return NORMALIZED_COUNTS;
           case 17: return LUX;
+          case 18: return UNITLESS;
           default: return null;
         }
       }
@@ -48508,7 +48517,7 @@ public final class RedvoxApiM {
   static {
     java.lang.String[] descriptorData = {
       "\n#src/redvox_api_m/redvox_api_m.proto\022\014r" +
-      "edvox_api_m\"\255T\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
+      "edvox_api_m\"\273T\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
       "(\002\022K\n\023station_information\030\002 \001(\0132..redvox" +
       "_api_m.RedvoxPacketM.StationInformation\022" +
       "I\n\022timing_information\030\003 \001(\0132-.redvox_api" +
@@ -48769,7 +48778,7 @@ public final class RedvoxApiM {
       "nge\030\010 \001(\002\022M\n\010metadata\030\t \003(\0132;.redvox_api" +
       "_m.RedvoxPacketM.SummaryStatistics.Metad" +
       "ataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"\337\002\n\004Unit\022\035\n\031METERS_PER" +
+      "\n\005value\030\002 \001(\t:\0028\001\"\355\002\n\004Unit\022\035\n\031METERS_PER" +
       "_SECOND_SQUARED\020\000\022\016\n\nKILOPASCAL\020\001\022\026\n\022RAD" +
       "IANS_PER_SECOND\020\002\022\023\n\017DECIMAL_DEGREES\020\003\022\n" +
       "\n\006METERS\020\004\022\025\n\021METERS_PER_SECOND\020\005\022\016\n\nMIC" +
@@ -48778,26 +48787,27 @@ public final class RedvoxApiM {
       "EL\020\t\022\023\n\017DEGREES_CELSIUS\020\n\022\010\n\004BYTE\020\013\022\016\n\nP" +
       "ERCENTAGE\020\014\022\013\n\007RADIANS\020\r\022\020\n\014MICROAMPERES" +
       "\020\016\022\017\n\013CENTIMETERS\020\017\022\025\n\021NORMALIZED_COUNTS" +
-      "\020\020\022\007\n\003LUX\020\021\"\254\001\n\026EncryptedRedvoxPacketM\022\016" +
-      "\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014\032r\n\006Header" +
-      "\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001" +
-      "(\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016firebase_token" +
-      "\030\004 \001(\t\022\022\n\nauth_email\030\005 \001(\t\"y\n\022Acquisitio" +
-      "nRequest\022\022\n\nauth_token\030\001 \001(\t\022\026\n\016firebase" +
-      "_token\030\002 \001(\t\022\020\n\010checksum\030\003 \001(\003\022\024\n\014is_enc" +
-      "rypted\030\004 \001(\010\022\017\n\007payload\030\005 \001(\014\"\330\001\n\023Acquis" +
-      "itionResponse\022E\n\rresponse_type\030\001 \001(\0162..r" +
-      "edvox_api_m.AcquisitionResponse.Response" +
-      "Type\022\020\n\010checksum\030\002 \001(\003\022\017\n\007details\030\003 \001(\t\022" +
-      "\016\n\006resend\030\004 \001(\010\"G\n\014ResponseType\022\006\n\002OK\020\000\022" +
-      "\016\n\nAUTH_ERROR\020\001\022\016\n\nDATA_ERROR\020\002\022\017\n\013OTHER" +
-      "_ERROR\020\003\"\\\n\014SynchRequest\022\022\n\nstation_id\030\001" +
-      " \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001" +
-      "(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001\n\rSynchResponse" +
-      "\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001" +
-      "(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\022\022" +
-      "\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsend_ts_us\030\006 \001(\004B\030" +
-      "\n\026io.redvox.redvox_api_mb\006proto3"
+      "\020\020\022\007\n\003LUX\020\021\022\014\n\010UNITLESS\020\022\"\254\001\n\026EncryptedR" +
+      "edvoxPacketM\022\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002" +
+      " \001(\014\032r\n\006Header\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014st" +
+      "ation_uuid\030\002 \001(\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016" +
+      "firebase_token\030\004 \001(\t\022\022\n\nauth_email\030\005 \001(\t" +
+      "\"y\n\022AcquisitionRequest\022\022\n\nauth_token\030\001 \001" +
+      "(\t\022\026\n\016firebase_token\030\002 \001(\t\022\020\n\010checksum\030\003" +
+      " \001(\003\022\024\n\014is_encrypted\030\004 \001(\010\022\017\n\007payload\030\005 " +
+      "\001(\014\"\330\001\n\023AcquisitionResponse\022E\n\rresponse_" +
+      "type\030\001 \001(\0162..redvox_api_m.AcquisitionRes" +
+      "ponse.ResponseType\022\020\n\010checksum\030\002 \001(\003\022\017\n\007" +
+      "details\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"G\n\014Respons" +
+      "eType\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001\022\016\n\nDATA_ER" +
+      "ROR\020\002\022\017\n\013OTHER_ERROR\020\003\"\\\n\014SynchRequest\022\022" +
+      "\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t" +
+      "\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001\n" +
+      "\rSynchResponse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014st" +
+      "ation_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_" +
+      "seq_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsend" +
+      "_ts_us\030\006 \001(\004B\030\n\026io.redvox.redvox_api_mb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

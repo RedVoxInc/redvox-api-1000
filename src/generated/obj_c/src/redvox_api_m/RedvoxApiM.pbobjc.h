@@ -74,6 +74,7 @@ typedef GPB_ENUM(RedvoxPacketM_Unit) {
   RedvoxPacketM_Unit_Centimeters = 15,
   RedvoxPacketM_Unit_NormalizedCounts = 16,
   RedvoxPacketM_Unit_Lux = 17,
+  RedvoxPacketM_Unit_Unitless = 18,
 };
 
 GPBEnumDescriptor *RedvoxPacketM_Unit_EnumDescriptor(void);
