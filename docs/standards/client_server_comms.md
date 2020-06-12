@@ -9,14 +9,16 @@ __redvox.io__
 | Data acquisition API M     | wss://redvox.io/acquisition/v1000   |
 | Data acquisition API M E2E | wss://redvox.io/acquisition/x/v1000 |
 | Synch exchanges v3         | wss://redvox.io/synch/v3            |
+| Authentication             | https://redvox.io:8080/api/v1/auth  |
 
-__Testing__
+__Testing / Pre-Release__
 
 | Service                    | Endpoint                                               |
 |----------------------------|--------------------------------------------------------|
 | Data acquisition API M     | wss://milton.soest.hawaii.edu:8000/acquisition/v1000   |
 | Data acquisition API M E2E | wss://milton.soest.hawaii.edu:8000/acquisition/x/v1000 |
 | Synch exchanges v3         | wss://milton.soest.hawaii.edu:8000/synch/v3            |
+| Authentication             | https://milton.soest.hawaii.edu:8080/api/v1/auth       |
 
 
 #### Communicating with the data acquisition server
@@ -24,6 +26,7 @@ __Testing__
 Sending API M packets to a RedVox data acquisition server requires using the `AcquisitionRequest` message type.
 
 The payload field takes a collection of bytes and can take two items:
+
 * compressed(serialized(RedvoxPacket1000))
 * encrypted(compressed(serialized(RedvoxPacket1000)))
 
