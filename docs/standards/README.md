@@ -3,6 +3,7 @@
 The following standards must be adhered to. When in doubt, please reach out for clarification.
 
 * [Audio sampling rate and packet lengths](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/audio_sampling_rates_packet_lengths.md)
+* [Authentication](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/authentication.md)
 * [Keeping Time](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/keeping_time.md)
 * [Standard Sensor Units](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/standard_sensor_units.md)
 * [Storing Audio Data](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_audio_data.md)
