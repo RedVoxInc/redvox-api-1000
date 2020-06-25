@@ -18,7 +18,8 @@ __Testing / Pre-Release__
 | Data acquisition API M     | wss://milton.soest.hawaii.edu:8000/acquisition/v1000   |
 | Data acquisition API M E2E | wss://milton.soest.hawaii.edu:8000/acquisition/x/v1000 |
 | Synch exchanges v3         | wss://milton.soest.hawaii.edu:8000/synch/v3            |
-| Authentication             | https://milton.soest.hawaii.edu:8080/api/v1/auth       |
+| Authentication             | https://milton.soest.hawaii.edu:8088/api/v1/auth       |
+| Auth Refresh               |https://milton.soest.hawaii.edu:8088/api/v1/auth/refresh|
 
 
 #### Communicating with the data acquisition server

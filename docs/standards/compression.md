@@ -10,3 +10,4 @@ Compression should be used in the following scenarios:
   * serialized `RedvoxPacket1000` messages should be compressed before being encrypted and stored in `EncryptedRedvoxPacket1000` 
   
 Please note that the `EncryptedRedvoxPacket1000` is _not_ compressed before storing in an `AcqusitionRequest`.
+
