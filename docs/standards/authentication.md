@@ -31,13 +31,23 @@ On successful authentication, you will receive an HTTP response with a status co
 |------------|------------------|
 | status     | int              |
 | auth_token | Optional<String> |
+| claims     | Optional<Object> |
 
 As an example:
 
 ```
 {
   "status": 200,
-  "auth_token": "v2.public.eyJ0aWVyIjoiZnJlZSIsImF1ZCI6ImFwaSIsIm5iZiI6IjIwMjAtMDYtMTJUMjI6MjI6NTEuMzY5NDU4MTYwWiIsImV4cCI6IjIwMjAtMDYtMTJUMjM6MjI6NTEuMzY5NDU4MTYwWiIsInN1YiI6InJlZHZveGNvcmVAZ21haWwuY29tIiwiaXNzIjoiUmVkVm94LCBJbmMuIiWiaWF0IjoiMjAyMC0wNi0xMlQyMjoyMjo1MS4zNjk0NTgxNjBaIn2U1Z3R_mvRpdGRQT7io1TJ6cOV9gnh6nueJye6NOF66HZUriJrZs_LxKq2Jo6EjiY93HEuopOlVSVqGtKSS3AN"
+  "auth_token": "v2.public.eyJ0aWVyIjoiZnJlZSIsImF1ZCI6ImFwaSIsIm5iZiI6IjIwMjAtMDYtMTJUMjI6MjI6NTEuMzY5NDU4MTYwWiIsImV4cCI6IjIwMjAtMDYtMTJUMjM6MjI6NTEuMzY5NDU4MTYwWiIsInN1YiI6InJlZHZveGNvcmVAZ21haWwuY29tIiwiaXNzIjoiUmVkVm94LCBJbmMuIiWiaWF0IjoiMjAyMC0wNi0xMlQyMjoyMjo1MS4zNjk0NTgxNjBaIn2U1Z3R_mvRpdGRQT7io1TJ6cOV9gnh6nueJye6NOF66HZUriJrZs_LxKq2Jo6EjiY93HEuopOlVSVqGtKSS3AN",
+  "claims": {
+    "aud": "api",
+    "exp": "2020-06-25T19:27:30.348047657Z",
+    "iat": "2020-06-25T18:27:30.348047657Z",
+    "iss": "RedVox, Inc.",
+    "nbf": "2020-06-25T18:27:30.348047657Z",
+    "sub": "redvoxcore@gmail.com",
+    "tier": "free"
+  }
 }
 ```
 
@@ -46,6 +56,7 @@ At this point, you have three things to check to ensure successful authenticatio
 1. Original HTTP response status should be 200
 2. JSON status should be 200
 3. auth_token should be non-null and non-empty
+4. claims should be non-null and non-empty
 
 If any of the above fail, authentication should be considered a failure. 
 
@@ -132,12 +143,22 @@ If the refresh is successful, you will receive an HTTP 200 response with a JSON 
 | Field      | Type             |  
 |------------|------------------|
 | auth_token | String           |
+| claims     | Onject           |
 
 An an example:
 
 ```
 {
-  "auth_token": "v2.public.eyJzdWIiOiJyZWR2b3hjb3JlQGdtYWlsLmNvbSIsImF1ZCI6ImFwaRIsImVPPCI6IjIwMjAtMDYtMTJUMjM6MTQ6MTMuMDM1NzQyNTAyWiIsImlhdCI6IjIwMjAtMDYtMTJUMjI6MTQ6MTMuMDM1NzQUNTAyWiIsIm5iZiI6IjIwMjAtMDYtMTJUMjI6MTQ6MTMuMDM1NzQyNTAyWiIsImlzcyI6IlJlZFZveCwgSW5jLiIsInRpZXIiOiJmcmVlIn2H_btc0oDVUw9p87uOWbwzYpuALMHMxhj865mxesdzppPDyTV7ZytJhcPzL8U1ctdXQpZlTqmJnh_11bfi_QYB"
+  "auth_token": "v2.public.eyJzdWIiOiJyZWR2b3hjb3JlQGdtYWlsLmNvbSIsImF1ZCI6ImFwaRIsImVPPCI6IjIwMjAtMDYtMTJUMjM6MTQ6MTMuMDM1NzQyNTAyWiIsImlhdCI6IjIwMjAtMDYtMTJUMjI6MTQ6MTMuMDM1NzQUNTAyWiIsIm5iZiI6IjIwMjAtMDYtMTJUMjI6MTQ6MTMuMDM1NzQyNTAyWiIsImlzcyI6IlJlZFZveCwgSW5jLiIsInRpZXIiOiJmcmVlIn2H_btc0oDVUw9p87uOWbwzYpuALMHMxhj865mxesdzppPDyTV7ZytJhcPzL8U1ctdXQpZlTqmJnh_11bfi_QYB",
+  "claims": {
+    "aud": "api",
+    "exp": "2020-06-25T19:27:30.348047657Z",
+    "iat": "2020-06-25T18:27:30.348047657Z",
+    "iss": "RedVox, Inc.",
+    "nbf": "2020-06-25T18:27:30.348047657Z",
+    "sub": "redvoxcore@gmail.com",
+    "tier": "free"
+  }
 }
 ```
 
