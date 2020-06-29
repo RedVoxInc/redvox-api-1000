@@ -130,7 +130,7 @@ To refresh a valid token, send an HTTP `POST` request to `https://host:port/api/
 |------------|------------------|
 | auth_token | String           |
 
-An an example:
+As an example:
 
 ```
 {
@@ -145,7 +145,7 @@ If the refresh is successful, you will receive an HTTP 200 response with a JSON 
 | auth_token | String           |
 | claims     | Onject           |
 
-An an example:
+As an example:
 
 ```
 {
