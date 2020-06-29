@@ -10,6 +10,10 @@ if ! [[ -x "$(command -v protoc-gen-mypy)" ]]; then
   exit 1
 fi
 
+set -o nounset
+set -o errexit
+set -o xtrace
+
 SRC=src/redvox_api_m/redvox_api_m.proto
 
 OUT=src/generated
