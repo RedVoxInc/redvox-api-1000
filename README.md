@@ -6,7 +6,7 @@ This repository contains the RedVox API 1000 protocol definition as well as seve
 
 ### Specification
 
-The RedVox API 1000 specification can be found at https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/src/redvox_api1000/redvox_api_1000.proto
+The RedVox API 1000 specification can be found at https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/src/redvox_api_m/redvox_api_m.proto
 
 It's fairly small and fairly readable. This is the best and first place to refer for documentation for API 1000.
 
