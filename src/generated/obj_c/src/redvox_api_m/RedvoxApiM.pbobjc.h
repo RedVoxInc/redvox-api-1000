@@ -1638,7 +1638,7 @@ void SetRedvoxPacketM_TimingPayload_Unit_RawValue(RedvoxPacketM_TimingPayload *m
 typedef GPB_ENUM(RedvoxPacketM_SummaryStatistics_FieldNumber) {
   RedvoxPacketM_SummaryStatistics_FieldNumber_Count = 1,
   RedvoxPacketM_SummaryStatistics_FieldNumber_Mean = 2,
-  RedvoxPacketM_SummaryStatistics_FieldNumber_Variance = 3,
+  RedvoxPacketM_SummaryStatistics_FieldNumber_StandardDeviation = 3,
   RedvoxPacketM_SummaryStatistics_FieldNumber_Min = 4,
   RedvoxPacketM_SummaryStatistics_FieldNumber_Max = 5,
   RedvoxPacketM_SummaryStatistics_FieldNumber_Range = 6,
@@ -1656,8 +1656,8 @@ GPB_FINAL @interface RedvoxPacketM_SummaryStatistics : GPBMessage
 /** The mean of the values */
 @property(nonatomic, readwrite) float mean;
 
-/** The variance of the values */
-@property(nonatomic, readwrite) float variance;
+/** The standard deviation of the values */
+@property(nonatomic, readwrite) float standardDeviation;
 
 /** The minimum value */
 @property(nonatomic, readwrite) float min;

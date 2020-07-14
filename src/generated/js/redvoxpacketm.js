@@ -8236,7 +8236,7 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.toObject = function(includeIn
   var f, obj = {
     count: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
     mean: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
-    variance: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
+    standardDeviation: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
     min: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
     max: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 0.0),
     range: jspb.Message.getFloatingPointFieldWithDefault(msg, 6, 0.0),
@@ -8287,7 +8287,7 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.deserializeBinaryFromReader =
       break;
     case 3:
       var value = /** @type {number} */ (reader.readFloat());
-      msg.setVariance(value);
+      msg.setStandardDeviation(value);
       break;
     case 4:
       var value = /** @type {number} */ (reader.readFloat());
@@ -8350,7 +8350,7 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.serializeBinaryToWriter = fun
       f
     );
   }
-  f = message.getVariance();
+  f = message.getStandardDeviation();
   if (f !== 0.0) {
     writer.writeFloat(
       3,
@@ -8422,10 +8422,10 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setMean = function(
 
 
 /**
- * optional float variance = 3;
+ * optional float standard_deviation = 3;
  * @return {number}
  */
-proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getVariance = function() {
+proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getStandardDeviation = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 3, 0.0));
 };
 
@@ -8434,7 +8434,7 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getVariance = funct
  * @param {number} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.SummaryStatistics} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setVariance = function(value) {
+proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setStandardDeviation = function(value) {
   return jspb.Message.setProto3FloatField(this, 3, value);
 };
 

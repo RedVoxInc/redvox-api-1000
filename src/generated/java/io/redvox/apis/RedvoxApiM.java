@@ -40227,13 +40227,13 @@ public final class RedvoxApiM {
 
       /**
        * <pre>
-       * The variance of the values
+       * The standard deviation of the values
        * </pre>
        *
-       * <code>float variance = 3;</code>
-       * @return The variance.
+       * <code>float standard_deviation = 3;</code>
+       * @return The standardDeviation.
        */
-      float getVariance();
+      float getStandardDeviation();
 
       /**
        * <pre>
@@ -40381,7 +40381,7 @@ public final class RedvoxApiM {
               }
               case 29: {
 
-                variance_ = input.readFloat();
+                standardDeviation_ = input.readFloat();
                 break;
               }
               case 37: {
@@ -40486,19 +40486,19 @@ public final class RedvoxApiM {
         return mean_;
       }
 
-      public static final int VARIANCE_FIELD_NUMBER = 3;
-      private float variance_;
+      public static final int STANDARD_DEVIATION_FIELD_NUMBER = 3;
+      private float standardDeviation_;
       /**
        * <pre>
-       * The variance of the values
+       * The standard deviation of the values
        * </pre>
        *
-       * <code>float variance = 3;</code>
-       * @return The variance.
+       * <code>float standard_deviation = 3;</code>
+       * @return The standardDeviation.
        */
       @java.lang.Override
-      public float getVariance() {
-        return variance_;
+      public float getStandardDeviation() {
+        return standardDeviation_;
       }
 
       public static final int MIN_FIELD_NUMBER = 4;
@@ -40663,8 +40663,8 @@ public final class RedvoxApiM {
         if (mean_ != 0F) {
           output.writeFloat(2, mean_);
         }
-        if (variance_ != 0F) {
-          output.writeFloat(3, variance_);
+        if (standardDeviation_ != 0F) {
+          output.writeFloat(3, standardDeviation_);
         }
         if (min_ != 0F) {
           output.writeFloat(4, min_);
@@ -40698,9 +40698,9 @@ public final class RedvoxApiM {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(2, mean_);
         }
-        if (variance_ != 0F) {
+        if (standardDeviation_ != 0F) {
           size += com.google.protobuf.CodedOutputStream
-            .computeFloatSize(3, variance_);
+            .computeFloatSize(3, standardDeviation_);
         }
         if (min_ != 0F) {
           size += com.google.protobuf.CodedOutputStream
@@ -40745,9 +40745,9 @@ public final class RedvoxApiM {
         if (java.lang.Float.floatToIntBits(getMean())
             != java.lang.Float.floatToIntBits(
                 other.getMean())) return false;
-        if (java.lang.Float.floatToIntBits(getVariance())
+        if (java.lang.Float.floatToIntBits(getStandardDeviation())
             != java.lang.Float.floatToIntBits(
-                other.getVariance())) return false;
+                other.getStandardDeviation())) return false;
         if (java.lang.Float.floatToIntBits(getMin())
             != java.lang.Float.floatToIntBits(
                 other.getMin())) return false;
@@ -40776,9 +40776,9 @@ public final class RedvoxApiM {
         hash = (37 * hash) + MEAN_FIELD_NUMBER;
         hash = (53 * hash) + java.lang.Float.floatToIntBits(
             getMean());
-        hash = (37 * hash) + VARIANCE_FIELD_NUMBER;
+        hash = (37 * hash) + STANDARD_DEVIATION_FIELD_NUMBER;
         hash = (53 * hash) + java.lang.Float.floatToIntBits(
-            getVariance());
+            getStandardDeviation());
         hash = (37 * hash) + MIN_FIELD_NUMBER;
         hash = (53 * hash) + java.lang.Float.floatToIntBits(
             getMin());
@@ -40955,7 +40955,7 @@ public final class RedvoxApiM {
 
           mean_ = 0F;
 
-          variance_ = 0F;
+          standardDeviation_ = 0F;
 
           min_ = 0F;
 
@@ -40993,7 +40993,7 @@ public final class RedvoxApiM {
           int from_bitField0_ = bitField0_;
           result.count_ = count_;
           result.mean_ = mean_;
-          result.variance_ = variance_;
+          result.standardDeviation_ = standardDeviation_;
           result.min_ = min_;
           result.max_ = max_;
           result.range_ = range_;
@@ -41053,8 +41053,8 @@ public final class RedvoxApiM {
           if (other.getMean() != 0F) {
             setMean(other.getMean());
           }
-          if (other.getVariance() != 0F) {
-            setVariance(other.getVariance());
+          if (other.getStandardDeviation() != 0F) {
+            setStandardDeviation(other.getStandardDeviation());
           }
           if (other.getMin() != 0F) {
             setMin(other.getMin());
@@ -41183,45 +41183,45 @@ public final class RedvoxApiM {
           return this;
         }
 
-        private float variance_ ;
+        private float standardDeviation_ ;
         /**
          * <pre>
-         * The variance of the values
+         * The standard deviation of the values
          * </pre>
          *
-         * <code>float variance = 3;</code>
-         * @return The variance.
+         * <code>float standard_deviation = 3;</code>
+         * @return The standardDeviation.
          */
         @java.lang.Override
-        public float getVariance() {
-          return variance_;
+        public float getStandardDeviation() {
+          return standardDeviation_;
         }
         /**
          * <pre>
-         * The variance of the values
+         * The standard deviation of the values
          * </pre>
          *
-         * <code>float variance = 3;</code>
-         * @param value The variance to set.
+         * <code>float standard_deviation = 3;</code>
+         * @param value The standardDeviation to set.
          * @return This builder for chaining.
          */
-        public Builder setVariance(float value) {
+        public Builder setStandardDeviation(float value) {
           
-          variance_ = value;
+          standardDeviation_ = value;
           onChanged();
           return this;
         }
         /**
          * <pre>
-         * The variance of the values
+         * The standard deviation of the values
          * </pre>
          *
-         * <code>float variance = 3;</code>
+         * <code>float standard_deviation = 3;</code>
          * @return This builder for chaining.
          */
-        public Builder clearVariance() {
+        public Builder clearStandardDeviation() {
           
-          variance_ = 0F;
+          standardDeviation_ = 0F;
           onChanged();
           return this;
         }
@@ -49253,7 +49253,7 @@ public final class RedvoxApiM {
   static {
     java.lang.String[] descriptorData = {
       "\n#src/redvox_api_m/redvox_api_m.proto\022\014r" +
-      "edvox_api_m\"\320U\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
+      "edvox_api_m\"\332U\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
       "(\002\022K\n\023station_information\030\002 \001(\0132..redvox" +
       "_api_m.RedvoxPacketM.StationInformation\022" +
       "I\n\022timing_information\030\003 \001(\0132-.redvox_api" +
@@ -49511,42 +49511,42 @@ public final class RedvoxApiM {
       "tdev_sample_rate\030\005 \001(\002\022I\n\010metadata\030\006 \003(\013" +
       "27.redvox_api_m.RedvoxPacketM.TimingPayl" +
       "oad.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\353\001\n\021SummarySt" +
-      "atistics\022\r\n\005count\030\001 \001(\002\022\014\n\004mean\030\002 \001(\002\022\020\n" +
-      "\010variance\030\003 \001(\002\022\013\n\003min\030\004 \001(\002\022\013\n\003max\030\005 \001(" +
-      "\002\022\r\n\005range\030\006 \001(\002\022M\n\010metadata\030\007 \003(\0132;.red" +
-      "vox_api_m.RedvoxPacketM.SummaryStatistic" +
-      "s.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\203\003\n\004Unit\022\035\n\031MET" +
-      "ERS_PER_SECOND_SQUARED\020\000\022\016\n\nKILOPASCAL\020\001" +
-      "\022\026\n\022RADIANS_PER_SECOND\020\002\022\023\n\017DECIMAL_DEGR" +
-      "EES\020\003\022\n\n\006METERS\020\004\022\025\n\021METERS_PER_SECOND\020\005" +
-      "\022\016\n\nMICROTESLA\020\006\022\031\n\025LSB_PLUS_MINUS_COUNT" +
-      "S\020\007\022!\n\035MICROSECONDS_SINCE_UNIX_EPOCH\020\010\022\013" +
-      "\n\007DECIBEL\020\t\022\023\n\017DEGREES_CELSIUS\020\n\022\010\n\004BYTE" +
-      "\020\013\022\016\n\nPERCENTAGE\020\014\022\013\n\007RADIANS\020\r\022\020\n\014MICRO" +
-      "AMPERES\020\016\022\017\n\013CENTIMETERS\020\017\022\025\n\021NORMALIZED" +
-      "_COUNTS\020\020\022\007\n\003LUX\020\021\022\014\n\010UNITLESS\020\022\022\007\n\003PCM\020" +
-      "\023\022\013\n\007UNKNOWN\020\024\"\254\001\n\026EncryptedRedvoxPacket" +
-      "M\022\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014\032r\n\006Hea" +
-      "der\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030" +
-      "\002 \001(\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016firebase_to" +
-      "ken\030\004 \001(\t\022\022\n\nauth_email\030\005 \001(\t\"y\n\022Acquisi" +
-      "tionRequest\022\022\n\nauth_token\030\001 \001(\t\022\026\n\016fireb" +
-      "ase_token\030\002 \001(\t\022\020\n\010checksum\030\003 \001(\003\022\024\n\014is_" +
-      "encrypted\030\004 \001(\010\022\017\n\007payload\030\005 \001(\014\"\330\001\n\023Acq" +
-      "uisitionResponse\022E\n\rresponse_type\030\001 \001(\0162" +
-      "..redvox_api_m.AcquisitionResponse.Respo" +
-      "nseType\022\020\n\010checksum\030\002 \001(\003\022\017\n\007details\030\003 \001" +
-      "(\t\022\016\n\006resend\030\004 \001(\010\"G\n\014ResponseType\022\006\n\002OK" +
-      "\020\000\022\016\n\nAUTH_ERROR\020\001\022\016\n\nDATA_ERROR\020\002\022\017\n\013OT" +
-      "HER_ERROR\020\003\"\\\n\014SynchRequest\022\022\n\nstation_i" +
-      "d\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\016\n\006seq_id\030" +
-      "\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001\n\rSynchRespo" +
-      "nse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030" +
-      "\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(" +
-      "\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsend_ts_us\030\006 \001(" +
-      "\004B\020\n\016io.redvox.apisb\006proto3"
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\365\001\n\021SummarySt" +
+      "atistics\022\r\n\005count\030\001 \001(\002\022\014\n\004mean\030\002 \001(\002\022\032\n" +
+      "\022standard_deviation\030\003 \001(\002\022\013\n\003min\030\004 \001(\002\022\013" +
+      "\n\003max\030\005 \001(\002\022\r\n\005range\030\006 \001(\002\022M\n\010metadata\030\007" +
+      " \003(\0132;.redvox_api_m.RedvoxPacketM.Summar" +
+      "yStatistics.MetadataEntry\032/\n\rMetadataEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\203\003\n\004U" +
+      "nit\022\035\n\031METERS_PER_SECOND_SQUARED\020\000\022\016\n\nKI" +
+      "LOPASCAL\020\001\022\026\n\022RADIANS_PER_SECOND\020\002\022\023\n\017DE" +
+      "CIMAL_DEGREES\020\003\022\n\n\006METERS\020\004\022\025\n\021METERS_PE" +
+      "R_SECOND\020\005\022\016\n\nMICROTESLA\020\006\022\031\n\025LSB_PLUS_M" +
+      "INUS_COUNTS\020\007\022!\n\035MICROSECONDS_SINCE_UNIX" +
+      "_EPOCH\020\010\022\013\n\007DECIBEL\020\t\022\023\n\017DEGREES_CELSIUS" +
+      "\020\n\022\010\n\004BYTE\020\013\022\016\n\nPERCENTAGE\020\014\022\013\n\007RADIANS\020" +
+      "\r\022\020\n\014MICROAMPERES\020\016\022\017\n\013CENTIMETERS\020\017\022\025\n\021" +
+      "NORMALIZED_COUNTS\020\020\022\007\n\003LUX\020\021\022\014\n\010UNITLESS" +
+      "\020\022\022\007\n\003PCM\020\023\022\013\n\007UNKNOWN\020\024\"\254\001\n\026EncryptedRe" +
+      "dvoxPacketM\022\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 " +
+      "\001(\014\032r\n\006Header\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014sta" +
+      "tion_uuid\030\002 \001(\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016f" +
+      "irebase_token\030\004 \001(\t\022\022\n\nauth_email\030\005 \001(\t\"" +
+      "y\n\022AcquisitionRequest\022\022\n\nauth_token\030\001 \001(" +
+      "\t\022\026\n\016firebase_token\030\002 \001(\t\022\020\n\010checksum\030\003 " +
+      "\001(\003\022\024\n\014is_encrypted\030\004 \001(\010\022\017\n\007payload\030\005 \001" +
+      "(\014\"\330\001\n\023AcquisitionResponse\022E\n\rresponse_t" +
+      "ype\030\001 \001(\0162..redvox_api_m.AcquisitionResp" +
+      "onse.ResponseType\022\020\n\010checksum\030\002 \001(\003\022\017\n\007d" +
+      "etails\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"G\n\014Response" +
+      "Type\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001\022\016\n\nDATA_ERR" +
+      "OR\020\002\022\017\n\013OTHER_ERROR\020\003\"\\\n\014SynchRequest\022\022\n" +
+      "\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022" +
+      "\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001\n\r" +
+      "SynchResponse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014sta" +
+      "tion_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_s" +
+      "eq_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsend_" +
+      "ts_us\030\006 \001(\004B\020\n\016io.redvox.apisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -49749,7 +49749,7 @@ public final class RedvoxApiM {
     internal_static_redvox_api_m_RedvoxPacketM_SummaryStatistics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_RedvoxPacketM_SummaryStatistics_descriptor,
-        new java.lang.String[] { "Count", "Mean", "Variance", "Min", "Max", "Range", "Metadata", });
+        new java.lang.String[] { "Count", "Mean", "StandardDeviation", "Min", "Max", "Range", "Metadata", });
     internal_static_redvox_api_m_RedvoxPacketM_SummaryStatistics_MetadataEntry_descriptor =
       internal_static_redvox_api_m_RedvoxPacketM_SummaryStatistics_descriptor.getNestedTypes().get(0);
     internal_static_redvox_api_m_RedvoxPacketM_SummaryStatistics_MetadataEntry_fieldAccessorTable = new

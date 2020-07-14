@@ -3215,7 +3215,7 @@ void SetRedvoxPacketM_TimingPayload_Unit_RawValue(RedvoxPacketM_TimingPayload *m
 
 @dynamic count;
 @dynamic mean;
-@dynamic variance;
+@dynamic standardDeviation;
 @dynamic min;
 @dynamic max;
 @dynamic range;
@@ -3225,7 +3225,7 @@ typedef struct RedvoxPacketM_SummaryStatistics__storage_ {
   uint32_t _has_storage_[1];
   float count;
   float mean;
-  float variance;
+  float standardDeviation;
   float min;
   float max;
   float range;
@@ -3257,11 +3257,11 @@ typedef struct RedvoxPacketM_SummaryStatistics__storage_ {
         .dataType = GPBDataTypeFloat,
       },
       {
-        .name = "variance",
+        .name = "standardDeviation",
         .dataTypeSpecific.clazz = Nil,
-        .number = RedvoxPacketM_SummaryStatistics_FieldNumber_Variance,
+        .number = RedvoxPacketM_SummaryStatistics_FieldNumber_StandardDeviation,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, variance),
+        .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, standardDeviation),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
