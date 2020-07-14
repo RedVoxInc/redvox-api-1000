@@ -590,7 +590,9 @@ proto.redvox_api_m.RedvoxPacketM.Unit = {
   CENTIMETERS: 15,
   NORMALIZED_COUNTS: 16,
   LUX: 17,
-  UNITLESS: 18
+  UNITLESS: 18,
+  PCM: 19,
+  UNKNOWN: 20
 };
 
 
@@ -627,13 +629,14 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.toObject = function(includeI
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     uuid: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    authId: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    make: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    model: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    os: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    osVersion: jspb.Message.getFieldWithDefault(msg, 7, ""),
-    appVersion: jspb.Message.getFieldWithDefault(msg, 8, ""),
-    isPrivate: jspb.Message.getBooleanFieldWithDefault(msg, 9, false),
+    description: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    authId: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    make: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    model: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    os: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    osVersion: jspb.Message.getFieldWithDefault(msg, 8, ""),
+    appVersion: jspb.Message.getFieldWithDefault(msg, 9, ""),
+    isPrivate: jspb.Message.getBooleanFieldWithDefault(msg, 10, false),
     appSettings: (f = msg.getAppSettings()) && proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.toObject(includeInstance, f),
     stationMetrics: (f = msg.getStationMetrics()) && proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.toObject(includeInstance, f),
     serviceUrls: (f = msg.getServiceUrls()) && proto.redvox_api_m.RedvoxPacketM.StationInformation.ServiceUrls.toObject(includeInstance, f),
@@ -684,48 +687,52 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.deserializeBinaryFromReader 
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
-      msg.setAuthId(value);
+      msg.setDescription(value);
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
-      msg.setMake(value);
+      msg.setAuthId(value);
       break;
     case 5:
       var value = /** @type {string} */ (reader.readString());
-      msg.setModel(value);
+      msg.setMake(value);
       break;
     case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setModel(value);
+      break;
+    case 7:
       var value = /** @type {!proto.redvox_api_m.RedvoxPacketM.StationInformation.OsType} */ (reader.readEnum());
       msg.setOs(value);
       break;
-    case 7:
+    case 8:
       var value = /** @type {string} */ (reader.readString());
       msg.setOsVersion(value);
       break;
-    case 8:
+    case 9:
       var value = /** @type {string} */ (reader.readString());
       msg.setAppVersion(value);
       break;
-    case 9:
+    case 10:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setIsPrivate(value);
       break;
-    case 10:
+    case 11:
       var value = new proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings;
       reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.deserializeBinaryFromReader);
       msg.setAppSettings(value);
       break;
-    case 11:
+    case 12:
       var value = new proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics;
       reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.deserializeBinaryFromReader);
       msg.setStationMetrics(value);
       break;
-    case 12:
+    case 13:
       var value = new proto.redvox_api_m.RedvoxPacketM.StationInformation.ServiceUrls;
       reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.StationInformation.ServiceUrls.deserializeBinaryFromReader);
       msg.setServiceUrls(value);
       break;
-    case 13:
+    case 14:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
@@ -774,59 +781,66 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.serializeBinaryToWriter = fu
       f
     );
   }
-  f = message.getAuthId();
+  f = message.getDescription();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
     );
   }
-  f = message.getMake();
+  f = message.getAuthId();
   if (f.length > 0) {
     writer.writeString(
       4,
       f
     );
   }
-  f = message.getModel();
+  f = message.getMake();
   if (f.length > 0) {
     writer.writeString(
       5,
       f
     );
   }
+  f = message.getModel();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
+      f
+    );
+  }
   f = message.getOs();
   if (f !== 0.0) {
     writer.writeEnum(
-      6,
+      7,
       f
     );
   }
   f = message.getOsVersion();
   if (f.length > 0) {
     writer.writeString(
-      7,
+      8,
       f
     );
   }
   f = message.getAppVersion();
   if (f.length > 0) {
     writer.writeString(
-      8,
+      9,
       f
     );
   }
   f = message.getIsPrivate();
   if (f) {
     writer.writeBool(
-      9,
+      10,
       f
     );
   }
   f = message.getAppSettings();
   if (f != null) {
     writer.writeMessage(
-      10,
+      11,
       f,
       proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.serializeBinaryToWriter
     );
@@ -834,7 +848,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.serializeBinaryToWriter = fu
   f = message.getStationMetrics();
   if (f != null) {
     writer.writeMessage(
-      11,
+      12,
       f,
       proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.serializeBinaryToWriter
     );
@@ -842,14 +856,14 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.serializeBinaryToWriter = fu
   f = message.getServiceUrls();
   if (f != null) {
     writer.writeMessage(
-      12,
+      13,
       f,
       proto.redvox_api_m.RedvoxPacketM.StationInformation.ServiceUrls.serializeBinaryToWriter
     );
   }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(13, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(14, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -1372,7 +1386,9 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.serializeBina
 proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.NetworkType = {
   NO_NETWORK: 0,
   WIFI: 1,
-  CELLULAR: 2
+  CELLULAR: 2,
+  WIRED: 3,
+  UNKNOWN_NETWORK: 4
 };
 
 /**
@@ -1402,7 +1418,8 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.CellServiceSt
 proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.PowerState = {
   UNPLUGGED: 0,
   CHARGING: 1,
-  CHARGED: 2
+  CHARGED: 2,
+  UNKNOWN_POWER_STATE: 3
 };
 
 /**
@@ -2252,7 +2269,8 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.serializeBinaryT
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap = {
   PERCENT_25: 0,
   PERCENT_50: 1,
-  PERCENT_75: 2
+  PERCENT_75: 2,
+  UNKNOWN: 3
 };
 
 /**
@@ -2272,7 +2290,8 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRat
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning = {
   INFRASOUND_TUNING: 0,
   LOW_AUDIO_TUNING: 1,
-  AUDIO_TUNING: 2
+  AUDIO_TUNING: 2,
+  UNKNOWN_TUNING: 3
 };
 
 /**
@@ -2294,7 +2313,8 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor = {
   PRESSURE: 12,
   PROXIMITY: 13,
   RELATIVE_HUMIDITY: 14,
-  ROTATION_VECTOR: 15
+  ROTATION_VECTOR: 15,
+  UNKNOWN_SENSOR: 16
 };
 
 /**
@@ -2789,10 +2809,10 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setUuid = function
 
 
 /**
- * optional string auth_id = 3;
+ * optional string description = 3;
  * @return {string}
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getAuthId = function() {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getDescription = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
@@ -2801,16 +2821,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getAuthId = functi
  * @param {string} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setAuthId = function(value) {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setDescription = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
- * optional string make = 4;
+ * optional string auth_id = 4;
  * @return {string}
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getMake = function() {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getAuthId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
@@ -2819,16 +2839,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getMake = function
  * @param {string} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setMake = function(value) {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setAuthId = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
 /**
- * optional string model = 5;
+ * optional string make = 5;
  * @return {string}
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getModel = function() {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getMake = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
@@ -2837,17 +2857,35 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getModel = functio
  * @param {string} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setModel = function(value) {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setMake = function(value) {
   return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
 /**
- * optional OsType os = 6;
+ * optional string model = 6;
+ * @return {string}
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getModel = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation} returns this
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setModel = function(value) {
+  return jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+/**
+ * optional OsType os = 7;
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.OsType}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getOs = function() {
-  return /** @type {!proto.redvox_api_m.RedvoxPacketM.StationInformation.OsType} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+  return /** @type {!proto.redvox_api_m.RedvoxPacketM.StationInformation.OsType} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
 };
 
 
@@ -2856,33 +2894,15 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getOs = function()
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setOs = function(value) {
-  return jspb.Message.setProto3EnumField(this, 6, value);
+  return jspb.Message.setProto3EnumField(this, 7, value);
 };
 
 
 /**
- * optional string os_version = 7;
+ * optional string os_version = 8;
  * @return {string}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getOsVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation} returns this
- */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setOsVersion = function(value) {
-  return jspb.Message.setProto3StringField(this, 7, value);
-};
-
-
-/**
- * optional string app_version = 8;
- * @return {string}
- */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getAppVersion = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
 };
 
@@ -2891,17 +2911,35 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getAppVersion = fu
  * @param {string} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setAppVersion = function(value) {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setOsVersion = function(value) {
   return jspb.Message.setProto3StringField(this, 8, value);
 };
 
 
 /**
- * optional bool is_private = 9;
+ * optional string app_version = 9;
+ * @return {string}
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getAppVersion = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation} returns this
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setAppVersion = function(value) {
+  return jspb.Message.setProto3StringField(this, 9, value);
+};
+
+
+/**
+ * optional bool is_private = 10;
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getIsPrivate = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 9, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 10, false));
 };
 
 
@@ -2910,17 +2948,17 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getIsPrivate = fun
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setIsPrivate = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 9, value);
+  return jspb.Message.setProto3BooleanField(this, 10, value);
 };
 
 
 /**
- * optional AppSettings app_settings = 10;
+ * optional AppSettings app_settings = 11;
  * @return {?proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getAppSettings = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings, 10));
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings, 11));
 };
 
 
@@ -2929,7 +2967,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getAppSettings = f
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation} returns this
 */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setAppSettings = function(value) {
-  return jspb.Message.setWrapperField(this, 10, value);
+  return jspb.Message.setWrapperField(this, 11, value);
 };
 
 
@@ -2947,17 +2985,17 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.clearAppSettings =
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.hasAppSettings = function() {
-  return jspb.Message.getField(this, 10) != null;
+  return jspb.Message.getField(this, 11) != null;
 };
 
 
 /**
- * optional StationMetrics station_metrics = 11;
+ * optional StationMetrics station_metrics = 12;
  * @return {?proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getStationMetrics = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics, 11));
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics, 12));
 };
 
 
@@ -2966,7 +3004,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getStationMetrics 
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation} returns this
 */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setStationMetrics = function(value) {
-  return jspb.Message.setWrapperField(this, 11, value);
+  return jspb.Message.setWrapperField(this, 12, value);
 };
 
 
@@ -2984,17 +3022,17 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.clearStationMetric
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.hasStationMetrics = function() {
-  return jspb.Message.getField(this, 11) != null;
+  return jspb.Message.getField(this, 12) != null;
 };
 
 
 /**
- * optional ServiceUrls service_urls = 12;
+ * optional ServiceUrls service_urls = 13;
  * @return {?proto.redvox_api_m.RedvoxPacketM.StationInformation.ServiceUrls}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getServiceUrls = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.StationInformation.ServiceUrls} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.StationInformation.ServiceUrls, 12));
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.StationInformation.ServiceUrls, 13));
 };
 
 
@@ -3003,7 +3041,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getServiceUrls = f
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation} returns this
 */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.setServiceUrls = function(value) {
-  return jspb.Message.setWrapperField(this, 12, value);
+  return jspb.Message.setWrapperField(this, 13, value);
 };
 
 
@@ -3021,19 +3059,19 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.clearServiceUrls =
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.hasServiceUrls = function() {
-  return jspb.Message.getField(this, 12) != null;
+  return jspb.Message.getField(this, 13) != null;
 };
 
 
 /**
- * map<string, string> metadata = 13;
+ * map<string, string> metadata = 14;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 13, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 14, opt_noLazyCreate,
       null));
 };
 
@@ -4806,7 +4844,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.CompressedAudio.serializeBinaryToWriter
  * @enum {number}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.CompressedAudio.AudioCodec = {
-  TODO: 0
+  FLAC: 0
 };
 
 /**
@@ -5637,7 +5675,8 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider = {
   NONE: 0,
   USER: 1,
   GPS: 2,
-  NETWORK: 3
+  NETWORK: 3,
+  UNKNOWN: 4
 };
 
 /**
@@ -6789,7 +6828,8 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Image.serializeBinaryToWriter = functio
 proto.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec = {
   PNG: 0,
   JPG: 1,
-  BMP: 2
+  BMP: 2,
+  UNKNOWN: 3
 };
 
 /**
@@ -8196,12 +8236,10 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.toObject = function(includeIn
   var f, obj = {
     count: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
     mean: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
-    median: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
-    mode: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
-    variance: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 0.0),
-    min: jspb.Message.getFloatingPointFieldWithDefault(msg, 6, 0.0),
-    max: jspb.Message.getFloatingPointFieldWithDefault(msg, 7, 0.0),
-    range: jspb.Message.getFloatingPointFieldWithDefault(msg, 8, 0.0),
+    variance: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
+    min: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
+    max: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 0.0),
+    range: jspb.Message.getFloatingPointFieldWithDefault(msg, 6, 0.0),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -8249,29 +8287,21 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.deserializeBinaryFromReader =
       break;
     case 3:
       var value = /** @type {number} */ (reader.readFloat());
-      msg.setMedian(value);
+      msg.setVariance(value);
       break;
     case 4:
       var value = /** @type {number} */ (reader.readFloat());
-      msg.setMode(value);
+      msg.setMin(value);
       break;
     case 5:
       var value = /** @type {number} */ (reader.readFloat());
-      msg.setVariance(value);
+      msg.setMax(value);
       break;
     case 6:
       var value = /** @type {number} */ (reader.readFloat());
-      msg.setMin(value);
-      break;
-    case 7:
-      var value = /** @type {number} */ (reader.readFloat());
-      msg.setMax(value);
-      break;
-    case 8:
-      var value = /** @type {number} */ (reader.readFloat());
       msg.setRange(value);
       break;
-    case 9:
+    case 7:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
@@ -8320,51 +8350,37 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.serializeBinaryToWriter = fun
       f
     );
   }
-  f = message.getMedian();
+  f = message.getVariance();
   if (f !== 0.0) {
     writer.writeFloat(
       3,
       f
     );
   }
-  f = message.getMode();
+  f = message.getMin();
   if (f !== 0.0) {
     writer.writeFloat(
       4,
       f
     );
   }
-  f = message.getVariance();
+  f = message.getMax();
   if (f !== 0.0) {
     writer.writeFloat(
       5,
       f
     );
   }
-  f = message.getMin();
+  f = message.getRange();
   if (f !== 0.0) {
     writer.writeFloat(
       6,
       f
     );
   }
-  f = message.getMax();
-  if (f !== 0.0) {
-    writer.writeFloat(
-      7,
-      f
-    );
-  }
-  f = message.getRange();
-  if (f !== 0.0) {
-    writer.writeFloat(
-      8,
-      f
-    );
-  }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(9, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(7, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -8406,10 +8422,10 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setMean = function(
 
 
 /**
- * optional float median = 3;
+ * optional float variance = 3;
  * @return {number}
  */
-proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getMedian = function() {
+proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getVariance = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 3, 0.0));
 };
 
@@ -8418,16 +8434,16 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getMedian = functio
  * @param {number} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.SummaryStatistics} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setMedian = function(value) {
+proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setVariance = function(value) {
   return jspb.Message.setProto3FloatField(this, 3, value);
 };
 
 
 /**
- * optional float mode = 4;
+ * optional float min = 4;
  * @return {number}
  */
-proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getMode = function() {
+proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getMin = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
 };
 
@@ -8436,16 +8452,16 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getMode = function(
  * @param {number} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.SummaryStatistics} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setMode = function(value) {
+proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setMin = function(value) {
   return jspb.Message.setProto3FloatField(this, 4, value);
 };
 
 
 /**
- * optional float variance = 5;
+ * optional float max = 5;
  * @return {number}
  */
-proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getVariance = function() {
+proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getMax = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 5, 0.0));
 };
 
@@ -8454,16 +8470,16 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getVariance = funct
  * @param {number} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.SummaryStatistics} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setVariance = function(value) {
+proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setMax = function(value) {
   return jspb.Message.setProto3FloatField(this, 5, value);
 };
 
 
 /**
- * optional float min = 6;
+ * optional float range = 6;
  * @return {number}
  */
-proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getMin = function() {
+proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getRange = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 6, 0.0));
 };
 
@@ -8472,56 +8488,20 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getMin = function()
  * @param {number} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.SummaryStatistics} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setMin = function(value) {
+proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setRange = function(value) {
   return jspb.Message.setProto3FloatField(this, 6, value);
 };
 
 
 /**
- * optional float max = 7;
- * @return {number}
- */
-proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getMax = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 7, 0.0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.redvox_api_m.RedvoxPacketM.SummaryStatistics} returns this
- */
-proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setMax = function(value) {
-  return jspb.Message.setProto3FloatField(this, 7, value);
-};
-
-
-/**
- * optional float range = 8;
- * @return {number}
- */
-proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getRange = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 8, 0.0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.redvox_api_m.RedvoxPacketM.SummaryStatistics} returns this
- */
-proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setRange = function(value) {
-  return jspb.Message.setProto3FloatField(this, 8, value);
-};
-
-
-/**
- * map<string, string> metadata = 9;
+ * map<string, string> metadata = 7;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 9, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 7, opt_noLazyCreate,
       null));
 };
 
