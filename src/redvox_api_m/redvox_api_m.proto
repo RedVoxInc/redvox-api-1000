@@ -386,20 +386,17 @@ message RedvoxPacketM {
         UNITLESS = 18;
         PCM = 19;
         UNKNOWN = 20;
-
     }
 
     // Common statistics stored with payloads
     message SummaryStatistics {
         float count = 1;                   // The total count of values included in the statistics
         float mean = 2;                    // The mean of the values
-        float median = 3;                  // The median of the values
-        float mode = 4;                    // The mode of the values
-        float variance = 5;                // The variance of the values
-        float min = 6;                     // The minimum value
-        float max = 7;                     // The maximum value
-        float range = 8;                   // The range of the values
-        map<string, string> metadata = 9;  // A map from string to string for including untyped metadata
+        float variance = 3;                // The variance of the values
+        float min = 4;                     // The minimum value
+        float max = 5;                     // The maximum value
+        float range = 6;                   // The range of the values
+        map<string, string> metadata = 7;  // A map from string to string for including untyped metadata
     }
 }
 
