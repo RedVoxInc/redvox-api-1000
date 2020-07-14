@@ -73,6 +73,8 @@ message RedvoxPacketM {
                 NO_NETWORK = 0;
                 WIFI = 1;
                 CELLULAR = 2;
+                WIRED = 3;
+                UNKNOWN_NETWORK = 4;
             }
 
             // Type of WiFi wake lock un use
@@ -97,6 +99,7 @@ message RedvoxPacketM {
                 UNPLUGGED = 0;
                 CHARGING = 1;
                 CHARGED = 2;
+                UNKNOWN_POWER_STATE = 3;
             }
         }
 
@@ -131,6 +134,7 @@ message RedvoxPacketM {
                 PERCENT_25 = 0;
                 PERCENT_50 = 1;
                 PERCENT_75 = 2;
+                UNKNOWN = 3;
             }
 
             enum AudioSamplingRate {
@@ -145,6 +149,7 @@ message RedvoxPacketM {
                 INFRASOUND_TUNING = 0;
                 LOW_AUDIO_TUNING = 1;
                 AUDIO_TUNING = 2;
+                UNKNOWN_TUNING = 3;
             }
 
             enum InputSensor {
@@ -164,6 +169,7 @@ message RedvoxPacketM {
                 PROXIMITY = 13;
                 RELATIVE_HUMIDITY = 14;
                 ROTATION_VECTOR = 15;
+                UNKNOWN_SENSOR = 16;
             }
         }
     }
@@ -247,8 +253,7 @@ message RedvoxPacketM {
             map<string, string> metadata = 7;   // A map from string to string for including untyped metadata
 
             enum AudioCodec {
-                // TODO
-                TODO = 0;
+                FLAC = 0;
             }
         }
 
@@ -304,6 +309,7 @@ message RedvoxPacketM {
                 USER = 1;
                 GPS = 2;
                 NETWORK = 3;
+                UNKNOWN = 4;
             }
         }
 
@@ -332,6 +338,7 @@ message RedvoxPacketM {
                 PNG = 0;
                 JPG = 1;
                 BMP = 2;
+                UNKNOWN = 3;
             }
         }
     }
@@ -377,6 +384,9 @@ message RedvoxPacketM {
         NORMALIZED_COUNTS = 16;
         LUX = 17;
         UNITLESS = 18;
+        PCM = 19;
+        UNKNOWN = 20;
+
     }
 
     // Common statistics stored with payloads
