@@ -23,17 +23,18 @@ message RedvoxPacketM {
     message StationInformation {
         string id = 1;          // The user selectable station id
         string uuid = 2;        // The app provided UUID
-        string auth_id = 3;     // Authentication ID (user's email)
-        string make = 4;        // Make of the station
-        string model = 5;       // Model of the station
-        OsType os = 6;          // OS of the station
-        string os_version = 7;  // OS version of the station
-        string app_version = 8; // App version on the station
-        bool is_private = 9;    // If the station was set to record privately when this packet was recorded
-        AppSettings app_settings = 10;          // A copy of the App's settings
-        StationMetrics station_metrics = 11;    // Detail station performance metrics
-        ServiceUrls service_urls = 12;          // URLs of remote services utilized by this statation
-        map<string, string> metadata = 13;      // A map from string to string for including untyped metadata
+        string description = 3; // Human friendly description of station (i.e. ISLA_0)
+        string auth_id = 4;     // Authentication ID (user's email)
+        string make = 5;        // Make of the station
+        string model = 6;       // Model of the station
+        OsType os = 7;          // OS of the station
+        string os_version = 8;  // OS version of the station
+        string app_version = 9; // App version on the station
+        bool is_private = 10;    // If the station was set to record privately when this packet was recorded
+        AppSettings app_settings = 11;          // A copy of the App's settings
+        StationMetrics station_metrics = 12;    // Detail station performance metrics
+        ServiceUrls service_urls = 13;          // URLs of remote services utilized by this station
+        map<string, string> metadata = 14;      // A map from string to string for including untyped metadata
 
         // An enumeration specifying the available operating system types
         enum OsType {
