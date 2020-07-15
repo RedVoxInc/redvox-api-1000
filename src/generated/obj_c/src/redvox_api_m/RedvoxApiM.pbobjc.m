@@ -163,14 +163,15 @@ GPBEnumDescriptor *RedvoxPacketM_Unit_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "MetersPerSecondSquared\000Kilopascal\000Radian"
-        "sPerSecond\000DecimalDegrees\000Meters\000MetersP"
-        "erSecond\000Microtesla\000LsbPlusMinusCounts\000M"
-        "icrosecondsSinceUnixEpoch\000Decibel\000Degree"
-        "sCelsius\000Byte\000Percentage\000Radians\000Microam"
-        "peres\000Centimeters\000NormalizedCounts\000Lux\000U"
-        "nitless\000Pcm\000Unknown\000";
+        "Unknown\000MetersPerSecondSquared\000Kilopasca"
+        "l\000RadiansPerSecond\000DecimalDegrees\000Meters"
+        "\000MetersPerSecond\000Microtesla\000LsbPlusMinus"
+        "Counts\000MicrosecondsSinceUnixEpoch\000Decibe"
+        "l\000DegreesCelsius\000Byte\000Percentage\000Radians"
+        "\000Microamperes\000Centimeters\000NormalizedCoun"
+        "ts\000Lux\000Unitless\000Pcm\000";
     static const int32_t values[] = {
+        RedvoxPacketM_Unit_Unknown,
         RedvoxPacketM_Unit_MetersPerSecondSquared,
         RedvoxPacketM_Unit_Kilopascal,
         RedvoxPacketM_Unit_RadiansPerSecond,
@@ -191,7 +192,6 @@ GPBEnumDescriptor *RedvoxPacketM_Unit_EnumDescriptor(void) {
         RedvoxPacketM_Unit_Lux,
         RedvoxPacketM_Unit_Unitless,
         RedvoxPacketM_Unit_Pcm,
-        RedvoxPacketM_Unit_Unknown,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_Unit)
@@ -209,6 +209,7 @@ GPBEnumDescriptor *RedvoxPacketM_Unit_EnumDescriptor(void) {
 
 BOOL RedvoxPacketM_Unit_IsValidValue(int32_t value__) {
   switch (value__) {
+    case RedvoxPacketM_Unit_Unknown:
     case RedvoxPacketM_Unit_MetersPerSecondSquared:
     case RedvoxPacketM_Unit_Kilopascal:
     case RedvoxPacketM_Unit_RadiansPerSecond:
@@ -229,7 +230,6 @@ BOOL RedvoxPacketM_Unit_IsValidValue(int32_t value__) {
     case RedvoxPacketM_Unit_Lux:
     case RedvoxPacketM_Unit_Unitless:
     case RedvoxPacketM_Unit_Pcm:
-    case RedvoxPacketM_Unit_Unknown:
       return YES;
     default:
       return NO;
@@ -442,13 +442,14 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_OsType_EnumDescriptor(void) 
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Android\000Ios\000Linux\000Windows\000UnknownOs\000";
+        "UnknownOs\000Android\000Ios\000Osx\000Linux\000Windows\000";
     static const int32_t values[] = {
+        RedvoxPacketM_StationInformation_OsType_UnknownOs,
         RedvoxPacketM_StationInformation_OsType_Android,
         RedvoxPacketM_StationInformation_OsType_Ios,
+        RedvoxPacketM_StationInformation_OsType_Osx,
         RedvoxPacketM_StationInformation_OsType_Linux,
         RedvoxPacketM_StationInformation_OsType_Windows,
-        RedvoxPacketM_StationInformation_OsType_UnknownOs,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_StationInformation_OsType)
@@ -466,11 +467,12 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_OsType_EnumDescriptor(void) 
 
 BOOL RedvoxPacketM_StationInformation_OsType_IsValidValue(int32_t value__) {
   switch (value__) {
+    case RedvoxPacketM_StationInformation_OsType_UnknownOs:
     case RedvoxPacketM_StationInformation_OsType_Android:
     case RedvoxPacketM_StationInformation_OsType_Ios:
+    case RedvoxPacketM_StationInformation_OsType_Osx:
     case RedvoxPacketM_StationInformation_OsType_Linux:
     case RedvoxPacketM_StationInformation_OsType_Windows:
-    case RedvoxPacketM_StationInformation_OsType_UnknownOs:
       return YES;
     default:
       return NO;
@@ -752,14 +754,14 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_StationMetrics_NetworkType_E
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "NoNetwork\000Wifi\000Cellular\000Wired\000UnknownNet"
-        "work\000";
+        "UnknownNetwork\000NoNetwork\000Wifi\000Cellular\000W"
+        "ired\000";
     static const int32_t values[] = {
+        RedvoxPacketM_StationInformation_StationMetrics_NetworkType_UnknownNetwork,
         RedvoxPacketM_StationInformation_StationMetrics_NetworkType_NoNetwork,
         RedvoxPacketM_StationInformation_StationMetrics_NetworkType_Wifi,
         RedvoxPacketM_StationInformation_StationMetrics_NetworkType_Cellular,
         RedvoxPacketM_StationInformation_StationMetrics_NetworkType_Wired,
-        RedvoxPacketM_StationInformation_StationMetrics_NetworkType_UnknownNetwork,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_StationInformation_StationMetrics_NetworkType)
@@ -777,11 +779,11 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_StationMetrics_NetworkType_E
 
 BOOL RedvoxPacketM_StationInformation_StationMetrics_NetworkType_IsValidValue(int32_t value__) {
   switch (value__) {
+    case RedvoxPacketM_StationInformation_StationMetrics_NetworkType_UnknownNetwork:
     case RedvoxPacketM_StationInformation_StationMetrics_NetworkType_NoNetwork:
     case RedvoxPacketM_StationInformation_StationMetrics_NetworkType_Wifi:
     case RedvoxPacketM_StationInformation_StationMetrics_NetworkType_Cellular:
     case RedvoxPacketM_StationInformation_StationMetrics_NetworkType_Wired:
-    case RedvoxPacketM_StationInformation_StationMetrics_NetworkType_UnknownNetwork:
       return YES;
     default:
       return NO;
@@ -875,13 +877,13 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_StationMetrics_PowerState_En
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Unplugged\000Charging\000Charged\000UnknownPowerS"
-        "tate\000";
+        "UnknownPowerState\000Unplugged\000Charging\000Cha"
+        "rged\000";
     static const int32_t values[] = {
+        RedvoxPacketM_StationInformation_StationMetrics_PowerState_UnknownPowerState,
         RedvoxPacketM_StationInformation_StationMetrics_PowerState_Unplugged,
         RedvoxPacketM_StationInformation_StationMetrics_PowerState_Charging,
         RedvoxPacketM_StationInformation_StationMetrics_PowerState_Charged,
-        RedvoxPacketM_StationInformation_StationMetrics_PowerState_UnknownPowerState,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_StationInformation_StationMetrics_PowerState)
@@ -899,10 +901,10 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_StationMetrics_PowerState_En
 
 BOOL RedvoxPacketM_StationInformation_StationMetrics_PowerState_IsValidValue(int32_t value__) {
   switch (value__) {
+    case RedvoxPacketM_StationInformation_StationMetrics_PowerState_UnknownPowerState:
     case RedvoxPacketM_StationInformation_StationMetrics_PowerState_Unplugged:
     case RedvoxPacketM_StationInformation_StationMetrics_PowerState_Charging:
     case RedvoxPacketM_StationInformation_StationMetrics_PowerState_Charged:
-    case RedvoxPacketM_StationInformation_StationMetrics_PowerState_UnknownPowerState:
       return YES;
     default:
       return NO;
@@ -1243,14 +1245,14 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_AppSettings_FftOverlap_EnumD
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Percent25\000Percent50\000Percent75\000Unknown\000";
+        "Unknown\000Percent25\000Percent50\000Percent75\000";
     static const int32_t values[] = {
+        RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Unknown,
         RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Percent25,
         RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Percent50,
         RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Percent75,
-        RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Unknown,
     };
-    static const char *extraTextFormatInfo = "\003\000g\202\000\001g\202\000\002g\202\000";
+    static const char *extraTextFormatInfo = "\003\001g\202\000\002g\202\000\003g\202\000";
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_StationInformation_AppSettings_FftOverlap)
                                        valueNames:valueNames
@@ -1268,10 +1270,10 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_AppSettings_FftOverlap_EnumD
 
 BOOL RedvoxPacketM_StationInformation_AppSettings_FftOverlap_IsValidValue(int32_t value__) {
   switch (value__) {
+    case RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Unknown:
     case RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Percent25:
     case RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Percent50:
     case RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Percent75:
-    case RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Unknown:
       return YES;
     default:
       return NO;
@@ -1284,15 +1286,17 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRat
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Hz80\000Hz800\000Hz8000\000Hz16000\000Hz48000\000";
+        "UnknownSamplingRate\000Hz80\000Hz800\000Hz8000\000Hz"
+        "16000\000Hz48000\000";
     static const int32_t values[] = {
+        RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_UnknownSamplingRate,
         RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz80,
         RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz800,
         RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz8000,
         RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz16000,
         RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz48000,
     };
-    static const char *extraTextFormatInfo = "\005\000b\202\000\001b\203\000\002b\204\000\003b\205\000\004b\205\000";
+    static const char *extraTextFormatInfo = "\005\001b\202\000\002b\203\000\003b\204\000\004b\205\000\005b\205\000";
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate)
                                        valueNames:valueNames
@@ -1310,6 +1314,7 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRat
 
 BOOL RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_IsValidValue(int32_t value__) {
   switch (value__) {
+    case RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_UnknownSamplingRate:
     case RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz80:
     case RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz800:
     case RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz8000:
@@ -1327,13 +1332,13 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_AppSettings_AudioSourceTunin
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "InfrasoundTuning\000LowAudioTuning\000AudioTun"
-        "ing\000UnknownTuning\000";
+        "UnknownTuning\000InfrasoundTuning\000LowAudioT"
+        "uning\000AudioTuning\000";
     static const int32_t values[] = {
+        RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_UnknownTuning,
         RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_InfrasoundTuning,
         RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_LowAudioTuning,
         RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_AudioTuning,
-        RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_UnknownTuning,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning)
@@ -1351,10 +1356,10 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_AppSettings_AudioSourceTunin
 
 BOOL RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_IsValidValue(int32_t value__) {
   switch (value__) {
+    case RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_UnknownTuning:
     case RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_InfrasoundTuning:
     case RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_LowAudioTuning:
     case RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_AudioTuning:
-    case RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_UnknownTuning:
       return YES;
     default:
       return NO;
@@ -1367,13 +1372,14 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_AppSettings_InputSensor_Enum
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Accelerometer\000AmbientTemperature\000Audio\000C"
-        "ompressedAudio\000Gravity\000Gyroscope\000Image\000L"
-        "ight\000LinearAcceleration\000Location\000Magneto"
-        "meter\000Orientation\000Pressure\000Proximity\000Rel"
-        "ativeHumidity\000RotationVector\000UnknownSens"
+        "UnknownSensor\000Accelerometer\000AmbientTempe"
+        "rature\000Audio\000CompressedAudio\000Gravity\000Gyr"
+        "oscope\000Image\000Light\000LinearAcceleration\000Lo"
+        "cation\000Magnetometer\000Orientation\000Pressure"
+        "\000Proximity\000RelativeHumidity\000RotationVect"
         "or\000";
     static const int32_t values[] = {
+        RedvoxPacketM_StationInformation_AppSettings_InputSensor_UnknownSensor,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_Accelerometer,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_AmbientTemperature,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_Audio,
@@ -1390,7 +1396,6 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_AppSettings_InputSensor_Enum
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_Proximity,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_RelativeHumidity,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_RotationVector,
-        RedvoxPacketM_StationInformation_AppSettings_InputSensor_UnknownSensor,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_StationInformation_AppSettings_InputSensor)
@@ -1408,6 +1413,7 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_AppSettings_InputSensor_Enum
 
 BOOL RedvoxPacketM_StationInformation_AppSettings_InputSensor_IsValidValue(int32_t value__) {
   switch (value__) {
+    case RedvoxPacketM_StationInformation_AppSettings_InputSensor_UnknownSensor:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Accelerometer:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_AmbientTemperature:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Audio:
@@ -1424,7 +1430,6 @@ BOOL RedvoxPacketM_StationInformation_AppSettings_InputSensor_IsValidValue(int32
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Proximity:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_RelativeHumidity:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_RotationVector:
-    case RedvoxPacketM_StationInformation_AppSettings_InputSensor_UnknownSensor:
       return YES;
     default:
       return NO;
@@ -2274,8 +2279,9 @@ GPBEnumDescriptor *RedvoxPacketM_Sensors_CompressedAudio_AudioCodec_EnumDescript
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Flac\000";
+        "Unknown\000Flac\000";
     static const int32_t values[] = {
+        RedvoxPacketM_Sensors_CompressedAudio_AudioCodec_Unknown,
         RedvoxPacketM_Sensors_CompressedAudio_AudioCodec_Flac,
     };
     GPBEnumDescriptor *worker =
@@ -2294,6 +2300,7 @@ GPBEnumDescriptor *RedvoxPacketM_Sensors_CompressedAudio_AudioCodec_EnumDescript
 
 BOOL RedvoxPacketM_Sensors_CompressedAudio_AudioCodec_IsValidValue(int32_t value__) {
   switch (value__) {
+    case RedvoxPacketM_Sensors_CompressedAudio_AudioCodec_Unknown:
     case RedvoxPacketM_Sensors_CompressedAudio_AudioCodec_Flac:
       return YES;
     default:
@@ -2695,9 +2702,9 @@ GPBEnumDescriptor *RedvoxPacketM_Sensors_Location_LocationScoreMethod_EnumDescri
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Todo\000";
+        "UnknownMethod\000";
     static const int32_t values[] = {
-        RedvoxPacketM_Sensors_Location_LocationScoreMethod_Todo,
+        RedvoxPacketM_Sensors_Location_LocationScoreMethod_UnknownMethod,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_Sensors_Location_LocationScoreMethod)
@@ -2715,7 +2722,7 @@ GPBEnumDescriptor *RedvoxPacketM_Sensors_Location_LocationScoreMethod_EnumDescri
 
 BOOL RedvoxPacketM_Sensors_Location_LocationScoreMethod_IsValidValue(int32_t value__) {
   switch (value__) {
-    case RedvoxPacketM_Sensors_Location_LocationScoreMethod_Todo:
+    case RedvoxPacketM_Sensors_Location_LocationScoreMethod_UnknownMethod:
       return YES;
     default:
       return NO;
@@ -2728,13 +2735,13 @@ GPBEnumDescriptor *RedvoxPacketM_Sensors_Location_LocationProvider_EnumDescripto
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "None\000User\000Gps\000Network\000Unknown\000";
+        "Unknown\000None\000User\000Gps\000Network\000";
     static const int32_t values[] = {
+        RedvoxPacketM_Sensors_Location_LocationProvider_Unknown,
         RedvoxPacketM_Sensors_Location_LocationProvider_None,
         RedvoxPacketM_Sensors_Location_LocationProvider_User,
         RedvoxPacketM_Sensors_Location_LocationProvider_Gps,
         RedvoxPacketM_Sensors_Location_LocationProvider_Network,
-        RedvoxPacketM_Sensors_Location_LocationProvider_Unknown,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_Sensors_Location_LocationProvider)
@@ -2752,11 +2759,11 @@ GPBEnumDescriptor *RedvoxPacketM_Sensors_Location_LocationProvider_EnumDescripto
 
 BOOL RedvoxPacketM_Sensors_Location_LocationProvider_IsValidValue(int32_t value__) {
   switch (value__) {
+    case RedvoxPacketM_Sensors_Location_LocationProvider_Unknown:
     case RedvoxPacketM_Sensors_Location_LocationProvider_None:
     case RedvoxPacketM_Sensors_Location_LocationProvider_User:
     case RedvoxPacketM_Sensors_Location_LocationProvider_Gps:
     case RedvoxPacketM_Sensors_Location_LocationProvider_Network:
-    case RedvoxPacketM_Sensors_Location_LocationProvider_Unknown:
       return YES;
     default:
       return NO;
@@ -2972,12 +2979,12 @@ GPBEnumDescriptor *RedvoxPacketM_Sensors_Image_ImageCodec_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Png\000Jpg\000Bmp\000Unknown\000";
+        "Unknown\000Png\000Jpg\000Bmp\000";
     static const int32_t values[] = {
+        RedvoxPacketM_Sensors_Image_ImageCodec_Unknown,
         RedvoxPacketM_Sensors_Image_ImageCodec_Png,
         RedvoxPacketM_Sensors_Image_ImageCodec_Jpg,
         RedvoxPacketM_Sensors_Image_ImageCodec_Bmp,
-        RedvoxPacketM_Sensors_Image_ImageCodec_Unknown,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_Sensors_Image_ImageCodec)
@@ -2995,10 +3002,10 @@ GPBEnumDescriptor *RedvoxPacketM_Sensors_Image_ImageCodec_EnumDescriptor(void) {
 
 BOOL RedvoxPacketM_Sensors_Image_ImageCodec_IsValidValue(int32_t value__) {
   switch (value__) {
+    case RedvoxPacketM_Sensors_Image_ImageCodec_Unknown:
     case RedvoxPacketM_Sensors_Image_ImageCodec_Png:
     case RedvoxPacketM_Sensors_Image_ImageCodec_Jpg:
     case RedvoxPacketM_Sensors_Image_ImageCodec_Bmp:
-    case RedvoxPacketM_Sensors_Image_ImageCodec_Unknown:
       return YES;
     default:
       return NO;
@@ -3650,8 +3657,10 @@ GPBEnumDescriptor *AcquisitionResponse_ResponseType_EnumDescriptor(void) {
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "Ok\000AuthError\000DataError\000OtherError\000";
+        "Unknown\000Ok\000AuthError\000DataError\000OtherErro"
+        "r\000";
     static const int32_t values[] = {
+        AcquisitionResponse_ResponseType_Unknown,
         AcquisitionResponse_ResponseType_Ok,
         AcquisitionResponse_ResponseType_AuthError,
         AcquisitionResponse_ResponseType_DataError,
@@ -3673,6 +3682,7 @@ GPBEnumDescriptor *AcquisitionResponse_ResponseType_EnumDescriptor(void) {
 
 BOOL AcquisitionResponse_ResponseType_IsValidValue(int32_t value__) {
   switch (value__) {
+    case AcquisitionResponse_ResponseType_Unknown:
     case AcquisitionResponse_ResponseType_Ok:
     case AcquisitionResponse_ResponseType_AuthError:
     case AcquisitionResponse_ResponseType_DataError:

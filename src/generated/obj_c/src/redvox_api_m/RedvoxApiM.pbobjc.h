@@ -56,27 +56,27 @@ typedef GPB_ENUM(RedvoxPacketM_Unit) {
    * of the field.
    **/
   RedvoxPacketM_Unit_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  RedvoxPacketM_Unit_MetersPerSecondSquared = 0,
-  RedvoxPacketM_Unit_Kilopascal = 1,
-  RedvoxPacketM_Unit_RadiansPerSecond = 2,
-  RedvoxPacketM_Unit_DecimalDegrees = 3,
-  RedvoxPacketM_Unit_Meters = 4,
-  RedvoxPacketM_Unit_MetersPerSecond = 5,
-  RedvoxPacketM_Unit_Microtesla = 6,
-  RedvoxPacketM_Unit_LsbPlusMinusCounts = 7,
-  RedvoxPacketM_Unit_MicrosecondsSinceUnixEpoch = 8,
-  RedvoxPacketM_Unit_Decibel = 9,
-  RedvoxPacketM_Unit_DegreesCelsius = 10,
-  RedvoxPacketM_Unit_Byte = 11,
-  RedvoxPacketM_Unit_Percentage = 12,
-  RedvoxPacketM_Unit_Radians = 13,
-  RedvoxPacketM_Unit_Microamperes = 14,
-  RedvoxPacketM_Unit_Centimeters = 15,
-  RedvoxPacketM_Unit_NormalizedCounts = 16,
-  RedvoxPacketM_Unit_Lux = 17,
-  RedvoxPacketM_Unit_Unitless = 18,
-  RedvoxPacketM_Unit_Pcm = 19,
-  RedvoxPacketM_Unit_Unknown = 20,
+  RedvoxPacketM_Unit_Unknown = 0,
+  RedvoxPacketM_Unit_MetersPerSecondSquared = 1,
+  RedvoxPacketM_Unit_Kilopascal = 2,
+  RedvoxPacketM_Unit_RadiansPerSecond = 3,
+  RedvoxPacketM_Unit_DecimalDegrees = 4,
+  RedvoxPacketM_Unit_Meters = 5,
+  RedvoxPacketM_Unit_MetersPerSecond = 6,
+  RedvoxPacketM_Unit_Microtesla = 7,
+  RedvoxPacketM_Unit_LsbPlusMinusCounts = 8,
+  RedvoxPacketM_Unit_MicrosecondsSinceUnixEpoch = 9,
+  RedvoxPacketM_Unit_Decibel = 10,
+  RedvoxPacketM_Unit_DegreesCelsius = 11,
+  RedvoxPacketM_Unit_Byte = 12,
+  RedvoxPacketM_Unit_Percentage = 13,
+  RedvoxPacketM_Unit_Radians = 14,
+  RedvoxPacketM_Unit_Microamperes = 15,
+  RedvoxPacketM_Unit_Centimeters = 16,
+  RedvoxPacketM_Unit_NormalizedCounts = 17,
+  RedvoxPacketM_Unit_Lux = 18,
+  RedvoxPacketM_Unit_Unitless = 19,
+  RedvoxPacketM_Unit_Pcm = 20,
 };
 
 GPBEnumDescriptor *RedvoxPacketM_Unit_EnumDescriptor(void);
@@ -97,11 +97,12 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_OsType) {
    * of the field.
    **/
   RedvoxPacketM_StationInformation_OsType_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  RedvoxPacketM_StationInformation_OsType_Android = 0,
-  RedvoxPacketM_StationInformation_OsType_Ios = 1,
-  RedvoxPacketM_StationInformation_OsType_Linux = 2,
-  RedvoxPacketM_StationInformation_OsType_Windows = 3,
-  RedvoxPacketM_StationInformation_OsType_UnknownOs = 4,
+  RedvoxPacketM_StationInformation_OsType_UnknownOs = 0,
+  RedvoxPacketM_StationInformation_OsType_Android = 1,
+  RedvoxPacketM_StationInformation_OsType_Ios = 2,
+  RedvoxPacketM_StationInformation_OsType_Osx = 3,
+  RedvoxPacketM_StationInformation_OsType_Linux = 4,
+  RedvoxPacketM_StationInformation_OsType_Windows = 5,
 };
 
 GPBEnumDescriptor *RedvoxPacketM_StationInformation_OsType_EnumDescriptor(void);
@@ -122,11 +123,11 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_StationMetrics_NetworkType) {
    * of the field.
    **/
   RedvoxPacketM_StationInformation_StationMetrics_NetworkType_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  RedvoxPacketM_StationInformation_StationMetrics_NetworkType_NoNetwork = 0,
-  RedvoxPacketM_StationInformation_StationMetrics_NetworkType_Wifi = 1,
-  RedvoxPacketM_StationInformation_StationMetrics_NetworkType_Cellular = 2,
-  RedvoxPacketM_StationInformation_StationMetrics_NetworkType_Wired = 3,
-  RedvoxPacketM_StationInformation_StationMetrics_NetworkType_UnknownNetwork = 4,
+  RedvoxPacketM_StationInformation_StationMetrics_NetworkType_UnknownNetwork = 0,
+  RedvoxPacketM_StationInformation_StationMetrics_NetworkType_NoNetwork = 1,
+  RedvoxPacketM_StationInformation_StationMetrics_NetworkType_Wifi = 2,
+  RedvoxPacketM_StationInformation_StationMetrics_NetworkType_Cellular = 3,
+  RedvoxPacketM_StationInformation_StationMetrics_NetworkType_Wired = 4,
 };
 
 GPBEnumDescriptor *RedvoxPacketM_StationInformation_StationMetrics_NetworkType_EnumDescriptor(void);
@@ -205,10 +206,10 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_StationMetrics_PowerState) {
    * of the field.
    **/
   RedvoxPacketM_StationInformation_StationMetrics_PowerState_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  RedvoxPacketM_StationInformation_StationMetrics_PowerState_Unplugged = 0,
-  RedvoxPacketM_StationInformation_StationMetrics_PowerState_Charging = 1,
-  RedvoxPacketM_StationInformation_StationMetrics_PowerState_Charged = 2,
-  RedvoxPacketM_StationInformation_StationMetrics_PowerState_UnknownPowerState = 3,
+  RedvoxPacketM_StationInformation_StationMetrics_PowerState_UnknownPowerState = 0,
+  RedvoxPacketM_StationInformation_StationMetrics_PowerState_Unplugged = 1,
+  RedvoxPacketM_StationInformation_StationMetrics_PowerState_Charging = 2,
+  RedvoxPacketM_StationInformation_StationMetrics_PowerState_Charged = 3,
 };
 
 GPBEnumDescriptor *RedvoxPacketM_StationInformation_StationMetrics_PowerState_EnumDescriptor(void);
@@ -228,10 +229,10 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_AppSettings_FftOverlap) {
    * of the field.
    **/
   RedvoxPacketM_StationInformation_AppSettings_FftOverlap_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Percent25 = 0,
-  RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Percent50 = 1,
-  RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Percent75 = 2,
-  RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Unknown = 3,
+  RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Unknown = 0,
+  RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Percent25 = 1,
+  RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Percent50 = 2,
+  RedvoxPacketM_StationInformation_AppSettings_FftOverlap_Percent75 = 3,
 };
 
 GPBEnumDescriptor *RedvoxPacketM_StationInformation_AppSettings_FftOverlap_EnumDescriptor(void);
@@ -251,11 +252,12 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate)
    * of the field.
    **/
   RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz80 = 0,
-  RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz800 = 1,
-  RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz8000 = 2,
-  RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz16000 = 3,
-  RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz48000 = 4,
+  RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_UnknownSamplingRate = 0,
+  RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz80 = 1,
+  RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz800 = 2,
+  RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz8000 = 3,
+  RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz16000 = 4,
+  RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_Hz48000 = 5,
 };
 
 GPBEnumDescriptor *RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_EnumDescriptor(void);
@@ -275,10 +277,10 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning)
    * of the field.
    **/
   RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_InfrasoundTuning = 0,
-  RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_LowAudioTuning = 1,
-  RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_AudioTuning = 2,
-  RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_UnknownTuning = 3,
+  RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_UnknownTuning = 0,
+  RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_InfrasoundTuning = 1,
+  RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_LowAudioTuning = 2,
+  RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_AudioTuning = 3,
 };
 
 GPBEnumDescriptor *RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_EnumDescriptor(void);
@@ -298,23 +300,23 @@ typedef GPB_ENUM(RedvoxPacketM_StationInformation_AppSettings_InputSensor) {
    * of the field.
    **/
   RedvoxPacketM_StationInformation_AppSettings_InputSensor_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Accelerometer = 0,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_AmbientTemperature = 1,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Audio = 2,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_CompressedAudio = 3,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Gravity = 4,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Gyroscope = 5,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Image = 6,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Light = 7,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_LinearAcceleration = 8,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Location = 9,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Magnetometer = 10,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Orientation = 11,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Pressure = 12,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Proximity = 13,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_RelativeHumidity = 14,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_RotationVector = 15,
-  RedvoxPacketM_StationInformation_AppSettings_InputSensor_UnknownSensor = 16,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_UnknownSensor = 0,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Accelerometer = 1,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_AmbientTemperature = 2,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Audio = 3,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_CompressedAudio = 4,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Gravity = 5,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Gyroscope = 6,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Image = 7,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Light = 8,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_LinearAcceleration = 9,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Location = 10,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Magnetometer = 11,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Orientation = 12,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Pressure = 13,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_Proximity = 14,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_RelativeHumidity = 15,
+  RedvoxPacketM_StationInformation_AppSettings_InputSensor_RotationVector = 16,
 };
 
 GPBEnumDescriptor *RedvoxPacketM_StationInformation_AppSettings_InputSensor_EnumDescriptor(void);
@@ -355,7 +357,8 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_CompressedAudio_AudioCodec) {
    * of the field.
    **/
   RedvoxPacketM_Sensors_CompressedAudio_AudioCodec_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  RedvoxPacketM_Sensors_CompressedAudio_AudioCodec_Flac = 0,
+  RedvoxPacketM_Sensors_CompressedAudio_AudioCodec_Unknown = 0,
+  RedvoxPacketM_Sensors_CompressedAudio_AudioCodec_Flac = 1,
 };
 
 GPBEnumDescriptor *RedvoxPacketM_Sensors_CompressedAudio_AudioCodec_EnumDescriptor(void);
@@ -376,8 +379,7 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_LocationScoreMethod) {
    * of the field.
    **/
   RedvoxPacketM_Sensors_Location_LocationScoreMethod_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  /** TODO */
-  RedvoxPacketM_Sensors_Location_LocationScoreMethod_Todo = 0,
+  RedvoxPacketM_Sensors_Location_LocationScoreMethod_UnknownMethod = 0,
 };
 
 GPBEnumDescriptor *RedvoxPacketM_Sensors_Location_LocationScoreMethod_EnumDescriptor(void);
@@ -398,11 +400,11 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_LocationProvider) {
    * of the field.
    **/
   RedvoxPacketM_Sensors_Location_LocationProvider_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  RedvoxPacketM_Sensors_Location_LocationProvider_None = 0,
-  RedvoxPacketM_Sensors_Location_LocationProvider_User = 1,
-  RedvoxPacketM_Sensors_Location_LocationProvider_Gps = 2,
-  RedvoxPacketM_Sensors_Location_LocationProvider_Network = 3,
-  RedvoxPacketM_Sensors_Location_LocationProvider_Unknown = 4,
+  RedvoxPacketM_Sensors_Location_LocationProvider_Unknown = 0,
+  RedvoxPacketM_Sensors_Location_LocationProvider_None = 1,
+  RedvoxPacketM_Sensors_Location_LocationProvider_User = 2,
+  RedvoxPacketM_Sensors_Location_LocationProvider_Gps = 3,
+  RedvoxPacketM_Sensors_Location_LocationProvider_Network = 4,
 };
 
 GPBEnumDescriptor *RedvoxPacketM_Sensors_Location_LocationProvider_EnumDescriptor(void);
@@ -423,10 +425,10 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Image_ImageCodec) {
    * of the field.
    **/
   RedvoxPacketM_Sensors_Image_ImageCodec_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  RedvoxPacketM_Sensors_Image_ImageCodec_Png = 0,
-  RedvoxPacketM_Sensors_Image_ImageCodec_Jpg = 1,
-  RedvoxPacketM_Sensors_Image_ImageCodec_Bmp = 2,
-  RedvoxPacketM_Sensors_Image_ImageCodec_Unknown = 3,
+  RedvoxPacketM_Sensors_Image_ImageCodec_Unknown = 0,
+  RedvoxPacketM_Sensors_Image_ImageCodec_Png = 1,
+  RedvoxPacketM_Sensors_Image_ImageCodec_Jpg = 2,
+  RedvoxPacketM_Sensors_Image_ImageCodec_Bmp = 3,
 };
 
 GPBEnumDescriptor *RedvoxPacketM_Sensors_Image_ImageCodec_EnumDescriptor(void);
@@ -446,17 +448,19 @@ typedef GPB_ENUM(AcquisitionResponse_ResponseType) {
    * of the field.
    **/
   AcquisitionResponse_ResponseType_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  AcquisitionResponse_ResponseType_Unknown = 0,
+
   /** No issues with packet */
-  AcquisitionResponse_ResponseType_Ok = 0,
+  AcquisitionResponse_ResponseType_Ok = 1,
 
   /** An authentication error has occurred */
-  AcquisitionResponse_ResponseType_AuthError = 1,
+  AcquisitionResponse_ResponseType_AuthError = 2,
 
   /** An error with the data decoding or data quality */
-  AcquisitionResponse_ResponseType_DataError = 2,
+  AcquisitionResponse_ResponseType_DataError = 3,
 
   /** Any other errors */
-  AcquisitionResponse_ResponseType_OtherError = 3,
+  AcquisitionResponse_ResponseType_OtherError = 4,
 };
 
 GPBEnumDescriptor *AcquisitionResponse_ResponseType_EnumDescriptor(void);

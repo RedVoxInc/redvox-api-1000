@@ -572,27 +572,27 @@ proto.redvox_api_m.RedvoxPacketM.serializeBinaryToWriter = function(message, wri
  * @enum {number}
  */
 proto.redvox_api_m.RedvoxPacketM.Unit = {
-  METERS_PER_SECOND_SQUARED: 0,
-  KILOPASCAL: 1,
-  RADIANS_PER_SECOND: 2,
-  DECIMAL_DEGREES: 3,
-  METERS: 4,
-  METERS_PER_SECOND: 5,
-  MICROTESLA: 6,
-  LSB_PLUS_MINUS_COUNTS: 7,
-  MICROSECONDS_SINCE_UNIX_EPOCH: 8,
-  DECIBEL: 9,
-  DEGREES_CELSIUS: 10,
-  BYTE: 11,
-  PERCENTAGE: 12,
-  RADIANS: 13,
-  MICROAMPERES: 14,
-  CENTIMETERS: 15,
-  NORMALIZED_COUNTS: 16,
-  LUX: 17,
-  UNITLESS: 18,
-  PCM: 19,
-  UNKNOWN: 20
+  UNKNOWN: 0,
+  METERS_PER_SECOND_SQUARED: 1,
+  KILOPASCAL: 2,
+  RADIANS_PER_SECOND: 3,
+  DECIMAL_DEGREES: 4,
+  METERS: 5,
+  METERS_PER_SECOND: 6,
+  MICROTESLA: 7,
+  LSB_PLUS_MINUS_COUNTS: 8,
+  MICROSECONDS_SINCE_UNIX_EPOCH: 9,
+  DECIBEL: 10,
+  DEGREES_CELSIUS: 11,
+  BYTE: 12,
+  PERCENTAGE: 13,
+  RADIANS: 14,
+  MICROAMPERES: 15,
+  CENTIMETERS: 16,
+  NORMALIZED_COUNTS: 17,
+  LUX: 18,
+  UNITLESS: 19,
+  PCM: 20
 };
 
 
@@ -872,11 +872,12 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.serializeBinaryToWriter = fu
  * @enum {number}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.OsType = {
-  ANDROID: 0,
-  IOS: 1,
-  LINUX: 2,
-  WINDOWS: 3,
-  UNKNOWN_OS: 4
+  UNKNOWN_OS: 0,
+  ANDROID: 1,
+  IOS: 2,
+  OSX: 3,
+  LINUX: 4,
+  WINDOWS: 5
 };
 
 
@@ -1384,11 +1385,11 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.serializeBina
  * @enum {number}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.NetworkType = {
-  NO_NETWORK: 0,
-  WIFI: 1,
-  CELLULAR: 2,
-  WIRED: 3,
-  UNKNOWN_NETWORK: 4
+  UNKNOWN_NETWORK: 0,
+  NO_NETWORK: 1,
+  WIFI: 2,
+  CELLULAR: 3,
+  WIRED: 4
 };
 
 /**
@@ -1416,10 +1417,10 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.CellServiceSt
  * @enum {number}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.PowerState = {
-  UNPLUGGED: 0,
-  CHARGING: 1,
-  CHARGED: 2,
-  UNKNOWN_POWER_STATE: 3
+  UNKNOWN_POWER_STATE: 0,
+  UNPLUGGED: 1,
+  CHARGING: 2,
+  CHARGED: 3
 };
 
 /**
@@ -2267,54 +2268,55 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.serializeBinaryT
  * @enum {number}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap = {
-  PERCENT_25: 0,
-  PERCENT_50: 1,
-  PERCENT_75: 2,
-  UNKNOWN: 3
+  UNKNOWN: 0,
+  PERCENT_25: 1,
+  PERCENT_50: 2,
+  PERCENT_75: 3
 };
 
 /**
  * @enum {number}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRate = {
-  HZ_80: 0,
-  HZ_800: 1,
-  HZ_8000: 2,
-  HZ_16000: 3,
-  HZ_48000: 4
+  UNKNOWN_SAMPLING_RATE: 0,
+  HZ_80: 1,
+  HZ_800: 2,
+  HZ_8000: 3,
+  HZ_16000: 4,
+  HZ_48000: 5
 };
 
 /**
  * @enum {number}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning = {
-  INFRASOUND_TUNING: 0,
-  LOW_AUDIO_TUNING: 1,
-  AUDIO_TUNING: 2,
-  UNKNOWN_TUNING: 3
+  UNKNOWN_TUNING: 0,
+  INFRASOUND_TUNING: 1,
+  LOW_AUDIO_TUNING: 2,
+  AUDIO_TUNING: 3
 };
 
 /**
  * @enum {number}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor = {
-  ACCELEROMETER: 0,
-  AMBIENT_TEMPERATURE: 1,
-  AUDIO: 2,
-  COMPRESSED_AUDIO: 3,
-  GRAVITY: 4,
-  GYROSCOPE: 5,
-  IMAGE: 6,
-  LIGHT: 7,
-  LINEAR_ACCELERATION: 8,
-  LOCATION: 9,
-  MAGNETOMETER: 10,
-  ORIENTATION: 11,
-  PRESSURE: 12,
-  PROXIMITY: 13,
-  RELATIVE_HUMIDITY: 14,
-  ROTATION_VECTOR: 15,
-  UNKNOWN_SENSOR: 16
+  UNKNOWN_SENSOR: 0,
+  ACCELEROMETER: 1,
+  AMBIENT_TEMPERATURE: 2,
+  AUDIO: 3,
+  COMPRESSED_AUDIO: 4,
+  GRAVITY: 5,
+  GYROSCOPE: 6,
+  IMAGE: 7,
+  LIGHT: 8,
+  LINEAR_ACCELERATION: 9,
+  LOCATION: 10,
+  MAGNETOMETER: 11,
+  ORIENTATION: 12,
+  PRESSURE: 13,
+  PROXIMITY: 14,
+  RELATIVE_HUMIDITY: 15,
+  ROTATION_VECTOR: 16
 };
 
 /**
@@ -4844,7 +4846,8 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.CompressedAudio.serializeBinaryToWriter
  * @enum {number}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.CompressedAudio.AudioCodec = {
-  FLAC: 0
+  UNKNOWN: 0,
+  FLAC: 1
 };
 
 /**
@@ -5665,18 +5668,18 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.serializeBinaryToWriter = func
  * @enum {number}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationScoreMethod = {
-  TODO: 0
+  UNKNOWN_METHOD: 0
 };
 
 /**
  * @enum {number}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider = {
-  NONE: 0,
-  USER: 1,
-  GPS: 2,
-  NETWORK: 3,
-  UNKNOWN: 4
+  UNKNOWN: 0,
+  NONE: 1,
+  USER: 2,
+  GPS: 3,
+  NETWORK: 4
 };
 
 /**
@@ -6826,10 +6829,10 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Image.serializeBinaryToWriter = functio
  * @enum {number}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Image.ImageCodec = {
-  PNG: 0,
-  JPG: 1,
-  BMP: 2,
-  UNKNOWN: 3
+  UNKNOWN: 0,
+  PNG: 1,
+  JPG: 2,
+  BMP: 3
 };
 
 /**

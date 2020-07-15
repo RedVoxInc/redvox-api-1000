@@ -320,176 +320,176 @@ public final class RedvoxApiM {
     public enum Unit
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
-       * <code>METERS_PER_SECOND_SQUARED = 0;</code>
+       * <code>UNKNOWN = 0;</code>
        */
-      METERS_PER_SECOND_SQUARED(0),
+      UNKNOWN(0),
       /**
-       * <code>KILOPASCAL = 1;</code>
+       * <code>METERS_PER_SECOND_SQUARED = 1;</code>
        */
-      KILOPASCAL(1),
+      METERS_PER_SECOND_SQUARED(1),
       /**
-       * <code>RADIANS_PER_SECOND = 2;</code>
+       * <code>KILOPASCAL = 2;</code>
        */
-      RADIANS_PER_SECOND(2),
+      KILOPASCAL(2),
       /**
-       * <code>DECIMAL_DEGREES = 3;</code>
+       * <code>RADIANS_PER_SECOND = 3;</code>
        */
-      DECIMAL_DEGREES(3),
+      RADIANS_PER_SECOND(3),
       /**
-       * <code>METERS = 4;</code>
+       * <code>DECIMAL_DEGREES = 4;</code>
        */
-      METERS(4),
+      DECIMAL_DEGREES(4),
       /**
-       * <code>METERS_PER_SECOND = 5;</code>
+       * <code>METERS = 5;</code>
        */
-      METERS_PER_SECOND(5),
+      METERS(5),
       /**
-       * <code>MICROTESLA = 6;</code>
+       * <code>METERS_PER_SECOND = 6;</code>
        */
-      MICROTESLA(6),
+      METERS_PER_SECOND(6),
       /**
-       * <code>LSB_PLUS_MINUS_COUNTS = 7;</code>
+       * <code>MICROTESLA = 7;</code>
        */
-      LSB_PLUS_MINUS_COUNTS(7),
+      MICROTESLA(7),
       /**
-       * <code>MICROSECONDS_SINCE_UNIX_EPOCH = 8;</code>
+       * <code>LSB_PLUS_MINUS_COUNTS = 8;</code>
        */
-      MICROSECONDS_SINCE_UNIX_EPOCH(8),
+      LSB_PLUS_MINUS_COUNTS(8),
       /**
-       * <code>DECIBEL = 9;</code>
+       * <code>MICROSECONDS_SINCE_UNIX_EPOCH = 9;</code>
        */
-      DECIBEL(9),
+      MICROSECONDS_SINCE_UNIX_EPOCH(9),
       /**
-       * <code>DEGREES_CELSIUS = 10;</code>
+       * <code>DECIBEL = 10;</code>
        */
-      DEGREES_CELSIUS(10),
+      DECIBEL(10),
       /**
-       * <code>BYTE = 11;</code>
+       * <code>DEGREES_CELSIUS = 11;</code>
        */
-      BYTE(11),
+      DEGREES_CELSIUS(11),
       /**
-       * <code>PERCENTAGE = 12;</code>
+       * <code>BYTE = 12;</code>
        */
-      PERCENTAGE(12),
+      BYTE(12),
       /**
-       * <code>RADIANS = 13;</code>
+       * <code>PERCENTAGE = 13;</code>
        */
-      RADIANS(13),
+      PERCENTAGE(13),
       /**
-       * <code>MICROAMPERES = 14;</code>
+       * <code>RADIANS = 14;</code>
        */
-      MICROAMPERES(14),
+      RADIANS(14),
       /**
-       * <code>CENTIMETERS = 15;</code>
+       * <code>MICROAMPERES = 15;</code>
        */
-      CENTIMETERS(15),
+      MICROAMPERES(15),
       /**
-       * <code>NORMALIZED_COUNTS = 16;</code>
+       * <code>CENTIMETERS = 16;</code>
        */
-      NORMALIZED_COUNTS(16),
+      CENTIMETERS(16),
       /**
-       * <code>LUX = 17;</code>
+       * <code>NORMALIZED_COUNTS = 17;</code>
        */
-      LUX(17),
+      NORMALIZED_COUNTS(17),
       /**
-       * <code>UNITLESS = 18;</code>
+       * <code>LUX = 18;</code>
        */
-      UNITLESS(18),
+      LUX(18),
       /**
-       * <code>PCM = 19;</code>
+       * <code>UNITLESS = 19;</code>
        */
-      PCM(19),
+      UNITLESS(19),
       /**
-       * <code>UNKNOWN = 20;</code>
+       * <code>PCM = 20;</code>
        */
-      UNKNOWN(20),
+      PCM(20),
       UNRECOGNIZED(-1),
       ;
 
       /**
-       * <code>METERS_PER_SECOND_SQUARED = 0;</code>
+       * <code>UNKNOWN = 0;</code>
        */
-      public static final int METERS_PER_SECOND_SQUARED_VALUE = 0;
+      public static final int UNKNOWN_VALUE = 0;
       /**
-       * <code>KILOPASCAL = 1;</code>
+       * <code>METERS_PER_SECOND_SQUARED = 1;</code>
        */
-      public static final int KILOPASCAL_VALUE = 1;
+      public static final int METERS_PER_SECOND_SQUARED_VALUE = 1;
       /**
-       * <code>RADIANS_PER_SECOND = 2;</code>
+       * <code>KILOPASCAL = 2;</code>
        */
-      public static final int RADIANS_PER_SECOND_VALUE = 2;
+      public static final int KILOPASCAL_VALUE = 2;
       /**
-       * <code>DECIMAL_DEGREES = 3;</code>
+       * <code>RADIANS_PER_SECOND = 3;</code>
        */
-      public static final int DECIMAL_DEGREES_VALUE = 3;
+      public static final int RADIANS_PER_SECOND_VALUE = 3;
       /**
-       * <code>METERS = 4;</code>
+       * <code>DECIMAL_DEGREES = 4;</code>
        */
-      public static final int METERS_VALUE = 4;
+      public static final int DECIMAL_DEGREES_VALUE = 4;
       /**
-       * <code>METERS_PER_SECOND = 5;</code>
+       * <code>METERS = 5;</code>
        */
-      public static final int METERS_PER_SECOND_VALUE = 5;
+      public static final int METERS_VALUE = 5;
       /**
-       * <code>MICROTESLA = 6;</code>
+       * <code>METERS_PER_SECOND = 6;</code>
        */
-      public static final int MICROTESLA_VALUE = 6;
+      public static final int METERS_PER_SECOND_VALUE = 6;
       /**
-       * <code>LSB_PLUS_MINUS_COUNTS = 7;</code>
+       * <code>MICROTESLA = 7;</code>
        */
-      public static final int LSB_PLUS_MINUS_COUNTS_VALUE = 7;
+      public static final int MICROTESLA_VALUE = 7;
       /**
-       * <code>MICROSECONDS_SINCE_UNIX_EPOCH = 8;</code>
+       * <code>LSB_PLUS_MINUS_COUNTS = 8;</code>
        */
-      public static final int MICROSECONDS_SINCE_UNIX_EPOCH_VALUE = 8;
+      public static final int LSB_PLUS_MINUS_COUNTS_VALUE = 8;
       /**
-       * <code>DECIBEL = 9;</code>
+       * <code>MICROSECONDS_SINCE_UNIX_EPOCH = 9;</code>
        */
-      public static final int DECIBEL_VALUE = 9;
+      public static final int MICROSECONDS_SINCE_UNIX_EPOCH_VALUE = 9;
       /**
-       * <code>DEGREES_CELSIUS = 10;</code>
+       * <code>DECIBEL = 10;</code>
        */
-      public static final int DEGREES_CELSIUS_VALUE = 10;
+      public static final int DECIBEL_VALUE = 10;
       /**
-       * <code>BYTE = 11;</code>
+       * <code>DEGREES_CELSIUS = 11;</code>
        */
-      public static final int BYTE_VALUE = 11;
+      public static final int DEGREES_CELSIUS_VALUE = 11;
       /**
-       * <code>PERCENTAGE = 12;</code>
+       * <code>BYTE = 12;</code>
        */
-      public static final int PERCENTAGE_VALUE = 12;
+      public static final int BYTE_VALUE = 12;
       /**
-       * <code>RADIANS = 13;</code>
+       * <code>PERCENTAGE = 13;</code>
        */
-      public static final int RADIANS_VALUE = 13;
+      public static final int PERCENTAGE_VALUE = 13;
       /**
-       * <code>MICROAMPERES = 14;</code>
+       * <code>RADIANS = 14;</code>
        */
-      public static final int MICROAMPERES_VALUE = 14;
+      public static final int RADIANS_VALUE = 14;
       /**
-       * <code>CENTIMETERS = 15;</code>
+       * <code>MICROAMPERES = 15;</code>
        */
-      public static final int CENTIMETERS_VALUE = 15;
+      public static final int MICROAMPERES_VALUE = 15;
       /**
-       * <code>NORMALIZED_COUNTS = 16;</code>
+       * <code>CENTIMETERS = 16;</code>
        */
-      public static final int NORMALIZED_COUNTS_VALUE = 16;
+      public static final int CENTIMETERS_VALUE = 16;
       /**
-       * <code>LUX = 17;</code>
+       * <code>NORMALIZED_COUNTS = 17;</code>
        */
-      public static final int LUX_VALUE = 17;
+      public static final int NORMALIZED_COUNTS_VALUE = 17;
       /**
-       * <code>UNITLESS = 18;</code>
+       * <code>LUX = 18;</code>
        */
-      public static final int UNITLESS_VALUE = 18;
+      public static final int LUX_VALUE = 18;
       /**
-       * <code>PCM = 19;</code>
+       * <code>UNITLESS = 19;</code>
        */
-      public static final int PCM_VALUE = 19;
+      public static final int UNITLESS_VALUE = 19;
       /**
-       * <code>UNKNOWN = 20;</code>
+       * <code>PCM = 20;</code>
        */
-      public static final int UNKNOWN_VALUE = 20;
+      public static final int PCM_VALUE = 20;
 
 
       public final int getNumber() {
@@ -516,27 +516,27 @@ public final class RedvoxApiM {
        */
       public static Unit forNumber(int value) {
         switch (value) {
-          case 0: return METERS_PER_SECOND_SQUARED;
-          case 1: return KILOPASCAL;
-          case 2: return RADIANS_PER_SECOND;
-          case 3: return DECIMAL_DEGREES;
-          case 4: return METERS;
-          case 5: return METERS_PER_SECOND;
-          case 6: return MICROTESLA;
-          case 7: return LSB_PLUS_MINUS_COUNTS;
-          case 8: return MICROSECONDS_SINCE_UNIX_EPOCH;
-          case 9: return DECIBEL;
-          case 10: return DEGREES_CELSIUS;
-          case 11: return BYTE;
-          case 12: return PERCENTAGE;
-          case 13: return RADIANS;
-          case 14: return MICROAMPERES;
-          case 15: return CENTIMETERS;
-          case 16: return NORMALIZED_COUNTS;
-          case 17: return LUX;
-          case 18: return UNITLESS;
-          case 19: return PCM;
-          case 20: return UNKNOWN;
+          case 0: return UNKNOWN;
+          case 1: return METERS_PER_SECOND_SQUARED;
+          case 2: return KILOPASCAL;
+          case 3: return RADIANS_PER_SECOND;
+          case 4: return DECIMAL_DEGREES;
+          case 5: return METERS;
+          case 6: return METERS_PER_SECOND;
+          case 7: return MICROTESLA;
+          case 8: return LSB_PLUS_MINUS_COUNTS;
+          case 9: return MICROSECONDS_SINCE_UNIX_EPOCH;
+          case 10: return DECIBEL;
+          case 11: return DEGREES_CELSIUS;
+          case 12: return BYTE;
+          case 13: return PERCENTAGE;
+          case 14: return RADIANS;
+          case 15: return MICROAMPERES;
+          case 16: return CENTIMETERS;
+          case 17: return NORMALIZED_COUNTS;
+          case 18: return LUX;
+          case 19: return UNITLESS;
+          case 20: return PCM;
           default: return null;
         }
       }
@@ -1145,48 +1145,56 @@ public final class RedvoxApiM {
       public enum OsType
           implements com.google.protobuf.ProtocolMessageEnum {
         /**
-         * <code>ANDROID = 0;</code>
+         * <code>UNKNOWN_OS = 0;</code>
          */
-        ANDROID(0),
+        UNKNOWN_OS(0),
         /**
-         * <code>IOS = 1;</code>
+         * <code>ANDROID = 1;</code>
          */
-        IOS(1),
+        ANDROID(1),
         /**
-         * <code>LINUX = 2;</code>
+         * <code>IOS = 2;</code>
          */
-        LINUX(2),
+        IOS(2),
         /**
-         * <code>WINDOWS = 3;</code>
+         * <code>OSX = 3;</code>
          */
-        WINDOWS(3),
+        OSX(3),
         /**
-         * <code>UNKNOWN_OS = 4;</code>
+         * <code>LINUX = 4;</code>
          */
-        UNKNOWN_OS(4),
+        LINUX(4),
+        /**
+         * <code>WINDOWS = 5;</code>
+         */
+        WINDOWS(5),
         UNRECOGNIZED(-1),
         ;
 
         /**
-         * <code>ANDROID = 0;</code>
+         * <code>UNKNOWN_OS = 0;</code>
          */
-        public static final int ANDROID_VALUE = 0;
+        public static final int UNKNOWN_OS_VALUE = 0;
         /**
-         * <code>IOS = 1;</code>
+         * <code>ANDROID = 1;</code>
          */
-        public static final int IOS_VALUE = 1;
+        public static final int ANDROID_VALUE = 1;
         /**
-         * <code>LINUX = 2;</code>
+         * <code>IOS = 2;</code>
          */
-        public static final int LINUX_VALUE = 2;
+        public static final int IOS_VALUE = 2;
         /**
-         * <code>WINDOWS = 3;</code>
+         * <code>OSX = 3;</code>
          */
-        public static final int WINDOWS_VALUE = 3;
+        public static final int OSX_VALUE = 3;
         /**
-         * <code>UNKNOWN_OS = 4;</code>
+         * <code>LINUX = 4;</code>
          */
-        public static final int UNKNOWN_OS_VALUE = 4;
+        public static final int LINUX_VALUE = 4;
+        /**
+         * <code>WINDOWS = 5;</code>
+         */
+        public static final int WINDOWS_VALUE = 5;
 
 
         public final int getNumber() {
@@ -1213,11 +1221,12 @@ public final class RedvoxApiM {
          */
         public static OsType forNumber(int value) {
           switch (value) {
-            case 0: return ANDROID;
-            case 1: return IOS;
-            case 2: return LINUX;
-            case 3: return WINDOWS;
-            case 4: return UNKNOWN_OS;
+            case 0: return UNKNOWN_OS;
+            case 1: return ANDROID;
+            case 2: return IOS;
+            case 3: return OSX;
+            case 4: return LINUX;
+            case 5: return WINDOWS;
             default: return null;
           }
         }
@@ -3391,48 +3400,48 @@ public final class RedvoxApiM {
         public enum NetworkType
             implements com.google.protobuf.ProtocolMessageEnum {
           /**
-           * <code>NO_NETWORK = 0;</code>
+           * <code>UNKNOWN_NETWORK = 0;</code>
            */
-          NO_NETWORK(0),
+          UNKNOWN_NETWORK(0),
           /**
-           * <code>WIFI = 1;</code>
+           * <code>NO_NETWORK = 1;</code>
            */
-          WIFI(1),
+          NO_NETWORK(1),
           /**
-           * <code>CELLULAR = 2;</code>
+           * <code>WIFI = 2;</code>
            */
-          CELLULAR(2),
+          WIFI(2),
           /**
-           * <code>WIRED = 3;</code>
+           * <code>CELLULAR = 3;</code>
            */
-          WIRED(3),
+          CELLULAR(3),
           /**
-           * <code>UNKNOWN_NETWORK = 4;</code>
+           * <code>WIRED = 4;</code>
            */
-          UNKNOWN_NETWORK(4),
+          WIRED(4),
           UNRECOGNIZED(-1),
           ;
 
           /**
-           * <code>NO_NETWORK = 0;</code>
+           * <code>UNKNOWN_NETWORK = 0;</code>
            */
-          public static final int NO_NETWORK_VALUE = 0;
+          public static final int UNKNOWN_NETWORK_VALUE = 0;
           /**
-           * <code>WIFI = 1;</code>
+           * <code>NO_NETWORK = 1;</code>
            */
-          public static final int WIFI_VALUE = 1;
+          public static final int NO_NETWORK_VALUE = 1;
           /**
-           * <code>CELLULAR = 2;</code>
+           * <code>WIFI = 2;</code>
            */
-          public static final int CELLULAR_VALUE = 2;
+          public static final int WIFI_VALUE = 2;
           /**
-           * <code>WIRED = 3;</code>
+           * <code>CELLULAR = 3;</code>
            */
-          public static final int WIRED_VALUE = 3;
+          public static final int CELLULAR_VALUE = 3;
           /**
-           * <code>UNKNOWN_NETWORK = 4;</code>
+           * <code>WIRED = 4;</code>
            */
-          public static final int UNKNOWN_NETWORK_VALUE = 4;
+          public static final int WIRED_VALUE = 4;
 
 
           public final int getNumber() {
@@ -3459,11 +3468,11 @@ public final class RedvoxApiM {
            */
           public static NetworkType forNumber(int value) {
             switch (value) {
-              case 0: return NO_NETWORK;
-              case 1: return WIFI;
-              case 2: return CELLULAR;
-              case 3: return WIRED;
-              case 4: return UNKNOWN_NETWORK;
+              case 0: return UNKNOWN_NETWORK;
+              case 1: return NO_NETWORK;
+              case 2: return WIFI;
+              case 3: return CELLULAR;
+              case 4: return WIRED;
               default: return null;
             }
           }
@@ -3839,40 +3848,40 @@ public final class RedvoxApiM {
         public enum PowerState
             implements com.google.protobuf.ProtocolMessageEnum {
           /**
-           * <code>UNPLUGGED = 0;</code>
+           * <code>UNKNOWN_POWER_STATE = 0;</code>
            */
-          UNPLUGGED(0),
+          UNKNOWN_POWER_STATE(0),
           /**
-           * <code>CHARGING = 1;</code>
+           * <code>UNPLUGGED = 1;</code>
            */
-          CHARGING(1),
+          UNPLUGGED(1),
           /**
-           * <code>CHARGED = 2;</code>
+           * <code>CHARGING = 2;</code>
            */
-          CHARGED(2),
+          CHARGING(2),
           /**
-           * <code>UNKNOWN_POWER_STATE = 3;</code>
+           * <code>CHARGED = 3;</code>
            */
-          UNKNOWN_POWER_STATE(3),
+          CHARGED(3),
           UNRECOGNIZED(-1),
           ;
 
           /**
-           * <code>UNPLUGGED = 0;</code>
+           * <code>UNKNOWN_POWER_STATE = 0;</code>
            */
-          public static final int UNPLUGGED_VALUE = 0;
+          public static final int UNKNOWN_POWER_STATE_VALUE = 0;
           /**
-           * <code>CHARGING = 1;</code>
+           * <code>UNPLUGGED = 1;</code>
            */
-          public static final int CHARGING_VALUE = 1;
+          public static final int UNPLUGGED_VALUE = 1;
           /**
-           * <code>CHARGED = 2;</code>
+           * <code>CHARGING = 2;</code>
            */
-          public static final int CHARGED_VALUE = 2;
+          public static final int CHARGING_VALUE = 2;
           /**
-           * <code>UNKNOWN_POWER_STATE = 3;</code>
+           * <code>CHARGED = 3;</code>
            */
-          public static final int UNKNOWN_POWER_STATE_VALUE = 3;
+          public static final int CHARGED_VALUE = 3;
 
 
           public final int getNumber() {
@@ -3899,10 +3908,10 @@ public final class RedvoxApiM {
            */
           public static PowerState forNumber(int value) {
             switch (value) {
-              case 0: return UNPLUGGED;
-              case 1: return CHARGING;
-              case 2: return CHARGED;
-              case 3: return UNKNOWN_POWER_STATE;
+              case 0: return UNKNOWN_POWER_STATE;
+              case 1: return UNPLUGGED;
+              case 2: return CHARGING;
+              case 3: return CHARGED;
               default: return null;
             }
           }
@@ -8073,40 +8082,40 @@ public final class RedvoxApiM {
         public enum FftOverlap
             implements com.google.protobuf.ProtocolMessageEnum {
           /**
-           * <code>PERCENT_25 = 0;</code>
+           * <code>UNKNOWN = 0;</code>
            */
-          PERCENT_25(0),
+          UNKNOWN(0),
           /**
-           * <code>PERCENT_50 = 1;</code>
+           * <code>PERCENT_25 = 1;</code>
            */
-          PERCENT_50(1),
+          PERCENT_25(1),
           /**
-           * <code>PERCENT_75 = 2;</code>
+           * <code>PERCENT_50 = 2;</code>
            */
-          PERCENT_75(2),
+          PERCENT_50(2),
           /**
-           * <code>UNKNOWN = 3;</code>
+           * <code>PERCENT_75 = 3;</code>
            */
-          UNKNOWN(3),
+          PERCENT_75(3),
           UNRECOGNIZED(-1),
           ;
 
           /**
-           * <code>PERCENT_25 = 0;</code>
+           * <code>UNKNOWN = 0;</code>
            */
-          public static final int PERCENT_25_VALUE = 0;
+          public static final int UNKNOWN_VALUE = 0;
           /**
-           * <code>PERCENT_50 = 1;</code>
+           * <code>PERCENT_25 = 1;</code>
            */
-          public static final int PERCENT_50_VALUE = 1;
+          public static final int PERCENT_25_VALUE = 1;
           /**
-           * <code>PERCENT_75 = 2;</code>
+           * <code>PERCENT_50 = 2;</code>
            */
-          public static final int PERCENT_75_VALUE = 2;
+          public static final int PERCENT_50_VALUE = 2;
           /**
-           * <code>UNKNOWN = 3;</code>
+           * <code>PERCENT_75 = 3;</code>
            */
-          public static final int UNKNOWN_VALUE = 3;
+          public static final int PERCENT_75_VALUE = 3;
 
 
           public final int getNumber() {
@@ -8133,10 +8142,10 @@ public final class RedvoxApiM {
            */
           public static FftOverlap forNumber(int value) {
             switch (value) {
-              case 0: return PERCENT_25;
-              case 1: return PERCENT_50;
-              case 2: return PERCENT_75;
-              case 3: return UNKNOWN;
+              case 0: return UNKNOWN;
+              case 1: return PERCENT_25;
+              case 2: return PERCENT_50;
+              case 3: return PERCENT_75;
               default: return null;
             }
           }
@@ -8199,48 +8208,56 @@ public final class RedvoxApiM {
         public enum AudioSamplingRate
             implements com.google.protobuf.ProtocolMessageEnum {
           /**
-           * <code>HZ_80 = 0;</code>
+           * <code>UNKNOWN_SAMPLING_RATE = 0;</code>
            */
-          HZ_80(0),
+          UNKNOWN_SAMPLING_RATE(0),
           /**
-           * <code>HZ_800 = 1;</code>
+           * <code>HZ_80 = 1;</code>
            */
-          HZ_800(1),
+          HZ_80(1),
           /**
-           * <code>HZ_8000 = 2;</code>
+           * <code>HZ_800 = 2;</code>
            */
-          HZ_8000(2),
+          HZ_800(2),
           /**
-           * <code>HZ_16000 = 3;</code>
+           * <code>HZ_8000 = 3;</code>
            */
-          HZ_16000(3),
+          HZ_8000(3),
           /**
-           * <code>HZ_48000 = 4;</code>
+           * <code>HZ_16000 = 4;</code>
            */
-          HZ_48000(4),
+          HZ_16000(4),
+          /**
+           * <code>HZ_48000 = 5;</code>
+           */
+          HZ_48000(5),
           UNRECOGNIZED(-1),
           ;
 
           /**
-           * <code>HZ_80 = 0;</code>
+           * <code>UNKNOWN_SAMPLING_RATE = 0;</code>
            */
-          public static final int HZ_80_VALUE = 0;
+          public static final int UNKNOWN_SAMPLING_RATE_VALUE = 0;
           /**
-           * <code>HZ_800 = 1;</code>
+           * <code>HZ_80 = 1;</code>
            */
-          public static final int HZ_800_VALUE = 1;
+          public static final int HZ_80_VALUE = 1;
           /**
-           * <code>HZ_8000 = 2;</code>
+           * <code>HZ_800 = 2;</code>
            */
-          public static final int HZ_8000_VALUE = 2;
+          public static final int HZ_800_VALUE = 2;
           /**
-           * <code>HZ_16000 = 3;</code>
+           * <code>HZ_8000 = 3;</code>
            */
-          public static final int HZ_16000_VALUE = 3;
+          public static final int HZ_8000_VALUE = 3;
           /**
-           * <code>HZ_48000 = 4;</code>
+           * <code>HZ_16000 = 4;</code>
            */
-          public static final int HZ_48000_VALUE = 4;
+          public static final int HZ_16000_VALUE = 4;
+          /**
+           * <code>HZ_48000 = 5;</code>
+           */
+          public static final int HZ_48000_VALUE = 5;
 
 
           public final int getNumber() {
@@ -8267,11 +8284,12 @@ public final class RedvoxApiM {
            */
           public static AudioSamplingRate forNumber(int value) {
             switch (value) {
-              case 0: return HZ_80;
-              case 1: return HZ_800;
-              case 2: return HZ_8000;
-              case 3: return HZ_16000;
-              case 4: return HZ_48000;
+              case 0: return UNKNOWN_SAMPLING_RATE;
+              case 1: return HZ_80;
+              case 2: return HZ_800;
+              case 3: return HZ_8000;
+              case 4: return HZ_16000;
+              case 5: return HZ_48000;
               default: return null;
             }
           }
@@ -8334,40 +8352,40 @@ public final class RedvoxApiM {
         public enum AudioSourceTuning
             implements com.google.protobuf.ProtocolMessageEnum {
           /**
-           * <code>INFRASOUND_TUNING = 0;</code>
+           * <code>UNKNOWN_TUNING = 0;</code>
            */
-          INFRASOUND_TUNING(0),
+          UNKNOWN_TUNING(0),
           /**
-           * <code>LOW_AUDIO_TUNING = 1;</code>
+           * <code>INFRASOUND_TUNING = 1;</code>
            */
-          LOW_AUDIO_TUNING(1),
+          INFRASOUND_TUNING(1),
           /**
-           * <code>AUDIO_TUNING = 2;</code>
+           * <code>LOW_AUDIO_TUNING = 2;</code>
            */
-          AUDIO_TUNING(2),
+          LOW_AUDIO_TUNING(2),
           /**
-           * <code>UNKNOWN_TUNING = 3;</code>
+           * <code>AUDIO_TUNING = 3;</code>
            */
-          UNKNOWN_TUNING(3),
+          AUDIO_TUNING(3),
           UNRECOGNIZED(-1),
           ;
 
           /**
-           * <code>INFRASOUND_TUNING = 0;</code>
+           * <code>UNKNOWN_TUNING = 0;</code>
            */
-          public static final int INFRASOUND_TUNING_VALUE = 0;
+          public static final int UNKNOWN_TUNING_VALUE = 0;
           /**
-           * <code>LOW_AUDIO_TUNING = 1;</code>
+           * <code>INFRASOUND_TUNING = 1;</code>
            */
-          public static final int LOW_AUDIO_TUNING_VALUE = 1;
+          public static final int INFRASOUND_TUNING_VALUE = 1;
           /**
-           * <code>AUDIO_TUNING = 2;</code>
+           * <code>LOW_AUDIO_TUNING = 2;</code>
            */
-          public static final int AUDIO_TUNING_VALUE = 2;
+          public static final int LOW_AUDIO_TUNING_VALUE = 2;
           /**
-           * <code>UNKNOWN_TUNING = 3;</code>
+           * <code>AUDIO_TUNING = 3;</code>
            */
-          public static final int UNKNOWN_TUNING_VALUE = 3;
+          public static final int AUDIO_TUNING_VALUE = 3;
 
 
           public final int getNumber() {
@@ -8394,10 +8412,10 @@ public final class RedvoxApiM {
            */
           public static AudioSourceTuning forNumber(int value) {
             switch (value) {
-              case 0: return INFRASOUND_TUNING;
-              case 1: return LOW_AUDIO_TUNING;
-              case 2: return AUDIO_TUNING;
-              case 3: return UNKNOWN_TUNING;
+              case 0: return UNKNOWN_TUNING;
+              case 1: return INFRASOUND_TUNING;
+              case 2: return LOW_AUDIO_TUNING;
+              case 3: return AUDIO_TUNING;
               default: return null;
             }
           }
@@ -8460,144 +8478,144 @@ public final class RedvoxApiM {
         public enum InputSensor
             implements com.google.protobuf.ProtocolMessageEnum {
           /**
-           * <code>ACCELEROMETER = 0;</code>
+           * <code>UNKNOWN_SENSOR = 0;</code>
            */
-          ACCELEROMETER(0),
+          UNKNOWN_SENSOR(0),
           /**
-           * <code>AMBIENT_TEMPERATURE = 1;</code>
+           * <code>ACCELEROMETER = 1;</code>
            */
-          AMBIENT_TEMPERATURE(1),
+          ACCELEROMETER(1),
           /**
-           * <code>AUDIO = 2;</code>
+           * <code>AMBIENT_TEMPERATURE = 2;</code>
            */
-          AUDIO(2),
+          AMBIENT_TEMPERATURE(2),
           /**
-           * <code>COMPRESSED_AUDIO = 3;</code>
+           * <code>AUDIO = 3;</code>
            */
-          COMPRESSED_AUDIO(3),
+          AUDIO(3),
           /**
-           * <code>GRAVITY = 4;</code>
+           * <code>COMPRESSED_AUDIO = 4;</code>
            */
-          GRAVITY(4),
+          COMPRESSED_AUDIO(4),
           /**
-           * <code>GYROSCOPE = 5;</code>
+           * <code>GRAVITY = 5;</code>
            */
-          GYROSCOPE(5),
+          GRAVITY(5),
           /**
-           * <code>IMAGE = 6;</code>
+           * <code>GYROSCOPE = 6;</code>
            */
-          IMAGE(6),
+          GYROSCOPE(6),
           /**
-           * <code>LIGHT = 7;</code>
+           * <code>IMAGE = 7;</code>
            */
-          LIGHT(7),
+          IMAGE(7),
           /**
-           * <code>LINEAR_ACCELERATION = 8;</code>
+           * <code>LIGHT = 8;</code>
            */
-          LINEAR_ACCELERATION(8),
+          LIGHT(8),
           /**
-           * <code>LOCATION = 9;</code>
+           * <code>LINEAR_ACCELERATION = 9;</code>
            */
-          LOCATION(9),
+          LINEAR_ACCELERATION(9),
           /**
-           * <code>MAGNETOMETER = 10;</code>
+           * <code>LOCATION = 10;</code>
            */
-          MAGNETOMETER(10),
+          LOCATION(10),
           /**
-           * <code>ORIENTATION = 11;</code>
+           * <code>MAGNETOMETER = 11;</code>
            */
-          ORIENTATION(11),
+          MAGNETOMETER(11),
           /**
-           * <code>PRESSURE = 12;</code>
+           * <code>ORIENTATION = 12;</code>
            */
-          PRESSURE(12),
+          ORIENTATION(12),
           /**
-           * <code>PROXIMITY = 13;</code>
+           * <code>PRESSURE = 13;</code>
            */
-          PROXIMITY(13),
+          PRESSURE(13),
           /**
-           * <code>RELATIVE_HUMIDITY = 14;</code>
+           * <code>PROXIMITY = 14;</code>
            */
-          RELATIVE_HUMIDITY(14),
+          PROXIMITY(14),
           /**
-           * <code>ROTATION_VECTOR = 15;</code>
+           * <code>RELATIVE_HUMIDITY = 15;</code>
            */
-          ROTATION_VECTOR(15),
+          RELATIVE_HUMIDITY(15),
           /**
-           * <code>UNKNOWN_SENSOR = 16;</code>
+           * <code>ROTATION_VECTOR = 16;</code>
            */
-          UNKNOWN_SENSOR(16),
+          ROTATION_VECTOR(16),
           UNRECOGNIZED(-1),
           ;
 
           /**
-           * <code>ACCELEROMETER = 0;</code>
+           * <code>UNKNOWN_SENSOR = 0;</code>
            */
-          public static final int ACCELEROMETER_VALUE = 0;
+          public static final int UNKNOWN_SENSOR_VALUE = 0;
           /**
-           * <code>AMBIENT_TEMPERATURE = 1;</code>
+           * <code>ACCELEROMETER = 1;</code>
            */
-          public static final int AMBIENT_TEMPERATURE_VALUE = 1;
+          public static final int ACCELEROMETER_VALUE = 1;
           /**
-           * <code>AUDIO = 2;</code>
+           * <code>AMBIENT_TEMPERATURE = 2;</code>
            */
-          public static final int AUDIO_VALUE = 2;
+          public static final int AMBIENT_TEMPERATURE_VALUE = 2;
           /**
-           * <code>COMPRESSED_AUDIO = 3;</code>
+           * <code>AUDIO = 3;</code>
            */
-          public static final int COMPRESSED_AUDIO_VALUE = 3;
+          public static final int AUDIO_VALUE = 3;
           /**
-           * <code>GRAVITY = 4;</code>
+           * <code>COMPRESSED_AUDIO = 4;</code>
            */
-          public static final int GRAVITY_VALUE = 4;
+          public static final int COMPRESSED_AUDIO_VALUE = 4;
           /**
-           * <code>GYROSCOPE = 5;</code>
+           * <code>GRAVITY = 5;</code>
            */
-          public static final int GYROSCOPE_VALUE = 5;
+          public static final int GRAVITY_VALUE = 5;
           /**
-           * <code>IMAGE = 6;</code>
+           * <code>GYROSCOPE = 6;</code>
            */
-          public static final int IMAGE_VALUE = 6;
+          public static final int GYROSCOPE_VALUE = 6;
           /**
-           * <code>LIGHT = 7;</code>
+           * <code>IMAGE = 7;</code>
            */
-          public static final int LIGHT_VALUE = 7;
+          public static final int IMAGE_VALUE = 7;
           /**
-           * <code>LINEAR_ACCELERATION = 8;</code>
+           * <code>LIGHT = 8;</code>
            */
-          public static final int LINEAR_ACCELERATION_VALUE = 8;
+          public static final int LIGHT_VALUE = 8;
           /**
-           * <code>LOCATION = 9;</code>
+           * <code>LINEAR_ACCELERATION = 9;</code>
            */
-          public static final int LOCATION_VALUE = 9;
+          public static final int LINEAR_ACCELERATION_VALUE = 9;
           /**
-           * <code>MAGNETOMETER = 10;</code>
+           * <code>LOCATION = 10;</code>
            */
-          public static final int MAGNETOMETER_VALUE = 10;
+          public static final int LOCATION_VALUE = 10;
           /**
-           * <code>ORIENTATION = 11;</code>
+           * <code>MAGNETOMETER = 11;</code>
            */
-          public static final int ORIENTATION_VALUE = 11;
+          public static final int MAGNETOMETER_VALUE = 11;
           /**
-           * <code>PRESSURE = 12;</code>
+           * <code>ORIENTATION = 12;</code>
            */
-          public static final int PRESSURE_VALUE = 12;
+          public static final int ORIENTATION_VALUE = 12;
           /**
-           * <code>PROXIMITY = 13;</code>
+           * <code>PRESSURE = 13;</code>
            */
-          public static final int PROXIMITY_VALUE = 13;
+          public static final int PRESSURE_VALUE = 13;
           /**
-           * <code>RELATIVE_HUMIDITY = 14;</code>
+           * <code>PROXIMITY = 14;</code>
            */
-          public static final int RELATIVE_HUMIDITY_VALUE = 14;
+          public static final int PROXIMITY_VALUE = 14;
           /**
-           * <code>ROTATION_VECTOR = 15;</code>
+           * <code>RELATIVE_HUMIDITY = 15;</code>
            */
-          public static final int ROTATION_VECTOR_VALUE = 15;
+          public static final int RELATIVE_HUMIDITY_VALUE = 15;
           /**
-           * <code>UNKNOWN_SENSOR = 16;</code>
+           * <code>ROTATION_VECTOR = 16;</code>
            */
-          public static final int UNKNOWN_SENSOR_VALUE = 16;
+          public static final int ROTATION_VECTOR_VALUE = 16;
 
 
           public final int getNumber() {
@@ -8624,23 +8642,23 @@ public final class RedvoxApiM {
            */
           public static InputSensor forNumber(int value) {
             switch (value) {
-              case 0: return ACCELEROMETER;
-              case 1: return AMBIENT_TEMPERATURE;
-              case 2: return AUDIO;
-              case 3: return COMPRESSED_AUDIO;
-              case 4: return GRAVITY;
-              case 5: return GYROSCOPE;
-              case 6: return IMAGE;
-              case 7: return LIGHT;
-              case 8: return LINEAR_ACCELERATION;
-              case 9: return LOCATION;
-              case 10: return MAGNETOMETER;
-              case 11: return ORIENTATION;
-              case 12: return PRESSURE;
-              case 13: return PROXIMITY;
-              case 14: return RELATIVE_HUMIDITY;
-              case 15: return ROTATION_VECTOR;
-              case 16: return UNKNOWN_SENSOR;
+              case 0: return UNKNOWN_SENSOR;
+              case 1: return ACCELEROMETER;
+              case 2: return AMBIENT_TEMPERATURE;
+              case 3: return AUDIO;
+              case 4: return COMPRESSED_AUDIO;
+              case 5: return GRAVITY;
+              case 6: return GYROSCOPE;
+              case 7: return IMAGE;
+              case 8: return LIGHT;
+              case 9: return LINEAR_ACCELERATION;
+              case 10: return LOCATION;
+              case 11: return MAGNETOMETER;
+              case 12: return ORIENTATION;
+              case 13: return PRESSURE;
+              case 14: return PROXIMITY;
+              case 15: return RELATIVE_HUMIDITY;
+              case 16: return ROTATION_VECTOR;
               default: return null;
             }
           }
@@ -9346,10 +9364,10 @@ public final class RedvoxApiM {
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
           getSerializedSize();
-          if (audioSamplingRate_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRate.HZ_80.getNumber()) {
+          if (audioSamplingRate_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRate.UNKNOWN_SAMPLING_RATE.getNumber()) {
             output.writeEnum(1, audioSamplingRate_);
           }
-          if (audioSourceTuning_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning.INFRASOUND_TUNING.getNumber()) {
+          if (audioSourceTuning_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning.UNKNOWN_TUNING.getNumber()) {
             output.writeEnum(2, audioSourceTuning_);
           }
           if (getAdditionalInputSensorsList().size() > 0) {
@@ -9383,7 +9401,7 @@ public final class RedvoxApiM {
           if (removeSensorDcOffset_ != false) {
             output.writeBool(11, removeSensorDcOffset_);
           }
-          if (fftOverlap_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.FftOverlap.PERCENT_25.getNumber()) {
+          if (fftOverlap_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.FftOverlap.UNKNOWN.getNumber()) {
             output.writeEnum(12, fftOverlap_);
           }
           if (useCustomTimeSyncServer_ != false) {
@@ -9434,11 +9452,11 @@ public final class RedvoxApiM {
           if (size != -1) return size;
 
           size = 0;
-          if (audioSamplingRate_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRate.HZ_80.getNumber()) {
+          if (audioSamplingRate_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRate.UNKNOWN_SAMPLING_RATE.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(1, audioSamplingRate_);
           }
-          if (audioSourceTuning_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning.INFRASOUND_TUNING.getNumber()) {
+          if (audioSourceTuning_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning.UNKNOWN_TUNING.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(2, audioSourceTuning_);
           }
@@ -9485,7 +9503,7 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(11, removeSensorDcOffset_);
           }
-          if (fftOverlap_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.FftOverlap.PERCENT_25.getNumber()) {
+          if (fftOverlap_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.FftOverlap.UNKNOWN.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(12, fftOverlap_);
           }
@@ -12351,7 +12369,7 @@ public final class RedvoxApiM {
         if (!getModelBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 6, model_);
         }
-        if (os_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.OsType.ANDROID.getNumber()) {
+        if (os_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.OsType.UNKNOWN_OS.getNumber()) {
           output.writeEnum(7, os_);
         }
         if (!getOsVersionBytes().isEmpty()) {
@@ -12405,7 +12423,7 @@ public final class RedvoxApiM {
         if (!getModelBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, model_);
         }
-        if (os_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.OsType.ANDROID.getNumber()) {
+        if (os_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.OsType.UNKNOWN_OS.getNumber()) {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(7, os_);
         }
@@ -15452,7 +15470,7 @@ public final class RedvoxApiM {
           if (b3_ != 0D) {
             output.writeDouble(6, b3_);
           }
-          if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.METERS_PER_SECOND_SQUARED.getNumber()) {
+          if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
             output.writeEnum(7, unit_);
           }
           com.google.protobuf.GeneratedMessageV3
@@ -15494,7 +15512,7 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(6, b3_);
           }
-          if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.METERS_PER_SECOND_SQUARED.getNumber()) {
+          if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(7, unit_);
           }
@@ -16731,7 +16749,7 @@ public final class RedvoxApiM {
         if (scoreMethod_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingInformation.TimingScoreMethod.UNKNOWN.getNumber()) {
           output.writeEnum(11, scoreMethod_);
         }
-        if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.METERS_PER_SECOND_SQUARED.getNumber()) {
+        if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
           output.writeEnum(12, unit_);
         }
         com.google.protobuf.GeneratedMessageV3
@@ -16793,7 +16811,7 @@ public final class RedvoxApiM {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(11, scoreMethod_);
         }
-        if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.METERS_PER_SECOND_SQUARED.getNumber()) {
+        if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(12, unit_);
         }
@@ -21238,16 +21256,24 @@ public final class RedvoxApiM {
         public enum AudioCodec
             implements com.google.protobuf.ProtocolMessageEnum {
           /**
-           * <code>FLAC = 0;</code>
+           * <code>UNKNOWN = 0;</code>
            */
-          FLAC(0),
+          UNKNOWN(0),
+          /**
+           * <code>FLAC = 1;</code>
+           */
+          FLAC(1),
           UNRECOGNIZED(-1),
           ;
 
           /**
-           * <code>FLAC = 0;</code>
+           * <code>UNKNOWN = 0;</code>
            */
-          public static final int FLAC_VALUE = 0;
+          public static final int UNKNOWN_VALUE = 0;
+          /**
+           * <code>FLAC = 1;</code>
+           */
+          public static final int FLAC_VALUE = 1;
 
 
           public final int getNumber() {
@@ -21274,7 +21300,8 @@ public final class RedvoxApiM {
            */
           public static AudioCodec forNumber(int value) {
             switch (value) {
-              case 0: return FLAC;
+              case 0: return UNKNOWN;
+              case 1: return FLAC;
               default: return null;
             }
           }
@@ -21590,7 +21617,7 @@ public final class RedvoxApiM {
           if (!audioBytes_.isEmpty()) {
             output.writeBytes(5, audioBytes_);
           }
-          if (audioCodec_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.CompressedAudio.AudioCodec.FLAC.getNumber()) {
+          if (audioCodec_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.CompressedAudio.AudioCodec.UNKNOWN.getNumber()) {
             output.writeEnum(6, audioCodec_);
           }
           com.google.protobuf.GeneratedMessageV3
@@ -21627,7 +21654,7 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeBytesSize(5, audioBytes_);
           }
-          if (audioCodec_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.CompressedAudio.AudioCodec.FLAC.getNumber()) {
+          if (audioCodec_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.CompressedAudio.AudioCodec.UNKNOWN.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(6, audioCodec_);
           }
@@ -24870,24 +24897,16 @@ public final class RedvoxApiM {
         public enum LocationScoreMethod
             implements com.google.protobuf.ProtocolMessageEnum {
           /**
-           * <pre>
-           * TODO
-           * </pre>
-           *
-           * <code>TODO = 0;</code>
+           * <code>UNKNOWN_METHOD = 0;</code>
            */
-          TODO(0),
+          UNKNOWN_METHOD(0),
           UNRECOGNIZED(-1),
           ;
 
           /**
-           * <pre>
-           * TODO
-           * </pre>
-           *
-           * <code>TODO = 0;</code>
+           * <code>UNKNOWN_METHOD = 0;</code>
            */
-          public static final int TODO_VALUE = 0;
+          public static final int UNKNOWN_METHOD_VALUE = 0;
 
 
           public final int getNumber() {
@@ -24914,7 +24933,7 @@ public final class RedvoxApiM {
            */
           public static LocationScoreMethod forNumber(int value) {
             switch (value) {
-              case 0: return TODO;
+              case 0: return UNKNOWN_METHOD;
               default: return null;
             }
           }
@@ -24981,48 +25000,48 @@ public final class RedvoxApiM {
         public enum LocationProvider
             implements com.google.protobuf.ProtocolMessageEnum {
           /**
-           * <code>NONE = 0;</code>
+           * <code>UNKNOWN = 0;</code>
            */
-          NONE(0),
+          UNKNOWN(0),
           /**
-           * <code>USER = 1;</code>
+           * <code>NONE = 1;</code>
            */
-          USER(1),
+          NONE(1),
           /**
-           * <code>GPS = 2;</code>
+           * <code>USER = 2;</code>
            */
-          GPS(2),
+          USER(2),
           /**
-           * <code>NETWORK = 3;</code>
+           * <code>GPS = 3;</code>
            */
-          NETWORK(3),
+          GPS(3),
           /**
-           * <code>UNKNOWN = 4;</code>
+           * <code>NETWORK = 4;</code>
            */
-          UNKNOWN(4),
+          NETWORK(4),
           UNRECOGNIZED(-1),
           ;
 
           /**
-           * <code>NONE = 0;</code>
+           * <code>UNKNOWN = 0;</code>
            */
-          public static final int NONE_VALUE = 0;
+          public static final int UNKNOWN_VALUE = 0;
           /**
-           * <code>USER = 1;</code>
+           * <code>NONE = 1;</code>
            */
-          public static final int USER_VALUE = 1;
+          public static final int NONE_VALUE = 1;
           /**
-           * <code>GPS = 2;</code>
+           * <code>USER = 2;</code>
            */
-          public static final int GPS_VALUE = 2;
+          public static final int USER_VALUE = 2;
           /**
-           * <code>NETWORK = 3;</code>
+           * <code>GPS = 3;</code>
            */
-          public static final int NETWORK_VALUE = 3;
+          public static final int GPS_VALUE = 3;
           /**
-           * <code>UNKNOWN = 4;</code>
+           * <code>NETWORK = 4;</code>
            */
-          public static final int UNKNOWN_VALUE = 4;
+          public static final int NETWORK_VALUE = 4;
 
 
           public final int getNumber() {
@@ -25049,11 +25068,11 @@ public final class RedvoxApiM {
            */
           public static LocationProvider forNumber(int value) {
             switch (value) {
-              case 0: return NONE;
-              case 1: return USER;
-              case 2: return GPS;
-              case 3: return NETWORK;
-              case 4: return UNKNOWN;
+              case 0: return UNKNOWN;
+              case 1: return NONE;
+              case 2: return USER;
+              case 3: return GPS;
+              case 4: return NETWORK;
               default: return null;
             }
           }
@@ -25887,7 +25906,7 @@ public final class RedvoxApiM {
           if (score_ != 0F) {
             output.writeFloat(19, score_);
           }
-          if (locationScoreMethod_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationScoreMethod.TODO.getNumber()) {
+          if (locationScoreMethod_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationScoreMethod.UNKNOWN_METHOD.getNumber()) {
             output.writeEnum(20, locationScoreMethod_);
           }
           if (locationPermissionsGranted_ != false) {
@@ -25899,7 +25918,7 @@ public final class RedvoxApiM {
           if (locationServicesEnabled_ != false) {
             output.writeBool(23, locationServicesEnabled_);
           }
-          if (locationProvider_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider.NONE.getNumber()) {
+          if (locationProvider_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider.UNKNOWN.getNumber()) {
             output.writeEnum(24, locationProvider_);
           }
           com.google.protobuf.GeneratedMessageV3
@@ -25984,7 +26003,7 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeFloatSize(19, score_);
           }
-          if (locationScoreMethod_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationScoreMethod.TODO.getNumber()) {
+          if (locationScoreMethod_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationScoreMethod.UNKNOWN_METHOD.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(20, locationScoreMethod_);
           }
@@ -26000,7 +26019,7 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(23, locationServicesEnabled_);
           }
-          if (locationProvider_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider.NONE.getNumber()) {
+          if (locationProvider_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider.UNKNOWN.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(24, locationProvider_);
           }
@@ -31429,40 +31448,40 @@ public final class RedvoxApiM {
         public enum ImageCodec
             implements com.google.protobuf.ProtocolMessageEnum {
           /**
-           * <code>PNG = 0;</code>
+           * <code>UNKNOWN = 0;</code>
            */
-          PNG(0),
+          UNKNOWN(0),
           /**
-           * <code>JPG = 1;</code>
+           * <code>PNG = 1;</code>
            */
-          JPG(1),
+          PNG(1),
           /**
-           * <code>BMP = 2;</code>
+           * <code>JPG = 2;</code>
            */
-          BMP(2),
+          JPG(2),
           /**
-           * <code>UNKNOWN = 3;</code>
+           * <code>BMP = 3;</code>
            */
-          UNKNOWN(3),
+          BMP(3),
           UNRECOGNIZED(-1),
           ;
 
           /**
-           * <code>PNG = 0;</code>
+           * <code>UNKNOWN = 0;</code>
            */
-          public static final int PNG_VALUE = 0;
+          public static final int UNKNOWN_VALUE = 0;
           /**
-           * <code>JPG = 1;</code>
+           * <code>PNG = 1;</code>
            */
-          public static final int JPG_VALUE = 1;
+          public static final int PNG_VALUE = 1;
           /**
-           * <code>BMP = 2;</code>
+           * <code>JPG = 2;</code>
            */
-          public static final int BMP_VALUE = 2;
+          public static final int JPG_VALUE = 2;
           /**
-           * <code>UNKNOWN = 3;</code>
+           * <code>BMP = 3;</code>
            */
-          public static final int UNKNOWN_VALUE = 3;
+          public static final int BMP_VALUE = 3;
 
 
           public final int getNumber() {
@@ -31489,10 +31508,10 @@ public final class RedvoxApiM {
            */
           public static ImageCodec forNumber(int value) {
             switch (value) {
-              case 0: return PNG;
-              case 1: return JPG;
-              case 2: return BMP;
-              case 3: return UNKNOWN;
+              case 0: return UNKNOWN;
+              case 1: return PNG;
+              case 2: return JPG;
+              case 3: return BMP;
               default: return null;
             }
           }
@@ -31819,7 +31838,7 @@ public final class RedvoxApiM {
           for (int i = 0; i < samples_.size(); i++) {
             output.writeBytes(3, samples_.get(i));
           }
-          if (imageCodec_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec.PNG.getNumber()) {
+          if (imageCodec_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec.UNKNOWN.getNumber()) {
             output.writeEnum(4, imageCodec_);
           }
           com.google.protobuf.GeneratedMessageV3
@@ -31853,7 +31872,7 @@ public final class RedvoxApiM {
             size += dataSize;
             size += 1 * getSamplesList().size();
           }
-          if (imageCodec_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec.PNG.getNumber()) {
+          if (imageCodec_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Image.ImageCodec.UNKNOWN.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(4, imageCodec_);
           }
@@ -37598,7 +37617,7 @@ public final class RedvoxApiM {
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
-        if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.METERS_PER_SECOND_SQUARED.getNumber()) {
+        if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
           output.writeEnum(1, unit_);
         }
         if (getValuesList().size() > 0) {
@@ -37626,7 +37645,7 @@ public final class RedvoxApiM {
         if (size != -1) return size;
 
         size = 0;
-        if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.METERS_PER_SECOND_SQUARED.getNumber()) {
+        if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(1, unit_);
         }
@@ -39119,7 +39138,7 @@ public final class RedvoxApiM {
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
-        if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.METERS_PER_SECOND_SQUARED.getNumber()) {
+        if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
           output.writeEnum(1, unit_);
         }
         if (getTimestampsList().size() > 0) {
@@ -39153,7 +39172,7 @@ public final class RedvoxApiM {
         if (size != -1) return size;
 
         size = 0;
-        if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.METERS_PER_SECOND_SQUARED.getNumber()) {
+        if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(1, unit_);
         }
@@ -45992,72 +46011,80 @@ public final class RedvoxApiM {
     public enum ResponseType
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      UNKNOWN(0),
+      /**
        * <pre>
        * No issues with packet
        * </pre>
        *
-       * <code>OK = 0;</code>
+       * <code>OK = 1;</code>
        */
-      OK(0),
+      OK(1),
       /**
        * <pre>
        * An authentication error has occurred
        * </pre>
        *
-       * <code>AUTH_ERROR = 1;</code>
+       * <code>AUTH_ERROR = 2;</code>
        */
-      AUTH_ERROR(1),
+      AUTH_ERROR(2),
       /**
        * <pre>
        * An error with the data decoding or data quality
        * </pre>
        *
-       * <code>DATA_ERROR = 2;</code>
+       * <code>DATA_ERROR = 3;</code>
        */
-      DATA_ERROR(2),
+      DATA_ERROR(3),
       /**
        * <pre>
        * Any other errors
        * </pre>
        *
-       * <code>OTHER_ERROR = 3;</code>
+       * <code>OTHER_ERROR = 4;</code>
        */
-      OTHER_ERROR(3),
+      OTHER_ERROR(4),
       UNRECOGNIZED(-1),
       ;
 
       /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      public static final int UNKNOWN_VALUE = 0;
+      /**
        * <pre>
        * No issues with packet
        * </pre>
        *
-       * <code>OK = 0;</code>
+       * <code>OK = 1;</code>
        */
-      public static final int OK_VALUE = 0;
+      public static final int OK_VALUE = 1;
       /**
        * <pre>
        * An authentication error has occurred
        * </pre>
        *
-       * <code>AUTH_ERROR = 1;</code>
+       * <code>AUTH_ERROR = 2;</code>
        */
-      public static final int AUTH_ERROR_VALUE = 1;
+      public static final int AUTH_ERROR_VALUE = 2;
       /**
        * <pre>
        * An error with the data decoding or data quality
        * </pre>
        *
-       * <code>DATA_ERROR = 2;</code>
+       * <code>DATA_ERROR = 3;</code>
        */
-      public static final int DATA_ERROR_VALUE = 2;
+      public static final int DATA_ERROR_VALUE = 3;
       /**
        * <pre>
        * Any other errors
        * </pre>
        *
-       * <code>OTHER_ERROR = 3;</code>
+       * <code>OTHER_ERROR = 4;</code>
        */
-      public static final int OTHER_ERROR_VALUE = 3;
+      public static final int OTHER_ERROR_VALUE = 4;
 
 
       public final int getNumber() {
@@ -46084,10 +46111,11 @@ public final class RedvoxApiM {
        */
       public static ResponseType forNumber(int value) {
         switch (value) {
-          case 0: return OK;
-          case 1: return AUTH_ERROR;
-          case 2: return DATA_ERROR;
-          case 3: return OTHER_ERROR;
+          case 0: return UNKNOWN;
+          case 1: return OK;
+          case 2: return AUTH_ERROR;
+          case 3: return DATA_ERROR;
+          case 4: return OTHER_ERROR;
           default: return null;
         }
       }
@@ -46261,7 +46289,7 @@ public final class RedvoxApiM {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (responseType_ != io.redvox.apis.RedvoxApiM.AcquisitionResponse.ResponseType.OK.getNumber()) {
+      if (responseType_ != io.redvox.apis.RedvoxApiM.AcquisitionResponse.ResponseType.UNKNOWN.getNumber()) {
         output.writeEnum(1, responseType_);
       }
       if (checksum_ != 0L) {
@@ -46282,7 +46310,7 @@ public final class RedvoxApiM {
       if (size != -1) return size;
 
       size = 0;
-      if (responseType_ != io.redvox.apis.RedvoxApiM.AcquisitionResponse.ResponseType.OK.getNumber()) {
+      if (responseType_ != io.redvox.apis.RedvoxApiM.AcquisitionResponse.ResponseType.UNKNOWN.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, responseType_);
       }
@@ -49253,7 +49281,7 @@ public final class RedvoxApiM {
   static {
     java.lang.String[] descriptorData = {
       "\n#src/redvox_api_m/redvox_api_m.proto\022\014r" +
-      "edvox_api_m\"\332U\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
+      "edvox_api_m\"\225V\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
       "(\002\022K\n\023station_information\030\002 \001(\0132..redvox" +
       "_api_m.RedvoxPacketM.StationInformation\022" +
       "I\n\022timing_information\030\003 \001(\0132-.redvox_api" +
@@ -49261,7 +49289,7 @@ public final class RedvoxApiM {
       "nsors\030\004 \001(\0132#.redvox_api_m.RedvoxPacketM" +
       ".Sensors\022;\n\010metadata\030\005 \003(\0132).redvox_api_" +
       "m.RedvoxPacketM.MetadataEntry\032/\n\rMetadat" +
-      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\302" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\346" +
       "\037\n\022StationInformation\022\n\n\002id\030\001 \001(\t\022\014\n\004uui" +
       "d\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\017\n\007auth_id\030" +
       "\004 \001(\t\022\014\n\004make\030\005 \001(\t\022\r\n\005model\030\006 \001(\t\022A\n\002os" +
@@ -49310,15 +49338,15 @@ public final class RedvoxApiM {
       "etadata\030\r \003(\0132K.redvox_api_m.RedvoxPacke" +
       "tM.StationInformation.StationMetrics.Met" +
       "adataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"U\n\013NetworkType\022\016\n\nNO" +
-      "_NETWORK\020\000\022\010\n\004WIFI\020\001\022\014\n\010CELLULAR\020\002\022\t\n\005WI" +
-      "RED\020\003\022\023\n\017UNKNOWN_NETWORK\020\004\"C\n\014WifiWakeLo" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"U\n\013NetworkType\022\023\n\017UN" +
+      "KNOWN_NETWORK\020\000\022\016\n\nNO_NETWORK\020\001\022\010\n\004WIFI\020" +
+      "\002\022\014\n\010CELLULAR\020\003\022\t\n\005WIRED\020\004\"C\n\014WifiWakeLo" +
       "ck\022\010\n\004NONE\020\000\022\r\n\tHIGH_PERF\020\001\022\017\n\013LOW_LATEN" +
       "CY\020\002\022\t\n\005OTHER\020\003\"^\n\020CellServiceState\022\013\n\007U" +
       "NKNOWN\020\000\022\r\n\tEMERGENCY\020\001\022\013\n\007NOMINAL\020\002\022\022\n\016" +
       "OUT_OF_SERVICE\020\003\022\r\n\tPOWER_OFF\020\004\"O\n\nPower" +
-      "State\022\r\n\tUNPLUGGED\020\000\022\014\n\010CHARGING\020\001\022\013\n\007CH" +
-      "ARGED\020\002\022\027\n\023UNKNOWN_POWER_STATE\020\003\032\230\r\n\013App" +
+      "State\022\027\n\023UNKNOWN_POWER_STATE\020\000\022\r\n\tUNPLUG" +
+      "GED\020\001\022\014\n\010CHARGING\020\002\022\013\n\007CHARGED\020\003\032\263\r\n\013App" +
       "Settings\022i\n\023audio_sampling_rate\030\001 \001(\0162L." +
       "redvox_api_m.RedvoxPacketM.StationInform" +
       "ation.AppSettings.AudioSamplingRate\022i\n\023a" +
@@ -49347,206 +49375,208 @@ public final class RedvoxApiM {
       "m.RedvoxPacketM.StationInformation.AppSe" +
       "ttings.MetadataEntry\032/\n\rMetadataEntry\022\013\n" +
       "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\nFftOver" +
-      "lap\022\016\n\nPERCENT_25\020\000\022\016\n\nPERCENT_50\020\001\022\016\n\nP" +
-      "ERCENT_75\020\002\022\013\n\007UNKNOWN\020\003\"S\n\021AudioSamplin" +
-      "gRate\022\t\n\005HZ_80\020\000\022\n\n\006HZ_800\020\001\022\013\n\007HZ_8000\020" +
-      "\002\022\014\n\010HZ_16000\020\003\022\014\n\010HZ_48000\020\004\"f\n\021AudioSo" +
-      "urceTuning\022\025\n\021INFRASOUND_TUNING\020\000\022\024\n\020LOW" +
-      "_AUDIO_TUNING\020\001\022\020\n\014AUDIO_TUNING\020\002\022\022\n\016UNK" +
-      "NOWN_TUNING\020\003\"\263\002\n\013InputSensor\022\021\n\rACCELER" +
-      "OMETER\020\000\022\027\n\023AMBIENT_TEMPERATURE\020\001\022\t\n\005AUD" +
-      "IO\020\002\022\024\n\020COMPRESSED_AUDIO\020\003\022\013\n\007GRAVITY\020\004\022" +
-      "\r\n\tGYROSCOPE\020\005\022\t\n\005IMAGE\020\006\022\t\n\005LIGHT\020\007\022\027\n\023" +
-      "LINEAR_ACCELERATION\020\010\022\014\n\010LOCATION\020\t\022\020\n\014M" +
-      "AGNETOMETER\020\n\022\017\n\013ORIENTATION\020\013\022\014\n\010PRESSU" +
-      "RE\020\014\022\r\n\tPROXIMITY\020\r\022\025\n\021RELATIVE_HUMIDITY" +
-      "\020\016\022\023\n\017ROTATION_VECTOR\020\017\022\022\n\016UNKNOWN_SENSO" +
-      "R\020\020\"F\n\006OsType\022\013\n\007ANDROID\020\000\022\007\n\003IOS\020\001\022\t\n\005L" +
-      "INUX\020\002\022\013\n\007WINDOWS\020\003\022\016\n\nUNKNOWN_OS\020\004\032\300\007\n\021" +
-      "TimingInformation\022!\n\031packet_start_os_tim" +
-      "estamp\030\001 \001(\001\022#\n\033packet_start_mach_timest" +
-      "amp\030\002 \001(\001\022\037\n\027packet_end_os_timestamp\030\003 \001" +
-      "(\001\022!\n\031packet_end_mach_timestamp\030\004 \001(\001\022,\n" +
-      "$server_acquisition_arrival_timestamp\030\005 " +
-      "\001(\001\022 \n\030app_start_mach_timestamp\030\006 \001(\001\022T\n" +
-      "\017synch_exchanges\030\007 \003(\0132;.redvox_api_m.Re" +
-      "dvoxPacketM.TimingInformation.SynchExcha" +
-      "nge\022\024\n\014best_latency\030\010 \001(\002\022\023\n\013best_offset" +
-      "\030\t \001(\002\022\r\n\005score\030\n \001(\002\022U\n\014score_method\030\013 " +
-      "\001(\0162?.redvox_api_m.RedvoxPacketM.TimingI" +
-      "nformation.TimingScoreMethod\022.\n\004unit\030\014 \001" +
-      "(\0162 .redvox_api_m.RedvoxPacketM.Unit\022M\n\010" +
-      "metadata\030\r \003(\0132;.redvox_api_m.RedvoxPack" +
-      "etM.TimingInformation.MetadataEntry\032/\n\rM" +
-      "etadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\032\225\002\n\rSynchExchange\022\n\n\002a1\030\001 \001(\001\022\n\n\002a2" +
-      "\030\002 \001(\001\022\n\n\002a3\030\003 \001(\001\022\n\n\002b1\030\004 \001(\001\022\n\n\002b2\030\005 \001" +
-      "(\001\022\n\n\002b3\030\006 \001(\001\022.\n\004unit\030\007 \001(\0162 .redvox_ap" +
-      "i_m.RedvoxPacketM.Unit\022[\n\010metadata\030\010 \003(\013" +
-      "2I.redvox_api_m.RedvoxPacketM.TimingInfo" +
-      "rmation.SynchExchange.MetadataEntry\032/\n\rM" +
-      "etadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\" \n\021TimingScoreMethod\022\013\n\007UNKNOWN\020\000\032\216" +
-      "\"\n\007Sensors\022>\n\raccelerometer\030\001 \001(\0132\'.redv" +
-      "ox_api_m.RedvoxPacketM.Sensors.Xyz\022G\n\023am" +
-      "bient_temperature\030\002 \001(\0132*.redvox_api_m.R" +
-      "edvoxPacketM.Sensors.Single\0228\n\005audio\030\003 \001" +
-      "(\0132).redvox_api_m.RedvoxPacketM.Sensors." +
-      "Audio\022M\n\020compressed_audio\030\004 \001(\01323.redvox" +
-      "_api_m.RedvoxPacketM.Sensors.CompressedA" +
-      "udio\0228\n\007gravity\030\005 \001(\0132\'.redvox_api_m.Red" +
-      "voxPacketM.Sensors.Xyz\022:\n\tgyroscope\030\006 \001(" +
-      "\0132\'.redvox_api_m.RedvoxPacketM.Sensors.X" +
-      "yz\0228\n\005image\030\007 \001(\0132).redvox_api_m.RedvoxP" +
-      "acketM.Sensors.Image\0229\n\005light\030\010 \001(\0132*.re" +
-      "dvox_api_m.RedvoxPacketM.Sensors.Single\022" +
-      "D\n\023linear_acceleration\030\t \001(\0132\'.redvox_ap" +
-      "i_m.RedvoxPacketM.Sensors.Xyz\022>\n\010locatio" +
-      "n\030\n \001(\0132,.redvox_api_m.RedvoxPacketM.Sen" +
-      "sors.Location\022=\n\014magnetometer\030\013 \001(\0132\'.re" +
-      "dvox_api_m.RedvoxPacketM.Sensors.Xyz\022<\n\013" +
-      "orientation\030\014 \001(\0132\'.redvox_api_m.RedvoxP" +
-      "acketM.Sensors.Xyz\022<\n\010pressure\030\r \001(\0132*.r" +
-      "edvox_api_m.RedvoxPacketM.Sensors.Single" +
-      "\022=\n\tproximity\030\016 \001(\0132*.redvox_api_m.Redvo" +
-      "xPacketM.Sensors.Single\022E\n\021relative_humi" +
-      "dity\030\017 \001(\0132*.redvox_api_m.RedvoxPacketM." +
-      "Sensors.Single\022@\n\017rotation_vector\030\020 \001(\0132" +
-      "\'.redvox_api_m.RedvoxPacketM.Sensors.Xyz" +
-      "\022C\n\010metadata\030\021 \003(\01321.redvox_api_m.Redvox" +
-      "PacketM.Sensors.MetadataEntry\032/\n\rMetadat" +
-      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\323" +
-      "\002\n\005Audio\022\032\n\022sensor_description\030\001 \001(\t\022\036\n\026" +
-      "first_sample_timestamp\030\002 \001(\001\022\023\n\013sample_r" +
-      "ate\030\003 \001(\002\022\031\n\021bits_of_precision\030\004 \001(\002\022\024\n\014" +
-      "is_scrambled\030\005 \001(\010\022\020\n\010encoding\030\006 \001(\t\022:\n\007" +
-      "samples\030\007 \001(\0132).redvox_api_m.RedvoxPacke" +
-      "tM.SamplePayload\022I\n\010metadata\030\010 \003(\01327.red" +
-      "vox_api_m.RedvoxPacketM.Sensors.Audio.Me" +
-      "tadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\200\003\n\017CompressedAudio" +
-      "\022\032\n\022sensor_description\030\001 \001(\t\022\036\n\026first_sa" +
-      "mple_timestamp\030\002 \001(\001\022\023\n\013sample_rate\030\003 \001(" +
-      "\002\022\024\n\014is_scrambled\030\004 \001(\010\022\023\n\013audio_bytes\030\005" +
-      " \001(\014\022S\n\013audio_codec\030\006 \001(\0162>.redvox_api_m" +
-      ".RedvoxPacketM.Sensors.CompressedAudio.A" +
-      "udioCodec\022S\n\010metadata\030\007 \003(\0132A.redvox_api" +
+      "lap\022\013\n\007UNKNOWN\020\000\022\016\n\nPERCENT_25\020\001\022\016\n\nPERC" +
+      "ENT_50\020\002\022\016\n\nPERCENT_75\020\003\"n\n\021AudioSamplin" +
+      "gRate\022\031\n\025UNKNOWN_SAMPLING_RATE\020\000\022\t\n\005HZ_8" +
+      "0\020\001\022\n\n\006HZ_800\020\002\022\013\n\007HZ_8000\020\003\022\014\n\010HZ_16000" +
+      "\020\004\022\014\n\010HZ_48000\020\005\"f\n\021AudioSourceTuning\022\022\n" +
+      "\016UNKNOWN_TUNING\020\000\022\025\n\021INFRASOUND_TUNING\020\001" +
+      "\022\024\n\020LOW_AUDIO_TUNING\020\002\022\020\n\014AUDIO_TUNING\020\003" +
+      "\"\263\002\n\013InputSensor\022\022\n\016UNKNOWN_SENSOR\020\000\022\021\n\r" +
+      "ACCELEROMETER\020\001\022\027\n\023AMBIENT_TEMPERATURE\020\002" +
+      "\022\t\n\005AUDIO\020\003\022\024\n\020COMPRESSED_AUDIO\020\004\022\013\n\007GRA" +
+      "VITY\020\005\022\r\n\tGYROSCOPE\020\006\022\t\n\005IMAGE\020\007\022\t\n\005LIGH" +
+      "T\020\010\022\027\n\023LINEAR_ACCELERATION\020\t\022\014\n\010LOCATION" +
+      "\020\n\022\020\n\014MAGNETOMETER\020\013\022\017\n\013ORIENTATION\020\014\022\014\n" +
+      "\010PRESSURE\020\r\022\r\n\tPROXIMITY\020\016\022\025\n\021RELATIVE_H" +
+      "UMIDITY\020\017\022\023\n\017ROTATION_VECTOR\020\020\"O\n\006OsType" +
+      "\022\016\n\nUNKNOWN_OS\020\000\022\013\n\007ANDROID\020\001\022\007\n\003IOS\020\002\022\007" +
+      "\n\003OSX\020\003\022\t\n\005LINUX\020\004\022\013\n\007WINDOWS\020\005\032\300\007\n\021Timi" +
+      "ngInformation\022!\n\031packet_start_os_timesta" +
+      "mp\030\001 \001(\001\022#\n\033packet_start_mach_timestamp\030" +
+      "\002 \001(\001\022\037\n\027packet_end_os_timestamp\030\003 \001(\001\022!" +
+      "\n\031packet_end_mach_timestamp\030\004 \001(\001\022,\n$ser" +
+      "ver_acquisition_arrival_timestamp\030\005 \001(\001\022" +
+      " \n\030app_start_mach_timestamp\030\006 \001(\001\022T\n\017syn" +
+      "ch_exchanges\030\007 \003(\0132;.redvox_api_m.Redvox" +
+      "PacketM.TimingInformation.SynchExchange\022" +
+      "\024\n\014best_latency\030\010 \001(\002\022\023\n\013best_offset\030\t \001" +
+      "(\002\022\r\n\005score\030\n \001(\002\022U\n\014score_method\030\013 \001(\0162" +
+      "?.redvox_api_m.RedvoxPacketM.TimingInfor" +
+      "mation.TimingScoreMethod\022.\n\004unit\030\014 \001(\0162 " +
+      ".redvox_api_m.RedvoxPacketM.Unit\022M\n\010meta" +
+      "data\030\r \003(\0132;.redvox_api_m.RedvoxPacketM." +
+      "TimingInformation.MetadataEntry\032/\n\rMetad" +
+      "ataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\032\225\002\n\rSynchExchange\022\n\n\002a1\030\001 \001(\001\022\n\n\002a2\030\002 \001" +
+      "(\001\022\n\n\002a3\030\003 \001(\001\022\n\n\002b1\030\004 \001(\001\022\n\n\002b2\030\005 \001(\001\022\n" +
+      "\n\002b3\030\006 \001(\001\022.\n\004unit\030\007 \001(\0162 .redvox_api_m." +
+      "RedvoxPacketM.Unit\022[\n\010metadata\030\010 \003(\0132I.r" +
+      "edvox_api_m.RedvoxPacketM.TimingInformat" +
+      "ion.SynchExchange.MetadataEntry\032/\n\rMetad" +
+      "ataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\" \n\021TimingScoreMethod\022\013\n\007UNKNOWN\020\000\032\245\"\n\007S" +
+      "ensors\022>\n\raccelerometer\030\001 \001(\0132\'.redvox_a" +
+      "pi_m.RedvoxPacketM.Sensors.Xyz\022G\n\023ambien" +
+      "t_temperature\030\002 \001(\0132*.redvox_api_m.Redvo" +
+      "xPacketM.Sensors.Single\0228\n\005audio\030\003 \001(\0132)" +
+      ".redvox_api_m.RedvoxPacketM.Sensors.Audi" +
+      "o\022M\n\020compressed_audio\030\004 \001(\01323.redvox_api" +
       "_m.RedvoxPacketM.Sensors.CompressedAudio" +
-      ".MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\026\n\nAudioCodec\022\010\n" +
-      "\004FLAC\020\000\032\234\002\n\006Single\022\032\n\022sensor_description" +
-      "\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132).redvox_api_" +
-      "m.RedvoxPacketM.TimingPayload\022:\n\007samples" +
-      "\030\003 \001(\0132).redvox_api_m.RedvoxPacketM.Samp" +
-      "lePayload\022J\n\010metadata\030\004 \003(\01328.redvox_api" +
-      "_m.RedvoxPacketM.Sensors.Single.Metadata" +
-      "Entry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\032\204\013\n\010Location\022\032\n\022sensor_de" +
+      "\0228\n\007gravity\030\005 \001(\0132\'.redvox_api_m.RedvoxP" +
+      "acketM.Sensors.Xyz\022:\n\tgyroscope\030\006 \001(\0132\'." +
+      "redvox_api_m.RedvoxPacketM.Sensors.Xyz\0228" +
+      "\n\005image\030\007 \001(\0132).redvox_api_m.RedvoxPacke" +
+      "tM.Sensors.Image\0229\n\005light\030\010 \001(\0132*.redvox" +
+      "_api_m.RedvoxPacketM.Sensors.Single\022D\n\023l" +
+      "inear_acceleration\030\t \001(\0132\'.redvox_api_m." +
+      "RedvoxPacketM.Sensors.Xyz\022>\n\010location\030\n " +
+      "\001(\0132,.redvox_api_m.RedvoxPacketM.Sensors" +
+      ".Location\022=\n\014magnetometer\030\013 \001(\0132\'.redvox" +
+      "_api_m.RedvoxPacketM.Sensors.Xyz\022<\n\013orie" +
+      "ntation\030\014 \001(\0132\'.redvox_api_m.RedvoxPacke" +
+      "tM.Sensors.Xyz\022<\n\010pressure\030\r \001(\0132*.redvo" +
+      "x_api_m.RedvoxPacketM.Sensors.Single\022=\n\t" +
+      "proximity\030\016 \001(\0132*.redvox_api_m.RedvoxPac" +
+      "ketM.Sensors.Single\022E\n\021relative_humidity" +
+      "\030\017 \001(\0132*.redvox_api_m.RedvoxPacketM.Sens" +
+      "ors.Single\022@\n\017rotation_vector\030\020 \001(\0132\'.re" +
+      "dvox_api_m.RedvoxPacketM.Sensors.Xyz\022C\n\010" +
+      "metadata\030\021 \003(\01321.redvox_api_m.RedvoxPack" +
+      "etM.Sensors.MetadataEntry\032/\n\rMetadataEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\323\002\n\005A" +
+      "udio\022\032\n\022sensor_description\030\001 \001(\t\022\036\n\026firs" +
+      "t_sample_timestamp\030\002 \001(\001\022\023\n\013sample_rate\030" +
+      "\003 \001(\002\022\031\n\021bits_of_precision\030\004 \001(\002\022\024\n\014is_s" +
+      "crambled\030\005 \001(\010\022\020\n\010encoding\030\006 \001(\t\022:\n\007samp" +
+      "les\030\007 \001(\0132).redvox_api_m.RedvoxPacketM.S" +
+      "amplePayload\022I\n\010metadata\030\010 \003(\01327.redvox_" +
+      "api_m.RedvoxPacketM.Sensors.Audio.Metada" +
+      "taEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\032\215\003\n\017CompressedAudio\022\032\n\022" +
+      "sensor_description\030\001 \001(\t\022\036\n\026first_sample" +
+      "_timestamp\030\002 \001(\001\022\023\n\013sample_rate\030\003 \001(\002\022\024\n" +
+      "\014is_scrambled\030\004 \001(\010\022\023\n\013audio_bytes\030\005 \001(\014" +
+      "\022S\n\013audio_codec\030\006 \001(\0162>.redvox_api_m.Red" +
+      "voxPacketM.Sensors.CompressedAudio.Audio" +
+      "Codec\022S\n\010metadata\030\007 \003(\0132A.redvox_api_m.R" +
+      "edvoxPacketM.Sensors.CompressedAudio.Met" +
+      "adataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"#\n\nAudioCodec\022\013\n\007UNK" +
+      "NOWN\020\000\022\010\n\004FLAC\020\001\032\234\002\n\006Single\022\032\n\022sensor_de" +
       "scription\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132).re" +
-      "dvox_api_m.RedvoxPacketM.TimingPayload\022C" +
-      "\n\020latitude_samples\030\003 \001(\0132).redvox_api_m." +
-      "RedvoxPacketM.SamplePayload\022D\n\021longitude" +
-      "_samples\030\004 \001(\0132).redvox_api_m.RedvoxPack" +
-      "etM.SamplePayload\022C\n\020altitude_samples\030\005 " +
-      "\001(\0132).redvox_api_m.RedvoxPacketM.SampleP" +
-      "ayload\022@\n\rspeed_samples\030\006 \001(\0132).redvox_a" +
-      "pi_m.RedvoxPacketM.SamplePayload\022B\n\017bear" +
-      "ing_samples\030\007 \001(\0132).redvox_api_m.RedvoxP" +
-      "acketM.SamplePayload\022N\n\033horizontal_accur" +
-      "acy_samples\030\010 \001(\0132).redvox_api_m.RedvoxP" +
-      "acketM.SamplePayload\022L\n\031vertical_accurac" +
-      "y_samples\030\t \001(\0132).redvox_api_m.RedvoxPac" +
-      "ketM.SamplePayload\022I\n\026speed_accuracy_sam" +
-      "ples\030\n \001(\0132).redvox_api_m.RedvoxPacketM." +
-      "SamplePayload\022K\n\030bearing_accuracy_sample" +
-      "s\030\013 \001(\0132).redvox_api_m.RedvoxPacketM.Sam" +
-      "plePayload\022\025\n\rbest_latitude\030\016 \001(\002\022\026\n\016bes" +
-      "t_longitude\030\017 \001(\002\022\025\n\rbest_altitude\030\020 \001(\002" +
-      "\022\022\n\nbest_speed\030\021 \001(\002\022\024\n\014best_bearing\030\022 \001" +
-      "(\002\022\r\n\005score\030\023 \001(\002\022_\n\025location_score_meth" +
-      "od\030\024 \001(\0162@.redvox_api_m.RedvoxPacketM.Se" +
-      "nsors.Location.LocationScoreMethod\022$\n\034lo" +
-      "cation_permissions_granted\030\025 \001(\010\022#\n\033loca" +
-      "tion_services_requested\030\026 \001(\010\022!\n\031locatio" +
-      "n_services_enabled\030\027 \001(\010\022X\n\021location_pro" +
-      "vider\030\030 \001(\0162=.redvox_api_m.RedvoxPacketM" +
-      ".Sensors.Location.LocationProvider\022L\n\010me" +
-      "tadata\030\031 \003(\0132:.redvox_api_m.RedvoxPacket" +
-      "M.Sensors.Location.MetadataEntry\032/\n\rMeta" +
-      "dataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"\037\n\023LocationScoreMethod\022\010\n\004TODO\020\000\"I\n\020Lo" +
-      "cationProvider\022\010\n\004NONE\020\000\022\010\n\004USER\020\001\022\007\n\003GP" +
-      "S\020\002\022\013\n\007NETWORK\020\003\022\013\n\007UNKNOWN\020\004\032\224\003\n\003Xyz\022\032\n" +
-      "\022sensor_description\030\001 \001(\t\022=\n\ntimestamps\030" +
-      "\002 \001(\0132).redvox_api_m.RedvoxPacketM.Timin" +
-      "gPayload\022<\n\tx_samples\030\003 \001(\0132).redvox_api" +
-      "_m.RedvoxPacketM.SamplePayload\022<\n\ty_samp" +
-      "les\030\004 \001(\0132).redvox_api_m.RedvoxPacketM.S" +
-      "amplePayload\022<\n\tz_samples\030\005 \001(\0132).redvox" +
-      "_api_m.RedvoxPacketM.SamplePayload\022G\n\010me" +
-      "tadata\030\006 \003(\01325.redvox_api_m.RedvoxPacket" +
-      "M.Sensors.Xyz.MetadataEntry\032/\n\rMetadataE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\360\002\n" +
-      "\005Image\022\032\n\022sensor_description\030\001 \001(\t\022=\n\nti" +
-      "mestamps\030\002 \001(\0132).redvox_api_m.RedvoxPack" +
-      "etM.TimingPayload\022\017\n\007samples\030\003 \003(\014\022I\n\013im" +
-      "age_codec\030\004 \001(\01624.redvox_api_m.RedvoxPac" +
-      "ketM.Sensors.Image.ImageCodec\022I\n\010metadat" +
-      "a\030\005 \003(\01327.redvox_api_m.RedvoxPacketM.Sen" +
-      "sors.Image.MetadataEntry\032/\n\rMetadataEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"4\n\nIma" +
-      "geCodec\022\007\n\003PNG\020\000\022\007\n\003JPG\020\001\022\007\n\003BMP\020\002\022\013\n\007UN" +
-      "KNOWN\020\003\032\224\002\n\rSamplePayload\022.\n\004unit\030\001 \001(\0162" +
-      " .redvox_api_m.RedvoxPacketM.Unit\022\016\n\006val" +
-      "ues\030\002 \003(\002\022G\n\020value_statistics\030\003 \001(\0132-.re" +
-      "dvox_api_m.RedvoxPacketM.SummaryStatisti" +
-      "cs\022I\n\010metadata\030\004 \003(\01327.redvox_api_m.Redv" +
-      "oxPacketM.SamplePayload.MetadataEntry\032/\n" +
-      "\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\032\321\002\n\rTimingPayload\022.\n\004unit\030\001 \001(\0162 " +
-      ".redvox_api_m.RedvoxPacketM.Unit\022\022\n\ntime" +
-      "stamps\030\002 \003(\001\022K\n\024timestamp_statistics\030\003 \001" +
-      "(\0132-.redvox_api_m.RedvoxPacketM.SummaryS" +
-      "tatistics\022\030\n\020mean_sample_rate\030\004 \001(\002\022\031\n\021s" +
-      "tdev_sample_rate\030\005 \001(\002\022I\n\010metadata\030\006 \003(\013" +
-      "27.redvox_api_m.RedvoxPacketM.TimingPayl" +
-      "oad.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\365\001\n\021SummarySt" +
-      "atistics\022\r\n\005count\030\001 \001(\002\022\014\n\004mean\030\002 \001(\002\022\032\n" +
-      "\022standard_deviation\030\003 \001(\002\022\013\n\003min\030\004 \001(\002\022\013" +
-      "\n\003max\030\005 \001(\002\022\r\n\005range\030\006 \001(\002\022M\n\010metadata\030\007" +
-      " \003(\0132;.redvox_api_m.RedvoxPacketM.Summar" +
-      "yStatistics.MetadataEntry\032/\n\rMetadataEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\203\003\n\004U" +
-      "nit\022\035\n\031METERS_PER_SECOND_SQUARED\020\000\022\016\n\nKI" +
-      "LOPASCAL\020\001\022\026\n\022RADIANS_PER_SECOND\020\002\022\023\n\017DE" +
-      "CIMAL_DEGREES\020\003\022\n\n\006METERS\020\004\022\025\n\021METERS_PE" +
-      "R_SECOND\020\005\022\016\n\nMICROTESLA\020\006\022\031\n\025LSB_PLUS_M" +
-      "INUS_COUNTS\020\007\022!\n\035MICROSECONDS_SINCE_UNIX" +
-      "_EPOCH\020\010\022\013\n\007DECIBEL\020\t\022\023\n\017DEGREES_CELSIUS" +
-      "\020\n\022\010\n\004BYTE\020\013\022\016\n\nPERCENTAGE\020\014\022\013\n\007RADIANS\020" +
-      "\r\022\020\n\014MICROAMPERES\020\016\022\017\n\013CENTIMETERS\020\017\022\025\n\021" +
-      "NORMALIZED_COUNTS\020\020\022\007\n\003LUX\020\021\022\014\n\010UNITLESS" +
-      "\020\022\022\007\n\003PCM\020\023\022\013\n\007UNKNOWN\020\024\"\254\001\n\026EncryptedRe" +
-      "dvoxPacketM\022\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 " +
-      "\001(\014\032r\n\006Header\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014sta" +
-      "tion_uuid\030\002 \001(\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016f" +
-      "irebase_token\030\004 \001(\t\022\022\n\nauth_email\030\005 \001(\t\"" +
-      "y\n\022AcquisitionRequest\022\022\n\nauth_token\030\001 \001(" +
-      "\t\022\026\n\016firebase_token\030\002 \001(\t\022\020\n\010checksum\030\003 " +
-      "\001(\003\022\024\n\014is_encrypted\030\004 \001(\010\022\017\n\007payload\030\005 \001" +
-      "(\014\"\330\001\n\023AcquisitionResponse\022E\n\rresponse_t" +
-      "ype\030\001 \001(\0162..redvox_api_m.AcquisitionResp" +
-      "onse.ResponseType\022\020\n\010checksum\030\002 \001(\003\022\017\n\007d" +
-      "etails\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"G\n\014Response" +
-      "Type\022\006\n\002OK\020\000\022\016\n\nAUTH_ERROR\020\001\022\016\n\nDATA_ERR" +
-      "OR\020\002\022\017\n\013OTHER_ERROR\020\003\"\\\n\014SynchRequest\022\022\n" +
-      "\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022" +
-      "\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001\n\r" +
-      "SynchResponse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014sta" +
-      "tion_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_s" +
-      "eq_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsend_" +
-      "ts_us\030\006 \001(\004B\020\n\016io.redvox.apisb\006proto3"
+      "dvox_api_m.RedvoxPacketM.TimingPayload\022:" +
+      "\n\007samples\030\003 \001(\0132).redvox_api_m.RedvoxPac" +
+      "ketM.SamplePayload\022J\n\010metadata\030\004 \003(\01328.r" +
+      "edvox_api_m.RedvoxPacketM.Sensors.Single" +
+      ".MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\216\013\n\010Location\022\032\n\022" +
+      "sensor_description\030\001 \001(\t\022=\n\ntimestamps\030\002" +
+      " \001(\0132).redvox_api_m.RedvoxPacketM.Timing" +
+      "Payload\022C\n\020latitude_samples\030\003 \001(\0132).redv" +
+      "ox_api_m.RedvoxPacketM.SamplePayload\022D\n\021" +
+      "longitude_samples\030\004 \001(\0132).redvox_api_m.R" +
+      "edvoxPacketM.SamplePayload\022C\n\020altitude_s" +
+      "amples\030\005 \001(\0132).redvox_api_m.RedvoxPacket" +
+      "M.SamplePayload\022@\n\rspeed_samples\030\006 \001(\0132)" +
+      ".redvox_api_m.RedvoxPacketM.SamplePayloa" +
+      "d\022B\n\017bearing_samples\030\007 \001(\0132).redvox_api_" +
+      "m.RedvoxPacketM.SamplePayload\022N\n\033horizon" +
+      "tal_accuracy_samples\030\010 \001(\0132).redvox_api_" +
+      "m.RedvoxPacketM.SamplePayload\022L\n\031vertica" +
+      "l_accuracy_samples\030\t \001(\0132).redvox_api_m." +
+      "RedvoxPacketM.SamplePayload\022I\n\026speed_acc" +
+      "uracy_samples\030\n \001(\0132).redvox_api_m.Redvo" +
+      "xPacketM.SamplePayload\022K\n\030bearing_accura" +
+      "cy_samples\030\013 \001(\0132).redvox_api_m.RedvoxPa" +
+      "cketM.SamplePayload\022\025\n\rbest_latitude\030\016 \001" +
+      "(\002\022\026\n\016best_longitude\030\017 \001(\002\022\025\n\rbest_altit" +
+      "ude\030\020 \001(\002\022\022\n\nbest_speed\030\021 \001(\002\022\024\n\014best_be" +
+      "aring\030\022 \001(\002\022\r\n\005score\030\023 \001(\002\022_\n\025location_s" +
+      "core_method\030\024 \001(\0162@.redvox_api_m.RedvoxP" +
+      "acketM.Sensors.Location.LocationScoreMet" +
+      "hod\022$\n\034location_permissions_granted\030\025 \001(" +
+      "\010\022#\n\033location_services_requested\030\026 \001(\010\022!" +
+      "\n\031location_services_enabled\030\027 \001(\010\022X\n\021loc" +
+      "ation_provider\030\030 \001(\0162=.redvox_api_m.Redv" +
+      "oxPacketM.Sensors.Location.LocationProvi" +
+      "der\022L\n\010metadata\030\031 \003(\0132:.redvox_api_m.Red" +
+      "voxPacketM.Sensors.Location.MetadataEntr" +
+      "y\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\")\n\023LocationScoreMethod\022\022\n\016UNK" +
+      "NOWN_METHOD\020\000\"I\n\020LocationProvider\022\013\n\007UNK" +
+      "NOWN\020\000\022\010\n\004NONE\020\001\022\010\n\004USER\020\002\022\007\n\003GPS\020\003\022\013\n\007N" +
+      "ETWORK\020\004\032\224\003\n\003Xyz\022\032\n\022sensor_description\030\001" +
+      " \001(\t\022=\n\ntimestamps\030\002 \001(\0132).redvox_api_m." +
+      "RedvoxPacketM.TimingPayload\022<\n\tx_samples" +
+      "\030\003 \001(\0132).redvox_api_m.RedvoxPacketM.Samp" +
+      "lePayload\022<\n\ty_samples\030\004 \001(\0132).redvox_ap" +
+      "i_m.RedvoxPacketM.SamplePayload\022<\n\tz_sam" +
+      "ples\030\005 \001(\0132).redvox_api_m.RedvoxPacketM." +
+      "SamplePayload\022G\n\010metadata\030\006 \003(\01325.redvox" +
+      "_api_m.RedvoxPacketM.Sensors.Xyz.Metadat" +
+      "aEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\032\360\002\n\005Image\022\032\n\022sensor_desc" +
+      "ription\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132).redv" +
+      "ox_api_m.RedvoxPacketM.TimingPayload\022\017\n\007" +
+      "samples\030\003 \003(\014\022I\n\013image_codec\030\004 \001(\01624.red" +
+      "vox_api_m.RedvoxPacketM.Sensors.Image.Im" +
+      "ageCodec\022I\n\010metadata\030\005 \003(\01327.redvox_api_" +
+      "m.RedvoxPacketM.Sensors.Image.MetadataEn" +
+      "try\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"4\n\nImageCodec\022\013\n\007UNKNOWN\020\000\022" +
+      "\007\n\003PNG\020\001\022\007\n\003JPG\020\002\022\007\n\003BMP\020\003\032\224\002\n\rSamplePay" +
+      "load\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Redvox" +
+      "PacketM.Unit\022\016\n\006values\030\002 \003(\002\022G\n\020value_st" +
+      "atistics\030\003 \001(\0132-.redvox_api_m.RedvoxPack" +
+      "etM.SummaryStatistics\022I\n\010metadata\030\004 \003(\0132" +
+      "7.redvox_api_m.RedvoxPacketM.SamplePaylo" +
+      "ad.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321\002\n\rTimingPayl" +
+      "oad\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.RedvoxP" +
+      "acketM.Unit\022\022\n\ntimestamps\030\002 \003(\001\022K\n\024times" +
+      "tamp_statistics\030\003 \001(\0132-.redvox_api_m.Red" +
+      "voxPacketM.SummaryStatistics\022\030\n\020mean_sam" +
+      "ple_rate\030\004 \001(\002\022\031\n\021stdev_sample_rate\030\005 \001(" +
+      "\002\022I\n\010metadata\030\006 \003(\01327.redvox_api_m.Redvo" +
+      "xPacketM.TimingPayload.MetadataEntry\032/\n\r" +
+      "MetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\032\365\001\n\021SummaryStatistics\022\r\n\005count\030\001 \001" +
+      "(\002\022\014\n\004mean\030\002 \001(\002\022\032\n\022standard_deviation\030\003" +
+      " \001(\002\022\013\n\003min\030\004 \001(\002\022\013\n\003max\030\005 \001(\002\022\r\n\005range\030" +
+      "\006 \001(\002\022M\n\010metadata\030\007 \003(\0132;.redvox_api_m.R" +
+      "edvoxPacketM.SummaryStatistics.MetadataE" +
+      "ntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\"\203\003\n\004Unit\022\013\n\007UNKNOWN\020\000\022\035\n\031M" +
+      "ETERS_PER_SECOND_SQUARED\020\001\022\016\n\nKILOPASCAL" +
+      "\020\002\022\026\n\022RADIANS_PER_SECOND\020\003\022\023\n\017DECIMAL_DE" +
+      "GREES\020\004\022\n\n\006METERS\020\005\022\025\n\021METERS_PER_SECOND" +
+      "\020\006\022\016\n\nMICROTESLA\020\007\022\031\n\025LSB_PLUS_MINUS_COU" +
+      "NTS\020\010\022!\n\035MICROSECONDS_SINCE_UNIX_EPOCH\020\t" +
+      "\022\013\n\007DECIBEL\020\n\022\023\n\017DEGREES_CELSIUS\020\013\022\010\n\004BY" +
+      "TE\020\014\022\016\n\nPERCENTAGE\020\r\022\013\n\007RADIANS\020\016\022\020\n\014MIC" +
+      "ROAMPERES\020\017\022\017\n\013CENTIMETERS\020\020\022\025\n\021NORMALIZ" +
+      "ED_COUNTS\020\021\022\007\n\003LUX\020\022\022\014\n\010UNITLESS\020\023\022\007\n\003PC" +
+      "M\020\024\"\254\001\n\026EncryptedRedvoxPacketM\022\016\n\006header" +
+      "\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014\032r\n\006Header\022\022\n\nstat" +
+      "ion_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\022\n\nau" +
+      "th_token\030\003 \001(\t\022\026\n\016firebase_token\030\004 \001(\t\022\022" +
+      "\n\nauth_email\030\005 \001(\t\"y\n\022AcquisitionRequest" +
+      "\022\022\n\nauth_token\030\001 \001(\t\022\026\n\016firebase_token\030\002" +
+      " \001(\t\022\020\n\010checksum\030\003 \001(\003\022\024\n\014is_encrypted\030\004" +
+      " \001(\010\022\017\n\007payload\030\005 \001(\014\"\345\001\n\023AcquisitionRes" +
+      "ponse\022E\n\rresponse_type\030\001 \001(\0162..redvox_ap" +
+      "i_m.AcquisitionResponse.ResponseType\022\020\n\010" +
+      "checksum\030\002 \001(\003\022\017\n\007details\030\003 \001(\t\022\016\n\006resen" +
+      "d\030\004 \001(\010\"T\n\014ResponseType\022\013\n\007UNKNOWN\020\000\022\006\n\002" +
+      "OK\020\001\022\016\n\nAUTH_ERROR\020\002\022\016\n\nDATA_ERROR\020\003\022\017\n\013" +
+      "OTHER_ERROR\020\004\"\\\n\014SynchRequest\022\022\n\nstation" +
+      "_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\016\n\006seq_i" +
+      "d\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001\n\rSynchRes" +
+      "ponse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uui" +
+      "d\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 " +
+      "\001(\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsend_ts_us\030\006 " +
+      "\001(\004B\020\n\016io.redvox.apisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

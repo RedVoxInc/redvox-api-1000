@@ -49,48 +49,48 @@ class RedvoxPacketM(google___protobuf___message___Message):
     Unit: _Unit
     class _Unit(google___protobuf___internal___enum_type_wrapper____EnumTypeWrapper[RedvoxPacketM.UnitValue]):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
-        METERS_PER_SECOND_SQUARED = typing___cast(RedvoxPacketM.UnitValue, 0)
-        KILOPASCAL = typing___cast(RedvoxPacketM.UnitValue, 1)
-        RADIANS_PER_SECOND = typing___cast(RedvoxPacketM.UnitValue, 2)
-        DECIMAL_DEGREES = typing___cast(RedvoxPacketM.UnitValue, 3)
-        METERS = typing___cast(RedvoxPacketM.UnitValue, 4)
-        METERS_PER_SECOND = typing___cast(RedvoxPacketM.UnitValue, 5)
-        MICROTESLA = typing___cast(RedvoxPacketM.UnitValue, 6)
-        LSB_PLUS_MINUS_COUNTS = typing___cast(RedvoxPacketM.UnitValue, 7)
-        MICROSECONDS_SINCE_UNIX_EPOCH = typing___cast(RedvoxPacketM.UnitValue, 8)
-        DECIBEL = typing___cast(RedvoxPacketM.UnitValue, 9)
-        DEGREES_CELSIUS = typing___cast(RedvoxPacketM.UnitValue, 10)
-        BYTE = typing___cast(RedvoxPacketM.UnitValue, 11)
-        PERCENTAGE = typing___cast(RedvoxPacketM.UnitValue, 12)
-        RADIANS = typing___cast(RedvoxPacketM.UnitValue, 13)
-        MICROAMPERES = typing___cast(RedvoxPacketM.UnitValue, 14)
-        CENTIMETERS = typing___cast(RedvoxPacketM.UnitValue, 15)
-        NORMALIZED_COUNTS = typing___cast(RedvoxPacketM.UnitValue, 16)
-        LUX = typing___cast(RedvoxPacketM.UnitValue, 17)
-        UNITLESS = typing___cast(RedvoxPacketM.UnitValue, 18)
-        PCM = typing___cast(RedvoxPacketM.UnitValue, 19)
-        UNKNOWN = typing___cast(RedvoxPacketM.UnitValue, 20)
-    METERS_PER_SECOND_SQUARED = typing___cast(RedvoxPacketM.UnitValue, 0)
-    KILOPASCAL = typing___cast(RedvoxPacketM.UnitValue, 1)
-    RADIANS_PER_SECOND = typing___cast(RedvoxPacketM.UnitValue, 2)
-    DECIMAL_DEGREES = typing___cast(RedvoxPacketM.UnitValue, 3)
-    METERS = typing___cast(RedvoxPacketM.UnitValue, 4)
-    METERS_PER_SECOND = typing___cast(RedvoxPacketM.UnitValue, 5)
-    MICROTESLA = typing___cast(RedvoxPacketM.UnitValue, 6)
-    LSB_PLUS_MINUS_COUNTS = typing___cast(RedvoxPacketM.UnitValue, 7)
-    MICROSECONDS_SINCE_UNIX_EPOCH = typing___cast(RedvoxPacketM.UnitValue, 8)
-    DECIBEL = typing___cast(RedvoxPacketM.UnitValue, 9)
-    DEGREES_CELSIUS = typing___cast(RedvoxPacketM.UnitValue, 10)
-    BYTE = typing___cast(RedvoxPacketM.UnitValue, 11)
-    PERCENTAGE = typing___cast(RedvoxPacketM.UnitValue, 12)
-    RADIANS = typing___cast(RedvoxPacketM.UnitValue, 13)
-    MICROAMPERES = typing___cast(RedvoxPacketM.UnitValue, 14)
-    CENTIMETERS = typing___cast(RedvoxPacketM.UnitValue, 15)
-    NORMALIZED_COUNTS = typing___cast(RedvoxPacketM.UnitValue, 16)
-    LUX = typing___cast(RedvoxPacketM.UnitValue, 17)
-    UNITLESS = typing___cast(RedvoxPacketM.UnitValue, 18)
-    PCM = typing___cast(RedvoxPacketM.UnitValue, 19)
-    UNKNOWN = typing___cast(RedvoxPacketM.UnitValue, 20)
+        UNKNOWN = typing___cast(RedvoxPacketM.UnitValue, 0)
+        METERS_PER_SECOND_SQUARED = typing___cast(RedvoxPacketM.UnitValue, 1)
+        KILOPASCAL = typing___cast(RedvoxPacketM.UnitValue, 2)
+        RADIANS_PER_SECOND = typing___cast(RedvoxPacketM.UnitValue, 3)
+        DECIMAL_DEGREES = typing___cast(RedvoxPacketM.UnitValue, 4)
+        METERS = typing___cast(RedvoxPacketM.UnitValue, 5)
+        METERS_PER_SECOND = typing___cast(RedvoxPacketM.UnitValue, 6)
+        MICROTESLA = typing___cast(RedvoxPacketM.UnitValue, 7)
+        LSB_PLUS_MINUS_COUNTS = typing___cast(RedvoxPacketM.UnitValue, 8)
+        MICROSECONDS_SINCE_UNIX_EPOCH = typing___cast(RedvoxPacketM.UnitValue, 9)
+        DECIBEL = typing___cast(RedvoxPacketM.UnitValue, 10)
+        DEGREES_CELSIUS = typing___cast(RedvoxPacketM.UnitValue, 11)
+        BYTE = typing___cast(RedvoxPacketM.UnitValue, 12)
+        PERCENTAGE = typing___cast(RedvoxPacketM.UnitValue, 13)
+        RADIANS = typing___cast(RedvoxPacketM.UnitValue, 14)
+        MICROAMPERES = typing___cast(RedvoxPacketM.UnitValue, 15)
+        CENTIMETERS = typing___cast(RedvoxPacketM.UnitValue, 16)
+        NORMALIZED_COUNTS = typing___cast(RedvoxPacketM.UnitValue, 17)
+        LUX = typing___cast(RedvoxPacketM.UnitValue, 18)
+        UNITLESS = typing___cast(RedvoxPacketM.UnitValue, 19)
+        PCM = typing___cast(RedvoxPacketM.UnitValue, 20)
+    UNKNOWN = typing___cast(RedvoxPacketM.UnitValue, 0)
+    METERS_PER_SECOND_SQUARED = typing___cast(RedvoxPacketM.UnitValue, 1)
+    KILOPASCAL = typing___cast(RedvoxPacketM.UnitValue, 2)
+    RADIANS_PER_SECOND = typing___cast(RedvoxPacketM.UnitValue, 3)
+    DECIMAL_DEGREES = typing___cast(RedvoxPacketM.UnitValue, 4)
+    METERS = typing___cast(RedvoxPacketM.UnitValue, 5)
+    METERS_PER_SECOND = typing___cast(RedvoxPacketM.UnitValue, 6)
+    MICROTESLA = typing___cast(RedvoxPacketM.UnitValue, 7)
+    LSB_PLUS_MINUS_COUNTS = typing___cast(RedvoxPacketM.UnitValue, 8)
+    MICROSECONDS_SINCE_UNIX_EPOCH = typing___cast(RedvoxPacketM.UnitValue, 9)
+    DECIBEL = typing___cast(RedvoxPacketM.UnitValue, 10)
+    DEGREES_CELSIUS = typing___cast(RedvoxPacketM.UnitValue, 11)
+    BYTE = typing___cast(RedvoxPacketM.UnitValue, 12)
+    PERCENTAGE = typing___cast(RedvoxPacketM.UnitValue, 13)
+    RADIANS = typing___cast(RedvoxPacketM.UnitValue, 14)
+    MICROAMPERES = typing___cast(RedvoxPacketM.UnitValue, 15)
+    CENTIMETERS = typing___cast(RedvoxPacketM.UnitValue, 16)
+    NORMALIZED_COUNTS = typing___cast(RedvoxPacketM.UnitValue, 17)
+    LUX = typing___cast(RedvoxPacketM.UnitValue, 18)
+    UNITLESS = typing___cast(RedvoxPacketM.UnitValue, 19)
+    PCM = typing___cast(RedvoxPacketM.UnitValue, 20)
     type___Unit = Unit
 
     class MetadataEntry(google___protobuf___message___Message):
@@ -113,16 +113,18 @@ class RedvoxPacketM(google___protobuf___message___Message):
         OsType: _OsType
         class _OsType(google___protobuf___internal___enum_type_wrapper____EnumTypeWrapper[RedvoxPacketM.StationInformation.OsTypeValue]):
             DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
-            ANDROID = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 0)
-            IOS = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 1)
-            LINUX = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 2)
-            WINDOWS = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 3)
-            UNKNOWN_OS = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 4)
-        ANDROID = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 0)
-        IOS = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 1)
-        LINUX = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 2)
-        WINDOWS = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 3)
-        UNKNOWN_OS = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 4)
+            UNKNOWN_OS = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 0)
+            ANDROID = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 1)
+            IOS = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 2)
+            OSX = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 3)
+            LINUX = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 4)
+            WINDOWS = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 5)
+        UNKNOWN_OS = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 0)
+        ANDROID = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 1)
+        IOS = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 2)
+        OSX = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 3)
+        LINUX = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 4)
+        WINDOWS = typing___cast(RedvoxPacketM.StationInformation.OsTypeValue, 5)
         type___OsType = OsType
 
         class MetadataEntry(google___protobuf___message___Message):
@@ -177,16 +179,16 @@ class RedvoxPacketM(google___protobuf___message___Message):
             NetworkType: _NetworkType
             class _NetworkType(google___protobuf___internal___enum_type_wrapper____EnumTypeWrapper[RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue]):
                 DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
-                NO_NETWORK = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 0)
-                WIFI = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 1)
-                CELLULAR = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 2)
-                WIRED = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 3)
-                UNKNOWN_NETWORK = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 4)
-            NO_NETWORK = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 0)
-            WIFI = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 1)
-            CELLULAR = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 2)
-            WIRED = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 3)
-            UNKNOWN_NETWORK = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 4)
+                UNKNOWN_NETWORK = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 0)
+                NO_NETWORK = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 1)
+                WIFI = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 2)
+                CELLULAR = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 3)
+                WIRED = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 4)
+            UNKNOWN_NETWORK = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 0)
+            NO_NETWORK = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 1)
+            WIFI = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 2)
+            CELLULAR = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 3)
+            WIRED = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.NetworkTypeValue, 4)
             type___NetworkType = NetworkType
 
             WifiWakeLockValue = typing___NewType('WifiWakeLockValue', builtin___int)
@@ -226,14 +228,14 @@ class RedvoxPacketM(google___protobuf___message___Message):
             PowerState: _PowerState
             class _PowerState(google___protobuf___internal___enum_type_wrapper____EnumTypeWrapper[RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue]):
                 DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
-                UNPLUGGED = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 0)
-                CHARGING = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 1)
-                CHARGED = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 2)
-                UNKNOWN_POWER_STATE = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 3)
-            UNPLUGGED = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 0)
-            CHARGING = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 1)
-            CHARGED = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 2)
-            UNKNOWN_POWER_STATE = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 3)
+                UNKNOWN_POWER_STATE = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 0)
+                UNPLUGGED = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 1)
+                CHARGING = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 2)
+                CHARGED = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 3)
+            UNKNOWN_POWER_STATE = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 0)
+            UNPLUGGED = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 1)
+            CHARGING = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 2)
+            CHARGED = typing___cast(RedvoxPacketM.StationInformation.StationMetrics.PowerStateValue, 3)
             type___PowerState = PowerState
 
             class MetadataEntry(google___protobuf___message___Message):
@@ -308,14 +310,14 @@ class RedvoxPacketM(google___protobuf___message___Message):
             FftOverlap: _FftOverlap
             class _FftOverlap(google___protobuf___internal___enum_type_wrapper____EnumTypeWrapper[RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue]):
                 DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
-                PERCENT_25 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 0)
-                PERCENT_50 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 1)
-                PERCENT_75 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 2)
-                UNKNOWN = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 3)
-            PERCENT_25 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 0)
-            PERCENT_50 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 1)
-            PERCENT_75 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 2)
-            UNKNOWN = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 3)
+                UNKNOWN = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 0)
+                PERCENT_25 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 1)
+                PERCENT_50 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 2)
+                PERCENT_75 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 3)
+            UNKNOWN = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 0)
+            PERCENT_25 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 1)
+            PERCENT_50 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 2)
+            PERCENT_75 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.FftOverlapValue, 3)
             type___FftOverlap = FftOverlap
 
             AudioSamplingRateValue = typing___NewType('AudioSamplingRateValue', builtin___int)
@@ -323,16 +325,18 @@ class RedvoxPacketM(google___protobuf___message___Message):
             AudioSamplingRate: _AudioSamplingRate
             class _AudioSamplingRate(google___protobuf___internal___enum_type_wrapper____EnumTypeWrapper[RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue]):
                 DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
-                HZ_80 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 0)
-                HZ_800 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 1)
-                HZ_8000 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 2)
-                HZ_16000 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 3)
-                HZ_48000 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 4)
-            HZ_80 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 0)
-            HZ_800 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 1)
-            HZ_8000 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 2)
-            HZ_16000 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 3)
-            HZ_48000 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 4)
+                UNKNOWN_SAMPLING_RATE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 0)
+                HZ_80 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 1)
+                HZ_800 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 2)
+                HZ_8000 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 3)
+                HZ_16000 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 4)
+                HZ_48000 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 5)
+            UNKNOWN_SAMPLING_RATE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 0)
+            HZ_80 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 1)
+            HZ_800 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 2)
+            HZ_8000 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 3)
+            HZ_16000 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 4)
+            HZ_48000 = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRateValue, 5)
             type___AudioSamplingRate = AudioSamplingRate
 
             AudioSourceTuningValue = typing___NewType('AudioSourceTuningValue', builtin___int)
@@ -340,14 +344,14 @@ class RedvoxPacketM(google___protobuf___message___Message):
             AudioSourceTuning: _AudioSourceTuning
             class _AudioSourceTuning(google___protobuf___internal___enum_type_wrapper____EnumTypeWrapper[RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue]):
                 DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
-                INFRASOUND_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 0)
-                LOW_AUDIO_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 1)
-                AUDIO_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 2)
-                UNKNOWN_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 3)
-            INFRASOUND_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 0)
-            LOW_AUDIO_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 1)
-            AUDIO_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 2)
-            UNKNOWN_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 3)
+                UNKNOWN_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 0)
+                INFRASOUND_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 1)
+                LOW_AUDIO_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 2)
+                AUDIO_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 3)
+            UNKNOWN_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 0)
+            INFRASOUND_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 1)
+            LOW_AUDIO_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 2)
+            AUDIO_TUNING = typing___cast(RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuningValue, 3)
             type___AudioSourceTuning = AudioSourceTuning
 
             InputSensorValue = typing___NewType('InputSensorValue', builtin___int)
@@ -355,40 +359,40 @@ class RedvoxPacketM(google___protobuf___message___Message):
             InputSensor: _InputSensor
             class _InputSensor(google___protobuf___internal___enum_type_wrapper____EnumTypeWrapper[RedvoxPacketM.StationInformation.AppSettings.InputSensorValue]):
                 DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
-                ACCELEROMETER = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 0)
-                AMBIENT_TEMPERATURE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 1)
-                AUDIO = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 2)
-                COMPRESSED_AUDIO = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 3)
-                GRAVITY = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 4)
-                GYROSCOPE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 5)
-                IMAGE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 6)
-                LIGHT = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 7)
-                LINEAR_ACCELERATION = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 8)
-                LOCATION = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 9)
-                MAGNETOMETER = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 10)
-                ORIENTATION = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 11)
-                PRESSURE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 12)
-                PROXIMITY = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 13)
-                RELATIVE_HUMIDITY = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 14)
-                ROTATION_VECTOR = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 15)
-                UNKNOWN_SENSOR = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 16)
-            ACCELEROMETER = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 0)
-            AMBIENT_TEMPERATURE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 1)
-            AUDIO = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 2)
-            COMPRESSED_AUDIO = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 3)
-            GRAVITY = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 4)
-            GYROSCOPE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 5)
-            IMAGE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 6)
-            LIGHT = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 7)
-            LINEAR_ACCELERATION = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 8)
-            LOCATION = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 9)
-            MAGNETOMETER = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 10)
-            ORIENTATION = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 11)
-            PRESSURE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 12)
-            PROXIMITY = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 13)
-            RELATIVE_HUMIDITY = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 14)
-            ROTATION_VECTOR = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 15)
-            UNKNOWN_SENSOR = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 16)
+                UNKNOWN_SENSOR = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 0)
+                ACCELEROMETER = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 1)
+                AMBIENT_TEMPERATURE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 2)
+                AUDIO = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 3)
+                COMPRESSED_AUDIO = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 4)
+                GRAVITY = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 5)
+                GYROSCOPE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 6)
+                IMAGE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 7)
+                LIGHT = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 8)
+                LINEAR_ACCELERATION = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 9)
+                LOCATION = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 10)
+                MAGNETOMETER = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 11)
+                ORIENTATION = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 12)
+                PRESSURE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 13)
+                PROXIMITY = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 14)
+                RELATIVE_HUMIDITY = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 15)
+                ROTATION_VECTOR = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 16)
+            UNKNOWN_SENSOR = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 0)
+            ACCELEROMETER = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 1)
+            AMBIENT_TEMPERATURE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 2)
+            AUDIO = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 3)
+            COMPRESSED_AUDIO = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 4)
+            GRAVITY = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 5)
+            GYROSCOPE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 6)
+            IMAGE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 7)
+            LIGHT = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 8)
+            LINEAR_ACCELERATION = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 9)
+            LOCATION = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 10)
+            MAGNETOMETER = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 11)
+            ORIENTATION = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 12)
+            PRESSURE = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 13)
+            PROXIMITY = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 14)
+            RELATIVE_HUMIDITY = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 15)
+            ROTATION_VECTOR = typing___cast(RedvoxPacketM.StationInformation.AppSettings.InputSensorValue, 16)
             type___InputSensor = InputSensor
 
             class MetadataEntry(google___protobuf___message___Message):
@@ -671,8 +675,10 @@ class RedvoxPacketM(google___protobuf___message___Message):
             AudioCodec: _AudioCodec
             class _AudioCodec(google___protobuf___internal___enum_type_wrapper____EnumTypeWrapper[RedvoxPacketM.Sensors.CompressedAudio.AudioCodecValue]):
                 DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
-                FLAC = typing___cast(RedvoxPacketM.Sensors.CompressedAudio.AudioCodecValue, 0)
-            FLAC = typing___cast(RedvoxPacketM.Sensors.CompressedAudio.AudioCodecValue, 0)
+                UNKNOWN = typing___cast(RedvoxPacketM.Sensors.CompressedAudio.AudioCodecValue, 0)
+                FLAC = typing___cast(RedvoxPacketM.Sensors.CompressedAudio.AudioCodecValue, 1)
+            UNKNOWN = typing___cast(RedvoxPacketM.Sensors.CompressedAudio.AudioCodecValue, 0)
+            FLAC = typing___cast(RedvoxPacketM.Sensors.CompressedAudio.AudioCodecValue, 1)
             type___AudioCodec = AudioCodec
 
             class MetadataEntry(google___protobuf___message___Message):
@@ -755,8 +761,8 @@ class RedvoxPacketM(google___protobuf___message___Message):
             LocationScoreMethod: _LocationScoreMethod
             class _LocationScoreMethod(google___protobuf___internal___enum_type_wrapper____EnumTypeWrapper[RedvoxPacketM.Sensors.Location.LocationScoreMethodValue]):
                 DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
-                TODO = typing___cast(RedvoxPacketM.Sensors.Location.LocationScoreMethodValue, 0)
-            TODO = typing___cast(RedvoxPacketM.Sensors.Location.LocationScoreMethodValue, 0)
+                UNKNOWN_METHOD = typing___cast(RedvoxPacketM.Sensors.Location.LocationScoreMethodValue, 0)
+            UNKNOWN_METHOD = typing___cast(RedvoxPacketM.Sensors.Location.LocationScoreMethodValue, 0)
             type___LocationScoreMethod = LocationScoreMethod
 
             LocationProviderValue = typing___NewType('LocationProviderValue', builtin___int)
@@ -764,16 +770,16 @@ class RedvoxPacketM(google___protobuf___message___Message):
             LocationProvider: _LocationProvider
             class _LocationProvider(google___protobuf___internal___enum_type_wrapper____EnumTypeWrapper[RedvoxPacketM.Sensors.Location.LocationProviderValue]):
                 DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
-                NONE = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 0)
-                USER = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 1)
-                GPS = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 2)
-                NETWORK = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 3)
-                UNKNOWN = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 4)
-            NONE = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 0)
-            USER = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 1)
-            GPS = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 2)
-            NETWORK = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 3)
-            UNKNOWN = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 4)
+                UNKNOWN = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 0)
+                NONE = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 1)
+                USER = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 2)
+                GPS = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 3)
+                NETWORK = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 4)
+            UNKNOWN = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 0)
+            NONE = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 1)
+            USER = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 2)
+            GPS = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 3)
+            NETWORK = typing___cast(RedvoxPacketM.Sensors.Location.LocationProviderValue, 4)
             type___LocationProvider = LocationProvider
 
             class MetadataEntry(google___protobuf___message___Message):
@@ -917,14 +923,14 @@ class RedvoxPacketM(google___protobuf___message___Message):
             ImageCodec: _ImageCodec
             class _ImageCodec(google___protobuf___internal___enum_type_wrapper____EnumTypeWrapper[RedvoxPacketM.Sensors.Image.ImageCodecValue]):
                 DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
-                PNG = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 0)
-                JPG = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 1)
-                BMP = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 2)
-                UNKNOWN = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 3)
-            PNG = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 0)
-            JPG = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 1)
-            BMP = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 2)
-            UNKNOWN = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 3)
+                UNKNOWN = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 0)
+                PNG = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 1)
+                JPG = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 2)
+                BMP = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 3)
+            UNKNOWN = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 0)
+            PNG = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 1)
+            JPG = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 2)
+            BMP = typing___cast(RedvoxPacketM.Sensors.Image.ImageCodecValue, 3)
             type___ImageCodec = ImageCodec
 
             class MetadataEntry(google___protobuf___message___Message):
@@ -1234,14 +1240,16 @@ class AcquisitionResponse(google___protobuf___message___Message):
     ResponseType: _ResponseType
     class _ResponseType(google___protobuf___internal___enum_type_wrapper____EnumTypeWrapper[AcquisitionResponse.ResponseTypeValue]):
         DESCRIPTOR: google___protobuf___descriptor___EnumDescriptor = ...
-        OK = typing___cast(AcquisitionResponse.ResponseTypeValue, 0)
-        AUTH_ERROR = typing___cast(AcquisitionResponse.ResponseTypeValue, 1)
-        DATA_ERROR = typing___cast(AcquisitionResponse.ResponseTypeValue, 2)
-        OTHER_ERROR = typing___cast(AcquisitionResponse.ResponseTypeValue, 3)
-    OK = typing___cast(AcquisitionResponse.ResponseTypeValue, 0)
-    AUTH_ERROR = typing___cast(AcquisitionResponse.ResponseTypeValue, 1)
-    DATA_ERROR = typing___cast(AcquisitionResponse.ResponseTypeValue, 2)
-    OTHER_ERROR = typing___cast(AcquisitionResponse.ResponseTypeValue, 3)
+        UNKNOWN = typing___cast(AcquisitionResponse.ResponseTypeValue, 0)
+        OK = typing___cast(AcquisitionResponse.ResponseTypeValue, 1)
+        AUTH_ERROR = typing___cast(AcquisitionResponse.ResponseTypeValue, 2)
+        DATA_ERROR = typing___cast(AcquisitionResponse.ResponseTypeValue, 3)
+        OTHER_ERROR = typing___cast(AcquisitionResponse.ResponseTypeValue, 4)
+    UNKNOWN = typing___cast(AcquisitionResponse.ResponseTypeValue, 0)
+    OK = typing___cast(AcquisitionResponse.ResponseTypeValue, 1)
+    AUTH_ERROR = typing___cast(AcquisitionResponse.ResponseTypeValue, 2)
+    DATA_ERROR = typing___cast(AcquisitionResponse.ResponseTypeValue, 3)
+    OTHER_ERROR = typing___cast(AcquisitionResponse.ResponseTypeValue, 4)
     type___ResponseType = ResponseType
 
     response_type: type___AcquisitionResponse.ResponseTypeValue = ...
