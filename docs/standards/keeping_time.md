@@ -66,6 +66,8 @@ else:
     return (d1Metric.bestLatency, o1s[d1Metric.bestOffset])
 ```
 
+A reference Python imeplementation for finding the best latency and offset is provided at: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/ref/best_latency_offset.py
+
 ### Timing Synchronization
 
 When a client is collecting data, it should perform a synchronization exchange at a given interval (currently 5 seconds, but this may change). All exchanges that occur during the duration of a packet should be included in the exchanges section of the TimingInformation. Further, the client is expected to calculate the best latency and offest from these exchanges and store them in the TimingInformation metadata.
