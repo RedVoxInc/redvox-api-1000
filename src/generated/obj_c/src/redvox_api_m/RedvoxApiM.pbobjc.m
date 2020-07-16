@@ -28,6 +28,7 @@
 // We don't use [Foo class] because it is not a static value.
 GPBObjCClassDeclaration(EncryptedRedvoxPacketM);
 GPBObjCClassDeclaration(RedvoxPacketM);
+GPBObjCClassDeclaration(RedvoxPacketM_DoubleSamplePayload);
 GPBObjCClassDeclaration(RedvoxPacketM_SamplePayload);
 GPBObjCClassDeclaration(RedvoxPacketM_Sensors);
 GPBObjCClassDeclaration(RedvoxPacketM_Sensors_Audio);
@@ -2417,8 +2418,6 @@ typedef struct RedvoxPacketM_Sensors_Single__storage_ {
 
 typedef struct RedvoxPacketM_Sensors_Location__storage_ {
   uint32_t _has_storage_[1];
-  float bestLatitude;
-  float bestLongitude;
   float bestAltitude;
   float bestSpeed;
   float bestBearing;
@@ -2427,8 +2426,8 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
   RedvoxPacketM_Sensors_Location_LocationProvider locationProvider;
   NSString *sensorDescription;
   RedvoxPacketM_TimingPayload *timestamps;
-  RedvoxPacketM_SamplePayload *latitudeSamples;
-  RedvoxPacketM_SamplePayload *longitudeSamples;
+  RedvoxPacketM_DoubleSamplePayload *latitudeSamples;
+  RedvoxPacketM_DoubleSamplePayload *longitudeSamples;
   RedvoxPacketM_SamplePayload *altitudeSamples;
   RedvoxPacketM_SamplePayload *speedSamples;
   RedvoxPacketM_SamplePayload *bearingSamples;
@@ -2437,6 +2436,8 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
   RedvoxPacketM_SamplePayload *speedAccuracySamples;
   RedvoxPacketM_SamplePayload *bearingAccuracySamples;
   NSMutableDictionary *metadata;
+  double bestLatitude;
+  double bestLongitude;
 } RedvoxPacketM_Sensors_Location__storage_;
 
 // This method is threadsafe because it is initially called
@@ -2465,7 +2466,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "latitudeSamples",
-        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_DoubleSamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LatitudeSamples,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, latitudeSamples),
@@ -2474,7 +2475,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "longitudeSamples",
-        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_DoubleSamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LongitudeSamples,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, longitudeSamples),
@@ -2551,7 +2552,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .hasIndex = 11,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, bestLatitude),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
-        .dataType = GPBDataTypeFloat,
+        .dataType = GPBDataTypeDouble,
       },
       {
         .name = "bestLongitude",
@@ -2560,7 +2561,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .hasIndex = 12,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, bestLongitude),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
-        .dataType = GPBDataTypeFloat,
+        .dataType = GPBDataTypeDouble,
       },
       {
         .name = "bestAltitude",
@@ -3100,6 +3101,97 @@ int32_t RedvoxPacketM_SamplePayload_Unit_RawValue(RedvoxPacketM_SamplePayload *m
 void SetRedvoxPacketM_SamplePayload_Unit_RawValue(RedvoxPacketM_SamplePayload *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_SamplePayload descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_SamplePayload_FieldNumber_Unit];
+  GPBSetMessageRawEnumField(message, field, value);
+}
+
+#pragma mark - RedvoxPacketM_DoubleSamplePayload
+
+@implementation RedvoxPacketM_DoubleSamplePayload
+
+@dynamic unit;
+@dynamic valuesArray, valuesArray_Count;
+@dynamic hasValueStatistics, valueStatistics;
+@dynamic metadata, metadata_Count;
+
+typedef struct RedvoxPacketM_DoubleSamplePayload__storage_ {
+  uint32_t _has_storage_[1];
+  RedvoxPacketM_Unit unit;
+  GPBDoubleArray *valuesArray;
+  RedvoxPacketM_SummaryStatistics *valueStatistics;
+  NSMutableDictionary *metadata;
+} RedvoxPacketM_DoubleSamplePayload__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "unit",
+        .dataTypeSpecific.enumDescFunc = RedvoxPacketM_Unit_EnumDescriptor,
+        .number = RedvoxPacketM_DoubleSamplePayload_FieldNumber_Unit,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_DoubleSamplePayload__storage_, unit),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "valuesArray",
+        .dataTypeSpecific.clazz = Nil,
+        .number = RedvoxPacketM_DoubleSamplePayload_FieldNumber_ValuesArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_DoubleSamplePayload__storage_, valuesArray),
+        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
+        .dataType = GPBDataTypeDouble,
+      },
+      {
+        .name = "valueStatistics",
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SummaryStatistics),
+        .number = RedvoxPacketM_DoubleSamplePayload_FieldNumber_ValueStatistics,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_DoubleSamplePayload__storage_, valueStatistics),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "metadata",
+        .dataTypeSpecific.clazz = Nil,
+        .number = RedvoxPacketM_DoubleSamplePayload_FieldNumber_Metadata,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_DoubleSamplePayload__storage_, metadata),
+        .flags = GPBFieldMapKeyString,
+        .dataType = GPBDataTypeString,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[RedvoxPacketM_DoubleSamplePayload class]
+                                     rootClass:[RedvoxApiMRoot class]
+                                          file:RedvoxApiMRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(RedvoxPacketM_DoubleSamplePayload__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+int32_t RedvoxPacketM_DoubleSamplePayload_Unit_RawValue(RedvoxPacketM_DoubleSamplePayload *message) {
+  GPBDescriptor *descriptor = [RedvoxPacketM_DoubleSamplePayload descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_DoubleSamplePayload_FieldNumber_Unit];
+  return GPBGetMessageRawEnumField(message, field);
+}
+
+void SetRedvoxPacketM_DoubleSamplePayload_Unit_RawValue(RedvoxPacketM_DoubleSamplePayload *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacketM_DoubleSamplePayload descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_DoubleSamplePayload_FieldNumber_Unit];
   GPBSetMessageRawEnumField(message, field, value);
 }
 

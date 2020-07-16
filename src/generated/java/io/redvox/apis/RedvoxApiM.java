@@ -24163,7 +24163,7 @@ public final class RedvoxApiM {
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
          * @return Whether the latitudeSamples field is set.
          */
         boolean hasLatitudeSamples();
@@ -24172,25 +24172,25 @@ public final class RedvoxApiM {
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
          * @return The latitudeSamples.
          */
-        io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getLatitudeSamples();
+        io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getLatitudeSamples();
         /**
          * <pre>
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
          */
-        io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getLatitudeSamplesOrBuilder();
+        io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder getLatitudeSamplesOrBuilder();
 
         /**
          * <pre>
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
          * @return Whether the longitudeSamples field is set.
          */
         boolean hasLongitudeSamples();
@@ -24199,18 +24199,18 @@ public final class RedvoxApiM {
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
          * @return The longitudeSamples.
          */
-        io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getLongitudeSamples();
+        io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getLongitudeSamples();
         /**
          * <pre>
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
          */
-        io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getLongitudeSamplesOrBuilder();
+        io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder getLongitudeSamplesOrBuilder();
 
         /**
          * <pre>
@@ -24406,20 +24406,20 @@ public final class RedvoxApiM {
          * The best latitude
          * </pre>
          *
-         * <code>float best_latitude = 14;</code>
+         * <code>double best_latitude = 14;</code>
          * @return The bestLatitude.
          */
-        float getBestLatitude();
+        double getBestLatitude();
 
         /**
          * <pre>
          * The best longitude
          * </pre>
          *
-         * <code>float best_longitude = 15;</code>
+         * <code>double best_longitude = 15;</code>
          * @return The bestLongitude.
          */
-        float getBestLongitude();
+        double getBestLongitude();
 
         /**
          * <pre>
@@ -24657,11 +24657,11 @@ public final class RedvoxApiM {
                   break;
                 }
                 case 26: {
-                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder subBuilder = null;
+                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder subBuilder = null;
                   if (latitudeSamples_ != null) {
                     subBuilder = latitudeSamples_.toBuilder();
                   }
-                  latitudeSamples_ = input.readMessage(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.parser(), extensionRegistry);
+                  latitudeSamples_ = input.readMessage(io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(latitudeSamples_);
                     latitudeSamples_ = subBuilder.buildPartial();
@@ -24670,11 +24670,11 @@ public final class RedvoxApiM {
                   break;
                 }
                 case 34: {
-                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder subBuilder = null;
+                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder subBuilder = null;
                   if (longitudeSamples_ != null) {
                     subBuilder = longitudeSamples_.toBuilder();
                   }
-                  longitudeSamples_ = input.readMessage(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.parser(), extensionRegistry);
+                  longitudeSamples_ = input.readMessage(io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.parser(), extensionRegistry);
                   if (subBuilder != null) {
                     subBuilder.mergeFrom(longitudeSamples_);
                     longitudeSamples_ = subBuilder.buildPartial();
@@ -24773,14 +24773,14 @@ public final class RedvoxApiM {
 
                   break;
                 }
-                case 117: {
+                case 113: {
 
-                  bestLatitude_ = input.readFloat();
+                  bestLatitude_ = input.readDouble();
                   break;
                 }
-                case 125: {
+                case 121: {
 
-                  bestLongitude_ = input.readFloat();
+                  bestLongitude_ = input.readDouble();
                   break;
                 }
                 case 133: {
@@ -25214,13 +25214,13 @@ public final class RedvoxApiM {
         }
 
         public static final int LATITUDE_SAMPLES_FIELD_NUMBER = 3;
-        private io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload latitudeSamples_;
+        private io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload latitudeSamples_;
         /**
          * <pre>
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
          * @return Whether the latitudeSamples field is set.
          */
         @java.lang.Override
@@ -25232,33 +25232,33 @@ public final class RedvoxApiM {
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
          * @return The latitudeSamples.
          */
         @java.lang.Override
-        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getLatitudeSamples() {
-          return latitudeSamples_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.getDefaultInstance() : latitudeSamples_;
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getLatitudeSamples() {
+          return latitudeSamples_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.getDefaultInstance() : latitudeSamples_;
         }
         /**
          * <pre>
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
          */
         @java.lang.Override
-        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getLatitudeSamplesOrBuilder() {
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder getLatitudeSamplesOrBuilder() {
           return getLatitudeSamples();
         }
 
         public static final int LONGITUDE_SAMPLES_FIELD_NUMBER = 4;
-        private io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload longitudeSamples_;
+        private io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload longitudeSamples_;
         /**
          * <pre>
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
          * @return Whether the longitudeSamples field is set.
          */
         @java.lang.Override
@@ -25270,22 +25270,22 @@ public final class RedvoxApiM {
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
          * @return The longitudeSamples.
          */
         @java.lang.Override
-        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getLongitudeSamples() {
-          return longitudeSamples_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.getDefaultInstance() : longitudeSamples_;
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getLongitudeSamples() {
+          return longitudeSamples_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.getDefaultInstance() : longitudeSamples_;
         }
         /**
          * <pre>
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
          */
         @java.lang.Override
-        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getLongitudeSamplesOrBuilder() {
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder getLongitudeSamplesOrBuilder() {
           return getLongitudeSamples();
         }
 
@@ -25556,32 +25556,32 @@ public final class RedvoxApiM {
         }
 
         public static final int BEST_LATITUDE_FIELD_NUMBER = 14;
-        private float bestLatitude_;
+        private double bestLatitude_;
         /**
          * <pre>
          * The best latitude
          * </pre>
          *
-         * <code>float best_latitude = 14;</code>
+         * <code>double best_latitude = 14;</code>
          * @return The bestLatitude.
          */
         @java.lang.Override
-        public float getBestLatitude() {
+        public double getBestLatitude() {
           return bestLatitude_;
         }
 
         public static final int BEST_LONGITUDE_FIELD_NUMBER = 15;
-        private float bestLongitude_;
+        private double bestLongitude_;
         /**
          * <pre>
          * The best longitude
          * </pre>
          *
-         * <code>float best_longitude = 15;</code>
+         * <code>double best_longitude = 15;</code>
          * @return The bestLongitude.
          */
         @java.lang.Override
-        public float getBestLongitude() {
+        public double getBestLongitude() {
           return bestLongitude_;
         }
 
@@ -25888,11 +25888,11 @@ public final class RedvoxApiM {
           if (bearingAccuracySamples_ != null) {
             output.writeMessage(11, getBearingAccuracySamples());
           }
-          if (bestLatitude_ != 0F) {
-            output.writeFloat(14, bestLatitude_);
+          if (bestLatitude_ != 0D) {
+            output.writeDouble(14, bestLatitude_);
           }
-          if (bestLongitude_ != 0F) {
-            output.writeFloat(15, bestLongitude_);
+          if (bestLongitude_ != 0D) {
+            output.writeDouble(15, bestLongitude_);
           }
           if (bestAltitude_ != 0F) {
             output.writeFloat(16, bestAltitude_);
@@ -25979,13 +25979,13 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(11, getBearingAccuracySamples());
           }
-          if (bestLatitude_ != 0F) {
+          if (bestLatitude_ != 0D) {
             size += com.google.protobuf.CodedOutputStream
-              .computeFloatSize(14, bestLatitude_);
+              .computeDoubleSize(14, bestLatitude_);
           }
-          if (bestLongitude_ != 0F) {
+          if (bestLongitude_ != 0D) {
             size += com.google.protobuf.CodedOutputStream
-              .computeFloatSize(15, bestLongitude_);
+              .computeDoubleSize(15, bestLongitude_);
           }
           if (bestAltitude_ != 0F) {
             size += com.google.protobuf.CodedOutputStream
@@ -26100,11 +26100,11 @@ public final class RedvoxApiM {
             if (!getBearingAccuracySamples()
                 .equals(other.getBearingAccuracySamples())) return false;
           }
-          if (java.lang.Float.floatToIntBits(getBestLatitude())
-              != java.lang.Float.floatToIntBits(
+          if (java.lang.Double.doubleToLongBits(getBestLatitude())
+              != java.lang.Double.doubleToLongBits(
                   other.getBestLatitude())) return false;
-          if (java.lang.Float.floatToIntBits(getBestLongitude())
-              != java.lang.Float.floatToIntBits(
+          if (java.lang.Double.doubleToLongBits(getBestLongitude())
+              != java.lang.Double.doubleToLongBits(
                   other.getBestLongitude())) return false;
           if (java.lang.Float.floatToIntBits(getBestAltitude())
               != java.lang.Float.floatToIntBits(
@@ -26182,11 +26182,11 @@ public final class RedvoxApiM {
             hash = (53 * hash) + getBearingAccuracySamples().hashCode();
           }
           hash = (37 * hash) + BEST_LATITUDE_FIELD_NUMBER;
-          hash = (53 * hash) + java.lang.Float.floatToIntBits(
-              getBestLatitude());
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getBestLatitude()));
           hash = (37 * hash) + BEST_LONGITUDE_FIELD_NUMBER;
-          hash = (53 * hash) + java.lang.Float.floatToIntBits(
-              getBestLongitude());
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getBestLongitude()));
           hash = (37 * hash) + BEST_ALTITUDE_FIELD_NUMBER;
           hash = (53 * hash) + java.lang.Float.floatToIntBits(
               getBestAltitude());
@@ -26438,9 +26438,9 @@ public final class RedvoxApiM {
               bearingAccuracySamples_ = null;
               bearingAccuracySamplesBuilder_ = null;
             }
-            bestLatitude_ = 0F;
+            bestLatitude_ = 0D;
 
-            bestLongitude_ = 0F;
+            bestLongitude_ = 0D;
 
             bestAltitude_ = 0F;
 
@@ -26634,10 +26634,10 @@ public final class RedvoxApiM {
             if (other.hasBearingAccuracySamples()) {
               mergeBearingAccuracySamples(other.getBearingAccuracySamples());
             }
-            if (other.getBestLatitude() != 0F) {
+            if (other.getBestLatitude() != 0D) {
               setBestLatitude(other.getBestLatitude());
             }
-            if (other.getBestLongitude() != 0F) {
+            if (other.getBestLongitude() != 0D) {
               setBestLongitude(other.getBestLongitude());
             }
             if (other.getBestAltitude() != 0F) {
@@ -26950,15 +26950,15 @@ public final class RedvoxApiM {
             return timestampsBuilder_;
           }
 
-          private io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload latitudeSamples_;
+          private io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload latitudeSamples_;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder> latitudeSamplesBuilder_;
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder> latitudeSamplesBuilder_;
           /**
            * <pre>
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
            * @return Whether the latitudeSamples field is set.
            */
           public boolean hasLatitudeSamples() {
@@ -26969,12 +26969,12 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
            * @return The latitudeSamples.
            */
-          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getLatitudeSamples() {
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getLatitudeSamples() {
             if (latitudeSamplesBuilder_ == null) {
-              return latitudeSamples_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.getDefaultInstance() : latitudeSamples_;
+              return latitudeSamples_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.getDefaultInstance() : latitudeSamples_;
             } else {
               return latitudeSamplesBuilder_.getMessage();
             }
@@ -26984,9 +26984,9 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
            */
-          public Builder setLatitudeSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
+          public Builder setLatitudeSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload value) {
             if (latitudeSamplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -27004,10 +27004,10 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
            */
           public Builder setLatitudeSamples(
-              io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder builderForValue) {
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder builderForValue) {
             if (latitudeSamplesBuilder_ == null) {
               latitudeSamples_ = builderForValue.build();
               onChanged();
@@ -27022,13 +27022,13 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
            */
-          public Builder mergeLatitudeSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
+          public Builder mergeLatitudeSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload value) {
             if (latitudeSamplesBuilder_ == null) {
               if (latitudeSamples_ != null) {
                 latitudeSamples_ =
-                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.newBuilder(latitudeSamples_).mergeFrom(value).buildPartial();
+                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.newBuilder(latitudeSamples_).mergeFrom(value).buildPartial();
               } else {
                 latitudeSamples_ = value;
               }
@@ -27044,7 +27044,7 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
            */
           public Builder clearLatitudeSamples() {
             if (latitudeSamplesBuilder_ == null) {
@@ -27062,9 +27062,9 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
            */
-          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder getLatitudeSamplesBuilder() {
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder getLatitudeSamplesBuilder() {
             
             onChanged();
             return getLatitudeSamplesFieldBuilder().getBuilder();
@@ -27074,14 +27074,14 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
            */
-          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getLatitudeSamplesOrBuilder() {
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder getLatitudeSamplesOrBuilder() {
             if (latitudeSamplesBuilder_ != null) {
               return latitudeSamplesBuilder_.getMessageOrBuilder();
             } else {
               return latitudeSamples_ == null ?
-                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.getDefaultInstance() : latitudeSamples_;
+                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.getDefaultInstance() : latitudeSamples_;
             }
           }
           /**
@@ -27089,14 +27089,14 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder> 
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder> 
               getLatitudeSamplesFieldBuilder() {
             if (latitudeSamplesBuilder_ == null) {
               latitudeSamplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder>(
+                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder>(
                       getLatitudeSamples(),
                       getParentForChildren(),
                       isClean());
@@ -27105,15 +27105,15 @@ public final class RedvoxApiM {
             return latitudeSamplesBuilder_;
           }
 
-          private io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload longitudeSamples_;
+          private io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload longitudeSamples_;
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder> longitudeSamplesBuilder_;
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder> longitudeSamplesBuilder_;
           /**
            * <pre>
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
            * @return Whether the longitudeSamples field is set.
            */
           public boolean hasLongitudeSamples() {
@@ -27124,12 +27124,12 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
            * @return The longitudeSamples.
            */
-          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getLongitudeSamples() {
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getLongitudeSamples() {
             if (longitudeSamplesBuilder_ == null) {
-              return longitudeSamples_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.getDefaultInstance() : longitudeSamples_;
+              return longitudeSamples_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.getDefaultInstance() : longitudeSamples_;
             } else {
               return longitudeSamplesBuilder_.getMessage();
             }
@@ -27139,9 +27139,9 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
            */
-          public Builder setLongitudeSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
+          public Builder setLongitudeSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload value) {
             if (longitudeSamplesBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
@@ -27159,10 +27159,10 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
            */
           public Builder setLongitudeSamples(
-              io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder builderForValue) {
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder builderForValue) {
             if (longitudeSamplesBuilder_ == null) {
               longitudeSamples_ = builderForValue.build();
               onChanged();
@@ -27177,13 +27177,13 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
            */
-          public Builder mergeLongitudeSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
+          public Builder mergeLongitudeSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload value) {
             if (longitudeSamplesBuilder_ == null) {
               if (longitudeSamples_ != null) {
                 longitudeSamples_ =
-                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.newBuilder(longitudeSamples_).mergeFrom(value).buildPartial();
+                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.newBuilder(longitudeSamples_).mergeFrom(value).buildPartial();
               } else {
                 longitudeSamples_ = value;
               }
@@ -27199,7 +27199,7 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
            */
           public Builder clearLongitudeSamples() {
             if (longitudeSamplesBuilder_ == null) {
@@ -27217,9 +27217,9 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
            */
-          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder getLongitudeSamplesBuilder() {
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder getLongitudeSamplesBuilder() {
             
             onChanged();
             return getLongitudeSamplesFieldBuilder().getBuilder();
@@ -27229,14 +27229,14 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
            */
-          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getLongitudeSamplesOrBuilder() {
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder getLongitudeSamplesOrBuilder() {
             if (longitudeSamplesBuilder_ != null) {
               return longitudeSamplesBuilder_.getMessageOrBuilder();
             } else {
               return longitudeSamples_ == null ?
-                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.getDefaultInstance() : longitudeSamples_;
+                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.getDefaultInstance() : longitudeSamples_;
             }
           }
           /**
@@ -27244,14 +27244,14 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder> 
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder> 
               getLongitudeSamplesFieldBuilder() {
             if (longitudeSamplesBuilder_ == null) {
               longitudeSamplesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder>(
+                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder>(
                       getLongitudeSamples(),
                       getParentForChildren(),
                       isClean());
@@ -28345,17 +28345,17 @@ public final class RedvoxApiM {
             return bearingAccuracySamplesBuilder_;
           }
 
-          private float bestLatitude_ ;
+          private double bestLatitude_ ;
           /**
            * <pre>
            * The best latitude
            * </pre>
            *
-           * <code>float best_latitude = 14;</code>
+           * <code>double best_latitude = 14;</code>
            * @return The bestLatitude.
            */
           @java.lang.Override
-          public float getBestLatitude() {
+          public double getBestLatitude() {
             return bestLatitude_;
           }
           /**
@@ -28363,11 +28363,11 @@ public final class RedvoxApiM {
            * The best latitude
            * </pre>
            *
-           * <code>float best_latitude = 14;</code>
+           * <code>double best_latitude = 14;</code>
            * @param value The bestLatitude to set.
            * @return This builder for chaining.
            */
-          public Builder setBestLatitude(float value) {
+          public Builder setBestLatitude(double value) {
             
             bestLatitude_ = value;
             onChanged();
@@ -28378,27 +28378,27 @@ public final class RedvoxApiM {
            * The best latitude
            * </pre>
            *
-           * <code>float best_latitude = 14;</code>
+           * <code>double best_latitude = 14;</code>
            * @return This builder for chaining.
            */
           public Builder clearBestLatitude() {
             
-            bestLatitude_ = 0F;
+            bestLatitude_ = 0D;
             onChanged();
             return this;
           }
 
-          private float bestLongitude_ ;
+          private double bestLongitude_ ;
           /**
            * <pre>
            * The best longitude
            * </pre>
            *
-           * <code>float best_longitude = 15;</code>
+           * <code>double best_longitude = 15;</code>
            * @return The bestLongitude.
            */
           @java.lang.Override
-          public float getBestLongitude() {
+          public double getBestLongitude() {
             return bestLongitude_;
           }
           /**
@@ -28406,11 +28406,11 @@ public final class RedvoxApiM {
            * The best longitude
            * </pre>
            *
-           * <code>float best_longitude = 15;</code>
+           * <code>double best_longitude = 15;</code>
            * @param value The bestLongitude to set.
            * @return This builder for chaining.
            */
-          public Builder setBestLongitude(float value) {
+          public Builder setBestLongitude(double value) {
             
             bestLongitude_ = value;
             onChanged();
@@ -28421,12 +28421,12 @@ public final class RedvoxApiM {
            * The best longitude
            * </pre>
            *
-           * <code>float best_longitude = 15;</code>
+           * <code>double best_longitude = 15;</code>
            * @return This builder for chaining.
            */
           public Builder clearBestLongitude() {
             
-            bestLongitude_ = 0F;
+            bestLongitude_ = 0D;
             onChanged();
             return this;
           }
@@ -38570,6 +38570,1457 @@ public final class RedvoxApiM {
 
       @java.lang.Override
       public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface DoubleSamplePayloadOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:redvox_api_m.RedvoxPacketM.DoubleSamplePayload)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Unit of payload values
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+       * @return The enum numeric value on the wire for unit.
+       */
+      int getUnitValue();
+      /**
+       * <pre>
+       * Unit of payload values
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+       * @return The unit.
+       */
+      io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getUnit();
+
+      /**
+       * <pre>
+       * Values in payload
+       * </pre>
+       *
+       * <code>repeated double values = 2;</code>
+       * @return A list containing the values.
+       */
+      java.util.List<java.lang.Double> getValuesList();
+      /**
+       * <pre>
+       * Values in payload
+       * </pre>
+       *
+       * <code>repeated double values = 2;</code>
+       * @return The count of values.
+       */
+      int getValuesCount();
+      /**
+       * <pre>
+       * Values in payload
+       * </pre>
+       *
+       * <code>repeated double values = 2;</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      double getValues(int index);
+
+      /**
+       * <pre>
+       * Statistics of stored values
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+       * @return Whether the valueStatistics field is set.
+       */
+      boolean hasValueStatistics();
+      /**
+       * <pre>
+       * Statistics of stored values
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+       * @return The valueStatistics.
+       */
+      io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics getValueStatistics();
+      /**
+       * <pre>
+       * Statistics of stored values
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+       */
+      io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder getValueStatisticsOrBuilder();
+
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      int getMetadataCount();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      boolean containsMetadata(
+          java.lang.String key);
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.String, java.lang.String>
+      getMetadata();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      java.util.Map<java.lang.String, java.lang.String>
+      getMetadataMap();
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue);
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      java.lang.String getMetadataOrThrow(
+          java.lang.String key);
+    }
+    /**
+     * Protobuf type {@code redvox_api_m.RedvoxPacketM.DoubleSamplePayload}
+     */
+    public static final class DoubleSamplePayload extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:redvox_api_m.RedvoxPacketM.DoubleSamplePayload)
+        DoubleSamplePayloadOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use DoubleSamplePayload.newBuilder() to construct.
+      private DoubleSamplePayload(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private DoubleSamplePayload() {
+        unit_ = 0;
+        values_ = emptyDoubleList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new DoubleSamplePayload();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private DoubleSamplePayload(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int rawValue = input.readEnum();
+
+                unit_ = rawValue;
+                break;
+              }
+              case 17: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  values_ = newDoubleList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                values_.addDouble(input.readDouble());
+                break;
+              }
+              case 18: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                  values_ = newDoubleList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                while (input.getBytesUntilLimit() > 0) {
+                  values_.addDouble(input.readDouble());
+                }
+                input.popLimit(limit);
+                break;
+              }
+              case 26: {
+                io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics.Builder subBuilder = null;
+                if (valueStatistics_ != null) {
+                  subBuilder = valueStatistics_.toBuilder();
+                }
+                valueStatistics_ = input.readMessage(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(valueStatistics_);
+                  valueStatistics_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 34: {
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  metadata_ = com.google.protobuf.MapField.newMapField(
+                      MetadataDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                metadata__ = input.readMessage(
+                    MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                metadata_.getMutableMap().put(
+                    metadata__.getKey(), metadata__.getValue());
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            values_.makeImmutable(); // C
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.redvox.apis.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      @java.lang.Override
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.redvox.apis.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.class, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder.class);
+      }
+
+      public static final int UNIT_FIELD_NUMBER = 1;
+      private int unit_;
+      /**
+       * <pre>
+       * Unit of payload values
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+       * @return The enum numeric value on the wire for unit.
+       */
+      @java.lang.Override public int getUnitValue() {
+        return unit_;
+      }
+      /**
+       * <pre>
+       * Unit of payload values
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+       * @return The unit.
+       */
+      @java.lang.Override public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getUnit() {
+        @SuppressWarnings("deprecation")
+        io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(unit_);
+        return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+      }
+
+      public static final int VALUES_FIELD_NUMBER = 2;
+      private com.google.protobuf.Internal.DoubleList values_;
+      /**
+       * <pre>
+       * Values in payload
+       * </pre>
+       *
+       * <code>repeated double values = 2;</code>
+       * @return A list containing the values.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Double>
+          getValuesList() {
+        return values_;
+      }
+      /**
+       * <pre>
+       * Values in payload
+       * </pre>
+       *
+       * <code>repeated double values = 2;</code>
+       * @return The count of values.
+       */
+      public int getValuesCount() {
+        return values_.size();
+      }
+      /**
+       * <pre>
+       * Values in payload
+       * </pre>
+       *
+       * <code>repeated double values = 2;</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      public double getValues(int index) {
+        return values_.getDouble(index);
+      }
+      private int valuesMemoizedSerializedSize = -1;
+
+      public static final int VALUE_STATISTICS_FIELD_NUMBER = 3;
+      private io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics valueStatistics_;
+      /**
+       * <pre>
+       * Statistics of stored values
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+       * @return Whether the valueStatistics field is set.
+       */
+      @java.lang.Override
+      public boolean hasValueStatistics() {
+        return valueStatistics_ != null;
+      }
+      /**
+       * <pre>
+       * Statistics of stored values
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+       * @return The valueStatistics.
+       */
+      @java.lang.Override
+      public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics getValueStatistics() {
+        return valueStatistics_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics.getDefaultInstance() : valueStatistics_;
+      }
+      /**
+       * <pre>
+       * Statistics of stored values
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+       */
+      @java.lang.Override
+      public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder getValueStatisticsOrBuilder() {
+        return getValueStatistics();
+      }
+
+      public static final int METADATA_FIELD_NUMBER = 4;
+      private static final class MetadataDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.String, java.lang.String> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.String, java.lang.String>newDefaultInstance(
+                    io.redvox.apis.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_MetadataEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "",
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "");
+      }
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> metadata_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMetadata() {
+        if (metadata_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        return metadata_;
+      }
+
+      public int getMetadataCount() {
+        return internalGetMetadata().getMap().size();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetMetadata().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+        return getMetadataMap();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+        return internalGetMetadata().getMap();
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * A map from string to string for including untyped metadata
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getMetadataOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+          output.writeEnum(1, unit_);
+        }
+        if (getValuesList().size() > 0) {
+          output.writeUInt32NoTag(18);
+          output.writeUInt32NoTag(valuesMemoizedSerializedSize);
+        }
+        for (int i = 0; i < values_.size(); i++) {
+          output.writeDoubleNoTag(values_.getDouble(i));
+        }
+        if (valueStatistics_ != null) {
+          output.writeMessage(3, getValueStatistics());
+        }
+        com.google.protobuf.GeneratedMessageV3
+          .serializeStringMapTo(
+            output,
+            internalGetMetadata(),
+            MetadataDefaultEntryHolder.defaultEntry,
+            4);
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, unit_);
+        }
+        {
+          int dataSize = 0;
+          dataSize = 8 * getValuesList().size();
+          size += dataSize;
+          if (!getValuesList().isEmpty()) {
+            size += 1;
+            size += com.google.protobuf.CodedOutputStream
+                .computeInt32SizeNoTag(dataSize);
+          }
+          valuesMemoizedSerializedSize = dataSize;
+        }
+        if (valueStatistics_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getValueStatistics());
+        }
+        for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+             : internalGetMetadata().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+          metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(4, metadata__);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload)) {
+          return super.equals(obj);
+        }
+        io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload other = (io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload) obj;
+
+        if (unit_ != other.unit_) return false;
+        if (!getValuesList()
+            .equals(other.getValuesList())) return false;
+        if (hasValueStatistics() != other.hasValueStatistics()) return false;
+        if (hasValueStatistics()) {
+          if (!getValueStatistics()
+              .equals(other.getValueStatistics())) return false;
+        }
+        if (!internalGetMetadata().equals(
+            other.internalGetMetadata())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + UNIT_FIELD_NUMBER;
+        hash = (53 * hash) + unit_;
+        if (getValuesCount() > 0) {
+          hash = (37 * hash) + VALUES_FIELD_NUMBER;
+          hash = (53 * hash) + getValuesList().hashCode();
+        }
+        if (hasValueStatistics()) {
+          hash = (37 * hash) + VALUE_STATISTICS_FIELD_NUMBER;
+          hash = (53 * hash) + getValueStatistics().hashCode();
+        }
+        if (!internalGetMetadata().getMap().isEmpty()) {
+          hash = (37 * hash) + METADATA_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetMetadata().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code redvox_api_m.RedvoxPacketM.DoubleSamplePayload}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:redvox_api_m.RedvoxPacketM.DoubleSamplePayload)
+          io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.redvox.apis.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_descriptor;
+        }
+
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 4:
+              return internalGetMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMutableMapField(
+            int number) {
+          switch (number) {
+            case 4:
+              return internalGetMutableMetadata();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.redvox.apis.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.class, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder.class);
+        }
+
+        // Construct using io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          unit_ = 0;
+
+          values_ = emptyDoubleList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          if (valueStatisticsBuilder_ == null) {
+            valueStatistics_ = null;
+          } else {
+            valueStatistics_ = null;
+            valueStatisticsBuilder_ = null;
+          }
+          internalGetMutableMetadata().clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.redvox.apis.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_descriptor;
+        }
+
+        @java.lang.Override
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getDefaultInstanceForType() {
+          return io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload build() {
+          io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload buildPartial() {
+          io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload result = new io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload(this);
+          int from_bitField0_ = bitField0_;
+          result.unit_ = unit_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            values_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.values_ = values_;
+          if (valueStatisticsBuilder_ == null) {
+            result.valueStatistics_ = valueStatistics_;
+          } else {
+            result.valueStatistics_ = valueStatisticsBuilder_.build();
+          }
+          result.metadata_ = internalGetMetadata();
+          result.metadata_.makeImmutable();
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload) {
+            return mergeFrom((io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload other) {
+          if (other == io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.getDefaultInstance()) return this;
+          if (other.unit_ != 0) {
+            setUnitValue(other.getUnitValue());
+          }
+          if (!other.values_.isEmpty()) {
+            if (values_.isEmpty()) {
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureValuesIsMutable();
+              values_.addAll(other.values_);
+            }
+            onChanged();
+          }
+          if (other.hasValueStatistics()) {
+            mergeValueStatistics(other.getValueStatistics());
+          }
+          internalGetMutableMetadata().mergeFrom(
+              other.internalGetMetadata());
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int unit_ = 0;
+        /**
+         * <pre>
+         * Unit of payload values
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+         * @return The enum numeric value on the wire for unit.
+         */
+        @java.lang.Override public int getUnitValue() {
+          return unit_;
+        }
+        /**
+         * <pre>
+         * Unit of payload values
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+         * @param value The enum numeric value on the wire for unit to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUnitValue(int value) {
+          
+          unit_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Unit of payload values
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+         * @return The unit.
+         */
+        @java.lang.Override
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getUnit() {
+          @SuppressWarnings("deprecation")
+          io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(unit_);
+          return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Unit of payload values
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+         * @param value The unit to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUnit(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          unit_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Unit of payload values
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUnit() {
+          
+          unit_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.Internal.DoubleList values_ = emptyDoubleList();
+        private void ensureValuesIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            values_ = mutableCopy(values_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <pre>
+         * Values in payload
+         * </pre>
+         *
+         * <code>repeated double values = 2;</code>
+         * @return A list containing the values.
+         */
+        public java.util.List<java.lang.Double>
+            getValuesList() {
+          return ((bitField0_ & 0x00000001) != 0) ?
+                   java.util.Collections.unmodifiableList(values_) : values_;
+        }
+        /**
+         * <pre>
+         * Values in payload
+         * </pre>
+         *
+         * <code>repeated double values = 2;</code>
+         * @return The count of values.
+         */
+        public int getValuesCount() {
+          return values_.size();
+        }
+        /**
+         * <pre>
+         * Values in payload
+         * </pre>
+         *
+         * <code>repeated double values = 2;</code>
+         * @param index The index of the element to return.
+         * @return The values at the given index.
+         */
+        public double getValues(int index) {
+          return values_.getDouble(index);
+        }
+        /**
+         * <pre>
+         * Values in payload
+         * </pre>
+         *
+         * <code>repeated double values = 2;</code>
+         * @param index The index to set the value at.
+         * @param value The values to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValues(
+            int index, double value) {
+          ensureValuesIsMutable();
+          values_.setDouble(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Values in payload
+         * </pre>
+         *
+         * <code>repeated double values = 2;</code>
+         * @param value The values to add.
+         * @return This builder for chaining.
+         */
+        public Builder addValues(double value) {
+          ensureValuesIsMutable();
+          values_.addDouble(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Values in payload
+         * </pre>
+         *
+         * <code>repeated double values = 2;</code>
+         * @param values The values to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllValues(
+            java.lang.Iterable<? extends java.lang.Double> values) {
+          ensureValuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, values_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Values in payload
+         * </pre>
+         *
+         * <code>repeated double values = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearValues() {
+          values_ = emptyDoubleList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+
+        private io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics valueStatistics_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder> valueStatisticsBuilder_;
+        /**
+         * <pre>
+         * Statistics of stored values
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         * @return Whether the valueStatistics field is set.
+         */
+        public boolean hasValueStatistics() {
+          return valueStatisticsBuilder_ != null || valueStatistics_ != null;
+        }
+        /**
+         * <pre>
+         * Statistics of stored values
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         * @return The valueStatistics.
+         */
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics getValueStatistics() {
+          if (valueStatisticsBuilder_ == null) {
+            return valueStatistics_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics.getDefaultInstance() : valueStatistics_;
+          } else {
+            return valueStatisticsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Statistics of stored values
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         */
+        public Builder setValueStatistics(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics value) {
+          if (valueStatisticsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            valueStatistics_ = value;
+            onChanged();
+          } else {
+            valueStatisticsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Statistics of stored values
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         */
+        public Builder setValueStatistics(
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics.Builder builderForValue) {
+          if (valueStatisticsBuilder_ == null) {
+            valueStatistics_ = builderForValue.build();
+            onChanged();
+          } else {
+            valueStatisticsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Statistics of stored values
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         */
+        public Builder mergeValueStatistics(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics value) {
+          if (valueStatisticsBuilder_ == null) {
+            if (valueStatistics_ != null) {
+              valueStatistics_ =
+                io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics.newBuilder(valueStatistics_).mergeFrom(value).buildPartial();
+            } else {
+              valueStatistics_ = value;
+            }
+            onChanged();
+          } else {
+            valueStatisticsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Statistics of stored values
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         */
+        public Builder clearValueStatistics() {
+          if (valueStatisticsBuilder_ == null) {
+            valueStatistics_ = null;
+            onChanged();
+          } else {
+            valueStatistics_ = null;
+            valueStatisticsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Statistics of stored values
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         */
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics.Builder getValueStatisticsBuilder() {
+          
+          onChanged();
+          return getValueStatisticsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Statistics of stored values
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         */
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder getValueStatisticsOrBuilder() {
+          if (valueStatisticsBuilder_ != null) {
+            return valueStatisticsBuilder_.getMessageOrBuilder();
+          } else {
+            return valueStatistics_ == null ?
+                io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics.getDefaultInstance() : valueStatistics_;
+          }
+        }
+        /**
+         * <pre>
+         * Statistics of stored values
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.SummaryStatistics value_statistics = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder> 
+            getValueStatisticsFieldBuilder() {
+          if (valueStatisticsBuilder_ == null) {
+            valueStatisticsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatisticsOrBuilder>(
+                    getValueStatistics(),
+                    getParentForChildren(),
+                    isClean());
+            valueStatistics_ = null;
+          }
+          return valueStatisticsBuilder_;
+        }
+
+        private com.google.protobuf.MapField<
+            java.lang.String, java.lang.String> metadata_;
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMetadata() {
+          if (metadata_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          return metadata_;
+        }
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableMetadata() {
+          onChanged();;
+          if (metadata_ == null) {
+            metadata_ = com.google.protobuf.MapField.newMapField(
+                MetadataDefaultEntryHolder.defaultEntry);
+          }
+          if (!metadata_.isMutable()) {
+            metadata_ = metadata_.copy();
+          }
+          return metadata_;
+        }
+
+        public int getMetadataCount() {
+          return internalGetMetadata().getMap().size();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        @java.lang.Override
+        public boolean containsMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          return internalGetMetadata().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getMetadataMap()} instead.
+         */
+        @java.lang.Override
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+          return getMetadataMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+        @java.lang.Override
+
+        public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+          return internalGetMetadata().getMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+        @java.lang.Override
+
+        public java.lang.String getMetadataOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+        @java.lang.Override
+
+        public java.lang.String getMetadataOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetMetadata().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
+        public Builder clearMetadata() {
+          internalGetMutableMetadata().getMutableMap()
+              .clear();
+          return this;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        public Builder removeMetadata(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableMetadata().getMutableMap()
+              .remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String>
+        getMutableMetadata() {
+          return internalGetMutableMetadata().getMutableMap();
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+        public Builder putMetadata(
+            java.lang.String key,
+            java.lang.String value) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (value == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableMetadata().getMutableMap()
+              .put(key, value);
+          return this;
+        }
+        /**
+         * <pre>
+         * A map from string to string for including untyped metadata
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
+         */
+
+        public Builder putAllMetadata(
+            java.util.Map<java.lang.String, java.lang.String> values) {
+          internalGetMutableMetadata().getMutableMap()
+              .putAll(values);
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:redvox_api_m.RedvoxPacketM.DoubleSamplePayload)
+      }
+
+      // @@protoc_insertion_point(class_scope:redvox_api_m.RedvoxPacketM.DoubleSamplePayload)
+      private static final io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload();
+      }
+
+      public static io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<DoubleSamplePayload>
+          PARSER = new com.google.protobuf.AbstractParser<DoubleSamplePayload>() {
+        @java.lang.Override
+        public DoubleSamplePayload parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DoubleSamplePayload(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<DoubleSamplePayload> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DoubleSamplePayload> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -49222,6 +50673,16 @@ public final class RedvoxApiM {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_redvox_api_m_RedvoxPacketM_SamplePayload_MetadataEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_MetadataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_MetadataEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_redvox_api_m_RedvoxPacketM_TimingPayload_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -49281,7 +50742,7 @@ public final class RedvoxApiM {
   static {
     java.lang.String[] descriptorData = {
       "\n#src/redvox_api_m/redvox_api_m.proto\022\014r" +
-      "edvox_api_m\"\225V\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
+      "edvox_api_m\"\304X\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
       "(\002\022K\n\023station_information\030\002 \001(\0132..redvox" +
       "_api_m.RedvoxPacketM.StationInformation\022" +
       "I\n\022timing_information\030\003 \001(\0132-.redvox_api" +
@@ -49415,7 +50876,7 @@ public final class RedvoxApiM {
       "edvox_api_m.RedvoxPacketM.TimingInformat" +
       "ion.SynchExchange.MetadataEntry\032/\n\rMetad" +
       "ataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\" \n\021TimingScoreMethod\022\013\n\007UNKNOWN\020\000\032\245\"\n\007S" +
+      "\" \n\021TimingScoreMethod\022\013\n\007UNKNOWN\020\000\032\261\"\n\007S" +
       "ensors\022>\n\raccelerometer\030\001 \001(\0132\'.redvox_a" +
       "pi_m.RedvoxPacketM.Sensors.Xyz\022G\n\023ambien" +
       "t_temperature\030\002 \001(\0132*.redvox_api_m.Redvo" +
@@ -49470,113 +50931,121 @@ public final class RedvoxApiM {
       "ketM.SamplePayload\022J\n\010metadata\030\004 \003(\01328.r" +
       "edvox_api_m.RedvoxPacketM.Sensors.Single" +
       ".MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\216\013\n\010Location\022\032\n\022" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\232\013\n\010Location\022\032\n\022" +
       "sensor_description\030\001 \001(\t\022=\n\ntimestamps\030\002" +
       " \001(\0132).redvox_api_m.RedvoxPacketM.Timing" +
-      "Payload\022C\n\020latitude_samples\030\003 \001(\0132).redv" +
-      "ox_api_m.RedvoxPacketM.SamplePayload\022D\n\021" +
-      "longitude_samples\030\004 \001(\0132).redvox_api_m.R" +
-      "edvoxPacketM.SamplePayload\022C\n\020altitude_s" +
-      "amples\030\005 \001(\0132).redvox_api_m.RedvoxPacket" +
-      "M.SamplePayload\022@\n\rspeed_samples\030\006 \001(\0132)" +
+      "Payload\022I\n\020latitude_samples\030\003 \001(\0132/.redv" +
+      "ox_api_m.RedvoxPacketM.DoubleSamplePaylo" +
+      "ad\022J\n\021longitude_samples\030\004 \001(\0132/.redvox_a" +
+      "pi_m.RedvoxPacketM.DoubleSamplePayload\022C" +
+      "\n\020altitude_samples\030\005 \001(\0132).redvox_api_m." +
+      "RedvoxPacketM.SamplePayload\022@\n\rspeed_sam" +
+      "ples\030\006 \001(\0132).redvox_api_m.RedvoxPacketM." +
+      "SamplePayload\022B\n\017bearing_samples\030\007 \001(\0132)" +
       ".redvox_api_m.RedvoxPacketM.SamplePayloa" +
-      "d\022B\n\017bearing_samples\030\007 \001(\0132).redvox_api_" +
-      "m.RedvoxPacketM.SamplePayload\022N\n\033horizon" +
-      "tal_accuracy_samples\030\010 \001(\0132).redvox_api_" +
-      "m.RedvoxPacketM.SamplePayload\022L\n\031vertica" +
-      "l_accuracy_samples\030\t \001(\0132).redvox_api_m." +
-      "RedvoxPacketM.SamplePayload\022I\n\026speed_acc" +
-      "uracy_samples\030\n \001(\0132).redvox_api_m.Redvo" +
-      "xPacketM.SamplePayload\022K\n\030bearing_accura" +
-      "cy_samples\030\013 \001(\0132).redvox_api_m.RedvoxPa" +
-      "cketM.SamplePayload\022\025\n\rbest_latitude\030\016 \001" +
-      "(\002\022\026\n\016best_longitude\030\017 \001(\002\022\025\n\rbest_altit" +
-      "ude\030\020 \001(\002\022\022\n\nbest_speed\030\021 \001(\002\022\024\n\014best_be" +
-      "aring\030\022 \001(\002\022\r\n\005score\030\023 \001(\002\022_\n\025location_s" +
-      "core_method\030\024 \001(\0162@.redvox_api_m.RedvoxP" +
-      "acketM.Sensors.Location.LocationScoreMet" +
-      "hod\022$\n\034location_permissions_granted\030\025 \001(" +
-      "\010\022#\n\033location_services_requested\030\026 \001(\010\022!" +
-      "\n\031location_services_enabled\030\027 \001(\010\022X\n\021loc" +
-      "ation_provider\030\030 \001(\0162=.redvox_api_m.Redv" +
-      "oxPacketM.Sensors.Location.LocationProvi" +
-      "der\022L\n\010metadata\030\031 \003(\0132:.redvox_api_m.Red" +
-      "voxPacketM.Sensors.Location.MetadataEntr" +
-      "y\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\")\n\023LocationScoreMethod\022\022\n\016UNK" +
-      "NOWN_METHOD\020\000\"I\n\020LocationProvider\022\013\n\007UNK" +
-      "NOWN\020\000\022\010\n\004NONE\020\001\022\010\n\004USER\020\002\022\007\n\003GPS\020\003\022\013\n\007N" +
-      "ETWORK\020\004\032\224\003\n\003Xyz\022\032\n\022sensor_description\030\001" +
-      " \001(\t\022=\n\ntimestamps\030\002 \001(\0132).redvox_api_m." +
-      "RedvoxPacketM.TimingPayload\022<\n\tx_samples" +
-      "\030\003 \001(\0132).redvox_api_m.RedvoxPacketM.Samp" +
-      "lePayload\022<\n\ty_samples\030\004 \001(\0132).redvox_ap" +
-      "i_m.RedvoxPacketM.SamplePayload\022<\n\tz_sam" +
-      "ples\030\005 \001(\0132).redvox_api_m.RedvoxPacketM." +
-      "SamplePayload\022G\n\010metadata\030\006 \003(\01325.redvox" +
-      "_api_m.RedvoxPacketM.Sensors.Xyz.Metadat" +
-      "aEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\032\360\002\n\005Image\022\032\n\022sensor_desc" +
-      "ription\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132).redv" +
-      "ox_api_m.RedvoxPacketM.TimingPayload\022\017\n\007" +
-      "samples\030\003 \003(\014\022I\n\013image_codec\030\004 \001(\01624.red" +
-      "vox_api_m.RedvoxPacketM.Sensors.Image.Im" +
-      "ageCodec\022I\n\010metadata\030\005 \003(\01327.redvox_api_" +
-      "m.RedvoxPacketM.Sensors.Image.MetadataEn" +
-      "try\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"4\n\nImageCodec\022\013\n\007UNKNOWN\020\000\022" +
-      "\007\n\003PNG\020\001\022\007\n\003JPG\020\002\022\007\n\003BMP\020\003\032\224\002\n\rSamplePay" +
-      "load\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Redvox" +
-      "PacketM.Unit\022\016\n\006values\030\002 \003(\002\022G\n\020value_st" +
-      "atistics\030\003 \001(\0132-.redvox_api_m.RedvoxPack" +
-      "etM.SummaryStatistics\022I\n\010metadata\030\004 \003(\0132" +
-      "7.redvox_api_m.RedvoxPacketM.SamplePaylo" +
-      "ad.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321\002\n\rTimingPayl" +
-      "oad\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.RedvoxP" +
-      "acketM.Unit\022\022\n\ntimestamps\030\002 \003(\001\022K\n\024times" +
-      "tamp_statistics\030\003 \001(\0132-.redvox_api_m.Red" +
-      "voxPacketM.SummaryStatistics\022\030\n\020mean_sam" +
-      "ple_rate\030\004 \001(\002\022\031\n\021stdev_sample_rate\030\005 \001(" +
-      "\002\022I\n\010metadata\030\006 \003(\01327.redvox_api_m.Redvo" +
-      "xPacketM.TimingPayload.MetadataEntry\032/\n\r" +
-      "MetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\032\365\001\n\021SummaryStatistics\022\r\n\005count\030\001 \001" +
-      "(\002\022\014\n\004mean\030\002 \001(\002\022\032\n\022standard_deviation\030\003" +
-      " \001(\002\022\013\n\003min\030\004 \001(\002\022\013\n\003max\030\005 \001(\002\022\r\n\005range\030" +
-      "\006 \001(\002\022M\n\010metadata\030\007 \003(\0132;.redvox_api_m.R" +
-      "edvoxPacketM.SummaryStatistics.MetadataE" +
-      "ntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\"\203\003\n\004Unit\022\013\n\007UNKNOWN\020\000\022\035\n\031M" +
-      "ETERS_PER_SECOND_SQUARED\020\001\022\016\n\nKILOPASCAL" +
-      "\020\002\022\026\n\022RADIANS_PER_SECOND\020\003\022\023\n\017DECIMAL_DE" +
-      "GREES\020\004\022\n\n\006METERS\020\005\022\025\n\021METERS_PER_SECOND" +
-      "\020\006\022\016\n\nMICROTESLA\020\007\022\031\n\025LSB_PLUS_MINUS_COU" +
-      "NTS\020\010\022!\n\035MICROSECONDS_SINCE_UNIX_EPOCH\020\t" +
-      "\022\013\n\007DECIBEL\020\n\022\023\n\017DEGREES_CELSIUS\020\013\022\010\n\004BY" +
-      "TE\020\014\022\016\n\nPERCENTAGE\020\r\022\013\n\007RADIANS\020\016\022\020\n\014MIC" +
-      "ROAMPERES\020\017\022\017\n\013CENTIMETERS\020\020\022\025\n\021NORMALIZ" +
-      "ED_COUNTS\020\021\022\007\n\003LUX\020\022\022\014\n\010UNITLESS\020\023\022\007\n\003PC" +
-      "M\020\024\"\254\001\n\026EncryptedRedvoxPacketM\022\016\n\006header" +
-      "\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014\032r\n\006Header\022\022\n\nstat" +
-      "ion_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\022\n\nau" +
-      "th_token\030\003 \001(\t\022\026\n\016firebase_token\030\004 \001(\t\022\022" +
-      "\n\nauth_email\030\005 \001(\t\"y\n\022AcquisitionRequest" +
-      "\022\022\n\nauth_token\030\001 \001(\t\022\026\n\016firebase_token\030\002" +
-      " \001(\t\022\020\n\010checksum\030\003 \001(\003\022\024\n\014is_encrypted\030\004" +
-      " \001(\010\022\017\n\007payload\030\005 \001(\014\"\345\001\n\023AcquisitionRes" +
-      "ponse\022E\n\rresponse_type\030\001 \001(\0162..redvox_ap" +
-      "i_m.AcquisitionResponse.ResponseType\022\020\n\010" +
-      "checksum\030\002 \001(\003\022\017\n\007details\030\003 \001(\t\022\016\n\006resen" +
-      "d\030\004 \001(\010\"T\n\014ResponseType\022\013\n\007UNKNOWN\020\000\022\006\n\002" +
-      "OK\020\001\022\016\n\nAUTH_ERROR\020\002\022\016\n\nDATA_ERROR\020\003\022\017\n\013" +
-      "OTHER_ERROR\020\004\"\\\n\014SynchRequest\022\022\n\nstation" +
-      "_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\016\n\006seq_i" +
-      "d\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001\n\rSynchRes" +
-      "ponse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uui" +
-      "d\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 " +
-      "\001(\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsend_ts_us\030\006 " +
-      "\001(\004B\020\n\016io.redvox.apisb\006proto3"
+      "d\022N\n\033horizontal_accuracy_samples\030\010 \001(\0132)" +
+      ".redvox_api_m.RedvoxPacketM.SamplePayloa" +
+      "d\022L\n\031vertical_accuracy_samples\030\t \001(\0132).r" +
+      "edvox_api_m.RedvoxPacketM.SamplePayload\022" +
+      "I\n\026speed_accuracy_samples\030\n \001(\0132).redvox" +
+      "_api_m.RedvoxPacketM.SamplePayload\022K\n\030be" +
+      "aring_accuracy_samples\030\013 \001(\0132).redvox_ap" +
+      "i_m.RedvoxPacketM.SamplePayload\022\025\n\rbest_" +
+      "latitude\030\016 \001(\001\022\026\n\016best_longitude\030\017 \001(\001\022\025" +
+      "\n\rbest_altitude\030\020 \001(\002\022\022\n\nbest_speed\030\021 \001(" +
+      "\002\022\024\n\014best_bearing\030\022 \001(\002\022\r\n\005score\030\023 \001(\002\022_" +
+      "\n\025location_score_method\030\024 \001(\0162@.redvox_a" +
+      "pi_m.RedvoxPacketM.Sensors.Location.Loca" +
+      "tionScoreMethod\022$\n\034location_permissions_" +
+      "granted\030\025 \001(\010\022#\n\033location_services_reque" +
+      "sted\030\026 \001(\010\022!\n\031location_services_enabled\030" +
+      "\027 \001(\010\022X\n\021location_provider\030\030 \001(\0162=.redvo" +
+      "x_api_m.RedvoxPacketM.Sensors.Location.L" +
+      "ocationProvider\022L\n\010metadata\030\031 \003(\0132:.redv" +
+      "ox_api_m.RedvoxPacketM.Sensors.Location." +
+      "MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")\n\023LocationScoreM" +
+      "ethod\022\022\n\016UNKNOWN_METHOD\020\000\"I\n\020LocationPro" +
+      "vider\022\013\n\007UNKNOWN\020\000\022\010\n\004NONE\020\001\022\010\n\004USER\020\002\022\007" +
+      "\n\003GPS\020\003\022\013\n\007NETWORK\020\004\032\224\003\n\003Xyz\022\032\n\022sensor_d" +
+      "escription\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132).r" +
+      "edvox_api_m.RedvoxPacketM.TimingPayload\022" +
+      "<\n\tx_samples\030\003 \001(\0132).redvox_api_m.Redvox" +
+      "PacketM.SamplePayload\022<\n\ty_samples\030\004 \001(\013" +
+      "2).redvox_api_m.RedvoxPacketM.SamplePayl" +
+      "oad\022<\n\tz_samples\030\005 \001(\0132).redvox_api_m.Re" +
+      "dvoxPacketM.SamplePayload\022G\n\010metadata\030\006 " +
+      "\003(\01325.redvox_api_m.RedvoxPacketM.Sensors" +
+      ".Xyz.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\360\002\n\005Image\022\032\n" +
+      "\022sensor_description\030\001 \001(\t\022=\n\ntimestamps\030" +
+      "\002 \001(\0132).redvox_api_m.RedvoxPacketM.Timin" +
+      "gPayload\022\017\n\007samples\030\003 \003(\014\022I\n\013image_codec" +
+      "\030\004 \001(\01624.redvox_api_m.RedvoxPacketM.Sens" +
+      "ors.Image.ImageCodec\022I\n\010metadata\030\005 \003(\01327" +
+      ".redvox_api_m.RedvoxPacketM.Sensors.Imag" +
+      "e.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"4\n\nImageCodec\022\013" +
+      "\n\007UNKNOWN\020\000\022\007\n\003PNG\020\001\022\007\n\003JPG\020\002\022\007\n\003BMP\020\003\032\224" +
+      "\002\n\rSamplePayload\022.\n\004unit\030\001 \001(\0162 .redvox_" +
+      "api_m.RedvoxPacketM.Unit\022\016\n\006values\030\002 \003(\002" +
+      "\022G\n\020value_statistics\030\003 \001(\0132-.redvox_api_" +
+      "m.RedvoxPacketM.SummaryStatistics\022I\n\010met" +
+      "adata\030\004 \003(\01327.redvox_api_m.RedvoxPacketM" +
+      ".SamplePayload.MetadataEntry\032/\n\rMetadata" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\240\002" +
+      "\n\023DoubleSamplePayload\022.\n\004unit\030\001 \001(\0162 .re" +
+      "dvox_api_m.RedvoxPacketM.Unit\022\016\n\006values\030" +
+      "\002 \003(\001\022G\n\020value_statistics\030\003 \001(\0132-.redvox" +
+      "_api_m.RedvoxPacketM.SummaryStatistics\022O" +
+      "\n\010metadata\030\004 \003(\0132=.redvox_api_m.RedvoxPa" +
+      "cketM.DoubleSamplePayload.MetadataEntry\032" +
+      "/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\032\321\002\n\rTimingPayload\022.\n\004unit\030\001 \001(\016" +
+      "2 .redvox_api_m.RedvoxPacketM.Unit\022\022\n\nti" +
+      "mestamps\030\002 \003(\001\022K\n\024timestamp_statistics\030\003" +
+      " \001(\0132-.redvox_api_m.RedvoxPacketM.Summar" +
+      "yStatistics\022\030\n\020mean_sample_rate\030\004 \001(\002\022\031\n" +
+      "\021stdev_sample_rate\030\005 \001(\002\022I\n\010metadata\030\006 \003" +
+      "(\01327.redvox_api_m.RedvoxPacketM.TimingPa" +
+      "yload.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\365\001\n\021Summary" +
+      "Statistics\022\r\n\005count\030\001 \001(\002\022\014\n\004mean\030\002 \001(\002\022" +
+      "\032\n\022standard_deviation\030\003 \001(\002\022\013\n\003min\030\004 \001(\002" +
+      "\022\013\n\003max\030\005 \001(\002\022\r\n\005range\030\006 \001(\002\022M\n\010metadata" +
+      "\030\007 \003(\0132;.redvox_api_m.RedvoxPacketM.Summ" +
+      "aryStatistics.MetadataEntry\032/\n\rMetadataE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\203\003\n" +
+      "\004Unit\022\013\n\007UNKNOWN\020\000\022\035\n\031METERS_PER_SECOND_" +
+      "SQUARED\020\001\022\016\n\nKILOPASCAL\020\002\022\026\n\022RADIANS_PER" +
+      "_SECOND\020\003\022\023\n\017DECIMAL_DEGREES\020\004\022\n\n\006METERS" +
+      "\020\005\022\025\n\021METERS_PER_SECOND\020\006\022\016\n\nMICROTESLA\020" +
+      "\007\022\031\n\025LSB_PLUS_MINUS_COUNTS\020\010\022!\n\035MICROSEC" +
+      "ONDS_SINCE_UNIX_EPOCH\020\t\022\013\n\007DECIBEL\020\n\022\023\n\017" +
+      "DEGREES_CELSIUS\020\013\022\010\n\004BYTE\020\014\022\016\n\nPERCENTAG" +
+      "E\020\r\022\013\n\007RADIANS\020\016\022\020\n\014MICROAMPERES\020\017\022\017\n\013CE" +
+      "NTIMETERS\020\020\022\025\n\021NORMALIZED_COUNTS\020\021\022\007\n\003LU" +
+      "X\020\022\022\014\n\010UNITLESS\020\023\022\007\n\003PCM\020\024\"\254\001\n\026Encrypted" +
+      "RedvoxPacketM\022\016\n\006header\030\001 \001(\014\022\016\n\006packet\030" +
+      "\002 \001(\014\032r\n\006Header\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014s" +
+      "tation_uuid\030\002 \001(\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n" +
+      "\016firebase_token\030\004 \001(\t\022\022\n\nauth_email\030\005 \001(" +
+      "\t\"y\n\022AcquisitionRequest\022\022\n\nauth_token\030\001 " +
+      "\001(\t\022\026\n\016firebase_token\030\002 \001(\t\022\020\n\010checksum\030" +
+      "\003 \001(\003\022\024\n\014is_encrypted\030\004 \001(\010\022\017\n\007payload\030\005" +
+      " \001(\014\"\345\001\n\023AcquisitionResponse\022E\n\rresponse" +
+      "_type\030\001 \001(\0162..redvox_api_m.AcquisitionRe" +
+      "sponse.ResponseType\022\020\n\010checksum\030\002 \001(\003\022\017\n" +
+      "\007details\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"T\n\014Respon" +
+      "seType\022\013\n\007UNKNOWN\020\000\022\006\n\002OK\020\001\022\016\n\nAUTH_ERRO" +
+      "R\020\002\022\016\n\nDATA_ERROR\020\003\022\017\n\013OTHER_ERROR\020\004\"\\\n\014" +
+      "SynchRequest\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014stat" +
+      "ion_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_se" +
+      "q_id\030\004 \001(\r\"\205\001\n\rSynchResponse\022\022\n\nstation_" +
+      "id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\016\n\006seq_id" +
+      "\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\022\022\n\nrecv_ts_us" +
+      "\030\005 \001(\004\022\022\n\nsend_ts_us\030\006 \001(\004B\020\n\016io.redvox." +
+      "apisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -49762,8 +51231,20 @@ public final class RedvoxApiM {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_RedvoxPacketM_SamplePayload_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_redvox_api_m_RedvoxPacketM_TimingPayload_descriptor =
+    internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_descriptor =
       internal_static_redvox_api_m_RedvoxPacketM_descriptor.getNestedTypes().get(5);
+    internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_descriptor,
+        new java.lang.String[] { "Unit", "Values", "ValueStatistics", "Metadata", });
+    internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_MetadataEntry_descriptor =
+      internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_descriptor.getNestedTypes().get(0);
+    internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_MetadataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_redvox_api_m_RedvoxPacketM_DoubleSamplePayload_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_redvox_api_m_RedvoxPacketM_TimingPayload_descriptor =
+      internal_static_redvox_api_m_RedvoxPacketM_descriptor.getNestedTypes().get(6);
     internal_static_redvox_api_m_RedvoxPacketM_TimingPayload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_RedvoxPacketM_TimingPayload_descriptor,
@@ -49775,7 +51256,7 @@ public final class RedvoxApiM {
         internal_static_redvox_api_m_RedvoxPacketM_TimingPayload_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_redvox_api_m_RedvoxPacketM_SummaryStatistics_descriptor =
-      internal_static_redvox_api_m_RedvoxPacketM_descriptor.getNestedTypes().get(6);
+      internal_static_redvox_api_m_RedvoxPacketM_descriptor.getNestedTypes().get(7);
     internal_static_redvox_api_m_RedvoxPacketM_SummaryStatistics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_RedvoxPacketM_SummaryStatistics_descriptor,

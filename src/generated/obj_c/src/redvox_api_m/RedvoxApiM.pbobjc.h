@@ -27,6 +27,7 @@
 
 CF_EXTERN_C_BEGIN
 
+@class RedvoxPacketM_DoubleSamplePayload;
 @class RedvoxPacketM_SamplePayload;
 @class RedvoxPacketM_Sensors;
 @class RedvoxPacketM_Sensors_Audio;
@@ -1329,12 +1330,12 @@ GPB_FINAL @interface RedvoxPacketM_Sensors_Location : GPBMessage
 @property(nonatomic, readwrite) BOOL hasTimestamps;
 
 /** A list of latitude samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *latitudeSamples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_DoubleSamplePayload *latitudeSamples;
 /** Test to see if @c latitudeSamples has been set. */
 @property(nonatomic, readwrite) BOOL hasLatitudeSamples;
 
 /** A list of longitude samples */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *longitudeSamples;
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_DoubleSamplePayload *longitudeSamples;
 /** Test to see if @c longitudeSamples has been set. */
 @property(nonatomic, readwrite) BOOL hasLongitudeSamples;
 
@@ -1374,10 +1375,10 @@ GPB_FINAL @interface RedvoxPacketM_Sensors_Location : GPBMessage
 @property(nonatomic, readwrite) BOOL hasBearingAccuracySamples;
 
 /** The best latitude */
-@property(nonatomic, readwrite) float bestLatitude;
+@property(nonatomic, readwrite) double bestLatitude;
 
 /** The best longitude */
-@property(nonatomic, readwrite) float bestLongitude;
+@property(nonatomic, readwrite) double bestLongitude;
 
 /** The best altitude */
 @property(nonatomic, readwrite) float bestAltitude;
@@ -1581,6 +1582,49 @@ int32_t RedvoxPacketM_SamplePayload_Unit_RawValue(RedvoxPacketM_SamplePayload *m
  * was generated.
  **/
 void SetRedvoxPacketM_SamplePayload_Unit_RawValue(RedvoxPacketM_SamplePayload *message, int32_t value);
+
+#pragma mark - RedvoxPacketM_DoubleSamplePayload
+
+typedef GPB_ENUM(RedvoxPacketM_DoubleSamplePayload_FieldNumber) {
+  RedvoxPacketM_DoubleSamplePayload_FieldNumber_Unit = 1,
+  RedvoxPacketM_DoubleSamplePayload_FieldNumber_ValuesArray = 2,
+  RedvoxPacketM_DoubleSamplePayload_FieldNumber_ValueStatistics = 3,
+  RedvoxPacketM_DoubleSamplePayload_FieldNumber_Metadata = 4,
+};
+
+GPB_FINAL @interface RedvoxPacketM_DoubleSamplePayload : GPBMessage
+
+/** Unit of payload values */
+@property(nonatomic, readwrite) RedvoxPacketM_Unit unit;
+
+/** Values in payload */
+@property(nonatomic, readwrite, strong, null_resettable) GPBDoubleArray *valuesArray;
+/** The number of items in @c valuesArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger valuesArray_Count;
+
+/** Statistics of stored values */
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SummaryStatistics *valueStatistics;
+/** Test to see if @c valueStatistics has been set. */
+@property(nonatomic, readwrite) BOOL hasValueStatistics;
+
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
+
+@end
+
+/**
+ * Fetches the raw value of a @c RedvoxPacketM_DoubleSamplePayload's @c unit property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacketM_DoubleSamplePayload_Unit_RawValue(RedvoxPacketM_DoubleSamplePayload *message);
+/**
+ * Sets the raw value of an @c RedvoxPacketM_DoubleSamplePayload's @c unit property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacketM_DoubleSamplePayload_Unit_RawValue(RedvoxPacketM_DoubleSamplePayload *message, int32_t value);
 
 #pragma mark - RedvoxPacketM_TimingPayload
 
