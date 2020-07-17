@@ -24515,19 +24515,49 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
-         * @return The enum numeric value on the wire for locationProvider.
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * @return A list containing the locationProvider.
          */
-        int getLocationProviderValue();
+        java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider> getLocationProviderList();
         /**
          * <pre>
          * Location provider enumeration
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
-         * @return The locationProvider.
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * @return The count of locationProvider.
          */
-        io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider getLocationProvider();
+        int getLocationProviderCount();
+        /**
+         * <pre>
+         * Location provider enumeration
+         * </pre>
+         *
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * @param index The index of the element to return.
+         * @return The locationProvider at the given index.
+         */
+        io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider getLocationProvider(int index);
+        /**
+         * <pre>
+         * Location provider enumeration
+         * </pre>
+         *
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * @return A list containing the enum numeric values on the wire for locationProvider.
+         */
+        java.util.List<java.lang.Integer>
+        getLocationProviderValueList();
+        /**
+         * <pre>
+         * Location provider enumeration
+         * </pre>
+         *
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * @param index The index of the value to return.
+         * @return The enum numeric value on the wire of locationProvider at the given index.
+         */
+        int getLocationProviderValue(int index);
 
         /**
          * <pre>
@@ -24603,7 +24633,7 @@ public final class RedvoxApiM {
         private Location() {
           sensorDescription_ = "";
           locationScoreMethod_ = 0;
-          locationProvider_ = 0;
+          locationProvider_ = java.util.Collections.emptyList();
         }
 
         @java.lang.Override
@@ -24826,15 +24856,32 @@ public final class RedvoxApiM {
                 }
                 case 192: {
                   int rawValue = input.readEnum();
-
-                  locationProvider_ = rawValue;
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                    locationProvider_ = new java.util.ArrayList<java.lang.Integer>();
+                    mutable_bitField0_ |= 0x00000001;
+                  }
+                  locationProvider_.add(rawValue);
+                  break;
+                }
+                case 194: {
+                  int length = input.readRawVarint32();
+                  int oldLimit = input.pushLimit(length);
+                  while(input.getBytesUntilLimit() > 0) {
+                    int rawValue = input.readEnum();
+                    if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                      locationProvider_ = new java.util.ArrayList<java.lang.Integer>();
+                      mutable_bitField0_ |= 0x00000001;
+                    }
+                    locationProvider_.add(rawValue);
+                  }
+                  input.popLimit(oldLimit);
                   break;
                 }
                 case 202: {
-                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                     metadata_ = com.google.protobuf.MapField.newMapField(
                         MetadataDefaultEntryHolder.defaultEntry);
-                    mutable_bitField0_ |= 0x00000001;
+                    mutable_bitField0_ |= 0x00000002;
                   }
                   com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
                   metadata__ = input.readMessage(
@@ -24858,6 +24905,9 @@ public final class RedvoxApiM {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
           } finally {
+            if (((mutable_bitField0_ & 0x00000001) != 0)) {
+              locationProvider_ = java.util.Collections.unmodifiableList(locationProvider_);
+            }
             this.unknownFields = unknownFields.build();
             makeExtensionsImmutable();
           }
@@ -25718,16 +25768,66 @@ public final class RedvoxApiM {
         }
 
         public static final int LOCATION_PROVIDER_FIELD_NUMBER = 24;
-        private int locationProvider_;
+        private java.util.List<java.lang.Integer> locationProvider_;
+        private static final com.google.protobuf.Internal.ListAdapter.Converter<
+            java.lang.Integer, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider> locationProvider_converter_ =
+                new com.google.protobuf.Internal.ListAdapter.Converter<
+                    java.lang.Integer, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider>() {
+                  public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider convert(java.lang.Integer from) {
+                    @SuppressWarnings("deprecation")
+                    io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider.valueOf(from);
+                    return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider.UNRECOGNIZED : result;
+                  }
+                };
         /**
          * <pre>
          * Location provider enumeration
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
-         * @return The enum numeric value on the wire for locationProvider.
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * @return A list containing the locationProvider.
          */
-        @java.lang.Override public int getLocationProviderValue() {
+        @java.lang.Override
+        public java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider> getLocationProviderList() {
+          return new com.google.protobuf.Internal.ListAdapter<
+              java.lang.Integer, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider>(locationProvider_, locationProvider_converter_);
+        }
+        /**
+         * <pre>
+         * Location provider enumeration
+         * </pre>
+         *
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * @return The count of locationProvider.
+         */
+        @java.lang.Override
+        public int getLocationProviderCount() {
+          return locationProvider_.size();
+        }
+        /**
+         * <pre>
+         * Location provider enumeration
+         * </pre>
+         *
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * @param index The index of the element to return.
+         * @return The locationProvider at the given index.
+         */
+        @java.lang.Override
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider getLocationProvider(int index) {
+          return locationProvider_converter_.convert(locationProvider_.get(index));
+        }
+        /**
+         * <pre>
+         * Location provider enumeration
+         * </pre>
+         *
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * @return A list containing the enum numeric values on the wire for locationProvider.
+         */
+        @java.lang.Override
+        public java.util.List<java.lang.Integer>
+        getLocationProviderValueList() {
           return locationProvider_;
         }
         /**
@@ -25735,14 +25835,15 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
-         * @return The locationProvider.
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * @param index The index of the value to return.
+         * @return The enum numeric value on the wire of locationProvider at the given index.
          */
-        @java.lang.Override public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider getLocationProvider() {
-          @SuppressWarnings("deprecation")
-          io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider.valueOf(locationProvider_);
-          return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider.UNRECOGNIZED : result;
+        @java.lang.Override
+        public int getLocationProviderValue(int index) {
+          return locationProvider_.get(index);
         }
+        private int locationProviderMemoizedSerializedSize;
 
         public static final int METADATA_FIELD_NUMBER = 25;
         private static final class MetadataDefaultEntryHolder {
@@ -25855,6 +25956,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
+          getSerializedSize();
           if (!getSensorDescriptionBytes().isEmpty()) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sensorDescription_);
           }
@@ -25918,8 +26020,12 @@ public final class RedvoxApiM {
           if (locationServicesEnabled_ != false) {
             output.writeBool(23, locationServicesEnabled_);
           }
-          if (locationProvider_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider.UNKNOWN.getNumber()) {
-            output.writeEnum(24, locationProvider_);
+          if (getLocationProviderList().size() > 0) {
+            output.writeUInt32NoTag(194);
+            output.writeUInt32NoTag(locationProviderMemoizedSerializedSize);
+          }
+          for (int i = 0; i < locationProvider_.size(); i++) {
+            output.writeEnumNoTag(locationProvider_.get(i));
           }
           com.google.protobuf.GeneratedMessageV3
             .serializeStringMapTo(
@@ -26019,9 +26125,17 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(23, locationServicesEnabled_);
           }
-          if (locationProvider_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider.UNKNOWN.getNumber()) {
-            size += com.google.protobuf.CodedOutputStream
-              .computeEnumSize(24, locationProvider_);
+          {
+            int dataSize = 0;
+            for (int i = 0; i < locationProvider_.size(); i++) {
+              dataSize += com.google.protobuf.CodedOutputStream
+                .computeEnumSizeNoTag(locationProvider_.get(i));
+            }
+            size += dataSize;
+            if (!getLocationProviderList().isEmpty()) {  size += 2;
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32SizeNoTag(dataSize);
+            }locationProviderMemoizedSerializedSize = dataSize;
           }
           for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
                : internalGetMetadata().getMap().entrySet()) {
@@ -26125,7 +26239,7 @@ public final class RedvoxApiM {
               != other.getLocationServicesRequested()) return false;
           if (getLocationServicesEnabled()
               != other.getLocationServicesEnabled()) return false;
-          if (locationProvider_ != other.locationProvider_) return false;
+          if (!locationProvider_.equals(other.locationProvider_)) return false;
           if (!internalGetMetadata().equals(
               other.internalGetMetadata())) return false;
           if (!unknownFields.equals(other.unknownFields)) return false;
@@ -26210,8 +26324,10 @@ public final class RedvoxApiM {
           hash = (37 * hash) + LOCATION_SERVICES_ENABLED_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getLocationServicesEnabled());
-          hash = (37 * hash) + LOCATION_PROVIDER_FIELD_NUMBER;
-          hash = (53 * hash) + locationProvider_;
+          if (getLocationProviderCount() > 0) {
+            hash = (37 * hash) + LOCATION_PROVIDER_FIELD_NUMBER;
+            hash = (53 * hash) + locationProvider_.hashCode();
+          }
           if (!internalGetMetadata().getMap().isEmpty()) {
             hash = (37 * hash) + METADATA_FIELD_NUMBER;
             hash = (53 * hash) + internalGetMetadata().hashCode();
@@ -26458,8 +26574,8 @@ public final class RedvoxApiM {
 
             locationServicesEnabled_ = false;
 
-            locationProvider_ = 0;
-
+            locationProvider_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
             internalGetMutableMetadata().clear();
             return this;
           }
@@ -26549,6 +26665,10 @@ public final class RedvoxApiM {
             result.locationPermissionsGranted_ = locationPermissionsGranted_;
             result.locationServicesRequested_ = locationServicesRequested_;
             result.locationServicesEnabled_ = locationServicesEnabled_;
+            if (((bitField0_ & 0x00000001) != 0)) {
+              locationProvider_ = java.util.Collections.unmodifiableList(locationProvider_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
             result.locationProvider_ = locationProvider_;
             result.metadata_ = internalGetMetadata();
             result.metadata_.makeImmutable();
@@ -26664,8 +26784,15 @@ public final class RedvoxApiM {
             if (other.getLocationServicesEnabled() != false) {
               setLocationServicesEnabled(other.getLocationServicesEnabled());
             }
-            if (other.locationProvider_ != 0) {
-              setLocationProviderValue(other.getLocationProviderValue());
+            if (!other.locationProvider_.isEmpty()) {
+              if (locationProvider_.isEmpty()) {
+                locationProvider_ = other.locationProvider_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureLocationProviderIsMutable();
+                locationProvider_.addAll(other.locationProvider_);
+              }
+              onChanged();
             }
             internalGetMutableMetadata().mergeFrom(
                 other.internalGetMetadata());
@@ -28806,62 +28933,66 @@ public final class RedvoxApiM {
             return this;
           }
 
-          private int locationProvider_ = 0;
-          /**
-           * <pre>
-           * Location provider enumeration
-           * </pre>
-           *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
-           * @return The enum numeric value on the wire for locationProvider.
-           */
-          @java.lang.Override public int getLocationProviderValue() {
-            return locationProvider_;
+          private java.util.List<java.lang.Integer> locationProvider_ =
+            java.util.Collections.emptyList();
+          private void ensureLocationProviderIsMutable() {
+            if (!((bitField0_ & 0x00000001) != 0)) {
+              locationProvider_ = new java.util.ArrayList<java.lang.Integer>(locationProvider_);
+              bitField0_ |= 0x00000001;
+            }
           }
           /**
            * <pre>
            * Location provider enumeration
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
-           * @param value The enum numeric value on the wire for locationProvider to set.
-           * @return This builder for chaining.
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * @return A list containing the locationProvider.
            */
-          public Builder setLocationProviderValue(int value) {
-            
-            locationProvider_ = value;
-            onChanged();
-            return this;
+          public java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider> getLocationProviderList() {
+            return new com.google.protobuf.Internal.ListAdapter<
+                java.lang.Integer, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider>(locationProvider_, locationProvider_converter_);
           }
           /**
            * <pre>
            * Location provider enumeration
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
-           * @return The locationProvider.
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * @return The count of locationProvider.
            */
-          @java.lang.Override
-          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider getLocationProvider() {
-            @SuppressWarnings("deprecation")
-            io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider.valueOf(locationProvider_);
-            return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider.UNRECOGNIZED : result;
+          public int getLocationProviderCount() {
+            return locationProvider_.size();
           }
           /**
            * <pre>
            * Location provider enumeration
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * @param index The index of the element to return.
+           * @return The locationProvider at the given index.
+           */
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider getLocationProvider(int index) {
+            return locationProvider_converter_.convert(locationProvider_.get(index));
+          }
+          /**
+           * <pre>
+           * Location provider enumeration
+           * </pre>
+           *
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * @param index The index to set the value at.
            * @param value The locationProvider to set.
            * @return This builder for chaining.
            */
-          public Builder setLocationProvider(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider value) {
+          public Builder setLocationProvider(
+              int index, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider value) {
             if (value == null) {
               throw new NullPointerException();
             }
-            
-            locationProvider_ = value.getNumber();
+            ensureLocationProviderIsMutable();
+            locationProvider_.set(index, value.getNumber());
             onChanged();
             return this;
           }
@@ -28870,12 +29001,122 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * @param value The locationProvider to add.
+           * @return This builder for chaining.
+           */
+          public Builder addLocationProvider(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureLocationProviderIsMutable();
+            locationProvider_.add(value.getNumber());
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Location provider enumeration
+           * </pre>
+           *
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * @param values The locationProvider to add.
+           * @return This builder for chaining.
+           */
+          public Builder addAllLocationProvider(
+              java.lang.Iterable<? extends io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider> values) {
+            ensureLocationProviderIsMutable();
+            for (io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider value : values) {
+              locationProvider_.add(value.getNumber());
+            }
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Location provider enumeration
+           * </pre>
+           *
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
            * @return This builder for chaining.
            */
           public Builder clearLocationProvider() {
-            
-            locationProvider_ = 0;
+            locationProvider_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Location provider enumeration
+           * </pre>
+           *
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * @return A list containing the enum numeric values on the wire for locationProvider.
+           */
+          public java.util.List<java.lang.Integer>
+          getLocationProviderValueList() {
+            return java.util.Collections.unmodifiableList(locationProvider_);
+          }
+          /**
+           * <pre>
+           * Location provider enumeration
+           * </pre>
+           *
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * @param index The index of the value to return.
+           * @return The enum numeric value on the wire of locationProvider at the given index.
+           */
+          public int getLocationProviderValue(int index) {
+            return locationProvider_.get(index);
+          }
+          /**
+           * <pre>
+           * Location provider enumeration
+           * </pre>
+           *
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * @param index The index of the value to return.
+           * @return The enum numeric value on the wire of locationProvider at the given index.
+           * @return This builder for chaining.
+           */
+          public Builder setLocationProviderValue(
+              int index, int value) {
+            ensureLocationProviderIsMutable();
+            locationProvider_.set(index, value);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Location provider enumeration
+           * </pre>
+           *
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * @param value The enum numeric value on the wire for locationProvider to add.
+           * @return This builder for chaining.
+           */
+          public Builder addLocationProviderValue(int value) {
+            ensureLocationProviderIsMutable();
+            locationProvider_.add(value);
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Location provider enumeration
+           * </pre>
+           *
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * @param values The enum numeric values on the wire for locationProvider to add.
+           * @return This builder for chaining.
+           */
+          public Builder addAllLocationProviderValue(
+              java.lang.Iterable<java.lang.Integer> values) {
+            ensureLocationProviderIsMutable();
+            for (int value : values) {
+              locationProvider_.add(value);
+            }
             onChanged();
             return this;
           }
@@ -50959,7 +51200,7 @@ public final class RedvoxApiM {
       "tionScoreMethod\022$\n\034location_permissions_" +
       "granted\030\025 \001(\010\022#\n\033location_services_reque" +
       "sted\030\026 \001(\010\022!\n\031location_services_enabled\030" +
-      "\027 \001(\010\022X\n\021location_provider\030\030 \001(\0162=.redvo" +
+      "\027 \001(\010\022X\n\021location_provider\030\030 \003(\0162=.redvo" +
       "x_api_m.RedvoxPacketM.Sensors.Location.L" +
       "ocationProvider\022L\n\010metadata\030\031 \003(\0132:.redv" +
       "ox_api_m.RedvoxPacketM.Sensors.Location." +

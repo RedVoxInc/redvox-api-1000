@@ -2413,7 +2413,7 @@ typedef struct RedvoxPacketM_Sensors_Single__storage_ {
 @dynamic locationPermissionsGranted;
 @dynamic locationServicesRequested;
 @dynamic locationServicesEnabled;
-@dynamic locationProvider;
+@dynamic locationProviderArray, locationProviderArray_Count;
 @dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacketM_Sensors_Location__storage_ {
@@ -2423,7 +2423,6 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
   float bestBearing;
   float score;
   RedvoxPacketM_Sensors_Location_LocationScoreMethod locationScoreMethod;
-  RedvoxPacketM_Sensors_Location_LocationProvider locationProvider;
   NSString *sensorDescription;
   RedvoxPacketM_TimingPayload *timestamps;
   RedvoxPacketM_DoubleSamplePayload *latitudeSamples;
@@ -2435,6 +2434,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
   RedvoxPacketM_SamplePayload *verticalAccuracySamples;
   RedvoxPacketM_SamplePayload *speedAccuracySamples;
   RedvoxPacketM_SamplePayload *bearingAccuracySamples;
+  GPBEnumArray *locationProviderArray;
   NSMutableDictionary *metadata;
   double bestLatitude;
   double bestLongitude;
@@ -2636,12 +2636,12 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .dataType = GPBDataTypeBool,
       },
       {
-        .name = "locationProvider",
+        .name = "locationProviderArray",
         .dataTypeSpecific.enumDescFunc = RedvoxPacketM_Sensors_Location_LocationProvider_EnumDescriptor,
-        .number = RedvoxPacketM_Sensors_Location_FieldNumber_LocationProvider,
-        .hasIndex = 24,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, locationProvider),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
+        .number = RedvoxPacketM_Sensors_Location_FieldNumber_LocationProviderArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, locationProviderArray),
+        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
       },
       {
@@ -2682,18 +2682,6 @@ int32_t RedvoxPacketM_Sensors_Location_LocationScoreMethod_RawValue(RedvoxPacket
 void SetRedvoxPacketM_Sensors_Location_LocationScoreMethod_RawValue(RedvoxPacketM_Sensors_Location *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_FieldNumber_LocationScoreMethod];
-  GPBSetMessageRawEnumField(message, field, value);
-}
-
-int32_t RedvoxPacketM_Sensors_Location_LocationProvider_RawValue(RedvoxPacketM_Sensors_Location *message) {
-  GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_FieldNumber_LocationProvider];
-  return GPBGetMessageRawEnumField(message, field);
-}
-
-void SetRedvoxPacketM_Sensors_Location_LocationProvider_RawValue(RedvoxPacketM_Sensors_Location *message, int32_t value) {
-  GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_FieldNumber_LocationProvider];
   GPBSetMessageRawEnumField(message, field, value);
 }
 

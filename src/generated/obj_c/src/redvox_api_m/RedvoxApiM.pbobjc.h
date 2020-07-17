@@ -1311,7 +1311,7 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_FieldNumber) {
   RedvoxPacketM_Sensors_Location_FieldNumber_LocationPermissionsGranted = 21,
   RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesRequested = 22,
   RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesEnabled = 23,
-  RedvoxPacketM_Sensors_Location_FieldNumber_LocationProvider = 24,
+  RedvoxPacketM_Sensors_Location_FieldNumber_LocationProviderArray = 24,
   RedvoxPacketM_Sensors_Location_FieldNumber_Metadata = 25,
 };
 
@@ -1405,7 +1405,10 @@ GPB_FINAL @interface RedvoxPacketM_Sensors_Location : GPBMessage
 @property(nonatomic, readwrite) BOOL locationServicesEnabled;
 
 /** Location provider enumeration */
-@property(nonatomic, readwrite) RedvoxPacketM_Sensors_Location_LocationProvider locationProvider;
+// |locationProviderArray| contains |RedvoxPacketM_Sensors_Location_LocationProvider|
+@property(nonatomic, readwrite, strong, null_resettable) GPBEnumArray *locationProviderArray;
+/** The number of items in @c locationProviderArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger locationProviderArray_Count;
 
 /** A map from string to string for including untyped metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
@@ -1425,18 +1428,6 @@ int32_t RedvoxPacketM_Sensors_Location_LocationScoreMethod_RawValue(RedvoxPacket
  * was generated.
  **/
 void SetRedvoxPacketM_Sensors_Location_LocationScoreMethod_RawValue(RedvoxPacketM_Sensors_Location *message, int32_t value);
-
-/**
- * Fetches the raw value of a @c RedvoxPacketM_Sensors_Location's @c locationProvider property, even
- * if the value was not defined by the enum at the time the code was generated.
- **/
-int32_t RedvoxPacketM_Sensors_Location_LocationProvider_RawValue(RedvoxPacketM_Sensors_Location *message);
-/**
- * Sets the raw value of an @c RedvoxPacketM_Sensors_Location's @c locationProvider property, allowing
- * it to be set to a value that was not defined by the enum at the time the code
- * was generated.
- **/
-void SetRedvoxPacketM_Sensors_Location_LocationProvider_RawValue(RedvoxPacketM_Sensors_Location *message, int32_t value);
 
 #pragma mark - RedvoxPacketM_Sensors_Xyz
 

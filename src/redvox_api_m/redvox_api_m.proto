@@ -297,7 +297,7 @@ message RedvoxPacketM {
             bool location_permissions_granted = 21;     // Have location permissions been granted by the user?
             bool location_services_requested = 22;      // Has location services been requested by the user?
             bool location_services_enabled = 23;        // Are location services enabled and working?
-            LocationProvider location_provider = 24;    // Location provider enumeration
+            repeated LocationProvider location_provider = 24;    // Location provider enumeration
 
             map<string, string> metadata = 25; // A map from string to string for including untyped metadata
 
