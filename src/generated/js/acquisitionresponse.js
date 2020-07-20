@@ -188,10 +188,11 @@ proto.redvox_api_m.AcquisitionResponse.serializeBinaryToWriter = function(messag
  * @enum {number}
  */
 proto.redvox_api_m.AcquisitionResponse.ResponseType = {
-  OK: 0,
-  AUTH_ERROR: 1,
-  DATA_ERROR: 2,
-  OTHER_ERROR: 3
+  UNKNOWN: 0,
+  OK: 1,
+  AUTH_ERROR: 2,
+  DATA_ERROR: 3,
+  OTHER_ERROR: 4
 };
 
 /**
