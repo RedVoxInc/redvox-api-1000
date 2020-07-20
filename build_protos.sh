@@ -10,6 +10,11 @@ if ! [[ -x "$(command -v protoc-gen-mypy)" ]]; then
   exit 1
 fi
 
+if ! [[ -x "$(command -v javadoc)" ]]; then
+  echo 'Error: javadoc is not installed.' >&2
+  exit 1
+fi
+
 set -o nounset
 set -o errexit
 set -o xtrace
@@ -27,3 +32,5 @@ protoc  --java_out=${JAVA_OUT}                                  \
         --objc_out=${OBJ_C_OUT}                                 \
         --js_out=${JS_OUT}                                      \
         ${SRC}
+
+javadoc -sourcepath ${JAVA_OUT} -d docs/api/java io.redvox.apis
