@@ -41,3 +41,22 @@ protoc  --java_out=${JAVA_OUT}                                  \
 javadoc -sourcepath ${JAVA_OUT} -d docs/api/java io.redvox.apis
 
 pdoc3 ${PYTHON_OUT}/src/redvox_api_m/redvox_api_m_pb2.py --overwrite --html --html-dir docs/api/python -c show_type_annotations=True
+
+# Here's where we try to keep the rendered API docs up-to-date
+TMP_DIR="/tmp/proto_build"
+rm -rf ${TMP_DIR}
+REPO_ROOT="${TMP_DIR}/redvoxhi.bitbucket.io"
+API_ROOT="${REPO_ROOT}/api-m"
+mkdir -p ${TMP_DIR}
+BACK=$(pwd)
+cd ${TMP_DIR}
+git clone git@bitbucket.org:redvoxhi/redvoxhi.bitbucket.io.git
+cd ${BACK}
+rm -rf ${API_ROOT}/*
+cp -R docs/api/* ${API_ROOT}/.
+cd ${REPO_ROOT}
+git add api-m
+git commit -m"Update API M protobuf docs"
+git push origin master
+cd ${BACK}
+rm -rf ${TMP_DIR}
