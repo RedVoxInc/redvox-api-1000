@@ -140,7 +140,7 @@ message RedvoxPacketM {
             repeated PowerState power_state = 11;
 
             // If a wifi wake lock is being utilized
-            WifiWakeLock wifi_wake_lock = 12;
+            repeated WifiWakeLock wifi_wake_lock = 12;
 
             // A map from string to string for including untyped metadata
             map<string, string> metadata = 13;
