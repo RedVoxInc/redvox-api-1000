@@ -32,15 +32,17 @@ PYTHON_OUT=${OUT}/python
 OBJ_C_OUT=${OUT}/obj_c
 JS_OUT=${OUT}/js
 
+# Compile the protobuf
 protoc  --java_out=${JAVA_OUT}                                  \
         --python_out=${PYTHON_OUT} --mypy_out=${PYTHON_OUT}     \
         --objc_out=${OBJ_C_OUT}                                 \
         --js_out=${JS_OUT}                                      \
         ${SRC}
 
+# Generate API docs
 javadoc -sourcepath ${JAVA_OUT} -d docs/api/java io.redvox.apis
-
 pdoc3 ${PYTHON_OUT}/src/redvox_api_m/redvox_api_m_pb2.py --overwrite --html --html-dir docs/api/python -c show_type_annotations=True
+doxygen Doxyfile
 
 # Produce a stripped down version of the proto
 cat ${SRC} | python3 strip.py > src/redvox_api_m/redvox_api_m.min.proto

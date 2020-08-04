@@ -12,3 +12,4 @@ rm -rf ${OUT}/python/*
 
 rm -rf docs/api/java/*
 rm -rf docs/api/python/*
+rm -rf docs/api/obj_c/*
