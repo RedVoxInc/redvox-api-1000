@@ -20,6 +20,11 @@ if ! [[ -x "$(command -v pdoc3)" ]]; then
   exit 1
 fi
 
+if ! [[ -x "$(command -v doxygen)" ]]; then
+  echo 'Error: doxygen is not installed.' >&2
+  exit 1
+fi
+
 set -o nounset
 set -o errexit
 set -o xtrace
