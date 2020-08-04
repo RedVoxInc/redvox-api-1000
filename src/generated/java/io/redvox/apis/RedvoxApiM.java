@@ -55600,6 +55600,7 @@ public final class RedvoxApiM {
     /**
      * <pre>
      * If set, client to should attempt to resend the file
+     * otherwise, don't resend the file.
      * </pre>
      *
      * <code>bool resend = 4;</code>
@@ -55718,6 +55719,10 @@ public final class RedvoxApiM {
     public enum ResponseType
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Unknown (default) response type
+       * </pre>
+       *
        * <code>UNKNOWN = 0;</code>
        */
       UNKNOWN(0),
@@ -55757,6 +55762,10 @@ public final class RedvoxApiM {
       ;
 
       /**
+       * <pre>
+       * Unknown (default) response type
+       * </pre>
+       *
        * <code>UNKNOWN = 0;</code>
        */
       public static final int UNKNOWN_VALUE = 0;
@@ -55965,6 +55974,7 @@ public final class RedvoxApiM {
     /**
      * <pre>
      * If set, client to should attempt to resend the file
+     * otherwise, don't resend the file.
      * </pre>
      *
      * <code>bool resend = 4;</code>
@@ -56546,6 +56556,7 @@ public final class RedvoxApiM {
       /**
        * <pre>
        * If set, client to should attempt to resend the file
+       * otherwise, don't resend the file.
        * </pre>
        *
        * <code>bool resend = 4;</code>
@@ -56557,6 +56568,7 @@ public final class RedvoxApiM {
       /**
        * <pre>
        * If set, client to should attempt to resend the file
+       * otherwise, don't resend the file.
        * </pre>
        *
        * <code>bool resend = 4;</code>
@@ -56572,6 +56584,7 @@ public final class RedvoxApiM {
       /**
        * <pre>
        * If set, client to should attempt to resend the file
+       * otherwise, don't resend the file.
        * </pre>
        *
        * <code>bool resend = 4;</code>

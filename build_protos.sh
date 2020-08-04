@@ -42,6 +42,9 @@ javadoc -sourcepath ${JAVA_OUT} -d docs/api/java io.redvox.apis
 
 pdoc3 ${PYTHON_OUT}/src/redvox_api_m/redvox_api_m_pb2.py --overwrite --html --html-dir docs/api/python -c show_type_annotations=True
 
+# Produce a stripped down version of the proto
+cat ${SRC} | python3 strip.py > src/redvox_api_m/redvox_api_m.min.proto
+
 # Here's where we try to keep the rendered API docs up-to-date
 TMP_DIR="/tmp/proto_build"
 rm -rf ${TMP_DIR}

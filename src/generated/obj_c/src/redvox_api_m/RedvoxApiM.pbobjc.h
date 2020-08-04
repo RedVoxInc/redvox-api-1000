@@ -458,6 +458,7 @@ typedef GPB_ENUM(AcquisitionResponse_ResponseType) {
    * of the field.
    **/
   AcquisitionResponse_ResponseType_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  /** Unknown (default) response type */
   AcquisitionResponse_ResponseType_Unknown = 0,
 
   /** No issues with packet */
@@ -2009,7 +2010,10 @@ typedef GPB_ENUM(AcquisitionResponse_FieldNumber) {
 /** Any other error details */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *details;
 
-/** If set, client to should attempt to resend the file */
+/**
+ * If set, client to should attempt to resend the file
+ * otherwise, don't resend the file.
+ **/
 @property(nonatomic, readwrite) BOOL resend;
 
 @end

@@ -1,0 +1,414 @@
+/**
+* This file contains the protobuf message definitions for RedVox API 1000 (M) data and network communications.
+*
+* Standards and related documentation for API M is available at:
+*   - https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/README.md
+*/
+syntax = "proto3";
+package redvox_api_m;
+option java_package = "io.redvox.apis";
+message RedvoxPacketM {
+    float api = 1;
+    float sub_api = 2;
+    StationInformation station_information = 3;
+    TimingInformation timing_information = 4;
+    Sensors sensors = 5;
+    repeated EventStream event_streams = 6;
+    map<string, string> metadata = 7;
+    message StationInformation {
+        string id = 1;
+        string uuid = 2;
+        string description = 3;
+        string auth_id = 4;
+        string make = 5;
+        string model = 6;
+        OsType os = 7;
+        string os_version = 8;
+        string app_version = 9;
+        bool is_private = 10;
+        AppSettings app_settings = 11;
+        StationMetrics station_metrics = 12;
+        ServiceUrls service_urls = 13;
+        map<string, string> metadata = 14;
+        enum OsType {
+            UNKNOWN_OS = 0;
+            ANDROID = 1;
+            IOS = 2;
+            OSX = 3;
+            LINUX = 4;
+            WINDOWS = 5;
+        }
+        message ServiceUrls {
+            string auth_server = 1;
+            string synch_server = 2;
+            string acquisition_server = 3;
+            map<string, string> metadata = 4;
+        }
+        message StationMetrics {
+            TimingPayload timestamps = 1;
+            repeated NetworkType network_type = 2;
+            repeated CellServiceState cell_service_state = 3;
+            SamplePayload network_strength = 4;
+            SamplePayload temperature = 5;
+            SamplePayload battery = 6;
+            SamplePayload battery_current = 7;
+            SamplePayload available_ram = 8;
+            SamplePayload available_disk = 9;
+            SamplePayload cpu_utilization = 10;
+            repeated PowerState power_state = 11;
+            repeated WifiWakeLock wifi_wake_lock = 12;
+            map<string, string> metadata = 13;
+            enum NetworkType {
+                UNKNOWN_NETWORK = 0;
+                NO_NETWORK = 1;
+                WIFI = 2;
+                CELLULAR = 3;
+                WIRED = 4;
+            }
+            enum WifiWakeLock {
+                NONE = 0;
+                HIGH_PERF = 1;
+                LOW_LATENCY = 2;
+                OTHER = 3;
+            }
+            enum CellServiceState {
+                UNKNOWN = 0;
+                EMERGENCY = 1;
+                NOMINAL = 2;
+                OUT_OF_SERVICE = 3;
+                POWER_OFF = 4;
+            }
+            enum PowerState {
+                UNKNOWN_POWER_STATE = 0;
+                UNPLUGGED = 1;
+                CHARGING = 2;
+                CHARGED = 3;
+            }
+        }
+        message AppSettings {
+            AudioSamplingRate audio_sampling_rate = 1;
+            AudioSourceTuning audio_source_tuning = 2;
+            repeated InputSensor additional_input_sensors = 3;
+            bool automatically_record = 4;
+            bool launch_at_power_up = 5;
+            string station_id = 6;
+            string station_description = 7;
+            bool push_to_server = 8;
+            bool publish_data_as_private = 9;
+            bool scramble_audio_data = 10;
+            bool provide_backfill = 11;
+            bool remove_sensor_dc_offset = 12;
+            FftOverlap fft_overlap = 13;
+            bool use_custom_time_sync_server = 14;
+            string time_sync_server_url = 15;
+            bool use_custom_data_server = 16;
+            string data_server_url = 17;
+            bool use_custom_auth_server = 18;
+            string auth_server_url = 19;
+            bool auto_delete_data_files = 20;
+            float storage_space_allowance = 21;
+            bool use_sd_card_for_data_storage = 22;
+            bool use_location_services = 23;
+            float use_latitude = 24;
+            float use_longitude = 25;
+            float use_altitude = 26;
+            map<string, string> metadata = 27;
+            enum FftOverlap {
+                UNKNOWN = 0;
+                PERCENT_25 = 1;
+                PERCENT_50 = 2;
+                PERCENT_75 = 3;
+            }
+            enum AudioSamplingRate {
+                UNKNOWN_SAMPLING_RATE = 0;
+                HZ_80 = 1;
+                HZ_800 = 2;
+                HZ_8000 = 3;
+                HZ_16000 = 4;
+                HZ_48000 = 5;
+            }
+            enum AudioSourceTuning {
+                UNKNOWN_TUNING = 0;
+                INFRASOUND_TUNING = 1;
+                LOW_AUDIO_TUNING = 2;
+                AUDIO_TUNING = 3;
+            }
+            enum InputSensor {
+                UNKNOWN_SENSOR = 0;
+                ACCELEROMETER = 1;
+                AMBIENT_TEMPERATURE = 2;
+                AUDIO = 3;
+                COMPRESSED_AUDIO = 4;
+                GRAVITY = 5;
+                GYROSCOPE = 6;
+                IMAGE = 7;
+                LIGHT = 8;
+                LINEAR_ACCELERATION = 9;
+                LOCATION = 10;
+                MAGNETOMETER = 11;
+                ORIENTATION = 12;
+                PRESSURE = 13;
+                PROXIMITY = 14;
+                RELATIVE_HUMIDITY = 15;
+                ROTATION_VECTOR = 16;
+            }
+        }
+    }
+    message TimingInformation {
+        double packet_start_os_timestamp = 1;
+        double packet_start_mach_timestamp = 2;
+        double packet_end_os_timestamp = 3;
+        double packet_end_mach_timestamp = 4;
+        double server_acquisition_arrival_timestamp = 5;
+        double app_start_mach_timestamp = 6;
+        repeated SynchExchange synch_exchanges = 7;
+        float best_latency = 8;
+        float best_offset = 9;
+        float score = 10;
+        TimingScoreMethod score_method = 11;
+        Unit unit = 12;
+        map<string, string> metadata = 13;
+        message SynchExchange {
+            double a1 = 1;
+            double a2 = 2;
+            double a3 = 3;
+            double b1 = 4;
+            double b2 = 5;
+            double b3 = 6;
+            Unit unit = 7;
+            map<string, string> metadata = 8;
+        }
+        enum TimingScoreMethod {
+            UNKNOWN = 0;
+        }
+    }
+    message Sensors {
+        Xyz accelerometer = 1;
+        Single ambient_temperature = 2;
+        Audio audio = 3;
+        CompressedAudio compressed_audio = 4;
+        Xyz gravity = 5;
+        Xyz gyroscope = 6;
+        Image image = 7;
+        Single light = 8;
+        Xyz linear_acceleration = 9;
+        Location location = 10;
+        Xyz magnetometer = 11;
+        Xyz orientation = 12;
+        Single pressure = 13;
+        Single proximity =14;
+        Single relative_humidity = 15;
+        Xyz rotation_vector = 16;
+        map<string, string> metadata = 17;
+        message Audio {
+            string sensor_description = 1;
+            double first_sample_timestamp = 2;
+            float sample_rate = 3;
+            float bits_of_precision = 4;
+            bool is_scrambled = 5;
+            string encoding = 6;
+            SamplePayload samples = 7;
+            map<string, string> metadata = 8;
+        }
+        message CompressedAudio {
+            string sensor_description = 1;
+            double first_sample_timestamp = 2;
+            float sample_rate = 3;
+            bool is_scrambled = 4;
+            bytes audio_bytes = 5;
+            AudioCodec audio_codec = 6;
+            map<string, string> metadata = 7;
+            enum AudioCodec {
+                UNKNOWN = 0;
+                FLAC = 1;
+            }
+        }
+        message Single {
+            string sensor_description = 1;
+            TimingPayload timestamps = 2;
+            SamplePayload samples = 3;
+            map<string, string> metadata = 4;
+        }
+        message Location {
+            string sensor_description = 1;
+            TimingPayload timestamps = 2;
+            DoubleSamplePayload latitude_samples = 3;
+            DoubleSamplePayload longitude_samples = 4;
+            SamplePayload altitude_samples = 5;
+            SamplePayload speed_samples = 6;
+            SamplePayload bearing_samples = 7;
+            SamplePayload horizontal_accuracy_samples = 8;
+            SamplePayload vertical_accuracy_samples = 9;
+            SamplePayload speed_accuracy_samples = 10;
+            SamplePayload bearing_accuracy_samples = 11;
+            BestLocation packet_best_location = 12;
+            BestLocation last_best_location = 13;
+            BestLocation overall_best_location = 14;
+            bool location_permissions_granted = 21;
+            bool location_services_requested = 22;
+            bool location_services_enabled = 23;
+            repeated LocationProvider location_provider = 24;
+            map<string, string> metadata = 25;
+            message BestLocation {
+                BestTimestamp latitude_longitude_timestamp = 1;
+                BestTimestamp altitude_timestamp = 2;
+                BestTimestamp speed_timestamp = 3;
+                BestTimestamp bearing_timestamp = 4;
+                double latitude = 5;
+                double longitude = 6;
+                float altitude = 7;
+                float speed = 8;
+                float bearing = 9;
+                float score = 10;
+                LocationScoreMethod method = 11;
+                map<string, string> metadata = 12;
+                message BestTimestamp {
+                    double mach = 1;
+                    double gps = 2;
+                }
+                enum LocationScoreMethod {
+                    UNKNOWN_METHOD = 0;
+                }
+            }
+            enum LocationProvider {
+                UNKNOWN = 0;
+                NONE = 1;
+                USER = 2;
+                GPS = 3;
+                NETWORK = 4;
+            }
+        }
+        message Xyz {
+            string sensor_description = 1;
+            TimingPayload timestamps = 2;
+            SamplePayload x_samples = 3;
+            SamplePayload y_samples = 4;
+            SamplePayload z_samples = 5;
+            map<string, string> metadata = 6;
+        }
+        message Image {
+            string sensor_description = 1;
+            TimingPayload timestamps = 2;
+            repeated bytes samples = 3;
+            ImageCodec image_codec = 4;
+            map<string, string> metadata = 5;
+            enum ImageCodec {
+                UNKNOWN = 0;
+                PNG = 1;
+                JPG = 2;
+                BMP = 3;
+            }
+        }
+    }
+    message EventStream {
+        string name = 1;
+        repeated Event events = 2;
+        map<string, string> metadata = 3;
+        message Event {
+            double timestamp = 1;
+            string description = 2;
+            map<string, string> string_payload = 3;
+            map<string, double> numeric_payload = 4;
+            map<string, bool> boolean_payload = 5;
+            map<string, bytes> byte_payload = 6;
+            map<string, string> metadata = 7;
+        }
+    }
+    message SamplePayload {
+        Unit unit = 1;
+        repeated float values = 2;
+        SummaryStatistics value_statistics = 3;
+        map<string, string> metadata = 4;
+    }
+    message DoubleSamplePayload {
+        Unit unit = 1;
+        repeated double values = 2;
+        SummaryStatistics value_statistics = 3;
+        map<string, string> metadata = 4;
+    }
+    message TimingPayload {
+        Unit unit = 1;
+        repeated double timestamps = 2;
+        SummaryStatistics timestamp_statistics = 3;
+        float mean_sample_rate = 4;
+        float stdev_sample_rate = 5;
+        map<string, string> metadata = 6;
+    }
+    enum Unit {
+        UNKNOWN = 0;
+        METERS_PER_SECOND_SQUARED = 1;
+        KILOPASCAL = 2;
+        RADIANS_PER_SECOND = 3;
+        DECIMAL_DEGREES = 4;
+        METERS = 5;
+        METERS_PER_SECOND = 6;
+        MICROTESLA = 7;
+        LSB_PLUS_MINUS_COUNTS = 8;
+        MICROSECONDS_SINCE_UNIX_EPOCH = 9;
+        DECIBEL = 10;
+        DEGREES_CELSIUS = 11;
+        BYTE = 12;
+        PERCENTAGE = 13;
+        RADIANS = 14;
+        MICROAMPERES = 15;
+        CENTIMETERS = 16;
+        NORMALIZED_COUNTS = 17;
+        LUX = 18;
+        UNITLESS = 19;
+        PCM = 20;
+    }
+    message SummaryStatistics {
+        float count = 1;
+        float mean = 2;
+        float standard_deviation = 3;
+        float min = 4;
+        float max = 5;
+        float range = 6;
+        map<string, string> metadata = 7;
+    }
+}
+message EncryptedRedvoxPacketM {
+    bytes header = 1;
+    bytes packet = 2;
+    message Header {
+        string station_id = 1;
+        string station_uuid = 2;
+        string auth_token = 3;
+        string firebase_token = 4;
+        string auth_email = 5;
+    }
+}
+message AcquisitionRequest {
+    string auth_token = 1;
+    string firebase_token = 2;
+    int64 checksum = 3;
+    bool is_encrypted = 4;
+    bytes payload = 5;
+}
+message AcquisitionResponse {
+    ResponseType response_type = 1;
+    int64 checksum = 2;
+    string details = 3;
+    bool resend = 4;
+    enum ResponseType {
+        UNKNOWN = 0;
+        OK = 1;
+        AUTH_ERROR = 2;
+        DATA_ERROR = 3;
+        OTHER_ERROR = 4;
+    }
+}
+message SynchRequest {
+    string station_id = 1;
+    string station_uuid = 2;
+    uint32 seq_id = 3;
+    uint32 sub_seq_id = 4;
+}
+message SynchResponse {
+    string station_id = 1;
+    string station_uuid = 2;
+    uint32 seq_id = 3;
+    uint32 sub_seq_id = 4;
+    uint64 recv_ts_us = 5;
+    uint64 send_ts_us = 6;
+}
