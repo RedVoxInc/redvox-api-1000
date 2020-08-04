@@ -25,6 +25,11 @@ if ! [[ -x "$(command -v doxygen)" ]]; then
   exit 1
 fi
 
+if ! [[ -x "$(command -v git)" ]]; then
+  echo 'Error: git is not installed.' >&2
+  exit 1
+fi
+
 set -o nounset
 set -o errexit
 set -o xtrace
