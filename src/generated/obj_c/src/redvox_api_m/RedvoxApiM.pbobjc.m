@@ -2699,11 +2699,19 @@ BOOL RedvoxPacketM_Sensors_Location_LocationProvider_IsValidValue(int32_t value_
 @dynamic altitudeUnit;
 @dynamic speedUnit;
 @dynamic bearingUnit;
+@dynamic verticalAccuracyUnit;
+@dynamic horizontalAccuracyUnit;
+@dynamic speedAccuracyUnit;
+@dynamic bearingAccuracyUnit;
 @dynamic latitude;
 @dynamic longitude;
 @dynamic altitude;
 @dynamic speed;
 @dynamic bearing;
+@dynamic verticalAccuracy;
+@dynamic horizontalAccuracy;
+@dynamic speedAccuracy;
+@dynamic bearingAccuracy;
 @dynamic score;
 @dynamic method;
 @dynamic metadata, metadata_Count;
@@ -2714,9 +2722,17 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
   RedvoxPacketM_Unit altitudeUnit;
   RedvoxPacketM_Unit speedUnit;
   RedvoxPacketM_Unit bearingUnit;
+  RedvoxPacketM_Unit verticalAccuracyUnit;
+  RedvoxPacketM_Unit horizontalAccuracyUnit;
+  RedvoxPacketM_Unit speedAccuracyUnit;
+  RedvoxPacketM_Unit bearingAccuracyUnit;
   float altitude;
   float speed;
   float bearing;
+  float verticalAccuracy;
+  float horizontalAccuracy;
+  float speedAccuracy;
+  float bearingAccuracy;
   float score;
   RedvoxPacketM_Sensors_Location_BestLocation_LocationScoreMethod method;
   RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp *latitudeLongitudeTimestamp;
@@ -2807,10 +2823,46 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .dataType = GPBDataTypeEnum,
       },
       {
+        .name = "verticalAccuracyUnit",
+        .dataTypeSpecific.enumDescFunc = RedvoxPacketM_Unit_EnumDescriptor,
+        .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_VerticalAccuracyUnit,
+        .hasIndex = 8,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, verticalAccuracyUnit),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "horizontalAccuracyUnit",
+        .dataTypeSpecific.enumDescFunc = RedvoxPacketM_Unit_EnumDescriptor,
+        .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_HorizontalAccuracyUnit,
+        .hasIndex = 9,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, horizontalAccuracyUnit),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "speedAccuracyUnit",
+        .dataTypeSpecific.enumDescFunc = RedvoxPacketM_Unit_EnumDescriptor,
+        .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedAccuracyUnit,
+        .hasIndex = 10,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, speedAccuracyUnit),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "bearingAccuracyUnit",
+        .dataTypeSpecific.enumDescFunc = RedvoxPacketM_Unit_EnumDescriptor,
+        .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingAccuracyUnit,
+        .hasIndex = 11,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, bearingAccuracyUnit),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
         .name = "latitude",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Latitude,
-        .hasIndex = 8,
+        .hasIndex = 12,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, latitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -2819,7 +2871,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .name = "longitude",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Longitude,
-        .hasIndex = 9,
+        .hasIndex = 13,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, longitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -2828,7 +2880,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .name = "altitude",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Altitude,
-        .hasIndex = 10,
+        .hasIndex = 14,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, altitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
@@ -2837,7 +2889,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .name = "speed",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Speed,
-        .hasIndex = 11,
+        .hasIndex = 15,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, speed),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
@@ -2846,8 +2898,44 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .name = "bearing",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Bearing,
-        .hasIndex = 12,
+        .hasIndex = 16,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, bearing),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
+        .name = "verticalAccuracy",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_VerticalAccuracy,
+        .hasIndex = 17,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, verticalAccuracy),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
+        .name = "horizontalAccuracy",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_HorizontalAccuracy,
+        .hasIndex = 18,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, horizontalAccuracy),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
+        .name = "speedAccuracy",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedAccuracy,
+        .hasIndex = 19,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, speedAccuracy),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
+        .name = "bearingAccuracy",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingAccuracy,
+        .hasIndex = 20,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, bearingAccuracy),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
       },
@@ -2855,7 +2943,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .name = "score",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Score,
-        .hasIndex = 13,
+        .hasIndex = 21,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, score),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
@@ -2864,7 +2952,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .name = "method",
         .dataTypeSpecific.enumDescFunc = RedvoxPacketM_Sensors_Location_BestLocation_LocationScoreMethod_EnumDescriptor,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Method,
-        .hasIndex = 14,
+        .hasIndex = 22,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, method),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
@@ -2943,6 +3031,54 @@ int32_t RedvoxPacketM_Sensors_Location_BestLocation_BearingUnit_RawValue(RedvoxP
 void SetRedvoxPacketM_Sensors_Location_BestLocation_BearingUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingUnit];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
+
+int32_t RedvoxPacketM_Sensors_Location_BestLocation_VerticalAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message) {
+  GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_VerticalAccuracyUnit];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetRedvoxPacketM_Sensors_Location_BestLocation_VerticalAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_VerticalAccuracyUnit];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
+
+int32_t RedvoxPacketM_Sensors_Location_BestLocation_HorizontalAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message) {
+  GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_HorizontalAccuracyUnit];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetRedvoxPacketM_Sensors_Location_BestLocation_HorizontalAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_HorizontalAccuracyUnit];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
+
+int32_t RedvoxPacketM_Sensors_Location_BestLocation_SpeedAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message) {
+  GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedAccuracyUnit];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetRedvoxPacketM_Sensors_Location_BestLocation_SpeedAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedAccuracyUnit];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
+
+int32_t RedvoxPacketM_Sensors_Location_BestLocation_BearingAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message) {
+  GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingAccuracyUnit];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetRedvoxPacketM_Sensors_Location_BestLocation_BearingAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingAccuracyUnit];
   GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
 }
 

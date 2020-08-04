@@ -25755,10 +25755,86 @@ public final class RedvoxApiM {
 
           /**
            * <pre>
+           * Unit used for vertical accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit vertical_accuracy_unit = 9;</code>
+           * @return The enum numeric value on the wire for verticalAccuracyUnit.
+           */
+          int getVerticalAccuracyUnitValue();
+          /**
+           * <pre>
+           * Unit used for vertical accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit vertical_accuracy_unit = 9;</code>
+           * @return The verticalAccuracyUnit.
+           */
+          io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getVerticalAccuracyUnit();
+
+          /**
+           * <pre>
+           * Unit used for horizontal accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit horizontal_accuracy_unit = 10;</code>
+           * @return The enum numeric value on the wire for horizontalAccuracyUnit.
+           */
+          int getHorizontalAccuracyUnitValue();
+          /**
+           * <pre>
+           * Unit used for horizontal accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit horizontal_accuracy_unit = 10;</code>
+           * @return The horizontalAccuracyUnit.
+           */
+          io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getHorizontalAccuracyUnit();
+
+          /**
+           * <pre>
+           * Unit used for speed accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit speed_accuracy_unit = 11;</code>
+           * @return The enum numeric value on the wire for speedAccuracyUnit.
+           */
+          int getSpeedAccuracyUnitValue();
+          /**
+           * <pre>
+           * Unit used for speed accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit speed_accuracy_unit = 11;</code>
+           * @return The speedAccuracyUnit.
+           */
+          io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getSpeedAccuracyUnit();
+
+          /**
+           * <pre>
+           * Unit used for bearing accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_accuracy_unit = 12;</code>
+           * @return The enum numeric value on the wire for bearingAccuracyUnit.
+           */
+          int getBearingAccuracyUnitValue();
+          /**
+           * <pre>
+           * Unit used for bearing accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_accuracy_unit = 12;</code>
+           * @return The bearingAccuracyUnit.
+           */
+          io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getBearingAccuracyUnit();
+
+          /**
+           * <pre>
            * The best latitude
            * </pre>
            *
-           * <code>double latitude = 9;</code>
+           * <code>double latitude = 13;</code>
            * @return The latitude.
            */
           double getLatitude();
@@ -25768,7 +25844,7 @@ public final class RedvoxApiM {
            * The best longitude
            * </pre>
            *
-           * <code>double longitude = 10;</code>
+           * <code>double longitude = 14;</code>
            * @return The longitude.
            */
           double getLongitude();
@@ -25778,7 +25854,7 @@ public final class RedvoxApiM {
            * The best altitude
            * </pre>
            *
-           * <code>float altitude = 11;</code>
+           * <code>float altitude = 15;</code>
            * @return The altitude.
            */
           float getAltitude();
@@ -25788,7 +25864,7 @@ public final class RedvoxApiM {
            * The best speed
            * </pre>
            *
-           * <code>float speed = 12;</code>
+           * <code>float speed = 16;</code>
            * @return The speed.
            */
           float getSpeed();
@@ -25798,17 +25874,57 @@ public final class RedvoxApiM {
            * The best bearing
            * </pre>
            *
-           * <code>float bearing = 13;</code>
+           * <code>float bearing = 17;</code>
            * @return The bearing.
            */
           float getBearing();
 
           /**
            * <pre>
+           * Vertical accuracy
+           * </pre>
+           *
+           * <code>float vertical_accuracy = 18;</code>
+           * @return The verticalAccuracy.
+           */
+          float getVerticalAccuracy();
+
+          /**
+           * <pre>
+           * Horizontal accuracy
+           * </pre>
+           *
+           * <code>float horizontal_accuracy = 19;</code>
+           * @return The horizontalAccuracy.
+           */
+          float getHorizontalAccuracy();
+
+          /**
+           * <pre>
+           * Speed accuracy
+           * </pre>
+           *
+           * <code>float speed_accuracy = 20;</code>
+           * @return The speedAccuracy.
+           */
+          float getSpeedAccuracy();
+
+          /**
+           * <pre>
+           * Bearing accuracy
+           * </pre>
+           *
+           * <code>float bearing_accuracy = 21;</code>
+           * @return The bearingAccuracy.
+           */
+          float getBearingAccuracy();
+
+          /**
+           * <pre>
            * The best location score
            * </pre>
            *
-           * <code>float score = 14;</code>
+           * <code>float score = 22;</code>
            * @return The score.
            */
           float getScore();
@@ -25818,7 +25934,7 @@ public final class RedvoxApiM {
            * Method used to derive the location score
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 23;</code>
            * @return The enum numeric value on the wire for method.
            */
           int getMethodValue();
@@ -25827,7 +25943,7 @@ public final class RedvoxApiM {
            * Method used to derive the location score
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 23;</code>
            * @return The method.
            */
           io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod getMethod();
@@ -25837,7 +25953,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 16;</code>
+           * <code>map&lt;string, string&gt; metadata = 24;</code>
            */
           int getMetadataCount();
           /**
@@ -25845,7 +25961,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 16;</code>
+           * <code>map&lt;string, string&gt; metadata = 24;</code>
            */
           boolean containsMetadata(
               java.lang.String key);
@@ -25860,7 +25976,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 16;</code>
+           * <code>map&lt;string, string&gt; metadata = 24;</code>
            */
           java.util.Map<java.lang.String, java.lang.String>
           getMetadataMap();
@@ -25869,7 +25985,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 16;</code>
+           * <code>map&lt;string, string&gt; metadata = 24;</code>
            */
 
           java.lang.String getMetadataOrDefault(
@@ -25880,7 +25996,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 16;</code>
+           * <code>map&lt;string, string&gt; metadata = 24;</code>
            */
 
           java.lang.String getMetadataOrThrow(
@@ -25903,6 +26019,10 @@ public final class RedvoxApiM {
             altitudeUnit_ = 0;
             speedUnit_ = 0;
             bearingUnit_ = 0;
+            verticalAccuracyUnit_ = 0;
+            horizontalAccuracyUnit_ = 0;
+            speedAccuracyUnit_ = 0;
+            bearingAccuracyUnit_ = 0;
             method_ = 0;
           }
 
@@ -26013,43 +26133,87 @@ public final class RedvoxApiM {
                     bearingUnit_ = rawValue;
                     break;
                   }
-                  case 73: {
+                  case 72: {
+                    int rawValue = input.readEnum();
+
+                    verticalAccuracyUnit_ = rawValue;
+                    break;
+                  }
+                  case 80: {
+                    int rawValue = input.readEnum();
+
+                    horizontalAccuracyUnit_ = rawValue;
+                    break;
+                  }
+                  case 88: {
+                    int rawValue = input.readEnum();
+
+                    speedAccuracyUnit_ = rawValue;
+                    break;
+                  }
+                  case 96: {
+                    int rawValue = input.readEnum();
+
+                    bearingAccuracyUnit_ = rawValue;
+                    break;
+                  }
+                  case 105: {
 
                     latitude_ = input.readDouble();
                     break;
                   }
-                  case 81: {
+                  case 113: {
 
                     longitude_ = input.readDouble();
                     break;
                   }
-                  case 93: {
+                  case 125: {
 
                     altitude_ = input.readFloat();
                     break;
                   }
-                  case 101: {
+                  case 133: {
 
                     speed_ = input.readFloat();
                     break;
                   }
-                  case 109: {
+                  case 141: {
 
                     bearing_ = input.readFloat();
                     break;
                   }
-                  case 117: {
+                  case 149: {
+
+                    verticalAccuracy_ = input.readFloat();
+                    break;
+                  }
+                  case 157: {
+
+                    horizontalAccuracy_ = input.readFloat();
+                    break;
+                  }
+                  case 165: {
+
+                    speedAccuracy_ = input.readFloat();
+                    break;
+                  }
+                  case 173: {
+
+                    bearingAccuracy_ = input.readFloat();
+                    break;
+                  }
+                  case 181: {
 
                     score_ = input.readFloat();
                     break;
                   }
-                  case 120: {
+                  case 184: {
                     int rawValue = input.readEnum();
 
                     method_ = rawValue;
                     break;
                   }
-                  case 130: {
+                  case 194: {
                     if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                       metadata_ = com.google.protobuf.MapField.newMapField(
                           MetadataDefaultEntryHolder.defaultEntry);
@@ -26091,7 +26255,7 @@ public final class RedvoxApiM {
           protected com.google.protobuf.MapField internalGetMapField(
               int number) {
             switch (number) {
-              case 16:
+              case 24:
                 return internalGetMetadata();
               default:
                 throw new RuntimeException(
@@ -27574,98 +27738,262 @@ public final class RedvoxApiM {
             return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
           }
 
-          public static final int LATITUDE_FIELD_NUMBER = 9;
+          public static final int VERTICAL_ACCURACY_UNIT_FIELD_NUMBER = 9;
+          private int verticalAccuracyUnit_;
+          /**
+           * <pre>
+           * Unit used for vertical accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit vertical_accuracy_unit = 9;</code>
+           * @return The enum numeric value on the wire for verticalAccuracyUnit.
+           */
+          public int getVerticalAccuracyUnitValue() {
+            return verticalAccuracyUnit_;
+          }
+          /**
+           * <pre>
+           * Unit used for vertical accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit vertical_accuracy_unit = 9;</code>
+           * @return The verticalAccuracyUnit.
+           */
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getVerticalAccuracyUnit() {
+            @SuppressWarnings("deprecation")
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(verticalAccuracyUnit_);
+            return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+          }
+
+          public static final int HORIZONTAL_ACCURACY_UNIT_FIELD_NUMBER = 10;
+          private int horizontalAccuracyUnit_;
+          /**
+           * <pre>
+           * Unit used for horizontal accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit horizontal_accuracy_unit = 10;</code>
+           * @return The enum numeric value on the wire for horizontalAccuracyUnit.
+           */
+          public int getHorizontalAccuracyUnitValue() {
+            return horizontalAccuracyUnit_;
+          }
+          /**
+           * <pre>
+           * Unit used for horizontal accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit horizontal_accuracy_unit = 10;</code>
+           * @return The horizontalAccuracyUnit.
+           */
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getHorizontalAccuracyUnit() {
+            @SuppressWarnings("deprecation")
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(horizontalAccuracyUnit_);
+            return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+          }
+
+          public static final int SPEED_ACCURACY_UNIT_FIELD_NUMBER = 11;
+          private int speedAccuracyUnit_;
+          /**
+           * <pre>
+           * Unit used for speed accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit speed_accuracy_unit = 11;</code>
+           * @return The enum numeric value on the wire for speedAccuracyUnit.
+           */
+          public int getSpeedAccuracyUnitValue() {
+            return speedAccuracyUnit_;
+          }
+          /**
+           * <pre>
+           * Unit used for speed accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit speed_accuracy_unit = 11;</code>
+           * @return The speedAccuracyUnit.
+           */
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getSpeedAccuracyUnit() {
+            @SuppressWarnings("deprecation")
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(speedAccuracyUnit_);
+            return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+          }
+
+          public static final int BEARING_ACCURACY_UNIT_FIELD_NUMBER = 12;
+          private int bearingAccuracyUnit_;
+          /**
+           * <pre>
+           * Unit used for bearing accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_accuracy_unit = 12;</code>
+           * @return The enum numeric value on the wire for bearingAccuracyUnit.
+           */
+          public int getBearingAccuracyUnitValue() {
+            return bearingAccuracyUnit_;
+          }
+          /**
+           * <pre>
+           * Unit used for bearing accuracy
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_accuracy_unit = 12;</code>
+           * @return The bearingAccuracyUnit.
+           */
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getBearingAccuracyUnit() {
+            @SuppressWarnings("deprecation")
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(bearingAccuracyUnit_);
+            return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+          }
+
+          public static final int LATITUDE_FIELD_NUMBER = 13;
           private double latitude_;
           /**
            * <pre>
            * The best latitude
            * </pre>
            *
-           * <code>double latitude = 9;</code>
+           * <code>double latitude = 13;</code>
            * @return The latitude.
            */
           public double getLatitude() {
             return latitude_;
           }
 
-          public static final int LONGITUDE_FIELD_NUMBER = 10;
+          public static final int LONGITUDE_FIELD_NUMBER = 14;
           private double longitude_;
           /**
            * <pre>
            * The best longitude
            * </pre>
            *
-           * <code>double longitude = 10;</code>
+           * <code>double longitude = 14;</code>
            * @return The longitude.
            */
           public double getLongitude() {
             return longitude_;
           }
 
-          public static final int ALTITUDE_FIELD_NUMBER = 11;
+          public static final int ALTITUDE_FIELD_NUMBER = 15;
           private float altitude_;
           /**
            * <pre>
            * The best altitude
            * </pre>
            *
-           * <code>float altitude = 11;</code>
+           * <code>float altitude = 15;</code>
            * @return The altitude.
            */
           public float getAltitude() {
             return altitude_;
           }
 
-          public static final int SPEED_FIELD_NUMBER = 12;
+          public static final int SPEED_FIELD_NUMBER = 16;
           private float speed_;
           /**
            * <pre>
            * The best speed
            * </pre>
            *
-           * <code>float speed = 12;</code>
+           * <code>float speed = 16;</code>
            * @return The speed.
            */
           public float getSpeed() {
             return speed_;
           }
 
-          public static final int BEARING_FIELD_NUMBER = 13;
+          public static final int BEARING_FIELD_NUMBER = 17;
           private float bearing_;
           /**
            * <pre>
            * The best bearing
            * </pre>
            *
-           * <code>float bearing = 13;</code>
+           * <code>float bearing = 17;</code>
            * @return The bearing.
            */
           public float getBearing() {
             return bearing_;
           }
 
-          public static final int SCORE_FIELD_NUMBER = 14;
+          public static final int VERTICAL_ACCURACY_FIELD_NUMBER = 18;
+          private float verticalAccuracy_;
+          /**
+           * <pre>
+           * Vertical accuracy
+           * </pre>
+           *
+           * <code>float vertical_accuracy = 18;</code>
+           * @return The verticalAccuracy.
+           */
+          public float getVerticalAccuracy() {
+            return verticalAccuracy_;
+          }
+
+          public static final int HORIZONTAL_ACCURACY_FIELD_NUMBER = 19;
+          private float horizontalAccuracy_;
+          /**
+           * <pre>
+           * Horizontal accuracy
+           * </pre>
+           *
+           * <code>float horizontal_accuracy = 19;</code>
+           * @return The horizontalAccuracy.
+           */
+          public float getHorizontalAccuracy() {
+            return horizontalAccuracy_;
+          }
+
+          public static final int SPEED_ACCURACY_FIELD_NUMBER = 20;
+          private float speedAccuracy_;
+          /**
+           * <pre>
+           * Speed accuracy
+           * </pre>
+           *
+           * <code>float speed_accuracy = 20;</code>
+           * @return The speedAccuracy.
+           */
+          public float getSpeedAccuracy() {
+            return speedAccuracy_;
+          }
+
+          public static final int BEARING_ACCURACY_FIELD_NUMBER = 21;
+          private float bearingAccuracy_;
+          /**
+           * <pre>
+           * Bearing accuracy
+           * </pre>
+           *
+           * <code>float bearing_accuracy = 21;</code>
+           * @return The bearingAccuracy.
+           */
+          public float getBearingAccuracy() {
+            return bearingAccuracy_;
+          }
+
+          public static final int SCORE_FIELD_NUMBER = 22;
           private float score_;
           /**
            * <pre>
            * The best location score
            * </pre>
            *
-           * <code>float score = 14;</code>
+           * <code>float score = 22;</code>
            * @return The score.
            */
           public float getScore() {
             return score_;
           }
 
-          public static final int METHOD_FIELD_NUMBER = 15;
+          public static final int METHOD_FIELD_NUMBER = 23;
           private int method_;
           /**
            * <pre>
            * Method used to derive the location score
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 23;</code>
            * @return The enum numeric value on the wire for method.
            */
           public int getMethodValue() {
@@ -27676,7 +28004,7 @@ public final class RedvoxApiM {
            * Method used to derive the location score
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 23;</code>
            * @return The method.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod getMethod() {
@@ -27685,7 +28013,7 @@ public final class RedvoxApiM {
             return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod.UNRECOGNIZED : result;
           }
 
-          public static final int METADATA_FIELD_NUMBER = 16;
+          public static final int METADATA_FIELD_NUMBER = 24;
           private static final class MetadataDefaultEntryHolder {
             static final com.google.protobuf.MapEntry<
                 java.lang.String, java.lang.String> defaultEntry =
@@ -27716,7 +28044,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 16;</code>
+           * <code>map&lt;string, string&gt; metadata = 24;</code>
            */
 
           public boolean containsMetadata(
@@ -27736,7 +28064,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 16;</code>
+           * <code>map&lt;string, string&gt; metadata = 24;</code>
            */
 
           public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -27747,7 +28075,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 16;</code>
+           * <code>map&lt;string, string&gt; metadata = 24;</code>
            */
 
           public java.lang.String getMetadataOrDefault(
@@ -27763,7 +28091,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 16;</code>
+           * <code>map&lt;string, string&gt; metadata = 24;</code>
            */
 
           public java.lang.String getMetadataOrThrow(
@@ -27815,33 +28143,57 @@ public final class RedvoxApiM {
             if (bearingUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
               output.writeEnum(8, bearingUnit_);
             }
+            if (verticalAccuracyUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              output.writeEnum(9, verticalAccuracyUnit_);
+            }
+            if (horizontalAccuracyUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              output.writeEnum(10, horizontalAccuracyUnit_);
+            }
+            if (speedAccuracyUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              output.writeEnum(11, speedAccuracyUnit_);
+            }
+            if (bearingAccuracyUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              output.writeEnum(12, bearingAccuracyUnit_);
+            }
             if (latitude_ != 0D) {
-              output.writeDouble(9, latitude_);
+              output.writeDouble(13, latitude_);
             }
             if (longitude_ != 0D) {
-              output.writeDouble(10, longitude_);
+              output.writeDouble(14, longitude_);
             }
             if (altitude_ != 0F) {
-              output.writeFloat(11, altitude_);
+              output.writeFloat(15, altitude_);
             }
             if (speed_ != 0F) {
-              output.writeFloat(12, speed_);
+              output.writeFloat(16, speed_);
             }
             if (bearing_ != 0F) {
-              output.writeFloat(13, bearing_);
+              output.writeFloat(17, bearing_);
+            }
+            if (verticalAccuracy_ != 0F) {
+              output.writeFloat(18, verticalAccuracy_);
+            }
+            if (horizontalAccuracy_ != 0F) {
+              output.writeFloat(19, horizontalAccuracy_);
+            }
+            if (speedAccuracy_ != 0F) {
+              output.writeFloat(20, speedAccuracy_);
+            }
+            if (bearingAccuracy_ != 0F) {
+              output.writeFloat(21, bearingAccuracy_);
             }
             if (score_ != 0F) {
-              output.writeFloat(14, score_);
+              output.writeFloat(22, score_);
             }
             if (method_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod.UNKNOWN_METHOD.getNumber()) {
-              output.writeEnum(15, method_);
+              output.writeEnum(23, method_);
             }
             com.google.protobuf.GeneratedMessageV3
               .serializeStringMapTo(
                 output,
                 internalGetMetadata(),
                 MetadataDefaultEntryHolder.defaultEntry,
-                16);
+                24);
             unknownFields.writeTo(output);
           }
 
@@ -27883,33 +28235,65 @@ public final class RedvoxApiM {
               size += com.google.protobuf.CodedOutputStream
                 .computeEnumSize(8, bearingUnit_);
             }
+            if (verticalAccuracyUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeEnumSize(9, verticalAccuracyUnit_);
+            }
+            if (horizontalAccuracyUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeEnumSize(10, horizontalAccuracyUnit_);
+            }
+            if (speedAccuracyUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeEnumSize(11, speedAccuracyUnit_);
+            }
+            if (bearingAccuracyUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeEnumSize(12, bearingAccuracyUnit_);
+            }
             if (latitude_ != 0D) {
               size += com.google.protobuf.CodedOutputStream
-                .computeDoubleSize(9, latitude_);
+                .computeDoubleSize(13, latitude_);
             }
             if (longitude_ != 0D) {
               size += com.google.protobuf.CodedOutputStream
-                .computeDoubleSize(10, longitude_);
+                .computeDoubleSize(14, longitude_);
             }
             if (altitude_ != 0F) {
               size += com.google.protobuf.CodedOutputStream
-                .computeFloatSize(11, altitude_);
+                .computeFloatSize(15, altitude_);
             }
             if (speed_ != 0F) {
               size += com.google.protobuf.CodedOutputStream
-                .computeFloatSize(12, speed_);
+                .computeFloatSize(16, speed_);
             }
             if (bearing_ != 0F) {
               size += com.google.protobuf.CodedOutputStream
-                .computeFloatSize(13, bearing_);
+                .computeFloatSize(17, bearing_);
+            }
+            if (verticalAccuracy_ != 0F) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeFloatSize(18, verticalAccuracy_);
+            }
+            if (horizontalAccuracy_ != 0F) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeFloatSize(19, horizontalAccuracy_);
+            }
+            if (speedAccuracy_ != 0F) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeFloatSize(20, speedAccuracy_);
+            }
+            if (bearingAccuracy_ != 0F) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeFloatSize(21, bearingAccuracy_);
             }
             if (score_ != 0F) {
               size += com.google.protobuf.CodedOutputStream
-                .computeFloatSize(14, score_);
+                .computeFloatSize(22, score_);
             }
             if (method_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod.UNKNOWN_METHOD.getNumber()) {
               size += com.google.protobuf.CodedOutputStream
-                .computeEnumSize(15, method_);
+                .computeEnumSize(23, method_);
             }
             for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
                  : internalGetMetadata().getMap().entrySet()) {
@@ -27919,7 +28303,7 @@ public final class RedvoxApiM {
                   .setValue(entry.getValue())
                   .build();
               size += com.google.protobuf.CodedOutputStream
-                  .computeMessageSize(16, metadata__);
+                  .computeMessageSize(24, metadata__);
             }
             size += unknownFields.getSerializedSize();
             memoizedSize = size;
@@ -27960,6 +28344,10 @@ public final class RedvoxApiM {
             if (altitudeUnit_ != other.altitudeUnit_) return false;
             if (speedUnit_ != other.speedUnit_) return false;
             if (bearingUnit_ != other.bearingUnit_) return false;
+            if (verticalAccuracyUnit_ != other.verticalAccuracyUnit_) return false;
+            if (horizontalAccuracyUnit_ != other.horizontalAccuracyUnit_) return false;
+            if (speedAccuracyUnit_ != other.speedAccuracyUnit_) return false;
+            if (bearingAccuracyUnit_ != other.bearingAccuracyUnit_) return false;
             if (java.lang.Double.doubleToLongBits(getLatitude())
                 != java.lang.Double.doubleToLongBits(
                     other.getLatitude())) return false;
@@ -27975,6 +28363,18 @@ public final class RedvoxApiM {
             if (java.lang.Float.floatToIntBits(getBearing())
                 != java.lang.Float.floatToIntBits(
                     other.getBearing())) return false;
+            if (java.lang.Float.floatToIntBits(getVerticalAccuracy())
+                != java.lang.Float.floatToIntBits(
+                    other.getVerticalAccuracy())) return false;
+            if (java.lang.Float.floatToIntBits(getHorizontalAccuracy())
+                != java.lang.Float.floatToIntBits(
+                    other.getHorizontalAccuracy())) return false;
+            if (java.lang.Float.floatToIntBits(getSpeedAccuracy())
+                != java.lang.Float.floatToIntBits(
+                    other.getSpeedAccuracy())) return false;
+            if (java.lang.Float.floatToIntBits(getBearingAccuracy())
+                != java.lang.Float.floatToIntBits(
+                    other.getBearingAccuracy())) return false;
             if (java.lang.Float.floatToIntBits(getScore())
                 != java.lang.Float.floatToIntBits(
                     other.getScore())) return false;
@@ -28016,6 +28416,14 @@ public final class RedvoxApiM {
             hash = (53 * hash) + speedUnit_;
             hash = (37 * hash) + BEARING_UNIT_FIELD_NUMBER;
             hash = (53 * hash) + bearingUnit_;
+            hash = (37 * hash) + VERTICAL_ACCURACY_UNIT_FIELD_NUMBER;
+            hash = (53 * hash) + verticalAccuracyUnit_;
+            hash = (37 * hash) + HORIZONTAL_ACCURACY_UNIT_FIELD_NUMBER;
+            hash = (53 * hash) + horizontalAccuracyUnit_;
+            hash = (37 * hash) + SPEED_ACCURACY_UNIT_FIELD_NUMBER;
+            hash = (53 * hash) + speedAccuracyUnit_;
+            hash = (37 * hash) + BEARING_ACCURACY_UNIT_FIELD_NUMBER;
+            hash = (53 * hash) + bearingAccuracyUnit_;
             hash = (37 * hash) + LATITUDE_FIELD_NUMBER;
             hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
                 java.lang.Double.doubleToLongBits(getLatitude()));
@@ -28031,6 +28439,18 @@ public final class RedvoxApiM {
             hash = (37 * hash) + BEARING_FIELD_NUMBER;
             hash = (53 * hash) + java.lang.Float.floatToIntBits(
                 getBearing());
+            hash = (37 * hash) + VERTICAL_ACCURACY_FIELD_NUMBER;
+            hash = (53 * hash) + java.lang.Float.floatToIntBits(
+                getVerticalAccuracy());
+            hash = (37 * hash) + HORIZONTAL_ACCURACY_FIELD_NUMBER;
+            hash = (53 * hash) + java.lang.Float.floatToIntBits(
+                getHorizontalAccuracy());
+            hash = (37 * hash) + SPEED_ACCURACY_FIELD_NUMBER;
+            hash = (53 * hash) + java.lang.Float.floatToIntBits(
+                getSpeedAccuracy());
+            hash = (37 * hash) + BEARING_ACCURACY_FIELD_NUMBER;
+            hash = (53 * hash) + java.lang.Float.floatToIntBits(
+                getBearingAccuracy());
             hash = (37 * hash) + SCORE_FIELD_NUMBER;
             hash = (53 * hash) + java.lang.Float.floatToIntBits(
                 getScore());
@@ -28151,7 +28571,7 @@ public final class RedvoxApiM {
             protected com.google.protobuf.MapField internalGetMapField(
                 int number) {
               switch (number) {
-                case 16:
+                case 24:
                   return internalGetMetadata();
                 default:
                   throw new RuntimeException(
@@ -28162,7 +28582,7 @@ public final class RedvoxApiM {
             protected com.google.protobuf.MapField internalGetMutableMapField(
                 int number) {
               switch (number) {
-                case 16:
+                case 24:
                   return internalGetMutableMetadata();
                 default:
                   throw new RuntimeException(
@@ -28227,6 +28647,14 @@ public final class RedvoxApiM {
 
               bearingUnit_ = 0;
 
+              verticalAccuracyUnit_ = 0;
+
+              horizontalAccuracyUnit_ = 0;
+
+              speedAccuracyUnit_ = 0;
+
+              bearingAccuracyUnit_ = 0;
+
               latitude_ = 0D;
 
               longitude_ = 0D;
@@ -28236,6 +28664,14 @@ public final class RedvoxApiM {
               speed_ = 0F;
 
               bearing_ = 0F;
+
+              verticalAccuracy_ = 0F;
+
+              horizontalAccuracy_ = 0F;
+
+              speedAccuracy_ = 0F;
+
+              bearingAccuracy_ = 0F;
 
               score_ = 0F;
 
@@ -28293,11 +28729,19 @@ public final class RedvoxApiM {
               result.altitudeUnit_ = altitudeUnit_;
               result.speedUnit_ = speedUnit_;
               result.bearingUnit_ = bearingUnit_;
+              result.verticalAccuracyUnit_ = verticalAccuracyUnit_;
+              result.horizontalAccuracyUnit_ = horizontalAccuracyUnit_;
+              result.speedAccuracyUnit_ = speedAccuracyUnit_;
+              result.bearingAccuracyUnit_ = bearingAccuracyUnit_;
               result.latitude_ = latitude_;
               result.longitude_ = longitude_;
               result.altitude_ = altitude_;
               result.speed_ = speed_;
               result.bearing_ = bearing_;
+              result.verticalAccuracy_ = verticalAccuracy_;
+              result.horizontalAccuracy_ = horizontalAccuracy_;
+              result.speedAccuracy_ = speedAccuracy_;
+              result.bearingAccuracy_ = bearingAccuracy_;
               result.score_ = score_;
               result.method_ = method_;
               result.metadata_ = internalGetMetadata();
@@ -28374,6 +28818,18 @@ public final class RedvoxApiM {
               if (other.bearingUnit_ != 0) {
                 setBearingUnitValue(other.getBearingUnitValue());
               }
+              if (other.verticalAccuracyUnit_ != 0) {
+                setVerticalAccuracyUnitValue(other.getVerticalAccuracyUnitValue());
+              }
+              if (other.horizontalAccuracyUnit_ != 0) {
+                setHorizontalAccuracyUnitValue(other.getHorizontalAccuracyUnitValue());
+              }
+              if (other.speedAccuracyUnit_ != 0) {
+                setSpeedAccuracyUnitValue(other.getSpeedAccuracyUnitValue());
+              }
+              if (other.bearingAccuracyUnit_ != 0) {
+                setBearingAccuracyUnitValue(other.getBearingAccuracyUnitValue());
+              }
               if (other.getLatitude() != 0D) {
                 setLatitude(other.getLatitude());
               }
@@ -28388,6 +28844,18 @@ public final class RedvoxApiM {
               }
               if (other.getBearing() != 0F) {
                 setBearing(other.getBearing());
+              }
+              if (other.getVerticalAccuracy() != 0F) {
+                setVerticalAccuracy(other.getVerticalAccuracy());
+              }
+              if (other.getHorizontalAccuracy() != 0F) {
+                setHorizontalAccuracy(other.getHorizontalAccuracy());
+              }
+              if (other.getSpeedAccuracy() != 0F) {
+                setSpeedAccuracy(other.getSpeedAccuracy());
+              }
+              if (other.getBearingAccuracy() != 0F) {
+                setBearingAccuracy(other.getBearingAccuracy());
               }
               if (other.getScore() != 0F) {
                 setScore(other.getScore());
@@ -29335,13 +29803,301 @@ public final class RedvoxApiM {
               return this;
             }
 
+            private int verticalAccuracyUnit_ = 0;
+            /**
+             * <pre>
+             * Unit used for vertical accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit vertical_accuracy_unit = 9;</code>
+             * @return The enum numeric value on the wire for verticalAccuracyUnit.
+             */
+            public int getVerticalAccuracyUnitValue() {
+              return verticalAccuracyUnit_;
+            }
+            /**
+             * <pre>
+             * Unit used for vertical accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit vertical_accuracy_unit = 9;</code>
+             * @param value The enum numeric value on the wire for verticalAccuracyUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setVerticalAccuracyUnitValue(int value) {
+              verticalAccuracyUnit_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for vertical accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit vertical_accuracy_unit = 9;</code>
+             * @return The verticalAccuracyUnit.
+             */
+            public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getVerticalAccuracyUnit() {
+              @SuppressWarnings("deprecation")
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(verticalAccuracyUnit_);
+              return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+            }
+            /**
+             * <pre>
+             * Unit used for vertical accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit vertical_accuracy_unit = 9;</code>
+             * @param value The verticalAccuracyUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setVerticalAccuracyUnit(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit value) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              
+              verticalAccuracyUnit_ = value.getNumber();
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for vertical accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit vertical_accuracy_unit = 9;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearVerticalAccuracyUnit() {
+              
+              verticalAccuracyUnit_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int horizontalAccuracyUnit_ = 0;
+            /**
+             * <pre>
+             * Unit used for horizontal accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit horizontal_accuracy_unit = 10;</code>
+             * @return The enum numeric value on the wire for horizontalAccuracyUnit.
+             */
+            public int getHorizontalAccuracyUnitValue() {
+              return horizontalAccuracyUnit_;
+            }
+            /**
+             * <pre>
+             * Unit used for horizontal accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit horizontal_accuracy_unit = 10;</code>
+             * @param value The enum numeric value on the wire for horizontalAccuracyUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setHorizontalAccuracyUnitValue(int value) {
+              horizontalAccuracyUnit_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for horizontal accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit horizontal_accuracy_unit = 10;</code>
+             * @return The horizontalAccuracyUnit.
+             */
+            public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getHorizontalAccuracyUnit() {
+              @SuppressWarnings("deprecation")
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(horizontalAccuracyUnit_);
+              return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+            }
+            /**
+             * <pre>
+             * Unit used for horizontal accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit horizontal_accuracy_unit = 10;</code>
+             * @param value The horizontalAccuracyUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setHorizontalAccuracyUnit(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit value) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              
+              horizontalAccuracyUnit_ = value.getNumber();
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for horizontal accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit horizontal_accuracy_unit = 10;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearHorizontalAccuracyUnit() {
+              
+              horizontalAccuracyUnit_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int speedAccuracyUnit_ = 0;
+            /**
+             * <pre>
+             * Unit used for speed accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit speed_accuracy_unit = 11;</code>
+             * @return The enum numeric value on the wire for speedAccuracyUnit.
+             */
+            public int getSpeedAccuracyUnitValue() {
+              return speedAccuracyUnit_;
+            }
+            /**
+             * <pre>
+             * Unit used for speed accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit speed_accuracy_unit = 11;</code>
+             * @param value The enum numeric value on the wire for speedAccuracyUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setSpeedAccuracyUnitValue(int value) {
+              speedAccuracyUnit_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for speed accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit speed_accuracy_unit = 11;</code>
+             * @return The speedAccuracyUnit.
+             */
+            public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getSpeedAccuracyUnit() {
+              @SuppressWarnings("deprecation")
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(speedAccuracyUnit_);
+              return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+            }
+            /**
+             * <pre>
+             * Unit used for speed accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit speed_accuracy_unit = 11;</code>
+             * @param value The speedAccuracyUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setSpeedAccuracyUnit(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit value) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              
+              speedAccuracyUnit_ = value.getNumber();
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for speed accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit speed_accuracy_unit = 11;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearSpeedAccuracyUnit() {
+              
+              speedAccuracyUnit_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int bearingAccuracyUnit_ = 0;
+            /**
+             * <pre>
+             * Unit used for bearing accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_accuracy_unit = 12;</code>
+             * @return The enum numeric value on the wire for bearingAccuracyUnit.
+             */
+            public int getBearingAccuracyUnitValue() {
+              return bearingAccuracyUnit_;
+            }
+            /**
+             * <pre>
+             * Unit used for bearing accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_accuracy_unit = 12;</code>
+             * @param value The enum numeric value on the wire for bearingAccuracyUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setBearingAccuracyUnitValue(int value) {
+              bearingAccuracyUnit_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for bearing accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_accuracy_unit = 12;</code>
+             * @return The bearingAccuracyUnit.
+             */
+            public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getBearingAccuracyUnit() {
+              @SuppressWarnings("deprecation")
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(bearingAccuracyUnit_);
+              return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+            }
+            /**
+             * <pre>
+             * Unit used for bearing accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_accuracy_unit = 12;</code>
+             * @param value The bearingAccuracyUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setBearingAccuracyUnit(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit value) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              
+              bearingAccuracyUnit_ = value.getNumber();
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for bearing accuracy
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_accuracy_unit = 12;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearBearingAccuracyUnit() {
+              
+              bearingAccuracyUnit_ = 0;
+              onChanged();
+              return this;
+            }
+
             private double latitude_ ;
             /**
              * <pre>
              * The best latitude
              * </pre>
              *
-             * <code>double latitude = 9;</code>
+             * <code>double latitude = 13;</code>
              * @return The latitude.
              */
             public double getLatitude() {
@@ -29352,7 +30108,7 @@ public final class RedvoxApiM {
              * The best latitude
              * </pre>
              *
-             * <code>double latitude = 9;</code>
+             * <code>double latitude = 13;</code>
              * @param value The latitude to set.
              * @return This builder for chaining.
              */
@@ -29367,7 +30123,7 @@ public final class RedvoxApiM {
              * The best latitude
              * </pre>
              *
-             * <code>double latitude = 9;</code>
+             * <code>double latitude = 13;</code>
              * @return This builder for chaining.
              */
             public Builder clearLatitude() {
@@ -29383,7 +30139,7 @@ public final class RedvoxApiM {
              * The best longitude
              * </pre>
              *
-             * <code>double longitude = 10;</code>
+             * <code>double longitude = 14;</code>
              * @return The longitude.
              */
             public double getLongitude() {
@@ -29394,7 +30150,7 @@ public final class RedvoxApiM {
              * The best longitude
              * </pre>
              *
-             * <code>double longitude = 10;</code>
+             * <code>double longitude = 14;</code>
              * @param value The longitude to set.
              * @return This builder for chaining.
              */
@@ -29409,7 +30165,7 @@ public final class RedvoxApiM {
              * The best longitude
              * </pre>
              *
-             * <code>double longitude = 10;</code>
+             * <code>double longitude = 14;</code>
              * @return This builder for chaining.
              */
             public Builder clearLongitude() {
@@ -29425,7 +30181,7 @@ public final class RedvoxApiM {
              * The best altitude
              * </pre>
              *
-             * <code>float altitude = 11;</code>
+             * <code>float altitude = 15;</code>
              * @return The altitude.
              */
             public float getAltitude() {
@@ -29436,7 +30192,7 @@ public final class RedvoxApiM {
              * The best altitude
              * </pre>
              *
-             * <code>float altitude = 11;</code>
+             * <code>float altitude = 15;</code>
              * @param value The altitude to set.
              * @return This builder for chaining.
              */
@@ -29451,7 +30207,7 @@ public final class RedvoxApiM {
              * The best altitude
              * </pre>
              *
-             * <code>float altitude = 11;</code>
+             * <code>float altitude = 15;</code>
              * @return This builder for chaining.
              */
             public Builder clearAltitude() {
@@ -29467,7 +30223,7 @@ public final class RedvoxApiM {
              * The best speed
              * </pre>
              *
-             * <code>float speed = 12;</code>
+             * <code>float speed = 16;</code>
              * @return The speed.
              */
             public float getSpeed() {
@@ -29478,7 +30234,7 @@ public final class RedvoxApiM {
              * The best speed
              * </pre>
              *
-             * <code>float speed = 12;</code>
+             * <code>float speed = 16;</code>
              * @param value The speed to set.
              * @return This builder for chaining.
              */
@@ -29493,7 +30249,7 @@ public final class RedvoxApiM {
              * The best speed
              * </pre>
              *
-             * <code>float speed = 12;</code>
+             * <code>float speed = 16;</code>
              * @return This builder for chaining.
              */
             public Builder clearSpeed() {
@@ -29509,7 +30265,7 @@ public final class RedvoxApiM {
              * The best bearing
              * </pre>
              *
-             * <code>float bearing = 13;</code>
+             * <code>float bearing = 17;</code>
              * @return The bearing.
              */
             public float getBearing() {
@@ -29520,7 +30276,7 @@ public final class RedvoxApiM {
              * The best bearing
              * </pre>
              *
-             * <code>float bearing = 13;</code>
+             * <code>float bearing = 17;</code>
              * @param value The bearing to set.
              * @return This builder for chaining.
              */
@@ -29535,12 +30291,180 @@ public final class RedvoxApiM {
              * The best bearing
              * </pre>
              *
-             * <code>float bearing = 13;</code>
+             * <code>float bearing = 17;</code>
              * @return This builder for chaining.
              */
             public Builder clearBearing() {
               
               bearing_ = 0F;
+              onChanged();
+              return this;
+            }
+
+            private float verticalAccuracy_ ;
+            /**
+             * <pre>
+             * Vertical accuracy
+             * </pre>
+             *
+             * <code>float vertical_accuracy = 18;</code>
+             * @return The verticalAccuracy.
+             */
+            public float getVerticalAccuracy() {
+              return verticalAccuracy_;
+            }
+            /**
+             * <pre>
+             * Vertical accuracy
+             * </pre>
+             *
+             * <code>float vertical_accuracy = 18;</code>
+             * @param value The verticalAccuracy to set.
+             * @return This builder for chaining.
+             */
+            public Builder setVerticalAccuracy(float value) {
+              
+              verticalAccuracy_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Vertical accuracy
+             * </pre>
+             *
+             * <code>float vertical_accuracy = 18;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearVerticalAccuracy() {
+              
+              verticalAccuracy_ = 0F;
+              onChanged();
+              return this;
+            }
+
+            private float horizontalAccuracy_ ;
+            /**
+             * <pre>
+             * Horizontal accuracy
+             * </pre>
+             *
+             * <code>float horizontal_accuracy = 19;</code>
+             * @return The horizontalAccuracy.
+             */
+            public float getHorizontalAccuracy() {
+              return horizontalAccuracy_;
+            }
+            /**
+             * <pre>
+             * Horizontal accuracy
+             * </pre>
+             *
+             * <code>float horizontal_accuracy = 19;</code>
+             * @param value The horizontalAccuracy to set.
+             * @return This builder for chaining.
+             */
+            public Builder setHorizontalAccuracy(float value) {
+              
+              horizontalAccuracy_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Horizontal accuracy
+             * </pre>
+             *
+             * <code>float horizontal_accuracy = 19;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearHorizontalAccuracy() {
+              
+              horizontalAccuracy_ = 0F;
+              onChanged();
+              return this;
+            }
+
+            private float speedAccuracy_ ;
+            /**
+             * <pre>
+             * Speed accuracy
+             * </pre>
+             *
+             * <code>float speed_accuracy = 20;</code>
+             * @return The speedAccuracy.
+             */
+            public float getSpeedAccuracy() {
+              return speedAccuracy_;
+            }
+            /**
+             * <pre>
+             * Speed accuracy
+             * </pre>
+             *
+             * <code>float speed_accuracy = 20;</code>
+             * @param value The speedAccuracy to set.
+             * @return This builder for chaining.
+             */
+            public Builder setSpeedAccuracy(float value) {
+              
+              speedAccuracy_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Speed accuracy
+             * </pre>
+             *
+             * <code>float speed_accuracy = 20;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearSpeedAccuracy() {
+              
+              speedAccuracy_ = 0F;
+              onChanged();
+              return this;
+            }
+
+            private float bearingAccuracy_ ;
+            /**
+             * <pre>
+             * Bearing accuracy
+             * </pre>
+             *
+             * <code>float bearing_accuracy = 21;</code>
+             * @return The bearingAccuracy.
+             */
+            public float getBearingAccuracy() {
+              return bearingAccuracy_;
+            }
+            /**
+             * <pre>
+             * Bearing accuracy
+             * </pre>
+             *
+             * <code>float bearing_accuracy = 21;</code>
+             * @param value The bearingAccuracy to set.
+             * @return This builder for chaining.
+             */
+            public Builder setBearingAccuracy(float value) {
+              
+              bearingAccuracy_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Bearing accuracy
+             * </pre>
+             *
+             * <code>float bearing_accuracy = 21;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearBearingAccuracy() {
+              
+              bearingAccuracy_ = 0F;
               onChanged();
               return this;
             }
@@ -29551,7 +30475,7 @@ public final class RedvoxApiM {
              * The best location score
              * </pre>
              *
-             * <code>float score = 14;</code>
+             * <code>float score = 22;</code>
              * @return The score.
              */
             public float getScore() {
@@ -29562,7 +30486,7 @@ public final class RedvoxApiM {
              * The best location score
              * </pre>
              *
-             * <code>float score = 14;</code>
+             * <code>float score = 22;</code>
              * @param value The score to set.
              * @return This builder for chaining.
              */
@@ -29577,7 +30501,7 @@ public final class RedvoxApiM {
              * The best location score
              * </pre>
              *
-             * <code>float score = 14;</code>
+             * <code>float score = 22;</code>
              * @return This builder for chaining.
              */
             public Builder clearScore() {
@@ -29593,7 +30517,7 @@ public final class RedvoxApiM {
              * Method used to derive the location score
              * </pre>
              *
-             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
+             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 23;</code>
              * @return The enum numeric value on the wire for method.
              */
             public int getMethodValue() {
@@ -29604,7 +30528,7 @@ public final class RedvoxApiM {
              * Method used to derive the location score
              * </pre>
              *
-             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
+             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 23;</code>
              * @param value The enum numeric value on the wire for method to set.
              * @return This builder for chaining.
              */
@@ -29618,7 +30542,7 @@ public final class RedvoxApiM {
              * Method used to derive the location score
              * </pre>
              *
-             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
+             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 23;</code>
              * @return The method.
              */
             public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod getMethod() {
@@ -29631,7 +30555,7 @@ public final class RedvoxApiM {
              * Method used to derive the location score
              * </pre>
              *
-             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
+             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 23;</code>
              * @param value The method to set.
              * @return This builder for chaining.
              */
@@ -29649,7 +30573,7 @@ public final class RedvoxApiM {
              * Method used to derive the location score
              * </pre>
              *
-             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
+             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 23;</code>
              * @return This builder for chaining.
              */
             public Builder clearMethod() {
@@ -29690,7 +30614,7 @@ public final class RedvoxApiM {
              * A map from string to string for including untyped metadata
              * </pre>
              *
-             * <code>map&lt;string, string&gt; metadata = 16;</code>
+             * <code>map&lt;string, string&gt; metadata = 24;</code>
              */
 
             public boolean containsMetadata(
@@ -29710,7 +30634,7 @@ public final class RedvoxApiM {
              * A map from string to string for including untyped metadata
              * </pre>
              *
-             * <code>map&lt;string, string&gt; metadata = 16;</code>
+             * <code>map&lt;string, string&gt; metadata = 24;</code>
              */
 
             public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -29721,7 +30645,7 @@ public final class RedvoxApiM {
              * A map from string to string for including untyped metadata
              * </pre>
              *
-             * <code>map&lt;string, string&gt; metadata = 16;</code>
+             * <code>map&lt;string, string&gt; metadata = 24;</code>
              */
 
             public java.lang.String getMetadataOrDefault(
@@ -29737,7 +30661,7 @@ public final class RedvoxApiM {
              * A map from string to string for including untyped metadata
              * </pre>
              *
-             * <code>map&lt;string, string&gt; metadata = 16;</code>
+             * <code>map&lt;string, string&gt; metadata = 24;</code>
              */
 
             public java.lang.String getMetadataOrThrow(
@@ -29761,7 +30685,7 @@ public final class RedvoxApiM {
              * A map from string to string for including untyped metadata
              * </pre>
              *
-             * <code>map&lt;string, string&gt; metadata = 16;</code>
+             * <code>map&lt;string, string&gt; metadata = 24;</code>
              */
 
             public Builder removeMetadata(
@@ -29784,7 +30708,7 @@ public final class RedvoxApiM {
              * A map from string to string for including untyped metadata
              * </pre>
              *
-             * <code>map&lt;string, string&gt; metadata = 16;</code>
+             * <code>map&lt;string, string&gt; metadata = 24;</code>
              */
             public Builder putMetadata(
                 java.lang.String key,
@@ -29800,7 +30724,7 @@ public final class RedvoxApiM {
              * A map from string to string for including untyped metadata
              * </pre>
              *
-             * <code>map&lt;string, string&gt; metadata = 16;</code>
+             * <code>map&lt;string, string&gt; metadata = 24;</code>
              */
 
             public Builder putAllMetadata(
@@ -60288,7 +61212,7 @@ public final class RedvoxApiM {
   static {
     java.lang.String[] descriptorData = {
       "\n#src/redvox_api_m/redvox_api_m.proto\022\014r" +
-      "edvox_api_m\"\347k\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
+      "edvox_api_m\"\327n\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
       "(\002\022\017\n\007sub_api\030\002 \001(\002\022K\n\023station_informati" +
       "on\030\003 \001(\0132..redvox_api_m.RedvoxPacketM.St" +
       "ationInformation\022I\n\022timing_information\030\004" +
@@ -60427,7 +61351,7 @@ public final class RedvoxApiM {
       "nformation.SynchExchange.MetadataEntry\032/" +
       "\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
       "\001(\t:\0028\001\" \n\021TimingScoreMethod\022\013\n\007UNKNOWN\020" +
-      "\000\032\270,\n\007Sensors\022>\n\raccelerometer\030\001 \001(\0132\'.r" +
+      "\000\032\250/\n\007Sensors\022>\n\raccelerometer\030\001 \001(\0132\'.r" +
       "edvox_api_m.RedvoxPacketM.Sensors.Xyz\022G\n" +
       "\023ambient_temperature\030\002 \001(\0132*.redvox_api_" +
       "m.RedvoxPacketM.Sensors.Single\0228\n\005audio\030" +
@@ -60481,7 +61405,7 @@ public final class RedvoxApiM {
       "dvoxPacketM.SamplePayload\022J\n\010metadata\030\004 " +
       "\003(\01328.redvox_api_m.RedvoxPacketM.Sensors" +
       ".Single.MetadataEntry\032/\n\rMetadataEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\241\025\n\010Locat" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\221\030\n\010Locat" +
       "ion\022\032\n\022sensor_description\030\001 \001(\t\022=\n\ntimes" +
       "tamps\030\002 \001(\0132).redvox_api_m.RedvoxPacketM" +
       ".TimingPayload\022I\n\020latitude_samples\030\003 \001(\013" +
@@ -60515,7 +61439,7 @@ public final class RedvoxApiM {
       "ocation.LocationProvider\022L\n\010metadata\030\031 \003" +
       "(\0132:.redvox_api_m.RedvoxPacketM.Sensors." +
       "Location.MetadataEntry\032/\n\rMetadataEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\205\n\n\014Best" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\365\014\n\014Best" +
       "Location\022m\n\034latitude_longitude_timestamp" +
       "\030\001 \001(\0132G.redvox_api_m.RedvoxPacketM.Sens" +
       "ors.Location.BestLocation.BestTimestamp\022" +
@@ -60532,127 +61456,137 @@ public final class RedvoxApiM {
       "i_m.RedvoxPacketM.Unit\0224\n\nspeed_unit\030\007 \001" +
       "(\0162 .redvox_api_m.RedvoxPacketM.Unit\0226\n\014" +
       "bearing_unit\030\010 \001(\0162 .redvox_api_m.Redvox" +
-      "PacketM.Unit\022\020\n\010latitude\030\t \001(\001\022\021\n\tlongit" +
-      "ude\030\n \001(\001\022\020\n\010altitude\030\013 \001(\002\022\r\n\005speed\030\014 \001" +
-      "(\002\022\017\n\007bearing\030\r \001(\002\022\r\n\005score\030\016 \001(\002\022]\n\006me" +
-      "thod\030\017 \001(\0162M.redvox_api_m.RedvoxPacketM." +
-      "Sensors.Location.BestLocation.LocationSc" +
-      "oreMethod\022Y\n\010metadata\030\020 \003(\0132G.redvox_api" +
-      "_m.RedvoxPacketM.Sensors.Location.BestLo" +
-      "cation.MetadataEntry\032/\n\rMetadataEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\364\001\n\rBestTi" +
-      "mestamp\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Red" +
-      "voxPacketM.Unit\022\014\n\004mach\030\002 \001(\001\022\013\n\003gps\030\003 \001" +
-      "(\001\022g\n\010metadata\030\004 \003(\0132U.redvox_api_m.Redv" +
-      "oxPacketM.Sensors.Location.BestLocation." +
-      "BestTimestamp.MetadataEntry\032/\n\rMetadataE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")\n\023" +
-      "LocationScoreMethod\022\022\n\016UNKNOWN_METHOD\020\000\"" +
-      "I\n\020LocationProvider\022\013\n\007UNKNOWN\020\000\022\010\n\004NONE" +
-      "\020\001\022\010\n\004USER\020\002\022\007\n\003GPS\020\003\022\013\n\007NETWORK\020\004\032\224\003\n\003X" +
-      "yz\022\032\n\022sensor_description\030\001 \001(\t\022=\n\ntimest" +
-      "amps\030\002 \001(\0132).redvox_api_m.RedvoxPacketM." +
-      "TimingPayload\022<\n\tx_samples\030\003 \001(\0132).redvo" +
-      "x_api_m.RedvoxPacketM.SamplePayload\022<\n\ty" +
-      "_samples\030\004 \001(\0132).redvox_api_m.RedvoxPack" +
-      "etM.SamplePayload\022<\n\tz_samples\030\005 \001(\0132).r" +
-      "edvox_api_m.RedvoxPacketM.SamplePayload\022" +
-      "G\n\010metadata\030\006 \003(\01325.redvox_api_m.RedvoxP" +
-      "acketM.Sensors.Xyz.MetadataEntry\032/\n\rMeta" +
-      "dataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\032\360\002\n\005Image\022\032\n\022sensor_description\030\001 \001(\t\022" +
-      "=\n\ntimestamps\030\002 \001(\0132).redvox_api_m.Redvo" +
-      "xPacketM.TimingPayload\022\017\n\007samples\030\003 \003(\014\022" +
-      "I\n\013image_codec\030\004 \001(\01624.redvox_api_m.Redv" +
-      "oxPacketM.Sensors.Image.ImageCodec\022I\n\010me" +
-      "tadata\030\005 \003(\01327.redvox_api_m.RedvoxPacket" +
-      "M.Sensors.Image.MetadataEntry\032/\n\rMetadat" +
-      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"4" +
-      "\n\nImageCodec\022\013\n\007UNKNOWN\020\000\022\007\n\003PNG\020\001\022\007\n\003JP" +
-      "G\020\002\022\007\n\003BMP\020\003\032\362\007\n\013EventStream\022\014\n\004name\030\001 \001" +
-      "(\t\022=\n\ntimestamps\030\002 \001(\0132).redvox_api_m.Re" +
-      "dvoxPacketM.TimingPayload\022=\n\006events\030\003 \003(" +
-      "\0132-.redvox_api_m.RedvoxPacketM.EventStre" +
-      "am.Event\022G\n\010metadata\030\004 \003(\01325.redvox_api_" +
-      "m.RedvoxPacketM.EventStream.MetadataEntr" +
-      "y\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\032\334\005\n\005Event\022\023\n\013description\030\001 \001(" +
-      "\t\022X\n\016string_payload\030\002 \003(\0132@.redvox_api_m" +
-      ".RedvoxPacketM.EventStream.Event.StringP" +
-      "ayloadEntry\022Z\n\017numeric_payload\030\003 \003(\0132A.r" +
-      "edvox_api_m.RedvoxPacketM.EventStream.Ev" +
-      "ent.NumericPayloadEntry\022Z\n\017boolean_paylo" +
-      "ad\030\004 \003(\0132A.redvox_api_m.RedvoxPacketM.Ev" +
-      "entStream.Event.BooleanPayloadEntry\022T\n\014b" +
-      "yte_payload\030\005 \003(\0132>.redvox_api_m.RedvoxP" +
-      "acketM.EventStream.Event.BytePayloadEntr" +
-      "y\022M\n\010metadata\030\006 \003(\0132;.redvox_api_m.Redvo" +
-      "xPacketM.EventStream.Event.MetadataEntry" +
-      "\0324\n\022StringPayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\0325\n\023NumericPayloadEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\001:\0028\001\0325\n\023Boolean" +
-      "PayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010" +
-      ":\0028\001\0322\n\020BytePayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\014:\0028\001\032/\n\rMetadataEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\224\002\n\rSamplePayl" +
-      "oad\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.RedvoxP" +
-      "acketM.Unit\022\016\n\006values\030\002 \003(\002\022G\n\020value_sta" +
-      "tistics\030\003 \001(\0132-.redvox_api_m.RedvoxPacke" +
-      "tM.SummaryStatistics\022I\n\010metadata\030\004 \003(\01327" +
-      ".redvox_api_m.RedvoxPacketM.SamplePayloa" +
-      "d.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\240\002\n\023DoubleSampl" +
-      "ePayload\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Re" +
-      "dvoxPacketM.Unit\022\016\n\006values\030\002 \003(\001\022G\n\020valu" +
-      "e_statistics\030\003 \001(\0132-.redvox_api_m.Redvox" +
-      "PacketM.SummaryStatistics\022O\n\010metadata\030\004 " +
-      "\003(\0132=.redvox_api_m.RedvoxPacketM.DoubleS" +
-      "amplePayload.MetadataEntry\032/\n\rMetadataEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321\002\n\r" +
-      "TimingPayload\022.\n\004unit\030\001 \001(\0162 .redvox_api" +
-      "_m.RedvoxPacketM.Unit\022\022\n\ntimestamps\030\002 \003(" +
-      "\001\022K\n\024timestamp_statistics\030\003 \001(\0132-.redvox" +
-      "_api_m.RedvoxPacketM.SummaryStatistics\022\030" +
-      "\n\020mean_sample_rate\030\004 \001(\002\022\031\n\021stdev_sample" +
-      "_rate\030\005 \001(\002\022I\n\010metadata\030\006 \003(\01327.redvox_a" +
-      "pi_m.RedvoxPacketM.TimingPayload.Metadat" +
-      "aEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\032\365\001\n\021SummaryStatistics\022\r\n" +
-      "\005count\030\001 \001(\002\022\014\n\004mean\030\002 \001(\002\022\032\n\022standard_d" +
-      "eviation\030\003 \001(\002\022\013\n\003min\030\004 \001(\002\022\013\n\003max\030\005 \001(\002" +
-      "\022\r\n\005range\030\006 \001(\002\022M\n\010metadata\030\007 \003(\0132;.redv" +
-      "ox_api_m.RedvoxPacketM.SummaryStatistics" +
+      "PacketM.Unit\022@\n\026vertical_accuracy_unit\030\t" +
+      " \001(\0162 .redvox_api_m.RedvoxPacketM.Unit\022B" +
+      "\n\030horizontal_accuracy_unit\030\n \001(\0162 .redvo" +
+      "x_api_m.RedvoxPacketM.Unit\022=\n\023speed_accu" +
+      "racy_unit\030\013 \001(\0162 .redvox_api_m.RedvoxPac" +
+      "ketM.Unit\022?\n\025bearing_accuracy_unit\030\014 \001(\016" +
+      "2 .redvox_api_m.RedvoxPacketM.Unit\022\020\n\010la" +
+      "titude\030\r \001(\001\022\021\n\tlongitude\030\016 \001(\001\022\020\n\010altit" +
+      "ude\030\017 \001(\002\022\r\n\005speed\030\020 \001(\002\022\017\n\007bearing\030\021 \001(" +
+      "\002\022\031\n\021vertical_accuracy\030\022 \001(\002\022\033\n\023horizont" +
+      "al_accuracy\030\023 \001(\002\022\026\n\016speed_accuracy\030\024 \001(" +
+      "\002\022\030\n\020bearing_accuracy\030\025 \001(\002\022\r\n\005score\030\026 \001" +
+      "(\002\022]\n\006method\030\027 \001(\0162M.redvox_api_m.Redvox" +
+      "PacketM.Sensors.Location.BestLocation.Lo" +
+      "cationScoreMethod\022Y\n\010metadata\030\030 \003(\0132G.re" +
+      "dvox_api_m.RedvoxPacketM.Sensors.Locatio" +
+      "n.BestLocation.MetadataEntry\032/\n\rMetadata" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\364\001" +
+      "\n\rBestTimestamp\022.\n\004unit\030\001 \001(\0162 .redvox_a" +
+      "pi_m.RedvoxPacketM.Unit\022\014\n\004mach\030\002 \001(\001\022\013\n" +
+      "\003gps\030\003 \001(\001\022g\n\010metadata\030\004 \003(\0132U.redvox_ap" +
+      "i_m.RedvoxPacketM.Sensors.Location.BestL" +
+      "ocation.BestTimestamp.MetadataEntry\032/\n\rM" +
+      "etadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\")\n\023LocationScoreMethod\022\022\n\016UNKNOWN_M" +
+      "ETHOD\020\000\"I\n\020LocationProvider\022\013\n\007UNKNOWN\020\000" +
+      "\022\010\n\004NONE\020\001\022\010\n\004USER\020\002\022\007\n\003GPS\020\003\022\013\n\007NETWORK" +
+      "\020\004\032\224\003\n\003Xyz\022\032\n\022sensor_description\030\001 \001(\t\022=" +
+      "\n\ntimestamps\030\002 \001(\0132).redvox_api_m.Redvox" +
+      "PacketM.TimingPayload\022<\n\tx_samples\030\003 \001(\013" +
+      "2).redvox_api_m.RedvoxPacketM.SamplePayl" +
+      "oad\022<\n\ty_samples\030\004 \001(\0132).redvox_api_m.Re" +
+      "dvoxPacketM.SamplePayload\022<\n\tz_samples\030\005" +
+      " \001(\0132).redvox_api_m.RedvoxPacketM.Sample" +
+      "Payload\022G\n\010metadata\030\006 \003(\01325.redvox_api_m" +
+      ".RedvoxPacketM.Sensors.Xyz.MetadataEntry" +
+      "\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\032\360\002\n\005Image\022\032\n\022sensor_descriptio" +
+      "n\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132).redvox_api" +
+      "_m.RedvoxPacketM.TimingPayload\022\017\n\007sample" +
+      "s\030\003 \003(\014\022I\n\013image_codec\030\004 \001(\01624.redvox_ap" +
+      "i_m.RedvoxPacketM.Sensors.Image.ImageCod" +
+      "ec\022I\n\010metadata\030\005 \003(\01327.redvox_api_m.Redv" +
+      "oxPacketM.Sensors.Image.MetadataEntry\032/\n" +
+      "\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\"4\n\nImageCodec\022\013\n\007UNKNOWN\020\000\022\007\n\003PNG" +
+      "\020\001\022\007\n\003JPG\020\002\022\007\n\003BMP\020\003\032\362\007\n\013EventStream\022\014\n\004" +
+      "name\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132).redvox_" +
+      "api_m.RedvoxPacketM.TimingPayload\022=\n\006eve" +
+      "nts\030\003 \003(\0132-.redvox_api_m.RedvoxPacketM.E" +
+      "ventStream.Event\022G\n\010metadata\030\004 \003(\01325.red" +
+      "vox_api_m.RedvoxPacketM.EventStream.Meta" +
+      "dataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\032\334\005\n\005Event\022\023\n\013descript" +
+      "ion\030\001 \001(\t\022X\n\016string_payload\030\002 \003(\0132@.redv" +
+      "ox_api_m.RedvoxPacketM.EventStream.Event" +
+      ".StringPayloadEntry\022Z\n\017numeric_payload\030\003" +
+      " \003(\0132A.redvox_api_m.RedvoxPacketM.EventS" +
+      "tream.Event.NumericPayloadEntry\022Z\n\017boole" +
+      "an_payload\030\004 \003(\0132A.redvox_api_m.RedvoxPa" +
+      "cketM.EventStream.Event.BooleanPayloadEn" +
+      "try\022T\n\014byte_payload\030\005 \003(\0132>.redvox_api_m" +
+      ".RedvoxPacketM.EventStream.Event.BytePay" +
+      "loadEntry\022M\n\010metadata\030\006 \003(\0132;.redvox_api" +
+      "_m.RedvoxPacketM.EventStream.Event.Metad" +
+      "ataEntry\0324\n\022StringPayloadEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0325\n\023NumericPayload" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\001:\0028\001\0325\n" +
+      "\023BooleanPayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\010:\0028\001\0322\n\020BytePayloadEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001\032/\n\rMetadataEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\224\002\n\rSa" +
+      "mplePayload\022.\n\004unit\030\001 \001(\0162 .redvox_api_m" +
+      ".RedvoxPacketM.Unit\022\016\n\006values\030\002 \003(\002\022G\n\020v" +
+      "alue_statistics\030\003 \001(\0132-.redvox_api_m.Red" +
+      "voxPacketM.SummaryStatistics\022I\n\010metadata" +
+      "\030\004 \003(\01327.redvox_api_m.RedvoxPacketM.Samp" +
+      "lePayload.MetadataEntry\032/\n\rMetadataEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\240\002\n\023Dou" +
+      "bleSamplePayload\022.\n\004unit\030\001 \001(\0162 .redvox_" +
+      "api_m.RedvoxPacketM.Unit\022\016\n\006values\030\002 \003(\001" +
+      "\022G\n\020value_statistics\030\003 \001(\0132-.redvox_api_" +
+      "m.RedvoxPacketM.SummaryStatistics\022O\n\010met" +
+      "adata\030\004 \003(\0132=.redvox_api_m.RedvoxPacketM" +
+      ".DoubleSamplePayload.MetadataEntry\032/\n\rMe" +
+      "tadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\032\321\002\n\rTimingPayload\022.\n\004unit\030\001 \001(\0162 .re" +
+      "dvox_api_m.RedvoxPacketM.Unit\022\022\n\ntimesta" +
+      "mps\030\002 \003(\001\022K\n\024timestamp_statistics\030\003 \001(\0132" +
+      "-.redvox_api_m.RedvoxPacketM.SummaryStat" +
+      "istics\022\030\n\020mean_sample_rate\030\004 \001(\002\022\031\n\021stde" +
+      "v_sample_rate\030\005 \001(\002\022I\n\010metadata\030\006 \003(\01327." +
+      "redvox_api_m.RedvoxPacketM.TimingPayload" +
       ".MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\203\003\n\004Unit\022\013\n\007UNKN" +
-      "OWN\020\000\022\035\n\031METERS_PER_SECOND_SQUARED\020\001\022\016\n\n" +
-      "KILOPASCAL\020\002\022\026\n\022RADIANS_PER_SECOND\020\003\022\023\n\017" +
-      "DECIMAL_DEGREES\020\004\022\n\n\006METERS\020\005\022\025\n\021METERS_" +
-      "PER_SECOND\020\006\022\016\n\nMICROTESLA\020\007\022\031\n\025LSB_PLUS" +
-      "_MINUS_COUNTS\020\010\022!\n\035MICROSECONDS_SINCE_UN" +
-      "IX_EPOCH\020\t\022\013\n\007DECIBEL\020\n\022\023\n\017DEGREES_CELSI" +
-      "US\020\013\022\010\n\004BYTE\020\014\022\016\n\nPERCENTAGE\020\r\022\013\n\007RADIAN" +
-      "S\020\016\022\020\n\014MICROAMPERES\020\017\022\017\n\013CENTIMETERS\020\020\022\025" +
-      "\n\021NORMALIZED_COUNTS\020\021\022\007\n\003LUX\020\022\022\014\n\010UNITLE" +
-      "SS\020\023\022\007\n\003PCM\020\024\"\254\001\n\026EncryptedRedvoxPacketM" +
-      "\022\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014\032r\n\006Head" +
-      "er\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002" +
-      " \001(\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016firebase_tok" +
-      "en\030\004 \001(\t\022\022\n\nauth_email\030\005 \001(\t\"y\n\022Acquisit" +
-      "ionRequest\022\022\n\nauth_token\030\001 \001(\t\022\026\n\016fireba" +
-      "se_token\030\002 \001(\t\022\020\n\010checksum\030\003 \001(\003\022\024\n\014is_e" +
-      "ncrypted\030\004 \001(\010\022\017\n\007payload\030\005 \001(\014\"\345\001\n\023Acqu" +
-      "isitionResponse\022E\n\rresponse_type\030\001 \001(\0162." +
-      ".redvox_api_m.AcquisitionResponse.Respon" +
-      "seType\022\020\n\010checksum\030\002 \001(\003\022\017\n\007details\030\003 \001(" +
-      "\t\022\016\n\006resend\030\004 \001(\010\"T\n\014ResponseType\022\013\n\007UNK" +
-      "NOWN\020\000\022\006\n\002OK\020\001\022\016\n\nAUTH_ERROR\020\002\022\016\n\nDATA_E" +
-      "RROR\020\003\022\017\n\013OTHER_ERROR\020\004\"\\\n\014SynchRequest\022" +
-      "\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(" +
-      "\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001" +
-      "\n\rSynchResponse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014s" +
-      "tation_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub" +
-      "_seq_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsen" +
-      "d_ts_us\030\006 \001(\004B\020\n\016io.redvox.apisb\006proto3"
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\365\001\n\021SummaryStati" +
+      "stics\022\r\n\005count\030\001 \001(\002\022\014\n\004mean\030\002 \001(\002\022\032\n\022st" +
+      "andard_deviation\030\003 \001(\002\022\013\n\003min\030\004 \001(\002\022\013\n\003m" +
+      "ax\030\005 \001(\002\022\r\n\005range\030\006 \001(\002\022M\n\010metadata\030\007 \003(" +
+      "\0132;.redvox_api_m.RedvoxPacketM.SummarySt" +
+      "atistics.MetadataEntry\032/\n\rMetadataEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\203\003\n\004Unit" +
+      "\022\013\n\007UNKNOWN\020\000\022\035\n\031METERS_PER_SECOND_SQUAR" +
+      "ED\020\001\022\016\n\nKILOPASCAL\020\002\022\026\n\022RADIANS_PER_SECO" +
+      "ND\020\003\022\023\n\017DECIMAL_DEGREES\020\004\022\n\n\006METERS\020\005\022\025\n" +
+      "\021METERS_PER_SECOND\020\006\022\016\n\nMICROTESLA\020\007\022\031\n\025" +
+      "LSB_PLUS_MINUS_COUNTS\020\010\022!\n\035MICROSECONDS_" +
+      "SINCE_UNIX_EPOCH\020\t\022\013\n\007DECIBEL\020\n\022\023\n\017DEGRE" +
+      "ES_CELSIUS\020\013\022\010\n\004BYTE\020\014\022\016\n\nPERCENTAGE\020\r\022\013" +
+      "\n\007RADIANS\020\016\022\020\n\014MICROAMPERES\020\017\022\017\n\013CENTIME" +
+      "TERS\020\020\022\025\n\021NORMALIZED_COUNTS\020\021\022\007\n\003LUX\020\022\022\014" +
+      "\n\010UNITLESS\020\023\022\007\n\003PCM\020\024\"\254\001\n\026EncryptedRedvo" +
+      "xPacketM\022\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014" +
+      "\032r\n\006Header\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014statio" +
+      "n_uuid\030\002 \001(\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016fire" +
+      "base_token\030\004 \001(\t\022\022\n\nauth_email\030\005 \001(\t\"y\n\022" +
+      "AcquisitionRequest\022\022\n\nauth_token\030\001 \001(\t\022\026" +
+      "\n\016firebase_token\030\002 \001(\t\022\020\n\010checksum\030\003 \001(\003" +
+      "\022\024\n\014is_encrypted\030\004 \001(\010\022\017\n\007payload\030\005 \001(\014\"" +
+      "\345\001\n\023AcquisitionResponse\022E\n\rresponse_type" +
+      "\030\001 \001(\0162..redvox_api_m.AcquisitionRespons" +
+      "e.ResponseType\022\020\n\010checksum\030\002 \001(\003\022\017\n\007deta" +
+      "ils\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"T\n\014ResponseTyp" +
+      "e\022\013\n\007UNKNOWN\020\000\022\006\n\002OK\020\001\022\016\n\nAUTH_ERROR\020\002\022\016" +
+      "\n\nDATA_ERROR\020\003\022\017\n\013OTHER_ERROR\020\004\"\\\n\014Synch" +
+      "Request\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_u" +
+      "uid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030" +
+      "\004 \001(\r\"\205\001\n\rSynchResponse\022\022\n\nstation_id\030\001 " +
+      "\001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(" +
+      "\r\022\022\n\nsub_seq_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030\005 \001(" +
+      "\004\022\022\n\nsend_ts_us\030\006 \001(\004B\020\n\016io.redvox.apisb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -60807,7 +61741,7 @@ public final class RedvoxApiM {
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_descriptor,
-        new java.lang.String[] { "LatitudeLongitudeTimestamp", "AltitudeTimestamp", "SpeedTimestamp", "BearingTimestamp", "LatitudeLongitudeUnit", "AltitudeUnit", "SpeedUnit", "BearingUnit", "Latitude", "Longitude", "Altitude", "Speed", "Bearing", "Score", "Method", "Metadata", });
+        new java.lang.String[] { "LatitudeLongitudeTimestamp", "AltitudeTimestamp", "SpeedTimestamp", "BearingTimestamp", "LatitudeLongitudeUnit", "AltitudeUnit", "SpeedUnit", "BearingUnit", "VerticalAccuracyUnit", "HorizontalAccuracyUnit", "SpeedAccuracyUnit", "BearingAccuracyUnit", "Latitude", "Longitude", "Altitude", "Speed", "Bearing", "VerticalAccuracy", "HorizontalAccuracy", "SpeedAccuracy", "BearingAccuracy", "Score", "Method", "Metadata", });
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_MetadataEntry_descriptor =
       internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_descriptor.getNestedTypes().get(0);
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_MetadataEntry_fieldAccessorTable = new

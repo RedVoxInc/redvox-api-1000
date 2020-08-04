@@ -597,29 +597,53 @@ message RedvoxPacketM {
                 // Unit used for bearing (should be radians)
                 Unit bearing_unit = 8;
 
+                // Unit used for vertical accuracy
+                Unit vertical_accuracy_unit = 9;
+
+                // Unit used for horizontal accuracy
+                Unit horizontal_accuracy_unit = 10;
+
+                // Unit used for speed accuracy
+                Unit speed_accuracy_unit = 11;
+
+                // Unit used for bearing accuracy
+                Unit bearing_accuracy_unit = 12;
+
                 // The best latitude
-                double latitude = 9;
+                double latitude = 13;
 
                 // The best longitude
-                double longitude = 10;
+                double longitude = 14;
 
                 // The best altitude
-                float altitude = 11;
+                float altitude = 15;
 
                 // The best speed
-                float speed = 12;
+                float speed = 16;
 
                 // The best bearing
-                float bearing = 13;
+                float bearing = 17;
+
+                // Vertical accuracy
+                float vertical_accuracy = 18;
+
+                // Horizontal accuracy
+                float horizontal_accuracy = 19;
+
+                // Speed accuracy
+                float speed_accuracy = 20;
+
+                // Bearing accuracy
+                float bearing_accuracy = 21;
 
                 // The best location score
-                float score = 14;
+                float score = 22;
 
                 // Method used to derive the location score
-                LocationScoreMethod method = 15;
+                LocationScoreMethod method = 23;
 
                 // A map from string to string for including untyped metadata
-                map<string, string> metadata = 16;
+                map<string, string> metadata = 24;
 
                 // A message that encapsulates both a mach and GPS timestamp
                 message BestTimestamp {

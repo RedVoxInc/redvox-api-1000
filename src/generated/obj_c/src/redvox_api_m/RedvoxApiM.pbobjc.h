@@ -1446,14 +1446,22 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber) {
   RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_AltitudeUnit = 6,
   RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedUnit = 7,
   RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingUnit = 8,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Latitude = 9,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Longitude = 10,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Altitude = 11,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Speed = 12,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Bearing = 13,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Score = 14,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Method = 15,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Metadata = 16,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_VerticalAccuracyUnit = 9,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_HorizontalAccuracyUnit = 10,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedAccuracyUnit = 11,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingAccuracyUnit = 12,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Latitude = 13,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Longitude = 14,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Altitude = 15,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Speed = 16,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Bearing = 17,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_VerticalAccuracy = 18,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_HorizontalAccuracy = 19,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedAccuracy = 20,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingAccuracy = 21,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Score = 22,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Method = 23,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Metadata = 24,
 };
 
 @interface RedvoxPacketM_Sensors_Location_BestLocation : GPBMessage
@@ -1490,6 +1498,18 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber) {
 /** Unit used for bearing (should be radians) */
 @property(nonatomic, readwrite) RedvoxPacketM_Unit bearingUnit;
 
+/** Unit used for vertical accuracy */
+@property(nonatomic, readwrite) RedvoxPacketM_Unit verticalAccuracyUnit;
+
+/** Unit used for horizontal accuracy */
+@property(nonatomic, readwrite) RedvoxPacketM_Unit horizontalAccuracyUnit;
+
+/** Unit used for speed accuracy */
+@property(nonatomic, readwrite) RedvoxPacketM_Unit speedAccuracyUnit;
+
+/** Unit used for bearing accuracy */
+@property(nonatomic, readwrite) RedvoxPacketM_Unit bearingAccuracyUnit;
+
 /** The best latitude */
 @property(nonatomic, readwrite) double latitude;
 
@@ -1504,6 +1524,18 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber) {
 
 /** The best bearing */
 @property(nonatomic, readwrite) float bearing;
+
+/** Vertical accuracy */
+@property(nonatomic, readwrite) float verticalAccuracy;
+
+/** Horizontal accuracy */
+@property(nonatomic, readwrite) float horizontalAccuracy;
+
+/** Speed accuracy */
+@property(nonatomic, readwrite) float speedAccuracy;
+
+/** Bearing accuracy */
+@property(nonatomic, readwrite) float bearingAccuracy;
 
 /** The best location score */
 @property(nonatomic, readwrite) float score;
@@ -1565,6 +1597,54 @@ int32_t RedvoxPacketM_Sensors_Location_BestLocation_BearingUnit_RawValue(RedvoxP
  * was generated.
  **/
 void SetRedvoxPacketM_Sensors_Location_BestLocation_BearingUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value);
+
+/**
+ * Fetches the raw value of a @c RedvoxPacketM_Sensors_Location_BestLocation's @c verticalAccuracyUnit property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacketM_Sensors_Location_BestLocation_VerticalAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message);
+/**
+ * Sets the raw value of an @c RedvoxPacketM_Sensors_Location_BestLocation's @c verticalAccuracyUnit property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacketM_Sensors_Location_BestLocation_VerticalAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value);
+
+/**
+ * Fetches the raw value of a @c RedvoxPacketM_Sensors_Location_BestLocation's @c horizontalAccuracyUnit property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacketM_Sensors_Location_BestLocation_HorizontalAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message);
+/**
+ * Sets the raw value of an @c RedvoxPacketM_Sensors_Location_BestLocation's @c horizontalAccuracyUnit property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacketM_Sensors_Location_BestLocation_HorizontalAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value);
+
+/**
+ * Fetches the raw value of a @c RedvoxPacketM_Sensors_Location_BestLocation's @c speedAccuracyUnit property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacketM_Sensors_Location_BestLocation_SpeedAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message);
+/**
+ * Sets the raw value of an @c RedvoxPacketM_Sensors_Location_BestLocation's @c speedAccuracyUnit property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacketM_Sensors_Location_BestLocation_SpeedAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value);
+
+/**
+ * Fetches the raw value of a @c RedvoxPacketM_Sensors_Location_BestLocation's @c bearingAccuracyUnit property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacketM_Sensors_Location_BestLocation_BearingAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message);
+/**
+ * Sets the raw value of an @c RedvoxPacketM_Sensors_Location_BestLocation's @c bearingAccuracyUnit property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacketM_Sensors_Location_BestLocation_BearingAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value);
 
 /**
  * Fetches the raw value of a @c RedvoxPacketM_Sensors_Location_BestLocation's @c method property, even
