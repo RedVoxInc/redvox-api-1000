@@ -1442,14 +1442,18 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber) {
   RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_AltitudeTimestamp = 2,
   RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedTimestamp = 3,
   RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingTimestamp = 4,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Latitude = 5,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Longitude = 6,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Altitude = 7,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Speed = 8,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Bearing = 9,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Score = 10,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Method = 11,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Metadata = 12,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_LatitudeLongitudeUnit = 5,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_AltitudeUnit = 6,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedUnit = 7,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingUnit = 8,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Latitude = 9,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Longitude = 10,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Altitude = 11,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Speed = 12,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Bearing = 13,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Score = 14,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Method = 15,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Metadata = 16,
 };
 
 @interface RedvoxPacketM_Sensors_Location_BestLocation : GPBMessage
@@ -1473,6 +1477,18 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp *bearingTimestamp;
 /** Test to see if @c bearingTimestamp has been set. */
 @property(nonatomic, readwrite) BOOL hasBearingTimestamp;
+
+/** Unit used for latitude/longitude (should be decimal degrees) */
+@property(nonatomic, readwrite) RedvoxPacketM_Unit latitudeLongitudeUnit;
+
+/** Unit used for altitude (should be meters) */
+@property(nonatomic, readwrite) RedvoxPacketM_Unit altitudeUnit;
+
+/** Unit used for speed (should be m/s) */
+@property(nonatomic, readwrite) RedvoxPacketM_Unit speedUnit;
+
+/** Unit used for bearing (should be radians) */
+@property(nonatomic, readwrite) RedvoxPacketM_Unit bearingUnit;
 
 /** The best latitude */
 @property(nonatomic, readwrite) double latitude;
@@ -1503,6 +1519,54 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber) {
 @end
 
 /**
+ * Fetches the raw value of a @c RedvoxPacketM_Sensors_Location_BestLocation's @c latitudeLongitudeUnit property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacketM_Sensors_Location_BestLocation_LatitudeLongitudeUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message);
+/**
+ * Sets the raw value of an @c RedvoxPacketM_Sensors_Location_BestLocation's @c latitudeLongitudeUnit property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacketM_Sensors_Location_BestLocation_LatitudeLongitudeUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value);
+
+/**
+ * Fetches the raw value of a @c RedvoxPacketM_Sensors_Location_BestLocation's @c altitudeUnit property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacketM_Sensors_Location_BestLocation_AltitudeUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message);
+/**
+ * Sets the raw value of an @c RedvoxPacketM_Sensors_Location_BestLocation's @c altitudeUnit property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacketM_Sensors_Location_BestLocation_AltitudeUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value);
+
+/**
+ * Fetches the raw value of a @c RedvoxPacketM_Sensors_Location_BestLocation's @c speedUnit property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacketM_Sensors_Location_BestLocation_SpeedUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message);
+/**
+ * Sets the raw value of an @c RedvoxPacketM_Sensors_Location_BestLocation's @c speedUnit property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacketM_Sensors_Location_BestLocation_SpeedUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value);
+
+/**
+ * Fetches the raw value of a @c RedvoxPacketM_Sensors_Location_BestLocation's @c bearingUnit property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacketM_Sensors_Location_BestLocation_BearingUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message);
+/**
+ * Sets the raw value of an @c RedvoxPacketM_Sensors_Location_BestLocation's @c bearingUnit property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacketM_Sensors_Location_BestLocation_BearingUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value);
+
+/**
  * Fetches the raw value of a @c RedvoxPacketM_Sensors_Location_BestLocation's @c method property, even
  * if the value was not defined by the enum at the time the code was generated.
  **/
@@ -1517,8 +1581,10 @@ void SetRedvoxPacketM_Sensors_Location_BestLocation_Method_RawValue(RedvoxPacket
 #pragma mark - RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp
 
 typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_FieldNumber) {
-  RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_FieldNumber_Mach = 1,
-  RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_FieldNumber_Gps = 2,
+  RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_FieldNumber_Unit = 1,
+  RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_FieldNumber_Mach = 2,
+  RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_FieldNumber_Gps = 3,
+  RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_FieldNumber_Metadata = 4,
 };
 
 /**
@@ -1526,13 +1592,33 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_Field
  **/
 @interface RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp : GPBMessage
 
+/** Unit of timestamps (should be microseconds since unix epoch UTC) */
+@property(nonatomic, readwrite) RedvoxPacketM_Unit unit;
+
 /** Best mach timestamp */
 @property(nonatomic, readwrite) double mach;
 
 /** Best gps timestamp */
 @property(nonatomic, readwrite) double gps;
 
+/** A map from string to string for including untyped metadata */
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
+/** The number of items in @c metadata without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger metadata_Count;
+
 @end
+
+/**
+ * Fetches the raw value of a @c RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp's @c unit property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_Unit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp *message);
+/**
+ * Sets the raw value of an @c RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp's @c unit property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_Unit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp *message, int32_t value);
 
 #pragma mark - RedvoxPacketM_Sensors_Xyz
 
@@ -1636,8 +1722,9 @@ void SetRedvoxPacketM_Sensors_Image_ImageCodec_RawValue(RedvoxPacketM_Sensors_Im
 
 typedef GPB_ENUM(RedvoxPacketM_EventStream_FieldNumber) {
   RedvoxPacketM_EventStream_FieldNumber_Name = 1,
-  RedvoxPacketM_EventStream_FieldNumber_EventsArray = 2,
-  RedvoxPacketM_EventStream_FieldNumber_Metadata = 3,
+  RedvoxPacketM_EventStream_FieldNumber_Timestamps = 2,
+  RedvoxPacketM_EventStream_FieldNumber_EventsArray = 3,
+  RedvoxPacketM_EventStream_FieldNumber_Metadata = 4,
 };
 
 /**
@@ -1647,6 +1734,11 @@ typedef GPB_ENUM(RedvoxPacketM_EventStream_FieldNumber) {
 
 /** The name of this stream */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *name;
+
+/** List of timestamps, each associated with one Event */
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_TimingPayload *timestamps;
+/** Test to see if @c timestamps has been set. */
+@property(nonatomic, readwrite) BOOL hasTimestamps;
 
 /** List of events that belong to this stream */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<RedvoxPacketM_EventStream_Event*> *eventsArray;
@@ -1663,19 +1755,15 @@ typedef GPB_ENUM(RedvoxPacketM_EventStream_FieldNumber) {
 #pragma mark - RedvoxPacketM_EventStream_Event
 
 typedef GPB_ENUM(RedvoxPacketM_EventStream_Event_FieldNumber) {
-  RedvoxPacketM_EventStream_Event_FieldNumber_Timestamp = 1,
-  RedvoxPacketM_EventStream_Event_FieldNumber_Description_p = 2,
-  RedvoxPacketM_EventStream_Event_FieldNumber_StringPayload = 3,
-  RedvoxPacketM_EventStream_Event_FieldNumber_NumericPayload = 4,
-  RedvoxPacketM_EventStream_Event_FieldNumber_BooleanPayload = 5,
-  RedvoxPacketM_EventStream_Event_FieldNumber_BytePayload = 6,
-  RedvoxPacketM_EventStream_Event_FieldNumber_Metadata = 7,
+  RedvoxPacketM_EventStream_Event_FieldNumber_Description_p = 1,
+  RedvoxPacketM_EventStream_Event_FieldNumber_StringPayload = 2,
+  RedvoxPacketM_EventStream_Event_FieldNumber_NumericPayload = 3,
+  RedvoxPacketM_EventStream_Event_FieldNumber_BooleanPayload = 4,
+  RedvoxPacketM_EventStream_Event_FieldNumber_BytePayload = 5,
+  RedvoxPacketM_EventStream_Event_FieldNumber_Metadata = 6,
 };
 
 @interface RedvoxPacketM_EventStream_Event : GPBMessage
-
-/** Timestamp of the event */
-@property(nonatomic, readwrite) double timestamp;
 
 /** Textual description of the event */
 @property(nonatomic, readwrite, copy, null_resettable) NSString *description_p;

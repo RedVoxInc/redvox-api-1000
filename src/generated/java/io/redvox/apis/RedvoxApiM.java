@@ -25679,10 +25679,86 @@ public final class RedvoxApiM {
 
           /**
            * <pre>
+           * Unit used for latitude/longitude (should be decimal degrees)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit latitude_longitude_unit = 5;</code>
+           * @return The enum numeric value on the wire for latitudeLongitudeUnit.
+           */
+          int getLatitudeLongitudeUnitValue();
+          /**
+           * <pre>
+           * Unit used for latitude/longitude (should be decimal degrees)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit latitude_longitude_unit = 5;</code>
+           * @return The latitudeLongitudeUnit.
+           */
+          io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getLatitudeLongitudeUnit();
+
+          /**
+           * <pre>
+           * Unit used for altitude (should be meters)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit altitude_unit = 6;</code>
+           * @return The enum numeric value on the wire for altitudeUnit.
+           */
+          int getAltitudeUnitValue();
+          /**
+           * <pre>
+           * Unit used for altitude (should be meters)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit altitude_unit = 6;</code>
+           * @return The altitudeUnit.
+           */
+          io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getAltitudeUnit();
+
+          /**
+           * <pre>
+           * Unit used for speed (should be m/s)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit speed_unit = 7;</code>
+           * @return The enum numeric value on the wire for speedUnit.
+           */
+          int getSpeedUnitValue();
+          /**
+           * <pre>
+           * Unit used for speed (should be m/s)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit speed_unit = 7;</code>
+           * @return The speedUnit.
+           */
+          io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getSpeedUnit();
+
+          /**
+           * <pre>
+           * Unit used for bearing (should be radians)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_unit = 8;</code>
+           * @return The enum numeric value on the wire for bearingUnit.
+           */
+          int getBearingUnitValue();
+          /**
+           * <pre>
+           * Unit used for bearing (should be radians)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_unit = 8;</code>
+           * @return The bearingUnit.
+           */
+          io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getBearingUnit();
+
+          /**
+           * <pre>
            * The best latitude
            * </pre>
            *
-           * <code>double latitude = 5;</code>
+           * <code>double latitude = 9;</code>
            * @return The latitude.
            */
           double getLatitude();
@@ -25692,7 +25768,7 @@ public final class RedvoxApiM {
            * The best longitude
            * </pre>
            *
-           * <code>double longitude = 6;</code>
+           * <code>double longitude = 10;</code>
            * @return The longitude.
            */
           double getLongitude();
@@ -25702,7 +25778,7 @@ public final class RedvoxApiM {
            * The best altitude
            * </pre>
            *
-           * <code>float altitude = 7;</code>
+           * <code>float altitude = 11;</code>
            * @return The altitude.
            */
           float getAltitude();
@@ -25712,7 +25788,7 @@ public final class RedvoxApiM {
            * The best speed
            * </pre>
            *
-           * <code>float speed = 8;</code>
+           * <code>float speed = 12;</code>
            * @return The speed.
            */
           float getSpeed();
@@ -25722,7 +25798,7 @@ public final class RedvoxApiM {
            * The best bearing
            * </pre>
            *
-           * <code>float bearing = 9;</code>
+           * <code>float bearing = 13;</code>
            * @return The bearing.
            */
           float getBearing();
@@ -25732,7 +25808,7 @@ public final class RedvoxApiM {
            * The best location score
            * </pre>
            *
-           * <code>float score = 10;</code>
+           * <code>float score = 14;</code>
            * @return The score.
            */
           float getScore();
@@ -25742,7 +25818,7 @@ public final class RedvoxApiM {
            * Method used to derive the location score
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 11;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
            * @return The enum numeric value on the wire for method.
            */
           int getMethodValue();
@@ -25751,7 +25827,7 @@ public final class RedvoxApiM {
            * Method used to derive the location score
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 11;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
            * @return The method.
            */
           io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod getMethod();
@@ -25761,7 +25837,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 12;</code>
+           * <code>map&lt;string, string&gt; metadata = 16;</code>
            */
           int getMetadataCount();
           /**
@@ -25769,7 +25845,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 12;</code>
+           * <code>map&lt;string, string&gt; metadata = 16;</code>
            */
           boolean containsMetadata(
               java.lang.String key);
@@ -25784,7 +25860,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 12;</code>
+           * <code>map&lt;string, string&gt; metadata = 16;</code>
            */
           java.util.Map<java.lang.String, java.lang.String>
           getMetadataMap();
@@ -25793,7 +25869,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 12;</code>
+           * <code>map&lt;string, string&gt; metadata = 16;</code>
            */
 
           java.lang.String getMetadataOrDefault(
@@ -25804,7 +25880,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 12;</code>
+           * <code>map&lt;string, string&gt; metadata = 16;</code>
            */
 
           java.lang.String getMetadataOrThrow(
@@ -25823,6 +25899,10 @@ public final class RedvoxApiM {
             super(builder);
           }
           private BestLocation() {
+            latitudeLongitudeUnit_ = 0;
+            altitudeUnit_ = 0;
+            speedUnit_ = 0;
+            bearingUnit_ = 0;
             method_ = 0;
           }
 
@@ -25909,43 +25989,67 @@ public final class RedvoxApiM {
 
                     break;
                   }
-                  case 41: {
+                  case 40: {
+                    int rawValue = input.readEnum();
+
+                    latitudeLongitudeUnit_ = rawValue;
+                    break;
+                  }
+                  case 48: {
+                    int rawValue = input.readEnum();
+
+                    altitudeUnit_ = rawValue;
+                    break;
+                  }
+                  case 56: {
+                    int rawValue = input.readEnum();
+
+                    speedUnit_ = rawValue;
+                    break;
+                  }
+                  case 64: {
+                    int rawValue = input.readEnum();
+
+                    bearingUnit_ = rawValue;
+                    break;
+                  }
+                  case 73: {
 
                     latitude_ = input.readDouble();
                     break;
                   }
-                  case 49: {
+                  case 81: {
 
                     longitude_ = input.readDouble();
                     break;
                   }
-                  case 61: {
+                  case 93: {
 
                     altitude_ = input.readFloat();
                     break;
                   }
-                  case 69: {
+                  case 101: {
 
                     speed_ = input.readFloat();
                     break;
                   }
-                  case 77: {
+                  case 109: {
 
                     bearing_ = input.readFloat();
                     break;
                   }
-                  case 85: {
+                  case 117: {
 
                     score_ = input.readFloat();
                     break;
                   }
-                  case 88: {
+                  case 120: {
                     int rawValue = input.readEnum();
 
                     method_ = rawValue;
                     break;
                   }
-                  case 98: {
+                  case 130: {
                     if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                       metadata_ = com.google.protobuf.MapField.newMapField(
                           MetadataDefaultEntryHolder.defaultEntry);
@@ -25987,7 +26091,7 @@ public final class RedvoxApiM {
           protected com.google.protobuf.MapField internalGetMapField(
               int number) {
             switch (number) {
-              case 12:
+              case 16:
                 return internalGetMetadata();
               default:
                 throw new RuntimeException(
@@ -26107,10 +26211,29 @@ public final class RedvoxApiM {
 
             /**
              * <pre>
+             * Unit of timestamps (should be microseconds since unix epoch UTC)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+             * @return The enum numeric value on the wire for unit.
+             */
+            int getUnitValue();
+            /**
+             * <pre>
+             * Unit of timestamps (should be microseconds since unix epoch UTC)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+             * @return The unit.
+             */
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getUnit();
+
+            /**
+             * <pre>
              * Best mach timestamp
              * </pre>
              *
-             * <code>double mach = 1;</code>
+             * <code>double mach = 2;</code>
              * @return The mach.
              */
             double getMach();
@@ -26120,10 +26243,64 @@ public final class RedvoxApiM {
              * Best gps timestamp
              * </pre>
              *
-             * <code>double gps = 2;</code>
+             * <code>double gps = 3;</code>
              * @return The gps.
              */
             double getGps();
+
+            /**
+             * <pre>
+             * A map from string to string for including untyped metadata
+             * </pre>
+             *
+             * <code>map&lt;string, string&gt; metadata = 4;</code>
+             */
+            int getMetadataCount();
+            /**
+             * <pre>
+             * A map from string to string for including untyped metadata
+             * </pre>
+             *
+             * <code>map&lt;string, string&gt; metadata = 4;</code>
+             */
+            boolean containsMetadata(
+                java.lang.String key);
+            /**
+             * Use {@link #getMetadataMap()} instead.
+             */
+            @java.lang.Deprecated
+            java.util.Map<java.lang.String, java.lang.String>
+            getMetadata();
+            /**
+             * <pre>
+             * A map from string to string for including untyped metadata
+             * </pre>
+             *
+             * <code>map&lt;string, string&gt; metadata = 4;</code>
+             */
+            java.util.Map<java.lang.String, java.lang.String>
+            getMetadataMap();
+            /**
+             * <pre>
+             * A map from string to string for including untyped metadata
+             * </pre>
+             *
+             * <code>map&lt;string, string&gt; metadata = 4;</code>
+             */
+
+            java.lang.String getMetadataOrDefault(
+                java.lang.String key,
+                java.lang.String defaultValue);
+            /**
+             * <pre>
+             * A map from string to string for including untyped metadata
+             * </pre>
+             *
+             * <code>map&lt;string, string&gt; metadata = 4;</code>
+             */
+
+            java.lang.String getMetadataOrThrow(
+                java.lang.String key);
           }
           /**
            * <pre>
@@ -26142,6 +26319,7 @@ public final class RedvoxApiM {
               super(builder);
             }
             private BestTimestamp() {
+              unit_ = 0;
             }
 
             @java.lang.Override
@@ -26164,6 +26342,7 @@ public final class RedvoxApiM {
               if (extensionRegistry == null) {
                 throw new java.lang.NullPointerException();
               }
+              int mutable_bitField0_ = 0;
               com.google.protobuf.UnknownFieldSet.Builder unknownFields =
                   com.google.protobuf.UnknownFieldSet.newBuilder();
               try {
@@ -26174,14 +26353,33 @@ public final class RedvoxApiM {
                     case 0:
                       done = true;
                       break;
-                    case 9: {
+                    case 8: {
+                      int rawValue = input.readEnum();
 
-                      mach_ = input.readDouble();
+                      unit_ = rawValue;
                       break;
                     }
                     case 17: {
 
+                      mach_ = input.readDouble();
+                      break;
+                    }
+                    case 25: {
+
                       gps_ = input.readDouble();
+                      break;
+                    }
+                    case 34: {
+                      if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                        metadata_ = com.google.protobuf.MapField.newMapField(
+                            MetadataDefaultEntryHolder.defaultEntry);
+                        mutable_bitField0_ |= 0x00000001;
+                      }
+                      com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                      metadata__ = input.readMessage(
+                          MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                      metadata_.getMutableMap().put(
+                          metadata__.getKey(), metadata__.getValue());
                       break;
                     }
                     default: {
@@ -26208,6 +26406,18 @@ public final class RedvoxApiM {
               return io.redvox.apis.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_descriptor;
             }
 
+            @SuppressWarnings({"rawtypes"})
+            @java.lang.Override
+            protected com.google.protobuf.MapField internalGetMapField(
+                int number) {
+              switch (number) {
+                case 4:
+                  return internalGetMetadata();
+                default:
+                  throw new RuntimeException(
+                      "Invalid map field number: " + number);
+              }
+            }
             @java.lang.Override
             protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
                 internalGetFieldAccessorTable() {
@@ -26216,32 +26426,151 @@ public final class RedvoxApiM {
                       io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.BestTimestamp.class, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.BestTimestamp.Builder.class);
             }
 
-            public static final int MACH_FIELD_NUMBER = 1;
+            public static final int UNIT_FIELD_NUMBER = 1;
+            private int unit_;
+            /**
+             * <pre>
+             * Unit of timestamps (should be microseconds since unix epoch UTC)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+             * @return The enum numeric value on the wire for unit.
+             */
+            public int getUnitValue() {
+              return unit_;
+            }
+            /**
+             * <pre>
+             * Unit of timestamps (should be microseconds since unix epoch UTC)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+             * @return The unit.
+             */
+            public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getUnit() {
+              @SuppressWarnings("deprecation")
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(unit_);
+              return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+            }
+
+            public static final int MACH_FIELD_NUMBER = 2;
             private double mach_;
             /**
              * <pre>
              * Best mach timestamp
              * </pre>
              *
-             * <code>double mach = 1;</code>
+             * <code>double mach = 2;</code>
              * @return The mach.
              */
             public double getMach() {
               return mach_;
             }
 
-            public static final int GPS_FIELD_NUMBER = 2;
+            public static final int GPS_FIELD_NUMBER = 3;
             private double gps_;
             /**
              * <pre>
              * Best gps timestamp
              * </pre>
              *
-             * <code>double gps = 2;</code>
+             * <code>double gps = 3;</code>
              * @return The gps.
              */
             public double getGps() {
               return gps_;
+            }
+
+            public static final int METADATA_FIELD_NUMBER = 4;
+            private static final class MetadataDefaultEntryHolder {
+              static final com.google.protobuf.MapEntry<
+                  java.lang.String, java.lang.String> defaultEntry =
+                      com.google.protobuf.MapEntry
+                      .<java.lang.String, java.lang.String>newDefaultInstance(
+                          io.redvox.apis.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_MetadataEntry_descriptor, 
+                          com.google.protobuf.WireFormat.FieldType.STRING,
+                          "",
+                          com.google.protobuf.WireFormat.FieldType.STRING,
+                          "");
+            }
+            private com.google.protobuf.MapField<
+                java.lang.String, java.lang.String> metadata_;
+            private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+            internalGetMetadata() {
+              if (metadata_ == null) {
+                return com.google.protobuf.MapField.emptyMapField(
+                    MetadataDefaultEntryHolder.defaultEntry);
+              }
+              return metadata_;
+            }
+
+            public int getMetadataCount() {
+              return internalGetMetadata().getMap().size();
+            }
+            /**
+             * <pre>
+             * A map from string to string for including untyped metadata
+             * </pre>
+             *
+             * <code>map&lt;string, string&gt; metadata = 4;</code>
+             */
+
+            public boolean containsMetadata(
+                java.lang.String key) {
+              if (key == null) { throw new java.lang.NullPointerException(); }
+              return internalGetMetadata().getMap().containsKey(key);
+            }
+            /**
+             * Use {@link #getMetadataMap()} instead.
+             */
+            @java.lang.Deprecated
+            public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+              return getMetadataMap();
+            }
+            /**
+             * <pre>
+             * A map from string to string for including untyped metadata
+             * </pre>
+             *
+             * <code>map&lt;string, string&gt; metadata = 4;</code>
+             */
+
+            public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+              return internalGetMetadata().getMap();
+            }
+            /**
+             * <pre>
+             * A map from string to string for including untyped metadata
+             * </pre>
+             *
+             * <code>map&lt;string, string&gt; metadata = 4;</code>
+             */
+
+            public java.lang.String getMetadataOrDefault(
+                java.lang.String key,
+                java.lang.String defaultValue) {
+              if (key == null) { throw new java.lang.NullPointerException(); }
+              java.util.Map<java.lang.String, java.lang.String> map =
+                  internalGetMetadata().getMap();
+              return map.containsKey(key) ? map.get(key) : defaultValue;
+            }
+            /**
+             * <pre>
+             * A map from string to string for including untyped metadata
+             * </pre>
+             *
+             * <code>map&lt;string, string&gt; metadata = 4;</code>
+             */
+
+            public java.lang.String getMetadataOrThrow(
+                java.lang.String key) {
+              if (key == null) { throw new java.lang.NullPointerException(); }
+              java.util.Map<java.lang.String, java.lang.String> map =
+                  internalGetMetadata().getMap();
+              if (!map.containsKey(key)) {
+                throw new java.lang.IllegalArgumentException();
+              }
+              return map.get(key);
             }
 
             private byte memoizedIsInitialized = -1;
@@ -26258,12 +26587,21 @@ public final class RedvoxApiM {
             @java.lang.Override
             public void writeTo(com.google.protobuf.CodedOutputStream output)
                                 throws java.io.IOException {
+              if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+                output.writeEnum(1, unit_);
+              }
               if (mach_ != 0D) {
-                output.writeDouble(1, mach_);
+                output.writeDouble(2, mach_);
               }
               if (gps_ != 0D) {
-                output.writeDouble(2, gps_);
+                output.writeDouble(3, gps_);
               }
+              com.google.protobuf.GeneratedMessageV3
+                .serializeStringMapTo(
+                  output,
+                  internalGetMetadata(),
+                  MetadataDefaultEntryHolder.defaultEntry,
+                  4);
               unknownFields.writeTo(output);
             }
 
@@ -26273,13 +26611,27 @@ public final class RedvoxApiM {
               if (size != -1) return size;
 
               size = 0;
+              if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+                size += com.google.protobuf.CodedOutputStream
+                  .computeEnumSize(1, unit_);
+              }
               if (mach_ != 0D) {
                 size += com.google.protobuf.CodedOutputStream
-                  .computeDoubleSize(1, mach_);
+                  .computeDoubleSize(2, mach_);
               }
               if (gps_ != 0D) {
                 size += com.google.protobuf.CodedOutputStream
-                  .computeDoubleSize(2, gps_);
+                  .computeDoubleSize(3, gps_);
+              }
+              for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+                   : internalGetMetadata().getMap().entrySet()) {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+                    .setKey(entry.getKey())
+                    .setValue(entry.getValue())
+                    .build();
+                size += com.google.protobuf.CodedOutputStream
+                    .computeMessageSize(4, metadata__);
               }
               size += unknownFields.getSerializedSize();
               memoizedSize = size;
@@ -26296,12 +26648,15 @@ public final class RedvoxApiM {
               }
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.BestTimestamp other = (io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.BestTimestamp) obj;
 
+              if (unit_ != other.unit_) return false;
               if (java.lang.Double.doubleToLongBits(getMach())
                   != java.lang.Double.doubleToLongBits(
                       other.getMach())) return false;
               if (java.lang.Double.doubleToLongBits(getGps())
                   != java.lang.Double.doubleToLongBits(
                       other.getGps())) return false;
+              if (!internalGetMetadata().equals(
+                  other.internalGetMetadata())) return false;
               if (!unknownFields.equals(other.unknownFields)) return false;
               return true;
             }
@@ -26313,12 +26668,18 @@ public final class RedvoxApiM {
               }
               int hash = 41;
               hash = (19 * hash) + getDescriptor().hashCode();
+              hash = (37 * hash) + UNIT_FIELD_NUMBER;
+              hash = (53 * hash) + unit_;
               hash = (37 * hash) + MACH_FIELD_NUMBER;
               hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
                   java.lang.Double.doubleToLongBits(getMach()));
               hash = (37 * hash) + GPS_FIELD_NUMBER;
               hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
                   java.lang.Double.doubleToLongBits(getGps()));
+              if (!internalGetMetadata().getMap().isEmpty()) {
+                hash = (37 * hash) + METADATA_FIELD_NUMBER;
+                hash = (53 * hash) + internalGetMetadata().hashCode();
+              }
               hash = (29 * hash) + unknownFields.hashCode();
               memoizedHashCode = hash;
               return hash;
@@ -26430,6 +26791,28 @@ public final class RedvoxApiM {
                 return io.redvox.apis.RedvoxApiM.internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_descriptor;
               }
 
+              @SuppressWarnings({"rawtypes"})
+              protected com.google.protobuf.MapField internalGetMapField(
+                  int number) {
+                switch (number) {
+                  case 4:
+                    return internalGetMetadata();
+                  default:
+                    throw new RuntimeException(
+                        "Invalid map field number: " + number);
+                }
+              }
+              @SuppressWarnings({"rawtypes"})
+              protected com.google.protobuf.MapField internalGetMutableMapField(
+                  int number) {
+                switch (number) {
+                  case 4:
+                    return internalGetMutableMetadata();
+                  default:
+                    throw new RuntimeException(
+                        "Invalid map field number: " + number);
+                }
+              }
               @java.lang.Override
               protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
                   internalGetFieldAccessorTable() {
@@ -26456,10 +26839,13 @@ public final class RedvoxApiM {
               @java.lang.Override
               public Builder clear() {
                 super.clear();
+                unit_ = 0;
+
                 mach_ = 0D;
 
                 gps_ = 0D;
 
+                internalGetMutableMetadata().clear();
                 return this;
               }
 
@@ -26486,8 +26872,12 @@ public final class RedvoxApiM {
               @java.lang.Override
               public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.BestTimestamp buildPartial() {
                 io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.BestTimestamp result = new io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.BestTimestamp(this);
+                int from_bitField0_ = bitField0_;
+                result.unit_ = unit_;
                 result.mach_ = mach_;
                 result.gps_ = gps_;
+                result.metadata_ = internalGetMetadata();
+                result.metadata_.makeImmutable();
                 onBuilt();
                 return result;
               }
@@ -26536,12 +26926,17 @@ public final class RedvoxApiM {
 
               public Builder mergeFrom(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.BestTimestamp other) {
                 if (other == io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.BestTimestamp.getDefaultInstance()) return this;
+                if (other.unit_ != 0) {
+                  setUnitValue(other.getUnitValue());
+                }
                 if (other.getMach() != 0D) {
                   setMach(other.getMach());
                 }
                 if (other.getGps() != 0D) {
                   setGps(other.getGps());
                 }
+                internalGetMutableMetadata().mergeFrom(
+                    other.internalGetMetadata());
                 this.mergeUnknownFields(other.unknownFields);
                 onChanged();
                 return this;
@@ -26570,6 +26965,79 @@ public final class RedvoxApiM {
                 }
                 return this;
               }
+              private int bitField0_;
+
+              private int unit_ = 0;
+              /**
+               * <pre>
+               * Unit of timestamps (should be microseconds since unix epoch UTC)
+               * </pre>
+               *
+               * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+               * @return The enum numeric value on the wire for unit.
+               */
+              public int getUnitValue() {
+                return unit_;
+              }
+              /**
+               * <pre>
+               * Unit of timestamps (should be microseconds since unix epoch UTC)
+               * </pre>
+               *
+               * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+               * @param value The enum numeric value on the wire for unit to set.
+               * @return This builder for chaining.
+               */
+              public Builder setUnitValue(int value) {
+                unit_ = value;
+                onChanged();
+                return this;
+              }
+              /**
+               * <pre>
+               * Unit of timestamps (should be microseconds since unix epoch UTC)
+               * </pre>
+               *
+               * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+               * @return The unit.
+               */
+              public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getUnit() {
+                @SuppressWarnings("deprecation")
+                io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(unit_);
+                return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+              }
+              /**
+               * <pre>
+               * Unit of timestamps (should be microseconds since unix epoch UTC)
+               * </pre>
+               *
+               * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+               * @param value The unit to set.
+               * @return This builder for chaining.
+               */
+              public Builder setUnit(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit value) {
+                if (value == null) {
+                  throw new NullPointerException();
+                }
+                
+                unit_ = value.getNumber();
+                onChanged();
+                return this;
+              }
+              /**
+               * <pre>
+               * Unit of timestamps (should be microseconds since unix epoch UTC)
+               * </pre>
+               *
+               * <code>.redvox_api_m.RedvoxPacketM.Unit unit = 1;</code>
+               * @return This builder for chaining.
+               */
+              public Builder clearUnit() {
+                
+                unit_ = 0;
+                onChanged();
+                return this;
+              }
 
               private double mach_ ;
               /**
@@ -26577,7 +27045,7 @@ public final class RedvoxApiM {
                * Best mach timestamp
                * </pre>
                *
-               * <code>double mach = 1;</code>
+               * <code>double mach = 2;</code>
                * @return The mach.
                */
               public double getMach() {
@@ -26588,7 +27056,7 @@ public final class RedvoxApiM {
                * Best mach timestamp
                * </pre>
                *
-               * <code>double mach = 1;</code>
+               * <code>double mach = 2;</code>
                * @param value The mach to set.
                * @return This builder for chaining.
                */
@@ -26603,7 +27071,7 @@ public final class RedvoxApiM {
                * Best mach timestamp
                * </pre>
                *
-               * <code>double mach = 1;</code>
+               * <code>double mach = 2;</code>
                * @return This builder for chaining.
                */
               public Builder clearMach() {
@@ -26619,7 +27087,7 @@ public final class RedvoxApiM {
                * Best gps timestamp
                * </pre>
                *
-               * <code>double gps = 2;</code>
+               * <code>double gps = 3;</code>
                * @return The gps.
                */
               public double getGps() {
@@ -26630,7 +27098,7 @@ public final class RedvoxApiM {
                * Best gps timestamp
                * </pre>
                *
-               * <code>double gps = 2;</code>
+               * <code>double gps = 3;</code>
                * @param value The gps to set.
                * @return This builder for chaining.
                */
@@ -26645,13 +27113,164 @@ public final class RedvoxApiM {
                * Best gps timestamp
                * </pre>
                *
-               * <code>double gps = 2;</code>
+               * <code>double gps = 3;</code>
                * @return This builder for chaining.
                */
               public Builder clearGps() {
                 
                 gps_ = 0D;
                 onChanged();
+                return this;
+              }
+
+              private com.google.protobuf.MapField<
+                  java.lang.String, java.lang.String> metadata_;
+              private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+              internalGetMetadata() {
+                if (metadata_ == null) {
+                  return com.google.protobuf.MapField.emptyMapField(
+                      MetadataDefaultEntryHolder.defaultEntry);
+                }
+                return metadata_;
+              }
+              private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+              internalGetMutableMetadata() {
+                onChanged();;
+                if (metadata_ == null) {
+                  metadata_ = com.google.protobuf.MapField.newMapField(
+                      MetadataDefaultEntryHolder.defaultEntry);
+                }
+                if (!metadata_.isMutable()) {
+                  metadata_ = metadata_.copy();
+                }
+                return metadata_;
+              }
+
+              public int getMetadataCount() {
+                return internalGetMetadata().getMap().size();
+              }
+              /**
+               * <pre>
+               * A map from string to string for including untyped metadata
+               * </pre>
+               *
+               * <code>map&lt;string, string&gt; metadata = 4;</code>
+               */
+
+              public boolean containsMetadata(
+                  java.lang.String key) {
+                if (key == null) { throw new java.lang.NullPointerException(); }
+                return internalGetMetadata().getMap().containsKey(key);
+              }
+              /**
+               * Use {@link #getMetadataMap()} instead.
+               */
+              @java.lang.Deprecated
+              public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+                return getMetadataMap();
+              }
+              /**
+               * <pre>
+               * A map from string to string for including untyped metadata
+               * </pre>
+               *
+               * <code>map&lt;string, string&gt; metadata = 4;</code>
+               */
+
+              public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+                return internalGetMetadata().getMap();
+              }
+              /**
+               * <pre>
+               * A map from string to string for including untyped metadata
+               * </pre>
+               *
+               * <code>map&lt;string, string&gt; metadata = 4;</code>
+               */
+
+              public java.lang.String getMetadataOrDefault(
+                  java.lang.String key,
+                  java.lang.String defaultValue) {
+                if (key == null) { throw new java.lang.NullPointerException(); }
+                java.util.Map<java.lang.String, java.lang.String> map =
+                    internalGetMetadata().getMap();
+                return map.containsKey(key) ? map.get(key) : defaultValue;
+              }
+              /**
+               * <pre>
+               * A map from string to string for including untyped metadata
+               * </pre>
+               *
+               * <code>map&lt;string, string&gt; metadata = 4;</code>
+               */
+
+              public java.lang.String getMetadataOrThrow(
+                  java.lang.String key) {
+                if (key == null) { throw new java.lang.NullPointerException(); }
+                java.util.Map<java.lang.String, java.lang.String> map =
+                    internalGetMetadata().getMap();
+                if (!map.containsKey(key)) {
+                  throw new java.lang.IllegalArgumentException();
+                }
+                return map.get(key);
+              }
+
+              public Builder clearMetadata() {
+                internalGetMutableMetadata().getMutableMap()
+                    .clear();
+                return this;
+              }
+              /**
+               * <pre>
+               * A map from string to string for including untyped metadata
+               * </pre>
+               *
+               * <code>map&lt;string, string&gt; metadata = 4;</code>
+               */
+
+              public Builder removeMetadata(
+                  java.lang.String key) {
+                if (key == null) { throw new java.lang.NullPointerException(); }
+                internalGetMutableMetadata().getMutableMap()
+                    .remove(key);
+                return this;
+              }
+              /**
+               * Use alternate mutation accessors instead.
+               */
+              @java.lang.Deprecated
+              public java.util.Map<java.lang.String, java.lang.String>
+              getMutableMetadata() {
+                return internalGetMutableMetadata().getMutableMap();
+              }
+              /**
+               * <pre>
+               * A map from string to string for including untyped metadata
+               * </pre>
+               *
+               * <code>map&lt;string, string&gt; metadata = 4;</code>
+               */
+              public Builder putMetadata(
+                  java.lang.String key,
+                  java.lang.String value) {
+                if (key == null) { throw new java.lang.NullPointerException(); }
+                if (value == null) { throw new java.lang.NullPointerException(); }
+                internalGetMutableMetadata().getMutableMap()
+                    .put(key, value);
+                return this;
+              }
+              /**
+               * <pre>
+               * A map from string to string for including untyped metadata
+               * </pre>
+               *
+               * <code>map&lt;string, string&gt; metadata = 4;</code>
+               */
+
+              public Builder putAllMetadata(
+                  java.util.Map<java.lang.String, java.lang.String> values) {
+                internalGetMutableMetadata().getMutableMap()
+                    .putAll(values);
                 return this;
               }
               @java.lang.Override
@@ -26847,98 +27466,206 @@ public final class RedvoxApiM {
             return getBearingTimestamp();
           }
 
-          public static final int LATITUDE_FIELD_NUMBER = 5;
+          public static final int LATITUDE_LONGITUDE_UNIT_FIELD_NUMBER = 5;
+          private int latitudeLongitudeUnit_;
+          /**
+           * <pre>
+           * Unit used for latitude/longitude (should be decimal degrees)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit latitude_longitude_unit = 5;</code>
+           * @return The enum numeric value on the wire for latitudeLongitudeUnit.
+           */
+          public int getLatitudeLongitudeUnitValue() {
+            return latitudeLongitudeUnit_;
+          }
+          /**
+           * <pre>
+           * Unit used for latitude/longitude (should be decimal degrees)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit latitude_longitude_unit = 5;</code>
+           * @return The latitudeLongitudeUnit.
+           */
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getLatitudeLongitudeUnit() {
+            @SuppressWarnings("deprecation")
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(latitudeLongitudeUnit_);
+            return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+          }
+
+          public static final int ALTITUDE_UNIT_FIELD_NUMBER = 6;
+          private int altitudeUnit_;
+          /**
+           * <pre>
+           * Unit used for altitude (should be meters)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit altitude_unit = 6;</code>
+           * @return The enum numeric value on the wire for altitudeUnit.
+           */
+          public int getAltitudeUnitValue() {
+            return altitudeUnit_;
+          }
+          /**
+           * <pre>
+           * Unit used for altitude (should be meters)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit altitude_unit = 6;</code>
+           * @return The altitudeUnit.
+           */
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getAltitudeUnit() {
+            @SuppressWarnings("deprecation")
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(altitudeUnit_);
+            return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+          }
+
+          public static final int SPEED_UNIT_FIELD_NUMBER = 7;
+          private int speedUnit_;
+          /**
+           * <pre>
+           * Unit used for speed (should be m/s)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit speed_unit = 7;</code>
+           * @return The enum numeric value on the wire for speedUnit.
+           */
+          public int getSpeedUnitValue() {
+            return speedUnit_;
+          }
+          /**
+           * <pre>
+           * Unit used for speed (should be m/s)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit speed_unit = 7;</code>
+           * @return The speedUnit.
+           */
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getSpeedUnit() {
+            @SuppressWarnings("deprecation")
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(speedUnit_);
+            return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+          }
+
+          public static final int BEARING_UNIT_FIELD_NUMBER = 8;
+          private int bearingUnit_;
+          /**
+           * <pre>
+           * Unit used for bearing (should be radians)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_unit = 8;</code>
+           * @return The enum numeric value on the wire for bearingUnit.
+           */
+          public int getBearingUnitValue() {
+            return bearingUnit_;
+          }
+          /**
+           * <pre>
+           * Unit used for bearing (should be radians)
+           * </pre>
+           *
+           * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_unit = 8;</code>
+           * @return The bearingUnit.
+           */
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getBearingUnit() {
+            @SuppressWarnings("deprecation")
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(bearingUnit_);
+            return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+          }
+
+          public static final int LATITUDE_FIELD_NUMBER = 9;
           private double latitude_;
           /**
            * <pre>
            * The best latitude
            * </pre>
            *
-           * <code>double latitude = 5;</code>
+           * <code>double latitude = 9;</code>
            * @return The latitude.
            */
           public double getLatitude() {
             return latitude_;
           }
 
-          public static final int LONGITUDE_FIELD_NUMBER = 6;
+          public static final int LONGITUDE_FIELD_NUMBER = 10;
           private double longitude_;
           /**
            * <pre>
            * The best longitude
            * </pre>
            *
-           * <code>double longitude = 6;</code>
+           * <code>double longitude = 10;</code>
            * @return The longitude.
            */
           public double getLongitude() {
             return longitude_;
           }
 
-          public static final int ALTITUDE_FIELD_NUMBER = 7;
+          public static final int ALTITUDE_FIELD_NUMBER = 11;
           private float altitude_;
           /**
            * <pre>
            * The best altitude
            * </pre>
            *
-           * <code>float altitude = 7;</code>
+           * <code>float altitude = 11;</code>
            * @return The altitude.
            */
           public float getAltitude() {
             return altitude_;
           }
 
-          public static final int SPEED_FIELD_NUMBER = 8;
+          public static final int SPEED_FIELD_NUMBER = 12;
           private float speed_;
           /**
            * <pre>
            * The best speed
            * </pre>
            *
-           * <code>float speed = 8;</code>
+           * <code>float speed = 12;</code>
            * @return The speed.
            */
           public float getSpeed() {
             return speed_;
           }
 
-          public static final int BEARING_FIELD_NUMBER = 9;
+          public static final int BEARING_FIELD_NUMBER = 13;
           private float bearing_;
           /**
            * <pre>
            * The best bearing
            * </pre>
            *
-           * <code>float bearing = 9;</code>
+           * <code>float bearing = 13;</code>
            * @return The bearing.
            */
           public float getBearing() {
             return bearing_;
           }
 
-          public static final int SCORE_FIELD_NUMBER = 10;
+          public static final int SCORE_FIELD_NUMBER = 14;
           private float score_;
           /**
            * <pre>
            * The best location score
            * </pre>
            *
-           * <code>float score = 10;</code>
+           * <code>float score = 14;</code>
            * @return The score.
            */
           public float getScore() {
             return score_;
           }
 
-          public static final int METHOD_FIELD_NUMBER = 11;
+          public static final int METHOD_FIELD_NUMBER = 15;
           private int method_;
           /**
            * <pre>
            * Method used to derive the location score
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 11;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
            * @return The enum numeric value on the wire for method.
            */
           public int getMethodValue() {
@@ -26949,7 +27676,7 @@ public final class RedvoxApiM {
            * Method used to derive the location score
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 11;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
            * @return The method.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod getMethod() {
@@ -26958,7 +27685,7 @@ public final class RedvoxApiM {
             return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod.UNRECOGNIZED : result;
           }
 
-          public static final int METADATA_FIELD_NUMBER = 12;
+          public static final int METADATA_FIELD_NUMBER = 16;
           private static final class MetadataDefaultEntryHolder {
             static final com.google.protobuf.MapEntry<
                 java.lang.String, java.lang.String> defaultEntry =
@@ -26989,7 +27716,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 12;</code>
+           * <code>map&lt;string, string&gt; metadata = 16;</code>
            */
 
           public boolean containsMetadata(
@@ -27009,7 +27736,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 12;</code>
+           * <code>map&lt;string, string&gt; metadata = 16;</code>
            */
 
           public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -27020,7 +27747,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 12;</code>
+           * <code>map&lt;string, string&gt; metadata = 16;</code>
            */
 
           public java.lang.String getMetadataOrDefault(
@@ -27036,7 +27763,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 12;</code>
+           * <code>map&lt;string, string&gt; metadata = 16;</code>
            */
 
           public java.lang.String getMetadataOrThrow(
@@ -27076,33 +27803,45 @@ public final class RedvoxApiM {
             if (bearingTimestamp_ != null) {
               output.writeMessage(4, getBearingTimestamp());
             }
+            if (latitudeLongitudeUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              output.writeEnum(5, latitudeLongitudeUnit_);
+            }
+            if (altitudeUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              output.writeEnum(6, altitudeUnit_);
+            }
+            if (speedUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              output.writeEnum(7, speedUnit_);
+            }
+            if (bearingUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              output.writeEnum(8, bearingUnit_);
+            }
             if (latitude_ != 0D) {
-              output.writeDouble(5, latitude_);
+              output.writeDouble(9, latitude_);
             }
             if (longitude_ != 0D) {
-              output.writeDouble(6, longitude_);
+              output.writeDouble(10, longitude_);
             }
             if (altitude_ != 0F) {
-              output.writeFloat(7, altitude_);
+              output.writeFloat(11, altitude_);
             }
             if (speed_ != 0F) {
-              output.writeFloat(8, speed_);
+              output.writeFloat(12, speed_);
             }
             if (bearing_ != 0F) {
-              output.writeFloat(9, bearing_);
+              output.writeFloat(13, bearing_);
             }
             if (score_ != 0F) {
-              output.writeFloat(10, score_);
+              output.writeFloat(14, score_);
             }
             if (method_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod.UNKNOWN_METHOD.getNumber()) {
-              output.writeEnum(11, method_);
+              output.writeEnum(15, method_);
             }
             com.google.protobuf.GeneratedMessageV3
               .serializeStringMapTo(
                 output,
                 internalGetMetadata(),
                 MetadataDefaultEntryHolder.defaultEntry,
-                12);
+                16);
             unknownFields.writeTo(output);
           }
 
@@ -27128,33 +27867,49 @@ public final class RedvoxApiM {
               size += com.google.protobuf.CodedOutputStream
                 .computeMessageSize(4, getBearingTimestamp());
             }
+            if (latitudeLongitudeUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeEnumSize(5, latitudeLongitudeUnit_);
+            }
+            if (altitudeUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeEnumSize(6, altitudeUnit_);
+            }
+            if (speedUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeEnumSize(7, speedUnit_);
+            }
+            if (bearingUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeEnumSize(8, bearingUnit_);
+            }
             if (latitude_ != 0D) {
               size += com.google.protobuf.CodedOutputStream
-                .computeDoubleSize(5, latitude_);
+                .computeDoubleSize(9, latitude_);
             }
             if (longitude_ != 0D) {
               size += com.google.protobuf.CodedOutputStream
-                .computeDoubleSize(6, longitude_);
+                .computeDoubleSize(10, longitude_);
             }
             if (altitude_ != 0F) {
               size += com.google.protobuf.CodedOutputStream
-                .computeFloatSize(7, altitude_);
+                .computeFloatSize(11, altitude_);
             }
             if (speed_ != 0F) {
               size += com.google.protobuf.CodedOutputStream
-                .computeFloatSize(8, speed_);
+                .computeFloatSize(12, speed_);
             }
             if (bearing_ != 0F) {
               size += com.google.protobuf.CodedOutputStream
-                .computeFloatSize(9, bearing_);
+                .computeFloatSize(13, bearing_);
             }
             if (score_ != 0F) {
               size += com.google.protobuf.CodedOutputStream
-                .computeFloatSize(10, score_);
+                .computeFloatSize(14, score_);
             }
             if (method_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod.UNKNOWN_METHOD.getNumber()) {
               size += com.google.protobuf.CodedOutputStream
-                .computeEnumSize(11, method_);
+                .computeEnumSize(15, method_);
             }
             for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
                  : internalGetMetadata().getMap().entrySet()) {
@@ -27164,7 +27919,7 @@ public final class RedvoxApiM {
                   .setValue(entry.getValue())
                   .build();
               size += com.google.protobuf.CodedOutputStream
-                  .computeMessageSize(12, metadata__);
+                  .computeMessageSize(16, metadata__);
             }
             size += unknownFields.getSerializedSize();
             memoizedSize = size;
@@ -27201,6 +27956,10 @@ public final class RedvoxApiM {
               if (!getBearingTimestamp()
                   .equals(other.getBearingTimestamp())) return false;
             }
+            if (latitudeLongitudeUnit_ != other.latitudeLongitudeUnit_) return false;
+            if (altitudeUnit_ != other.altitudeUnit_) return false;
+            if (speedUnit_ != other.speedUnit_) return false;
+            if (bearingUnit_ != other.bearingUnit_) return false;
             if (java.lang.Double.doubleToLongBits(getLatitude())
                 != java.lang.Double.doubleToLongBits(
                     other.getLatitude())) return false;
@@ -27249,6 +28008,14 @@ public final class RedvoxApiM {
               hash = (37 * hash) + BEARING_TIMESTAMP_FIELD_NUMBER;
               hash = (53 * hash) + getBearingTimestamp().hashCode();
             }
+            hash = (37 * hash) + LATITUDE_LONGITUDE_UNIT_FIELD_NUMBER;
+            hash = (53 * hash) + latitudeLongitudeUnit_;
+            hash = (37 * hash) + ALTITUDE_UNIT_FIELD_NUMBER;
+            hash = (53 * hash) + altitudeUnit_;
+            hash = (37 * hash) + SPEED_UNIT_FIELD_NUMBER;
+            hash = (53 * hash) + speedUnit_;
+            hash = (37 * hash) + BEARING_UNIT_FIELD_NUMBER;
+            hash = (53 * hash) + bearingUnit_;
             hash = (37 * hash) + LATITUDE_FIELD_NUMBER;
             hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
                 java.lang.Double.doubleToLongBits(getLatitude()));
@@ -27384,7 +28151,7 @@ public final class RedvoxApiM {
             protected com.google.protobuf.MapField internalGetMapField(
                 int number) {
               switch (number) {
-                case 12:
+                case 16:
                   return internalGetMetadata();
                 default:
                   throw new RuntimeException(
@@ -27395,7 +28162,7 @@ public final class RedvoxApiM {
             protected com.google.protobuf.MapField internalGetMutableMapField(
                 int number) {
               switch (number) {
-                case 12:
+                case 16:
                   return internalGetMutableMetadata();
                 default:
                   throw new RuntimeException(
@@ -27452,6 +28219,14 @@ public final class RedvoxApiM {
                 bearingTimestamp_ = null;
                 bearingTimestampBuilder_ = null;
               }
+              latitudeLongitudeUnit_ = 0;
+
+              altitudeUnit_ = 0;
+
+              speedUnit_ = 0;
+
+              bearingUnit_ = 0;
+
               latitude_ = 0D;
 
               longitude_ = 0D;
@@ -27514,6 +28289,10 @@ public final class RedvoxApiM {
               } else {
                 result.bearingTimestamp_ = bearingTimestampBuilder_.build();
               }
+              result.latitudeLongitudeUnit_ = latitudeLongitudeUnit_;
+              result.altitudeUnit_ = altitudeUnit_;
+              result.speedUnit_ = speedUnit_;
+              result.bearingUnit_ = bearingUnit_;
               result.latitude_ = latitude_;
               result.longitude_ = longitude_;
               result.altitude_ = altitude_;
@@ -27582,6 +28361,18 @@ public final class RedvoxApiM {
               }
               if (other.hasBearingTimestamp()) {
                 mergeBearingTimestamp(other.getBearingTimestamp());
+              }
+              if (other.latitudeLongitudeUnit_ != 0) {
+                setLatitudeLongitudeUnitValue(other.getLatitudeLongitudeUnitValue());
+              }
+              if (other.altitudeUnit_ != 0) {
+                setAltitudeUnitValue(other.getAltitudeUnitValue());
+              }
+              if (other.speedUnit_ != 0) {
+                setSpeedUnitValue(other.getSpeedUnitValue());
+              }
+              if (other.bearingUnit_ != 0) {
+                setBearingUnitValue(other.getBearingUnitValue());
               }
               if (other.getLatitude() != 0D) {
                 setLatitude(other.getLatitude());
@@ -28256,13 +29047,301 @@ public final class RedvoxApiM {
               return bearingTimestampBuilder_;
             }
 
+            private int latitudeLongitudeUnit_ = 0;
+            /**
+             * <pre>
+             * Unit used for latitude/longitude (should be decimal degrees)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit latitude_longitude_unit = 5;</code>
+             * @return The enum numeric value on the wire for latitudeLongitudeUnit.
+             */
+            public int getLatitudeLongitudeUnitValue() {
+              return latitudeLongitudeUnit_;
+            }
+            /**
+             * <pre>
+             * Unit used for latitude/longitude (should be decimal degrees)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit latitude_longitude_unit = 5;</code>
+             * @param value The enum numeric value on the wire for latitudeLongitudeUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setLatitudeLongitudeUnitValue(int value) {
+              latitudeLongitudeUnit_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for latitude/longitude (should be decimal degrees)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit latitude_longitude_unit = 5;</code>
+             * @return The latitudeLongitudeUnit.
+             */
+            public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getLatitudeLongitudeUnit() {
+              @SuppressWarnings("deprecation")
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(latitudeLongitudeUnit_);
+              return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+            }
+            /**
+             * <pre>
+             * Unit used for latitude/longitude (should be decimal degrees)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit latitude_longitude_unit = 5;</code>
+             * @param value The latitudeLongitudeUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setLatitudeLongitudeUnit(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit value) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              
+              latitudeLongitudeUnit_ = value.getNumber();
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for latitude/longitude (should be decimal degrees)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit latitude_longitude_unit = 5;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearLatitudeLongitudeUnit() {
+              
+              latitudeLongitudeUnit_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int altitudeUnit_ = 0;
+            /**
+             * <pre>
+             * Unit used for altitude (should be meters)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit altitude_unit = 6;</code>
+             * @return The enum numeric value on the wire for altitudeUnit.
+             */
+            public int getAltitudeUnitValue() {
+              return altitudeUnit_;
+            }
+            /**
+             * <pre>
+             * Unit used for altitude (should be meters)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit altitude_unit = 6;</code>
+             * @param value The enum numeric value on the wire for altitudeUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setAltitudeUnitValue(int value) {
+              altitudeUnit_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for altitude (should be meters)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit altitude_unit = 6;</code>
+             * @return The altitudeUnit.
+             */
+            public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getAltitudeUnit() {
+              @SuppressWarnings("deprecation")
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(altitudeUnit_);
+              return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+            }
+            /**
+             * <pre>
+             * Unit used for altitude (should be meters)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit altitude_unit = 6;</code>
+             * @param value The altitudeUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setAltitudeUnit(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit value) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              
+              altitudeUnit_ = value.getNumber();
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for altitude (should be meters)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit altitude_unit = 6;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearAltitudeUnit() {
+              
+              altitudeUnit_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int speedUnit_ = 0;
+            /**
+             * <pre>
+             * Unit used for speed (should be m/s)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit speed_unit = 7;</code>
+             * @return The enum numeric value on the wire for speedUnit.
+             */
+            public int getSpeedUnitValue() {
+              return speedUnit_;
+            }
+            /**
+             * <pre>
+             * Unit used for speed (should be m/s)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit speed_unit = 7;</code>
+             * @param value The enum numeric value on the wire for speedUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setSpeedUnitValue(int value) {
+              speedUnit_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for speed (should be m/s)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit speed_unit = 7;</code>
+             * @return The speedUnit.
+             */
+            public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getSpeedUnit() {
+              @SuppressWarnings("deprecation")
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(speedUnit_);
+              return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+            }
+            /**
+             * <pre>
+             * Unit used for speed (should be m/s)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit speed_unit = 7;</code>
+             * @param value The speedUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setSpeedUnit(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit value) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              
+              speedUnit_ = value.getNumber();
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for speed (should be m/s)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit speed_unit = 7;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearSpeedUnit() {
+              
+              speedUnit_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int bearingUnit_ = 0;
+            /**
+             * <pre>
+             * Unit used for bearing (should be radians)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_unit = 8;</code>
+             * @return The enum numeric value on the wire for bearingUnit.
+             */
+            public int getBearingUnitValue() {
+              return bearingUnit_;
+            }
+            /**
+             * <pre>
+             * Unit used for bearing (should be radians)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_unit = 8;</code>
+             * @param value The enum numeric value on the wire for bearingUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setBearingUnitValue(int value) {
+              bearingUnit_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for bearing (should be radians)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_unit = 8;</code>
+             * @return The bearingUnit.
+             */
+            public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit getBearingUnit() {
+              @SuppressWarnings("deprecation")
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit result = io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.valueOf(bearingUnit_);
+              return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNRECOGNIZED : result;
+            }
+            /**
+             * <pre>
+             * Unit used for bearing (should be radians)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_unit = 8;</code>
+             * @param value The bearingUnit to set.
+             * @return This builder for chaining.
+             */
+            public Builder setBearingUnit(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit value) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              
+              bearingUnit_ = value.getNumber();
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * Unit used for bearing (should be radians)
+             * </pre>
+             *
+             * <code>.redvox_api_m.RedvoxPacketM.Unit bearing_unit = 8;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearBearingUnit() {
+              
+              bearingUnit_ = 0;
+              onChanged();
+              return this;
+            }
+
             private double latitude_ ;
             /**
              * <pre>
              * The best latitude
              * </pre>
              *
-             * <code>double latitude = 5;</code>
+             * <code>double latitude = 9;</code>
              * @return The latitude.
              */
             public double getLatitude() {
@@ -28273,7 +29352,7 @@ public final class RedvoxApiM {
              * The best latitude
              * </pre>
              *
-             * <code>double latitude = 5;</code>
+             * <code>double latitude = 9;</code>
              * @param value The latitude to set.
              * @return This builder for chaining.
              */
@@ -28288,7 +29367,7 @@ public final class RedvoxApiM {
              * The best latitude
              * </pre>
              *
-             * <code>double latitude = 5;</code>
+             * <code>double latitude = 9;</code>
              * @return This builder for chaining.
              */
             public Builder clearLatitude() {
@@ -28304,7 +29383,7 @@ public final class RedvoxApiM {
              * The best longitude
              * </pre>
              *
-             * <code>double longitude = 6;</code>
+             * <code>double longitude = 10;</code>
              * @return The longitude.
              */
             public double getLongitude() {
@@ -28315,7 +29394,7 @@ public final class RedvoxApiM {
              * The best longitude
              * </pre>
              *
-             * <code>double longitude = 6;</code>
+             * <code>double longitude = 10;</code>
              * @param value The longitude to set.
              * @return This builder for chaining.
              */
@@ -28330,7 +29409,7 @@ public final class RedvoxApiM {
              * The best longitude
              * </pre>
              *
-             * <code>double longitude = 6;</code>
+             * <code>double longitude = 10;</code>
              * @return This builder for chaining.
              */
             public Builder clearLongitude() {
@@ -28346,7 +29425,7 @@ public final class RedvoxApiM {
              * The best altitude
              * </pre>
              *
-             * <code>float altitude = 7;</code>
+             * <code>float altitude = 11;</code>
              * @return The altitude.
              */
             public float getAltitude() {
@@ -28357,7 +29436,7 @@ public final class RedvoxApiM {
              * The best altitude
              * </pre>
              *
-             * <code>float altitude = 7;</code>
+             * <code>float altitude = 11;</code>
              * @param value The altitude to set.
              * @return This builder for chaining.
              */
@@ -28372,7 +29451,7 @@ public final class RedvoxApiM {
              * The best altitude
              * </pre>
              *
-             * <code>float altitude = 7;</code>
+             * <code>float altitude = 11;</code>
              * @return This builder for chaining.
              */
             public Builder clearAltitude() {
@@ -28388,7 +29467,7 @@ public final class RedvoxApiM {
              * The best speed
              * </pre>
              *
-             * <code>float speed = 8;</code>
+             * <code>float speed = 12;</code>
              * @return The speed.
              */
             public float getSpeed() {
@@ -28399,7 +29478,7 @@ public final class RedvoxApiM {
              * The best speed
              * </pre>
              *
-             * <code>float speed = 8;</code>
+             * <code>float speed = 12;</code>
              * @param value The speed to set.
              * @return This builder for chaining.
              */
@@ -28414,7 +29493,7 @@ public final class RedvoxApiM {
              * The best speed
              * </pre>
              *
-             * <code>float speed = 8;</code>
+             * <code>float speed = 12;</code>
              * @return This builder for chaining.
              */
             public Builder clearSpeed() {
@@ -28430,7 +29509,7 @@ public final class RedvoxApiM {
              * The best bearing
              * </pre>
              *
-             * <code>float bearing = 9;</code>
+             * <code>float bearing = 13;</code>
              * @return The bearing.
              */
             public float getBearing() {
@@ -28441,7 +29520,7 @@ public final class RedvoxApiM {
              * The best bearing
              * </pre>
              *
-             * <code>float bearing = 9;</code>
+             * <code>float bearing = 13;</code>
              * @param value The bearing to set.
              * @return This builder for chaining.
              */
@@ -28456,7 +29535,7 @@ public final class RedvoxApiM {
              * The best bearing
              * </pre>
              *
-             * <code>float bearing = 9;</code>
+             * <code>float bearing = 13;</code>
              * @return This builder for chaining.
              */
             public Builder clearBearing() {
@@ -28472,7 +29551,7 @@ public final class RedvoxApiM {
              * The best location score
              * </pre>
              *
-             * <code>float score = 10;</code>
+             * <code>float score = 14;</code>
              * @return The score.
              */
             public float getScore() {
@@ -28483,7 +29562,7 @@ public final class RedvoxApiM {
              * The best location score
              * </pre>
              *
-             * <code>float score = 10;</code>
+             * <code>float score = 14;</code>
              * @param value The score to set.
              * @return This builder for chaining.
              */
@@ -28498,7 +29577,7 @@ public final class RedvoxApiM {
              * The best location score
              * </pre>
              *
-             * <code>float score = 10;</code>
+             * <code>float score = 14;</code>
              * @return This builder for chaining.
              */
             public Builder clearScore() {
@@ -28514,7 +29593,7 @@ public final class RedvoxApiM {
              * Method used to derive the location score
              * </pre>
              *
-             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 11;</code>
+             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
              * @return The enum numeric value on the wire for method.
              */
             public int getMethodValue() {
@@ -28525,7 +29604,7 @@ public final class RedvoxApiM {
              * Method used to derive the location score
              * </pre>
              *
-             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 11;</code>
+             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
              * @param value The enum numeric value on the wire for method to set.
              * @return This builder for chaining.
              */
@@ -28539,7 +29618,7 @@ public final class RedvoxApiM {
              * Method used to derive the location score
              * </pre>
              *
-             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 11;</code>
+             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
              * @return The method.
              */
             public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod getMethod() {
@@ -28552,7 +29631,7 @@ public final class RedvoxApiM {
              * Method used to derive the location score
              * </pre>
              *
-             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 11;</code>
+             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
              * @param value The method to set.
              * @return This builder for chaining.
              */
@@ -28570,7 +29649,7 @@ public final class RedvoxApiM {
              * Method used to derive the location score
              * </pre>
              *
-             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 11;</code>
+             * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod method = 15;</code>
              * @return This builder for chaining.
              */
             public Builder clearMethod() {
@@ -28611,7 +29690,7 @@ public final class RedvoxApiM {
              * A map from string to string for including untyped metadata
              * </pre>
              *
-             * <code>map&lt;string, string&gt; metadata = 12;</code>
+             * <code>map&lt;string, string&gt; metadata = 16;</code>
              */
 
             public boolean containsMetadata(
@@ -28631,7 +29710,7 @@ public final class RedvoxApiM {
              * A map from string to string for including untyped metadata
              * </pre>
              *
-             * <code>map&lt;string, string&gt; metadata = 12;</code>
+             * <code>map&lt;string, string&gt; metadata = 16;</code>
              */
 
             public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -28642,7 +29721,7 @@ public final class RedvoxApiM {
              * A map from string to string for including untyped metadata
              * </pre>
              *
-             * <code>map&lt;string, string&gt; metadata = 12;</code>
+             * <code>map&lt;string, string&gt; metadata = 16;</code>
              */
 
             public java.lang.String getMetadataOrDefault(
@@ -28658,7 +29737,7 @@ public final class RedvoxApiM {
              * A map from string to string for including untyped metadata
              * </pre>
              *
-             * <code>map&lt;string, string&gt; metadata = 12;</code>
+             * <code>map&lt;string, string&gt; metadata = 16;</code>
              */
 
             public java.lang.String getMetadataOrThrow(
@@ -28682,7 +29761,7 @@ public final class RedvoxApiM {
              * A map from string to string for including untyped metadata
              * </pre>
              *
-             * <code>map&lt;string, string&gt; metadata = 12;</code>
+             * <code>map&lt;string, string&gt; metadata = 16;</code>
              */
 
             public Builder removeMetadata(
@@ -28705,7 +29784,7 @@ public final class RedvoxApiM {
              * A map from string to string for including untyped metadata
              * </pre>
              *
-             * <code>map&lt;string, string&gt; metadata = 12;</code>
+             * <code>map&lt;string, string&gt; metadata = 16;</code>
              */
             public Builder putMetadata(
                 java.lang.String key,
@@ -28721,7 +29800,7 @@ public final class RedvoxApiM {
              * A map from string to string for including untyped metadata
              * </pre>
              *
-             * <code>map&lt;string, string&gt; metadata = 12;</code>
+             * <code>map&lt;string, string&gt; metadata = 16;</code>
              */
 
             public Builder putAllMetadata(
@@ -40909,10 +41988,37 @@ public final class RedvoxApiM {
 
       /**
        * <pre>
+       * List of timestamps, each associated with one Event
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+       * @return Whether the timestamps field is set.
+       */
+      boolean hasTimestamps();
+      /**
+       * <pre>
+       * List of timestamps, each associated with one Event
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+       * @return The timestamps.
+       */
+      io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload getTimestamps();
+      /**
+       * <pre>
+       * List of timestamps, each associated with one Event
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+       */
+      io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder getTimestampsOrBuilder();
+
+      /**
+       * <pre>
        * List of events that belong to this stream
        * </pre>
        *
-       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
        */
       java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event> 
           getEventsList();
@@ -40921,7 +42027,7 @@ public final class RedvoxApiM {
        * List of events that belong to this stream
        * </pre>
        *
-       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
        */
       io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event getEvents(int index);
       /**
@@ -40929,7 +42035,7 @@ public final class RedvoxApiM {
        * List of events that belong to this stream
        * </pre>
        *
-       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
        */
       int getEventsCount();
       /**
@@ -40937,7 +42043,7 @@ public final class RedvoxApiM {
        * List of events that belong to this stream
        * </pre>
        *
-       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
        */
       java.util.List<? extends io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.EventOrBuilder> 
           getEventsOrBuilderList();
@@ -40946,7 +42052,7 @@ public final class RedvoxApiM {
        * List of events that belong to this stream
        * </pre>
        *
-       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
        */
       io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.EventOrBuilder getEventsOrBuilder(
           int index);
@@ -40956,7 +42062,7 @@ public final class RedvoxApiM {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
       int getMetadataCount();
       /**
@@ -40964,7 +42070,7 @@ public final class RedvoxApiM {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
       boolean containsMetadata(
           java.lang.String key);
@@ -40979,7 +42085,7 @@ public final class RedvoxApiM {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
       java.util.Map<java.lang.String, java.lang.String>
       getMetadataMap();
@@ -40988,7 +42094,7 @@ public final class RedvoxApiM {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
       java.lang.String getMetadataOrDefault(
@@ -40999,7 +42105,7 @@ public final class RedvoxApiM {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
       java.lang.String getMetadataOrThrow(
@@ -41064,6 +42170,19 @@ public final class RedvoxApiM {
                 break;
               }
               case 18: {
+                io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder subBuilder = null;
+                if (timestamps_ != null) {
+                  subBuilder = timestamps_.toBuilder();
+                }
+                timestamps_ = input.readMessage(io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(timestamps_);
+                  timestamps_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
                 if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   events_ = new java.util.ArrayList<io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event>();
                   mutable_bitField0_ |= 0x00000001;
@@ -41072,7 +42191,7 @@ public final class RedvoxApiM {
                     input.readMessage(io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event.parser(), extensionRegistry));
                 break;
               }
-              case 26: {
+              case 34: {
                 if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                   metadata_ = com.google.protobuf.MapField.newMapField(
                       MetadataDefaultEntryHolder.defaultEntry);
@@ -41117,7 +42236,7 @@ public final class RedvoxApiM {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 3:
+          case 4:
             return internalGetMetadata();
           default:
             throw new RuntimeException(
@@ -41138,20 +42257,10 @@ public final class RedvoxApiM {
 
         /**
          * <pre>
-         * Timestamp of the event
-         * </pre>
-         *
-         * <code>double timestamp = 1;</code>
-         * @return The timestamp.
-         */
-        double getTimestamp();
-
-        /**
-         * <pre>
          * Textual description of the event
          * </pre>
          *
-         * <code>string description = 2;</code>
+         * <code>string description = 1;</code>
          * @return The description.
          */
         java.lang.String getDescription();
@@ -41160,7 +42269,7 @@ public final class RedvoxApiM {
          * Textual description of the event
          * </pre>
          *
-         * <code>string description = 2;</code>
+         * <code>string description = 1;</code>
          * @return The bytes for description.
          */
         com.google.protobuf.ByteString
@@ -41171,7 +42280,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to string
          * </pre>
          *
-         * <code>map&lt;string, string&gt; string_payload = 3;</code>
+         * <code>map&lt;string, string&gt; string_payload = 2;</code>
          */
         int getStringPayloadCount();
         /**
@@ -41179,7 +42288,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to string
          * </pre>
          *
-         * <code>map&lt;string, string&gt; string_payload = 3;</code>
+         * <code>map&lt;string, string&gt; string_payload = 2;</code>
          */
         boolean containsStringPayload(
             java.lang.String key);
@@ -41194,7 +42303,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to string
          * </pre>
          *
-         * <code>map&lt;string, string&gt; string_payload = 3;</code>
+         * <code>map&lt;string, string&gt; string_payload = 2;</code>
          */
         java.util.Map<java.lang.String, java.lang.String>
         getStringPayloadMap();
@@ -41203,7 +42312,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to string
          * </pre>
          *
-         * <code>map&lt;string, string&gt; string_payload = 3;</code>
+         * <code>map&lt;string, string&gt; string_payload = 2;</code>
          */
 
         java.lang.String getStringPayloadOrDefault(
@@ -41214,7 +42323,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to string
          * </pre>
          *
-         * <code>map&lt;string, string&gt; string_payload = 3;</code>
+         * <code>map&lt;string, string&gt; string_payload = 2;</code>
          */
 
         java.lang.String getStringPayloadOrThrow(
@@ -41225,7 +42334,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to double
          * </pre>
          *
-         * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+         * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
          */
         int getNumericPayloadCount();
         /**
@@ -41233,7 +42342,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to double
          * </pre>
          *
-         * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+         * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
          */
         boolean containsNumericPayload(
             java.lang.String key);
@@ -41248,7 +42357,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to double
          * </pre>
          *
-         * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+         * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
          */
         java.util.Map<java.lang.String, java.lang.Double>
         getNumericPayloadMap();
@@ -41257,7 +42366,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to double
          * </pre>
          *
-         * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+         * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
          */
 
         double getNumericPayloadOrDefault(
@@ -41268,7 +42377,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to double
          * </pre>
          *
-         * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+         * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
          */
 
         double getNumericPayloadOrThrow(
@@ -41279,7 +42388,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to boolean
          * </pre>
          *
-         * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+         * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
          */
         int getBooleanPayloadCount();
         /**
@@ -41287,7 +42396,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to boolean
          * </pre>
          *
-         * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+         * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
          */
         boolean containsBooleanPayload(
             java.lang.String key);
@@ -41302,7 +42411,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to boolean
          * </pre>
          *
-         * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+         * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
          */
         java.util.Map<java.lang.String, java.lang.Boolean>
         getBooleanPayloadMap();
@@ -41311,7 +42420,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to boolean
          * </pre>
          *
-         * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+         * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
          */
 
         boolean getBooleanPayloadOrDefault(
@@ -41322,7 +42431,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to boolean
          * </pre>
          *
-         * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+         * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
          */
 
         boolean getBooleanPayloadOrThrow(
@@ -41334,7 +42443,7 @@ public final class RedvoxApiM {
          * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
          * </pre>
          *
-         * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+         * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
          */
         int getBytePayloadCount();
         /**
@@ -41343,7 +42452,7 @@ public final class RedvoxApiM {
          * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
          * </pre>
          *
-         * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+         * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
          */
         boolean containsBytePayload(
             java.lang.String key);
@@ -41359,7 +42468,7 @@ public final class RedvoxApiM {
          * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
          * </pre>
          *
-         * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+         * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
          */
         java.util.Map<java.lang.String, com.google.protobuf.ByteString>
         getBytePayloadMap();
@@ -41369,7 +42478,7 @@ public final class RedvoxApiM {
          * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
          * </pre>
          *
-         * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+         * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
          */
 
         com.google.protobuf.ByteString getBytePayloadOrDefault(
@@ -41381,7 +42490,7 @@ public final class RedvoxApiM {
          * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
          * </pre>
          *
-         * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+         * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
          */
 
         com.google.protobuf.ByteString getBytePayloadOrThrow(
@@ -41392,7 +42501,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         * <code>map&lt;string, string&gt; metadata = 6;</code>
          */
         int getMetadataCount();
         /**
@@ -41400,7 +42509,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         * <code>map&lt;string, string&gt; metadata = 6;</code>
          */
         boolean containsMetadata(
             java.lang.String key);
@@ -41415,7 +42524,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         * <code>map&lt;string, string&gt; metadata = 6;</code>
          */
         java.util.Map<java.lang.String, java.lang.String>
         getMetadataMap();
@@ -41424,7 +42533,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         * <code>map&lt;string, string&gt; metadata = 6;</code>
          */
 
         java.lang.String getMetadataOrDefault(
@@ -41435,7 +42544,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         * <code>map&lt;string, string&gt; metadata = 6;</code>
          */
 
         java.lang.String getMetadataOrThrow(
@@ -41488,18 +42597,13 @@ public final class RedvoxApiM {
                 case 0:
                   done = true;
                   break;
-                case 9: {
-
-                  timestamp_ = input.readDouble();
-                  break;
-                }
-                case 18: {
+                case 10: {
                   java.lang.String s = input.readStringRequireUtf8();
 
                   description_ = s;
                   break;
                 }
-                case 26: {
+                case 18: {
                   if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                     stringPayload_ = com.google.protobuf.MapField.newMapField(
                         StringPayloadDefaultEntryHolder.defaultEntry);
@@ -41512,7 +42616,7 @@ public final class RedvoxApiM {
                       stringPayload__.getKey(), stringPayload__.getValue());
                   break;
                 }
-                case 34: {
+                case 26: {
                   if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                     numericPayload_ = com.google.protobuf.MapField.newMapField(
                         NumericPayloadDefaultEntryHolder.defaultEntry);
@@ -41525,7 +42629,7 @@ public final class RedvoxApiM {
                       numericPayload__.getKey(), numericPayload__.getValue());
                   break;
                 }
-                case 42: {
+                case 34: {
                   if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                     booleanPayload_ = com.google.protobuf.MapField.newMapField(
                         BooleanPayloadDefaultEntryHolder.defaultEntry);
@@ -41538,7 +42642,7 @@ public final class RedvoxApiM {
                       booleanPayload__.getKey(), booleanPayload__.getValue());
                   break;
                 }
-                case 50: {
+                case 42: {
                   if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                     bytePayload_ = com.google.protobuf.MapField.newMapField(
                         BytePayloadDefaultEntryHolder.defaultEntry);
@@ -41551,7 +42655,7 @@ public final class RedvoxApiM {
                       bytePayload__.getKey(), bytePayload__.getValue());
                   break;
                 }
-                case 58: {
+                case 50: {
                   if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                     metadata_ = com.google.protobuf.MapField.newMapField(
                         MetadataDefaultEntryHolder.defaultEntry);
@@ -41593,15 +42697,15 @@ public final class RedvoxApiM {
         protected com.google.protobuf.MapField internalGetMapField(
             int number) {
           switch (number) {
-            case 3:
+            case 2:
               return internalGetStringPayload();
-            case 4:
+            case 3:
               return internalGetNumericPayload();
-            case 5:
+            case 4:
               return internalGetBooleanPayload();
-            case 6:
+            case 5:
               return internalGetBytePayload();
-            case 7:
+            case 6:
               return internalGetMetadata();
             default:
               throw new RuntimeException(
@@ -41616,28 +42720,14 @@ public final class RedvoxApiM {
                   io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event.class, io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event.Builder.class);
         }
 
-        public static final int TIMESTAMP_FIELD_NUMBER = 1;
-        private double timestamp_;
-        /**
-         * <pre>
-         * Timestamp of the event
-         * </pre>
-         *
-         * <code>double timestamp = 1;</code>
-         * @return The timestamp.
-         */
-        public double getTimestamp() {
-          return timestamp_;
-        }
-
-        public static final int DESCRIPTION_FIELD_NUMBER = 2;
+        public static final int DESCRIPTION_FIELD_NUMBER = 1;
         private volatile java.lang.Object description_;
         /**
          * <pre>
          * Textual description of the event
          * </pre>
          *
-         * <code>string description = 2;</code>
+         * <code>string description = 1;</code>
          * @return The description.
          */
         public java.lang.String getDescription() {
@@ -41657,7 +42747,7 @@ public final class RedvoxApiM {
          * Textual description of the event
          * </pre>
          *
-         * <code>string description = 2;</code>
+         * <code>string description = 1;</code>
          * @return The bytes for description.
          */
         public com.google.protobuf.ByteString
@@ -41674,7 +42764,7 @@ public final class RedvoxApiM {
           }
         }
 
-        public static final int STRING_PAYLOAD_FIELD_NUMBER = 3;
+        public static final int STRING_PAYLOAD_FIELD_NUMBER = 2;
         private static final class StringPayloadDefaultEntryHolder {
           static final com.google.protobuf.MapEntry<
               java.lang.String, java.lang.String> defaultEntry =
@@ -41705,7 +42795,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to string
          * </pre>
          *
-         * <code>map&lt;string, string&gt; string_payload = 3;</code>
+         * <code>map&lt;string, string&gt; string_payload = 2;</code>
          */
 
         public boolean containsStringPayload(
@@ -41725,7 +42815,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to string
          * </pre>
          *
-         * <code>map&lt;string, string&gt; string_payload = 3;</code>
+         * <code>map&lt;string, string&gt; string_payload = 2;</code>
          */
 
         public java.util.Map<java.lang.String, java.lang.String> getStringPayloadMap() {
@@ -41736,7 +42826,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to string
          * </pre>
          *
-         * <code>map&lt;string, string&gt; string_payload = 3;</code>
+         * <code>map&lt;string, string&gt; string_payload = 2;</code>
          */
 
         public java.lang.String getStringPayloadOrDefault(
@@ -41752,7 +42842,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to string
          * </pre>
          *
-         * <code>map&lt;string, string&gt; string_payload = 3;</code>
+         * <code>map&lt;string, string&gt; string_payload = 2;</code>
          */
 
         public java.lang.String getStringPayloadOrThrow(
@@ -41766,7 +42856,7 @@ public final class RedvoxApiM {
           return map.get(key);
         }
 
-        public static final int NUMERIC_PAYLOAD_FIELD_NUMBER = 4;
+        public static final int NUMERIC_PAYLOAD_FIELD_NUMBER = 3;
         private static final class NumericPayloadDefaultEntryHolder {
           static final com.google.protobuf.MapEntry<
               java.lang.String, java.lang.Double> defaultEntry =
@@ -41797,7 +42887,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to double
          * </pre>
          *
-         * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+         * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
          */
 
         public boolean containsNumericPayload(
@@ -41817,7 +42907,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to double
          * </pre>
          *
-         * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+         * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
          */
 
         public java.util.Map<java.lang.String, java.lang.Double> getNumericPayloadMap() {
@@ -41828,7 +42918,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to double
          * </pre>
          *
-         * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+         * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
          */
 
         public double getNumericPayloadOrDefault(
@@ -41844,7 +42934,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to double
          * </pre>
          *
-         * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+         * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
          */
 
         public double getNumericPayloadOrThrow(
@@ -41858,7 +42948,7 @@ public final class RedvoxApiM {
           return map.get(key);
         }
 
-        public static final int BOOLEAN_PAYLOAD_FIELD_NUMBER = 5;
+        public static final int BOOLEAN_PAYLOAD_FIELD_NUMBER = 4;
         private static final class BooleanPayloadDefaultEntryHolder {
           static final com.google.protobuf.MapEntry<
               java.lang.String, java.lang.Boolean> defaultEntry =
@@ -41889,7 +42979,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to boolean
          * </pre>
          *
-         * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+         * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
          */
 
         public boolean containsBooleanPayload(
@@ -41909,7 +42999,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to boolean
          * </pre>
          *
-         * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+         * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
          */
 
         public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanPayloadMap() {
@@ -41920,7 +43010,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to boolean
          * </pre>
          *
-         * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+         * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
          */
 
         public boolean getBooleanPayloadOrDefault(
@@ -41936,7 +43026,7 @@ public final class RedvoxApiM {
          * Key-pairs of type string to boolean
          * </pre>
          *
-         * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+         * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
          */
 
         public boolean getBooleanPayloadOrThrow(
@@ -41950,7 +43040,7 @@ public final class RedvoxApiM {
           return map.get(key);
         }
 
-        public static final int BYTE_PAYLOAD_FIELD_NUMBER = 6;
+        public static final int BYTE_PAYLOAD_FIELD_NUMBER = 5;
         private static final class BytePayloadDefaultEntryHolder {
           static final com.google.protobuf.MapEntry<
               java.lang.String, com.google.protobuf.ByteString> defaultEntry =
@@ -41982,7 +43072,7 @@ public final class RedvoxApiM {
          * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
          * </pre>
          *
-         * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+         * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
          */
 
         public boolean containsBytePayload(
@@ -42003,7 +43093,7 @@ public final class RedvoxApiM {
          * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
          * </pre>
          *
-         * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+         * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
          */
 
         public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getBytePayloadMap() {
@@ -42015,7 +43105,7 @@ public final class RedvoxApiM {
          * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
          * </pre>
          *
-         * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+         * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
          */
 
         public com.google.protobuf.ByteString getBytePayloadOrDefault(
@@ -42032,7 +43122,7 @@ public final class RedvoxApiM {
          * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
          * </pre>
          *
-         * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+         * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
          */
 
         public com.google.protobuf.ByteString getBytePayloadOrThrow(
@@ -42046,7 +43136,7 @@ public final class RedvoxApiM {
           return map.get(key);
         }
 
-        public static final int METADATA_FIELD_NUMBER = 7;
+        public static final int METADATA_FIELD_NUMBER = 6;
         private static final class MetadataDefaultEntryHolder {
           static final com.google.protobuf.MapEntry<
               java.lang.String, java.lang.String> defaultEntry =
@@ -42077,7 +43167,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         * <code>map&lt;string, string&gt; metadata = 6;</code>
          */
 
         public boolean containsMetadata(
@@ -42097,7 +43187,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         * <code>map&lt;string, string&gt; metadata = 6;</code>
          */
 
         public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -42108,7 +43198,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         * <code>map&lt;string, string&gt; metadata = 6;</code>
          */
 
         public java.lang.String getMetadataOrDefault(
@@ -42124,7 +43214,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 7;</code>
+         * <code>map&lt;string, string&gt; metadata = 6;</code>
          */
 
         public java.lang.String getMetadataOrThrow(
@@ -42152,42 +43242,39 @@ public final class RedvoxApiM {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (timestamp_ != 0D) {
-            output.writeDouble(1, timestamp_);
-          }
           if (!getDescriptionBytes().isEmpty()) {
-            com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
           }
           com.google.protobuf.GeneratedMessageV3
             .serializeStringMapTo(
               output,
               internalGetStringPayload(),
               StringPayloadDefaultEntryHolder.defaultEntry,
-              3);
+              2);
           com.google.protobuf.GeneratedMessageV3
             .serializeStringMapTo(
               output,
               internalGetNumericPayload(),
               NumericPayloadDefaultEntryHolder.defaultEntry,
-              4);
+              3);
           com.google.protobuf.GeneratedMessageV3
             .serializeStringMapTo(
               output,
               internalGetBooleanPayload(),
               BooleanPayloadDefaultEntryHolder.defaultEntry,
-              5);
+              4);
           com.google.protobuf.GeneratedMessageV3
             .serializeStringMapTo(
               output,
               internalGetBytePayload(),
               BytePayloadDefaultEntryHolder.defaultEntry,
-              6);
+              5);
           com.google.protobuf.GeneratedMessageV3
             .serializeStringMapTo(
               output,
               internalGetMetadata(),
               MetadataDefaultEntryHolder.defaultEntry,
-              7);
+              6);
           unknownFields.writeTo(output);
         }
 
@@ -42197,12 +43284,8 @@ public final class RedvoxApiM {
           if (size != -1) return size;
 
           size = 0;
-          if (timestamp_ != 0D) {
-            size += com.google.protobuf.CodedOutputStream
-              .computeDoubleSize(1, timestamp_);
-          }
           if (!getDescriptionBytes().isEmpty()) {
-            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
           }
           for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
                : internalGetStringPayload().getMap().entrySet()) {
@@ -42212,7 +43295,7 @@ public final class RedvoxApiM {
                 .setValue(entry.getValue())
                 .build();
             size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(3, stringPayload__);
+                .computeMessageSize(2, stringPayload__);
           }
           for (java.util.Map.Entry<java.lang.String, java.lang.Double> entry
                : internalGetNumericPayload().getMap().entrySet()) {
@@ -42222,7 +43305,7 @@ public final class RedvoxApiM {
                 .setValue(entry.getValue())
                 .build();
             size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(4, numericPayload__);
+                .computeMessageSize(3, numericPayload__);
           }
           for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
                : internalGetBooleanPayload().getMap().entrySet()) {
@@ -42232,7 +43315,7 @@ public final class RedvoxApiM {
                 .setValue(entry.getValue())
                 .build();
             size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(5, booleanPayload__);
+                .computeMessageSize(4, booleanPayload__);
           }
           for (java.util.Map.Entry<java.lang.String, com.google.protobuf.ByteString> entry
                : internalGetBytePayload().getMap().entrySet()) {
@@ -42242,7 +43325,7 @@ public final class RedvoxApiM {
                 .setValue(entry.getValue())
                 .build();
             size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(6, bytePayload__);
+                .computeMessageSize(5, bytePayload__);
           }
           for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
                : internalGetMetadata().getMap().entrySet()) {
@@ -42252,7 +43335,7 @@ public final class RedvoxApiM {
                 .setValue(entry.getValue())
                 .build();
             size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(7, metadata__);
+                .computeMessageSize(6, metadata__);
           }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
@@ -42269,9 +43352,6 @@ public final class RedvoxApiM {
           }
           io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event other = (io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event) obj;
 
-          if (java.lang.Double.doubleToLongBits(getTimestamp())
-              != java.lang.Double.doubleToLongBits(
-                  other.getTimestamp())) return false;
           if (!getDescription()
               .equals(other.getDescription())) return false;
           if (!internalGetStringPayload().equals(
@@ -42295,9 +43375,6 @@ public final class RedvoxApiM {
           }
           int hash = 41;
           hash = (19 * hash) + getDescriptor().hashCode();
-          hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
-          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              java.lang.Double.doubleToLongBits(getTimestamp()));
           hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
           hash = (53 * hash) + getDescription().hashCode();
           if (!internalGetStringPayload().getMap().isEmpty()) {
@@ -42431,15 +43508,15 @@ public final class RedvoxApiM {
           protected com.google.protobuf.MapField internalGetMapField(
               int number) {
             switch (number) {
-              case 3:
+              case 2:
                 return internalGetStringPayload();
-              case 4:
+              case 3:
                 return internalGetNumericPayload();
-              case 5:
+              case 4:
                 return internalGetBooleanPayload();
-              case 6:
+              case 5:
                 return internalGetBytePayload();
-              case 7:
+              case 6:
                 return internalGetMetadata();
               default:
                 throw new RuntimeException(
@@ -42450,15 +43527,15 @@ public final class RedvoxApiM {
           protected com.google.protobuf.MapField internalGetMutableMapField(
               int number) {
             switch (number) {
-              case 3:
+              case 2:
                 return internalGetMutableStringPayload();
-              case 4:
+              case 3:
                 return internalGetMutableNumericPayload();
-              case 5:
+              case 4:
                 return internalGetMutableBooleanPayload();
-              case 6:
+              case 5:
                 return internalGetMutableBytePayload();
-              case 7:
+              case 6:
                 return internalGetMutableMetadata();
               default:
                 throw new RuntimeException(
@@ -42491,8 +43568,6 @@ public final class RedvoxApiM {
           @java.lang.Override
           public Builder clear() {
             super.clear();
-            timestamp_ = 0D;
-
             description_ = "";
 
             internalGetMutableStringPayload().clear();
@@ -42527,7 +43602,6 @@ public final class RedvoxApiM {
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event buildPartial() {
             io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event result = new io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event(this);
             int from_bitField0_ = bitField0_;
-            result.timestamp_ = timestamp_;
             result.description_ = description_;
             result.stringPayload_ = internalGetStringPayload();
             result.stringPayload_.makeImmutable();
@@ -42587,9 +43661,6 @@ public final class RedvoxApiM {
 
           public Builder mergeFrom(io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event other) {
             if (other == io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event.getDefaultInstance()) return this;
-            if (other.getTimestamp() != 0D) {
-              setTimestamp(other.getTimestamp());
-            }
             if (!other.getDescription().isEmpty()) {
               description_ = other.description_;
               onChanged();
@@ -42634,55 +43705,13 @@ public final class RedvoxApiM {
           }
           private int bitField0_;
 
-          private double timestamp_ ;
-          /**
-           * <pre>
-           * Timestamp of the event
-           * </pre>
-           *
-           * <code>double timestamp = 1;</code>
-           * @return The timestamp.
-           */
-          public double getTimestamp() {
-            return timestamp_;
-          }
-          /**
-           * <pre>
-           * Timestamp of the event
-           * </pre>
-           *
-           * <code>double timestamp = 1;</code>
-           * @param value The timestamp to set.
-           * @return This builder for chaining.
-           */
-          public Builder setTimestamp(double value) {
-            
-            timestamp_ = value;
-            onChanged();
-            return this;
-          }
-          /**
-           * <pre>
-           * Timestamp of the event
-           * </pre>
-           *
-           * <code>double timestamp = 1;</code>
-           * @return This builder for chaining.
-           */
-          public Builder clearTimestamp() {
-            
-            timestamp_ = 0D;
-            onChanged();
-            return this;
-          }
-
           private java.lang.Object description_ = "";
           /**
            * <pre>
            * Textual description of the event
            * </pre>
            *
-           * <code>string description = 2;</code>
+           * <code>string description = 1;</code>
            * @return The description.
            */
           public java.lang.String getDescription() {
@@ -42702,7 +43731,7 @@ public final class RedvoxApiM {
            * Textual description of the event
            * </pre>
            *
-           * <code>string description = 2;</code>
+           * <code>string description = 1;</code>
            * @return The bytes for description.
            */
           public com.google.protobuf.ByteString
@@ -42723,7 +43752,7 @@ public final class RedvoxApiM {
            * Textual description of the event
            * </pre>
            *
-           * <code>string description = 2;</code>
+           * <code>string description = 1;</code>
            * @param value The description to set.
            * @return This builder for chaining.
            */
@@ -42742,7 +43771,7 @@ public final class RedvoxApiM {
            * Textual description of the event
            * </pre>
            *
-           * <code>string description = 2;</code>
+           * <code>string description = 1;</code>
            * @return This builder for chaining.
            */
           public Builder clearDescription() {
@@ -42756,7 +43785,7 @@ public final class RedvoxApiM {
            * Textual description of the event
            * </pre>
            *
-           * <code>string description = 2;</code>
+           * <code>string description = 1;</code>
            * @param value The bytes for description to set.
            * @return This builder for chaining.
            */
@@ -42803,7 +43832,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to string
            * </pre>
            *
-           * <code>map&lt;string, string&gt; string_payload = 3;</code>
+           * <code>map&lt;string, string&gt; string_payload = 2;</code>
            */
 
           public boolean containsStringPayload(
@@ -42823,7 +43852,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to string
            * </pre>
            *
-           * <code>map&lt;string, string&gt; string_payload = 3;</code>
+           * <code>map&lt;string, string&gt; string_payload = 2;</code>
            */
 
           public java.util.Map<java.lang.String, java.lang.String> getStringPayloadMap() {
@@ -42834,7 +43863,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to string
            * </pre>
            *
-           * <code>map&lt;string, string&gt; string_payload = 3;</code>
+           * <code>map&lt;string, string&gt; string_payload = 2;</code>
            */
 
           public java.lang.String getStringPayloadOrDefault(
@@ -42850,7 +43879,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to string
            * </pre>
            *
-           * <code>map&lt;string, string&gt; string_payload = 3;</code>
+           * <code>map&lt;string, string&gt; string_payload = 2;</code>
            */
 
           public java.lang.String getStringPayloadOrThrow(
@@ -42874,7 +43903,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to string
            * </pre>
            *
-           * <code>map&lt;string, string&gt; string_payload = 3;</code>
+           * <code>map&lt;string, string&gt; string_payload = 2;</code>
            */
 
           public Builder removeStringPayload(
@@ -42897,7 +43926,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to string
            * </pre>
            *
-           * <code>map&lt;string, string&gt; string_payload = 3;</code>
+           * <code>map&lt;string, string&gt; string_payload = 2;</code>
            */
           public Builder putStringPayload(
               java.lang.String key,
@@ -42913,7 +43942,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to string
            * </pre>
            *
-           * <code>map&lt;string, string&gt; string_payload = 3;</code>
+           * <code>map&lt;string, string&gt; string_payload = 2;</code>
            */
 
           public Builder putAllStringPayload(
@@ -42954,7 +43983,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to double
            * </pre>
            *
-           * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+           * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
            */
 
           public boolean containsNumericPayload(
@@ -42974,7 +44003,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to double
            * </pre>
            *
-           * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+           * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
            */
 
           public java.util.Map<java.lang.String, java.lang.Double> getNumericPayloadMap() {
@@ -42985,7 +44014,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to double
            * </pre>
            *
-           * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+           * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
            */
 
           public double getNumericPayloadOrDefault(
@@ -43001,7 +44030,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to double
            * </pre>
            *
-           * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+           * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
            */
 
           public double getNumericPayloadOrThrow(
@@ -43025,7 +44054,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to double
            * </pre>
            *
-           * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+           * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
            */
 
           public Builder removeNumericPayload(
@@ -43048,7 +44077,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to double
            * </pre>
            *
-           * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+           * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
            */
           public Builder putNumericPayload(
               java.lang.String key,
@@ -43064,7 +44093,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to double
            * </pre>
            *
-           * <code>map&lt;string, double&gt; numeric_payload = 4;</code>
+           * <code>map&lt;string, double&gt; numeric_payload = 3;</code>
            */
 
           public Builder putAllNumericPayload(
@@ -43105,7 +44134,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to boolean
            * </pre>
            *
-           * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+           * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
            */
 
           public boolean containsBooleanPayload(
@@ -43125,7 +44154,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to boolean
            * </pre>
            *
-           * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+           * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
            */
 
           public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanPayloadMap() {
@@ -43136,7 +44165,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to boolean
            * </pre>
            *
-           * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+           * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
            */
 
           public boolean getBooleanPayloadOrDefault(
@@ -43152,7 +44181,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to boolean
            * </pre>
            *
-           * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+           * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
            */
 
           public boolean getBooleanPayloadOrThrow(
@@ -43176,7 +44205,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to boolean
            * </pre>
            *
-           * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+           * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
            */
 
           public Builder removeBooleanPayload(
@@ -43199,7 +44228,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to boolean
            * </pre>
            *
-           * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+           * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
            */
           public Builder putBooleanPayload(
               java.lang.String key,
@@ -43215,7 +44244,7 @@ public final class RedvoxApiM {
            * Key-pairs of type string to boolean
            * </pre>
            *
-           * <code>map&lt;string, bool&gt; boolean_payload = 5;</code>
+           * <code>map&lt;string, bool&gt; boolean_payload = 4;</code>
            */
 
           public Builder putAllBooleanPayload(
@@ -43257,7 +44286,7 @@ public final class RedvoxApiM {
            * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
            * </pre>
            *
-           * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+           * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
            */
 
           public boolean containsBytePayload(
@@ -43278,7 +44307,7 @@ public final class RedvoxApiM {
            * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
            * </pre>
            *
-           * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+           * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
            */
 
           public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getBytePayloadMap() {
@@ -43290,7 +44319,7 @@ public final class RedvoxApiM {
            * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
            * </pre>
            *
-           * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+           * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
            */
 
           public com.google.protobuf.ByteString getBytePayloadOrDefault(
@@ -43307,7 +44336,7 @@ public final class RedvoxApiM {
            * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
            * </pre>
            *
-           * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+           * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
            */
 
           public com.google.protobuf.ByteString getBytePayloadOrThrow(
@@ -43332,7 +44361,7 @@ public final class RedvoxApiM {
            * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
            * </pre>
            *
-           * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+           * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
            */
 
           public Builder removeBytePayload(
@@ -43356,7 +44385,7 @@ public final class RedvoxApiM {
            * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
            * </pre>
            *
-           * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+           * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
            */
           public Builder putBytePayload(
               java.lang.String key,
@@ -43373,7 +44402,7 @@ public final class RedvoxApiM {
            * This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
            * </pre>
            *
-           * <code>map&lt;string, bytes&gt; byte_payload = 6;</code>
+           * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
            */
 
           public Builder putAllBytePayload(
@@ -43414,7 +44443,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 7;</code>
+           * <code>map&lt;string, string&gt; metadata = 6;</code>
            */
 
           public boolean containsMetadata(
@@ -43434,7 +44463,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 7;</code>
+           * <code>map&lt;string, string&gt; metadata = 6;</code>
            */
 
           public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -43445,7 +44474,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 7;</code>
+           * <code>map&lt;string, string&gt; metadata = 6;</code>
            */
 
           public java.lang.String getMetadataOrDefault(
@@ -43461,7 +44490,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 7;</code>
+           * <code>map&lt;string, string&gt; metadata = 6;</code>
            */
 
           public java.lang.String getMetadataOrThrow(
@@ -43485,7 +44514,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 7;</code>
+           * <code>map&lt;string, string&gt; metadata = 6;</code>
            */
 
           public Builder removeMetadata(
@@ -43508,7 +44537,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 7;</code>
+           * <code>map&lt;string, string&gt; metadata = 6;</code>
            */
           public Builder putMetadata(
               java.lang.String key,
@@ -43524,7 +44553,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 7;</code>
+           * <code>map&lt;string, string&gt; metadata = 6;</code>
            */
 
           public Builder putAllMetadata(
@@ -43630,14 +44659,49 @@ public final class RedvoxApiM {
         }
       }
 
-      public static final int EVENTS_FIELD_NUMBER = 2;
+      public static final int TIMESTAMPS_FIELD_NUMBER = 2;
+      private io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload timestamps_;
+      /**
+       * <pre>
+       * List of timestamps, each associated with one Event
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+       * @return Whether the timestamps field is set.
+       */
+      public boolean hasTimestamps() {
+        return timestamps_ != null;
+      }
+      /**
+       * <pre>
+       * List of timestamps, each associated with one Event
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+       * @return The timestamps.
+       */
+      public io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload getTimestamps() {
+        return timestamps_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.getDefaultInstance() : timestamps_;
+      }
+      /**
+       * <pre>
+       * List of timestamps, each associated with one Event
+       * </pre>
+       *
+       * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+       */
+      public io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder getTimestampsOrBuilder() {
+        return getTimestamps();
+      }
+
+      public static final int EVENTS_FIELD_NUMBER = 3;
       private java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event> events_;
       /**
        * <pre>
        * List of events that belong to this stream
        * </pre>
        *
-       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
        */
       public java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event> getEventsList() {
         return events_;
@@ -43647,7 +44711,7 @@ public final class RedvoxApiM {
        * List of events that belong to this stream
        * </pre>
        *
-       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
        */
       public java.util.List<? extends io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.EventOrBuilder> 
           getEventsOrBuilderList() {
@@ -43658,7 +44722,7 @@ public final class RedvoxApiM {
        * List of events that belong to this stream
        * </pre>
        *
-       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
        */
       public int getEventsCount() {
         return events_.size();
@@ -43668,7 +44732,7 @@ public final class RedvoxApiM {
        * List of events that belong to this stream
        * </pre>
        *
-       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
        */
       public io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event getEvents(int index) {
         return events_.get(index);
@@ -43678,14 +44742,14 @@ public final class RedvoxApiM {
        * List of events that belong to this stream
        * </pre>
        *
-       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+       * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
        */
       public io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.EventOrBuilder getEventsOrBuilder(
           int index) {
         return events_.get(index);
       }
 
-      public static final int METADATA_FIELD_NUMBER = 3;
+      public static final int METADATA_FIELD_NUMBER = 4;
       private static final class MetadataDefaultEntryHolder {
         static final com.google.protobuf.MapEntry<
             java.lang.String, java.lang.String> defaultEntry =
@@ -43716,7 +44780,7 @@ public final class RedvoxApiM {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
       public boolean containsMetadata(
@@ -43736,7 +44800,7 @@ public final class RedvoxApiM {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -43747,7 +44811,7 @@ public final class RedvoxApiM {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
       public java.lang.String getMetadataOrDefault(
@@ -43763,7 +44827,7 @@ public final class RedvoxApiM {
        * A map from string to string for including untyped metadata
        * </pre>
        *
-       * <code>map&lt;string, string&gt; metadata = 3;</code>
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
       public java.lang.String getMetadataOrThrow(
@@ -43794,15 +44858,18 @@ public final class RedvoxApiM {
         if (!getNameBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
         }
+        if (timestamps_ != null) {
+          output.writeMessage(2, getTimestamps());
+        }
         for (int i = 0; i < events_.size(); i++) {
-          output.writeMessage(2, events_.get(i));
+          output.writeMessage(3, events_.get(i));
         }
         com.google.protobuf.GeneratedMessageV3
           .serializeStringMapTo(
             output,
             internalGetMetadata(),
             MetadataDefaultEntryHolder.defaultEntry,
-            3);
+            4);
         unknownFields.writeTo(output);
       }
 
@@ -43815,9 +44882,13 @@ public final class RedvoxApiM {
         if (!getNameBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
         }
+        if (timestamps_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getTimestamps());
+        }
         for (int i = 0; i < events_.size(); i++) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, events_.get(i));
+            .computeMessageSize(3, events_.get(i));
         }
         for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
              : internalGetMetadata().getMap().entrySet()) {
@@ -43827,7 +44898,7 @@ public final class RedvoxApiM {
               .setValue(entry.getValue())
               .build();
           size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(3, metadata__);
+              .computeMessageSize(4, metadata__);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -43846,6 +44917,11 @@ public final class RedvoxApiM {
 
         if (!getName()
             .equals(other.getName())) return false;
+        if (hasTimestamps() != other.hasTimestamps()) return false;
+        if (hasTimestamps()) {
+          if (!getTimestamps()
+              .equals(other.getTimestamps())) return false;
+        }
         if (!getEventsList()
             .equals(other.getEventsList())) return false;
         if (!internalGetMetadata().equals(
@@ -43863,6 +44939,10 @@ public final class RedvoxApiM {
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + NAME_FIELD_NUMBER;
         hash = (53 * hash) + getName().hashCode();
+        if (hasTimestamps()) {
+          hash = (37 * hash) + TIMESTAMPS_FIELD_NUMBER;
+          hash = (53 * hash) + getTimestamps().hashCode();
+        }
         if (getEventsCount() > 0) {
           hash = (37 * hash) + EVENTS_FIELD_NUMBER;
           hash = (53 * hash) + getEventsList().hashCode();
@@ -43986,7 +45066,7 @@ public final class RedvoxApiM {
         protected com.google.protobuf.MapField internalGetMapField(
             int number) {
           switch (number) {
-            case 3:
+            case 4:
               return internalGetMetadata();
             default:
               throw new RuntimeException(
@@ -43997,7 +45077,7 @@ public final class RedvoxApiM {
         protected com.google.protobuf.MapField internalGetMutableMapField(
             int number) {
           switch (number) {
-            case 3:
+            case 4:
               return internalGetMutableMetadata();
             default:
               throw new RuntimeException(
@@ -44033,6 +45113,12 @@ public final class RedvoxApiM {
           super.clear();
           name_ = "";
 
+          if (timestampsBuilder_ == null) {
+            timestamps_ = null;
+          } else {
+            timestamps_ = null;
+            timestampsBuilder_ = null;
+          }
           if (eventsBuilder_ == null) {
             events_ = java.util.Collections.emptyList();
             bitField0_ = (bitField0_ & ~0x00000001);
@@ -44068,6 +45154,11 @@ public final class RedvoxApiM {
           io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream result = new io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream(this);
           int from_bitField0_ = bitField0_;
           result.name_ = name_;
+          if (timestampsBuilder_ == null) {
+            result.timestamps_ = timestamps_;
+          } else {
+            result.timestamps_ = timestampsBuilder_.build();
+          }
           if (eventsBuilder_ == null) {
             if (((bitField0_ & 0x00000001) != 0)) {
               events_ = java.util.Collections.unmodifiableList(events_);
@@ -44130,6 +45221,9 @@ public final class RedvoxApiM {
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
             onChanged();
+          }
+          if (other.hasTimestamps()) {
+            mergeTimestamps(other.getTimestamps());
           }
           if (eventsBuilder_ == null) {
             if (!other.events_.isEmpty()) {
@@ -44285,6 +45379,161 @@ public final class RedvoxApiM {
           return this;
         }
 
+        private io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload timestamps_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder> timestampsBuilder_;
+        /**
+         * <pre>
+         * List of timestamps, each associated with one Event
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+         * @return Whether the timestamps field is set.
+         */
+        public boolean hasTimestamps() {
+          return timestampsBuilder_ != null || timestamps_ != null;
+        }
+        /**
+         * <pre>
+         * List of timestamps, each associated with one Event
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+         * @return The timestamps.
+         */
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload getTimestamps() {
+          if (timestampsBuilder_ == null) {
+            return timestamps_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.getDefaultInstance() : timestamps_;
+          } else {
+            return timestampsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * List of timestamps, each associated with one Event
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+         */
+        public Builder setTimestamps(io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload value) {
+          if (timestampsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            timestamps_ = value;
+            onChanged();
+          } else {
+            timestampsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * List of timestamps, each associated with one Event
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+         */
+        public Builder setTimestamps(
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder builderForValue) {
+          if (timestampsBuilder_ == null) {
+            timestamps_ = builderForValue.build();
+            onChanged();
+          } else {
+            timestampsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * List of timestamps, each associated with one Event
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+         */
+        public Builder mergeTimestamps(io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload value) {
+          if (timestampsBuilder_ == null) {
+            if (timestamps_ != null) {
+              timestamps_ =
+                io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.newBuilder(timestamps_).mergeFrom(value).buildPartial();
+            } else {
+              timestamps_ = value;
+            }
+            onChanged();
+          } else {
+            timestampsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * List of timestamps, each associated with one Event
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+         */
+        public Builder clearTimestamps() {
+          if (timestampsBuilder_ == null) {
+            timestamps_ = null;
+            onChanged();
+          } else {
+            timestamps_ = null;
+            timestampsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * List of timestamps, each associated with one Event
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+         */
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder getTimestampsBuilder() {
+          
+          onChanged();
+          return getTimestampsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * List of timestamps, each associated with one Event
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+         */
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder getTimestampsOrBuilder() {
+          if (timestampsBuilder_ != null) {
+            return timestampsBuilder_.getMessageOrBuilder();
+          } else {
+            return timestamps_ == null ?
+                io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.getDefaultInstance() : timestamps_;
+          }
+        }
+        /**
+         * <pre>
+         * List of timestamps, each associated with one Event
+         * </pre>
+         *
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder> 
+            getTimestampsFieldBuilder() {
+          if (timestampsBuilder_ == null) {
+            timestampsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder>(
+                    getTimestamps(),
+                    getParentForChildren(),
+                    isClean());
+            timestamps_ = null;
+          }
+          return timestampsBuilder_;
+        }
+
         private java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event> events_ =
           java.util.Collections.emptyList();
         private void ensureEventsIsMutable() {
@@ -44302,7 +45551,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event> getEventsList() {
           if (eventsBuilder_ == null) {
@@ -44316,7 +45565,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public int getEventsCount() {
           if (eventsBuilder_ == null) {
@@ -44330,7 +45579,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event getEvents(int index) {
           if (eventsBuilder_ == null) {
@@ -44344,7 +45593,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public Builder setEvents(
             int index, io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event value) {
@@ -44365,7 +45614,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public Builder setEvents(
             int index, io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event.Builder builderForValue) {
@@ -44383,7 +45632,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public Builder addEvents(io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event value) {
           if (eventsBuilder_ == null) {
@@ -44403,7 +45652,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public Builder addEvents(
             int index, io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event value) {
@@ -44424,7 +45673,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public Builder addEvents(
             io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event.Builder builderForValue) {
@@ -44442,7 +45691,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public Builder addEvents(
             int index, io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event.Builder builderForValue) {
@@ -44460,7 +45709,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public Builder addAllEvents(
             java.lang.Iterable<? extends io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event> values) {
@@ -44479,7 +45728,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public Builder clearEvents() {
           if (eventsBuilder_ == null) {
@@ -44496,7 +45745,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public Builder removeEvents(int index) {
           if (eventsBuilder_ == null) {
@@ -44513,7 +45762,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event.Builder getEventsBuilder(
             int index) {
@@ -44524,7 +45773,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.EventOrBuilder getEventsOrBuilder(
             int index) {
@@ -44538,7 +45787,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public java.util.List<? extends io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.EventOrBuilder> 
              getEventsOrBuilderList() {
@@ -44553,7 +45802,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event.Builder addEventsBuilder() {
           return getEventsFieldBuilder().addBuilder(
@@ -44564,7 +45813,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event.Builder addEventsBuilder(
             int index) {
@@ -44576,7 +45825,7 @@ public final class RedvoxApiM {
          * List of events that belong to this stream
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 2;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.EventStream.Event events = 3;</code>
          */
         public java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.EventStream.Event.Builder> 
              getEventsBuilderList() {
@@ -44628,7 +45877,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 3;</code>
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
          */
 
         public boolean containsMetadata(
@@ -44648,7 +45897,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 3;</code>
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
          */
 
         public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -44659,7 +45908,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 3;</code>
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
          */
 
         public java.lang.String getMetadataOrDefault(
@@ -44675,7 +45924,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 3;</code>
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
          */
 
         public java.lang.String getMetadataOrThrow(
@@ -44699,7 +45948,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 3;</code>
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
          */
 
         public Builder removeMetadata(
@@ -44722,7 +45971,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 3;</code>
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
          */
         public Builder putMetadata(
             java.lang.String key,
@@ -44738,7 +45987,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 3;</code>
+         * <code>map&lt;string, string&gt; metadata = 4;</code>
          */
 
         public Builder putAllMetadata(
@@ -58895,6 +60144,11 @@ public final class RedvoxApiM {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_MetadataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_MetadataEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Xyz_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -59034,7 +60288,7 @@ public final class RedvoxApiM {
   static {
     java.lang.String[] descriptorData = {
       "\n#src/redvox_api_m/redvox_api_m.proto\022\014r" +
-      "edvox_api_m\"\206h\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
+      "edvox_api_m\"\347k\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
       "(\002\022\017\n\007sub_api\030\002 \001(\002\022K\n\023station_informati" +
       "on\030\003 \001(\0132..redvox_api_m.RedvoxPacketM.St" +
       "ationInformation\022I\n\022timing_information\030\004" +
@@ -59173,7 +60427,7 @@ public final class RedvoxApiM {
       "nformation.SynchExchange.MetadataEntry\032/" +
       "\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
       "\001(\t:\0028\001\" \n\021TimingScoreMethod\022\013\n\007UNKNOWN\020" +
-      "\000\032\203)\n\007Sensors\022>\n\raccelerometer\030\001 \001(\0132\'.r" +
+      "\000\032\270,\n\007Sensors\022>\n\raccelerometer\030\001 \001(\0132\'.r" +
       "edvox_api_m.RedvoxPacketM.Sensors.Xyz\022G\n" +
       "\023ambient_temperature\030\002 \001(\0132*.redvox_api_" +
       "m.RedvoxPacketM.Sensors.Single\0228\n\005audio\030" +
@@ -59227,7 +60481,7 @@ public final class RedvoxApiM {
       "dvoxPacketM.SamplePayload\022J\n\010metadata\030\004 " +
       "\003(\01328.redvox_api_m.RedvoxPacketM.Sensors" +
       ".Single.MetadataEntry\032/\n\rMetadataEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\354\021\n\010Locat" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\241\025\n\010Locat" +
       "ion\022\032\n\022sensor_description\030\001 \001(\t\022=\n\ntimes" +
       "tamps\030\002 \001(\0132).redvox_api_m.RedvoxPacketM" +
       ".TimingPayload\022I\n\020latitude_samples\030\003 \001(\013" +
@@ -59261,7 +60515,7 @@ public final class RedvoxApiM {
       "ocation.LocationProvider\022L\n\010metadata\030\031 \003" +
       "(\0132:.redvox_api_m.RedvoxPacketM.Sensors." +
       "Location.MetadataEntry\032/\n\rMetadataEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\320\006\n\014Best" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\205\n\n\014Best" +
       "Location\022m\n\034latitude_longitude_timestamp" +
       "\030\001 \001(\0132G.redvox_api_m.RedvoxPacketM.Sens" +
       "ors.Location.BestLocation.BestTimestamp\022" +
@@ -59272,121 +60526,133 @@ public final class RedvoxApiM {
       "rs.Location.BestLocation.BestTimestamp\022b" +
       "\n\021bearing_timestamp\030\004 \001(\0132G.redvox_api_m" +
       ".RedvoxPacketM.Sensors.Location.BestLoca" +
-      "tion.BestTimestamp\022\020\n\010latitude\030\005 \001(\001\022\021\n\t" +
-      "longitude\030\006 \001(\001\022\020\n\010altitude\030\007 \001(\002\022\r\n\005spe" +
-      "ed\030\010 \001(\002\022\017\n\007bearing\030\t \001(\002\022\r\n\005score\030\n \001(\002" +
-      "\022]\n\006method\030\013 \001(\0162M.redvox_api_m.RedvoxPa" +
-      "cketM.Sensors.Location.BestLocation.Loca" +
-      "tionScoreMethod\022Y\n\010metadata\030\014 \003(\0132G.redv" +
-      "ox_api_m.RedvoxPacketM.Sensors.Location." +
-      "BestLocation.MetadataEntry\032/\n\rMetadataEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032*\n\rB" +
-      "estTimestamp\022\014\n\004mach\030\001 \001(\001\022\013\n\003gps\030\002 \001(\001\"" +
-      ")\n\023LocationScoreMethod\022\022\n\016UNKNOWN_METHOD" +
-      "\020\000\"I\n\020LocationProvider\022\013\n\007UNKNOWN\020\000\022\010\n\004N" +
-      "ONE\020\001\022\010\n\004USER\020\002\022\007\n\003GPS\020\003\022\013\n\007NETWORK\020\004\032\224\003" +
-      "\n\003Xyz\022\032\n\022sensor_description\030\001 \001(\t\022=\n\ntim" +
-      "estamps\030\002 \001(\0132).redvox_api_m.RedvoxPacke" +
-      "tM.TimingPayload\022<\n\tx_samples\030\003 \001(\0132).re" +
-      "dvox_api_m.RedvoxPacketM.SamplePayload\022<" +
-      "\n\ty_samples\030\004 \001(\0132).redvox_api_m.RedvoxP" +
-      "acketM.SamplePayload\022<\n\tz_samples\030\005 \001(\0132" +
-      ").redvox_api_m.RedvoxPacketM.SamplePaylo" +
-      "ad\022G\n\010metadata\030\006 \003(\01325.redvox_api_m.Redv" +
-      "oxPacketM.Sensors.Xyz.MetadataEntry\032/\n\rM" +
-      "etadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\032\360\002\n\005Image\022\032\n\022sensor_description\030\001 \001" +
-      "(\t\022=\n\ntimestamps\030\002 \001(\0132).redvox_api_m.Re" +
-      "dvoxPacketM.TimingPayload\022\017\n\007samples\030\003 \003" +
-      "(\014\022I\n\013image_codec\030\004 \001(\01624.redvox_api_m.R" +
-      "edvoxPacketM.Sensors.Image.ImageCodec\022I\n" +
-      "\010metadata\030\005 \003(\01327.redvox_api_m.RedvoxPac" +
-      "ketM.Sensors.Image.MetadataEntry\032/\n\rMeta" +
+      "tion.BestTimestamp\022A\n\027latitude_longitude" +
+      "_unit\030\005 \001(\0162 .redvox_api_m.RedvoxPacketM" +
+      ".Unit\0227\n\raltitude_unit\030\006 \001(\0162 .redvox_ap" +
+      "i_m.RedvoxPacketM.Unit\0224\n\nspeed_unit\030\007 \001" +
+      "(\0162 .redvox_api_m.RedvoxPacketM.Unit\0226\n\014" +
+      "bearing_unit\030\010 \001(\0162 .redvox_api_m.Redvox" +
+      "PacketM.Unit\022\020\n\010latitude\030\t \001(\001\022\021\n\tlongit" +
+      "ude\030\n \001(\001\022\020\n\010altitude\030\013 \001(\002\022\r\n\005speed\030\014 \001" +
+      "(\002\022\017\n\007bearing\030\r \001(\002\022\r\n\005score\030\016 \001(\002\022]\n\006me" +
+      "thod\030\017 \001(\0162M.redvox_api_m.RedvoxPacketM." +
+      "Sensors.Location.BestLocation.LocationSc" +
+      "oreMethod\022Y\n\010metadata\030\020 \003(\0132G.redvox_api" +
+      "_m.RedvoxPacketM.Sensors.Location.BestLo" +
+      "cation.MetadataEntry\032/\n\rMetadataEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\364\001\n\rBestTi" +
+      "mestamp\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Red" +
+      "voxPacketM.Unit\022\014\n\004mach\030\002 \001(\001\022\013\n\003gps\030\003 \001" +
+      "(\001\022g\n\010metadata\030\004 \003(\0132U.redvox_api_m.Redv" +
+      "oxPacketM.Sensors.Location.BestLocation." +
+      "BestTimestamp.MetadataEntry\032/\n\rMetadataE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")\n\023" +
+      "LocationScoreMethod\022\022\n\016UNKNOWN_METHOD\020\000\"" +
+      "I\n\020LocationProvider\022\013\n\007UNKNOWN\020\000\022\010\n\004NONE" +
+      "\020\001\022\010\n\004USER\020\002\022\007\n\003GPS\020\003\022\013\n\007NETWORK\020\004\032\224\003\n\003X" +
+      "yz\022\032\n\022sensor_description\030\001 \001(\t\022=\n\ntimest" +
+      "amps\030\002 \001(\0132).redvox_api_m.RedvoxPacketM." +
+      "TimingPayload\022<\n\tx_samples\030\003 \001(\0132).redvo" +
+      "x_api_m.RedvoxPacketM.SamplePayload\022<\n\ty" +
+      "_samples\030\004 \001(\0132).redvox_api_m.RedvoxPack" +
+      "etM.SamplePayload\022<\n\tz_samples\030\005 \001(\0132).r" +
+      "edvox_api_m.RedvoxPacketM.SamplePayload\022" +
+      "G\n\010metadata\030\006 \003(\01325.redvox_api_m.RedvoxP" +
+      "acketM.Sensors.Xyz.MetadataEntry\032/\n\rMeta" +
       "dataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"4\n\nImageCodec\022\013\n\007UNKNOWN\020\000\022\007\n\003PNG\020\001\022\007\n" +
-      "\003JPG\020\002\022\007\n\003BMP\020\003\032\306\007\n\013EventStream\022\014\n\004name\030" +
-      "\001 \001(\t\022=\n\006events\030\002 \003(\0132-.redvox_api_m.Red" +
-      "voxPacketM.EventStream.Event\022G\n\010metadata" +
-      "\030\003 \003(\01325.redvox_api_m.RedvoxPacketM.Even" +
-      "tStream.MetadataEntry\032/\n\rMetadataEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\357\005\n\005Event" +
-      "\022\021\n\ttimestamp\030\001 \001(\001\022\023\n\013description\030\002 \001(\t" +
-      "\022X\n\016string_payload\030\003 \003(\0132@.redvox_api_m." +
-      "RedvoxPacketM.EventStream.Event.StringPa" +
-      "yloadEntry\022Z\n\017numeric_payload\030\004 \003(\0132A.re" +
-      "dvox_api_m.RedvoxPacketM.EventStream.Eve" +
-      "nt.NumericPayloadEntry\022Z\n\017boolean_payloa" +
-      "d\030\005 \003(\0132A.redvox_api_m.RedvoxPacketM.Eve" +
-      "ntStream.Event.BooleanPayloadEntry\022T\n\014by" +
-      "te_payload\030\006 \003(\0132>.redvox_api_m.RedvoxPa" +
-      "cketM.EventStream.Event.BytePayloadEntry" +
-      "\022M\n\010metadata\030\007 \003(\0132;.redvox_api_m.Redvox" +
-      "PacketM.EventStream.Event.MetadataEntry\032" +
-      "4\n\022StringPayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\0325\n\023NumericPayloadEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\001:\0028\001\0325\n\023BooleanP" +
-      "ayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:" +
-      "\0028\001\0322\n\020BytePayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\014:\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\224\002\n\rSamplePaylo" +
-      "ad\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.RedvoxPa" +
-      "cketM.Unit\022\016\n\006values\030\002 \003(\002\022G\n\020value_stat" +
-      "istics\030\003 \001(\0132-.redvox_api_m.RedvoxPacket" +
-      "M.SummaryStatistics\022I\n\010metadata\030\004 \003(\01327." +
-      "redvox_api_m.RedvoxPacketM.SamplePayload" +
+      "\001\032\360\002\n\005Image\022\032\n\022sensor_description\030\001 \001(\t\022" +
+      "=\n\ntimestamps\030\002 \001(\0132).redvox_api_m.Redvo" +
+      "xPacketM.TimingPayload\022\017\n\007samples\030\003 \003(\014\022" +
+      "I\n\013image_codec\030\004 \001(\01624.redvox_api_m.Redv" +
+      "oxPacketM.Sensors.Image.ImageCodec\022I\n\010me" +
+      "tadata\030\005 \003(\01327.redvox_api_m.RedvoxPacket" +
+      "M.Sensors.Image.MetadataEntry\032/\n\rMetadat" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"4" +
+      "\n\nImageCodec\022\013\n\007UNKNOWN\020\000\022\007\n\003PNG\020\001\022\007\n\003JP" +
+      "G\020\002\022\007\n\003BMP\020\003\032\362\007\n\013EventStream\022\014\n\004name\030\001 \001" +
+      "(\t\022=\n\ntimestamps\030\002 \001(\0132).redvox_api_m.Re" +
+      "dvoxPacketM.TimingPayload\022=\n\006events\030\003 \003(" +
+      "\0132-.redvox_api_m.RedvoxPacketM.EventStre" +
+      "am.Event\022G\n\010metadata\030\004 \003(\01325.redvox_api_" +
+      "m.RedvoxPacketM.EventStream.MetadataEntr" +
+      "y\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\032\334\005\n\005Event\022\023\n\013description\030\001 \001(" +
+      "\t\022X\n\016string_payload\030\002 \003(\0132@.redvox_api_m" +
+      ".RedvoxPacketM.EventStream.Event.StringP" +
+      "ayloadEntry\022Z\n\017numeric_payload\030\003 \003(\0132A.r" +
+      "edvox_api_m.RedvoxPacketM.EventStream.Ev" +
+      "ent.NumericPayloadEntry\022Z\n\017boolean_paylo" +
+      "ad\030\004 \003(\0132A.redvox_api_m.RedvoxPacketM.Ev" +
+      "entStream.Event.BooleanPayloadEntry\022T\n\014b" +
+      "yte_payload\030\005 \003(\0132>.redvox_api_m.RedvoxP" +
+      "acketM.EventStream.Event.BytePayloadEntr" +
+      "y\022M\n\010metadata\030\006 \003(\0132;.redvox_api_m.Redvo" +
+      "xPacketM.EventStream.Event.MetadataEntry" +
+      "\0324\n\022StringPayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\0325\n\023NumericPayloadEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\001:\0028\001\0325\n\023Boolean" +
+      "PayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010" +
+      ":\0028\001\0322\n\020BytePayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\014:\0028\001\032/\n\rMetadataEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\224\002\n\rSamplePayl" +
+      "oad\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.RedvoxP" +
+      "acketM.Unit\022\016\n\006values\030\002 \003(\002\022G\n\020value_sta" +
+      "tistics\030\003 \001(\0132-.redvox_api_m.RedvoxPacke" +
+      "tM.SummaryStatistics\022I\n\010metadata\030\004 \003(\01327" +
+      ".redvox_api_m.RedvoxPacketM.SamplePayloa" +
+      "d.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\240\002\n\023DoubleSampl" +
+      "ePayload\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Re" +
+      "dvoxPacketM.Unit\022\016\n\006values\030\002 \003(\001\022G\n\020valu" +
+      "e_statistics\030\003 \001(\0132-.redvox_api_m.Redvox" +
+      "PacketM.SummaryStatistics\022O\n\010metadata\030\004 " +
+      "\003(\0132=.redvox_api_m.RedvoxPacketM.DoubleS" +
+      "amplePayload.MetadataEntry\032/\n\rMetadataEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321\002\n\r" +
+      "TimingPayload\022.\n\004unit\030\001 \001(\0162 .redvox_api" +
+      "_m.RedvoxPacketM.Unit\022\022\n\ntimestamps\030\002 \003(" +
+      "\001\022K\n\024timestamp_statistics\030\003 \001(\0132-.redvox" +
+      "_api_m.RedvoxPacketM.SummaryStatistics\022\030" +
+      "\n\020mean_sample_rate\030\004 \001(\002\022\031\n\021stdev_sample" +
+      "_rate\030\005 \001(\002\022I\n\010metadata\030\006 \003(\01327.redvox_a" +
+      "pi_m.RedvoxPacketM.TimingPayload.Metadat" +
+      "aEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\032\365\001\n\021SummaryStatistics\022\r\n" +
+      "\005count\030\001 \001(\002\022\014\n\004mean\030\002 \001(\002\022\032\n\022standard_d" +
+      "eviation\030\003 \001(\002\022\013\n\003min\030\004 \001(\002\022\013\n\003max\030\005 \001(\002" +
+      "\022\r\n\005range\030\006 \001(\002\022M\n\010metadata\030\007 \003(\0132;.redv" +
+      "ox_api_m.RedvoxPacketM.SummaryStatistics" +
       ".MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\240\002\n\023DoubleSample" +
-      "Payload\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Red" +
-      "voxPacketM.Unit\022\016\n\006values\030\002 \003(\001\022G\n\020value" +
-      "_statistics\030\003 \001(\0132-.redvox_api_m.RedvoxP" +
-      "acketM.SummaryStatistics\022O\n\010metadata\030\004 \003" +
-      "(\0132=.redvox_api_m.RedvoxPacketM.DoubleSa" +
-      "mplePayload.MetadataEntry\032/\n\rMetadataEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321\002\n\rT" +
-      "imingPayload\022.\n\004unit\030\001 \001(\0162 .redvox_api_" +
-      "m.RedvoxPacketM.Unit\022\022\n\ntimestamps\030\002 \003(\001" +
-      "\022K\n\024timestamp_statistics\030\003 \001(\0132-.redvox_" +
-      "api_m.RedvoxPacketM.SummaryStatistics\022\030\n" +
-      "\020mean_sample_rate\030\004 \001(\002\022\031\n\021stdev_sample_" +
-      "rate\030\005 \001(\002\022I\n\010metadata\030\006 \003(\01327.redvox_ap" +
-      "i_m.RedvoxPacketM.TimingPayload.Metadata" +
-      "Entry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\032\365\001\n\021SummaryStatistics\022\r\n\005" +
-      "count\030\001 \001(\002\022\014\n\004mean\030\002 \001(\002\022\032\n\022standard_de" +
-      "viation\030\003 \001(\002\022\013\n\003min\030\004 \001(\002\022\013\n\003max\030\005 \001(\002\022" +
-      "\r\n\005range\030\006 \001(\002\022M\n\010metadata\030\007 \003(\0132;.redvo" +
-      "x_api_m.RedvoxPacketM.SummaryStatistics." +
-      "MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\203\003\n\004Unit\022\013\n\007UNKNO" +
-      "WN\020\000\022\035\n\031METERS_PER_SECOND_SQUARED\020\001\022\016\n\nK" +
-      "ILOPASCAL\020\002\022\026\n\022RADIANS_PER_SECOND\020\003\022\023\n\017D" +
-      "ECIMAL_DEGREES\020\004\022\n\n\006METERS\020\005\022\025\n\021METERS_P" +
-      "ER_SECOND\020\006\022\016\n\nMICROTESLA\020\007\022\031\n\025LSB_PLUS_" +
-      "MINUS_COUNTS\020\010\022!\n\035MICROSECONDS_SINCE_UNI" +
-      "X_EPOCH\020\t\022\013\n\007DECIBEL\020\n\022\023\n\017DEGREES_CELSIU" +
-      "S\020\013\022\010\n\004BYTE\020\014\022\016\n\nPERCENTAGE\020\r\022\013\n\007RADIANS" +
-      "\020\016\022\020\n\014MICROAMPERES\020\017\022\017\n\013CENTIMETERS\020\020\022\025\n" +
-      "\021NORMALIZED_COUNTS\020\021\022\007\n\003LUX\020\022\022\014\n\010UNITLES" +
-      "S\020\023\022\007\n\003PCM\020\024\"\254\001\n\026EncryptedRedvoxPacketM\022" +
-      "\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014\032r\n\006Heade" +
-      "r\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 " +
-      "\001(\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016firebase_toke" +
-      "n\030\004 \001(\t\022\022\n\nauth_email\030\005 \001(\t\"y\n\022Acquisiti" +
-      "onRequest\022\022\n\nauth_token\030\001 \001(\t\022\026\n\016firebas" +
-      "e_token\030\002 \001(\t\022\020\n\010checksum\030\003 \001(\003\022\024\n\014is_en" +
-      "crypted\030\004 \001(\010\022\017\n\007payload\030\005 \001(\014\"\345\001\n\023Acqui" +
-      "sitionResponse\022E\n\rresponse_type\030\001 \001(\0162.." +
-      "redvox_api_m.AcquisitionResponse.Respons" +
-      "eType\022\020\n\010checksum\030\002 \001(\003\022\017\n\007details\030\003 \001(\t" +
-      "\022\016\n\006resend\030\004 \001(\010\"T\n\014ResponseType\022\013\n\007UNKN" +
-      "OWN\020\000\022\006\n\002OK\020\001\022\016\n\nAUTH_ERROR\020\002\022\016\n\nDATA_ER" +
-      "ROR\020\003\022\017\n\013OTHER_ERROR\020\004\"\\\n\014SynchRequest\022\022" +
-      "\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t" +
-      "\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001\n" +
-      "\rSynchResponse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014st" +
-      "ation_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_" +
-      "seq_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsend" +
-      "_ts_us\030\006 \001(\004B\020\n\016io.redvox.apisb\006proto3"
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\203\003\n\004Unit\022\013\n\007UNKN" +
+      "OWN\020\000\022\035\n\031METERS_PER_SECOND_SQUARED\020\001\022\016\n\n" +
+      "KILOPASCAL\020\002\022\026\n\022RADIANS_PER_SECOND\020\003\022\023\n\017" +
+      "DECIMAL_DEGREES\020\004\022\n\n\006METERS\020\005\022\025\n\021METERS_" +
+      "PER_SECOND\020\006\022\016\n\nMICROTESLA\020\007\022\031\n\025LSB_PLUS" +
+      "_MINUS_COUNTS\020\010\022!\n\035MICROSECONDS_SINCE_UN" +
+      "IX_EPOCH\020\t\022\013\n\007DECIBEL\020\n\022\023\n\017DEGREES_CELSI" +
+      "US\020\013\022\010\n\004BYTE\020\014\022\016\n\nPERCENTAGE\020\r\022\013\n\007RADIAN" +
+      "S\020\016\022\020\n\014MICROAMPERES\020\017\022\017\n\013CENTIMETERS\020\020\022\025" +
+      "\n\021NORMALIZED_COUNTS\020\021\022\007\n\003LUX\020\022\022\014\n\010UNITLE" +
+      "SS\020\023\022\007\n\003PCM\020\024\"\254\001\n\026EncryptedRedvoxPacketM" +
+      "\022\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014\032r\n\006Head" +
+      "er\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002" +
+      " \001(\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016firebase_tok" +
+      "en\030\004 \001(\t\022\022\n\nauth_email\030\005 \001(\t\"y\n\022Acquisit" +
+      "ionRequest\022\022\n\nauth_token\030\001 \001(\t\022\026\n\016fireba" +
+      "se_token\030\002 \001(\t\022\020\n\010checksum\030\003 \001(\003\022\024\n\014is_e" +
+      "ncrypted\030\004 \001(\010\022\017\n\007payload\030\005 \001(\014\"\345\001\n\023Acqu" +
+      "isitionResponse\022E\n\rresponse_type\030\001 \001(\0162." +
+      ".redvox_api_m.AcquisitionResponse.Respon" +
+      "seType\022\020\n\010checksum\030\002 \001(\003\022\017\n\007details\030\003 \001(" +
+      "\t\022\016\n\006resend\030\004 \001(\010\"T\n\014ResponseType\022\013\n\007UNK" +
+      "NOWN\020\000\022\006\n\002OK\020\001\022\016\n\nAUTH_ERROR\020\002\022\016\n\nDATA_E" +
+      "RROR\020\003\022\017\n\013OTHER_ERROR\020\004\"\\\n\014SynchRequest\022" +
+      "\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(" +
+      "\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001" +
+      "\n\rSynchResponse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014s" +
+      "tation_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub" +
+      "_seq_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsen" +
+      "d_ts_us\030\006 \001(\004B\020\n\016io.redvox.apisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -59541,7 +60807,7 @@ public final class RedvoxApiM {
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_descriptor,
-        new java.lang.String[] { "LatitudeLongitudeTimestamp", "AltitudeTimestamp", "SpeedTimestamp", "BearingTimestamp", "Latitude", "Longitude", "Altitude", "Speed", "Bearing", "Score", "Method", "Metadata", });
+        new java.lang.String[] { "LatitudeLongitudeTimestamp", "AltitudeTimestamp", "SpeedTimestamp", "BearingTimestamp", "LatitudeLongitudeUnit", "AltitudeUnit", "SpeedUnit", "BearingUnit", "Latitude", "Longitude", "Altitude", "Speed", "Bearing", "Score", "Method", "Metadata", });
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_MetadataEntry_descriptor =
       internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_descriptor.getNestedTypes().get(0);
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_MetadataEntry_fieldAccessorTable = new
@@ -59553,7 +60819,13 @@ public final class RedvoxApiM {
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_descriptor,
-        new java.lang.String[] { "Mach", "Gps", });
+        new java.lang.String[] { "Unit", "Mach", "Gps", "Metadata", });
+    internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_MetadataEntry_descriptor =
+      internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_descriptor.getNestedTypes().get(0);
+    internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_MetadataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Xyz_descriptor =
       internal_static_redvox_api_m_RedvoxPacketM_Sensors_descriptor.getNestedTypes().get(5);
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Xyz_fieldAccessorTable = new
@@ -59583,7 +60855,7 @@ public final class RedvoxApiM {
     internal_static_redvox_api_m_RedvoxPacketM_EventStream_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_RedvoxPacketM_EventStream_descriptor,
-        new java.lang.String[] { "Name", "Events", "Metadata", });
+        new java.lang.String[] { "Name", "Timestamps", "Events", "Metadata", });
     internal_static_redvox_api_m_RedvoxPacketM_EventStream_MetadataEntry_descriptor =
       internal_static_redvox_api_m_RedvoxPacketM_EventStream_descriptor.getNestedTypes().get(0);
     internal_static_redvox_api_m_RedvoxPacketM_EventStream_MetadataEntry_fieldAccessorTable = new
@@ -59595,7 +60867,7 @@ public final class RedvoxApiM {
     internal_static_redvox_api_m_RedvoxPacketM_EventStream_Event_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_RedvoxPacketM_EventStream_Event_descriptor,
-        new java.lang.String[] { "Timestamp", "Description", "StringPayload", "NumericPayload", "BooleanPayload", "BytePayload", "Metadata", });
+        new java.lang.String[] { "Description", "StringPayload", "NumericPayload", "BooleanPayload", "BytePayload", "Metadata", });
     internal_static_redvox_api_m_RedvoxPacketM_EventStream_Event_StringPayloadEntry_descriptor =
       internal_static_redvox_api_m_RedvoxPacketM_EventStream_Event_descriptor.getNestedTypes().get(0);
     internal_static_redvox_api_m_RedvoxPacketM_EventStream_Event_StringPayloadEntry_fieldAccessorTable = new

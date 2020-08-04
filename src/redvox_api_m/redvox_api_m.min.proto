@@ -254,17 +254,23 @@ message RedvoxPacketM {
                 BestTimestamp altitude_timestamp = 2;
                 BestTimestamp speed_timestamp = 3;
                 BestTimestamp bearing_timestamp = 4;
-                double latitude = 5;
-                double longitude = 6;
-                float altitude = 7;
-                float speed = 8;
-                float bearing = 9;
-                float score = 10;
-                LocationScoreMethod method = 11;
-                map<string, string> metadata = 12;
+                Unit latitude_longitude_unit = 5;
+                Unit altitude_unit = 6;
+                Unit speed_unit = 7;
+                Unit bearing_unit = 8;
+                double latitude = 9;
+                double longitude = 10;
+                float altitude = 11;
+                float speed = 12;
+                float bearing = 13;
+                float score = 14;
+                LocationScoreMethod method = 15;
+                map<string, string> metadata = 16;
                 message BestTimestamp {
-                    double mach = 1;
-                    double gps = 2;
+                    Unit unit = 1;
+                    double mach = 2;
+                    double gps = 3;
+                    map<string, string> metadata = 4;
                 }
                 enum LocationScoreMethod {
                     UNKNOWN_METHOD = 0;
@@ -302,16 +308,16 @@ message RedvoxPacketM {
     }
     message EventStream {
         string name = 1;
-        repeated Event events = 2;
-        map<string, string> metadata = 3;
+        TimingPayload timestamps = 2;
+        repeated Event events = 3;
+        map<string, string> metadata = 4;
         message Event {
-            double timestamp = 1;
-            string description = 2;
-            map<string, string> string_payload = 3;
-            map<string, double> numeric_payload = 4;
-            map<string, bool> boolean_payload = 5;
-            map<string, bytes> byte_payload = 6;
-            map<string, string> metadata = 7;
+            string description = 1;
+            map<string, string> string_payload = 2;
+            map<string, double> numeric_payload = 3;
+            map<string, bool> boolean_payload = 4;
+            map<string, bytes> byte_payload = 5;
+            map<string, string> metadata = 6;
         }
     }
     message SamplePayload {

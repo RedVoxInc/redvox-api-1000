@@ -585,37 +585,55 @@ message RedvoxPacketM {
                 // Timestamp of best bearing estimate
                 BestTimestamp bearing_timestamp = 4;
 
+                // Unit used for latitude/longitude (should be decimal degrees)
+                Unit latitude_longitude_unit = 5;
+
+                // Unit used for altitude (should be meters)
+                Unit altitude_unit = 6;
+
+                // Unit used for speed (should be m/s)
+                Unit speed_unit = 7;
+
+                // Unit used for bearing (should be radians)
+                Unit bearing_unit = 8;
+
                 // The best latitude
-                double latitude = 5;
+                double latitude = 9;
 
                 // The best longitude
-                double longitude = 6;
+                double longitude = 10;
 
                 // The best altitude
-                float altitude = 7;
+                float altitude = 11;
 
                 // The best speed
-                float speed = 8;
+                float speed = 12;
 
                 // The best bearing
-                float bearing = 9;
+                float bearing = 13;
 
                 // The best location score
-                float score = 10;
+                float score = 14;
 
                 // Method used to derive the location score
-                LocationScoreMethod method = 11;
+                LocationScoreMethod method = 15;
 
                 // A map from string to string for including untyped metadata
-                map<string, string> metadata = 12;
+                map<string, string> metadata = 16;
 
                 // A message that encapsulates both a mach and GPS timestamp
                 message BestTimestamp {
+                    // Unit of timestamps (should be microseconds since unix epoch UTC)
+                    Unit unit = 1;
+
                     // Best mach timestamp
-                    double mach = 1;
+                    double mach = 2;
 
                     // Best gps timestamp
-                    double gps = 2;
+                    double gps = 3;
+
+                    // A map from string to string for including untyped metadata
+                    map<string, string> metadata = 4;
                 }
 
                 // An enumeration for the various scoring methods for the "best of" metrics
@@ -689,34 +707,34 @@ message RedvoxPacketM {
         // The name of this stream
         string name = 1;
 
+        // List of timestamps, each associated with one Event
+        TimingPayload timestamps = 2;
+
         // List of events that belong to this stream
-        repeated Event events = 2;
+        repeated Event events = 3;
 
         // A map from string to string for including untyped metadata
-        map<string, string> metadata = 3;
+        map<string, string> metadata = 4;
 
         message Event {
-            // Timestamp of the event
-            double timestamp = 1;
-
             // Textual description of the event
-            string description = 2;
+            string description = 1;
 
             // Key-pairs of type string to string
-            map<string, string> string_payload = 3;
+            map<string, string> string_payload = 2;
 
             // Key-pairs of type string to double
-            map<string, double> numeric_payload = 4;
+            map<string, double> numeric_payload = 3;
 
             // Key-pairs of type string to boolean
-            map<string, bool> boolean_payload = 5;
+            map<string, bool> boolean_payload = 4;
 
             // Key-pairs of type string to bytes.
             // This one is mainly for transmitting binary or data that doesn't fit well into one of the other payloads.
-            map<string, bytes> byte_payload = 6;
+            map<string, bytes> byte_payload = 5;
 
             // A map from string to string for including untyped metadata
-            map<string, string> metadata = 7;
+            map<string, string> metadata = 6;
         }
     }
 
