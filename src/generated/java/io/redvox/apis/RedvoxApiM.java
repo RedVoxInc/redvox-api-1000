@@ -24648,11 +24648,26 @@ public final class RedvoxApiM {
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder getTimestampsOrBuilder();
 
         /**
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+         * @return Whether the timestampsGps field is set.
+         */
+        boolean hasTimestampsGps();
+        /**
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+         * @return The timestampsGps.
+         */
+        io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload getTimestampsGps();
+        /**
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+         */
+        io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder getTimestampsGpsOrBuilder();
+
+        /**
          * <pre>
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
          * @return Whether the latitudeSamples field is set.
          */
         boolean hasLatitudeSamples();
@@ -24661,7 +24676,7 @@ public final class RedvoxApiM {
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
          * @return The latitudeSamples.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getLatitudeSamples();
@@ -24670,7 +24685,7 @@ public final class RedvoxApiM {
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder getLatitudeSamplesOrBuilder();
 
@@ -24679,7 +24694,7 @@ public final class RedvoxApiM {
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
          * @return Whether the longitudeSamples field is set.
          */
         boolean hasLongitudeSamples();
@@ -24688,7 +24703,7 @@ public final class RedvoxApiM {
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
          * @return The longitudeSamples.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getLongitudeSamples();
@@ -24697,7 +24712,7 @@ public final class RedvoxApiM {
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder getLongitudeSamplesOrBuilder();
 
@@ -24706,7 +24721,7 @@ public final class RedvoxApiM {
          * A list of altitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
          * @return Whether the altitudeSamples field is set.
          */
         boolean hasAltitudeSamples();
@@ -24715,7 +24730,7 @@ public final class RedvoxApiM {
          * A list of altitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
          * @return The altitudeSamples.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getAltitudeSamples();
@@ -24724,7 +24739,7 @@ public final class RedvoxApiM {
          * A list of altitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getAltitudeSamplesOrBuilder();
 
@@ -24733,7 +24748,7 @@ public final class RedvoxApiM {
          * A list of speed samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
          * @return Whether the speedSamples field is set.
          */
         boolean hasSpeedSamples();
@@ -24742,7 +24757,7 @@ public final class RedvoxApiM {
          * A list of speed samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
          * @return The speedSamples.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getSpeedSamples();
@@ -24751,7 +24766,7 @@ public final class RedvoxApiM {
          * A list of speed samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getSpeedSamplesOrBuilder();
 
@@ -24760,7 +24775,7 @@ public final class RedvoxApiM {
          * A list of bearing samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
          * @return Whether the bearingSamples field is set.
          */
         boolean hasBearingSamples();
@@ -24769,7 +24784,7 @@ public final class RedvoxApiM {
          * A list of bearing samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
          * @return The bearingSamples.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getBearingSamples();
@@ -24778,7 +24793,7 @@ public final class RedvoxApiM {
          * A list of bearing samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getBearingSamplesOrBuilder();
 
@@ -24787,7 +24802,7 @@ public final class RedvoxApiM {
          * A list of horizontal accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
          * @return Whether the horizontalAccuracySamples field is set.
          */
         boolean hasHorizontalAccuracySamples();
@@ -24796,7 +24811,7 @@ public final class RedvoxApiM {
          * A list of horizontal accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
          * @return The horizontalAccuracySamples.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getHorizontalAccuracySamples();
@@ -24805,7 +24820,7 @@ public final class RedvoxApiM {
          * A list of horizontal accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getHorizontalAccuracySamplesOrBuilder();
 
@@ -24814,7 +24829,7 @@ public final class RedvoxApiM {
          * A list of vertical accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
          * @return Whether the verticalAccuracySamples field is set.
          */
         boolean hasVerticalAccuracySamples();
@@ -24823,7 +24838,7 @@ public final class RedvoxApiM {
          * A list of vertical accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
          * @return The verticalAccuracySamples.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getVerticalAccuracySamples();
@@ -24832,7 +24847,7 @@ public final class RedvoxApiM {
          * A list of vertical accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getVerticalAccuracySamplesOrBuilder();
 
@@ -24841,7 +24856,7 @@ public final class RedvoxApiM {
          * A list of speed accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
          * @return Whether the speedAccuracySamples field is set.
          */
         boolean hasSpeedAccuracySamples();
@@ -24850,7 +24865,7 @@ public final class RedvoxApiM {
          * A list of speed accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
          * @return The speedAccuracySamples.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getSpeedAccuracySamples();
@@ -24859,7 +24874,7 @@ public final class RedvoxApiM {
          * A list of speed accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getSpeedAccuracySamplesOrBuilder();
 
@@ -24868,7 +24883,7 @@ public final class RedvoxApiM {
          * A list of bearing accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
          * @return Whether the bearingAccuracySamples field is set.
          */
         boolean hasBearingAccuracySamples();
@@ -24877,7 +24892,7 @@ public final class RedvoxApiM {
          * A list of bearing accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
          * @return The bearingAccuracySamples.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getBearingAccuracySamples();
@@ -24886,7 +24901,7 @@ public final class RedvoxApiM {
          * A list of bearing accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getBearingAccuracySamplesOrBuilder();
 
@@ -24895,7 +24910,7 @@ public final class RedvoxApiM {
          * Most recent best location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
          * @return Whether the lastBestLocation field is set.
          */
         boolean hasLastBestLocation();
@@ -24904,7 +24919,7 @@ public final class RedvoxApiM {
          * Most recent best location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
          * @return The lastBestLocation.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getLastBestLocation();
@@ -24913,7 +24928,7 @@ public final class RedvoxApiM {
          * Most recent best location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getLastBestLocationOrBuilder();
 
@@ -24922,7 +24937,7 @@ public final class RedvoxApiM {
          * Best last location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
          * @return Whether the overallBestLocation field is set.
          */
         boolean hasOverallBestLocation();
@@ -24931,7 +24946,7 @@ public final class RedvoxApiM {
          * Best last location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
          * @return The overallBestLocation.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getOverallBestLocation();
@@ -24940,7 +24955,7 @@ public final class RedvoxApiM {
          * Best last location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getOverallBestLocationOrBuilder();
 
@@ -24949,7 +24964,7 @@ public final class RedvoxApiM {
          * Have location permissions been granted by the user?
          * </pre>
          *
-         * <code>bool location_permissions_granted = 14;</code>
+         * <code>bool location_permissions_granted = 15;</code>
          * @return The locationPermissionsGranted.
          */
         boolean getLocationPermissionsGranted();
@@ -24959,7 +24974,7 @@ public final class RedvoxApiM {
          * Has location services been requested by the user?
          * </pre>
          *
-         * <code>bool location_services_requested = 15;</code>
+         * <code>bool location_services_requested = 16;</code>
          * @return The locationServicesRequested.
          */
         boolean getLocationServicesRequested();
@@ -24969,7 +24984,7 @@ public final class RedvoxApiM {
          * Are location services enabled and working?
          * </pre>
          *
-         * <code>bool location_services_enabled = 16;</code>
+         * <code>bool location_services_enabled = 17;</code>
          * @return The locationServicesEnabled.
          */
         boolean getLocationServicesEnabled();
@@ -24979,7 +24994,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
          * @return A list containing the locationProviders.
          */
         java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider> getLocationProvidersList();
@@ -24988,7 +25003,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
          * @return The count of locationProviders.
          */
         int getLocationProvidersCount();
@@ -24997,7 +25012,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
          * @param index The index of the element to return.
          * @return The locationProviders at the given index.
          */
@@ -25007,7 +25022,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
          * @return A list containing the enum numeric values on the wire for locationProviders.
          */
         java.util.List<java.lang.Integer>
@@ -25017,7 +25032,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
          * @param index The index of the value to return.
          * @return The enum numeric value on the wire of locationProviders at the given index.
          */
@@ -25028,7 +25043,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 18;</code>
+         * <code>map&lt;string, string&gt; metadata = 19;</code>
          */
         int getMetadataCount();
         /**
@@ -25036,7 +25051,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 18;</code>
+         * <code>map&lt;string, string&gt; metadata = 19;</code>
          */
         boolean containsMetadata(
             java.lang.String key);
@@ -25051,7 +25066,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 18;</code>
+         * <code>map&lt;string, string&gt; metadata = 19;</code>
          */
         java.util.Map<java.lang.String, java.lang.String>
         getMetadataMap();
@@ -25060,7 +25075,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 18;</code>
+         * <code>map&lt;string, string&gt; metadata = 19;</code>
          */
 
         java.lang.String getMetadataOrDefault(
@@ -25071,7 +25086,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 18;</code>
+         * <code>map&lt;string, string&gt; metadata = 19;</code>
          */
 
         java.lang.String getMetadataOrThrow(
@@ -25150,6 +25165,19 @@ public final class RedvoxApiM {
                   break;
                 }
                 case 26: {
+                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder subBuilder = null;
+                  if (timestampsGps_ != null) {
+                    subBuilder = timestampsGps_.toBuilder();
+                  }
+                  timestampsGps_ = input.readMessage(io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(timestampsGps_);
+                    timestampsGps_ = subBuilder.buildPartial();
+                  }
+
+                  break;
+                }
+                case 34: {
                   io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder subBuilder = null;
                   if (latitudeSamples_ != null) {
                     subBuilder = latitudeSamples_.toBuilder();
@@ -25162,7 +25190,7 @@ public final class RedvoxApiM {
 
                   break;
                 }
-                case 34: {
+                case 42: {
                   io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder subBuilder = null;
                   if (longitudeSamples_ != null) {
                     subBuilder = longitudeSamples_.toBuilder();
@@ -25175,7 +25203,7 @@ public final class RedvoxApiM {
 
                   break;
                 }
-                case 42: {
+                case 50: {
                   io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder subBuilder = null;
                   if (altitudeSamples_ != null) {
                     subBuilder = altitudeSamples_.toBuilder();
@@ -25188,7 +25216,7 @@ public final class RedvoxApiM {
 
                   break;
                 }
-                case 50: {
+                case 58: {
                   io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder subBuilder = null;
                   if (speedSamples_ != null) {
                     subBuilder = speedSamples_.toBuilder();
@@ -25201,7 +25229,7 @@ public final class RedvoxApiM {
 
                   break;
                 }
-                case 58: {
+                case 66: {
                   io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder subBuilder = null;
                   if (bearingSamples_ != null) {
                     subBuilder = bearingSamples_.toBuilder();
@@ -25214,7 +25242,7 @@ public final class RedvoxApiM {
 
                   break;
                 }
-                case 66: {
+                case 74: {
                   io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder subBuilder = null;
                   if (horizontalAccuracySamples_ != null) {
                     subBuilder = horizontalAccuracySamples_.toBuilder();
@@ -25227,7 +25255,7 @@ public final class RedvoxApiM {
 
                   break;
                 }
-                case 74: {
+                case 82: {
                   io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder subBuilder = null;
                   if (verticalAccuracySamples_ != null) {
                     subBuilder = verticalAccuracySamples_.toBuilder();
@@ -25240,7 +25268,7 @@ public final class RedvoxApiM {
 
                   break;
                 }
-                case 82: {
+                case 90: {
                   io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder subBuilder = null;
                   if (speedAccuracySamples_ != null) {
                     subBuilder = speedAccuracySamples_.toBuilder();
@@ -25253,7 +25281,7 @@ public final class RedvoxApiM {
 
                   break;
                 }
-                case 90: {
+                case 98: {
                   io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder subBuilder = null;
                   if (bearingAccuracySamples_ != null) {
                     subBuilder = bearingAccuracySamples_.toBuilder();
@@ -25266,7 +25294,7 @@ public final class RedvoxApiM {
 
                   break;
                 }
-                case 98: {
+                case 106: {
                   io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder subBuilder = null;
                   if (lastBestLocation_ != null) {
                     subBuilder = lastBestLocation_.toBuilder();
@@ -25279,7 +25307,7 @@ public final class RedvoxApiM {
 
                   break;
                 }
-                case 106: {
+                case 114: {
                   io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder subBuilder = null;
                   if (overallBestLocation_ != null) {
                     subBuilder = overallBestLocation_.toBuilder();
@@ -25292,22 +25320,22 @@ public final class RedvoxApiM {
 
                   break;
                 }
-                case 112: {
+                case 120: {
 
                   locationPermissionsGranted_ = input.readBool();
                   break;
                 }
-                case 120: {
+                case 128: {
 
                   locationServicesRequested_ = input.readBool();
                   break;
                 }
-                case 128: {
+                case 136: {
 
                   locationServicesEnabled_ = input.readBool();
                   break;
                 }
-                case 136: {
+                case 144: {
                   int rawValue = input.readEnum();
                   if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                     locationProviders_ = new java.util.ArrayList<java.lang.Integer>();
@@ -25316,7 +25344,7 @@ public final class RedvoxApiM {
                   locationProviders_.add(rawValue);
                   break;
                 }
-                case 138: {
+                case 146: {
                   int length = input.readRawVarint32();
                   int oldLimit = input.pushLimit(length);
                   while(input.getBytesUntilLimit() > 0) {
@@ -25330,7 +25358,7 @@ public final class RedvoxApiM {
                   input.popLimit(oldLimit);
                   break;
                 }
-                case 146: {
+                case 154: {
                   if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                     metadata_ = com.google.protobuf.MapField.newMapField(
                         MetadataDefaultEntryHolder.defaultEntry);
@@ -25375,7 +25403,7 @@ public final class RedvoxApiM {
         protected com.google.protobuf.MapField internalGetMapField(
             int number) {
           switch (number) {
-            case 18:
+            case 19:
               return internalGetMetadata();
             default:
               throw new RuntimeException(
@@ -30930,14 +30958,37 @@ public final class RedvoxApiM {
           return getTimestamps();
         }
 
-        public static final int LATITUDE_SAMPLES_FIELD_NUMBER = 3;
+        public static final int TIMESTAMPS_GPS_FIELD_NUMBER = 3;
+        private io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload timestampsGps_;
+        /**
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+         * @return Whether the timestampsGps field is set.
+         */
+        public boolean hasTimestampsGps() {
+          return timestampsGps_ != null;
+        }
+        /**
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+         * @return The timestampsGps.
+         */
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload getTimestampsGps() {
+          return timestampsGps_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.getDefaultInstance() : timestampsGps_;
+        }
+        /**
+         * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+         */
+        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder getTimestampsGpsOrBuilder() {
+          return getTimestampsGps();
+        }
+
+        public static final int LATITUDE_SAMPLES_FIELD_NUMBER = 4;
         private io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload latitudeSamples_;
         /**
          * <pre>
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
          * @return Whether the latitudeSamples field is set.
          */
         public boolean hasLatitudeSamples() {
@@ -30948,7 +30999,7 @@ public final class RedvoxApiM {
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
          * @return The latitudeSamples.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getLatitudeSamples() {
@@ -30959,20 +31010,20 @@ public final class RedvoxApiM {
          * A list of latitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder getLatitudeSamplesOrBuilder() {
           return getLatitudeSamples();
         }
 
-        public static final int LONGITUDE_SAMPLES_FIELD_NUMBER = 4;
+        public static final int LONGITUDE_SAMPLES_FIELD_NUMBER = 5;
         private io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload longitudeSamples_;
         /**
          * <pre>
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
          * @return Whether the longitudeSamples field is set.
          */
         public boolean hasLongitudeSamples() {
@@ -30983,7 +31034,7 @@ public final class RedvoxApiM {
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
          * @return The longitudeSamples.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getLongitudeSamples() {
@@ -30994,20 +31045,20 @@ public final class RedvoxApiM {
          * A list of longitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder getLongitudeSamplesOrBuilder() {
           return getLongitudeSamples();
         }
 
-        public static final int ALTITUDE_SAMPLES_FIELD_NUMBER = 5;
+        public static final int ALTITUDE_SAMPLES_FIELD_NUMBER = 6;
         private io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload altitudeSamples_;
         /**
          * <pre>
          * A list of altitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
          * @return Whether the altitudeSamples field is set.
          */
         public boolean hasAltitudeSamples() {
@@ -31018,7 +31069,7 @@ public final class RedvoxApiM {
          * A list of altitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
          * @return The altitudeSamples.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getAltitudeSamples() {
@@ -31029,20 +31080,20 @@ public final class RedvoxApiM {
          * A list of altitude samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getAltitudeSamplesOrBuilder() {
           return getAltitudeSamples();
         }
 
-        public static final int SPEED_SAMPLES_FIELD_NUMBER = 6;
+        public static final int SPEED_SAMPLES_FIELD_NUMBER = 7;
         private io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload speedSamples_;
         /**
          * <pre>
          * A list of speed samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
          * @return Whether the speedSamples field is set.
          */
         public boolean hasSpeedSamples() {
@@ -31053,7 +31104,7 @@ public final class RedvoxApiM {
          * A list of speed samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
          * @return The speedSamples.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getSpeedSamples() {
@@ -31064,20 +31115,20 @@ public final class RedvoxApiM {
          * A list of speed samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getSpeedSamplesOrBuilder() {
           return getSpeedSamples();
         }
 
-        public static final int BEARING_SAMPLES_FIELD_NUMBER = 7;
+        public static final int BEARING_SAMPLES_FIELD_NUMBER = 8;
         private io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload bearingSamples_;
         /**
          * <pre>
          * A list of bearing samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
          * @return Whether the bearingSamples field is set.
          */
         public boolean hasBearingSamples() {
@@ -31088,7 +31139,7 @@ public final class RedvoxApiM {
          * A list of bearing samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
          * @return The bearingSamples.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getBearingSamples() {
@@ -31099,20 +31150,20 @@ public final class RedvoxApiM {
          * A list of bearing samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getBearingSamplesOrBuilder() {
           return getBearingSamples();
         }
 
-        public static final int HORIZONTAL_ACCURACY_SAMPLES_FIELD_NUMBER = 8;
+        public static final int HORIZONTAL_ACCURACY_SAMPLES_FIELD_NUMBER = 9;
         private io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload horizontalAccuracySamples_;
         /**
          * <pre>
          * A list of horizontal accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
          * @return Whether the horizontalAccuracySamples field is set.
          */
         public boolean hasHorizontalAccuracySamples() {
@@ -31123,7 +31174,7 @@ public final class RedvoxApiM {
          * A list of horizontal accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
          * @return The horizontalAccuracySamples.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getHorizontalAccuracySamples() {
@@ -31134,20 +31185,20 @@ public final class RedvoxApiM {
          * A list of horizontal accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getHorizontalAccuracySamplesOrBuilder() {
           return getHorizontalAccuracySamples();
         }
 
-        public static final int VERTICAL_ACCURACY_SAMPLES_FIELD_NUMBER = 9;
+        public static final int VERTICAL_ACCURACY_SAMPLES_FIELD_NUMBER = 10;
         private io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload verticalAccuracySamples_;
         /**
          * <pre>
          * A list of vertical accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
          * @return Whether the verticalAccuracySamples field is set.
          */
         public boolean hasVerticalAccuracySamples() {
@@ -31158,7 +31209,7 @@ public final class RedvoxApiM {
          * A list of vertical accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
          * @return The verticalAccuracySamples.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getVerticalAccuracySamples() {
@@ -31169,20 +31220,20 @@ public final class RedvoxApiM {
          * A list of vertical accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getVerticalAccuracySamplesOrBuilder() {
           return getVerticalAccuracySamples();
         }
 
-        public static final int SPEED_ACCURACY_SAMPLES_FIELD_NUMBER = 10;
+        public static final int SPEED_ACCURACY_SAMPLES_FIELD_NUMBER = 11;
         private io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload speedAccuracySamples_;
         /**
          * <pre>
          * A list of speed accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
          * @return Whether the speedAccuracySamples field is set.
          */
         public boolean hasSpeedAccuracySamples() {
@@ -31193,7 +31244,7 @@ public final class RedvoxApiM {
          * A list of speed accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
          * @return The speedAccuracySamples.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getSpeedAccuracySamples() {
@@ -31204,20 +31255,20 @@ public final class RedvoxApiM {
          * A list of speed accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getSpeedAccuracySamplesOrBuilder() {
           return getSpeedAccuracySamples();
         }
 
-        public static final int BEARING_ACCURACY_SAMPLES_FIELD_NUMBER = 11;
+        public static final int BEARING_ACCURACY_SAMPLES_FIELD_NUMBER = 12;
         private io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload bearingAccuracySamples_;
         /**
          * <pre>
          * A list of bearing accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
          * @return Whether the bearingAccuracySamples field is set.
          */
         public boolean hasBearingAccuracySamples() {
@@ -31228,7 +31279,7 @@ public final class RedvoxApiM {
          * A list of bearing accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
          * @return The bearingAccuracySamples.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getBearingAccuracySamples() {
@@ -31239,20 +31290,20 @@ public final class RedvoxApiM {
          * A list of bearing accuracy samples
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getBearingAccuracySamplesOrBuilder() {
           return getBearingAccuracySamples();
         }
 
-        public static final int LAST_BEST_LOCATION_FIELD_NUMBER = 12;
+        public static final int LAST_BEST_LOCATION_FIELD_NUMBER = 13;
         private io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation lastBestLocation_;
         /**
          * <pre>
          * Most recent best location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
          * @return Whether the lastBestLocation field is set.
          */
         public boolean hasLastBestLocation() {
@@ -31263,7 +31314,7 @@ public final class RedvoxApiM {
          * Most recent best location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
          * @return The lastBestLocation.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getLastBestLocation() {
@@ -31274,20 +31325,20 @@ public final class RedvoxApiM {
          * Most recent best location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getLastBestLocationOrBuilder() {
           return getLastBestLocation();
         }
 
-        public static final int OVERALL_BEST_LOCATION_FIELD_NUMBER = 13;
+        public static final int OVERALL_BEST_LOCATION_FIELD_NUMBER = 14;
         private io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation overallBestLocation_;
         /**
          * <pre>
          * Best last location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
          * @return Whether the overallBestLocation field is set.
          */
         public boolean hasOverallBestLocation() {
@@ -31298,7 +31349,7 @@ public final class RedvoxApiM {
          * Best last location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
          * @return The overallBestLocation.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getOverallBestLocation() {
@@ -31309,55 +31360,55 @@ public final class RedvoxApiM {
          * Best last location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getOverallBestLocationOrBuilder() {
           return getOverallBestLocation();
         }
 
-        public static final int LOCATION_PERMISSIONS_GRANTED_FIELD_NUMBER = 14;
+        public static final int LOCATION_PERMISSIONS_GRANTED_FIELD_NUMBER = 15;
         private boolean locationPermissionsGranted_;
         /**
          * <pre>
          * Have location permissions been granted by the user?
          * </pre>
          *
-         * <code>bool location_permissions_granted = 14;</code>
+         * <code>bool location_permissions_granted = 15;</code>
          * @return The locationPermissionsGranted.
          */
         public boolean getLocationPermissionsGranted() {
           return locationPermissionsGranted_;
         }
 
-        public static final int LOCATION_SERVICES_REQUESTED_FIELD_NUMBER = 15;
+        public static final int LOCATION_SERVICES_REQUESTED_FIELD_NUMBER = 16;
         private boolean locationServicesRequested_;
         /**
          * <pre>
          * Has location services been requested by the user?
          * </pre>
          *
-         * <code>bool location_services_requested = 15;</code>
+         * <code>bool location_services_requested = 16;</code>
          * @return The locationServicesRequested.
          */
         public boolean getLocationServicesRequested() {
           return locationServicesRequested_;
         }
 
-        public static final int LOCATION_SERVICES_ENABLED_FIELD_NUMBER = 16;
+        public static final int LOCATION_SERVICES_ENABLED_FIELD_NUMBER = 17;
         private boolean locationServicesEnabled_;
         /**
          * <pre>
          * Are location services enabled and working?
          * </pre>
          *
-         * <code>bool location_services_enabled = 16;</code>
+         * <code>bool location_services_enabled = 17;</code>
          * @return The locationServicesEnabled.
          */
         public boolean getLocationServicesEnabled() {
           return locationServicesEnabled_;
         }
 
-        public static final int LOCATION_PROVIDERS_FIELD_NUMBER = 17;
+        public static final int LOCATION_PROVIDERS_FIELD_NUMBER = 18;
         private java.util.List<java.lang.Integer> locationProviders_;
         private static final com.google.protobuf.Internal.ListAdapter.Converter<
             java.lang.Integer, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider> locationProviders_converter_ =
@@ -31374,7 +31425,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
          * @return A list containing the locationProviders.
          */
         public java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider> getLocationProvidersList() {
@@ -31386,7 +31437,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
          * @return The count of locationProviders.
          */
         public int getLocationProvidersCount() {
@@ -31397,7 +31448,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
          * @param index The index of the element to return.
          * @return The locationProviders at the given index.
          */
@@ -31409,7 +31460,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
          * @return A list containing the enum numeric values on the wire for locationProviders.
          */
         public java.util.List<java.lang.Integer>
@@ -31421,7 +31472,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
          * @param index The index of the value to return.
          * @return The enum numeric value on the wire of locationProviders at the given index.
          */
@@ -31430,7 +31481,7 @@ public final class RedvoxApiM {
         }
         private int locationProvidersMemoizedSerializedSize;
 
-        public static final int METADATA_FIELD_NUMBER = 18;
+        public static final int METADATA_FIELD_NUMBER = 19;
         private static final class MetadataDefaultEntryHolder {
           static final com.google.protobuf.MapEntry<
               java.lang.String, java.lang.String> defaultEntry =
@@ -31461,7 +31512,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 18;</code>
+         * <code>map&lt;string, string&gt; metadata = 19;</code>
          */
 
         public boolean containsMetadata(
@@ -31481,7 +31532,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 18;</code>
+         * <code>map&lt;string, string&gt; metadata = 19;</code>
          */
 
         public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -31492,7 +31543,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 18;</code>
+         * <code>map&lt;string, string&gt; metadata = 19;</code>
          */
 
         public java.lang.String getMetadataOrDefault(
@@ -31508,7 +31559,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 18;</code>
+         * <code>map&lt;string, string&gt; metadata = 19;</code>
          */
 
         public java.lang.String getMetadataOrThrow(
@@ -31543,50 +31594,53 @@ public final class RedvoxApiM {
           if (timestamps_ != null) {
             output.writeMessage(2, getTimestamps());
           }
+          if (timestampsGps_ != null) {
+            output.writeMessage(3, getTimestampsGps());
+          }
           if (latitudeSamples_ != null) {
-            output.writeMessage(3, getLatitudeSamples());
+            output.writeMessage(4, getLatitudeSamples());
           }
           if (longitudeSamples_ != null) {
-            output.writeMessage(4, getLongitudeSamples());
+            output.writeMessage(5, getLongitudeSamples());
           }
           if (altitudeSamples_ != null) {
-            output.writeMessage(5, getAltitudeSamples());
+            output.writeMessage(6, getAltitudeSamples());
           }
           if (speedSamples_ != null) {
-            output.writeMessage(6, getSpeedSamples());
+            output.writeMessage(7, getSpeedSamples());
           }
           if (bearingSamples_ != null) {
-            output.writeMessage(7, getBearingSamples());
+            output.writeMessage(8, getBearingSamples());
           }
           if (horizontalAccuracySamples_ != null) {
-            output.writeMessage(8, getHorizontalAccuracySamples());
+            output.writeMessage(9, getHorizontalAccuracySamples());
           }
           if (verticalAccuracySamples_ != null) {
-            output.writeMessage(9, getVerticalAccuracySamples());
+            output.writeMessage(10, getVerticalAccuracySamples());
           }
           if (speedAccuracySamples_ != null) {
-            output.writeMessage(10, getSpeedAccuracySamples());
+            output.writeMessage(11, getSpeedAccuracySamples());
           }
           if (bearingAccuracySamples_ != null) {
-            output.writeMessage(11, getBearingAccuracySamples());
+            output.writeMessage(12, getBearingAccuracySamples());
           }
           if (lastBestLocation_ != null) {
-            output.writeMessage(12, getLastBestLocation());
+            output.writeMessage(13, getLastBestLocation());
           }
           if (overallBestLocation_ != null) {
-            output.writeMessage(13, getOverallBestLocation());
+            output.writeMessage(14, getOverallBestLocation());
           }
           if (locationPermissionsGranted_ != false) {
-            output.writeBool(14, locationPermissionsGranted_);
+            output.writeBool(15, locationPermissionsGranted_);
           }
           if (locationServicesRequested_ != false) {
-            output.writeBool(15, locationServicesRequested_);
+            output.writeBool(16, locationServicesRequested_);
           }
           if (locationServicesEnabled_ != false) {
-            output.writeBool(16, locationServicesEnabled_);
+            output.writeBool(17, locationServicesEnabled_);
           }
           if (getLocationProvidersList().size() > 0) {
-            output.writeUInt32NoTag(138);
+            output.writeUInt32NoTag(146);
             output.writeUInt32NoTag(locationProvidersMemoizedSerializedSize);
           }
           for (int i = 0; i < locationProviders_.size(); i++) {
@@ -31597,7 +31651,7 @@ public final class RedvoxApiM {
               output,
               internalGetMetadata(),
               MetadataDefaultEntryHolder.defaultEntry,
-              18);
+              19);
           unknownFields.writeTo(output);
         }
 
@@ -31614,61 +31668,65 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(2, getTimestamps());
           }
+          if (timestampsGps_ != null) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(3, getTimestampsGps());
+          }
           if (latitudeSamples_ != null) {
             size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(3, getLatitudeSamples());
+              .computeMessageSize(4, getLatitudeSamples());
           }
           if (longitudeSamples_ != null) {
             size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(4, getLongitudeSamples());
+              .computeMessageSize(5, getLongitudeSamples());
           }
           if (altitudeSamples_ != null) {
             size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(5, getAltitudeSamples());
+              .computeMessageSize(6, getAltitudeSamples());
           }
           if (speedSamples_ != null) {
             size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(6, getSpeedSamples());
+              .computeMessageSize(7, getSpeedSamples());
           }
           if (bearingSamples_ != null) {
             size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(7, getBearingSamples());
+              .computeMessageSize(8, getBearingSamples());
           }
           if (horizontalAccuracySamples_ != null) {
             size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(8, getHorizontalAccuracySamples());
+              .computeMessageSize(9, getHorizontalAccuracySamples());
           }
           if (verticalAccuracySamples_ != null) {
             size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(9, getVerticalAccuracySamples());
+              .computeMessageSize(10, getVerticalAccuracySamples());
           }
           if (speedAccuracySamples_ != null) {
             size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(10, getSpeedAccuracySamples());
+              .computeMessageSize(11, getSpeedAccuracySamples());
           }
           if (bearingAccuracySamples_ != null) {
             size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(11, getBearingAccuracySamples());
+              .computeMessageSize(12, getBearingAccuracySamples());
           }
           if (lastBestLocation_ != null) {
             size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(12, getLastBestLocation());
+              .computeMessageSize(13, getLastBestLocation());
           }
           if (overallBestLocation_ != null) {
             size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(13, getOverallBestLocation());
+              .computeMessageSize(14, getOverallBestLocation());
           }
           if (locationPermissionsGranted_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(14, locationPermissionsGranted_);
+              .computeBoolSize(15, locationPermissionsGranted_);
           }
           if (locationServicesRequested_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(15, locationServicesRequested_);
+              .computeBoolSize(16, locationServicesRequested_);
           }
           if (locationServicesEnabled_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(16, locationServicesEnabled_);
+              .computeBoolSize(17, locationServicesEnabled_);
           }
           {
             int dataSize = 0;
@@ -31690,7 +31748,7 @@ public final class RedvoxApiM {
                 .setValue(entry.getValue())
                 .build();
             size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(18, metadata__);
+                .computeMessageSize(19, metadata__);
           }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
@@ -31713,6 +31771,11 @@ public final class RedvoxApiM {
           if (hasTimestamps()) {
             if (!getTimestamps()
                 .equals(other.getTimestamps())) return false;
+          }
+          if (hasTimestampsGps() != other.hasTimestampsGps()) return false;
+          if (hasTimestampsGps()) {
+            if (!getTimestampsGps()
+                .equals(other.getTimestampsGps())) return false;
           }
           if (hasLatitudeSamples() != other.hasLatitudeSamples()) return false;
           if (hasLatitudeSamples()) {
@@ -31794,6 +31857,10 @@ public final class RedvoxApiM {
           if (hasTimestamps()) {
             hash = (37 * hash) + TIMESTAMPS_FIELD_NUMBER;
             hash = (53 * hash) + getTimestamps().hashCode();
+          }
+          if (hasTimestampsGps()) {
+            hash = (37 * hash) + TIMESTAMPS_GPS_FIELD_NUMBER;
+            hash = (53 * hash) + getTimestampsGps().hashCode();
           }
           if (hasLatitudeSamples()) {
             hash = (37 * hash) + LATITUDE_SAMPLES_FIELD_NUMBER;
@@ -31972,7 +32039,7 @@ public final class RedvoxApiM {
           protected com.google.protobuf.MapField internalGetMapField(
               int number) {
             switch (number) {
-              case 18:
+              case 19:
                 return internalGetMetadata();
               default:
                 throw new RuntimeException(
@@ -31983,7 +32050,7 @@ public final class RedvoxApiM {
           protected com.google.protobuf.MapField internalGetMutableMapField(
               int number) {
             switch (number) {
-              case 18:
+              case 19:
                 return internalGetMutableMetadata();
               default:
                 throw new RuntimeException(
@@ -32023,6 +32090,12 @@ public final class RedvoxApiM {
             } else {
               timestamps_ = null;
               timestampsBuilder_ = null;
+            }
+            if (timestampsGpsBuilder_ == null) {
+              timestampsGps_ = null;
+            } else {
+              timestampsGps_ = null;
+              timestampsGpsBuilder_ = null;
             }
             if (latitudeSamplesBuilder_ == null) {
               latitudeSamples_ = null;
@@ -32131,6 +32204,11 @@ public final class RedvoxApiM {
               result.timestamps_ = timestamps_;
             } else {
               result.timestamps_ = timestampsBuilder_.build();
+            }
+            if (timestampsGpsBuilder_ == null) {
+              result.timestampsGps_ = timestampsGps_;
+            } else {
+              result.timestampsGps_ = timestampsGpsBuilder_.build();
             }
             if (latitudeSamplesBuilder_ == null) {
               result.latitudeSamples_ = latitudeSamples_;
@@ -32251,6 +32329,9 @@ public final class RedvoxApiM {
             }
             if (other.hasTimestamps()) {
               mergeTimestamps(other.getTimestamps());
+            }
+            if (other.hasTimestampsGps()) {
+              mergeTimestampsGps(other.getTimestampsGps());
             }
             if (other.hasLatitudeSamples()) {
               mergeLatitudeSamples(other.getLatitudeSamples());
@@ -32587,6 +32668,125 @@ public final class RedvoxApiM {
             return timestampsBuilder_;
           }
 
+          private io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload timestampsGps_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder> timestampsGpsBuilder_;
+          /**
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+           * @return Whether the timestampsGps field is set.
+           */
+          public boolean hasTimestampsGps() {
+            return timestampsGpsBuilder_ != null || timestampsGps_ != null;
+          }
+          /**
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+           * @return The timestampsGps.
+           */
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload getTimestampsGps() {
+            if (timestampsGpsBuilder_ == null) {
+              return timestampsGps_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.getDefaultInstance() : timestampsGps_;
+            } else {
+              return timestampsGpsBuilder_.getMessage();
+            }
+          }
+          /**
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+           */
+          public Builder setTimestampsGps(io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload value) {
+            if (timestampsGpsBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              timestampsGps_ = value;
+              onChanged();
+            } else {
+              timestampsGpsBuilder_.setMessage(value);
+            }
+
+            return this;
+          }
+          /**
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+           */
+          public Builder setTimestampsGps(
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder builderForValue) {
+            if (timestampsGpsBuilder_ == null) {
+              timestampsGps_ = builderForValue.build();
+              onChanged();
+            } else {
+              timestampsGpsBuilder_.setMessage(builderForValue.build());
+            }
+
+            return this;
+          }
+          /**
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+           */
+          public Builder mergeTimestampsGps(io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload value) {
+            if (timestampsGpsBuilder_ == null) {
+              if (timestampsGps_ != null) {
+                timestampsGps_ =
+                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.newBuilder(timestampsGps_).mergeFrom(value).buildPartial();
+              } else {
+                timestampsGps_ = value;
+              }
+              onChanged();
+            } else {
+              timestampsGpsBuilder_.mergeFrom(value);
+            }
+
+            return this;
+          }
+          /**
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+           */
+          public Builder clearTimestampsGps() {
+            if (timestampsGpsBuilder_ == null) {
+              timestampsGps_ = null;
+              onChanged();
+            } else {
+              timestampsGps_ = null;
+              timestampsGpsBuilder_ = null;
+            }
+
+            return this;
+          }
+          /**
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+           */
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder getTimestampsGpsBuilder() {
+            
+            onChanged();
+            return getTimestampsGpsFieldBuilder().getBuilder();
+          }
+          /**
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+           */
+          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder getTimestampsGpsOrBuilder() {
+            if (timestampsGpsBuilder_ != null) {
+              return timestampsGpsBuilder_.getMessageOrBuilder();
+            } else {
+              return timestampsGps_ == null ?
+                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.getDefaultInstance() : timestampsGps_;
+            }
+          }
+          /**
+           * <code>.redvox_api_m.RedvoxPacketM.TimingPayload timestamps_gps = 3;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder> 
+              getTimestampsGpsFieldBuilder() {
+            if (timestampsGpsBuilder_ == null) {
+              timestampsGpsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingPayloadOrBuilder>(
+                      getTimestampsGps(),
+                      getParentForChildren(),
+                      isClean());
+              timestampsGps_ = null;
+            }
+            return timestampsGpsBuilder_;
+          }
+
           private io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload latitudeSamples_;
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder> latitudeSamplesBuilder_;
@@ -32595,7 +32795,7 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
            * @return Whether the latitudeSamples field is set.
            */
           public boolean hasLatitudeSamples() {
@@ -32606,7 +32806,7 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
            * @return The latitudeSamples.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getLatitudeSamples() {
@@ -32621,7 +32821,7 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
            */
           public Builder setLatitudeSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload value) {
             if (latitudeSamplesBuilder_ == null) {
@@ -32641,7 +32841,7 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
            */
           public Builder setLatitudeSamples(
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder builderForValue) {
@@ -32659,7 +32859,7 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
            */
           public Builder mergeLatitudeSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload value) {
             if (latitudeSamplesBuilder_ == null) {
@@ -32681,7 +32881,7 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
            */
           public Builder clearLatitudeSamples() {
             if (latitudeSamplesBuilder_ == null) {
@@ -32699,7 +32899,7 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder getLatitudeSamplesBuilder() {
             
@@ -32711,7 +32911,7 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder getLatitudeSamplesOrBuilder() {
             if (latitudeSamplesBuilder_ != null) {
@@ -32726,7 +32926,7 @@ public final class RedvoxApiM {
            * A list of latitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 3;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload latitude_samples = 4;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder> 
@@ -32750,7 +32950,7 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
            * @return Whether the longitudeSamples field is set.
            */
           public boolean hasLongitudeSamples() {
@@ -32761,7 +32961,7 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
            * @return The longitudeSamples.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload getLongitudeSamples() {
@@ -32776,7 +32976,7 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
            */
           public Builder setLongitudeSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload value) {
             if (longitudeSamplesBuilder_ == null) {
@@ -32796,7 +32996,7 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
            */
           public Builder setLongitudeSamples(
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder builderForValue) {
@@ -32814,7 +33014,7 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
            */
           public Builder mergeLongitudeSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload value) {
             if (longitudeSamplesBuilder_ == null) {
@@ -32836,7 +33036,7 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
            */
           public Builder clearLongitudeSamples() {
             if (longitudeSamplesBuilder_ == null) {
@@ -32854,7 +33054,7 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder getLongitudeSamplesBuilder() {
             
@@ -32866,7 +33066,7 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder getLongitudeSamplesOrBuilder() {
             if (longitudeSamplesBuilder_ != null) {
@@ -32881,7 +33081,7 @@ public final class RedvoxApiM {
            * A list of longitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 4;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.DoubleSamplePayload longitude_samples = 5;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.DoubleSamplePayloadOrBuilder> 
@@ -32905,7 +33105,7 @@ public final class RedvoxApiM {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
            * @return Whether the altitudeSamples field is set.
            */
           public boolean hasAltitudeSamples() {
@@ -32916,7 +33116,7 @@ public final class RedvoxApiM {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
            * @return The altitudeSamples.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getAltitudeSamples() {
@@ -32931,7 +33131,7 @@ public final class RedvoxApiM {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
            */
           public Builder setAltitudeSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
             if (altitudeSamplesBuilder_ == null) {
@@ -32951,7 +33151,7 @@ public final class RedvoxApiM {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
            */
           public Builder setAltitudeSamples(
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder builderForValue) {
@@ -32969,7 +33169,7 @@ public final class RedvoxApiM {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
            */
           public Builder mergeAltitudeSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
             if (altitudeSamplesBuilder_ == null) {
@@ -32991,7 +33191,7 @@ public final class RedvoxApiM {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
            */
           public Builder clearAltitudeSamples() {
             if (altitudeSamplesBuilder_ == null) {
@@ -33009,7 +33209,7 @@ public final class RedvoxApiM {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder getAltitudeSamplesBuilder() {
             
@@ -33021,7 +33221,7 @@ public final class RedvoxApiM {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getAltitudeSamplesOrBuilder() {
             if (altitudeSamplesBuilder_ != null) {
@@ -33036,7 +33236,7 @@ public final class RedvoxApiM {
            * A list of altitude samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 5;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload altitude_samples = 6;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder> 
@@ -33060,7 +33260,7 @@ public final class RedvoxApiM {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
            * @return Whether the speedSamples field is set.
            */
           public boolean hasSpeedSamples() {
@@ -33071,7 +33271,7 @@ public final class RedvoxApiM {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
            * @return The speedSamples.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getSpeedSamples() {
@@ -33086,7 +33286,7 @@ public final class RedvoxApiM {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
            */
           public Builder setSpeedSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
             if (speedSamplesBuilder_ == null) {
@@ -33106,7 +33306,7 @@ public final class RedvoxApiM {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
            */
           public Builder setSpeedSamples(
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder builderForValue) {
@@ -33124,7 +33324,7 @@ public final class RedvoxApiM {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
            */
           public Builder mergeSpeedSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
             if (speedSamplesBuilder_ == null) {
@@ -33146,7 +33346,7 @@ public final class RedvoxApiM {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
            */
           public Builder clearSpeedSamples() {
             if (speedSamplesBuilder_ == null) {
@@ -33164,7 +33364,7 @@ public final class RedvoxApiM {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder getSpeedSamplesBuilder() {
             
@@ -33176,7 +33376,7 @@ public final class RedvoxApiM {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getSpeedSamplesOrBuilder() {
             if (speedSamplesBuilder_ != null) {
@@ -33191,7 +33391,7 @@ public final class RedvoxApiM {
            * A list of speed samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 6;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_samples = 7;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder> 
@@ -33215,7 +33415,7 @@ public final class RedvoxApiM {
            * A list of bearing samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
            * @return Whether the bearingSamples field is set.
            */
           public boolean hasBearingSamples() {
@@ -33226,7 +33426,7 @@ public final class RedvoxApiM {
            * A list of bearing samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
            * @return The bearingSamples.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getBearingSamples() {
@@ -33241,7 +33441,7 @@ public final class RedvoxApiM {
            * A list of bearing samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
            */
           public Builder setBearingSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
             if (bearingSamplesBuilder_ == null) {
@@ -33261,7 +33461,7 @@ public final class RedvoxApiM {
            * A list of bearing samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
            */
           public Builder setBearingSamples(
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder builderForValue) {
@@ -33279,7 +33479,7 @@ public final class RedvoxApiM {
            * A list of bearing samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
            */
           public Builder mergeBearingSamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
             if (bearingSamplesBuilder_ == null) {
@@ -33301,7 +33501,7 @@ public final class RedvoxApiM {
            * A list of bearing samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
            */
           public Builder clearBearingSamples() {
             if (bearingSamplesBuilder_ == null) {
@@ -33319,7 +33519,7 @@ public final class RedvoxApiM {
            * A list of bearing samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder getBearingSamplesBuilder() {
             
@@ -33331,7 +33531,7 @@ public final class RedvoxApiM {
            * A list of bearing samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getBearingSamplesOrBuilder() {
             if (bearingSamplesBuilder_ != null) {
@@ -33346,7 +33546,7 @@ public final class RedvoxApiM {
            * A list of bearing samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 7;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_samples = 8;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder> 
@@ -33370,7 +33570,7 @@ public final class RedvoxApiM {
            * A list of horizontal accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
            * @return Whether the horizontalAccuracySamples field is set.
            */
           public boolean hasHorizontalAccuracySamples() {
@@ -33381,7 +33581,7 @@ public final class RedvoxApiM {
            * A list of horizontal accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
            * @return The horizontalAccuracySamples.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getHorizontalAccuracySamples() {
@@ -33396,7 +33596,7 @@ public final class RedvoxApiM {
            * A list of horizontal accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
            */
           public Builder setHorizontalAccuracySamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
             if (horizontalAccuracySamplesBuilder_ == null) {
@@ -33416,7 +33616,7 @@ public final class RedvoxApiM {
            * A list of horizontal accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
            */
           public Builder setHorizontalAccuracySamples(
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder builderForValue) {
@@ -33434,7 +33634,7 @@ public final class RedvoxApiM {
            * A list of horizontal accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
            */
           public Builder mergeHorizontalAccuracySamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
             if (horizontalAccuracySamplesBuilder_ == null) {
@@ -33456,7 +33656,7 @@ public final class RedvoxApiM {
            * A list of horizontal accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
            */
           public Builder clearHorizontalAccuracySamples() {
             if (horizontalAccuracySamplesBuilder_ == null) {
@@ -33474,7 +33674,7 @@ public final class RedvoxApiM {
            * A list of horizontal accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder getHorizontalAccuracySamplesBuilder() {
             
@@ -33486,7 +33686,7 @@ public final class RedvoxApiM {
            * A list of horizontal accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getHorizontalAccuracySamplesOrBuilder() {
             if (horizontalAccuracySamplesBuilder_ != null) {
@@ -33501,7 +33701,7 @@ public final class RedvoxApiM {
            * A list of horizontal accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 8;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload horizontal_accuracy_samples = 9;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder> 
@@ -33525,7 +33725,7 @@ public final class RedvoxApiM {
            * A list of vertical accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
            * @return Whether the verticalAccuracySamples field is set.
            */
           public boolean hasVerticalAccuracySamples() {
@@ -33536,7 +33736,7 @@ public final class RedvoxApiM {
            * A list of vertical accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
            * @return The verticalAccuracySamples.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getVerticalAccuracySamples() {
@@ -33551,7 +33751,7 @@ public final class RedvoxApiM {
            * A list of vertical accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
            */
           public Builder setVerticalAccuracySamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
             if (verticalAccuracySamplesBuilder_ == null) {
@@ -33571,7 +33771,7 @@ public final class RedvoxApiM {
            * A list of vertical accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
            */
           public Builder setVerticalAccuracySamples(
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder builderForValue) {
@@ -33589,7 +33789,7 @@ public final class RedvoxApiM {
            * A list of vertical accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
            */
           public Builder mergeVerticalAccuracySamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
             if (verticalAccuracySamplesBuilder_ == null) {
@@ -33611,7 +33811,7 @@ public final class RedvoxApiM {
            * A list of vertical accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
            */
           public Builder clearVerticalAccuracySamples() {
             if (verticalAccuracySamplesBuilder_ == null) {
@@ -33629,7 +33829,7 @@ public final class RedvoxApiM {
            * A list of vertical accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder getVerticalAccuracySamplesBuilder() {
             
@@ -33641,7 +33841,7 @@ public final class RedvoxApiM {
            * A list of vertical accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getVerticalAccuracySamplesOrBuilder() {
             if (verticalAccuracySamplesBuilder_ != null) {
@@ -33656,7 +33856,7 @@ public final class RedvoxApiM {
            * A list of vertical accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 9;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload vertical_accuracy_samples = 10;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder> 
@@ -33680,7 +33880,7 @@ public final class RedvoxApiM {
            * A list of speed accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
            * @return Whether the speedAccuracySamples field is set.
            */
           public boolean hasSpeedAccuracySamples() {
@@ -33691,7 +33891,7 @@ public final class RedvoxApiM {
            * A list of speed accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
            * @return The speedAccuracySamples.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getSpeedAccuracySamples() {
@@ -33706,7 +33906,7 @@ public final class RedvoxApiM {
            * A list of speed accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
            */
           public Builder setSpeedAccuracySamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
             if (speedAccuracySamplesBuilder_ == null) {
@@ -33726,7 +33926,7 @@ public final class RedvoxApiM {
            * A list of speed accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
            */
           public Builder setSpeedAccuracySamples(
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder builderForValue) {
@@ -33744,7 +33944,7 @@ public final class RedvoxApiM {
            * A list of speed accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
            */
           public Builder mergeSpeedAccuracySamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
             if (speedAccuracySamplesBuilder_ == null) {
@@ -33766,7 +33966,7 @@ public final class RedvoxApiM {
            * A list of speed accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
            */
           public Builder clearSpeedAccuracySamples() {
             if (speedAccuracySamplesBuilder_ == null) {
@@ -33784,7 +33984,7 @@ public final class RedvoxApiM {
            * A list of speed accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder getSpeedAccuracySamplesBuilder() {
             
@@ -33796,7 +33996,7 @@ public final class RedvoxApiM {
            * A list of speed accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getSpeedAccuracySamplesOrBuilder() {
             if (speedAccuracySamplesBuilder_ != null) {
@@ -33811,7 +34011,7 @@ public final class RedvoxApiM {
            * A list of speed accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 10;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload speed_accuracy_samples = 11;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder> 
@@ -33835,7 +34035,7 @@ public final class RedvoxApiM {
            * A list of bearing accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
            * @return Whether the bearingAccuracySamples field is set.
            */
           public boolean hasBearingAccuracySamples() {
@@ -33846,7 +34046,7 @@ public final class RedvoxApiM {
            * A list of bearing accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
            * @return The bearingAccuracySamples.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload getBearingAccuracySamples() {
@@ -33861,7 +34061,7 @@ public final class RedvoxApiM {
            * A list of bearing accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
            */
           public Builder setBearingAccuracySamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
             if (bearingAccuracySamplesBuilder_ == null) {
@@ -33881,7 +34081,7 @@ public final class RedvoxApiM {
            * A list of bearing accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
            */
           public Builder setBearingAccuracySamples(
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder builderForValue) {
@@ -33899,7 +34099,7 @@ public final class RedvoxApiM {
            * A list of bearing accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
            */
           public Builder mergeBearingAccuracySamples(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload value) {
             if (bearingAccuracySamplesBuilder_ == null) {
@@ -33921,7 +34121,7 @@ public final class RedvoxApiM {
            * A list of bearing accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
            */
           public Builder clearBearingAccuracySamples() {
             if (bearingAccuracySamplesBuilder_ == null) {
@@ -33939,7 +34139,7 @@ public final class RedvoxApiM {
            * A list of bearing accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder getBearingAccuracySamplesBuilder() {
             
@@ -33951,7 +34151,7 @@ public final class RedvoxApiM {
            * A list of bearing accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder getBearingAccuracySamplesOrBuilder() {
             if (bearingAccuracySamplesBuilder_ != null) {
@@ -33966,7 +34166,7 @@ public final class RedvoxApiM {
            * A list of bearing accuracy samples
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 11;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.SamplePayload bearing_accuracy_samples = 12;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayload.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.SamplePayloadOrBuilder> 
@@ -33990,7 +34190,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
            * @return Whether the lastBestLocation field is set.
            */
           public boolean hasLastBestLocation() {
@@ -34001,7 +34201,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
            * @return The lastBestLocation.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getLastBestLocation() {
@@ -34016,7 +34216,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
            */
           public Builder setLastBestLocation(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation value) {
             if (lastBestLocationBuilder_ == null) {
@@ -34036,7 +34236,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
            */
           public Builder setLastBestLocation(
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder builderForValue) {
@@ -34054,7 +34254,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
            */
           public Builder mergeLastBestLocation(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation value) {
             if (lastBestLocationBuilder_ == null) {
@@ -34076,7 +34276,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
            */
           public Builder clearLastBestLocation() {
             if (lastBestLocationBuilder_ == null) {
@@ -34094,7 +34294,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder getLastBestLocationBuilder() {
             
@@ -34106,7 +34306,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getLastBestLocationOrBuilder() {
             if (lastBestLocationBuilder_ != null) {
@@ -34121,7 +34321,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder> 
@@ -34145,7 +34345,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
            * @return Whether the overallBestLocation field is set.
            */
           public boolean hasOverallBestLocation() {
@@ -34156,7 +34356,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
            * @return The overallBestLocation.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getOverallBestLocation() {
@@ -34171,7 +34371,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
            */
           public Builder setOverallBestLocation(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation value) {
             if (overallBestLocationBuilder_ == null) {
@@ -34191,7 +34391,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
            */
           public Builder setOverallBestLocation(
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder builderForValue) {
@@ -34209,7 +34409,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
            */
           public Builder mergeOverallBestLocation(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation value) {
             if (overallBestLocationBuilder_ == null) {
@@ -34231,7 +34431,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
            */
           public Builder clearOverallBestLocation() {
             if (overallBestLocationBuilder_ == null) {
@@ -34249,7 +34449,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder getOverallBestLocationBuilder() {
             
@@ -34261,7 +34461,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getOverallBestLocationOrBuilder() {
             if (overallBestLocationBuilder_ != null) {
@@ -34276,7 +34476,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder> 
@@ -34298,7 +34498,7 @@ public final class RedvoxApiM {
            * Have location permissions been granted by the user?
            * </pre>
            *
-           * <code>bool location_permissions_granted = 14;</code>
+           * <code>bool location_permissions_granted = 15;</code>
            * @return The locationPermissionsGranted.
            */
           public boolean getLocationPermissionsGranted() {
@@ -34309,7 +34509,7 @@ public final class RedvoxApiM {
            * Have location permissions been granted by the user?
            * </pre>
            *
-           * <code>bool location_permissions_granted = 14;</code>
+           * <code>bool location_permissions_granted = 15;</code>
            * @param value The locationPermissionsGranted to set.
            * @return This builder for chaining.
            */
@@ -34324,7 +34524,7 @@ public final class RedvoxApiM {
            * Have location permissions been granted by the user?
            * </pre>
            *
-           * <code>bool location_permissions_granted = 14;</code>
+           * <code>bool location_permissions_granted = 15;</code>
            * @return This builder for chaining.
            */
           public Builder clearLocationPermissionsGranted() {
@@ -34340,7 +34540,7 @@ public final class RedvoxApiM {
            * Has location services been requested by the user?
            * </pre>
            *
-           * <code>bool location_services_requested = 15;</code>
+           * <code>bool location_services_requested = 16;</code>
            * @return The locationServicesRequested.
            */
           public boolean getLocationServicesRequested() {
@@ -34351,7 +34551,7 @@ public final class RedvoxApiM {
            * Has location services been requested by the user?
            * </pre>
            *
-           * <code>bool location_services_requested = 15;</code>
+           * <code>bool location_services_requested = 16;</code>
            * @param value The locationServicesRequested to set.
            * @return This builder for chaining.
            */
@@ -34366,7 +34566,7 @@ public final class RedvoxApiM {
            * Has location services been requested by the user?
            * </pre>
            *
-           * <code>bool location_services_requested = 15;</code>
+           * <code>bool location_services_requested = 16;</code>
            * @return This builder for chaining.
            */
           public Builder clearLocationServicesRequested() {
@@ -34382,7 +34582,7 @@ public final class RedvoxApiM {
            * Are location services enabled and working?
            * </pre>
            *
-           * <code>bool location_services_enabled = 16;</code>
+           * <code>bool location_services_enabled = 17;</code>
            * @return The locationServicesEnabled.
            */
           public boolean getLocationServicesEnabled() {
@@ -34393,7 +34593,7 @@ public final class RedvoxApiM {
            * Are location services enabled and working?
            * </pre>
            *
-           * <code>bool location_services_enabled = 16;</code>
+           * <code>bool location_services_enabled = 17;</code>
            * @param value The locationServicesEnabled to set.
            * @return This builder for chaining.
            */
@@ -34408,7 +34608,7 @@ public final class RedvoxApiM {
            * Are location services enabled and working?
            * </pre>
            *
-           * <code>bool location_services_enabled = 16;</code>
+           * <code>bool location_services_enabled = 17;</code>
            * @return This builder for chaining.
            */
           public Builder clearLocationServicesEnabled() {
@@ -34431,7 +34631,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
            * @return A list containing the locationProviders.
            */
           public java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider> getLocationProvidersList() {
@@ -34443,7 +34643,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
            * @return The count of locationProviders.
            */
           public int getLocationProvidersCount() {
@@ -34454,7 +34654,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
            * @param index The index of the element to return.
            * @return The locationProviders at the given index.
            */
@@ -34466,7 +34666,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
            * @param index The index to set the value at.
            * @param value The locationProviders to set.
            * @return This builder for chaining.
@@ -34486,7 +34686,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
            * @param value The locationProviders to add.
            * @return This builder for chaining.
            */
@@ -34504,7 +34704,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
            * @param values The locationProviders to add.
            * @return This builder for chaining.
            */
@@ -34522,7 +34722,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
            * @return This builder for chaining.
            */
           public Builder clearLocationProviders() {
@@ -34536,7 +34736,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
            * @return A list containing the enum numeric values on the wire for locationProviders.
            */
           public java.util.List<java.lang.Integer>
@@ -34548,7 +34748,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
            * @param index The index of the value to return.
            * @return The enum numeric value on the wire of locationProviders at the given index.
            */
@@ -34560,7 +34760,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
            * @param index The index of the value to return.
            * @return The enum numeric value on the wire of locationProviders at the given index.
            * @return This builder for chaining.
@@ -34577,7 +34777,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
            * @param value The enum numeric value on the wire for locationProviders to add.
            * @return This builder for chaining.
            */
@@ -34592,7 +34792,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 17;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
            * @param values The enum numeric values on the wire for locationProviders to add.
            * @return This builder for chaining.
            */
@@ -34637,7 +34837,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 18;</code>
+           * <code>map&lt;string, string&gt; metadata = 19;</code>
            */
 
           public boolean containsMetadata(
@@ -34657,7 +34857,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 18;</code>
+           * <code>map&lt;string, string&gt; metadata = 19;</code>
            */
 
           public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -34668,7 +34868,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 18;</code>
+           * <code>map&lt;string, string&gt; metadata = 19;</code>
            */
 
           public java.lang.String getMetadataOrDefault(
@@ -34684,7 +34884,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 18;</code>
+           * <code>map&lt;string, string&gt; metadata = 19;</code>
            */
 
           public java.lang.String getMetadataOrThrow(
@@ -34708,7 +34908,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 18;</code>
+           * <code>map&lt;string, string&gt; metadata = 19;</code>
            */
 
           public Builder removeMetadata(
@@ -34731,7 +34931,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 18;</code>
+           * <code>map&lt;string, string&gt; metadata = 19;</code>
            */
           public Builder putMetadata(
               java.lang.String key,
@@ -34747,7 +34947,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 18;</code>
+           * <code>map&lt;string, string&gt; metadata = 19;</code>
            */
 
           public Builder putAllMetadata(
@@ -61057,7 +61257,7 @@ public final class RedvoxApiM {
   static {
     java.lang.String[] descriptorData = {
       "\n#src/redvox_api_m/redvox_api_m.proto\022\014r" +
-      "edvox_api_m\"\331n\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
+      "edvox_api_m\"\234o\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
       "(\002\022\017\n\007sub_api\030\002 \001(\002\022K\n\023station_informati" +
       "on\030\003 \001(\0132..redvox_api_m.RedvoxPacketM.St" +
       "ationInformation\022I\n\022timing_information\030\004" +
@@ -61196,7 +61396,7 @@ public final class RedvoxApiM {
       "nformation.SynchExchange.MetadataEntry\032/" +
       "\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
       "\001(\t:\0028\001\" \n\021TimingScoreMethod\022\013\n\007UNKNOWN\020" +
-      "\000\032\252/\n\007Sensors\022>\n\raccelerometer\030\001 \001(\0132\'.r" +
+      "\000\032\355/\n\007Sensors\022>\n\raccelerometer\030\001 \001(\0132\'.r" +
       "edvox_api_m.RedvoxPacketM.Sensors.Xyz\022G\n" +
       "\023ambient_temperature\030\002 \001(\0132*.redvox_api_" +
       "m.RedvoxPacketM.Sensors.Single\0228\n\005audio\030" +
@@ -61250,188 +61450,189 @@ public final class RedvoxApiM {
       "dvoxPacketM.SamplePayload\022J\n\010metadata\030\004 " +
       "\003(\01328.redvox_api_m.RedvoxPacketM.Sensors" +
       ".Single.MetadataEntry\032/\n\rMetadataEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\223\030\n\010Locat" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\326\030\n\010Locat" +
       "ion\022\032\n\022sensor_description\030\001 \001(\t\022=\n\ntimes" +
       "tamps\030\002 \001(\0132).redvox_api_m.RedvoxPacketM" +
-      ".TimingPayload\022I\n\020latitude_samples\030\003 \001(\013" +
-      "2/.redvox_api_m.RedvoxPacketM.DoubleSamp" +
-      "lePayload\022J\n\021longitude_samples\030\004 \001(\0132/.r" +
-      "edvox_api_m.RedvoxPacketM.DoubleSamplePa" +
-      "yload\022C\n\020altitude_samples\030\005 \001(\0132).redvox" +
-      "_api_m.RedvoxPacketM.SamplePayload\022@\n\rsp" +
-      "eed_samples\030\006 \001(\0132).redvox_api_m.RedvoxP" +
-      "acketM.SamplePayload\022B\n\017bearing_samples\030" +
-      "\007 \001(\0132).redvox_api_m.RedvoxPacketM.Sampl" +
-      "ePayload\022N\n\033horizontal_accuracy_samples\030" +
-      "\010 \001(\0132).redvox_api_m.RedvoxPacketM.Sampl" +
-      "ePayload\022L\n\031vertical_accuracy_samples\030\t " +
-      "\001(\0132).redvox_api_m.RedvoxPacketM.SampleP" +
-      "ayload\022I\n\026speed_accuracy_samples\030\n \001(\0132)" +
-      ".redvox_api_m.RedvoxPacketM.SamplePayloa" +
-      "d\022K\n\030bearing_accuracy_samples\030\013 \001(\0132).re" +
-      "dvox_api_m.RedvoxPacketM.SamplePayload\022U" +
-      "\n\022last_best_location\030\014 \001(\01329.redvox_api_" +
-      "m.RedvoxPacketM.Sensors.Location.BestLoc" +
-      "ation\022X\n\025overall_best_location\030\r \001(\01329.r" +
-      "edvox_api_m.RedvoxPacketM.Sensors.Locati" +
-      "on.BestLocation\022$\n\034location_permissions_" +
-      "granted\030\016 \001(\010\022#\n\033location_services_reque" +
-      "sted\030\017 \001(\010\022!\n\031location_services_enabled\030" +
-      "\020 \001(\010\022Y\n\022location_providers\030\021 \003(\0162=.redv" +
-      "ox_api_m.RedvoxPacketM.Sensors.Location." +
-      "LocationProvider\022L\n\010metadata\030\022 \003(\0132:.red" +
-      "vox_api_m.RedvoxPacketM.Sensors.Location" +
-      ".MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\317\r\n\014BestLocation" +
-      "\022m\n\034latitude_longitude_timestamp\030\001 \001(\0132G" +
-      ".redvox_api_m.RedvoxPacketM.Sensors.Loca" +
-      "tion.BestLocation.BestTimestamp\022c\n\022altit" +
-      "ude_timestamp\030\002 \001(\0132G.redvox_api_m.Redvo" +
-      "xPacketM.Sensors.Location.BestLocation.B" +
-      "estTimestamp\022`\n\017speed_timestamp\030\003 \001(\0132G." +
+      ".TimingPayload\022A\n\016timestamps_gps\030\003 \001(\0132)" +
+      ".redvox_api_m.RedvoxPacketM.TimingPayloa" +
+      "d\022I\n\020latitude_samples\030\004 \001(\0132/.redvox_api" +
+      "_m.RedvoxPacketM.DoubleSamplePayload\022J\n\021" +
+      "longitude_samples\030\005 \001(\0132/.redvox_api_m.R" +
+      "edvoxPacketM.DoubleSamplePayload\022C\n\020alti" +
+      "tude_samples\030\006 \001(\0132).redvox_api_m.Redvox" +
+      "PacketM.SamplePayload\022@\n\rspeed_samples\030\007" +
+      " \001(\0132).redvox_api_m.RedvoxPacketM.Sample" +
+      "Payload\022B\n\017bearing_samples\030\010 \001(\0132).redvo" +
+      "x_api_m.RedvoxPacketM.SamplePayload\022N\n\033h" +
+      "orizontal_accuracy_samples\030\t \001(\0132).redvo" +
+      "x_api_m.RedvoxPacketM.SamplePayload\022L\n\031v" +
+      "ertical_accuracy_samples\030\n \001(\0132).redvox_" +
+      "api_m.RedvoxPacketM.SamplePayload\022I\n\026spe" +
+      "ed_accuracy_samples\030\013 \001(\0132).redvox_api_m" +
+      ".RedvoxPacketM.SamplePayload\022K\n\030bearing_" +
+      "accuracy_samples\030\014 \001(\0132).redvox_api_m.Re" +
+      "dvoxPacketM.SamplePayload\022U\n\022last_best_l" +
+      "ocation\030\r \001(\01329.redvox_api_m.RedvoxPacke" +
+      "tM.Sensors.Location.BestLocation\022X\n\025over" +
+      "all_best_location\030\016 \001(\01329.redvox_api_m.R" +
+      "edvoxPacketM.Sensors.Location.BestLocati" +
+      "on\022$\n\034location_permissions_granted\030\017 \001(\010" +
+      "\022#\n\033location_services_requested\030\020 \001(\010\022!\n" +
+      "\031location_services_enabled\030\021 \001(\010\022Y\n\022loca" +
+      "tion_providers\030\022 \003(\0162=.redvox_api_m.Redv" +
+      "oxPacketM.Sensors.Location.LocationProvi" +
+      "der\022L\n\010metadata\030\023 \003(\0132:.redvox_api_m.Red" +
+      "voxPacketM.Sensors.Location.MetadataEntr" +
+      "y\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\032\317\r\n\014BestLocation\022m\n\034latitude_" +
+      "longitude_timestamp\030\001 \001(\0132G.redvox_api_m" +
+      ".RedvoxPacketM.Sensors.Location.BestLoca" +
+      "tion.BestTimestamp\022c\n\022altitude_timestamp" +
+      "\030\002 \001(\0132G.redvox_api_m.RedvoxPacketM.Sens" +
+      "ors.Location.BestLocation.BestTimestamp\022" +
+      "`\n\017speed_timestamp\030\003 \001(\0132G.redvox_api_m." +
+      "RedvoxPacketM.Sensors.Location.BestLocat" +
+      "ion.BestTimestamp\022b\n\021bearing_timestamp\030\004" +
+      " \001(\0132G.redvox_api_m.RedvoxPacketM.Sensor" +
+      "s.Location.BestLocation.BestTimestamp\022A\n" +
+      "\027latitude_longitude_unit\030\005 \001(\0162 .redvox_" +
+      "api_m.RedvoxPacketM.Unit\0227\n\raltitude_uni" +
+      "t\030\006 \001(\0162 .redvox_api_m.RedvoxPacketM.Uni" +
+      "t\0224\n\nspeed_unit\030\007 \001(\0162 .redvox_api_m.Red" +
+      "voxPacketM.Unit\0226\n\014bearing_unit\030\010 \001(\0162 ." +
+      "redvox_api_m.RedvoxPacketM.Unit\022@\n\026verti" +
+      "cal_accuracy_unit\030\t \001(\0162 .redvox_api_m.R" +
+      "edvoxPacketM.Unit\022B\n\030horizontal_accuracy" +
+      "_unit\030\n \001(\0162 .redvox_api_m.RedvoxPacketM" +
+      ".Unit\022=\n\023speed_accuracy_unit\030\013 \001(\0162 .red" +
+      "vox_api_m.RedvoxPacketM.Unit\022?\n\025bearing_" +
+      "accuracy_unit\030\014 \001(\0162 .redvox_api_m.Redvo" +
+      "xPacketM.Unit\022\020\n\010latitude\030\r \001(\001\022\021\n\tlongi" +
+      "tude\030\016 \001(\001\022\020\n\010altitude\030\017 \001(\002\022\r\n\005speed\030\020 " +
+      "\001(\002\022\017\n\007bearing\030\021 \001(\002\022\031\n\021vertical_accurac" +
+      "y\030\022 \001(\002\022\033\n\023horizontal_accuracy\030\023 \001(\002\022\026\n\016" +
+      "speed_accuracy\030\024 \001(\002\022\030\n\020bearing_accuracy" +
+      "\030\025 \001(\002\022\r\n\005score\030\026 \001(\002\022]\n\006method\030\027 \001(\0162M." +
       "redvox_api_m.RedvoxPacketM.Sensors.Locat" +
-      "ion.BestLocation.BestTimestamp\022b\n\021bearin" +
-      "g_timestamp\030\004 \001(\0132G.redvox_api_m.RedvoxP" +
+      "ion.BestLocation.LocationScoreMethod\022X\n\021" +
+      "location_provider\030\030 \001(\0162=.redvox_api_m.R" +
+      "edvoxPacketM.Sensors.Location.LocationPr" +
+      "ovider\022Y\n\010metadata\030\031 \003(\0132G.redvox_api_m." +
+      "RedvoxPacketM.Sensors.Location.BestLocat" +
+      "ion.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\364\001\n\rBestTimes" +
+      "tamp\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Redvox" +
+      "PacketM.Unit\022\014\n\004mach\030\002 \001(\001\022\013\n\003gps\030\003 \001(\001\022" +
+      "g\n\010metadata\030\004 \003(\0132U.redvox_api_m.RedvoxP" +
       "acketM.Sensors.Location.BestLocation.Bes" +
-      "tTimestamp\022A\n\027latitude_longitude_unit\030\005 " +
-      "\001(\0162 .redvox_api_m.RedvoxPacketM.Unit\0227\n" +
-      "\raltitude_unit\030\006 \001(\0162 .redvox_api_m.Redv" +
-      "oxPacketM.Unit\0224\n\nspeed_unit\030\007 \001(\0162 .red" +
-      "vox_api_m.RedvoxPacketM.Unit\0226\n\014bearing_" +
-      "unit\030\010 \001(\0162 .redvox_api_m.RedvoxPacketM." +
-      "Unit\022@\n\026vertical_accuracy_unit\030\t \001(\0162 .r" +
-      "edvox_api_m.RedvoxPacketM.Unit\022B\n\030horizo" +
-      "ntal_accuracy_unit\030\n \001(\0162 .redvox_api_m." +
-      "RedvoxPacketM.Unit\022=\n\023speed_accuracy_uni" +
-      "t\030\013 \001(\0162 .redvox_api_m.RedvoxPacketM.Uni" +
-      "t\022?\n\025bearing_accuracy_unit\030\014 \001(\0162 .redvo" +
-      "x_api_m.RedvoxPacketM.Unit\022\020\n\010latitude\030\r" +
-      " \001(\001\022\021\n\tlongitude\030\016 \001(\001\022\020\n\010altitude\030\017 \001(" +
-      "\002\022\r\n\005speed\030\020 \001(\002\022\017\n\007bearing\030\021 \001(\002\022\031\n\021ver" +
-      "tical_accuracy\030\022 \001(\002\022\033\n\023horizontal_accur" +
-      "acy\030\023 \001(\002\022\026\n\016speed_accuracy\030\024 \001(\002\022\030\n\020bea" +
-      "ring_accuracy\030\025 \001(\002\022\r\n\005score\030\026 \001(\002\022]\n\006me" +
-      "thod\030\027 \001(\0162M.redvox_api_m.RedvoxPacketM." +
-      "Sensors.Location.BestLocation.LocationSc" +
-      "oreMethod\022X\n\021location_provider\030\030 \001(\0162=.r" +
-      "edvox_api_m.RedvoxPacketM.Sensors.Locati" +
-      "on.LocationProvider\022Y\n\010metadata\030\031 \003(\0132G." +
-      "redvox_api_m.RedvoxPacketM.Sensors.Locat" +
-      "ion.BestLocation.MetadataEntry\032/\n\rMetada" +
-      "taEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032" +
-      "\364\001\n\rBestTimestamp\022.\n\004unit\030\001 \001(\0162 .redvox" +
-      "_api_m.RedvoxPacketM.Unit\022\014\n\004mach\030\002 \001(\001\022" +
-      "\013\n\003gps\030\003 \001(\001\022g\n\010metadata\030\004 \003(\0132U.redvox_" +
-      "api_m.RedvoxPacketM.Sensors.Location.Bes" +
-      "tLocation.BestTimestamp.MetadataEntry\032/\n" +
-      "\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\")\n\023LocationScoreMethod\022\022\n\016UNKNOWN" +
-      "_METHOD\020\000\"I\n\020LocationProvider\022\013\n\007UNKNOWN" +
-      "\020\000\022\010\n\004NONE\020\001\022\010\n\004USER\020\002\022\007\n\003GPS\020\003\022\013\n\007NETWO" +
-      "RK\020\004\032\224\003\n\003Xyz\022\032\n\022sensor_description\030\001 \001(\t" +
-      "\022=\n\ntimestamps\030\002 \001(\0132).redvox_api_m.Redv" +
-      "oxPacketM.TimingPayload\022<\n\tx_samples\030\003 \001" +
-      "(\0132).redvox_api_m.RedvoxPacketM.SamplePa" +
-      "yload\022<\n\ty_samples\030\004 \001(\0132).redvox_api_m." +
-      "RedvoxPacketM.SamplePayload\022<\n\tz_samples" +
-      "\030\005 \001(\0132).redvox_api_m.RedvoxPacketM.Samp" +
-      "lePayload\022G\n\010metadata\030\006 \003(\01325.redvox_api" +
-      "_m.RedvoxPacketM.Sensors.Xyz.MetadataEnt" +
-      "ry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\032\360\002\n\005Image\022\032\n\022sensor_descript" +
-      "ion\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132).redvox_a" +
-      "pi_m.RedvoxPacketM.TimingPayload\022\017\n\007samp" +
-      "les\030\003 \003(\014\022I\n\013image_codec\030\004 \001(\01624.redvox_" +
-      "api_m.RedvoxPacketM.Sensors.Image.ImageC" +
-      "odec\022I\n\010metadata\030\005 \003(\01327.redvox_api_m.Re" +
-      "dvoxPacketM.Sensors.Image.MetadataEntry\032" +
-      "/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"4\n\nImageCodec\022\013\n\007UNKNOWN\020\000\022\007\n\003P" +
-      "NG\020\001\022\007\n\003JPG\020\002\022\007\n\003BMP\020\003\032\362\007\n\013EventStream\022\014" +
-      "\n\004name\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132).redvo" +
-      "x_api_m.RedvoxPacketM.TimingPayload\022=\n\006e" +
-      "vents\030\003 \003(\0132-.redvox_api_m.RedvoxPacketM" +
-      ".EventStream.Event\022G\n\010metadata\030\004 \003(\01325.r" +
-      "edvox_api_m.RedvoxPacketM.EventStream.Me" +
+      "tTimestamp.MetadataEntry\032/\n\rMetadataEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")\n\023Loc" +
+      "ationScoreMethod\022\022\n\016UNKNOWN_METHOD\020\000\"I\n\020" +
+      "LocationProvider\022\013\n\007UNKNOWN\020\000\022\010\n\004NONE\020\001\022" +
+      "\010\n\004USER\020\002\022\007\n\003GPS\020\003\022\013\n\007NETWORK\020\004\032\224\003\n\003Xyz\022" +
+      "\032\n\022sensor_description\030\001 \001(\t\022=\n\ntimestamp" +
+      "s\030\002 \001(\0132).redvox_api_m.RedvoxPacketM.Tim" +
+      "ingPayload\022<\n\tx_samples\030\003 \001(\0132).redvox_a" +
+      "pi_m.RedvoxPacketM.SamplePayload\022<\n\ty_sa" +
+      "mples\030\004 \001(\0132).redvox_api_m.RedvoxPacketM" +
+      ".SamplePayload\022<\n\tz_samples\030\005 \001(\0132).redv" +
+      "ox_api_m.RedvoxPacketM.SamplePayload\022G\n\010" +
+      "metadata\030\006 \003(\01325.redvox_api_m.RedvoxPack" +
+      "etM.Sensors.Xyz.MetadataEntry\032/\n\rMetadat" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\360" +
+      "\002\n\005Image\022\032\n\022sensor_description\030\001 \001(\t\022=\n\n" +
+      "timestamps\030\002 \001(\0132).redvox_api_m.RedvoxPa" +
+      "cketM.TimingPayload\022\017\n\007samples\030\003 \003(\014\022I\n\013" +
+      "image_codec\030\004 \001(\01624.redvox_api_m.RedvoxP" +
+      "acketM.Sensors.Image.ImageCodec\022I\n\010metad" +
+      "ata\030\005 \003(\01327.redvox_api_m.RedvoxPacketM.S" +
+      "ensors.Image.MetadataEntry\032/\n\rMetadataEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"4\n\nI" +
+      "mageCodec\022\013\n\007UNKNOWN\020\000\022\007\n\003PNG\020\001\022\007\n\003JPG\020\002" +
+      "\022\007\n\003BMP\020\003\032\362\007\n\013EventStream\022\014\n\004name\030\001 \001(\t\022" +
+      "=\n\ntimestamps\030\002 \001(\0132).redvox_api_m.Redvo" +
+      "xPacketM.TimingPayload\022=\n\006events\030\003 \003(\0132-" +
+      ".redvox_api_m.RedvoxPacketM.EventStream." +
+      "Event\022G\n\010metadata\030\004 \003(\01325.redvox_api_m.R" +
+      "edvoxPacketM.EventStream.MetadataEntry\032/" +
+      "\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\032\334\005\n\005Event\022\023\n\013description\030\001 \001(\t\022X" +
+      "\n\016string_payload\030\002 \003(\0132@.redvox_api_m.Re" +
+      "dvoxPacketM.EventStream.Event.StringPayl" +
+      "oadEntry\022Z\n\017numeric_payload\030\003 \003(\0132A.redv" +
+      "ox_api_m.RedvoxPacketM.EventStream.Event" +
+      ".NumericPayloadEntry\022Z\n\017boolean_payload\030" +
+      "\004 \003(\0132A.redvox_api_m.RedvoxPacketM.Event" +
+      "Stream.Event.BooleanPayloadEntry\022T\n\014byte" +
+      "_payload\030\005 \003(\0132>.redvox_api_m.RedvoxPack" +
+      "etM.EventStream.Event.BytePayloadEntry\022M" +
+      "\n\010metadata\030\006 \003(\0132;.redvox_api_m.RedvoxPa" +
+      "cketM.EventStream.Event.MetadataEntry\0324\n" +
+      "\022StringPayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\0325\n\023NumericPayloadEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\001:\0028\001\0325\n\023BooleanPay" +
+      "loadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028" +
+      "\001\0322\n\020BytePayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\014:\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\224\002\n\rSamplePayload" +
+      "\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.RedvoxPack" +
+      "etM.Unit\022\016\n\006values\030\002 \003(\002\022G\n\020value_statis" +
+      "tics\030\003 \001(\0132-.redvox_api_m.RedvoxPacketM." +
+      "SummaryStatistics\022I\n\010metadata\030\004 \003(\01327.re" +
+      "dvox_api_m.RedvoxPacketM.SamplePayload.M" +
+      "etadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\240\002\n\023DoubleSamplePa" +
+      "yload\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Redvo" +
+      "xPacketM.Unit\022\016\n\006values\030\002 \003(\001\022G\n\020value_s" +
+      "tatistics\030\003 \001(\0132-.redvox_api_m.RedvoxPac" +
+      "ketM.SummaryStatistics\022O\n\010metadata\030\004 \003(\013" +
+      "2=.redvox_api_m.RedvoxPacketM.DoubleSamp" +
+      "lePayload.MetadataEntry\032/\n\rMetadataEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321\002\n\rTim" +
+      "ingPayload\022.\n\004unit\030\001 \001(\0162 .redvox_api_m." +
+      "RedvoxPacketM.Unit\022\022\n\ntimestamps\030\002 \003(\001\022K" +
+      "\n\024timestamp_statistics\030\003 \001(\0132-.redvox_ap" +
+      "i_m.RedvoxPacketM.SummaryStatistics\022\030\n\020m" +
+      "ean_sample_rate\030\004 \001(\002\022\031\n\021stdev_sample_ra" +
+      "te\030\005 \001(\002\022I\n\010metadata\030\006 \003(\01327.redvox_api_" +
+      "m.RedvoxPacketM.TimingPayload.MetadataEn" +
+      "try\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\032\365\001\n\021SummaryStatistics\022\r\n\005co" +
+      "unt\030\001 \001(\002\022\014\n\004mean\030\002 \001(\002\022\032\n\022standard_devi" +
+      "ation\030\003 \001(\002\022\013\n\003min\030\004 \001(\002\022\013\n\003max\030\005 \001(\002\022\r\n" +
+      "\005range\030\006 \001(\002\022M\n\010metadata\030\007 \003(\0132;.redvox_" +
+      "api_m.RedvoxPacketM.SummaryStatistics.Me" +
       "tadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\334\005\n\005Event\022\023\n\013descri" +
-      "ption\030\001 \001(\t\022X\n\016string_payload\030\002 \003(\0132@.re" +
-      "dvox_api_m.RedvoxPacketM.EventStream.Eve" +
-      "nt.StringPayloadEntry\022Z\n\017numeric_payload" +
-      "\030\003 \003(\0132A.redvox_api_m.RedvoxPacketM.Even" +
-      "tStream.Event.NumericPayloadEntry\022Z\n\017boo" +
-      "lean_payload\030\004 \003(\0132A.redvox_api_m.Redvox" +
-      "PacketM.EventStream.Event.BooleanPayload" +
-      "Entry\022T\n\014byte_payload\030\005 \003(\0132>.redvox_api" +
-      "_m.RedvoxPacketM.EventStream.Event.ByteP" +
-      "ayloadEntry\022M\n\010metadata\030\006 \003(\0132;.redvox_a" +
-      "pi_m.RedvoxPacketM.EventStream.Event.Met" +
-      "adataEntry\0324\n\022StringPayloadEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0325\n\023NumericPaylo" +
-      "adEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\001:\0028\001\032" +
-      "5\n\023BooleanPayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\010:\0028\001\0322\n\020BytePayloadEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001\032/\n\rMetadataEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\224\002\n\r" +
-      "SamplePayload\022.\n\004unit\030\001 \001(\0162 .redvox_api" +
-      "_m.RedvoxPacketM.Unit\022\016\n\006values\030\002 \003(\002\022G\n" +
-      "\020value_statistics\030\003 \001(\0132-.redvox_api_m.R" +
-      "edvoxPacketM.SummaryStatistics\022I\n\010metada" +
-      "ta\030\004 \003(\01327.redvox_api_m.RedvoxPacketM.Sa" +
-      "mplePayload.MetadataEntry\032/\n\rMetadataEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\240\002\n\023D" +
-      "oubleSamplePayload\022.\n\004unit\030\001 \001(\0162 .redvo" +
-      "x_api_m.RedvoxPacketM.Unit\022\016\n\006values\030\002 \003" +
-      "(\001\022G\n\020value_statistics\030\003 \001(\0132-.redvox_ap" +
-      "i_m.RedvoxPacketM.SummaryStatistics\022O\n\010m" +
-      "etadata\030\004 \003(\0132=.redvox_api_m.RedvoxPacke" +
-      "tM.DoubleSamplePayload.MetadataEntry\032/\n\r" +
-      "MetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\032\321\002\n\rTimingPayload\022.\n\004unit\030\001 \001(\0162 ." +
-      "redvox_api_m.RedvoxPacketM.Unit\022\022\n\ntimes" +
-      "tamps\030\002 \003(\001\022K\n\024timestamp_statistics\030\003 \001(" +
-      "\0132-.redvox_api_m.RedvoxPacketM.SummarySt" +
-      "atistics\022\030\n\020mean_sample_rate\030\004 \001(\002\022\031\n\021st" +
-      "dev_sample_rate\030\005 \001(\002\022I\n\010metadata\030\006 \003(\0132" +
-      "7.redvox_api_m.RedvoxPacketM.TimingPaylo" +
-      "ad.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\365\001\n\021SummarySta" +
-      "tistics\022\r\n\005count\030\001 \001(\002\022\014\n\004mean\030\002 \001(\002\022\032\n\022" +
-      "standard_deviation\030\003 \001(\002\022\013\n\003min\030\004 \001(\002\022\013\n" +
-      "\003max\030\005 \001(\002\022\r\n\005range\030\006 \001(\002\022M\n\010metadata\030\007 " +
-      "\003(\0132;.redvox_api_m.RedvoxPacketM.Summary" +
-      "Statistics.MetadataEntry\032/\n\rMetadataEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\203\003\n\004Un" +
-      "it\022\013\n\007UNKNOWN\020\000\022\035\n\031METERS_PER_SECOND_SQU" +
-      "ARED\020\001\022\016\n\nKILOPASCAL\020\002\022\026\n\022RADIANS_PER_SE" +
-      "COND\020\003\022\023\n\017DECIMAL_DEGREES\020\004\022\n\n\006METERS\020\005\022" +
-      "\025\n\021METERS_PER_SECOND\020\006\022\016\n\nMICROTESLA\020\007\022\031" +
-      "\n\025LSB_PLUS_MINUS_COUNTS\020\010\022!\n\035MICROSECOND" +
-      "S_SINCE_UNIX_EPOCH\020\t\022\013\n\007DECIBEL\020\n\022\023\n\017DEG" +
-      "REES_CELSIUS\020\013\022\010\n\004BYTE\020\014\022\016\n\nPERCENTAGE\020\r" +
-      "\022\013\n\007RADIANS\020\016\022\020\n\014MICROAMPERES\020\017\022\017\n\013CENTI" +
-      "METERS\020\020\022\025\n\021NORMALIZED_COUNTS\020\021\022\007\n\003LUX\020\022" +
-      "\022\014\n\010UNITLESS\020\023\022\007\n\003PCM\020\024\"\254\001\n\026EncryptedRed" +
-      "voxPacketM\022\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001" +
-      "(\014\032r\n\006Header\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014stat" +
-      "ion_uuid\030\002 \001(\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016fi" +
-      "rebase_token\030\004 \001(\t\022\022\n\nauth_email\030\005 \001(\t\"y" +
-      "\n\022AcquisitionRequest\022\022\n\nauth_token\030\001 \001(\t" +
-      "\022\026\n\016firebase_token\030\002 \001(\t\022\020\n\010checksum\030\003 \001" +
-      "(\003\022\024\n\014is_encrypted\030\004 \001(\010\022\017\n\007payload\030\005 \001(" +
-      "\014\"\345\001\n\023AcquisitionResponse\022E\n\rresponse_ty" +
-      "pe\030\001 \001(\0162..redvox_api_m.AcquisitionRespo" +
-      "nse.ResponseType\022\020\n\010checksum\030\002 \001(\003\022\017\n\007de" +
-      "tails\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"T\n\014ResponseT" +
-      "ype\022\013\n\007UNKNOWN\020\000\022\006\n\002OK\020\001\022\016\n\nAUTH_ERROR\020\002" +
-      "\022\016\n\nDATA_ERROR\020\003\022\017\n\013OTHER_ERROR\020\004\"\\\n\014Syn" +
-      "chRequest\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station" +
-      "_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_i" +
-      "d\030\004 \001(\r\"\205\001\n\rSynchResponse\022\022\n\nstation_id\030" +
-      "\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 " +
-      "\001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030\005 " +
-      "\001(\004\022\022\n\nsend_ts_us\030\006 \001(\004B\020\n\016io.redvox.api" +
-      "sb\006proto3"
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\203\003\n\004Unit\022\013\n\007UNKNOWN" +
+      "\020\000\022\035\n\031METERS_PER_SECOND_SQUARED\020\001\022\016\n\nKIL" +
+      "OPASCAL\020\002\022\026\n\022RADIANS_PER_SECOND\020\003\022\023\n\017DEC" +
+      "IMAL_DEGREES\020\004\022\n\n\006METERS\020\005\022\025\n\021METERS_PER" +
+      "_SECOND\020\006\022\016\n\nMICROTESLA\020\007\022\031\n\025LSB_PLUS_MI" +
+      "NUS_COUNTS\020\010\022!\n\035MICROSECONDS_SINCE_UNIX_" +
+      "EPOCH\020\t\022\013\n\007DECIBEL\020\n\022\023\n\017DEGREES_CELSIUS\020" +
+      "\013\022\010\n\004BYTE\020\014\022\016\n\nPERCENTAGE\020\r\022\013\n\007RADIANS\020\016" +
+      "\022\020\n\014MICROAMPERES\020\017\022\017\n\013CENTIMETERS\020\020\022\025\n\021N" +
+      "ORMALIZED_COUNTS\020\021\022\007\n\003LUX\020\022\022\014\n\010UNITLESS\020" +
+      "\023\022\007\n\003PCM\020\024\"\254\001\n\026EncryptedRedvoxPacketM\022\016\n" +
+      "\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014\032r\n\006Header\022" +
+      "\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(" +
+      "\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016firebase_token\030" +
+      "\004 \001(\t\022\022\n\nauth_email\030\005 \001(\t\"y\n\022Acquisition" +
+      "Request\022\022\n\nauth_token\030\001 \001(\t\022\026\n\016firebase_" +
+      "token\030\002 \001(\t\022\020\n\010checksum\030\003 \001(\003\022\024\n\014is_encr" +
+      "ypted\030\004 \001(\010\022\017\n\007payload\030\005 \001(\014\"\345\001\n\023Acquisi" +
+      "tionResponse\022E\n\rresponse_type\030\001 \001(\0162..re" +
+      "dvox_api_m.AcquisitionResponse.ResponseT" +
+      "ype\022\020\n\010checksum\030\002 \001(\003\022\017\n\007details\030\003 \001(\t\022\016" +
+      "\n\006resend\030\004 \001(\010\"T\n\014ResponseType\022\013\n\007UNKNOW" +
+      "N\020\000\022\006\n\002OK\020\001\022\016\n\nAUTH_ERROR\020\002\022\016\n\nDATA_ERRO" +
+      "R\020\003\022\017\n\013OTHER_ERROR\020\004\"\\\n\014SynchRequest\022\022\n\n" +
+      "station_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\016" +
+      "\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001\n\rS" +
+      "ynchResponse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014stat" +
+      "ion_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_se" +
+      "q_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsend_t" +
+      "s_us\030\006 \001(\004B\020\n\016io.redvox.apisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -61574,7 +61775,7 @@ public final class RedvoxApiM {
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_descriptor,
-        new java.lang.String[] { "SensorDescription", "Timestamps", "LatitudeSamples", "LongitudeSamples", "AltitudeSamples", "SpeedSamples", "BearingSamples", "HorizontalAccuracySamples", "VerticalAccuracySamples", "SpeedAccuracySamples", "BearingAccuracySamples", "LastBestLocation", "OverallBestLocation", "LocationPermissionsGranted", "LocationServicesRequested", "LocationServicesEnabled", "LocationProviders", "Metadata", });
+        new java.lang.String[] { "SensorDescription", "Timestamps", "TimestampsGps", "LatitudeSamples", "LongitudeSamples", "AltitudeSamples", "SpeedSamples", "BearingSamples", "HorizontalAccuracySamples", "VerticalAccuracySamples", "SpeedAccuracySamples", "BearingAccuracySamples", "LastBestLocation", "OverallBestLocation", "LocationPermissionsGranted", "LocationServicesRequested", "LocationServicesEnabled", "LocationProviders", "Metadata", });
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_MetadataEntry_descriptor =
       internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_descriptor.getNestedTypes().get(0);
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_MetadataEntry_fieldAccessorTable = new

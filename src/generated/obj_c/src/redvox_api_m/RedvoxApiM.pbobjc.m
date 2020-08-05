@@ -2411,6 +2411,7 @@ typedef struct RedvoxPacketM_Sensors_Single__storage_ {
 
 @dynamic sensorDescription;
 @dynamic hasTimestamps, timestamps;
+@dynamic hasTimestampsGps, timestampsGps;
 @dynamic hasLatitudeSamples, latitudeSamples;
 @dynamic hasLongitudeSamples, longitudeSamples;
 @dynamic hasAltitudeSamples, altitudeSamples;
@@ -2432,6 +2433,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
   uint32_t _has_storage_[1];
   NSString *sensorDescription;
   RedvoxPacketM_TimingPayload *timestamps;
+  RedvoxPacketM_TimingPayload *timestampsGps;
   RedvoxPacketM_DoubleSamplePayload *latitudeSamples;
   RedvoxPacketM_DoubleSamplePayload *longitudeSamples;
   RedvoxPacketM_SamplePayload *altitudeSamples;
@@ -2472,10 +2474,19 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
+        .name = "timestampsGps",
+        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_TimingPayload),
+        .number = RedvoxPacketM_Sensors_Location_FieldNumber_TimestampsGps,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, timestampsGps),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
         .name = "latitudeSamples",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_DoubleSamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LatitudeSamples,
-        .hasIndex = 2,
+        .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, latitudeSamples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -2484,7 +2495,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "longitudeSamples",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_DoubleSamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LongitudeSamples,
-        .hasIndex = 3,
+        .hasIndex = 4,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, longitudeSamples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -2493,7 +2504,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "altitudeSamples",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_AltitudeSamples,
-        .hasIndex = 4,
+        .hasIndex = 5,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, altitudeSamples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -2502,7 +2513,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "speedSamples",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_SpeedSamples,
-        .hasIndex = 5,
+        .hasIndex = 6,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, speedSamples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -2511,7 +2522,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "bearingSamples",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_BearingSamples,
-        .hasIndex = 6,
+        .hasIndex = 7,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, bearingSamples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -2520,7 +2531,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "horizontalAccuracySamples",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_HorizontalAccuracySamples,
-        .hasIndex = 7,
+        .hasIndex = 8,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, horizontalAccuracySamples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -2529,7 +2540,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "verticalAccuracySamples",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_VerticalAccuracySamples,
-        .hasIndex = 8,
+        .hasIndex = 9,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, verticalAccuracySamples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -2538,7 +2549,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "speedAccuracySamples",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_SpeedAccuracySamples,
-        .hasIndex = 9,
+        .hasIndex = 10,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, speedAccuracySamples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -2547,7 +2558,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "bearingAccuracySamples",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_BearingAccuracySamples,
-        .hasIndex = 10,
+        .hasIndex = 11,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, bearingAccuracySamples),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -2556,7 +2567,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "lastBestLocation",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Location_BestLocation),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LastBestLocation,
-        .hasIndex = 11,
+        .hasIndex = 12,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, lastBestLocation),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -2565,7 +2576,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "overallBestLocation",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Location_BestLocation),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_OverallBestLocation,
-        .hasIndex = 12,
+        .hasIndex = 13,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, overallBestLocation),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -2574,8 +2585,8 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "locationPermissionsGranted",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LocationPermissionsGranted,
-        .hasIndex = 13,
-        .offset = 14,  // Stored in _has_storage_ to save space.
+        .hasIndex = 14,
+        .offset = 15,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -2583,8 +2594,8 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "locationServicesRequested",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesRequested,
-        .hasIndex = 15,
-        .offset = 16,  // Stored in _has_storage_ to save space.
+        .hasIndex = 16,
+        .offset = 17,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -2592,8 +2603,8 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "locationServicesEnabled",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesEnabled,
-        .hasIndex = 17,
-        .offset = 18,  // Stored in _has_storage_ to save space.
+        .hasIndex = 18,
+        .offset = 19,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },

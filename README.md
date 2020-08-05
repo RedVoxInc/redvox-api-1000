@@ -27,5 +27,6 @@ Detailed documentation is provided at: https://bitbucket.org/redvoxhi/redvox-api
 
 ### Changelog
 
+* v6.0 - 5 Aug 2020 - Add timestamps_gps to Location sensor.
 * v5.0 - 5 Aug 2020 - Rename location_provider to location_providers. Add LocationProvider to BestLocation.
 * v4.0 - 5 Aug 2020 - Remove one of the best location fields

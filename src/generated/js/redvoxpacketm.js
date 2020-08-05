@@ -5528,7 +5528,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Single.prototype.clearMetadataMap = fun
  * @private {!Array<number>}
  * @const
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.Location.repeatedFields_ = [17];
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.repeatedFields_ = [18];
 
 
 
@@ -5563,6 +5563,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.toObject = function(includeIns
   var f, obj = {
     sensorDescription: jspb.Message.getFieldWithDefault(msg, 1, ""),
     timestamps: (f = msg.getTimestamps()) && proto.redvox_api_m.RedvoxPacketM.TimingPayload.toObject(includeInstance, f),
+    timestampsGps: (f = msg.getTimestampsGps()) && proto.redvox_api_m.RedvoxPacketM.TimingPayload.toObject(includeInstance, f),
     latitudeSamples: (f = msg.getLatitudeSamples()) && proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload.toObject(includeInstance, f),
     longitudeSamples: (f = msg.getLongitudeSamples()) && proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload.toObject(includeInstance, f),
     altitudeSamples: (f = msg.getAltitudeSamples()) && proto.redvox_api_m.RedvoxPacketM.SamplePayload.toObject(includeInstance, f),
@@ -5574,10 +5575,10 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.toObject = function(includeIns
     bearingAccuracySamples: (f = msg.getBearingAccuracySamples()) && proto.redvox_api_m.RedvoxPacketM.SamplePayload.toObject(includeInstance, f),
     lastBestLocation: (f = msg.getLastBestLocation()) && proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.toObject(includeInstance, f),
     overallBestLocation: (f = msg.getOverallBestLocation()) && proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.toObject(includeInstance, f),
-    locationPermissionsGranted: jspb.Message.getBooleanFieldWithDefault(msg, 14, false),
-    locationServicesRequested: jspb.Message.getBooleanFieldWithDefault(msg, 15, false),
-    locationServicesEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 16, false),
-    locationProvidersList: (f = jspb.Message.getRepeatedField(msg, 17)) == null ? undefined : f,
+    locationPermissionsGranted: jspb.Message.getBooleanFieldWithDefault(msg, 15, false),
+    locationServicesRequested: jspb.Message.getBooleanFieldWithDefault(msg, 16, false),
+    locationServicesEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 17, false),
+    locationProvidersList: (f = jspb.Message.getRepeatedField(msg, 18)) == null ? undefined : f,
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -5625,77 +5626,82 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.deserializeBinaryFromReader = 
       msg.setTimestamps(value);
       break;
     case 3:
-      var value = new proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload;
-      reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload.deserializeBinaryFromReader);
-      msg.setLatitudeSamples(value);
+      var value = new proto.redvox_api_m.RedvoxPacketM.TimingPayload;
+      reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.TimingPayload.deserializeBinaryFromReader);
+      msg.setTimestampsGps(value);
       break;
     case 4:
       var value = new proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload;
       reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload.deserializeBinaryFromReader);
-      msg.setLongitudeSamples(value);
+      msg.setLatitudeSamples(value);
       break;
     case 5:
-      var value = new proto.redvox_api_m.RedvoxPacketM.SamplePayload;
-      reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.SamplePayload.deserializeBinaryFromReader);
-      msg.setAltitudeSamples(value);
+      var value = new proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload;
+      reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload.deserializeBinaryFromReader);
+      msg.setLongitudeSamples(value);
       break;
     case 6:
       var value = new proto.redvox_api_m.RedvoxPacketM.SamplePayload;
       reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.SamplePayload.deserializeBinaryFromReader);
-      msg.setSpeedSamples(value);
+      msg.setAltitudeSamples(value);
       break;
     case 7:
       var value = new proto.redvox_api_m.RedvoxPacketM.SamplePayload;
       reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.SamplePayload.deserializeBinaryFromReader);
-      msg.setBearingSamples(value);
+      msg.setSpeedSamples(value);
       break;
     case 8:
       var value = new proto.redvox_api_m.RedvoxPacketM.SamplePayload;
       reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.SamplePayload.deserializeBinaryFromReader);
-      msg.setHorizontalAccuracySamples(value);
+      msg.setBearingSamples(value);
       break;
     case 9:
       var value = new proto.redvox_api_m.RedvoxPacketM.SamplePayload;
       reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.SamplePayload.deserializeBinaryFromReader);
-      msg.setVerticalAccuracySamples(value);
+      msg.setHorizontalAccuracySamples(value);
       break;
     case 10:
       var value = new proto.redvox_api_m.RedvoxPacketM.SamplePayload;
       reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.SamplePayload.deserializeBinaryFromReader);
-      msg.setSpeedAccuracySamples(value);
+      msg.setVerticalAccuracySamples(value);
       break;
     case 11:
       var value = new proto.redvox_api_m.RedvoxPacketM.SamplePayload;
       reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.SamplePayload.deserializeBinaryFromReader);
-      msg.setBearingAccuracySamples(value);
+      msg.setSpeedAccuracySamples(value);
       break;
     case 12:
-      var value = new proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation;
-      reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.deserializeBinaryFromReader);
-      msg.setLastBestLocation(value);
+      var value = new proto.redvox_api_m.RedvoxPacketM.SamplePayload;
+      reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.SamplePayload.deserializeBinaryFromReader);
+      msg.setBearingAccuracySamples(value);
       break;
     case 13:
       var value = new proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation;
       reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.deserializeBinaryFromReader);
-      msg.setOverallBestLocation(value);
+      msg.setLastBestLocation(value);
       break;
     case 14:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setLocationPermissionsGranted(value);
+      var value = new proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation;
+      reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.deserializeBinaryFromReader);
+      msg.setOverallBestLocation(value);
       break;
     case 15:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setLocationServicesRequested(value);
+      msg.setLocationPermissionsGranted(value);
       break;
     case 16:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setLocationServicesEnabled(value);
+      msg.setLocationServicesRequested(value);
       break;
     case 17:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setLocationServicesEnabled(value);
+      break;
+    case 18:
       var value = /** @type {!Array<!proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider>} */ (reader.readPackedEnum());
       msg.setLocationProvidersList(value);
       break;
-    case 18:
+    case 19:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
@@ -5745,15 +5751,15 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.serializeBinaryToWriter = func
       proto.redvox_api_m.RedvoxPacketM.TimingPayload.serializeBinaryToWriter
     );
   }
-  f = message.getLatitudeSamples();
+  f = message.getTimestampsGps();
   if (f != null) {
     writer.writeMessage(
       3,
       f,
-      proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload.serializeBinaryToWriter
+      proto.redvox_api_m.RedvoxPacketM.TimingPayload.serializeBinaryToWriter
     );
   }
-  f = message.getLongitudeSamples();
+  f = message.getLatitudeSamples();
   if (f != null) {
     writer.writeMessage(
       4,
@@ -5761,15 +5767,15 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.serializeBinaryToWriter = func
       proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload.serializeBinaryToWriter
     );
   }
-  f = message.getAltitudeSamples();
+  f = message.getLongitudeSamples();
   if (f != null) {
     writer.writeMessage(
       5,
       f,
-      proto.redvox_api_m.RedvoxPacketM.SamplePayload.serializeBinaryToWriter
+      proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload.serializeBinaryToWriter
     );
   }
-  f = message.getSpeedSamples();
+  f = message.getAltitudeSamples();
   if (f != null) {
     writer.writeMessage(
       6,
@@ -5777,7 +5783,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.serializeBinaryToWriter = func
       proto.redvox_api_m.RedvoxPacketM.SamplePayload.serializeBinaryToWriter
     );
   }
-  f = message.getBearingSamples();
+  f = message.getSpeedSamples();
   if (f != null) {
     writer.writeMessage(
       7,
@@ -5785,7 +5791,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.serializeBinaryToWriter = func
       proto.redvox_api_m.RedvoxPacketM.SamplePayload.serializeBinaryToWriter
     );
   }
-  f = message.getHorizontalAccuracySamples();
+  f = message.getBearingSamples();
   if (f != null) {
     writer.writeMessage(
       8,
@@ -5793,7 +5799,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.serializeBinaryToWriter = func
       proto.redvox_api_m.RedvoxPacketM.SamplePayload.serializeBinaryToWriter
     );
   }
-  f = message.getVerticalAccuracySamples();
+  f = message.getHorizontalAccuracySamples();
   if (f != null) {
     writer.writeMessage(
       9,
@@ -5801,7 +5807,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.serializeBinaryToWriter = func
       proto.redvox_api_m.RedvoxPacketM.SamplePayload.serializeBinaryToWriter
     );
   }
-  f = message.getSpeedAccuracySamples();
+  f = message.getVerticalAccuracySamples();
   if (f != null) {
     writer.writeMessage(
       10,
@@ -5809,7 +5815,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.serializeBinaryToWriter = func
       proto.redvox_api_m.RedvoxPacketM.SamplePayload.serializeBinaryToWriter
     );
   }
-  f = message.getBearingAccuracySamples();
+  f = message.getSpeedAccuracySamples();
   if (f != null) {
     writer.writeMessage(
       11,
@@ -5817,15 +5823,15 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.serializeBinaryToWriter = func
       proto.redvox_api_m.RedvoxPacketM.SamplePayload.serializeBinaryToWriter
     );
   }
-  f = message.getLastBestLocation();
+  f = message.getBearingAccuracySamples();
   if (f != null) {
     writer.writeMessage(
       12,
       f,
-      proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.serializeBinaryToWriter
+      proto.redvox_api_m.RedvoxPacketM.SamplePayload.serializeBinaryToWriter
     );
   }
-  f = message.getOverallBestLocation();
+  f = message.getLastBestLocation();
   if (f != null) {
     writer.writeMessage(
       13,
@@ -5833,37 +5839,45 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.serializeBinaryToWriter = func
       proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.serializeBinaryToWriter
     );
   }
-  f = message.getLocationPermissionsGranted();
-  if (f) {
-    writer.writeBool(
+  f = message.getOverallBestLocation();
+  if (f != null) {
+    writer.writeMessage(
       14,
-      f
+      f,
+      proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.serializeBinaryToWriter
     );
   }
-  f = message.getLocationServicesRequested();
+  f = message.getLocationPermissionsGranted();
   if (f) {
     writer.writeBool(
       15,
       f
     );
   }
-  f = message.getLocationServicesEnabled();
+  f = message.getLocationServicesRequested();
   if (f) {
     writer.writeBool(
       16,
       f
     );
   }
+  f = message.getLocationServicesEnabled();
+  if (f) {
+    writer.writeBool(
+      17,
+      f
+    );
+  }
   f = message.getLocationProvidersList();
   if (f.length > 0) {
     writer.writePackedEnum(
-      17,
+      18,
       f
     );
   }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(18, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(19, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -7102,12 +7116,49 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.hasTimestamps = func
 
 
 /**
- * optional DoubleSamplePayload latitude_samples = 3;
+ * optional TimingPayload timestamps_gps = 3;
+ * @return {?proto.redvox_api_m.RedvoxPacketM.TimingPayload}
+ */
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getTimestampsGps = function() {
+  return /** @type{?proto.redvox_api_m.RedvoxPacketM.TimingPayload} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.TimingPayload, 3));
+};
+
+
+/**
+ * @param {?proto.redvox_api_m.RedvoxPacketM.TimingPayload|undefined} value
+ * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
+*/
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setTimestampsGps = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
+ */
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearTimestampsGps = function() {
+  return this.setTimestampsGps(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.hasTimestampsGps = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional DoubleSamplePayload latitude_samples = 4;
  * @return {?proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLatitudeSamples = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload, 3));
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload, 4));
 };
 
 
@@ -7116,7 +7167,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLatitudeSamples =
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
 */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLatitudeSamples = function(value) {
-  return jspb.Message.setWrapperField(this, 3, value);
+  return jspb.Message.setWrapperField(this, 4, value);
 };
 
 
@@ -7134,17 +7185,17 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearLatitudeSamples
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.hasLatitudeSamples = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return jspb.Message.getField(this, 4) != null;
 };
 
 
 /**
- * optional DoubleSamplePayload longitude_samples = 4;
+ * optional DoubleSamplePayload longitude_samples = 5;
  * @return {?proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLongitudeSamples = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload, 4));
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.DoubleSamplePayload, 5));
 };
 
 
@@ -7153,7 +7204,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLongitudeSamples 
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
 */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLongitudeSamples = function(value) {
-  return jspb.Message.setWrapperField(this, 4, value);
+  return jspb.Message.setWrapperField(this, 5, value);
 };
 
 
@@ -7171,17 +7222,17 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearLongitudeSample
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.hasLongitudeSamples = function() {
-  return jspb.Message.getField(this, 4) != null;
+  return jspb.Message.getField(this, 5) != null;
 };
 
 
 /**
- * optional SamplePayload altitude_samples = 5;
+ * optional SamplePayload altitude_samples = 6;
  * @return {?proto.redvox_api_m.RedvoxPacketM.SamplePayload}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getAltitudeSamples = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.SamplePayload} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 5));
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 6));
 };
 
 
@@ -7190,7 +7241,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getAltitudeSamples =
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
 */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setAltitudeSamples = function(value) {
-  return jspb.Message.setWrapperField(this, 5, value);
+  return jspb.Message.setWrapperField(this, 6, value);
 };
 
 
@@ -7208,17 +7259,17 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearAltitudeSamples
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.hasAltitudeSamples = function() {
-  return jspb.Message.getField(this, 5) != null;
+  return jspb.Message.getField(this, 6) != null;
 };
 
 
 /**
- * optional SamplePayload speed_samples = 6;
+ * optional SamplePayload speed_samples = 7;
  * @return {?proto.redvox_api_m.RedvoxPacketM.SamplePayload}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getSpeedSamples = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.SamplePayload} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 6));
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 7));
 };
 
 
@@ -7227,7 +7278,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getSpeedSamples = fu
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
 */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setSpeedSamples = function(value) {
-  return jspb.Message.setWrapperField(this, 6, value);
+  return jspb.Message.setWrapperField(this, 7, value);
 };
 
 
@@ -7245,17 +7296,17 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearSpeedSamples = 
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.hasSpeedSamples = function() {
-  return jspb.Message.getField(this, 6) != null;
+  return jspb.Message.getField(this, 7) != null;
 };
 
 
 /**
- * optional SamplePayload bearing_samples = 7;
+ * optional SamplePayload bearing_samples = 8;
  * @return {?proto.redvox_api_m.RedvoxPacketM.SamplePayload}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getBearingSamples = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.SamplePayload} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 7));
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 8));
 };
 
 
@@ -7264,7 +7315,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getBearingSamples = 
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
 */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setBearingSamples = function(value) {
-  return jspb.Message.setWrapperField(this, 7, value);
+  return jspb.Message.setWrapperField(this, 8, value);
 };
 
 
@@ -7282,17 +7333,17 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearBearingSamples 
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.hasBearingSamples = function() {
-  return jspb.Message.getField(this, 7) != null;
+  return jspb.Message.getField(this, 8) != null;
 };
 
 
 /**
- * optional SamplePayload horizontal_accuracy_samples = 8;
+ * optional SamplePayload horizontal_accuracy_samples = 9;
  * @return {?proto.redvox_api_m.RedvoxPacketM.SamplePayload}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getHorizontalAccuracySamples = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.SamplePayload} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 8));
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 9));
 };
 
 
@@ -7301,7 +7352,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getHorizontalAccurac
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
 */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setHorizontalAccuracySamples = function(value) {
-  return jspb.Message.setWrapperField(this, 8, value);
+  return jspb.Message.setWrapperField(this, 9, value);
 };
 
 
@@ -7319,17 +7370,17 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearHorizontalAccur
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.hasHorizontalAccuracySamples = function() {
-  return jspb.Message.getField(this, 8) != null;
+  return jspb.Message.getField(this, 9) != null;
 };
 
 
 /**
- * optional SamplePayload vertical_accuracy_samples = 9;
+ * optional SamplePayload vertical_accuracy_samples = 10;
  * @return {?proto.redvox_api_m.RedvoxPacketM.SamplePayload}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getVerticalAccuracySamples = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.SamplePayload} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 9));
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 10));
 };
 
 
@@ -7338,7 +7389,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getVerticalAccuracyS
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
 */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setVerticalAccuracySamples = function(value) {
-  return jspb.Message.setWrapperField(this, 9, value);
+  return jspb.Message.setWrapperField(this, 10, value);
 };
 
 
@@ -7356,17 +7407,17 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearVerticalAccurac
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.hasVerticalAccuracySamples = function() {
-  return jspb.Message.getField(this, 9) != null;
+  return jspb.Message.getField(this, 10) != null;
 };
 
 
 /**
- * optional SamplePayload speed_accuracy_samples = 10;
+ * optional SamplePayload speed_accuracy_samples = 11;
  * @return {?proto.redvox_api_m.RedvoxPacketM.SamplePayload}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getSpeedAccuracySamples = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.SamplePayload} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 10));
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 11));
 };
 
 
@@ -7375,7 +7426,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getSpeedAccuracySamp
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
 */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setSpeedAccuracySamples = function(value) {
-  return jspb.Message.setWrapperField(this, 10, value);
+  return jspb.Message.setWrapperField(this, 11, value);
 };
 
 
@@ -7393,17 +7444,17 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearSpeedAccuracySa
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.hasSpeedAccuracySamples = function() {
-  return jspb.Message.getField(this, 10) != null;
+  return jspb.Message.getField(this, 11) != null;
 };
 
 
 /**
- * optional SamplePayload bearing_accuracy_samples = 11;
+ * optional SamplePayload bearing_accuracy_samples = 12;
  * @return {?proto.redvox_api_m.RedvoxPacketM.SamplePayload}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getBearingAccuracySamples = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.SamplePayload} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 11));
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 12));
 };
 
 
@@ -7412,7 +7463,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getBearingAccuracySa
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
 */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setBearingAccuracySamples = function(value) {
-  return jspb.Message.setWrapperField(this, 11, value);
+  return jspb.Message.setWrapperField(this, 12, value);
 };
 
 
@@ -7430,17 +7481,17 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearBearingAccuracy
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.hasBearingAccuracySamples = function() {
-  return jspb.Message.getField(this, 11) != null;
+  return jspb.Message.getField(this, 12) != null;
 };
 
 
 /**
- * optional BestLocation last_best_location = 12;
+ * optional BestLocation last_best_location = 13;
  * @return {?proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLastBestLocation = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation, 12));
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation, 13));
 };
 
 
@@ -7449,7 +7500,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLastBestLocation 
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
 */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLastBestLocation = function(value) {
-  return jspb.Message.setWrapperField(this, 12, value);
+  return jspb.Message.setWrapperField(this, 13, value);
 };
 
 
@@ -7467,17 +7518,17 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearLastBestLocatio
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.hasLastBestLocation = function() {
-  return jspb.Message.getField(this, 12) != null;
+  return jspb.Message.getField(this, 13) != null;
 };
 
 
 /**
- * optional BestLocation overall_best_location = 13;
+ * optional BestLocation overall_best_location = 14;
  * @return {?proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getOverallBestLocation = function() {
   return /** @type{?proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation} */ (
-    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation, 13));
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation, 14));
 };
 
 
@@ -7486,7 +7537,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getOverallBestLocati
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
 */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setOverallBestLocation = function(value) {
-  return jspb.Message.setWrapperField(this, 13, value);
+  return jspb.Message.setWrapperField(this, 14, value);
 };
 
 
@@ -7504,33 +7555,15 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearOverallBestLoca
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.hasOverallBestLocation = function() {
-  return jspb.Message.getField(this, 13) != null;
+  return jspb.Message.getField(this, 14) != null;
 };
 
 
 /**
- * optional bool location_permissions_granted = 14;
+ * optional bool location_permissions_granted = 15;
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLocationPermissionsGranted = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 14, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
- */
-proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLocationPermissionsGranted = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 14, value);
-};
-
-
-/**
- * optional bool location_services_requested = 15;
- * @return {boolean}
- */
-proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLocationServicesRequested = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 15, false));
 };
 
@@ -7539,16 +7572,16 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLocationServicesR
  * @param {boolean} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLocationServicesRequested = function(value) {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLocationPermissionsGranted = function(value) {
   return jspb.Message.setProto3BooleanField(this, 15, value);
 };
 
 
 /**
- * optional bool location_services_enabled = 16;
+ * optional bool location_services_requested = 16;
  * @return {boolean}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLocationServicesEnabled = function() {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLocationServicesRequested = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 16, false));
 };
 
@@ -7557,17 +7590,35 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLocationServicesE
  * @param {boolean} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLocationServicesEnabled = function(value) {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLocationServicesRequested = function(value) {
   return jspb.Message.setProto3BooleanField(this, 16, value);
 };
 
 
 /**
- * repeated LocationProvider location_providers = 17;
+ * optional bool location_services_enabled = 17;
+ * @return {boolean}
+ */
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLocationServicesEnabled = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 17, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
+ */
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLocationServicesEnabled = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 17, value);
+};
+
+
+/**
+ * repeated LocationProvider location_providers = 18;
  * @return {!Array<!proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider>}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLocationProvidersList = function() {
-  return /** @type {!Array<!proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider>} */ (jspb.Message.getRepeatedField(this, 17));
+  return /** @type {!Array<!proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider>} */ (jspb.Message.getRepeatedField(this, 18));
 };
 
 
@@ -7576,7 +7627,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLocationProviders
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLocationProvidersList = function(value) {
-  return jspb.Message.setField(this, 17, value || []);
+  return jspb.Message.setField(this, 18, value || []);
 };
 
 
@@ -7586,7 +7637,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLocationProviders
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.addLocationProviders = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 17, value, opt_index);
+  return jspb.Message.addToRepeatedField(this, 18, value, opt_index);
 };
 
 
@@ -7600,14 +7651,14 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearLocationProvide
 
 
 /**
- * map<string, string> metadata = 18;
+ * map<string, string> metadata = 19;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 18, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 19, opt_noLazyCreate,
       null));
 };
 

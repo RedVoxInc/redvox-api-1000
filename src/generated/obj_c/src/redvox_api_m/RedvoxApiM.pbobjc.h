@@ -1320,22 +1320,23 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Single_FieldNumber) {
 typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_FieldNumber) {
   RedvoxPacketM_Sensors_Location_FieldNumber_SensorDescription = 1,
   RedvoxPacketM_Sensors_Location_FieldNumber_Timestamps = 2,
-  RedvoxPacketM_Sensors_Location_FieldNumber_LatitudeSamples = 3,
-  RedvoxPacketM_Sensors_Location_FieldNumber_LongitudeSamples = 4,
-  RedvoxPacketM_Sensors_Location_FieldNumber_AltitudeSamples = 5,
-  RedvoxPacketM_Sensors_Location_FieldNumber_SpeedSamples = 6,
-  RedvoxPacketM_Sensors_Location_FieldNumber_BearingSamples = 7,
-  RedvoxPacketM_Sensors_Location_FieldNumber_HorizontalAccuracySamples = 8,
-  RedvoxPacketM_Sensors_Location_FieldNumber_VerticalAccuracySamples = 9,
-  RedvoxPacketM_Sensors_Location_FieldNumber_SpeedAccuracySamples = 10,
-  RedvoxPacketM_Sensors_Location_FieldNumber_BearingAccuracySamples = 11,
-  RedvoxPacketM_Sensors_Location_FieldNumber_LastBestLocation = 12,
-  RedvoxPacketM_Sensors_Location_FieldNumber_OverallBestLocation = 13,
-  RedvoxPacketM_Sensors_Location_FieldNumber_LocationPermissionsGranted = 14,
-  RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesRequested = 15,
-  RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesEnabled = 16,
-  RedvoxPacketM_Sensors_Location_FieldNumber_LocationProvidersArray = 17,
-  RedvoxPacketM_Sensors_Location_FieldNumber_Metadata = 18,
+  RedvoxPacketM_Sensors_Location_FieldNumber_TimestampsGps = 3,
+  RedvoxPacketM_Sensors_Location_FieldNumber_LatitudeSamples = 4,
+  RedvoxPacketM_Sensors_Location_FieldNumber_LongitudeSamples = 5,
+  RedvoxPacketM_Sensors_Location_FieldNumber_AltitudeSamples = 6,
+  RedvoxPacketM_Sensors_Location_FieldNumber_SpeedSamples = 7,
+  RedvoxPacketM_Sensors_Location_FieldNumber_BearingSamples = 8,
+  RedvoxPacketM_Sensors_Location_FieldNumber_HorizontalAccuracySamples = 9,
+  RedvoxPacketM_Sensors_Location_FieldNumber_VerticalAccuracySamples = 10,
+  RedvoxPacketM_Sensors_Location_FieldNumber_SpeedAccuracySamples = 11,
+  RedvoxPacketM_Sensors_Location_FieldNumber_BearingAccuracySamples = 12,
+  RedvoxPacketM_Sensors_Location_FieldNumber_LastBestLocation = 13,
+  RedvoxPacketM_Sensors_Location_FieldNumber_OverallBestLocation = 14,
+  RedvoxPacketM_Sensors_Location_FieldNumber_LocationPermissionsGranted = 15,
+  RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesRequested = 16,
+  RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesEnabled = 17,
+  RedvoxPacketM_Sensors_Location_FieldNumber_LocationProvidersArray = 18,
+  RedvoxPacketM_Sensors_Location_FieldNumber_Metadata = 19,
 };
 
 /**
@@ -1351,6 +1352,10 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_TimingPayload *timestamps;
 /** Test to see if @c timestamps has been set. */
 @property(nonatomic, readwrite) BOOL hasTimestamps;
+
+@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_TimingPayload *timestampsGps;
+/** Test to see if @c timestampsGps has been set. */
+@property(nonatomic, readwrite) BOOL hasTimestampsGps;
 
 /** A list of latitude samples */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_DoubleSamplePayload *latitudeSamples;
