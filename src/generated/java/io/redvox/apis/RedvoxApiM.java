@@ -24892,37 +24892,10 @@ public final class RedvoxApiM {
 
         /**
          * <pre>
-         * Best location from current packet
-         * </pre>
-         *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-         * @return Whether the packetBestLocation field is set.
-         */
-        boolean hasPacketBestLocation();
-        /**
-         * <pre>
-         * Best location from current packet
-         * </pre>
-         *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-         * @return The packetBestLocation.
-         */
-        io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getPacketBestLocation();
-        /**
-         * <pre>
-         * Best location from current packet
-         * </pre>
-         *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-         */
-        io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getPacketBestLocationOrBuilder();
-
-        /**
-         * <pre>
          * Most recent best location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
          * @return Whether the lastBestLocation field is set.
          */
         boolean hasLastBestLocation();
@@ -24931,7 +24904,7 @@ public final class RedvoxApiM {
          * Most recent best location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
          * @return The lastBestLocation.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getLastBestLocation();
@@ -24940,7 +24913,7 @@ public final class RedvoxApiM {
          * Most recent best location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getLastBestLocationOrBuilder();
 
@@ -24949,7 +24922,7 @@ public final class RedvoxApiM {
          * Best last location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
          * @return Whether the overallBestLocation field is set.
          */
         boolean hasOverallBestLocation();
@@ -24958,7 +24931,7 @@ public final class RedvoxApiM {
          * Best last location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
          * @return The overallBestLocation.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getOverallBestLocation();
@@ -24967,7 +24940,7 @@ public final class RedvoxApiM {
          * Best last location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getOverallBestLocationOrBuilder();
 
@@ -24976,7 +24949,7 @@ public final class RedvoxApiM {
          * Have location permissions been granted by the user?
          * </pre>
          *
-         * <code>bool location_permissions_granted = 21;</code>
+         * <code>bool location_permissions_granted = 14;</code>
          * @return The locationPermissionsGranted.
          */
         boolean getLocationPermissionsGranted();
@@ -24986,7 +24959,7 @@ public final class RedvoxApiM {
          * Has location services been requested by the user?
          * </pre>
          *
-         * <code>bool location_services_requested = 22;</code>
+         * <code>bool location_services_requested = 15;</code>
          * @return The locationServicesRequested.
          */
         boolean getLocationServicesRequested();
@@ -24996,7 +24969,7 @@ public final class RedvoxApiM {
          * Are location services enabled and working?
          * </pre>
          *
-         * <code>bool location_services_enabled = 23;</code>
+         * <code>bool location_services_enabled = 16;</code>
          * @return The locationServicesEnabled.
          */
         boolean getLocationServicesEnabled();
@@ -25006,7 +24979,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
          * @return A list containing the locationProvider.
          */
         java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider> getLocationProviderList();
@@ -25015,7 +24988,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
          * @return The count of locationProvider.
          */
         int getLocationProviderCount();
@@ -25024,7 +24997,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
          * @param index The index of the element to return.
          * @return The locationProvider at the given index.
          */
@@ -25034,7 +25007,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
          * @return A list containing the enum numeric values on the wire for locationProvider.
          */
         java.util.List<java.lang.Integer>
@@ -25044,7 +25017,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
          * @param index The index of the value to return.
          * @return The enum numeric value on the wire of locationProvider at the given index.
          */
@@ -25055,7 +25028,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 25;</code>
+         * <code>map&lt;string, string&gt; metadata = 18;</code>
          */
         int getMetadataCount();
         /**
@@ -25063,7 +25036,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 25;</code>
+         * <code>map&lt;string, string&gt; metadata = 18;</code>
          */
         boolean containsMetadata(
             java.lang.String key);
@@ -25078,7 +25051,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 25;</code>
+         * <code>map&lt;string, string&gt; metadata = 18;</code>
          */
         java.util.Map<java.lang.String, java.lang.String>
         getMetadataMap();
@@ -25087,7 +25060,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 25;</code>
+         * <code>map&lt;string, string&gt; metadata = 18;</code>
          */
 
         java.lang.String getMetadataOrDefault(
@@ -25098,7 +25071,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 25;</code>
+         * <code>map&lt;string, string&gt; metadata = 18;</code>
          */
 
         java.lang.String getMetadataOrThrow(
@@ -25295,19 +25268,6 @@ public final class RedvoxApiM {
                 }
                 case 98: {
                   io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder subBuilder = null;
-                  if (packetBestLocation_ != null) {
-                    subBuilder = packetBestLocation_.toBuilder();
-                  }
-                  packetBestLocation_ = input.readMessage(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.parser(), extensionRegistry);
-                  if (subBuilder != null) {
-                    subBuilder.mergeFrom(packetBestLocation_);
-                    packetBestLocation_ = subBuilder.buildPartial();
-                  }
-
-                  break;
-                }
-                case 106: {
-                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder subBuilder = null;
                   if (lastBestLocation_ != null) {
                     subBuilder = lastBestLocation_.toBuilder();
                   }
@@ -25319,7 +25279,7 @@ public final class RedvoxApiM {
 
                   break;
                 }
-                case 114: {
+                case 106: {
                   io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder subBuilder = null;
                   if (overallBestLocation_ != null) {
                     subBuilder = overallBestLocation_.toBuilder();
@@ -25332,22 +25292,22 @@ public final class RedvoxApiM {
 
                   break;
                 }
-                case 168: {
+                case 112: {
 
                   locationPermissionsGranted_ = input.readBool();
                   break;
                 }
-                case 176: {
+                case 120: {
 
                   locationServicesRequested_ = input.readBool();
                   break;
                 }
-                case 184: {
+                case 128: {
 
                   locationServicesEnabled_ = input.readBool();
                   break;
                 }
-                case 192: {
+                case 136: {
                   int rawValue = input.readEnum();
                   if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                     locationProvider_ = new java.util.ArrayList<java.lang.Integer>();
@@ -25356,7 +25316,7 @@ public final class RedvoxApiM {
                   locationProvider_.add(rawValue);
                   break;
                 }
-                case 194: {
+                case 138: {
                   int length = input.readRawVarint32();
                   int oldLimit = input.pushLimit(length);
                   while(input.getBytesUntilLimit() > 0) {
@@ -25370,7 +25330,7 @@ public final class RedvoxApiM {
                   input.popLimit(oldLimit);
                   break;
                 }
-                case 202: {
+                case 146: {
                   if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                     metadata_ = com.google.protobuf.MapField.newMapField(
                         MetadataDefaultEntryHolder.defaultEntry);
@@ -25415,7 +25375,7 @@ public final class RedvoxApiM {
         protected com.google.protobuf.MapField internalGetMapField(
             int number) {
           switch (number) {
-            case 25:
+            case 18:
               return internalGetMetadata();
             default:
               throw new RuntimeException(
@@ -31180,49 +31140,14 @@ public final class RedvoxApiM {
           return getBearingAccuracySamples();
         }
 
-        public static final int PACKET_BEST_LOCATION_FIELD_NUMBER = 12;
-        private io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation packetBestLocation_;
-        /**
-         * <pre>
-         * Best location from current packet
-         * </pre>
-         *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-         * @return Whether the packetBestLocation field is set.
-         */
-        public boolean hasPacketBestLocation() {
-          return packetBestLocation_ != null;
-        }
-        /**
-         * <pre>
-         * Best location from current packet
-         * </pre>
-         *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-         * @return The packetBestLocation.
-         */
-        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getPacketBestLocation() {
-          return packetBestLocation_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.getDefaultInstance() : packetBestLocation_;
-        }
-        /**
-         * <pre>
-         * Best location from current packet
-         * </pre>
-         *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-         */
-        public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getPacketBestLocationOrBuilder() {
-          return getPacketBestLocation();
-        }
-
-        public static final int LAST_BEST_LOCATION_FIELD_NUMBER = 13;
+        public static final int LAST_BEST_LOCATION_FIELD_NUMBER = 12;
         private io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation lastBestLocation_;
         /**
          * <pre>
          * Most recent best location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
          * @return Whether the lastBestLocation field is set.
          */
         public boolean hasLastBestLocation() {
@@ -31233,7 +31158,7 @@ public final class RedvoxApiM {
          * Most recent best location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
          * @return The lastBestLocation.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getLastBestLocation() {
@@ -31244,20 +31169,20 @@ public final class RedvoxApiM {
          * Most recent best location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getLastBestLocationOrBuilder() {
           return getLastBestLocation();
         }
 
-        public static final int OVERALL_BEST_LOCATION_FIELD_NUMBER = 14;
+        public static final int OVERALL_BEST_LOCATION_FIELD_NUMBER = 13;
         private io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation overallBestLocation_;
         /**
          * <pre>
          * Best last location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
          * @return Whether the overallBestLocation field is set.
          */
         public boolean hasOverallBestLocation() {
@@ -31268,7 +31193,7 @@ public final class RedvoxApiM {
          * Best last location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
          * @return The overallBestLocation.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getOverallBestLocation() {
@@ -31279,55 +31204,55 @@ public final class RedvoxApiM {
          * Best last location
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getOverallBestLocationOrBuilder() {
           return getOverallBestLocation();
         }
 
-        public static final int LOCATION_PERMISSIONS_GRANTED_FIELD_NUMBER = 21;
+        public static final int LOCATION_PERMISSIONS_GRANTED_FIELD_NUMBER = 14;
         private boolean locationPermissionsGranted_;
         /**
          * <pre>
          * Have location permissions been granted by the user?
          * </pre>
          *
-         * <code>bool location_permissions_granted = 21;</code>
+         * <code>bool location_permissions_granted = 14;</code>
          * @return The locationPermissionsGranted.
          */
         public boolean getLocationPermissionsGranted() {
           return locationPermissionsGranted_;
         }
 
-        public static final int LOCATION_SERVICES_REQUESTED_FIELD_NUMBER = 22;
+        public static final int LOCATION_SERVICES_REQUESTED_FIELD_NUMBER = 15;
         private boolean locationServicesRequested_;
         /**
          * <pre>
          * Has location services been requested by the user?
          * </pre>
          *
-         * <code>bool location_services_requested = 22;</code>
+         * <code>bool location_services_requested = 15;</code>
          * @return The locationServicesRequested.
          */
         public boolean getLocationServicesRequested() {
           return locationServicesRequested_;
         }
 
-        public static final int LOCATION_SERVICES_ENABLED_FIELD_NUMBER = 23;
+        public static final int LOCATION_SERVICES_ENABLED_FIELD_NUMBER = 16;
         private boolean locationServicesEnabled_;
         /**
          * <pre>
          * Are location services enabled and working?
          * </pre>
          *
-         * <code>bool location_services_enabled = 23;</code>
+         * <code>bool location_services_enabled = 16;</code>
          * @return The locationServicesEnabled.
          */
         public boolean getLocationServicesEnabled() {
           return locationServicesEnabled_;
         }
 
-        public static final int LOCATION_PROVIDER_FIELD_NUMBER = 24;
+        public static final int LOCATION_PROVIDER_FIELD_NUMBER = 17;
         private java.util.List<java.lang.Integer> locationProvider_;
         private static final com.google.protobuf.Internal.ListAdapter.Converter<
             java.lang.Integer, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider> locationProvider_converter_ =
@@ -31344,7 +31269,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
          * @return A list containing the locationProvider.
          */
         public java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider> getLocationProviderList() {
@@ -31356,7 +31281,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
          * @return The count of locationProvider.
          */
         public int getLocationProviderCount() {
@@ -31367,7 +31292,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
          * @param index The index of the element to return.
          * @return The locationProvider at the given index.
          */
@@ -31379,7 +31304,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
          * @return A list containing the enum numeric values on the wire for locationProvider.
          */
         public java.util.List<java.lang.Integer>
@@ -31391,7 +31316,7 @@ public final class RedvoxApiM {
          * Location provider enumeration
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
          * @param index The index of the value to return.
          * @return The enum numeric value on the wire of locationProvider at the given index.
          */
@@ -31400,7 +31325,7 @@ public final class RedvoxApiM {
         }
         private int locationProviderMemoizedSerializedSize;
 
-        public static final int METADATA_FIELD_NUMBER = 25;
+        public static final int METADATA_FIELD_NUMBER = 18;
         private static final class MetadataDefaultEntryHolder {
           static final com.google.protobuf.MapEntry<
               java.lang.String, java.lang.String> defaultEntry =
@@ -31431,7 +31356,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 25;</code>
+         * <code>map&lt;string, string&gt; metadata = 18;</code>
          */
 
         public boolean containsMetadata(
@@ -31451,7 +31376,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 25;</code>
+         * <code>map&lt;string, string&gt; metadata = 18;</code>
          */
 
         public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -31462,7 +31387,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 25;</code>
+         * <code>map&lt;string, string&gt; metadata = 18;</code>
          */
 
         public java.lang.String getMetadataOrDefault(
@@ -31478,7 +31403,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 25;</code>
+         * <code>map&lt;string, string&gt; metadata = 18;</code>
          */
 
         public java.lang.String getMetadataOrThrow(
@@ -31540,26 +31465,23 @@ public final class RedvoxApiM {
           if (bearingAccuracySamples_ != null) {
             output.writeMessage(11, getBearingAccuracySamples());
           }
-          if (packetBestLocation_ != null) {
-            output.writeMessage(12, getPacketBestLocation());
-          }
           if (lastBestLocation_ != null) {
-            output.writeMessage(13, getLastBestLocation());
+            output.writeMessage(12, getLastBestLocation());
           }
           if (overallBestLocation_ != null) {
-            output.writeMessage(14, getOverallBestLocation());
+            output.writeMessage(13, getOverallBestLocation());
           }
           if (locationPermissionsGranted_ != false) {
-            output.writeBool(21, locationPermissionsGranted_);
+            output.writeBool(14, locationPermissionsGranted_);
           }
           if (locationServicesRequested_ != false) {
-            output.writeBool(22, locationServicesRequested_);
+            output.writeBool(15, locationServicesRequested_);
           }
           if (locationServicesEnabled_ != false) {
-            output.writeBool(23, locationServicesEnabled_);
+            output.writeBool(16, locationServicesEnabled_);
           }
           if (getLocationProviderList().size() > 0) {
-            output.writeUInt32NoTag(194);
+            output.writeUInt32NoTag(138);
             output.writeUInt32NoTag(locationProviderMemoizedSerializedSize);
           }
           for (int i = 0; i < locationProvider_.size(); i++) {
@@ -31570,7 +31492,7 @@ public final class RedvoxApiM {
               output,
               internalGetMetadata(),
               MetadataDefaultEntryHolder.defaultEntry,
-              25);
+              18);
           unknownFields.writeTo(output);
         }
 
@@ -31623,29 +31545,25 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(11, getBearingAccuracySamples());
           }
-          if (packetBestLocation_ != null) {
-            size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(12, getPacketBestLocation());
-          }
           if (lastBestLocation_ != null) {
             size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(13, getLastBestLocation());
+              .computeMessageSize(12, getLastBestLocation());
           }
           if (overallBestLocation_ != null) {
             size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(14, getOverallBestLocation());
+              .computeMessageSize(13, getOverallBestLocation());
           }
           if (locationPermissionsGranted_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(21, locationPermissionsGranted_);
+              .computeBoolSize(14, locationPermissionsGranted_);
           }
           if (locationServicesRequested_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(22, locationServicesRequested_);
+              .computeBoolSize(15, locationServicesRequested_);
           }
           if (locationServicesEnabled_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(23, locationServicesEnabled_);
+              .computeBoolSize(16, locationServicesEnabled_);
           }
           {
             int dataSize = 0;
@@ -31667,7 +31585,7 @@ public final class RedvoxApiM {
                 .setValue(entry.getValue())
                 .build();
             size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(25, metadata__);
+                .computeMessageSize(18, metadata__);
           }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
@@ -31735,11 +31653,6 @@ public final class RedvoxApiM {
           if (hasBearingAccuracySamples()) {
             if (!getBearingAccuracySamples()
                 .equals(other.getBearingAccuracySamples())) return false;
-          }
-          if (hasPacketBestLocation() != other.hasPacketBestLocation()) return false;
-          if (hasPacketBestLocation()) {
-            if (!getPacketBestLocation()
-                .equals(other.getPacketBestLocation())) return false;
           }
           if (hasLastBestLocation() != other.hasLastBestLocation()) return false;
           if (hasLastBestLocation()) {
@@ -31812,10 +31725,6 @@ public final class RedvoxApiM {
           if (hasBearingAccuracySamples()) {
             hash = (37 * hash) + BEARING_ACCURACY_SAMPLES_FIELD_NUMBER;
             hash = (53 * hash) + getBearingAccuracySamples().hashCode();
-          }
-          if (hasPacketBestLocation()) {
-            hash = (37 * hash) + PACKET_BEST_LOCATION_FIELD_NUMBER;
-            hash = (53 * hash) + getPacketBestLocation().hashCode();
           }
           if (hasLastBestLocation()) {
             hash = (37 * hash) + LAST_BEST_LOCATION_FIELD_NUMBER;
@@ -31958,7 +31867,7 @@ public final class RedvoxApiM {
           protected com.google.protobuf.MapField internalGetMapField(
               int number) {
             switch (number) {
-              case 25:
+              case 18:
                 return internalGetMetadata();
               default:
                 throw new RuntimeException(
@@ -31969,7 +31878,7 @@ public final class RedvoxApiM {
           protected com.google.protobuf.MapField internalGetMutableMapField(
               int number) {
             switch (number) {
-              case 25:
+              case 18:
                 return internalGetMutableMetadata();
               default:
                 throw new RuntimeException(
@@ -32063,12 +31972,6 @@ public final class RedvoxApiM {
             } else {
               bearingAccuracySamples_ = null;
               bearingAccuracySamplesBuilder_ = null;
-            }
-            if (packetBestLocationBuilder_ == null) {
-              packetBestLocation_ = null;
-            } else {
-              packetBestLocation_ = null;
-              packetBestLocationBuilder_ = null;
             }
             if (lastBestLocationBuilder_ == null) {
               lastBestLocation_ = null;
@@ -32168,11 +32071,6 @@ public final class RedvoxApiM {
               result.bearingAccuracySamples_ = bearingAccuracySamples_;
             } else {
               result.bearingAccuracySamples_ = bearingAccuracySamplesBuilder_.build();
-            }
-            if (packetBestLocationBuilder_ == null) {
-              result.packetBestLocation_ = packetBestLocation_;
-            } else {
-              result.packetBestLocation_ = packetBestLocationBuilder_.build();
             }
             if (lastBestLocationBuilder_ == null) {
               result.lastBestLocation_ = lastBestLocation_;
@@ -32275,9 +32173,6 @@ public final class RedvoxApiM {
             }
             if (other.hasBearingAccuracySamples()) {
               mergeBearingAccuracySamples(other.getBearingAccuracySamples());
-            }
-            if (other.hasPacketBestLocation()) {
-              mergePacketBestLocation(other.getPacketBestLocation());
             }
             if (other.hasLastBestLocation()) {
               mergeLastBestLocation(other.getLastBestLocation());
@@ -33982,161 +33877,6 @@ public final class RedvoxApiM {
             return bearingAccuracySamplesBuilder_;
           }
 
-          private io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation packetBestLocation_;
-          private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder> packetBestLocationBuilder_;
-          /**
-           * <pre>
-           * Best location from current packet
-           * </pre>
-           *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-           * @return Whether the packetBestLocation field is set.
-           */
-          public boolean hasPacketBestLocation() {
-            return packetBestLocationBuilder_ != null || packetBestLocation_ != null;
-          }
-          /**
-           * <pre>
-           * Best location from current packet
-           * </pre>
-           *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-           * @return The packetBestLocation.
-           */
-          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getPacketBestLocation() {
-            if (packetBestLocationBuilder_ == null) {
-              return packetBestLocation_ == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.getDefaultInstance() : packetBestLocation_;
-            } else {
-              return packetBestLocationBuilder_.getMessage();
-            }
-          }
-          /**
-           * <pre>
-           * Best location from current packet
-           * </pre>
-           *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-           */
-          public Builder setPacketBestLocation(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation value) {
-            if (packetBestLocationBuilder_ == null) {
-              if (value == null) {
-                throw new NullPointerException();
-              }
-              packetBestLocation_ = value;
-              onChanged();
-            } else {
-              packetBestLocationBuilder_.setMessage(value);
-            }
-
-            return this;
-          }
-          /**
-           * <pre>
-           * Best location from current packet
-           * </pre>
-           *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-           */
-          public Builder setPacketBestLocation(
-              io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder builderForValue) {
-            if (packetBestLocationBuilder_ == null) {
-              packetBestLocation_ = builderForValue.build();
-              onChanged();
-            } else {
-              packetBestLocationBuilder_.setMessage(builderForValue.build());
-            }
-
-            return this;
-          }
-          /**
-           * <pre>
-           * Best location from current packet
-           * </pre>
-           *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-           */
-          public Builder mergePacketBestLocation(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation value) {
-            if (packetBestLocationBuilder_ == null) {
-              if (packetBestLocation_ != null) {
-                packetBestLocation_ =
-                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.newBuilder(packetBestLocation_).mergeFrom(value).buildPartial();
-              } else {
-                packetBestLocation_ = value;
-              }
-              onChanged();
-            } else {
-              packetBestLocationBuilder_.mergeFrom(value);
-            }
-
-            return this;
-          }
-          /**
-           * <pre>
-           * Best location from current packet
-           * </pre>
-           *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-           */
-          public Builder clearPacketBestLocation() {
-            if (packetBestLocationBuilder_ == null) {
-              packetBestLocation_ = null;
-              onChanged();
-            } else {
-              packetBestLocation_ = null;
-              packetBestLocationBuilder_ = null;
-            }
-
-            return this;
-          }
-          /**
-           * <pre>
-           * Best location from current packet
-           * </pre>
-           *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-           */
-          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder getPacketBestLocationBuilder() {
-            
-            onChanged();
-            return getPacketBestLocationFieldBuilder().getBuilder();
-          }
-          /**
-           * <pre>
-           * Best location from current packet
-           * </pre>
-           *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-           */
-          public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getPacketBestLocationOrBuilder() {
-            if (packetBestLocationBuilder_ != null) {
-              return packetBestLocationBuilder_.getMessageOrBuilder();
-            } else {
-              return packetBestLocation_ == null ?
-                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.getDefaultInstance() : packetBestLocation_;
-            }
-          }
-          /**
-           * <pre>
-           * Best location from current packet
-           * </pre>
-           *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation packet_best_location = 12;</code>
-           */
-          private com.google.protobuf.SingleFieldBuilderV3<
-              io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder> 
-              getPacketBestLocationFieldBuilder() {
-            if (packetBestLocationBuilder_ == null) {
-              packetBestLocationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder>(
-                      getPacketBestLocation(),
-                      getParentForChildren(),
-                      isClean());
-              packetBestLocation_ = null;
-            }
-            return packetBestLocationBuilder_;
-          }
-
           private io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation lastBestLocation_;
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder> lastBestLocationBuilder_;
@@ -34145,7 +33885,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
            * @return Whether the lastBestLocation field is set.
            */
           public boolean hasLastBestLocation() {
@@ -34156,7 +33896,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
            * @return The lastBestLocation.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getLastBestLocation() {
@@ -34171,7 +33911,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
            */
           public Builder setLastBestLocation(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation value) {
             if (lastBestLocationBuilder_ == null) {
@@ -34191,7 +33931,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
            */
           public Builder setLastBestLocation(
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder builderForValue) {
@@ -34209,7 +33949,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
            */
           public Builder mergeLastBestLocation(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation value) {
             if (lastBestLocationBuilder_ == null) {
@@ -34231,7 +33971,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
            */
           public Builder clearLastBestLocation() {
             if (lastBestLocationBuilder_ == null) {
@@ -34249,7 +33989,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder getLastBestLocationBuilder() {
             
@@ -34261,7 +34001,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getLastBestLocationOrBuilder() {
             if (lastBestLocationBuilder_ != null) {
@@ -34276,7 +34016,7 @@ public final class RedvoxApiM {
            * Most recent best location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation last_best_location = 12;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder> 
@@ -34300,7 +34040,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
            * @return Whether the overallBestLocation field is set.
            */
           public boolean hasOverallBestLocation() {
@@ -34311,7 +34051,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
            * @return The overallBestLocation.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation getOverallBestLocation() {
@@ -34326,7 +34066,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
            */
           public Builder setOverallBestLocation(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation value) {
             if (overallBestLocationBuilder_ == null) {
@@ -34346,7 +34086,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
            */
           public Builder setOverallBestLocation(
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder builderForValue) {
@@ -34364,7 +34104,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
            */
           public Builder mergeOverallBestLocation(io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation value) {
             if (overallBestLocationBuilder_ == null) {
@@ -34386,7 +34126,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
            */
           public Builder clearOverallBestLocation() {
             if (overallBestLocationBuilder_ == null) {
@@ -34404,7 +34144,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder getOverallBestLocationBuilder() {
             
@@ -34416,7 +34156,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder getOverallBestLocationOrBuilder() {
             if (overallBestLocationBuilder_ != null) {
@@ -34431,7 +34171,7 @@ public final class RedvoxApiM {
            * Best last location
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 14;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation overall_best_location = 13;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
               io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.Builder, io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocationOrBuilder> 
@@ -34453,7 +34193,7 @@ public final class RedvoxApiM {
            * Have location permissions been granted by the user?
            * </pre>
            *
-           * <code>bool location_permissions_granted = 21;</code>
+           * <code>bool location_permissions_granted = 14;</code>
            * @return The locationPermissionsGranted.
            */
           public boolean getLocationPermissionsGranted() {
@@ -34464,7 +34204,7 @@ public final class RedvoxApiM {
            * Have location permissions been granted by the user?
            * </pre>
            *
-           * <code>bool location_permissions_granted = 21;</code>
+           * <code>bool location_permissions_granted = 14;</code>
            * @param value The locationPermissionsGranted to set.
            * @return This builder for chaining.
            */
@@ -34479,7 +34219,7 @@ public final class RedvoxApiM {
            * Have location permissions been granted by the user?
            * </pre>
            *
-           * <code>bool location_permissions_granted = 21;</code>
+           * <code>bool location_permissions_granted = 14;</code>
            * @return This builder for chaining.
            */
           public Builder clearLocationPermissionsGranted() {
@@ -34495,7 +34235,7 @@ public final class RedvoxApiM {
            * Has location services been requested by the user?
            * </pre>
            *
-           * <code>bool location_services_requested = 22;</code>
+           * <code>bool location_services_requested = 15;</code>
            * @return The locationServicesRequested.
            */
           public boolean getLocationServicesRequested() {
@@ -34506,7 +34246,7 @@ public final class RedvoxApiM {
            * Has location services been requested by the user?
            * </pre>
            *
-           * <code>bool location_services_requested = 22;</code>
+           * <code>bool location_services_requested = 15;</code>
            * @param value The locationServicesRequested to set.
            * @return This builder for chaining.
            */
@@ -34521,7 +34261,7 @@ public final class RedvoxApiM {
            * Has location services been requested by the user?
            * </pre>
            *
-           * <code>bool location_services_requested = 22;</code>
+           * <code>bool location_services_requested = 15;</code>
            * @return This builder for chaining.
            */
           public Builder clearLocationServicesRequested() {
@@ -34537,7 +34277,7 @@ public final class RedvoxApiM {
            * Are location services enabled and working?
            * </pre>
            *
-           * <code>bool location_services_enabled = 23;</code>
+           * <code>bool location_services_enabled = 16;</code>
            * @return The locationServicesEnabled.
            */
           public boolean getLocationServicesEnabled() {
@@ -34548,7 +34288,7 @@ public final class RedvoxApiM {
            * Are location services enabled and working?
            * </pre>
            *
-           * <code>bool location_services_enabled = 23;</code>
+           * <code>bool location_services_enabled = 16;</code>
            * @param value The locationServicesEnabled to set.
            * @return This builder for chaining.
            */
@@ -34563,7 +34303,7 @@ public final class RedvoxApiM {
            * Are location services enabled and working?
            * </pre>
            *
-           * <code>bool location_services_enabled = 23;</code>
+           * <code>bool location_services_enabled = 16;</code>
            * @return This builder for chaining.
            */
           public Builder clearLocationServicesEnabled() {
@@ -34586,7 +34326,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
            * @return A list containing the locationProvider.
            */
           public java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.LocationProvider> getLocationProviderList() {
@@ -34598,7 +34338,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
            * @return The count of locationProvider.
            */
           public int getLocationProviderCount() {
@@ -34609,7 +34349,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
            * @param index The index of the element to return.
            * @return The locationProvider at the given index.
            */
@@ -34621,7 +34361,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
            * @param index The index to set the value at.
            * @param value The locationProvider to set.
            * @return This builder for chaining.
@@ -34641,7 +34381,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
            * @param value The locationProvider to add.
            * @return This builder for chaining.
            */
@@ -34659,7 +34399,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
            * @param values The locationProvider to add.
            * @return This builder for chaining.
            */
@@ -34677,7 +34417,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
            * @return This builder for chaining.
            */
           public Builder clearLocationProvider() {
@@ -34691,7 +34431,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
            * @return A list containing the enum numeric values on the wire for locationProvider.
            */
           public java.util.List<java.lang.Integer>
@@ -34703,7 +34443,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
            * @param index The index of the value to return.
            * @return The enum numeric value on the wire of locationProvider at the given index.
            */
@@ -34715,7 +34455,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
            * @param index The index of the value to return.
            * @return The enum numeric value on the wire of locationProvider at the given index.
            * @return This builder for chaining.
@@ -34732,7 +34472,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
            * @param value The enum numeric value on the wire for locationProvider to add.
            * @return This builder for chaining.
            */
@@ -34747,7 +34487,7 @@ public final class RedvoxApiM {
            * Location provider enumeration
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 24;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_provider = 17;</code>
            * @param values The enum numeric values on the wire for locationProvider to add.
            * @return This builder for chaining.
            */
@@ -34792,7 +34532,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 25;</code>
+           * <code>map&lt;string, string&gt; metadata = 18;</code>
            */
 
           public boolean containsMetadata(
@@ -34812,7 +34552,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 25;</code>
+           * <code>map&lt;string, string&gt; metadata = 18;</code>
            */
 
           public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -34823,7 +34563,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 25;</code>
+           * <code>map&lt;string, string&gt; metadata = 18;</code>
            */
 
           public java.lang.String getMetadataOrDefault(
@@ -34839,7 +34579,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 25;</code>
+           * <code>map&lt;string, string&gt; metadata = 18;</code>
            */
 
           public java.lang.String getMetadataOrThrow(
@@ -34863,7 +34603,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 25;</code>
+           * <code>map&lt;string, string&gt; metadata = 18;</code>
            */
 
           public Builder removeMetadata(
@@ -34886,7 +34626,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 25;</code>
+           * <code>map&lt;string, string&gt; metadata = 18;</code>
            */
           public Builder putMetadata(
               java.lang.String key,
@@ -34902,7 +34642,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 25;</code>
+           * <code>map&lt;string, string&gt; metadata = 18;</code>
            */
 
           public Builder putAllMetadata(
@@ -61212,7 +60952,7 @@ public final class RedvoxApiM {
   static {
     java.lang.String[] descriptorData = {
       "\n#src/redvox_api_m/redvox_api_m.proto\022\014r" +
-      "edvox_api_m\"\327n\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
+      "edvox_api_m\"\376m\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
       "(\002\022\017\n\007sub_api\030\002 \001(\002\022K\n\023station_informati" +
       "on\030\003 \001(\0132..redvox_api_m.RedvoxPacketM.St" +
       "ationInformation\022I\n\022timing_information\030\004" +
@@ -61351,7 +61091,7 @@ public final class RedvoxApiM {
       "nformation.SynchExchange.MetadataEntry\032/" +
       "\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
       "\001(\t:\0028\001\" \n\021TimingScoreMethod\022\013\n\007UNKNOWN\020" +
-      "\000\032\250/\n\007Sensors\022>\n\raccelerometer\030\001 \001(\0132\'.r" +
+      "\000\032\317.\n\007Sensors\022>\n\raccelerometer\030\001 \001(\0132\'.r" +
       "edvox_api_m.RedvoxPacketM.Sensors.Xyz\022G\n" +
       "\023ambient_temperature\030\002 \001(\0132*.redvox_api_" +
       "m.RedvoxPacketM.Sensors.Single\0228\n\005audio\030" +
@@ -61405,7 +61145,7 @@ public final class RedvoxApiM {
       "dvoxPacketM.SamplePayload\022J\n\010metadata\030\004 " +
       "\003(\01328.redvox_api_m.RedvoxPacketM.Sensors" +
       ".Single.MetadataEntry\032/\n\rMetadataEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\221\030\n\010Locat" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\270\027\n\010Locat" +
       "ion\022\032\n\022sensor_description\030\001 \001(\t\022=\n\ntimes" +
       "tamps\030\002 \001(\0132).redvox_api_m.RedvoxPacketM" +
       ".TimingPayload\022I\n\020latitude_samples\030\003 \001(\013" +
@@ -61424,169 +61164,166 @@ public final class RedvoxApiM {
       "ayload\022I\n\026speed_accuracy_samples\030\n \001(\0132)" +
       ".redvox_api_m.RedvoxPacketM.SamplePayloa" +
       "d\022K\n\030bearing_accuracy_samples\030\013 \001(\0132).re" +
-      "dvox_api_m.RedvoxPacketM.SamplePayload\022W" +
-      "\n\024packet_best_location\030\014 \001(\01329.redvox_ap" +
-      "i_m.RedvoxPacketM.Sensors.Location.BestL" +
-      "ocation\022U\n\022last_best_location\030\r \001(\01329.re" +
-      "dvox_api_m.RedvoxPacketM.Sensors.Locatio" +
-      "n.BestLocation\022X\n\025overall_best_location\030" +
-      "\016 \001(\01329.redvox_api_m.RedvoxPacketM.Senso" +
-      "rs.Location.BestLocation\022$\n\034location_per" +
-      "missions_granted\030\025 \001(\010\022#\n\033location_servi" +
-      "ces_requested\030\026 \001(\010\022!\n\031location_services" +
-      "_enabled\030\027 \001(\010\022X\n\021location_provider\030\030 \003(" +
-      "\0162=.redvox_api_m.RedvoxPacketM.Sensors.L" +
-      "ocation.LocationProvider\022L\n\010metadata\030\031 \003" +
-      "(\0132:.redvox_api_m.RedvoxPacketM.Sensors." +
-      "Location.MetadataEntry\032/\n\rMetadataEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\365\014\n\014Best" +
-      "Location\022m\n\034latitude_longitude_timestamp" +
-      "\030\001 \001(\0132G.redvox_api_m.RedvoxPacketM.Sens" +
-      "ors.Location.BestLocation.BestTimestamp\022" +
-      "c\n\022altitude_timestamp\030\002 \001(\0132G.redvox_api" +
-      "_m.RedvoxPacketM.Sensors.Location.BestLo" +
-      "cation.BestTimestamp\022`\n\017speed_timestamp\030" +
-      "\003 \001(\0132G.redvox_api_m.RedvoxPacketM.Senso" +
-      "rs.Location.BestLocation.BestTimestamp\022b" +
-      "\n\021bearing_timestamp\030\004 \001(\0132G.redvox_api_m" +
-      ".RedvoxPacketM.Sensors.Location.BestLoca" +
-      "tion.BestTimestamp\022A\n\027latitude_longitude" +
-      "_unit\030\005 \001(\0162 .redvox_api_m.RedvoxPacketM" +
-      ".Unit\0227\n\raltitude_unit\030\006 \001(\0162 .redvox_ap" +
-      "i_m.RedvoxPacketM.Unit\0224\n\nspeed_unit\030\007 \001" +
-      "(\0162 .redvox_api_m.RedvoxPacketM.Unit\0226\n\014" +
-      "bearing_unit\030\010 \001(\0162 .redvox_api_m.Redvox" +
-      "PacketM.Unit\022@\n\026vertical_accuracy_unit\030\t" +
-      " \001(\0162 .redvox_api_m.RedvoxPacketM.Unit\022B" +
-      "\n\030horizontal_accuracy_unit\030\n \001(\0162 .redvo" +
-      "x_api_m.RedvoxPacketM.Unit\022=\n\023speed_accu" +
-      "racy_unit\030\013 \001(\0162 .redvox_api_m.RedvoxPac" +
-      "ketM.Unit\022?\n\025bearing_accuracy_unit\030\014 \001(\016" +
-      "2 .redvox_api_m.RedvoxPacketM.Unit\022\020\n\010la" +
-      "titude\030\r \001(\001\022\021\n\tlongitude\030\016 \001(\001\022\020\n\010altit" +
-      "ude\030\017 \001(\002\022\r\n\005speed\030\020 \001(\002\022\017\n\007bearing\030\021 \001(" +
-      "\002\022\031\n\021vertical_accuracy\030\022 \001(\002\022\033\n\023horizont" +
-      "al_accuracy\030\023 \001(\002\022\026\n\016speed_accuracy\030\024 \001(" +
-      "\002\022\030\n\020bearing_accuracy\030\025 \001(\002\022\r\n\005score\030\026 \001" +
-      "(\002\022]\n\006method\030\027 \001(\0162M.redvox_api_m.Redvox" +
-      "PacketM.Sensors.Location.BestLocation.Lo" +
-      "cationScoreMethod\022Y\n\010metadata\030\030 \003(\0132G.re" +
-      "dvox_api_m.RedvoxPacketM.Sensors.Locatio" +
-      "n.BestLocation.MetadataEntry\032/\n\rMetadata" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\364\001" +
-      "\n\rBestTimestamp\022.\n\004unit\030\001 \001(\0162 .redvox_a" +
-      "pi_m.RedvoxPacketM.Unit\022\014\n\004mach\030\002 \001(\001\022\013\n" +
-      "\003gps\030\003 \001(\001\022g\n\010metadata\030\004 \003(\0132U.redvox_ap" +
-      "i_m.RedvoxPacketM.Sensors.Location.BestL" +
-      "ocation.BestTimestamp.MetadataEntry\032/\n\rM" +
-      "etadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\")\n\023LocationScoreMethod\022\022\n\016UNKNOWN_M" +
-      "ETHOD\020\000\"I\n\020LocationProvider\022\013\n\007UNKNOWN\020\000" +
-      "\022\010\n\004NONE\020\001\022\010\n\004USER\020\002\022\007\n\003GPS\020\003\022\013\n\007NETWORK" +
-      "\020\004\032\224\003\n\003Xyz\022\032\n\022sensor_description\030\001 \001(\t\022=" +
+      "dvox_api_m.RedvoxPacketM.SamplePayload\022U" +
+      "\n\022last_best_location\030\014 \001(\01329.redvox_api_" +
+      "m.RedvoxPacketM.Sensors.Location.BestLoc" +
+      "ation\022X\n\025overall_best_location\030\r \001(\01329.r" +
+      "edvox_api_m.RedvoxPacketM.Sensors.Locati" +
+      "on.BestLocation\022$\n\034location_permissions_" +
+      "granted\030\016 \001(\010\022#\n\033location_services_reque" +
+      "sted\030\017 \001(\010\022!\n\031location_services_enabled\030" +
+      "\020 \001(\010\022X\n\021location_provider\030\021 \003(\0162=.redvo" +
+      "x_api_m.RedvoxPacketM.Sensors.Location.L" +
+      "ocationProvider\022L\n\010metadata\030\022 \003(\0132:.redv" +
+      "ox_api_m.RedvoxPacketM.Sensors.Location." +
+      "MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\365\014\n\014BestLocation\022" +
+      "m\n\034latitude_longitude_timestamp\030\001 \001(\0132G." +
+      "redvox_api_m.RedvoxPacketM.Sensors.Locat" +
+      "ion.BestLocation.BestTimestamp\022c\n\022altitu" +
+      "de_timestamp\030\002 \001(\0132G.redvox_api_m.Redvox" +
+      "PacketM.Sensors.Location.BestLocation.Be" +
+      "stTimestamp\022`\n\017speed_timestamp\030\003 \001(\0132G.r" +
+      "edvox_api_m.RedvoxPacketM.Sensors.Locati" +
+      "on.BestLocation.BestTimestamp\022b\n\021bearing" +
+      "_timestamp\030\004 \001(\0132G.redvox_api_m.RedvoxPa" +
+      "cketM.Sensors.Location.BestLocation.Best" +
+      "Timestamp\022A\n\027latitude_longitude_unit\030\005 \001" +
+      "(\0162 .redvox_api_m.RedvoxPacketM.Unit\0227\n\r" +
+      "altitude_unit\030\006 \001(\0162 .redvox_api_m.Redvo" +
+      "xPacketM.Unit\0224\n\nspeed_unit\030\007 \001(\0162 .redv" +
+      "ox_api_m.RedvoxPacketM.Unit\0226\n\014bearing_u" +
+      "nit\030\010 \001(\0162 .redvox_api_m.RedvoxPacketM.U" +
+      "nit\022@\n\026vertical_accuracy_unit\030\t \001(\0162 .re" +
+      "dvox_api_m.RedvoxPacketM.Unit\022B\n\030horizon" +
+      "tal_accuracy_unit\030\n \001(\0162 .redvox_api_m.R" +
+      "edvoxPacketM.Unit\022=\n\023speed_accuracy_unit" +
+      "\030\013 \001(\0162 .redvox_api_m.RedvoxPacketM.Unit" +
+      "\022?\n\025bearing_accuracy_unit\030\014 \001(\0162 .redvox" +
+      "_api_m.RedvoxPacketM.Unit\022\020\n\010latitude\030\r " +
+      "\001(\001\022\021\n\tlongitude\030\016 \001(\001\022\020\n\010altitude\030\017 \001(\002" +
+      "\022\r\n\005speed\030\020 \001(\002\022\017\n\007bearing\030\021 \001(\002\022\031\n\021vert" +
+      "ical_accuracy\030\022 \001(\002\022\033\n\023horizontal_accura" +
+      "cy\030\023 \001(\002\022\026\n\016speed_accuracy\030\024 \001(\002\022\030\n\020bear" +
+      "ing_accuracy\030\025 \001(\002\022\r\n\005score\030\026 \001(\002\022]\n\006met" +
+      "hod\030\027 \001(\0162M.redvox_api_m.RedvoxPacketM.S" +
+      "ensors.Location.BestLocation.LocationSco" +
+      "reMethod\022Y\n\010metadata\030\030 \003(\0132G.redvox_api_" +
+      "m.RedvoxPacketM.Sensors.Location.BestLoc" +
+      "ation.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\364\001\n\rBestTim" +
+      "estamp\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Redv" +
+      "oxPacketM.Unit\022\014\n\004mach\030\002 \001(\001\022\013\n\003gps\030\003 \001(" +
+      "\001\022g\n\010metadata\030\004 \003(\0132U.redvox_api_m.Redvo" +
+      "xPacketM.Sensors.Location.BestLocation.B" +
+      "estTimestamp.MetadataEntry\032/\n\rMetadataEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")\n\023L" +
+      "ocationScoreMethod\022\022\n\016UNKNOWN_METHOD\020\000\"I" +
+      "\n\020LocationProvider\022\013\n\007UNKNOWN\020\000\022\010\n\004NONE\020" +
+      "\001\022\010\n\004USER\020\002\022\007\n\003GPS\020\003\022\013\n\007NETWORK\020\004\032\224\003\n\003Xy" +
+      "z\022\032\n\022sensor_description\030\001 \001(\t\022=\n\ntimesta" +
+      "mps\030\002 \001(\0132).redvox_api_m.RedvoxPacketM.T" +
+      "imingPayload\022<\n\tx_samples\030\003 \001(\0132).redvox" +
+      "_api_m.RedvoxPacketM.SamplePayload\022<\n\ty_" +
+      "samples\030\004 \001(\0132).redvox_api_m.RedvoxPacke" +
+      "tM.SamplePayload\022<\n\tz_samples\030\005 \001(\0132).re" +
+      "dvox_api_m.RedvoxPacketM.SamplePayload\022G" +
+      "\n\010metadata\030\006 \003(\01325.redvox_api_m.RedvoxPa" +
+      "cketM.Sensors.Xyz.MetadataEntry\032/\n\rMetad" +
+      "ataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\032\360\002\n\005Image\022\032\n\022sensor_description\030\001 \001(\t\022=" +
       "\n\ntimestamps\030\002 \001(\0132).redvox_api_m.Redvox" +
-      "PacketM.TimingPayload\022<\n\tx_samples\030\003 \001(\013" +
-      "2).redvox_api_m.RedvoxPacketM.SamplePayl" +
-      "oad\022<\n\ty_samples\030\004 \001(\0132).redvox_api_m.Re" +
-      "dvoxPacketM.SamplePayload\022<\n\tz_samples\030\005" +
-      " \001(\0132).redvox_api_m.RedvoxPacketM.Sample" +
-      "Payload\022G\n\010metadata\030\006 \003(\01325.redvox_api_m" +
-      ".RedvoxPacketM.Sensors.Xyz.MetadataEntry" +
+      "PacketM.TimingPayload\022\017\n\007samples\030\003 \003(\014\022I" +
+      "\n\013image_codec\030\004 \001(\01624.redvox_api_m.Redvo" +
+      "xPacketM.Sensors.Image.ImageCodec\022I\n\010met" +
+      "adata\030\005 \003(\01327.redvox_api_m.RedvoxPacketM" +
+      ".Sensors.Image.MetadataEntry\032/\n\rMetadata" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"4\n" +
+      "\nImageCodec\022\013\n\007UNKNOWN\020\000\022\007\n\003PNG\020\001\022\007\n\003JPG" +
+      "\020\002\022\007\n\003BMP\020\003\032\362\007\n\013EventStream\022\014\n\004name\030\001 \001(" +
+      "\t\022=\n\ntimestamps\030\002 \001(\0132).redvox_api_m.Red" +
+      "voxPacketM.TimingPayload\022=\n\006events\030\003 \003(\013" +
+      "2-.redvox_api_m.RedvoxPacketM.EventStrea" +
+      "m.Event\022G\n\010metadata\030\004 \003(\01325.redvox_api_m" +
+      ".RedvoxPacketM.EventStream.MetadataEntry" +
       "\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\032\360\002\n\005Image\022\032\n\022sensor_descriptio" +
-      "n\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132).redvox_api" +
-      "_m.RedvoxPacketM.TimingPayload\022\017\n\007sample" +
-      "s\030\003 \003(\014\022I\n\013image_codec\030\004 \001(\01624.redvox_ap" +
-      "i_m.RedvoxPacketM.Sensors.Image.ImageCod" +
-      "ec\022I\n\010metadata\030\005 \003(\01327.redvox_api_m.Redv" +
-      "oxPacketM.Sensors.Image.MetadataEntry\032/\n" +
-      "\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"4\n\nImageCodec\022\013\n\007UNKNOWN\020\000\022\007\n\003PNG" +
-      "\020\001\022\007\n\003JPG\020\002\022\007\n\003BMP\020\003\032\362\007\n\013EventStream\022\014\n\004" +
-      "name\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132).redvox_" +
-      "api_m.RedvoxPacketM.TimingPayload\022=\n\006eve" +
-      "nts\030\003 \003(\0132-.redvox_api_m.RedvoxPacketM.E" +
-      "ventStream.Event\022G\n\010metadata\030\004 \003(\01325.red" +
-      "vox_api_m.RedvoxPacketM.EventStream.Meta" +
-      "dataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\032\334\005\n\005Event\022\023\n\013descript" +
-      "ion\030\001 \001(\t\022X\n\016string_payload\030\002 \003(\0132@.redv" +
-      "ox_api_m.RedvoxPacketM.EventStream.Event" +
-      ".StringPayloadEntry\022Z\n\017numeric_payload\030\003" +
-      " \003(\0132A.redvox_api_m.RedvoxPacketM.EventS" +
-      "tream.Event.NumericPayloadEntry\022Z\n\017boole" +
-      "an_payload\030\004 \003(\0132A.redvox_api_m.RedvoxPa" +
-      "cketM.EventStream.Event.BooleanPayloadEn" +
-      "try\022T\n\014byte_payload\030\005 \003(\0132>.redvox_api_m" +
-      ".RedvoxPacketM.EventStream.Event.BytePay" +
-      "loadEntry\022M\n\010metadata\030\006 \003(\0132;.redvox_api" +
-      "_m.RedvoxPacketM.EventStream.Event.Metad" +
-      "ataEntry\0324\n\022StringPayloadEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0325\n\023NumericPayload" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\001:\0028\001\0325\n" +
-      "\023BooleanPayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\010:\0028\001\0322\n\020BytePayloadEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001\032/\n\rMetadataEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\224\002\n\rSa" +
-      "mplePayload\022.\n\004unit\030\001 \001(\0162 .redvox_api_m" +
-      ".RedvoxPacketM.Unit\022\016\n\006values\030\002 \003(\002\022G\n\020v" +
-      "alue_statistics\030\003 \001(\0132-.redvox_api_m.Red" +
-      "voxPacketM.SummaryStatistics\022I\n\010metadata" +
-      "\030\004 \003(\01327.redvox_api_m.RedvoxPacketM.Samp" +
-      "lePayload.MetadataEntry\032/\n\rMetadataEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\240\002\n\023Dou" +
-      "bleSamplePayload\022.\n\004unit\030\001 \001(\0162 .redvox_" +
-      "api_m.RedvoxPacketM.Unit\022\016\n\006values\030\002 \003(\001" +
-      "\022G\n\020value_statistics\030\003 \001(\0132-.redvox_api_" +
-      "m.RedvoxPacketM.SummaryStatistics\022O\n\010met" +
-      "adata\030\004 \003(\0132=.redvox_api_m.RedvoxPacketM" +
-      ".DoubleSamplePayload.MetadataEntry\032/\n\rMe" +
-      "tadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\032\321\002\n\rTimingPayload\022.\n\004unit\030\001 \001(\0162 .re" +
-      "dvox_api_m.RedvoxPacketM.Unit\022\022\n\ntimesta" +
-      "mps\030\002 \003(\001\022K\n\024timestamp_statistics\030\003 \001(\0132" +
-      "-.redvox_api_m.RedvoxPacketM.SummaryStat" +
-      "istics\022\030\n\020mean_sample_rate\030\004 \001(\002\022\031\n\021stde" +
-      "v_sample_rate\030\005 \001(\002\022I\n\010metadata\030\006 \003(\01327." +
-      "redvox_api_m.RedvoxPacketM.TimingPayload" +
+      "\002 \001(\t:\0028\001\032\334\005\n\005Event\022\023\n\013description\030\001 \001(\t" +
+      "\022X\n\016string_payload\030\002 \003(\0132@.redvox_api_m." +
+      "RedvoxPacketM.EventStream.Event.StringPa" +
+      "yloadEntry\022Z\n\017numeric_payload\030\003 \003(\0132A.re" +
+      "dvox_api_m.RedvoxPacketM.EventStream.Eve" +
+      "nt.NumericPayloadEntry\022Z\n\017boolean_payloa" +
+      "d\030\004 \003(\0132A.redvox_api_m.RedvoxPacketM.Eve" +
+      "ntStream.Event.BooleanPayloadEntry\022T\n\014by" +
+      "te_payload\030\005 \003(\0132>.redvox_api_m.RedvoxPa" +
+      "cketM.EventStream.Event.BytePayloadEntry" +
+      "\022M\n\010metadata\030\006 \003(\0132;.redvox_api_m.Redvox" +
+      "PacketM.EventStream.Event.MetadataEntry\032" +
+      "4\n\022StringPayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\0325\n\023NumericPayloadEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\001:\0028\001\0325\n\023BooleanP" +
+      "ayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:" +
+      "\0028\001\0322\n\020BytePayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\014:\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\224\002\n\rSamplePaylo" +
+      "ad\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.RedvoxPa" +
+      "cketM.Unit\022\016\n\006values\030\002 \003(\002\022G\n\020value_stat" +
+      "istics\030\003 \001(\0132-.redvox_api_m.RedvoxPacket" +
+      "M.SummaryStatistics\022I\n\010metadata\030\004 \003(\01327." +
+      "redvox_api_m.RedvoxPacketM.SamplePayload" +
       ".MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\365\001\n\021SummaryStati" +
-      "stics\022\r\n\005count\030\001 \001(\002\022\014\n\004mean\030\002 \001(\002\022\032\n\022st" +
-      "andard_deviation\030\003 \001(\002\022\013\n\003min\030\004 \001(\002\022\013\n\003m" +
-      "ax\030\005 \001(\002\022\r\n\005range\030\006 \001(\002\022M\n\010metadata\030\007 \003(" +
-      "\0132;.redvox_api_m.RedvoxPacketM.SummarySt" +
-      "atistics.MetadataEntry\032/\n\rMetadataEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\203\003\n\004Unit" +
-      "\022\013\n\007UNKNOWN\020\000\022\035\n\031METERS_PER_SECOND_SQUAR" +
-      "ED\020\001\022\016\n\nKILOPASCAL\020\002\022\026\n\022RADIANS_PER_SECO" +
-      "ND\020\003\022\023\n\017DECIMAL_DEGREES\020\004\022\n\n\006METERS\020\005\022\025\n" +
-      "\021METERS_PER_SECOND\020\006\022\016\n\nMICROTESLA\020\007\022\031\n\025" +
-      "LSB_PLUS_MINUS_COUNTS\020\010\022!\n\035MICROSECONDS_" +
-      "SINCE_UNIX_EPOCH\020\t\022\013\n\007DECIBEL\020\n\022\023\n\017DEGRE" +
-      "ES_CELSIUS\020\013\022\010\n\004BYTE\020\014\022\016\n\nPERCENTAGE\020\r\022\013" +
-      "\n\007RADIANS\020\016\022\020\n\014MICROAMPERES\020\017\022\017\n\013CENTIME" +
-      "TERS\020\020\022\025\n\021NORMALIZED_COUNTS\020\021\022\007\n\003LUX\020\022\022\014" +
-      "\n\010UNITLESS\020\023\022\007\n\003PCM\020\024\"\254\001\n\026EncryptedRedvo" +
-      "xPacketM\022\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014" +
-      "\032r\n\006Header\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014statio" +
-      "n_uuid\030\002 \001(\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016fire" +
-      "base_token\030\004 \001(\t\022\022\n\nauth_email\030\005 \001(\t\"y\n\022" +
-      "AcquisitionRequest\022\022\n\nauth_token\030\001 \001(\t\022\026" +
-      "\n\016firebase_token\030\002 \001(\t\022\020\n\010checksum\030\003 \001(\003" +
-      "\022\024\n\014is_encrypted\030\004 \001(\010\022\017\n\007payload\030\005 \001(\014\"" +
-      "\345\001\n\023AcquisitionResponse\022E\n\rresponse_type" +
-      "\030\001 \001(\0162..redvox_api_m.AcquisitionRespons" +
-      "e.ResponseType\022\020\n\010checksum\030\002 \001(\003\022\017\n\007deta" +
-      "ils\030\003 \001(\t\022\016\n\006resend\030\004 \001(\010\"T\n\014ResponseTyp" +
-      "e\022\013\n\007UNKNOWN\020\000\022\006\n\002OK\020\001\022\016\n\nAUTH_ERROR\020\002\022\016" +
-      "\n\nDATA_ERROR\020\003\022\017\n\013OTHER_ERROR\020\004\"\\\n\014Synch" +
-      "Request\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_u" +
-      "uid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030" +
-      "\004 \001(\r\"\205\001\n\rSynchResponse\022\022\n\nstation_id\030\001 " +
-      "\001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(" +
-      "\r\022\022\n\nsub_seq_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030\005 \001(" +
-      "\004\022\022\n\nsend_ts_us\030\006 \001(\004B\020\n\016io.redvox.apisb" +
-      "\006proto3"
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\240\002\n\023DoubleSample" +
+      "Payload\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Red" +
+      "voxPacketM.Unit\022\016\n\006values\030\002 \003(\001\022G\n\020value" +
+      "_statistics\030\003 \001(\0132-.redvox_api_m.RedvoxP" +
+      "acketM.SummaryStatistics\022O\n\010metadata\030\004 \003" +
+      "(\0132=.redvox_api_m.RedvoxPacketM.DoubleSa" +
+      "mplePayload.MetadataEntry\032/\n\rMetadataEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321\002\n\rT" +
+      "imingPayload\022.\n\004unit\030\001 \001(\0162 .redvox_api_" +
+      "m.RedvoxPacketM.Unit\022\022\n\ntimestamps\030\002 \003(\001" +
+      "\022K\n\024timestamp_statistics\030\003 \001(\0132-.redvox_" +
+      "api_m.RedvoxPacketM.SummaryStatistics\022\030\n" +
+      "\020mean_sample_rate\030\004 \001(\002\022\031\n\021stdev_sample_" +
+      "rate\030\005 \001(\002\022I\n\010metadata\030\006 \003(\01327.redvox_ap" +
+      "i_m.RedvoxPacketM.TimingPayload.Metadata" +
+      "Entry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\032\365\001\n\021SummaryStatistics\022\r\n\005" +
+      "count\030\001 \001(\002\022\014\n\004mean\030\002 \001(\002\022\032\n\022standard_de" +
+      "viation\030\003 \001(\002\022\013\n\003min\030\004 \001(\002\022\013\n\003max\030\005 \001(\002\022" +
+      "\r\n\005range\030\006 \001(\002\022M\n\010metadata\030\007 \003(\0132;.redvo" +
+      "x_api_m.RedvoxPacketM.SummaryStatistics." +
+      "MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\203\003\n\004Unit\022\013\n\007UNKNO" +
+      "WN\020\000\022\035\n\031METERS_PER_SECOND_SQUARED\020\001\022\016\n\nK" +
+      "ILOPASCAL\020\002\022\026\n\022RADIANS_PER_SECOND\020\003\022\023\n\017D" +
+      "ECIMAL_DEGREES\020\004\022\n\n\006METERS\020\005\022\025\n\021METERS_P" +
+      "ER_SECOND\020\006\022\016\n\nMICROTESLA\020\007\022\031\n\025LSB_PLUS_" +
+      "MINUS_COUNTS\020\010\022!\n\035MICROSECONDS_SINCE_UNI" +
+      "X_EPOCH\020\t\022\013\n\007DECIBEL\020\n\022\023\n\017DEGREES_CELSIU" +
+      "S\020\013\022\010\n\004BYTE\020\014\022\016\n\nPERCENTAGE\020\r\022\013\n\007RADIANS" +
+      "\020\016\022\020\n\014MICROAMPERES\020\017\022\017\n\013CENTIMETERS\020\020\022\025\n" +
+      "\021NORMALIZED_COUNTS\020\021\022\007\n\003LUX\020\022\022\014\n\010UNITLES" +
+      "S\020\023\022\007\n\003PCM\020\024\"\254\001\n\026EncryptedRedvoxPacketM\022" +
+      "\016\n\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014\032r\n\006Heade" +
+      "r\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 " +
+      "\001(\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016firebase_toke" +
+      "n\030\004 \001(\t\022\022\n\nauth_email\030\005 \001(\t\"y\n\022Acquisiti" +
+      "onRequest\022\022\n\nauth_token\030\001 \001(\t\022\026\n\016firebas" +
+      "e_token\030\002 \001(\t\022\020\n\010checksum\030\003 \001(\003\022\024\n\014is_en" +
+      "crypted\030\004 \001(\010\022\017\n\007payload\030\005 \001(\014\"\345\001\n\023Acqui" +
+      "sitionResponse\022E\n\rresponse_type\030\001 \001(\0162.." +
+      "redvox_api_m.AcquisitionResponse.Respons" +
+      "eType\022\020\n\010checksum\030\002 \001(\003\022\017\n\007details\030\003 \001(\t" +
+      "\022\016\n\006resend\030\004 \001(\010\"T\n\014ResponseType\022\013\n\007UNKN" +
+      "OWN\020\000\022\006\n\002OK\020\001\022\016\n\nAUTH_ERROR\020\002\022\016\n\nDATA_ER" +
+      "ROR\020\003\022\017\n\013OTHER_ERROR\020\004\"\\\n\014SynchRequest\022\022" +
+      "\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t" +
+      "\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001\n" +
+      "\rSynchResponse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014st" +
+      "ation_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_" +
+      "seq_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsend" +
+      "_ts_us\030\006 \001(\004B\020\n\016io.redvox.apisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -61729,7 +61466,7 @@ public final class RedvoxApiM {
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_descriptor,
-        new java.lang.String[] { "SensorDescription", "Timestamps", "LatitudeSamples", "LongitudeSamples", "AltitudeSamples", "SpeedSamples", "BearingSamples", "HorizontalAccuracySamples", "VerticalAccuracySamples", "SpeedAccuracySamples", "BearingAccuracySamples", "PacketBestLocation", "LastBestLocation", "OverallBestLocation", "LocationPermissionsGranted", "LocationServicesRequested", "LocationServicesEnabled", "LocationProvider", "Metadata", });
+        new java.lang.String[] { "SensorDescription", "Timestamps", "LatitudeSamples", "LongitudeSamples", "AltitudeSamples", "SpeedSamples", "BearingSamples", "HorizontalAccuracySamples", "VerticalAccuracySamples", "SpeedAccuracySamples", "BearingAccuracySamples", "LastBestLocation", "OverallBestLocation", "LocationPermissionsGranted", "LocationServicesRequested", "LocationServicesEnabled", "LocationProvider", "Metadata", });
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_MetadataEntry_descriptor =
       internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_descriptor.getNestedTypes().get(0);
     internal_static_redvox_api_m_RedvoxPacketM_Sensors_Location_MetadataEntry_fieldAccessorTable = new

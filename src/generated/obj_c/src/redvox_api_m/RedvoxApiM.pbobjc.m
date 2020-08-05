@@ -2420,7 +2420,6 @@ typedef struct RedvoxPacketM_Sensors_Single__storage_ {
 @dynamic hasVerticalAccuracySamples, verticalAccuracySamples;
 @dynamic hasSpeedAccuracySamples, speedAccuracySamples;
 @dynamic hasBearingAccuracySamples, bearingAccuracySamples;
-@dynamic hasPacketBestLocation, packetBestLocation;
 @dynamic hasLastBestLocation, lastBestLocation;
 @dynamic hasOverallBestLocation, overallBestLocation;
 @dynamic locationPermissionsGranted;
@@ -2442,7 +2441,6 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
   RedvoxPacketM_SamplePayload *verticalAccuracySamples;
   RedvoxPacketM_SamplePayload *speedAccuracySamples;
   RedvoxPacketM_SamplePayload *bearingAccuracySamples;
-  RedvoxPacketM_Sensors_Location_BestLocation *packetBestLocation;
   RedvoxPacketM_Sensors_Location_BestLocation *lastBestLocation;
   RedvoxPacketM_Sensors_Location_BestLocation *overallBestLocation;
   GPBEnumArray *locationProviderArray;
@@ -2555,19 +2553,10 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "packetBestLocation",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Location_BestLocation),
-        .number = RedvoxPacketM_Sensors_Location_FieldNumber_PacketBestLocation,
-        .hasIndex = 11,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, packetBestLocation),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
-      },
-      {
         .name = "lastBestLocation",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Location_BestLocation),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LastBestLocation,
-        .hasIndex = 12,
+        .hasIndex = 11,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, lastBestLocation),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -2576,7 +2565,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "overallBestLocation",
         .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Location_BestLocation),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_OverallBestLocation,
-        .hasIndex = 13,
+        .hasIndex = 12,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, overallBestLocation),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
@@ -2585,8 +2574,8 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "locationPermissionsGranted",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LocationPermissionsGranted,
-        .hasIndex = 14,
-        .offset = 15,  // Stored in _has_storage_ to save space.
+        .hasIndex = 13,
+        .offset = 14,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -2594,8 +2583,8 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "locationServicesRequested",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesRequested,
-        .hasIndex = 16,
-        .offset = 17,  // Stored in _has_storage_ to save space.
+        .hasIndex = 15,
+        .offset = 16,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -2603,8 +2592,8 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
         .name = "locationServicesEnabled",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesEnabled,
-        .hasIndex = 18,
-        .offset = 19,  // Stored in _has_storage_ to save space.
+        .hasIndex = 17,
+        .offset = 18,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },

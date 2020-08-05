@@ -241,14 +241,13 @@ message RedvoxPacketM {
             SamplePayload vertical_accuracy_samples = 9;
             SamplePayload speed_accuracy_samples = 10;
             SamplePayload bearing_accuracy_samples = 11;
-            BestLocation packet_best_location = 12;
-            BestLocation last_best_location = 13;
-            BestLocation overall_best_location = 14;
-            bool location_permissions_granted = 21;
-            bool location_services_requested = 22;
-            bool location_services_enabled = 23;
-            repeated LocationProvider location_provider = 24;
-            map<string, string> metadata = 25;
+            BestLocation last_best_location = 12;
+            BestLocation overall_best_location = 13;
+            bool location_permissions_granted = 14;
+            bool location_services_requested = 15;
+            bool location_services_enabled = 16;
+            repeated LocationProvider location_provider = 17;
+            map<string, string> metadata = 18;
             message BestLocation {
                 BestTimestamp latitude_longitude_timestamp = 1;
                 BestTimestamp altitude_timestamp = 2;

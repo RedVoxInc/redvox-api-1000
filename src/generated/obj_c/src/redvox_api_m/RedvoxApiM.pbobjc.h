@@ -1329,14 +1329,13 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_FieldNumber) {
   RedvoxPacketM_Sensors_Location_FieldNumber_VerticalAccuracySamples = 9,
   RedvoxPacketM_Sensors_Location_FieldNumber_SpeedAccuracySamples = 10,
   RedvoxPacketM_Sensors_Location_FieldNumber_BearingAccuracySamples = 11,
-  RedvoxPacketM_Sensors_Location_FieldNumber_PacketBestLocation = 12,
-  RedvoxPacketM_Sensors_Location_FieldNumber_LastBestLocation = 13,
-  RedvoxPacketM_Sensors_Location_FieldNumber_OverallBestLocation = 14,
-  RedvoxPacketM_Sensors_Location_FieldNumber_LocationPermissionsGranted = 21,
-  RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesRequested = 22,
-  RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesEnabled = 23,
-  RedvoxPacketM_Sensors_Location_FieldNumber_LocationProviderArray = 24,
-  RedvoxPacketM_Sensors_Location_FieldNumber_Metadata = 25,
+  RedvoxPacketM_Sensors_Location_FieldNumber_LastBestLocation = 12,
+  RedvoxPacketM_Sensors_Location_FieldNumber_OverallBestLocation = 13,
+  RedvoxPacketM_Sensors_Location_FieldNumber_LocationPermissionsGranted = 14,
+  RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesRequested = 15,
+  RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesEnabled = 16,
+  RedvoxPacketM_Sensors_Location_FieldNumber_LocationProviderArray = 17,
+  RedvoxPacketM_Sensors_Location_FieldNumber_Metadata = 18,
 };
 
 /**
@@ -1397,11 +1396,6 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_SamplePayload *bearingAccuracySamples;
 /** Test to see if @c bearingAccuracySamples has been set. */
 @property(nonatomic, readwrite) BOOL hasBearingAccuracySamples;
-
-/** Best location from current packet */
-@property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Sensors_Location_BestLocation *packetBestLocation;
-/** Test to see if @c packetBestLocation has been set. */
-@property(nonatomic, readwrite) BOOL hasPacketBestLocation;
 
 /** Most recent best location */
 @property(nonatomic, readwrite, strong, null_resettable) RedvoxPacketM_Sensors_Location_BestLocation *lastBestLocation;
