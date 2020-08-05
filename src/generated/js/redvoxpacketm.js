@@ -5577,7 +5577,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.toObject = function(includeIns
     locationPermissionsGranted: jspb.Message.getBooleanFieldWithDefault(msg, 14, false),
     locationServicesRequested: jspb.Message.getBooleanFieldWithDefault(msg, 15, false),
     locationServicesEnabled: jspb.Message.getBooleanFieldWithDefault(msg, 16, false),
-    locationProviderList: (f = jspb.Message.getRepeatedField(msg, 17)) == null ? undefined : f,
+    locationProvidersList: (f = jspb.Message.getRepeatedField(msg, 17)) == null ? undefined : f,
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -5693,7 +5693,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.deserializeBinaryFromReader = 
       break;
     case 17:
       var value = /** @type {!Array<!proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider>} */ (reader.readPackedEnum());
-      msg.setLocationProviderList(value);
+      msg.setLocationProvidersList(value);
       break;
     case 18:
       var value = msg.getMetadataMap();
@@ -5854,7 +5854,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.serializeBinaryToWriter = func
       f
     );
   }
-  f = message.getLocationProviderList();
+  f = message.getLocationProvidersList();
   if (f.length > 0) {
     writer.writePackedEnum(
       17,
@@ -5934,6 +5934,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.toObject = functi
     bearingAccuracy: jspb.Message.getFloatingPointFieldWithDefault(msg, 21, 0.0),
     score: jspb.Message.getFloatingPointFieldWithDefault(msg, 22, 0.0),
     method: jspb.Message.getFieldWithDefault(msg, 23, 0),
+    locationProvider: jspb.Message.getFieldWithDefault(msg, 24, 0),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -6068,6 +6069,10 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.deserializeBinary
       msg.setMethod(value);
       break;
     case 24:
+      var value = /** @type {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider} */ (reader.readEnum());
+      msg.setLocationProvider(value);
+      break;
+    case 25:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
@@ -6267,9 +6272,16 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.serializeBinaryTo
       f
     );
   }
+  f = message.getLocationProvider();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      24,
+      f
+    );
+  }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(24, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(25, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -6995,14 +7007,32 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.prototype.setMeth
 
 
 /**
- * map<string, string> metadata = 24;
+ * optional LocationProvider location_provider = 24;
+ * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider}
+ */
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.prototype.getLocationProvider = function() {
+  return /** @type {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider} */ (jspb.Message.getFieldWithDefault(this, 24, 0));
+};
+
+
+/**
+ * @param {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider} value
+ * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation} returns this
+ */
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.prototype.setLocationProvider = function(value) {
+  return jspb.Message.setProto3EnumField(this, 24, value);
+};
+
+
+/**
+ * map<string, string> metadata = 25;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.redvox_api_m.RedvoxPacketM.Sensors.Location.BestLocation.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 24, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 25, opt_noLazyCreate,
       null));
 };
 
@@ -7533,10 +7563,10 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLocationServicesE
 
 
 /**
- * repeated LocationProvider location_provider = 17;
+ * repeated LocationProvider location_providers = 17;
  * @return {!Array<!proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider>}
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLocationProviderList = function() {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLocationProvidersList = function() {
   return /** @type {!Array<!proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider>} */ (jspb.Message.getRepeatedField(this, 17));
 };
 
@@ -7545,7 +7575,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.getLocationProviderL
  * @param {!Array<!proto.redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider>} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLocationProviderList = function(value) {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLocationProvidersList = function(value) {
   return jspb.Message.setField(this, 17, value || []);
 };
 
@@ -7555,7 +7585,7 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.setLocationProviderL
  * @param {number=} opt_index
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.addLocationProvider = function(value, opt_index) {
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.addLocationProviders = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 17, value, opt_index);
 };
 
@@ -7564,8 +7594,8 @@ proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.addLocationProvider 
  * Clears the list making it empty but non-null.
  * @return {!proto.redvox_api_m.RedvoxPacketM.Sensors.Location} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearLocationProviderList = function() {
-  return this.setLocationProviderList([]);
+proto.redvox_api_m.RedvoxPacketM.Sensors.Location.prototype.clearLocationProvidersList = function() {
+  return this.setLocationProvidersList([]);
 };
 
 

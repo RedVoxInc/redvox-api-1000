@@ -1334,7 +1334,7 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_FieldNumber) {
   RedvoxPacketM_Sensors_Location_FieldNumber_LocationPermissionsGranted = 14,
   RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesRequested = 15,
   RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesEnabled = 16,
-  RedvoxPacketM_Sensors_Location_FieldNumber_LocationProviderArray = 17,
+  RedvoxPacketM_Sensors_Location_FieldNumber_LocationProvidersArray = 17,
   RedvoxPacketM_Sensors_Location_FieldNumber_Metadata = 18,
 };
 
@@ -1417,10 +1417,10 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_FieldNumber) {
 @property(nonatomic, readwrite) BOOL locationServicesEnabled;
 
 /** Location provider enumeration */
-// |locationProviderArray| contains |RedvoxPacketM_Sensors_Location_LocationProvider|
-@property(nonatomic, readwrite, strong, null_resettable) GPBEnumArray *locationProviderArray;
-/** The number of items in @c locationProviderArray without causing the array to be created. */
-@property(nonatomic, readonly) NSUInteger locationProviderArray_Count;
+// |locationProvidersArray| contains |RedvoxPacketM_Sensors_Location_LocationProvider|
+@property(nonatomic, readwrite, strong, null_resettable) GPBEnumArray *locationProvidersArray;
+/** The number of items in @c locationProvidersArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger locationProvidersArray_Count;
 
 /** A map from string to string for including untyped metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
@@ -1455,7 +1455,8 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber) {
   RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingAccuracy = 21,
   RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Score = 22,
   RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Method = 23,
-  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Metadata = 24,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_LocationProvider = 24,
+  RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Metadata = 25,
 };
 
 @interface RedvoxPacketM_Sensors_Location_BestLocation : GPBMessage
@@ -1536,6 +1537,8 @@ typedef GPB_ENUM(RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber) {
 
 /** Method used to derive the location score */
 @property(nonatomic, readwrite) RedvoxPacketM_Sensors_Location_BestLocation_LocationScoreMethod method;
+
+@property(nonatomic, readwrite) RedvoxPacketM_Sensors_Location_LocationProvider locationProvider;
 
 /** A map from string to string for including untyped metadata */
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableDictionary<NSString*, NSString*> *metadata;
@@ -1651,6 +1654,18 @@ int32_t RedvoxPacketM_Sensors_Location_BestLocation_Method_RawValue(RedvoxPacket
  * was generated.
  **/
 void SetRedvoxPacketM_Sensors_Location_BestLocation_Method_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value);
+
+/**
+ * Fetches the raw value of a @c RedvoxPacketM_Sensors_Location_BestLocation's @c locationProvider property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t RedvoxPacketM_Sensors_Location_BestLocation_LocationProvider_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message);
+/**
+ * Sets the raw value of an @c RedvoxPacketM_Sensors_Location_BestLocation's @c locationProvider property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetRedvoxPacketM_Sensors_Location_BestLocation_LocationProvider_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value);
 
 #pragma mark - RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp
 

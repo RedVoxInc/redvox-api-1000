@@ -246,7 +246,7 @@ message RedvoxPacketM {
             bool location_permissions_granted = 14;
             bool location_services_requested = 15;
             bool location_services_enabled = 16;
-            repeated LocationProvider location_provider = 17;
+            repeated LocationProvider location_providers = 17;
             map<string, string> metadata = 18;
             message BestLocation {
                 BestTimestamp latitude_longitude_timestamp = 1;
@@ -272,7 +272,8 @@ message RedvoxPacketM {
                 float bearing_accuracy = 21;
                 float score = 22;
                 LocationScoreMethod method = 23;
-                map<string, string> metadata = 24;
+                LocationProvider location_provider = 24;
+                map<string, string> metadata = 25;
                 message BestTimestamp {
                     Unit unit = 1;
                     double mach = 2;
