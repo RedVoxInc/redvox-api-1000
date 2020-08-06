@@ -4,6 +4,8 @@
 package io.redvox.apis;
 
 public final class RedvoxApiM {
+  public final static float SUB_API = 6.0f;  // redvox-api-1000 -> build_protos.sh -> insert_sub_api.py on 2020-08-06 23:12:22.623191
+
   private RedvoxApiM() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {

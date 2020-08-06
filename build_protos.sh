@@ -49,6 +49,9 @@ protoc  --java_out=${JAVA_OUT}                                  \
         --js_out=${JS_OUT}                                      \
         ${SRC}
 
+# Define sub_api version
+python3 insert_sub_api.py
+
 # Generate API docs
 javadoc -sourcepath ${JAVA_OUT} -d docs/api/java io.redvox.apis
 pdoc3 ${PYTHON_OUT}/src/redvox_api_m/redvox_api_m_pb2.py --overwrite --html --html-dir docs/api/python -c show_type_annotations=True
