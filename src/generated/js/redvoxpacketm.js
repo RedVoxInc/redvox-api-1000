@@ -2232,11 +2232,11 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.deserializeBinar
       msg.setUseLatitude(value);
       break;
     case 25:
-      var value = /** @type {number} */ (reader.readFloat());
+      var value = /** @type {number} */ (reader.readDouble());
       msg.setUseLongitude(value);
       break;
     case 26:
-      var value = /** @type {number} */ (reader.readFloat());
+      var value = /** @type {number} */ (reader.readDouble());
       msg.setUseAltitude(value);
       break;
     case 27:
@@ -2444,14 +2444,14 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.serializeBinaryT
   }
   f = message.getUseLongitude();
   if (f !== 0.0) {
-    writer.writeFloat(
+    writer.writeDouble(
       25,
       f
     );
   }
   f = message.getUseAltitude();
   if (f !== 0.0) {
-    writer.writeFloat(
+    writer.writeDouble(
       26,
       f
     );
@@ -2970,7 +2970,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUse
 
 
 /**
- * optional float use_longitude = 25;
+ * optional double use_longitude = 25;
  * @return {number}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseLongitude = function() {
@@ -2988,7 +2988,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUse
 
 
 /**
- * optional float use_altitude = 26;
+ * optional double use_altitude = 26;
  * @return {number}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseAltitude = function() {
@@ -10502,27 +10502,27 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.deserializeBinaryFromReader =
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readFloat());
+      var value = /** @type {number} */ (reader.readDouble());
       msg.setCount(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readFloat());
+      var value = /** @type {number} */ (reader.readDouble());
       msg.setMean(value);
       break;
     case 3:
-      var value = /** @type {number} */ (reader.readFloat());
+      var value = /** @type {number} */ (reader.readDouble());
       msg.setStandardDeviation(value);
       break;
     case 4:
-      var value = /** @type {number} */ (reader.readFloat());
+      var value = /** @type {number} */ (reader.readDouble());
       msg.setMin(value);
       break;
     case 5:
-      var value = /** @type {number} */ (reader.readFloat());
+      var value = /** @type {number} */ (reader.readDouble());
       msg.setMax(value);
       break;
     case 6:
-      var value = /** @type {number} */ (reader.readFloat());
+      var value = /** @type {number} */ (reader.readDouble());
       msg.setRange(value);
       break;
     case 7:
@@ -10562,42 +10562,42 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.serializeBinaryToWriter = fun
   var f = undefined;
   f = message.getCount();
   if (f !== 0.0) {
-    writer.writeFloat(
+    writer.writeDouble(
       1,
       f
     );
   }
   f = message.getMean();
   if (f !== 0.0) {
-    writer.writeFloat(
+    writer.writeDouble(
       2,
       f
     );
   }
   f = message.getStandardDeviation();
   if (f !== 0.0) {
-    writer.writeFloat(
+    writer.writeDouble(
       3,
       f
     );
   }
   f = message.getMin();
   if (f !== 0.0) {
-    writer.writeFloat(
+    writer.writeDouble(
       4,
       f
     );
   }
   f = message.getMax();
   if (f !== 0.0) {
-    writer.writeFloat(
+    writer.writeDouble(
       5,
       f
     );
   }
   f = message.getRange();
   if (f !== 0.0) {
-    writer.writeFloat(
+    writer.writeDouble(
       6,
       f
     );
@@ -10610,7 +10610,7 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.serializeBinaryToWriter = fun
 
 
 /**
- * optional float count = 1;
+ * optional double count = 1;
  * @return {number}
  */
 proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getCount = function() {
@@ -10628,7 +10628,7 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setCount = function
 
 
 /**
- * optional float mean = 2;
+ * optional double mean = 2;
  * @return {number}
  */
 proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getMean = function() {
@@ -10646,7 +10646,7 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setMean = function(
 
 
 /**
- * optional float standard_deviation = 3;
+ * optional double standard_deviation = 3;
  * @return {number}
  */
 proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getStandardDeviation = function() {
@@ -10664,7 +10664,7 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setStandardDeviatio
 
 
 /**
- * optional float min = 4;
+ * optional double min = 4;
  * @return {number}
  */
 proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getMin = function() {
@@ -10682,7 +10682,7 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setMin = function(v
 
 
 /**
- * optional float max = 5;
+ * optional double max = 5;
  * @return {number}
  */
 proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getMax = function() {
@@ -10700,7 +10700,7 @@ proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.setMax = function(v
 
 
 /**
- * optional float range = 6;
+ * optional double range = 6;
  * @return {number}
  */
 proto.redvox_api_m.RedvoxPacketM.SummaryStatistics.prototype.getRange = function() {

@@ -4,7 +4,7 @@
 package io.redvox.apis;
 
 public final class RedvoxApiM {
-  public final static float SUB_API = 6.0f;  // redvox-api-1000 -> build_protos.sh -> insert_sub_api.py on 2020-08-06 23:12:22.623191
+  public final static float SUB_API = 7.0f;  // redvox-api-1000 -> build_protos.sh -> insert_sub_api.py on 2020-08-11 21:49:16.289111
 
   private RedvoxApiM() {}
   public static void registerAllExtensions(
@@ -8025,20 +8025,20 @@ public final class RedvoxApiM {
          * User set longitude decimal degrees
          * </pre>
          *
-         * <code>float use_longitude = 25;</code>
+         * <code>double use_longitude = 25;</code>
          * @return The useLongitude.
          */
-        float getUseLongitude();
+        double getUseLongitude();
 
         /**
          * <pre>
          * User set altitude meters
          * </pre>
          *
-         * <code>float use_altitude = 26;</code>
+         * <code>double use_altitude = 26;</code>
          * @return The useAltitude.
          */
-        float getUseAltitude();
+        double getUseAltitude();
 
         /**
          * <pre>
@@ -8299,14 +8299,14 @@ public final class RedvoxApiM {
                   useLatitude_ = input.readFloat();
                   break;
                 }
-                case 205: {
+                case 201: {
 
-                  useLongitude_ = input.readFloat();
+                  useLongitude_ = input.readDouble();
                   break;
                 }
-                case 213: {
+                case 209: {
 
-                  useAltitude_ = input.readFloat();
+                  useAltitude_ = input.readDouble();
                   break;
                 }
                 case 218: {
@@ -9593,30 +9593,30 @@ public final class RedvoxApiM {
         }
 
         public static final int USE_LONGITUDE_FIELD_NUMBER = 25;
-        private float useLongitude_;
+        private double useLongitude_;
         /**
          * <pre>
          * User set longitude decimal degrees
          * </pre>
          *
-         * <code>float use_longitude = 25;</code>
+         * <code>double use_longitude = 25;</code>
          * @return The useLongitude.
          */
-        public float getUseLongitude() {
+        public double getUseLongitude() {
           return useLongitude_;
         }
 
         public static final int USE_ALTITUDE_FIELD_NUMBER = 26;
-        private float useAltitude_;
+        private double useAltitude_;
         /**
          * <pre>
          * User set altitude meters
          * </pre>
          *
-         * <code>float use_altitude = 26;</code>
+         * <code>double use_altitude = 26;</code>
          * @return The useAltitude.
          */
-        public float getUseAltitude() {
+        public double getUseAltitude() {
           return useAltitude_;
         }
 
@@ -9803,11 +9803,11 @@ public final class RedvoxApiM {
           if (useLatitude_ != 0F) {
             output.writeFloat(24, useLatitude_);
           }
-          if (useLongitude_ != 0F) {
-            output.writeFloat(25, useLongitude_);
+          if (useLongitude_ != 0D) {
+            output.writeDouble(25, useLongitude_);
           }
-          if (useAltitude_ != 0F) {
-            output.writeFloat(26, useAltitude_);
+          if (useAltitude_ != 0D) {
+            output.writeDouble(26, useAltitude_);
           }
           com.google.protobuf.GeneratedMessageV3
             .serializeStringMapTo(
@@ -9923,13 +9923,13 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeFloatSize(24, useLatitude_);
           }
-          if (useLongitude_ != 0F) {
+          if (useLongitude_ != 0D) {
             size += com.google.protobuf.CodedOutputStream
-              .computeFloatSize(25, useLongitude_);
+              .computeDoubleSize(25, useLongitude_);
           }
-          if (useAltitude_ != 0F) {
+          if (useAltitude_ != 0D) {
             size += com.google.protobuf.CodedOutputStream
-              .computeFloatSize(26, useAltitude_);
+              .computeDoubleSize(26, useAltitude_);
           }
           for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
                : internalGetMetadata().getMap().entrySet()) {
@@ -10002,11 +10002,11 @@ public final class RedvoxApiM {
           if (java.lang.Float.floatToIntBits(getUseLatitude())
               != java.lang.Float.floatToIntBits(
                   other.getUseLatitude())) return false;
-          if (java.lang.Float.floatToIntBits(getUseLongitude())
-              != java.lang.Float.floatToIntBits(
+          if (java.lang.Double.doubleToLongBits(getUseLongitude())
+              != java.lang.Double.doubleToLongBits(
                   other.getUseLongitude())) return false;
-          if (java.lang.Float.floatToIntBits(getUseAltitude())
-              != java.lang.Float.floatToIntBits(
+          if (java.lang.Double.doubleToLongBits(getUseAltitude())
+              != java.lang.Double.doubleToLongBits(
                   other.getUseAltitude())) return false;
           if (!internalGetMetadata().equals(
               other.internalGetMetadata())) return false;
@@ -10087,11 +10087,11 @@ public final class RedvoxApiM {
           hash = (53 * hash) + java.lang.Float.floatToIntBits(
               getUseLatitude());
           hash = (37 * hash) + USE_LONGITUDE_FIELD_NUMBER;
-          hash = (53 * hash) + java.lang.Float.floatToIntBits(
-              getUseLongitude());
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getUseLongitude()));
           hash = (37 * hash) + USE_ALTITUDE_FIELD_NUMBER;
-          hash = (53 * hash) + java.lang.Float.floatToIntBits(
-              getUseAltitude());
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getUseAltitude()));
           if (!internalGetMetadata().getMap().isEmpty()) {
             hash = (37 * hash) + METADATA_FIELD_NUMBER;
             hash = (53 * hash) + internalGetMetadata().hashCode();
@@ -10303,9 +10303,9 @@ public final class RedvoxApiM {
 
             useLatitude_ = 0F;
 
-            useLongitude_ = 0F;
+            useLongitude_ = 0D;
 
-            useAltitude_ = 0F;
+            useAltitude_ = 0D;
 
             internalGetMutableMetadata().clear();
             return this;
@@ -10499,10 +10499,10 @@ public final class RedvoxApiM {
             if (other.getUseLatitude() != 0F) {
               setUseLatitude(other.getUseLatitude());
             }
-            if (other.getUseLongitude() != 0F) {
+            if (other.getUseLongitude() != 0D) {
               setUseLongitude(other.getUseLongitude());
             }
-            if (other.getUseAltitude() != 0F) {
+            if (other.getUseAltitude() != 0D) {
               setUseAltitude(other.getUseAltitude());
             }
             internalGetMutableMetadata().mergeFrom(
@@ -12051,16 +12051,16 @@ public final class RedvoxApiM {
             return this;
           }
 
-          private float useLongitude_ ;
+          private double useLongitude_ ;
           /**
            * <pre>
            * User set longitude decimal degrees
            * </pre>
            *
-           * <code>float use_longitude = 25;</code>
+           * <code>double use_longitude = 25;</code>
            * @return The useLongitude.
            */
-          public float getUseLongitude() {
+          public double getUseLongitude() {
             return useLongitude_;
           }
           /**
@@ -12068,11 +12068,11 @@ public final class RedvoxApiM {
            * User set longitude decimal degrees
            * </pre>
            *
-           * <code>float use_longitude = 25;</code>
+           * <code>double use_longitude = 25;</code>
            * @param value The useLongitude to set.
            * @return This builder for chaining.
            */
-          public Builder setUseLongitude(float value) {
+          public Builder setUseLongitude(double value) {
             
             useLongitude_ = value;
             onChanged();
@@ -12083,26 +12083,26 @@ public final class RedvoxApiM {
            * User set longitude decimal degrees
            * </pre>
            *
-           * <code>float use_longitude = 25;</code>
+           * <code>double use_longitude = 25;</code>
            * @return This builder for chaining.
            */
           public Builder clearUseLongitude() {
             
-            useLongitude_ = 0F;
+            useLongitude_ = 0D;
             onChanged();
             return this;
           }
 
-          private float useAltitude_ ;
+          private double useAltitude_ ;
           /**
            * <pre>
            * User set altitude meters
            * </pre>
            *
-           * <code>float use_altitude = 26;</code>
+           * <code>double use_altitude = 26;</code>
            * @return The useAltitude.
            */
-          public float getUseAltitude() {
+          public double getUseAltitude() {
             return useAltitude_;
           }
           /**
@@ -12110,11 +12110,11 @@ public final class RedvoxApiM {
            * User set altitude meters
            * </pre>
            *
-           * <code>float use_altitude = 26;</code>
+           * <code>double use_altitude = 26;</code>
            * @param value The useAltitude to set.
            * @return This builder for chaining.
            */
-          public Builder setUseAltitude(float value) {
+          public Builder setUseAltitude(double value) {
             
             useAltitude_ = value;
             onChanged();
@@ -12125,12 +12125,12 @@ public final class RedvoxApiM {
            * User set altitude meters
            * </pre>
            *
-           * <code>float use_altitude = 26;</code>
+           * <code>double use_altitude = 26;</code>
            * @return This builder for chaining.
            */
           public Builder clearUseAltitude() {
             
-            useAltitude_ = 0F;
+            useAltitude_ = 0D;
             onChanged();
             return this;
           }
@@ -51542,60 +51542,60 @@ public final class RedvoxApiM {
        * The total count of values included in the statistics
        * </pre>
        *
-       * <code>float count = 1;</code>
+       * <code>double count = 1;</code>
        * @return The count.
        */
-      float getCount();
+      double getCount();
 
       /**
        * <pre>
        * The mean of the values
        * </pre>
        *
-       * <code>float mean = 2;</code>
+       * <code>double mean = 2;</code>
        * @return The mean.
        */
-      float getMean();
+      double getMean();
 
       /**
        * <pre>
        * The standard deviation of the values
        * </pre>
        *
-       * <code>float standard_deviation = 3;</code>
+       * <code>double standard_deviation = 3;</code>
        * @return The standardDeviation.
        */
-      float getStandardDeviation();
+      double getStandardDeviation();
 
       /**
        * <pre>
        * The minimum value
        * </pre>
        *
-       * <code>float min = 4;</code>
+       * <code>double min = 4;</code>
        * @return The min.
        */
-      float getMin();
+      double getMin();
 
       /**
        * <pre>
        * The maximum value
        * </pre>
        *
-       * <code>float max = 5;</code>
+       * <code>double max = 5;</code>
        * @return The max.
        */
-      float getMax();
+      double getMax();
 
       /**
        * <pre>
        * The range of the values
        * </pre>
        *
-       * <code>float range = 6;</code>
+       * <code>double range = 6;</code>
        * @return The range.
        */
-      float getRange();
+      double getRange();
 
       /**
        * <pre>
@@ -51701,34 +51701,34 @@ public final class RedvoxApiM {
               case 0:
                 done = true;
                 break;
-              case 13: {
+              case 9: {
 
-                count_ = input.readFloat();
+                count_ = input.readDouble();
                 break;
               }
-              case 21: {
+              case 17: {
 
-                mean_ = input.readFloat();
+                mean_ = input.readDouble();
                 break;
               }
-              case 29: {
+              case 25: {
 
-                standardDeviation_ = input.readFloat();
+                standardDeviation_ = input.readDouble();
                 break;
               }
-              case 37: {
+              case 33: {
 
-                min_ = input.readFloat();
+                min_ = input.readDouble();
                 break;
               }
-              case 45: {
+              case 41: {
 
-                max_ = input.readFloat();
+                max_ = input.readDouble();
                 break;
               }
-              case 53: {
+              case 49: {
 
-                range_ = input.readFloat();
+                range_ = input.readDouble();
                 break;
               }
               case 58: {
@@ -51789,86 +51789,86 @@ public final class RedvoxApiM {
       }
 
       public static final int COUNT_FIELD_NUMBER = 1;
-      private float count_;
+      private double count_;
       /**
        * <pre>
        * The total count of values included in the statistics
        * </pre>
        *
-       * <code>float count = 1;</code>
+       * <code>double count = 1;</code>
        * @return The count.
        */
-      public float getCount() {
+      public double getCount() {
         return count_;
       }
 
       public static final int MEAN_FIELD_NUMBER = 2;
-      private float mean_;
+      private double mean_;
       /**
        * <pre>
        * The mean of the values
        * </pre>
        *
-       * <code>float mean = 2;</code>
+       * <code>double mean = 2;</code>
        * @return The mean.
        */
-      public float getMean() {
+      public double getMean() {
         return mean_;
       }
 
       public static final int STANDARD_DEVIATION_FIELD_NUMBER = 3;
-      private float standardDeviation_;
+      private double standardDeviation_;
       /**
        * <pre>
        * The standard deviation of the values
        * </pre>
        *
-       * <code>float standard_deviation = 3;</code>
+       * <code>double standard_deviation = 3;</code>
        * @return The standardDeviation.
        */
-      public float getStandardDeviation() {
+      public double getStandardDeviation() {
         return standardDeviation_;
       }
 
       public static final int MIN_FIELD_NUMBER = 4;
-      private float min_;
+      private double min_;
       /**
        * <pre>
        * The minimum value
        * </pre>
        *
-       * <code>float min = 4;</code>
+       * <code>double min = 4;</code>
        * @return The min.
        */
-      public float getMin() {
+      public double getMin() {
         return min_;
       }
 
       public static final int MAX_FIELD_NUMBER = 5;
-      private float max_;
+      private double max_;
       /**
        * <pre>
        * The maximum value
        * </pre>
        *
-       * <code>float max = 5;</code>
+       * <code>double max = 5;</code>
        * @return The max.
        */
-      public float getMax() {
+      public double getMax() {
         return max_;
       }
 
       public static final int RANGE_FIELD_NUMBER = 6;
-      private float range_;
+      private double range_;
       /**
        * <pre>
        * The range of the values
        * </pre>
        *
-       * <code>float range = 6;</code>
+       * <code>double range = 6;</code>
        * @return The range.
        */
-      public float getRange() {
+      public double getRange() {
         return range_;
       }
 
@@ -51978,23 +51978,23 @@ public final class RedvoxApiM {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (count_ != 0F) {
-          output.writeFloat(1, count_);
+        if (count_ != 0D) {
+          output.writeDouble(1, count_);
         }
-        if (mean_ != 0F) {
-          output.writeFloat(2, mean_);
+        if (mean_ != 0D) {
+          output.writeDouble(2, mean_);
         }
-        if (standardDeviation_ != 0F) {
-          output.writeFloat(3, standardDeviation_);
+        if (standardDeviation_ != 0D) {
+          output.writeDouble(3, standardDeviation_);
         }
-        if (min_ != 0F) {
-          output.writeFloat(4, min_);
+        if (min_ != 0D) {
+          output.writeDouble(4, min_);
         }
-        if (max_ != 0F) {
-          output.writeFloat(5, max_);
+        if (max_ != 0D) {
+          output.writeDouble(5, max_);
         }
-        if (range_ != 0F) {
-          output.writeFloat(6, range_);
+        if (range_ != 0D) {
+          output.writeDouble(6, range_);
         }
         com.google.protobuf.GeneratedMessageV3
           .serializeStringMapTo(
@@ -52011,29 +52011,29 @@ public final class RedvoxApiM {
         if (size != -1) return size;
 
         size = 0;
-        if (count_ != 0F) {
+        if (count_ != 0D) {
           size += com.google.protobuf.CodedOutputStream
-            .computeFloatSize(1, count_);
+            .computeDoubleSize(1, count_);
         }
-        if (mean_ != 0F) {
+        if (mean_ != 0D) {
           size += com.google.protobuf.CodedOutputStream
-            .computeFloatSize(2, mean_);
+            .computeDoubleSize(2, mean_);
         }
-        if (standardDeviation_ != 0F) {
+        if (standardDeviation_ != 0D) {
           size += com.google.protobuf.CodedOutputStream
-            .computeFloatSize(3, standardDeviation_);
+            .computeDoubleSize(3, standardDeviation_);
         }
-        if (min_ != 0F) {
+        if (min_ != 0D) {
           size += com.google.protobuf.CodedOutputStream
-            .computeFloatSize(4, min_);
+            .computeDoubleSize(4, min_);
         }
-        if (max_ != 0F) {
+        if (max_ != 0D) {
           size += com.google.protobuf.CodedOutputStream
-            .computeFloatSize(5, max_);
+            .computeDoubleSize(5, max_);
         }
-        if (range_ != 0F) {
+        if (range_ != 0D) {
           size += com.google.protobuf.CodedOutputStream
-            .computeFloatSize(6, range_);
+            .computeDoubleSize(6, range_);
         }
         for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
              : internalGetMetadata().getMap().entrySet()) {
@@ -52060,23 +52060,23 @@ public final class RedvoxApiM {
         }
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics other = (io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics) obj;
 
-        if (java.lang.Float.floatToIntBits(getCount())
-            != java.lang.Float.floatToIntBits(
+        if (java.lang.Double.doubleToLongBits(getCount())
+            != java.lang.Double.doubleToLongBits(
                 other.getCount())) return false;
-        if (java.lang.Float.floatToIntBits(getMean())
-            != java.lang.Float.floatToIntBits(
+        if (java.lang.Double.doubleToLongBits(getMean())
+            != java.lang.Double.doubleToLongBits(
                 other.getMean())) return false;
-        if (java.lang.Float.floatToIntBits(getStandardDeviation())
-            != java.lang.Float.floatToIntBits(
+        if (java.lang.Double.doubleToLongBits(getStandardDeviation())
+            != java.lang.Double.doubleToLongBits(
                 other.getStandardDeviation())) return false;
-        if (java.lang.Float.floatToIntBits(getMin())
-            != java.lang.Float.floatToIntBits(
+        if (java.lang.Double.doubleToLongBits(getMin())
+            != java.lang.Double.doubleToLongBits(
                 other.getMin())) return false;
-        if (java.lang.Float.floatToIntBits(getMax())
-            != java.lang.Float.floatToIntBits(
+        if (java.lang.Double.doubleToLongBits(getMax())
+            != java.lang.Double.doubleToLongBits(
                 other.getMax())) return false;
-        if (java.lang.Float.floatToIntBits(getRange())
-            != java.lang.Float.floatToIntBits(
+        if (java.lang.Double.doubleToLongBits(getRange())
+            != java.lang.Double.doubleToLongBits(
                 other.getRange())) return false;
         if (!internalGetMetadata().equals(
             other.internalGetMetadata())) return false;
@@ -52092,23 +52092,23 @@ public final class RedvoxApiM {
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + COUNT_FIELD_NUMBER;
-        hash = (53 * hash) + java.lang.Float.floatToIntBits(
-            getCount());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getCount()));
         hash = (37 * hash) + MEAN_FIELD_NUMBER;
-        hash = (53 * hash) + java.lang.Float.floatToIntBits(
-            getMean());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getMean()));
         hash = (37 * hash) + STANDARD_DEVIATION_FIELD_NUMBER;
-        hash = (53 * hash) + java.lang.Float.floatToIntBits(
-            getStandardDeviation());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getStandardDeviation()));
         hash = (37 * hash) + MIN_FIELD_NUMBER;
-        hash = (53 * hash) + java.lang.Float.floatToIntBits(
-            getMin());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getMin()));
         hash = (37 * hash) + MAX_FIELD_NUMBER;
-        hash = (53 * hash) + java.lang.Float.floatToIntBits(
-            getMax());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getMax()));
         hash = (37 * hash) + RANGE_FIELD_NUMBER;
-        hash = (53 * hash) + java.lang.Float.floatToIntBits(
-            getRange());
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getRange()));
         if (!internalGetMetadata().getMap().isEmpty()) {
           hash = (37 * hash) + METADATA_FIELD_NUMBER;
           hash = (53 * hash) + internalGetMetadata().hashCode();
@@ -52272,17 +52272,17 @@ public final class RedvoxApiM {
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          count_ = 0F;
+          count_ = 0D;
 
-          mean_ = 0F;
+          mean_ = 0D;
 
-          standardDeviation_ = 0F;
+          standardDeviation_ = 0D;
 
-          min_ = 0F;
+          min_ = 0D;
 
-          max_ = 0F;
+          max_ = 0D;
 
-          range_ = 0F;
+          range_ = 0D;
 
           internalGetMutableMetadata().clear();
           return this;
@@ -52368,22 +52368,22 @@ public final class RedvoxApiM {
 
         public Builder mergeFrom(io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics other) {
           if (other == io.redvox.apis.RedvoxApiM.RedvoxPacketM.SummaryStatistics.getDefaultInstance()) return this;
-          if (other.getCount() != 0F) {
+          if (other.getCount() != 0D) {
             setCount(other.getCount());
           }
-          if (other.getMean() != 0F) {
+          if (other.getMean() != 0D) {
             setMean(other.getMean());
           }
-          if (other.getStandardDeviation() != 0F) {
+          if (other.getStandardDeviation() != 0D) {
             setStandardDeviation(other.getStandardDeviation());
           }
-          if (other.getMin() != 0F) {
+          if (other.getMin() != 0D) {
             setMin(other.getMin());
           }
-          if (other.getMax() != 0F) {
+          if (other.getMax() != 0D) {
             setMax(other.getMax());
           }
-          if (other.getRange() != 0F) {
+          if (other.getRange() != 0D) {
             setRange(other.getRange());
           }
           internalGetMutableMetadata().mergeFrom(
@@ -52418,16 +52418,16 @@ public final class RedvoxApiM {
         }
         private int bitField0_;
 
-        private float count_ ;
+        private double count_ ;
         /**
          * <pre>
          * The total count of values included in the statistics
          * </pre>
          *
-         * <code>float count = 1;</code>
+         * <code>double count = 1;</code>
          * @return The count.
          */
-        public float getCount() {
+        public double getCount() {
           return count_;
         }
         /**
@@ -52435,11 +52435,11 @@ public final class RedvoxApiM {
          * The total count of values included in the statistics
          * </pre>
          *
-         * <code>float count = 1;</code>
+         * <code>double count = 1;</code>
          * @param value The count to set.
          * @return This builder for chaining.
          */
-        public Builder setCount(float value) {
+        public Builder setCount(double value) {
           
           count_ = value;
           onChanged();
@@ -52450,26 +52450,26 @@ public final class RedvoxApiM {
          * The total count of values included in the statistics
          * </pre>
          *
-         * <code>float count = 1;</code>
+         * <code>double count = 1;</code>
          * @return This builder for chaining.
          */
         public Builder clearCount() {
           
-          count_ = 0F;
+          count_ = 0D;
           onChanged();
           return this;
         }
 
-        private float mean_ ;
+        private double mean_ ;
         /**
          * <pre>
          * The mean of the values
          * </pre>
          *
-         * <code>float mean = 2;</code>
+         * <code>double mean = 2;</code>
          * @return The mean.
          */
-        public float getMean() {
+        public double getMean() {
           return mean_;
         }
         /**
@@ -52477,11 +52477,11 @@ public final class RedvoxApiM {
          * The mean of the values
          * </pre>
          *
-         * <code>float mean = 2;</code>
+         * <code>double mean = 2;</code>
          * @param value The mean to set.
          * @return This builder for chaining.
          */
-        public Builder setMean(float value) {
+        public Builder setMean(double value) {
           
           mean_ = value;
           onChanged();
@@ -52492,26 +52492,26 @@ public final class RedvoxApiM {
          * The mean of the values
          * </pre>
          *
-         * <code>float mean = 2;</code>
+         * <code>double mean = 2;</code>
          * @return This builder for chaining.
          */
         public Builder clearMean() {
           
-          mean_ = 0F;
+          mean_ = 0D;
           onChanged();
           return this;
         }
 
-        private float standardDeviation_ ;
+        private double standardDeviation_ ;
         /**
          * <pre>
          * The standard deviation of the values
          * </pre>
          *
-         * <code>float standard_deviation = 3;</code>
+         * <code>double standard_deviation = 3;</code>
          * @return The standardDeviation.
          */
-        public float getStandardDeviation() {
+        public double getStandardDeviation() {
           return standardDeviation_;
         }
         /**
@@ -52519,11 +52519,11 @@ public final class RedvoxApiM {
          * The standard deviation of the values
          * </pre>
          *
-         * <code>float standard_deviation = 3;</code>
+         * <code>double standard_deviation = 3;</code>
          * @param value The standardDeviation to set.
          * @return This builder for chaining.
          */
-        public Builder setStandardDeviation(float value) {
+        public Builder setStandardDeviation(double value) {
           
           standardDeviation_ = value;
           onChanged();
@@ -52534,26 +52534,26 @@ public final class RedvoxApiM {
          * The standard deviation of the values
          * </pre>
          *
-         * <code>float standard_deviation = 3;</code>
+         * <code>double standard_deviation = 3;</code>
          * @return This builder for chaining.
          */
         public Builder clearStandardDeviation() {
           
-          standardDeviation_ = 0F;
+          standardDeviation_ = 0D;
           onChanged();
           return this;
         }
 
-        private float min_ ;
+        private double min_ ;
         /**
          * <pre>
          * The minimum value
          * </pre>
          *
-         * <code>float min = 4;</code>
+         * <code>double min = 4;</code>
          * @return The min.
          */
-        public float getMin() {
+        public double getMin() {
           return min_;
         }
         /**
@@ -52561,11 +52561,11 @@ public final class RedvoxApiM {
          * The minimum value
          * </pre>
          *
-         * <code>float min = 4;</code>
+         * <code>double min = 4;</code>
          * @param value The min to set.
          * @return This builder for chaining.
          */
-        public Builder setMin(float value) {
+        public Builder setMin(double value) {
           
           min_ = value;
           onChanged();
@@ -52576,26 +52576,26 @@ public final class RedvoxApiM {
          * The minimum value
          * </pre>
          *
-         * <code>float min = 4;</code>
+         * <code>double min = 4;</code>
          * @return This builder for chaining.
          */
         public Builder clearMin() {
           
-          min_ = 0F;
+          min_ = 0D;
           onChanged();
           return this;
         }
 
-        private float max_ ;
+        private double max_ ;
         /**
          * <pre>
          * The maximum value
          * </pre>
          *
-         * <code>float max = 5;</code>
+         * <code>double max = 5;</code>
          * @return The max.
          */
-        public float getMax() {
+        public double getMax() {
           return max_;
         }
         /**
@@ -52603,11 +52603,11 @@ public final class RedvoxApiM {
          * The maximum value
          * </pre>
          *
-         * <code>float max = 5;</code>
+         * <code>double max = 5;</code>
          * @param value The max to set.
          * @return This builder for chaining.
          */
-        public Builder setMax(float value) {
+        public Builder setMax(double value) {
           
           max_ = value;
           onChanged();
@@ -52618,26 +52618,26 @@ public final class RedvoxApiM {
          * The maximum value
          * </pre>
          *
-         * <code>float max = 5;</code>
+         * <code>double max = 5;</code>
          * @return This builder for chaining.
          */
         public Builder clearMax() {
           
-          max_ = 0F;
+          max_ = 0D;
           onChanged();
           return this;
         }
 
-        private float range_ ;
+        private double range_ ;
         /**
          * <pre>
          * The range of the values
          * </pre>
          *
-         * <code>float range = 6;</code>
+         * <code>double range = 6;</code>
          * @return The range.
          */
-        public float getRange() {
+        public double getRange() {
           return range_;
         }
         /**
@@ -52645,11 +52645,11 @@ public final class RedvoxApiM {
          * The range of the values
          * </pre>
          *
-         * <code>float range = 6;</code>
+         * <code>double range = 6;</code>
          * @param value The range to set.
          * @return This builder for chaining.
          */
-        public Builder setRange(float value) {
+        public Builder setRange(double value) {
           
           range_ = value;
           onChanged();
@@ -52660,12 +52660,12 @@ public final class RedvoxApiM {
          * The range of the values
          * </pre>
          *
-         * <code>float range = 6;</code>
+         * <code>double range = 6;</code>
          * @return This builder for chaining.
          */
         public Builder clearRange() {
           
-          range_ = 0F;
+          range_ = 0D;
           onChanged();
           return this;
         }
@@ -61352,8 +61352,8 @@ public final class RedvoxApiM {
       "\030\024 \001(\010\022\037\n\027storage_space_allowance\030\025 \001(\002\022" +
       "$\n\034use_sd_card_for_data_storage\030\026 \001(\010\022\035\n" +
       "\025use_location_services\030\027 \001(\010\022\024\n\014use_lati" +
-      "tude\030\030 \001(\002\022\025\n\ruse_longitude\030\031 \001(\002\022\024\n\014use" +
-      "_altitude\030\032 \001(\002\022Z\n\010metadata\030\033 \003(\0132H.redv" +
+      "tude\030\030 \001(\002\022\025\n\ruse_longitude\030\031 \001(\001\022\024\n\014use" +
+      "_altitude\030\032 \001(\001\022Z\n\010metadata\030\033 \003(\0132H.redv" +
       "ox_api_m.RedvoxPacketM.StationInformatio" +
       "n.AppSettings.MetadataEntry\032/\n\rMetadataE" +
       "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\n" +
@@ -61600,9 +61600,9 @@ public final class RedvoxApiM {
       "m.RedvoxPacketM.TimingPayload.MetadataEn" +
       "try\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
       "ue\030\002 \001(\t:\0028\001\032\365\001\n\021SummaryStatistics\022\r\n\005co" +
-      "unt\030\001 \001(\002\022\014\n\004mean\030\002 \001(\002\022\032\n\022standard_devi" +
-      "ation\030\003 \001(\002\022\013\n\003min\030\004 \001(\002\022\013\n\003max\030\005 \001(\002\022\r\n" +
-      "\005range\030\006 \001(\002\022M\n\010metadata\030\007 \003(\0132;.redvox_" +
+      "unt\030\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\032\n\022standard_devi" +
+      "ation\030\003 \001(\001\022\013\n\003min\030\004 \001(\001\022\013\n\003max\030\005 \001(\001\022\r\n" +
+      "\005range\030\006 \001(\001\022M\n\010metadata\030\007 \003(\0132;.redvox_" +
       "api_m.RedvoxPacketM.SummaryStatistics.Me" +
       "tadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(" +
       "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\203\003\n\004Unit\022\013\n\007UNKNOWN" +

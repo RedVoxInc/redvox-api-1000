@@ -110,8 +110,8 @@ message RedvoxPacketM {
             bool use_sd_card_for_data_storage = 22;
             bool use_location_services = 23;
             float use_latitude = 24;
-            float use_longitude = 25;
-            float use_altitude = 26;
+            double use_longitude = 25;
+            double use_altitude = 26;
             map<string, string> metadata = 27;
             enum FftOverlap {
                 UNKNOWN = 0;
@@ -373,12 +373,12 @@ message RedvoxPacketM {
         PCM = 20;
     }
     message SummaryStatistics {
-        float count = 1;
-        float mean = 2;
-        float standard_deviation = 3;
-        float min = 4;
-        float max = 5;
-        float range = 6;
+        double count = 1;
+        double mean = 2;
+        double standard_deviation = 3;
+        double min = 4;
+        double max = 5;
+        double range = 6;
         map<string, string> metadata = 7;
     }
 }

@@ -936,8 +936,6 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
   RedvoxPacketM_StationInformation_AppSettings_FftOverlap fftOverlap;
   float storageSpaceAllowance;
   float useLatitude;
-  float useLongitude;
-  float useAltitude;
   GPBEnumArray *additionalInputSensorsArray;
   NSString *stationId;
   NSString *stationDescription;
@@ -945,6 +943,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
   NSString *dataServerURL;
   NSString *authServerURL;
   NSMutableDictionary *metadata;
+  double useLongitude;
+  double useAltitude;
 } RedvoxPacketM_StationInformation_AppSettings__storage_;
 
 // This method is threadsafe because it is initially called
@@ -1176,7 +1176,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .hasIndex = 36,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, useLongitude),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeFloat,
+        .dataType = GPBDataTypeDouble,
       },
       {
         .name = "useAltitude",
@@ -1185,7 +1185,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .hasIndex = 37,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, useAltitude),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeFloat,
+        .dataType = GPBDataTypeDouble,
       },
       {
         .name = "metadata",
@@ -3972,13 +3972,13 @@ void SetRedvoxPacketM_TimingPayload_Unit_RawValue(RedvoxPacketM_TimingPayload *m
 
 typedef struct RedvoxPacketM_SummaryStatistics__storage_ {
   uint32_t _has_storage_[1];
-  float count;
-  float mean;
-  float standardDeviation;
-  float min;
-  float max;
-  float range;
   NSMutableDictionary *metadata;
+  double count;
+  double mean;
+  double standardDeviation;
+  double min;
+  double max;
+  double range;
 } RedvoxPacketM_SummaryStatistics__storage_;
 
 // This method is threadsafe because it is initially called
@@ -3994,7 +3994,7 @@ typedef struct RedvoxPacketM_SummaryStatistics__storage_ {
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, count),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeFloat,
+        .dataType = GPBDataTypeDouble,
       },
       {
         .name = "mean",
@@ -4003,7 +4003,7 @@ typedef struct RedvoxPacketM_SummaryStatistics__storage_ {
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, mean),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeFloat,
+        .dataType = GPBDataTypeDouble,
       },
       {
         .name = "standardDeviation",
@@ -4012,7 +4012,7 @@ typedef struct RedvoxPacketM_SummaryStatistics__storage_ {
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, standardDeviation),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeFloat,
+        .dataType = GPBDataTypeDouble,
       },
       {
         .name = "min",
@@ -4021,7 +4021,7 @@ typedef struct RedvoxPacketM_SummaryStatistics__storage_ {
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, min),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeFloat,
+        .dataType = GPBDataTypeDouble,
       },
       {
         .name = "max",
@@ -4030,7 +4030,7 @@ typedef struct RedvoxPacketM_SummaryStatistics__storage_ {
         .hasIndex = 4,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, max),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeFloat,
+        .dataType = GPBDataTypeDouble,
       },
       {
         .name = "range",
@@ -4039,7 +4039,7 @@ typedef struct RedvoxPacketM_SummaryStatistics__storage_ {
         .hasIndex = 5,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, range),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeFloat,
+        .dataType = GPBDataTypeDouble,
       },
       {
         .name = "metadata",

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['range_534',['range',['../interfaceRedvoxPacketM__SummaryStatistics.html#a30efa224f76b2245e6cd00230fbf9ecc',1,'RedvoxPacketM_SummaryStatistics']]],
+  ['range_534',['range',['../interfaceRedvoxPacketM__SummaryStatistics.html#af01fe605a5c74d1adc034da951fc7c23',1,'RedvoxPacketM_SummaryStatistics']]],
   ['recvtsus_535',['recvTsUs',['../interfaceSynchResponse.html#a3764e2ec5eaa62b7cfa3100fa0be0435',1,'SynchResponse']]],
   ['relativehumidity_536',['relativeHumidity',['../interfaceRedvoxPacketM__Sensors.html#ae0bc021376379e015ffc225177066416',1,'RedvoxPacketM_Sensors']]],
   ['removesensordcoffset_537',['removeSensorDcOffset',['../interfaceRedvoxPacketM__StationInformation__AppSettings.html#a5cb8d060309e16f2ec555be6a8227923',1,'RedvoxPacketM_StationInformation_AppSettings']]],
