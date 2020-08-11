@@ -2228,7 +2228,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.deserializeBinar
       msg.setUseLocationServices(value);
       break;
     case 24:
-      var value = /** @type {number} */ (reader.readFloat());
+      var value = /** @type {number} */ (reader.readDouble());
       msg.setUseLatitude(value);
       break;
     case 25:
@@ -2236,7 +2236,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.deserializeBinar
       msg.setUseLongitude(value);
       break;
     case 26:
-      var value = /** @type {number} */ (reader.readDouble());
+      var value = /** @type {number} */ (reader.readFloat());
       msg.setUseAltitude(value);
       break;
     case 27:
@@ -2437,7 +2437,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.serializeBinaryT
   }
   f = message.getUseLatitude();
   if (f !== 0.0) {
-    writer.writeFloat(
+    writer.writeDouble(
       24,
       f
     );
@@ -2451,7 +2451,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.serializeBinaryT
   }
   f = message.getUseAltitude();
   if (f !== 0.0) {
-    writer.writeDouble(
+    writer.writeFloat(
       26,
       f
     );
@@ -2952,7 +2952,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUse
 
 
 /**
- * optional float use_latitude = 24;
+ * optional double use_latitude = 24;
  * @return {number}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseLatitude = function() {
@@ -2988,7 +2988,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUse
 
 
 /**
- * optional double use_altitude = 26;
+ * optional float use_altitude = 26;
  * @return {number}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseAltitude = function() {

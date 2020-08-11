@@ -935,7 +935,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
   RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning audioSourceTuning;
   RedvoxPacketM_StationInformation_AppSettings_FftOverlap fftOverlap;
   float storageSpaceAllowance;
-  float useLatitude;
+  float useAltitude;
   GPBEnumArray *additionalInputSensorsArray;
   NSString *stationId;
   NSString *stationDescription;
@@ -943,8 +943,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
   NSString *dataServerURL;
   NSString *authServerURL;
   NSMutableDictionary *metadata;
+  double useLatitude;
   double useLongitude;
-  double useAltitude;
 } RedvoxPacketM_StationInformation_AppSettings__storage_;
 
 // This method is threadsafe because it is initially called
@@ -1167,7 +1167,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .hasIndex = 35,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, useLatitude),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeFloat,
+        .dataType = GPBDataTypeDouble,
       },
       {
         .name = "useLongitude",
@@ -1185,7 +1185,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .hasIndex = 37,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, useAltitude),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeDouble,
+        .dataType = GPBDataTypeFloat,
       },
       {
         .name = "metadata",

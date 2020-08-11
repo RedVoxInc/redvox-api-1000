@@ -109,9 +109,9 @@ message RedvoxPacketM {
             float storage_space_allowance = 21;
             bool use_sd_card_for_data_storage = 22;
             bool use_location_services = 23;
-            float use_latitude = 24;
+            double use_latitude = 24;
             double use_longitude = 25;
-            double use_altitude = 26;
+            float use_altitude = 26;
             map<string, string> metadata = 27;
             enum FftOverlap {
                 UNKNOWN = 0;

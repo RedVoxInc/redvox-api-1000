@@ -4,7 +4,7 @@
 package io.redvox.apis;
 
 public final class RedvoxApiM {
-  public final static float SUB_API = 7.0f;  // redvox-api-1000 -> build_protos.sh -> insert_sub_api.py on 2020-08-11 21:49:16.289111
+  public final static float SUB_API = 8.0f;  // redvox-api-1000 -> build_protos.sh -> insert_sub_api.py on 2020-08-11 22:38:03.359931
 
   private RedvoxApiM() {}
   public static void registerAllExtensions(
@@ -8015,10 +8015,10 @@ public final class RedvoxApiM {
          * User set latitude decimal degrees
          * </pre>
          *
-         * <code>float use_latitude = 24;</code>
+         * <code>double use_latitude = 24;</code>
          * @return The useLatitude.
          */
-        float getUseLatitude();
+        double getUseLatitude();
 
         /**
          * <pre>
@@ -8035,10 +8035,10 @@ public final class RedvoxApiM {
          * User set altitude meters
          * </pre>
          *
-         * <code>double use_altitude = 26;</code>
+         * <code>float use_altitude = 26;</code>
          * @return The useAltitude.
          */
-        double getUseAltitude();
+        float getUseAltitude();
 
         /**
          * <pre>
@@ -8294,9 +8294,9 @@ public final class RedvoxApiM {
                   useLocationServices_ = input.readBool();
                   break;
                 }
-                case 197: {
+                case 193: {
 
-                  useLatitude_ = input.readFloat();
+                  useLatitude_ = input.readDouble();
                   break;
                 }
                 case 201: {
@@ -8304,9 +8304,9 @@ public final class RedvoxApiM {
                   useLongitude_ = input.readDouble();
                   break;
                 }
-                case 209: {
+                case 213: {
 
-                  useAltitude_ = input.readDouble();
+                  useAltitude_ = input.readFloat();
                   break;
                 }
                 case 218: {
@@ -9579,16 +9579,16 @@ public final class RedvoxApiM {
         }
 
         public static final int USE_LATITUDE_FIELD_NUMBER = 24;
-        private float useLatitude_;
+        private double useLatitude_;
         /**
          * <pre>
          * User set latitude decimal degrees
          * </pre>
          *
-         * <code>float use_latitude = 24;</code>
+         * <code>double use_latitude = 24;</code>
          * @return The useLatitude.
          */
-        public float getUseLatitude() {
+        public double getUseLatitude() {
           return useLatitude_;
         }
 
@@ -9607,16 +9607,16 @@ public final class RedvoxApiM {
         }
 
         public static final int USE_ALTITUDE_FIELD_NUMBER = 26;
-        private double useAltitude_;
+        private float useAltitude_;
         /**
          * <pre>
          * User set altitude meters
          * </pre>
          *
-         * <code>double use_altitude = 26;</code>
+         * <code>float use_altitude = 26;</code>
          * @return The useAltitude.
          */
-        public double getUseAltitude() {
+        public float getUseAltitude() {
           return useAltitude_;
         }
 
@@ -9800,14 +9800,14 @@ public final class RedvoxApiM {
           if (useLocationServices_ != false) {
             output.writeBool(23, useLocationServices_);
           }
-          if (useLatitude_ != 0F) {
-            output.writeFloat(24, useLatitude_);
+          if (useLatitude_ != 0D) {
+            output.writeDouble(24, useLatitude_);
           }
           if (useLongitude_ != 0D) {
             output.writeDouble(25, useLongitude_);
           }
-          if (useAltitude_ != 0D) {
-            output.writeDouble(26, useAltitude_);
+          if (useAltitude_ != 0F) {
+            output.writeFloat(26, useAltitude_);
           }
           com.google.protobuf.GeneratedMessageV3
             .serializeStringMapTo(
@@ -9919,17 +9919,17 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(23, useLocationServices_);
           }
-          if (useLatitude_ != 0F) {
+          if (useLatitude_ != 0D) {
             size += com.google.protobuf.CodedOutputStream
-              .computeFloatSize(24, useLatitude_);
+              .computeDoubleSize(24, useLatitude_);
           }
           if (useLongitude_ != 0D) {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(25, useLongitude_);
           }
-          if (useAltitude_ != 0D) {
+          if (useAltitude_ != 0F) {
             size += com.google.protobuf.CodedOutputStream
-              .computeDoubleSize(26, useAltitude_);
+              .computeFloatSize(26, useAltitude_);
           }
           for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
                : internalGetMetadata().getMap().entrySet()) {
@@ -9999,14 +9999,14 @@ public final class RedvoxApiM {
               != other.getUseSdCardForDataStorage()) return false;
           if (getUseLocationServices()
               != other.getUseLocationServices()) return false;
-          if (java.lang.Float.floatToIntBits(getUseLatitude())
-              != java.lang.Float.floatToIntBits(
+          if (java.lang.Double.doubleToLongBits(getUseLatitude())
+              != java.lang.Double.doubleToLongBits(
                   other.getUseLatitude())) return false;
           if (java.lang.Double.doubleToLongBits(getUseLongitude())
               != java.lang.Double.doubleToLongBits(
                   other.getUseLongitude())) return false;
-          if (java.lang.Double.doubleToLongBits(getUseAltitude())
-              != java.lang.Double.doubleToLongBits(
+          if (java.lang.Float.floatToIntBits(getUseAltitude())
+              != java.lang.Float.floatToIntBits(
                   other.getUseAltitude())) return false;
           if (!internalGetMetadata().equals(
               other.internalGetMetadata())) return false;
@@ -10084,14 +10084,14 @@ public final class RedvoxApiM {
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getUseLocationServices());
           hash = (37 * hash) + USE_LATITUDE_FIELD_NUMBER;
-          hash = (53 * hash) + java.lang.Float.floatToIntBits(
-              getUseLatitude());
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getUseLatitude()));
           hash = (37 * hash) + USE_LONGITUDE_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
               java.lang.Double.doubleToLongBits(getUseLongitude()));
           hash = (37 * hash) + USE_ALTITUDE_FIELD_NUMBER;
-          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              java.lang.Double.doubleToLongBits(getUseAltitude()));
+          hash = (53 * hash) + java.lang.Float.floatToIntBits(
+              getUseAltitude());
           if (!internalGetMetadata().getMap().isEmpty()) {
             hash = (37 * hash) + METADATA_FIELD_NUMBER;
             hash = (53 * hash) + internalGetMetadata().hashCode();
@@ -10301,11 +10301,11 @@ public final class RedvoxApiM {
 
             useLocationServices_ = false;
 
-            useLatitude_ = 0F;
+            useLatitude_ = 0D;
 
             useLongitude_ = 0D;
 
-            useAltitude_ = 0D;
+            useAltitude_ = 0F;
 
             internalGetMutableMetadata().clear();
             return this;
@@ -10496,13 +10496,13 @@ public final class RedvoxApiM {
             if (other.getUseLocationServices() != false) {
               setUseLocationServices(other.getUseLocationServices());
             }
-            if (other.getUseLatitude() != 0F) {
+            if (other.getUseLatitude() != 0D) {
               setUseLatitude(other.getUseLatitude());
             }
             if (other.getUseLongitude() != 0D) {
               setUseLongitude(other.getUseLongitude());
             }
-            if (other.getUseAltitude() != 0D) {
+            if (other.getUseAltitude() != 0F) {
               setUseAltitude(other.getUseAltitude());
             }
             internalGetMutableMetadata().mergeFrom(
@@ -12009,16 +12009,16 @@ public final class RedvoxApiM {
             return this;
           }
 
-          private float useLatitude_ ;
+          private double useLatitude_ ;
           /**
            * <pre>
            * User set latitude decimal degrees
            * </pre>
            *
-           * <code>float use_latitude = 24;</code>
+           * <code>double use_latitude = 24;</code>
            * @return The useLatitude.
            */
-          public float getUseLatitude() {
+          public double getUseLatitude() {
             return useLatitude_;
           }
           /**
@@ -12026,11 +12026,11 @@ public final class RedvoxApiM {
            * User set latitude decimal degrees
            * </pre>
            *
-           * <code>float use_latitude = 24;</code>
+           * <code>double use_latitude = 24;</code>
            * @param value The useLatitude to set.
            * @return This builder for chaining.
            */
-          public Builder setUseLatitude(float value) {
+          public Builder setUseLatitude(double value) {
             
             useLatitude_ = value;
             onChanged();
@@ -12041,12 +12041,12 @@ public final class RedvoxApiM {
            * User set latitude decimal degrees
            * </pre>
            *
-           * <code>float use_latitude = 24;</code>
+           * <code>double use_latitude = 24;</code>
            * @return This builder for chaining.
            */
           public Builder clearUseLatitude() {
             
-            useLatitude_ = 0F;
+            useLatitude_ = 0D;
             onChanged();
             return this;
           }
@@ -12093,16 +12093,16 @@ public final class RedvoxApiM {
             return this;
           }
 
-          private double useAltitude_ ;
+          private float useAltitude_ ;
           /**
            * <pre>
            * User set altitude meters
            * </pre>
            *
-           * <code>double use_altitude = 26;</code>
+           * <code>float use_altitude = 26;</code>
            * @return The useAltitude.
            */
-          public double getUseAltitude() {
+          public float getUseAltitude() {
             return useAltitude_;
           }
           /**
@@ -12110,11 +12110,11 @@ public final class RedvoxApiM {
            * User set altitude meters
            * </pre>
            *
-           * <code>double use_altitude = 26;</code>
+           * <code>float use_altitude = 26;</code>
            * @param value The useAltitude to set.
            * @return This builder for chaining.
            */
-          public Builder setUseAltitude(double value) {
+          public Builder setUseAltitude(float value) {
             
             useAltitude_ = value;
             onChanged();
@@ -12125,12 +12125,12 @@ public final class RedvoxApiM {
            * User set altitude meters
            * </pre>
            *
-           * <code>double use_altitude = 26;</code>
+           * <code>float use_altitude = 26;</code>
            * @return This builder for chaining.
            */
           public Builder clearUseAltitude() {
             
-            useAltitude_ = 0D;
+            useAltitude_ = 0F;
             onChanged();
             return this;
           }
@@ -61352,8 +61352,8 @@ public final class RedvoxApiM {
       "\030\024 \001(\010\022\037\n\027storage_space_allowance\030\025 \001(\002\022" +
       "$\n\034use_sd_card_for_data_storage\030\026 \001(\010\022\035\n" +
       "\025use_location_services\030\027 \001(\010\022\024\n\014use_lati" +
-      "tude\030\030 \001(\002\022\025\n\ruse_longitude\030\031 \001(\001\022\024\n\014use" +
-      "_altitude\030\032 \001(\001\022Z\n\010metadata\030\033 \003(\0132H.redv" +
+      "tude\030\030 \001(\001\022\025\n\ruse_longitude\030\031 \001(\001\022\024\n\014use" +
+      "_altitude\030\032 \001(\002\022Z\n\010metadata\030\033 \003(\0132H.redv" +
       "ox_api_m.RedvoxPacketM.StationInformatio" +
       "n.AppSettings.MetadataEntry\032/\n\rMetadataE" +
       "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\n" +

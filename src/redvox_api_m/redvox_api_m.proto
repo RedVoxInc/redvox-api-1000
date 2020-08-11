@@ -261,13 +261,13 @@ message RedvoxPacketM {
             bool use_location_services = 23;
 
             // User set latitude decimal degrees
-            float use_latitude = 24;
+            double use_latitude = 24;
 
             // User set longitude decimal degrees
             double use_longitude = 25;
 
             // User set altitude meters
-            double use_altitude = 26;
+            float use_altitude = 26;
 
             // A map from string to string for including untyped metadata
             map<string, string> metadata = 27;
