@@ -27,6 +27,7 @@ Detailed documentation is provided at: https://bitbucket.org/redvoxhi/redvox-api
 
 ### Changelog
 
+* v9.0 - 14 Sep 2020 - Add seq_id to AcquisitionReq/Resp. Expand app settings to match app changes.
 * v8.0 - 11 Aug 2020 - Fix typo with lat/lng/alt in AppSettings.
 * v7.0 - 11 Aug 2020 - Convert AppSettings lat/lng to double. Convert statistics to double.
 * v6.0 - 5 Aug 2020 - Add timestamps_gps to Location sensor.
