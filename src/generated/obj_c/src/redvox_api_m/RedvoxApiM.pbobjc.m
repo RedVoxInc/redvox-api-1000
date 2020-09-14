@@ -902,6 +902,7 @@ BOOL RedvoxPacketM_StationInformation_StationMetrics_PowerState_IsValidValue(int
 @implementation RedvoxPacketM_StationInformation_AppSettings
 
 @dynamic audioSamplingRate;
+@dynamic samplesPerWindow;
 @dynamic audioSourceTuning;
 @dynamic additionalInputSensorsArray, additionalInputSensorsArray_Count;
 @dynamic automaticallyRecord;
@@ -932,6 +933,7 @@ BOOL RedvoxPacketM_StationInformation_StationMetrics_PowerState_IsValidValue(int
 typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
   uint32_t _has_storage_[2];
   RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate audioSamplingRate;
+  float samplesPerWindow;
   RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning audioSourceTuning;
   RedvoxPacketM_StationInformation_AppSettings_FftOverlap fftOverlap;
   float storageSpaceAllowance;
@@ -963,10 +965,19 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .dataType = GPBDataTypeEnum,
       },
       {
+        .name = "samplesPerWindow",
+        .dataTypeSpecific.className = NULL,
+        .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_SamplesPerWindow,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, samplesPerWindow),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeFloat,
+      },
+      {
         .name = "audioSourceTuning",
         .dataTypeSpecific.enumDescFunc = RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_EnumDescriptor,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_AudioSourceTuning,
-        .hasIndex = 1,
+        .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, audioSourceTuning),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
@@ -984,8 +995,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "automaticallyRecord",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_AutomaticallyRecord,
-        .hasIndex = 2,
-        .offset = 3,  // Stored in _has_storage_ to save space.
+        .hasIndex = 3,
+        .offset = 4,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -993,8 +1004,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "launchAtPowerUp",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_LaunchAtPowerUp,
-        .hasIndex = 4,
-        .offset = 5,  // Stored in _has_storage_ to save space.
+        .hasIndex = 5,
+        .offset = 6,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1002,7 +1013,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "stationId",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_StationId,
-        .hasIndex = 6,
+        .hasIndex = 7,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, stationId),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
@@ -1011,7 +1022,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "stationDescription",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_StationDescription,
-        .hasIndex = 7,
+        .hasIndex = 8,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, stationDescription),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
@@ -1020,8 +1031,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "pushToServer",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_PushToServer,
-        .hasIndex = 8,
-        .offset = 9,  // Stored in _has_storage_ to save space.
+        .hasIndex = 9,
+        .offset = 10,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1029,8 +1040,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "publishDataAsPrivate",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_PublishDataAsPrivate,
-        .hasIndex = 10,
-        .offset = 11,  // Stored in _has_storage_ to save space.
+        .hasIndex = 11,
+        .offset = 12,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1038,8 +1049,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "scrambleAudioData",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_ScrambleAudioData,
-        .hasIndex = 12,
-        .offset = 13,  // Stored in _has_storage_ to save space.
+        .hasIndex = 13,
+        .offset = 14,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1047,8 +1058,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "provideBackfill",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_ProvideBackfill,
-        .hasIndex = 14,
-        .offset = 15,  // Stored in _has_storage_ to save space.
+        .hasIndex = 15,
+        .offset = 16,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1056,8 +1067,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "removeSensorDcOffset",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_RemoveSensorDcOffset,
-        .hasIndex = 16,
-        .offset = 17,  // Stored in _has_storage_ to save space.
+        .hasIndex = 17,
+        .offset = 18,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1065,7 +1076,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "fftOverlap",
         .dataTypeSpecific.enumDescFunc = RedvoxPacketM_StationInformation_AppSettings_FftOverlap_EnumDescriptor,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_FftOverlap,
-        .hasIndex = 18,
+        .hasIndex = 19,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, fftOverlap),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
         .dataType = GPBDataTypeEnum,
@@ -1074,8 +1085,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "useCustomTimeSyncServer",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseCustomTimeSyncServer,
-        .hasIndex = 19,
-        .offset = 20,  // Stored in _has_storage_ to save space.
+        .hasIndex = 20,
+        .offset = 21,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1083,7 +1094,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "timeSyncServerURL",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_TimeSyncServerURL,
-        .hasIndex = 21,
+        .hasIndex = 22,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, timeSyncServerURL),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeString,
@@ -1092,8 +1103,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "useCustomDataServer",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseCustomDataServer,
-        .hasIndex = 22,
-        .offset = 23,  // Stored in _has_storage_ to save space.
+        .hasIndex = 23,
+        .offset = 24,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1101,7 +1112,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "dataServerURL",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_DataServerURL,
-        .hasIndex = 24,
+        .hasIndex = 25,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, dataServerURL),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeString,
@@ -1110,8 +1121,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "useCustomAuthServer",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseCustomAuthServer,
-        .hasIndex = 25,
-        .offset = 26,  // Stored in _has_storage_ to save space.
+        .hasIndex = 26,
+        .offset = 27,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1119,7 +1130,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "authServerURL",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_AuthServerURL,
-        .hasIndex = 27,
+        .hasIndex = 28,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, authServerURL),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeString,
@@ -1128,8 +1139,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "autoDeleteDataFiles",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_AutoDeleteDataFiles,
-        .hasIndex = 28,
-        .offset = 29,  // Stored in _has_storage_ to save space.
+        .hasIndex = 29,
+        .offset = 30,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1137,7 +1148,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "storageSpaceAllowance",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_StorageSpaceAllowance,
-        .hasIndex = 30,
+        .hasIndex = 31,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, storageSpaceAllowance),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
@@ -1146,8 +1157,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "useSdCardForDataStorage",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseSdCardForDataStorage,
-        .hasIndex = 31,
-        .offset = 32,  // Stored in _has_storage_ to save space.
+        .hasIndex = 32,
+        .offset = 33,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1155,8 +1166,8 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "useLocationServices",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseLocationServices,
-        .hasIndex = 33,
-        .offset = 34,  // Stored in _has_storage_ to save space.
+        .hasIndex = 34,
+        .offset = 35,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },
@@ -1164,7 +1175,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "useLatitude",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseLatitude,
-        .hasIndex = 35,
+        .hasIndex = 36,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, useLatitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -1173,7 +1184,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "useLongitude",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseLongitude,
-        .hasIndex = 36,
+        .hasIndex = 37,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, useLongitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeDouble,
@@ -1182,7 +1193,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .name = "useAltitude",
         .dataTypeSpecific.className = NULL,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseAltitude,
-        .hasIndex = 37,
+        .hasIndex = 38,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, useAltitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
@@ -1207,7 +1218,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
                                          flags:GPBDescriptorInitializationFlag_None];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
-        "\003\017\004\244\246\241!!\000\021\004\246\241!!\000\023\004\246\241!!\000";
+        "\003\020\004\244\246\241!!\000\022\004\246\241!!\000\024\004\246\241!!\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_StationInformation)];
@@ -4225,6 +4236,7 @@ typedef struct EncryptedRedvoxPacketM_Header__storage_ {
 @dynamic checksum;
 @dynamic isEncrypted;
 @dynamic payload;
+@dynamic seqId;
 
 typedef struct AcquisitionRequest__storage_ {
   uint32_t _has_storage_[1];
@@ -4232,6 +4244,7 @@ typedef struct AcquisitionRequest__storage_ {
   NSString *firebaseToken;
   NSData *payload;
   int64_t checksum;
+  int64_t seqId;
 } AcquisitionRequest__storage_;
 
 // This method is threadsafe because it is initially called
@@ -4285,6 +4298,15 @@ typedef struct AcquisitionRequest__storage_ {
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBytes,
       },
+      {
+        .name = "seqId",
+        .dataTypeSpecific.className = NULL,
+        .number = AcquisitionRequest_FieldNumber_SeqId,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(AcquisitionRequest__storage_, seqId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeInt64,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[AcquisitionRequest class]
@@ -4312,12 +4334,14 @@ typedef struct AcquisitionRequest__storage_ {
 @dynamic checksum;
 @dynamic details;
 @dynamic resend;
+@dynamic seqId;
 
 typedef struct AcquisitionResponse__storage_ {
   uint32_t _has_storage_[1];
   AcquisitionResponse_ResponseType responseType;
   NSString *details;
   int64_t checksum;
+  int64_t seqId;
 } AcquisitionResponse__storage_;
 
 // This method is threadsafe because it is initially called
@@ -4361,6 +4385,15 @@ typedef struct AcquisitionResponse__storage_ {
         .offset = 4,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
+      },
+      {
+        .name = "seqId",
+        .dataTypeSpecific.className = NULL,
+        .number = AcquisitionResponse_FieldNumber_SeqId,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(AcquisitionResponse__storage_, seqId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeInt64,
       },
     };
     GPBDescriptor *localDescriptor =

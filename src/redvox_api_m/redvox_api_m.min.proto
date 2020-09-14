@@ -87,32 +87,33 @@ message RedvoxPacketM {
         }
         message AppSettings {
             AudioSamplingRate audio_sampling_rate = 1;
-            AudioSourceTuning audio_source_tuning = 2;
-            repeated InputSensor additional_input_sensors = 3;
-            bool automatically_record = 4;
-            bool launch_at_power_up = 5;
-            string station_id = 6;
-            string station_description = 7;
-            bool push_to_server = 8;
-            bool publish_data_as_private = 9;
-            bool scramble_audio_data = 10;
-            bool provide_backfill = 11;
-            bool remove_sensor_dc_offset = 12;
-            FftOverlap fft_overlap = 13;
-            bool use_custom_time_sync_server = 14;
-            string time_sync_server_url = 15;
-            bool use_custom_data_server = 16;
-            string data_server_url = 17;
-            bool use_custom_auth_server = 18;
-            string auth_server_url = 19;
-            bool auto_delete_data_files = 20;
-            float storage_space_allowance = 21;
-            bool use_sd_card_for_data_storage = 22;
-            bool use_location_services = 23;
-            double use_latitude = 24;
-            double use_longitude = 25;
-            float use_altitude = 26;
-            map<string, string> metadata = 27;
+            float samples_per_window = 2;
+            AudioSourceTuning audio_source_tuning = 3;
+            repeated InputSensor additional_input_sensors = 4;
+            bool automatically_record = 5;
+            bool launch_at_power_up = 6;
+            string station_id = 7;
+            string station_description = 8;
+            bool push_to_server = 9;
+            bool publish_data_as_private = 10;
+            bool scramble_audio_data = 11;
+            bool provide_backfill = 12;
+            bool remove_sensor_dc_offset = 13;
+            FftOverlap fft_overlap = 14;
+            bool use_custom_time_sync_server = 15;
+            string time_sync_server_url = 16;
+            bool use_custom_data_server = 17;
+            string data_server_url = 18;
+            bool use_custom_auth_server = 19;
+            string auth_server_url = 20;
+            bool auto_delete_data_files = 21;
+            float storage_space_allowance = 22;
+            bool use_sd_card_for_data_storage = 23;
+            bool use_location_services = 24;
+            double use_latitude = 25;
+            double use_longitude = 26;
+            float use_altitude = 27;
+            map<string, string> metadata = 28;
             enum FftOverlap {
                 UNKNOWN = 0;
                 PERCENT_25 = 1;
@@ -399,12 +400,14 @@ message AcquisitionRequest {
     int64 checksum = 3;
     bool is_encrypted = 4;
     bytes payload = 5;
+    int64 seq_id = 6;
 }
 message AcquisitionResponse {
     ResponseType response_type = 1;
     int64 checksum = 2;
     string details = 3;
     bool resend = 4;
+    int64 seq_id = 5;
     enum ResponseType {
         UNKNOWN = 0;
         OK = 1;

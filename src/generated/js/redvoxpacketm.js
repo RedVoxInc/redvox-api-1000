@@ -2039,7 +2039,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.cle
  * @private {!Array<number>}
  * @const
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.repeatedFields_ = [3];
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.repeatedFields_ = [4];
 
 
 
@@ -2073,31 +2073,32 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.toObje
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.toObject = function(includeInstance, msg) {
   var f, obj = {
     audioSamplingRate: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    audioSourceTuning: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    additionalInputSensorsList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
-    automaticallyRecord: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
-    launchAtPowerUp: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
-    stationId: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    stationDescription: jspb.Message.getFieldWithDefault(msg, 7, ""),
-    pushToServer: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
-    publishDataAsPrivate: jspb.Message.getBooleanFieldWithDefault(msg, 9, false),
-    scrambleAudioData: jspb.Message.getBooleanFieldWithDefault(msg, 10, false),
-    provideBackfill: jspb.Message.getBooleanFieldWithDefault(msg, 11, false),
-    removeSensorDcOffset: jspb.Message.getBooleanFieldWithDefault(msg, 12, false),
-    fftOverlap: jspb.Message.getFieldWithDefault(msg, 13, 0),
-    useCustomTimeSyncServer: jspb.Message.getBooleanFieldWithDefault(msg, 14, false),
-    timeSyncServerUrl: jspb.Message.getFieldWithDefault(msg, 15, ""),
-    useCustomDataServer: jspb.Message.getBooleanFieldWithDefault(msg, 16, false),
-    dataServerUrl: jspb.Message.getFieldWithDefault(msg, 17, ""),
-    useCustomAuthServer: jspb.Message.getBooleanFieldWithDefault(msg, 18, false),
-    authServerUrl: jspb.Message.getFieldWithDefault(msg, 19, ""),
-    autoDeleteDataFiles: jspb.Message.getBooleanFieldWithDefault(msg, 20, false),
-    storageSpaceAllowance: jspb.Message.getFloatingPointFieldWithDefault(msg, 21, 0.0),
-    useSdCardForDataStorage: jspb.Message.getBooleanFieldWithDefault(msg, 22, false),
-    useLocationServices: jspb.Message.getBooleanFieldWithDefault(msg, 23, false),
-    useLatitude: jspb.Message.getFloatingPointFieldWithDefault(msg, 24, 0.0),
-    useLongitude: jspb.Message.getFloatingPointFieldWithDefault(msg, 25, 0.0),
-    useAltitude: jspb.Message.getFloatingPointFieldWithDefault(msg, 26, 0.0),
+    samplesPerWindow: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
+    audioSourceTuning: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    additionalInputSensorsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
+    automaticallyRecord: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
+    launchAtPowerUp: jspb.Message.getBooleanFieldWithDefault(msg, 6, false),
+    stationId: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    stationDescription: jspb.Message.getFieldWithDefault(msg, 8, ""),
+    pushToServer: jspb.Message.getBooleanFieldWithDefault(msg, 9, false),
+    publishDataAsPrivate: jspb.Message.getBooleanFieldWithDefault(msg, 10, false),
+    scrambleAudioData: jspb.Message.getBooleanFieldWithDefault(msg, 11, false),
+    provideBackfill: jspb.Message.getBooleanFieldWithDefault(msg, 12, false),
+    removeSensorDcOffset: jspb.Message.getBooleanFieldWithDefault(msg, 13, false),
+    fftOverlap: jspb.Message.getFieldWithDefault(msg, 14, 0),
+    useCustomTimeSyncServer: jspb.Message.getBooleanFieldWithDefault(msg, 15, false),
+    timeSyncServerUrl: jspb.Message.getFieldWithDefault(msg, 16, ""),
+    useCustomDataServer: jspb.Message.getBooleanFieldWithDefault(msg, 17, false),
+    dataServerUrl: jspb.Message.getFieldWithDefault(msg, 18, ""),
+    useCustomAuthServer: jspb.Message.getBooleanFieldWithDefault(msg, 19, false),
+    authServerUrl: jspb.Message.getFieldWithDefault(msg, 20, ""),
+    autoDeleteDataFiles: jspb.Message.getBooleanFieldWithDefault(msg, 21, false),
+    storageSpaceAllowance: jspb.Message.getFloatingPointFieldWithDefault(msg, 22, 0.0),
+    useSdCardForDataStorage: jspb.Message.getBooleanFieldWithDefault(msg, 23, false),
+    useLocationServices: jspb.Message.getBooleanFieldWithDefault(msg, 24, false),
+    useLatitude: jspb.Message.getFloatingPointFieldWithDefault(msg, 25, 0.0),
+    useLongitude: jspb.Message.getFloatingPointFieldWithDefault(msg, 26, 0.0),
+    useAltitude: jspb.Message.getFloatingPointFieldWithDefault(msg, 27, 0.0),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -2140,106 +2141,110 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.deserializeBinar
       msg.setAudioSamplingRate(value);
       break;
     case 2:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setSamplesPerWindow(value);
+      break;
+    case 3:
       var value = /** @type {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning} */ (reader.readEnum());
       msg.setAudioSourceTuning(value);
       break;
-    case 3:
+    case 4:
       var value = /** @type {!Array<!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor>} */ (reader.readPackedEnum());
       msg.setAdditionalInputSensorsList(value);
       break;
-    case 4:
+    case 5:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setAutomaticallyRecord(value);
       break;
-    case 5:
+    case 6:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setLaunchAtPowerUp(value);
       break;
-    case 6:
+    case 7:
       var value = /** @type {string} */ (reader.readString());
       msg.setStationId(value);
       break;
-    case 7:
+    case 8:
       var value = /** @type {string} */ (reader.readString());
       msg.setStationDescription(value);
       break;
-    case 8:
+    case 9:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setPushToServer(value);
       break;
-    case 9:
+    case 10:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setPublishDataAsPrivate(value);
       break;
-    case 10:
+    case 11:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setScrambleAudioData(value);
       break;
-    case 11:
+    case 12:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setProvideBackfill(value);
       break;
-    case 12:
+    case 13:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setRemoveSensorDcOffset(value);
       break;
-    case 13:
+    case 14:
       var value = /** @type {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap} */ (reader.readEnum());
       msg.setFftOverlap(value);
       break;
-    case 14:
+    case 15:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setUseCustomTimeSyncServer(value);
       break;
-    case 15:
+    case 16:
       var value = /** @type {string} */ (reader.readString());
       msg.setTimeSyncServerUrl(value);
       break;
-    case 16:
+    case 17:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setUseCustomDataServer(value);
       break;
-    case 17:
+    case 18:
       var value = /** @type {string} */ (reader.readString());
       msg.setDataServerUrl(value);
       break;
-    case 18:
+    case 19:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setUseCustomAuthServer(value);
       break;
-    case 19:
+    case 20:
       var value = /** @type {string} */ (reader.readString());
       msg.setAuthServerUrl(value);
       break;
-    case 20:
+    case 21:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setAutoDeleteDataFiles(value);
       break;
-    case 21:
+    case 22:
       var value = /** @type {number} */ (reader.readFloat());
       msg.setStorageSpaceAllowance(value);
       break;
-    case 22:
+    case 23:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setUseSdCardForDataStorage(value);
       break;
-    case 23:
+    case 24:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setUseLocationServices(value);
       break;
-    case 24:
+    case 25:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setUseLatitude(value);
       break;
-    case 25:
+    case 26:
       var value = /** @type {number} */ (reader.readDouble());
       msg.setUseLongitude(value);
       break;
-    case 26:
+    case 27:
       var value = /** @type {number} */ (reader.readFloat());
       msg.setUseAltitude(value);
       break;
-    case 27:
+    case 28:
       var value = msg.getMetadataMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
@@ -2281,184 +2286,191 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.serializeBinaryT
       f
     );
   }
+  f = message.getSamplesPerWindow();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      2,
+      f
+    );
+  }
   f = message.getAudioSourceTuning();
   if (f !== 0.0) {
     writer.writeEnum(
-      2,
+      3,
       f
     );
   }
   f = message.getAdditionalInputSensorsList();
   if (f.length > 0) {
     writer.writePackedEnum(
-      3,
+      4,
       f
     );
   }
   f = message.getAutomaticallyRecord();
   if (f) {
     writer.writeBool(
-      4,
+      5,
       f
     );
   }
   f = message.getLaunchAtPowerUp();
   if (f) {
     writer.writeBool(
-      5,
+      6,
       f
     );
   }
   f = message.getStationId();
   if (f.length > 0) {
     writer.writeString(
-      6,
+      7,
       f
     );
   }
   f = message.getStationDescription();
   if (f.length > 0) {
     writer.writeString(
-      7,
+      8,
       f
     );
   }
   f = message.getPushToServer();
   if (f) {
     writer.writeBool(
-      8,
+      9,
       f
     );
   }
   f = message.getPublishDataAsPrivate();
   if (f) {
     writer.writeBool(
-      9,
+      10,
       f
     );
   }
   f = message.getScrambleAudioData();
   if (f) {
     writer.writeBool(
-      10,
+      11,
       f
     );
   }
   f = message.getProvideBackfill();
   if (f) {
     writer.writeBool(
-      11,
+      12,
       f
     );
   }
   f = message.getRemoveSensorDcOffset();
   if (f) {
     writer.writeBool(
-      12,
+      13,
       f
     );
   }
   f = message.getFftOverlap();
   if (f !== 0.0) {
     writer.writeEnum(
-      13,
+      14,
       f
     );
   }
   f = message.getUseCustomTimeSyncServer();
   if (f) {
     writer.writeBool(
-      14,
+      15,
       f
     );
   }
   f = message.getTimeSyncServerUrl();
   if (f.length > 0) {
     writer.writeString(
-      15,
+      16,
       f
     );
   }
   f = message.getUseCustomDataServer();
   if (f) {
     writer.writeBool(
-      16,
+      17,
       f
     );
   }
   f = message.getDataServerUrl();
   if (f.length > 0) {
     writer.writeString(
-      17,
+      18,
       f
     );
   }
   f = message.getUseCustomAuthServer();
   if (f) {
     writer.writeBool(
-      18,
+      19,
       f
     );
   }
   f = message.getAuthServerUrl();
   if (f.length > 0) {
     writer.writeString(
-      19,
+      20,
       f
     );
   }
   f = message.getAutoDeleteDataFiles();
   if (f) {
     writer.writeBool(
-      20,
+      21,
       f
     );
   }
   f = message.getStorageSpaceAllowance();
   if (f !== 0.0) {
     writer.writeFloat(
-      21,
+      22,
       f
     );
   }
   f = message.getUseSdCardForDataStorage();
   if (f) {
     writer.writeBool(
-      22,
+      23,
       f
     );
   }
   f = message.getUseLocationServices();
   if (f) {
     writer.writeBool(
-      23,
+      24,
       f
     );
   }
   f = message.getUseLatitude();
   if (f !== 0.0) {
     writer.writeDouble(
-      24,
+      25,
       f
     );
   }
   f = message.getUseLongitude();
   if (f !== 0.0) {
     writer.writeDouble(
-      25,
+      26,
       f
     );
   }
   f = message.getUseAltitude();
   if (f !== 0.0) {
     writer.writeFloat(
-      26,
+      27,
       f
     );
   }
   f = message.getMetadataMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(27, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(28, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -2537,11 +2549,29 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setAud
 
 
 /**
- * optional AudioSourceTuning audio_source_tuning = 2;
+ * optional float samples_per_window = 2;
+ * @return {number}
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getSamplesPerWindow = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setSamplesPerWindow = function(value) {
+  return jspb.Message.setProto3FloatField(this, 2, value);
+};
+
+
+/**
+ * optional AudioSourceTuning audio_source_tuning = 3;
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getAudioSourceTuning = function() {
-  return /** @type {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
@@ -2550,16 +2580,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getAud
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setAudioSourceTuning = function(value) {
-  return jspb.Message.setProto3EnumField(this, 2, value);
+  return jspb.Message.setProto3EnumField(this, 3, value);
 };
 
 
 /**
- * repeated InputSensor additional_input_sensors = 3;
+ * repeated InputSensor additional_input_sensors = 4;
  * @return {!Array<!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor>}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getAdditionalInputSensorsList = function() {
-  return /** @type {!Array<!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor>} */ (jspb.Message.getRepeatedField(this, 3));
+  return /** @type {!Array<!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor>} */ (jspb.Message.getRepeatedField(this, 4));
 };
 
 
@@ -2568,7 +2598,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getAdd
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setAdditionalInputSensorsList = function(value) {
-  return jspb.Message.setField(this, 3, value || []);
+  return jspb.Message.setField(this, 4, value || []);
 };
 
 
@@ -2578,7 +2608,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setAdd
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.addAdditionalInputSensors = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 3, value, opt_index);
+  return jspb.Message.addToRepeatedField(this, 4, value, opt_index);
 };
 
 
@@ -2592,28 +2622,10 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.clearA
 
 
 /**
- * optional bool automatically_record = 4;
+ * optional bool automatically_record = 5;
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getAutomaticallyRecord = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
- */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setAutomaticallyRecord = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 4, value);
-};
-
-
-/**
- * optional bool launch_at_power_up = 5;
- * @return {boolean}
- */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getLaunchAtPowerUp = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
 };
 
@@ -2622,34 +2634,34 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getLau
  * @param {boolean} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setLaunchAtPowerUp = function(value) {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setAutomaticallyRecord = function(value) {
   return jspb.Message.setProto3BooleanField(this, 5, value);
 };
 
 
 /**
- * optional string station_id = 6;
+ * optional bool launch_at_power_up = 6;
+ * @return {boolean}
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getLaunchAtPowerUp = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setLaunchAtPowerUp = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 6, value);
+};
+
+
+/**
+ * optional string station_id = 7;
  * @return {string}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getStationId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
- */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setStationId = function(value) {
-  return jspb.Message.setProto3StringField(this, 6, value);
-};
-
-
-/**
- * optional string station_description = 7;
- * @return {string}
- */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getStationDescription = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
@@ -2658,34 +2670,34 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getSta
  * @param {string} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setStationDescription = function(value) {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setStationId = function(value) {
   return jspb.Message.setProto3StringField(this, 7, value);
 };
 
 
 /**
- * optional bool push_to_server = 8;
+ * optional string station_description = 8;
+ * @return {string}
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getStationDescription = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setStationDescription = function(value) {
+  return jspb.Message.setProto3StringField(this, 8, value);
+};
+
+
+/**
+ * optional bool push_to_server = 9;
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getPushToServer = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
- */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setPushToServer = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 8, value);
-};
-
-
-/**
- * optional bool publish_data_as_private = 9;
- * @return {boolean}
- */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getPublishDataAsPrivate = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 9, false));
 };
 
@@ -2694,16 +2706,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getPub
  * @param {boolean} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setPublishDataAsPrivate = function(value) {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setPushToServer = function(value) {
   return jspb.Message.setProto3BooleanField(this, 9, value);
 };
 
 
 /**
- * optional bool scramble_audio_data = 10;
+ * optional bool publish_data_as_private = 10;
  * @return {boolean}
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getScrambleAudioData = function() {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getPublishDataAsPrivate = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 10, false));
 };
 
@@ -2712,16 +2724,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getScr
  * @param {boolean} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setScrambleAudioData = function(value) {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setPublishDataAsPrivate = function(value) {
   return jspb.Message.setProto3BooleanField(this, 10, value);
 };
 
 
 /**
- * optional bool provide_backfill = 11;
+ * optional bool scramble_audio_data = 11;
  * @return {boolean}
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getProvideBackfill = function() {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getScrambleAudioData = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 11, false));
 };
 
@@ -2730,16 +2742,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getPro
  * @param {boolean} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setProvideBackfill = function(value) {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setScrambleAudioData = function(value) {
   return jspb.Message.setProto3BooleanField(this, 11, value);
 };
 
 
 /**
- * optional bool remove_sensor_dc_offset = 12;
+ * optional bool provide_backfill = 12;
  * @return {boolean}
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getRemoveSensorDcOffset = function() {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getProvideBackfill = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 12, false));
 };
 
@@ -2748,17 +2760,35 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getRem
  * @param {boolean} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setRemoveSensorDcOffset = function(value) {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setProvideBackfill = function(value) {
   return jspb.Message.setProto3BooleanField(this, 12, value);
 };
 
 
 /**
- * optional FftOverlap fft_overlap = 13;
+ * optional bool remove_sensor_dc_offset = 13;
+ * @return {boolean}
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getRemoveSensorDcOffset = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 13, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setRemoveSensorDcOffset = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 13, value);
+};
+
+
+/**
+ * optional FftOverlap fft_overlap = 14;
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getFftOverlap = function() {
-  return /** @type {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap} */ (jspb.Message.getFieldWithDefault(this, 13, 0));
+  return /** @type {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap} */ (jspb.Message.getFieldWithDefault(this, 14, 0));
 };
 
 
@@ -2767,16 +2797,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getFft
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setFftOverlap = function(value) {
-  return jspb.Message.setProto3EnumField(this, 13, value);
+  return jspb.Message.setProto3EnumField(this, 14, value);
 };
 
 
 /**
- * optional bool use_custom_time_sync_server = 14;
+ * optional bool use_custom_time_sync_server = 15;
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseCustomTimeSyncServer = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 14, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 15, false));
 };
 
 
@@ -2785,16 +2815,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUse
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUseCustomTimeSyncServer = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 14, value);
+  return jspb.Message.setProto3BooleanField(this, 15, value);
 };
 
 
 /**
- * optional string time_sync_server_url = 15;
+ * optional string time_sync_server_url = 16;
  * @return {string}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getTimeSyncServerUrl = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 15, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 16, ""));
 };
 
 
@@ -2803,16 +2833,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getTim
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setTimeSyncServerUrl = function(value) {
-  return jspb.Message.setProto3StringField(this, 15, value);
+  return jspb.Message.setProto3StringField(this, 16, value);
 };
 
 
 /**
- * optional bool use_custom_data_server = 16;
+ * optional bool use_custom_data_server = 17;
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseCustomDataServer = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 16, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 17, false));
 };
 
 
@@ -2821,16 +2851,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUse
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUseCustomDataServer = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 16, value);
+  return jspb.Message.setProto3BooleanField(this, 17, value);
 };
 
 
 /**
- * optional string data_server_url = 17;
+ * optional string data_server_url = 18;
  * @return {string}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getDataServerUrl = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 17, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 18, ""));
 };
 
 
@@ -2839,16 +2869,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getDat
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setDataServerUrl = function(value) {
-  return jspb.Message.setProto3StringField(this, 17, value);
+  return jspb.Message.setProto3StringField(this, 18, value);
 };
 
 
 /**
- * optional bool use_custom_auth_server = 18;
+ * optional bool use_custom_auth_server = 19;
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseCustomAuthServer = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 18, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 19, false));
 };
 
 
@@ -2857,16 +2887,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUse
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUseCustomAuthServer = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 18, value);
+  return jspb.Message.setProto3BooleanField(this, 19, value);
 };
 
 
 /**
- * optional string auth_server_url = 19;
+ * optional string auth_server_url = 20;
  * @return {string}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getAuthServerUrl = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 19, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 20, ""));
 };
 
 
@@ -2875,16 +2905,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getAut
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setAuthServerUrl = function(value) {
-  return jspb.Message.setProto3StringField(this, 19, value);
+  return jspb.Message.setProto3StringField(this, 20, value);
 };
 
 
 /**
- * optional bool auto_delete_data_files = 20;
+ * optional bool auto_delete_data_files = 21;
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getAutoDeleteDataFiles = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 20, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 21, false));
 };
 
 
@@ -2893,16 +2923,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getAut
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setAutoDeleteDataFiles = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 20, value);
+  return jspb.Message.setProto3BooleanField(this, 21, value);
 };
 
 
 /**
- * optional float storage_space_allowance = 21;
+ * optional float storage_space_allowance = 22;
  * @return {number}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getStorageSpaceAllowance = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 21, 0.0));
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 22, 0.0));
 };
 
 
@@ -2911,33 +2941,15 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getSto
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setStorageSpaceAllowance = function(value) {
-  return jspb.Message.setProto3FloatField(this, 21, value);
+  return jspb.Message.setProto3FloatField(this, 22, value);
 };
 
 
 /**
- * optional bool use_sd_card_for_data_storage = 22;
+ * optional bool use_sd_card_for_data_storage = 23;
  * @return {boolean}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseSdCardForDataStorage = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 22, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
- */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUseSdCardForDataStorage = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 22, value);
-};
-
-
-/**
- * optional bool use_location_services = 23;
- * @return {boolean}
- */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseLocationServices = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 23, false));
 };
 
@@ -2946,34 +2958,34 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUse
  * @param {boolean} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUseLocationServices = function(value) {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUseSdCardForDataStorage = function(value) {
   return jspb.Message.setProto3BooleanField(this, 23, value);
 };
 
 
 /**
- * optional double use_latitude = 24;
+ * optional bool use_location_services = 24;
+ * @return {boolean}
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseLocationServices = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 24, false));
+};
+
+
+/**
+ * @param {boolean} value
+ * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUseLocationServices = function(value) {
+  return jspb.Message.setProto3BooleanField(this, 24, value);
+};
+
+
+/**
+ * optional double use_latitude = 25;
  * @return {number}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseLatitude = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 24, 0.0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
- */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUseLatitude = function(value) {
-  return jspb.Message.setProto3FloatField(this, 24, value);
-};
-
-
-/**
- * optional double use_longitude = 25;
- * @return {number}
- */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseLongitude = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 25, 0.0));
 };
 
@@ -2982,16 +2994,16 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUse
  * @param {number} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUseLongitude = function(value) {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUseLatitude = function(value) {
   return jspb.Message.setProto3FloatField(this, 25, value);
 };
 
 
 /**
- * optional float use_altitude = 26;
+ * optional double use_longitude = 26;
  * @return {number}
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseAltitude = function() {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseLongitude = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 26, 0.0));
 };
 
@@ -3000,20 +3012,38 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUse
  * @param {number} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUseAltitude = function(value) {
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUseLongitude = function(value) {
   return jspb.Message.setProto3FloatField(this, 26, value);
 };
 
 
 /**
- * map<string, string> metadata = 27;
+ * optional float use_altitude = 27;
+ * @return {number}
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getUseAltitude = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 27, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings} returns this
+ */
+proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.setUseAltitude = function(value) {
+  return jspb.Message.setProto3FloatField(this, 27, value);
+};
+
+
+/**
+ * map<string, string> metadata = 28;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.prototype.getMetadataMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 27, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 28, opt_noLazyCreate,
       null));
 };
 

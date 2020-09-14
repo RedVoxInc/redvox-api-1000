@@ -4,7 +4,7 @@
 package io.redvox.apis;
 
 public final class RedvoxApiM {
-  public final static float SUB_API = 8.0f;  // redvox-api-1000 -> build_protos.sh -> insert_sub_api.py on 2020-08-11 22:38:03.359931
+  public final static float SUB_API = 9.0f;  // redvox-api-1000 -> build_protos.sh -> insert_sub_api.py on 2020-09-14 20:48:24.787143
 
   private RedvoxApiM() {}
   public static void registerAllExtensions(
@@ -7684,11 +7684,17 @@ public final class RedvoxApiM {
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRate getAudioSamplingRate();
 
         /**
+         * <code>float samples_per_window = 2;</code>
+         * @return The samplesPerWindow.
+         */
+        float getSamplesPerWindow();
+
+        /**
          * <pre>
          * The selected audio source tuning
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 2;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 3;</code>
          * @return The enum numeric value on the wire for audioSourceTuning.
          */
         int getAudioSourceTuningValue();
@@ -7697,7 +7703,7 @@ public final class RedvoxApiM {
          * The selected audio source tuning
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 2;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 3;</code>
          * @return The audioSourceTuning.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning getAudioSourceTuning();
@@ -7707,7 +7713,7 @@ public final class RedvoxApiM {
          * Additional input sensors
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
          * @return A list containing the additionalInputSensors.
          */
         java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.InputSensor> getAdditionalInputSensorsList();
@@ -7716,7 +7722,7 @@ public final class RedvoxApiM {
          * Additional input sensors
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
          * @return The count of additionalInputSensors.
          */
         int getAdditionalInputSensorsCount();
@@ -7725,7 +7731,7 @@ public final class RedvoxApiM {
          * Additional input sensors
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
          * @param index The index of the element to return.
          * @return The additionalInputSensors at the given index.
          */
@@ -7735,7 +7741,7 @@ public final class RedvoxApiM {
          * Additional input sensors
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
          * @return A list containing the enum numeric values on the wire for additionalInputSensors.
          */
         java.util.List<java.lang.Integer>
@@ -7745,7 +7751,7 @@ public final class RedvoxApiM {
          * Additional input sensors
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
          * @param index The index of the value to return.
          * @return The enum numeric value on the wire of additionalInputSensors at the given index.
          */
@@ -7756,7 +7762,7 @@ public final class RedvoxApiM {
          * Station automatically records on start
          * </pre>
          *
-         * <code>bool automatically_record = 4;</code>
+         * <code>bool automatically_record = 5;</code>
          * @return The automaticallyRecord.
          */
         boolean getAutomaticallyRecord();
@@ -7766,7 +7772,7 @@ public final class RedvoxApiM {
          * App automatically starts on station
          * </pre>
          *
-         * <code>bool launch_at_power_up = 5;</code>
+         * <code>bool launch_at_power_up = 6;</code>
          * @return The launchAtPowerUp.
          */
         boolean getLaunchAtPowerUp();
@@ -7776,7 +7782,7 @@ public final class RedvoxApiM {
          * User selectable station id
          * </pre>
          *
-         * <code>string station_id = 6;</code>
+         * <code>string station_id = 7;</code>
          * @return The stationId.
          */
         java.lang.String getStationId();
@@ -7785,7 +7791,7 @@ public final class RedvoxApiM {
          * User selectable station id
          * </pre>
          *
-         * <code>string station_id = 6;</code>
+         * <code>string station_id = 7;</code>
          * @return The bytes for stationId.
          */
         com.google.protobuf.ByteString
@@ -7796,7 +7802,7 @@ public final class RedvoxApiM {
          * User selectable station description
          * </pre>
          *
-         * <code>string station_description = 7;</code>
+         * <code>string station_description = 8;</code>
          * @return The stationDescription.
          */
         java.lang.String getStationDescription();
@@ -7805,7 +7811,7 @@ public final class RedvoxApiM {
          * User selectable station description
          * </pre>
          *
-         * <code>string station_description = 7;</code>
+         * <code>string station_description = 8;</code>
          * @return The bytes for stationDescription.
          */
         com.google.protobuf.ByteString
@@ -7816,7 +7822,7 @@ public final class RedvoxApiM {
          * Is station data pushed to server?
          * </pre>
          *
-         * <code>bool push_to_server = 8;</code>
+         * <code>bool push_to_server = 9;</code>
          * @return The pushToServer.
          */
         boolean getPushToServer();
@@ -7826,7 +7832,7 @@ public final class RedvoxApiM {
          * Is station data published as private?
          * </pre>
          *
-         * <code>bool publish_data_as_private = 9;</code>
+         * <code>bool publish_data_as_private = 10;</code>
          * @return The publishDataAsPrivate.
          */
         boolean getPublishDataAsPrivate();
@@ -7836,7 +7842,7 @@ public final class RedvoxApiM {
          * Is station audio data scrambled?
          * </pre>
          *
-         * <code>bool scramble_audio_data = 10;</code>
+         * <code>bool scramble_audio_data = 11;</code>
          * @return The scrambleAudioData.
          */
         boolean getScrambleAudioData();
@@ -7846,7 +7852,7 @@ public final class RedvoxApiM {
          * Should station backfill unsent data?
          * </pre>
          *
-         * <code>bool provide_backfill = 11;</code>
+         * <code>bool provide_backfill = 12;</code>
          * @return The provideBackfill.
          */
         boolean getProvideBackfill();
@@ -7856,7 +7862,7 @@ public final class RedvoxApiM {
          * Does station remove DC offset?
          * </pre>
          *
-         * <code>bool remove_sensor_dc_offset = 12;</code>
+         * <code>bool remove_sensor_dc_offset = 13;</code>
          * @return The removeSensorDcOffset.
          */
         boolean getRemoveSensorDcOffset();
@@ -7866,7 +7872,7 @@ public final class RedvoxApiM {
          * Station FFT overlap
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 14;</code>
          * @return The enum numeric value on the wire for fftOverlap.
          */
         int getFftOverlapValue();
@@ -7875,7 +7881,7 @@ public final class RedvoxApiM {
          * Station FFT overlap
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 14;</code>
          * @return The fftOverlap.
          */
         io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.FftOverlap getFftOverlap();
@@ -7885,7 +7891,7 @@ public final class RedvoxApiM {
          * Should station use custom time synch server?
          * </pre>
          *
-         * <code>bool use_custom_time_sync_server = 14;</code>
+         * <code>bool use_custom_time_sync_server = 15;</code>
          * @return The useCustomTimeSyncServer.
          */
         boolean getUseCustomTimeSyncServer();
@@ -7895,7 +7901,7 @@ public final class RedvoxApiM {
          * URL of custom time synch server
          * </pre>
          *
-         * <code>string time_sync_server_url = 15;</code>
+         * <code>string time_sync_server_url = 16;</code>
          * @return The timeSyncServerUrl.
          */
         java.lang.String getTimeSyncServerUrl();
@@ -7904,7 +7910,7 @@ public final class RedvoxApiM {
          * URL of custom time synch server
          * </pre>
          *
-         * <code>string time_sync_server_url = 15;</code>
+         * <code>string time_sync_server_url = 16;</code>
          * @return The bytes for timeSyncServerUrl.
          */
         com.google.protobuf.ByteString
@@ -7915,7 +7921,7 @@ public final class RedvoxApiM {
          * Should station use custom data server?
          * </pre>
          *
-         * <code>bool use_custom_data_server = 16;</code>
+         * <code>bool use_custom_data_server = 17;</code>
          * @return The useCustomDataServer.
          */
         boolean getUseCustomDataServer();
@@ -7925,7 +7931,7 @@ public final class RedvoxApiM {
          * URL of custom data server
          * </pre>
          *
-         * <code>string data_server_url = 17;</code>
+         * <code>string data_server_url = 18;</code>
          * @return The dataServerUrl.
          */
         java.lang.String getDataServerUrl();
@@ -7934,7 +7940,7 @@ public final class RedvoxApiM {
          * URL of custom data server
          * </pre>
          *
-         * <code>string data_server_url = 17;</code>
+         * <code>string data_server_url = 18;</code>
          * @return The bytes for dataServerUrl.
          */
         com.google.protobuf.ByteString
@@ -7945,7 +7951,7 @@ public final class RedvoxApiM {
          * Should station use custom auth server
          * </pre>
          *
-         * <code>bool use_custom_auth_server = 18;</code>
+         * <code>bool use_custom_auth_server = 19;</code>
          * @return The useCustomAuthServer.
          */
         boolean getUseCustomAuthServer();
@@ -7955,7 +7961,7 @@ public final class RedvoxApiM {
          * URL of custom auth server
          * </pre>
          *
-         * <code>string auth_server_url = 19;</code>
+         * <code>string auth_server_url = 20;</code>
          * @return The authServerUrl.
          */
         java.lang.String getAuthServerUrl();
@@ -7964,7 +7970,7 @@ public final class RedvoxApiM {
          * URL of custom auth server
          * </pre>
          *
-         * <code>string auth_server_url = 19;</code>
+         * <code>string auth_server_url = 20;</code>
          * @return The bytes for authServerUrl.
          */
         com.google.protobuf.ByteString
@@ -7975,7 +7981,7 @@ public final class RedvoxApiM {
          * Should station auto delete data?
          * </pre>
          *
-         * <code>bool auto_delete_data_files = 20;</code>
+         * <code>bool auto_delete_data_files = 21;</code>
          * @return The autoDeleteDataFiles.
          */
         boolean getAutoDeleteDataFiles();
@@ -7985,7 +7991,7 @@ public final class RedvoxApiM {
          * Station data allowance in bytes
          * </pre>
          *
-         * <code>float storage_space_allowance = 21;</code>
+         * <code>float storage_space_allowance = 22;</code>
          * @return The storageSpaceAllowance.
          */
         float getStorageSpaceAllowance();
@@ -7995,7 +8001,7 @@ public final class RedvoxApiM {
          * Should station use SD card for storage?
          * </pre>
          *
-         * <code>bool use_sd_card_for_data_storage = 22;</code>
+         * <code>bool use_sd_card_for_data_storage = 23;</code>
          * @return The useSdCardForDataStorage.
          */
         boolean getUseSdCardForDataStorage();
@@ -8005,7 +8011,7 @@ public final class RedvoxApiM {
          * Should station use location services?
          * </pre>
          *
-         * <code>bool use_location_services = 23;</code>
+         * <code>bool use_location_services = 24;</code>
          * @return The useLocationServices.
          */
         boolean getUseLocationServices();
@@ -8015,7 +8021,7 @@ public final class RedvoxApiM {
          * User set latitude decimal degrees
          * </pre>
          *
-         * <code>double use_latitude = 24;</code>
+         * <code>double use_latitude = 25;</code>
          * @return The useLatitude.
          */
         double getUseLatitude();
@@ -8025,7 +8031,7 @@ public final class RedvoxApiM {
          * User set longitude decimal degrees
          * </pre>
          *
-         * <code>double use_longitude = 25;</code>
+         * <code>double use_longitude = 26;</code>
          * @return The useLongitude.
          */
         double getUseLongitude();
@@ -8035,7 +8041,7 @@ public final class RedvoxApiM {
          * User set altitude meters
          * </pre>
          *
-         * <code>float use_altitude = 26;</code>
+         * <code>float use_altitude = 27;</code>
          * @return The useAltitude.
          */
         float getUseAltitude();
@@ -8045,7 +8051,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 27;</code>
+         * <code>map&lt;string, string&gt; metadata = 28;</code>
          */
         int getMetadataCount();
         /**
@@ -8053,7 +8059,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 27;</code>
+         * <code>map&lt;string, string&gt; metadata = 28;</code>
          */
         boolean containsMetadata(
             java.lang.String key);
@@ -8068,7 +8074,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 27;</code>
+         * <code>map&lt;string, string&gt; metadata = 28;</code>
          */
         java.util.Map<java.lang.String, java.lang.String>
         getMetadataMap();
@@ -8077,7 +8083,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 27;</code>
+         * <code>map&lt;string, string&gt; metadata = 28;</code>
          */
 
         java.lang.String getMetadataOrDefault(
@@ -8088,7 +8094,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 27;</code>
+         * <code>map&lt;string, string&gt; metadata = 28;</code>
          */
 
         java.lang.String getMetadataOrThrow(
@@ -8159,13 +8165,18 @@ public final class RedvoxApiM {
                   audioSamplingRate_ = rawValue;
                   break;
                 }
-                case 16: {
+                case 21: {
+
+                  samplesPerWindow_ = input.readFloat();
+                  break;
+                }
+                case 24: {
                   int rawValue = input.readEnum();
 
                   audioSourceTuning_ = rawValue;
                   break;
                 }
-                case 24: {
+                case 32: {
                   int rawValue = input.readEnum();
                   if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                     additionalInputSensors_ = new java.util.ArrayList<java.lang.Integer>();
@@ -8174,7 +8185,7 @@ public final class RedvoxApiM {
                   additionalInputSensors_.add(rawValue);
                   break;
                 }
-                case 26: {
+                case 34: {
                   int length = input.readRawVarint32();
                   int oldLimit = input.pushLimit(length);
                   while(input.getBytesUntilLimit() > 0) {
@@ -8188,128 +8199,128 @@ public final class RedvoxApiM {
                   input.popLimit(oldLimit);
                   break;
                 }
-                case 32: {
+                case 40: {
 
                   automaticallyRecord_ = input.readBool();
                   break;
                 }
-                case 40: {
+                case 48: {
 
                   launchAtPowerUp_ = input.readBool();
-                  break;
-                }
-                case 50: {
-                  java.lang.String s = input.readStringRequireUtf8();
-
-                  stationId_ = s;
                   break;
                 }
                 case 58: {
                   java.lang.String s = input.readStringRequireUtf8();
 
-                  stationDescription_ = s;
+                  stationId_ = s;
                   break;
                 }
-                case 64: {
+                case 66: {
+                  java.lang.String s = input.readStringRequireUtf8();
 
-                  pushToServer_ = input.readBool();
+                  stationDescription_ = s;
                   break;
                 }
                 case 72: {
 
-                  publishDataAsPrivate_ = input.readBool();
+                  pushToServer_ = input.readBool();
                   break;
                 }
                 case 80: {
 
-                  scrambleAudioData_ = input.readBool();
+                  publishDataAsPrivate_ = input.readBool();
                   break;
                 }
                 case 88: {
 
-                  provideBackfill_ = input.readBool();
+                  scrambleAudioData_ = input.readBool();
                   break;
                 }
                 case 96: {
 
-                  removeSensorDcOffset_ = input.readBool();
+                  provideBackfill_ = input.readBool();
                   break;
                 }
                 case 104: {
+
+                  removeSensorDcOffset_ = input.readBool();
+                  break;
+                }
+                case 112: {
                   int rawValue = input.readEnum();
 
                   fftOverlap_ = rawValue;
                   break;
                 }
-                case 112: {
+                case 120: {
 
                   useCustomTimeSyncServer_ = input.readBool();
                   break;
                 }
-                case 122: {
+                case 130: {
                   java.lang.String s = input.readStringRequireUtf8();
 
                   timeSyncServerUrl_ = s;
                   break;
                 }
-                case 128: {
+                case 136: {
 
                   useCustomDataServer_ = input.readBool();
                   break;
                 }
-                case 138: {
+                case 146: {
                   java.lang.String s = input.readStringRequireUtf8();
 
                   dataServerUrl_ = s;
                   break;
                 }
-                case 144: {
+                case 152: {
 
                   useCustomAuthServer_ = input.readBool();
                   break;
                 }
-                case 154: {
+                case 162: {
                   java.lang.String s = input.readStringRequireUtf8();
 
                   authServerUrl_ = s;
                   break;
                 }
-                case 160: {
+                case 168: {
 
                   autoDeleteDataFiles_ = input.readBool();
                   break;
                 }
-                case 173: {
+                case 181: {
 
                   storageSpaceAllowance_ = input.readFloat();
                   break;
                 }
-                case 176: {
+                case 184: {
 
                   useSdCardForDataStorage_ = input.readBool();
                   break;
                 }
-                case 184: {
+                case 192: {
 
                   useLocationServices_ = input.readBool();
                   break;
                 }
-                case 193: {
+                case 201: {
 
                   useLatitude_ = input.readDouble();
                   break;
                 }
-                case 201: {
+                case 209: {
 
                   useLongitude_ = input.readDouble();
                   break;
                 }
-                case 213: {
+                case 221: {
 
                   useAltitude_ = input.readFloat();
                   break;
                 }
-                case 218: {
+                case 226: {
                   if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                     metadata_ = com.google.protobuf.MapField.newMapField(
                         MetadataDefaultEntryHolder.defaultEntry);
@@ -8354,7 +8365,7 @@ public final class RedvoxApiM {
         protected com.google.protobuf.MapField internalGetMapField(
             int number) {
           switch (number) {
-            case 27:
+            case 28:
               return internalGetMetadata();
             default:
               throw new RuntimeException(
@@ -9035,14 +9046,24 @@ public final class RedvoxApiM {
           return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRate.UNRECOGNIZED : result;
         }
 
-        public static final int AUDIO_SOURCE_TUNING_FIELD_NUMBER = 2;
+        public static final int SAMPLES_PER_WINDOW_FIELD_NUMBER = 2;
+        private float samplesPerWindow_;
+        /**
+         * <code>float samples_per_window = 2;</code>
+         * @return The samplesPerWindow.
+         */
+        public float getSamplesPerWindow() {
+          return samplesPerWindow_;
+        }
+
+        public static final int AUDIO_SOURCE_TUNING_FIELD_NUMBER = 3;
         private int audioSourceTuning_;
         /**
          * <pre>
          * The selected audio source tuning
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 2;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 3;</code>
          * @return The enum numeric value on the wire for audioSourceTuning.
          */
         public int getAudioSourceTuningValue() {
@@ -9053,7 +9074,7 @@ public final class RedvoxApiM {
          * The selected audio source tuning
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 2;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 3;</code>
          * @return The audioSourceTuning.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning getAudioSourceTuning() {
@@ -9062,7 +9083,7 @@ public final class RedvoxApiM {
           return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning.UNRECOGNIZED : result;
         }
 
-        public static final int ADDITIONAL_INPUT_SENSORS_FIELD_NUMBER = 3;
+        public static final int ADDITIONAL_INPUT_SENSORS_FIELD_NUMBER = 4;
         private java.util.List<java.lang.Integer> additionalInputSensors_;
         private static final com.google.protobuf.Internal.ListAdapter.Converter<
             java.lang.Integer, io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.InputSensor> additionalInputSensors_converter_ =
@@ -9079,7 +9100,7 @@ public final class RedvoxApiM {
          * Additional input sensors
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
          * @return A list containing the additionalInputSensors.
          */
         public java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.InputSensor> getAdditionalInputSensorsList() {
@@ -9091,7 +9112,7 @@ public final class RedvoxApiM {
          * Additional input sensors
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
          * @return The count of additionalInputSensors.
          */
         public int getAdditionalInputSensorsCount() {
@@ -9102,7 +9123,7 @@ public final class RedvoxApiM {
          * Additional input sensors
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
          * @param index The index of the element to return.
          * @return The additionalInputSensors at the given index.
          */
@@ -9114,7 +9135,7 @@ public final class RedvoxApiM {
          * Additional input sensors
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
          * @return A list containing the enum numeric values on the wire for additionalInputSensors.
          */
         public java.util.List<java.lang.Integer>
@@ -9126,7 +9147,7 @@ public final class RedvoxApiM {
          * Additional input sensors
          * </pre>
          *
-         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+         * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
          * @param index The index of the value to return.
          * @return The enum numeric value on the wire of additionalInputSensors at the given index.
          */
@@ -9135,42 +9156,42 @@ public final class RedvoxApiM {
         }
         private int additionalInputSensorsMemoizedSerializedSize;
 
-        public static final int AUTOMATICALLY_RECORD_FIELD_NUMBER = 4;
+        public static final int AUTOMATICALLY_RECORD_FIELD_NUMBER = 5;
         private boolean automaticallyRecord_;
         /**
          * <pre>
          * Station automatically records on start
          * </pre>
          *
-         * <code>bool automatically_record = 4;</code>
+         * <code>bool automatically_record = 5;</code>
          * @return The automaticallyRecord.
          */
         public boolean getAutomaticallyRecord() {
           return automaticallyRecord_;
         }
 
-        public static final int LAUNCH_AT_POWER_UP_FIELD_NUMBER = 5;
+        public static final int LAUNCH_AT_POWER_UP_FIELD_NUMBER = 6;
         private boolean launchAtPowerUp_;
         /**
          * <pre>
          * App automatically starts on station
          * </pre>
          *
-         * <code>bool launch_at_power_up = 5;</code>
+         * <code>bool launch_at_power_up = 6;</code>
          * @return The launchAtPowerUp.
          */
         public boolean getLaunchAtPowerUp() {
           return launchAtPowerUp_;
         }
 
-        public static final int STATION_ID_FIELD_NUMBER = 6;
+        public static final int STATION_ID_FIELD_NUMBER = 7;
         private volatile java.lang.Object stationId_;
         /**
          * <pre>
          * User selectable station id
          * </pre>
          *
-         * <code>string station_id = 6;</code>
+         * <code>string station_id = 7;</code>
          * @return The stationId.
          */
         public java.lang.String getStationId() {
@@ -9190,7 +9211,7 @@ public final class RedvoxApiM {
          * User selectable station id
          * </pre>
          *
-         * <code>string station_id = 6;</code>
+         * <code>string station_id = 7;</code>
          * @return The bytes for stationId.
          */
         public com.google.protobuf.ByteString
@@ -9207,14 +9228,14 @@ public final class RedvoxApiM {
           }
         }
 
-        public static final int STATION_DESCRIPTION_FIELD_NUMBER = 7;
+        public static final int STATION_DESCRIPTION_FIELD_NUMBER = 8;
         private volatile java.lang.Object stationDescription_;
         /**
          * <pre>
          * User selectable station description
          * </pre>
          *
-         * <code>string station_description = 7;</code>
+         * <code>string station_description = 8;</code>
          * @return The stationDescription.
          */
         public java.lang.String getStationDescription() {
@@ -9234,7 +9255,7 @@ public final class RedvoxApiM {
          * User selectable station description
          * </pre>
          *
-         * <code>string station_description = 7;</code>
+         * <code>string station_description = 8;</code>
          * @return The bytes for stationDescription.
          */
         public com.google.protobuf.ByteString
@@ -9251,84 +9272,84 @@ public final class RedvoxApiM {
           }
         }
 
-        public static final int PUSH_TO_SERVER_FIELD_NUMBER = 8;
+        public static final int PUSH_TO_SERVER_FIELD_NUMBER = 9;
         private boolean pushToServer_;
         /**
          * <pre>
          * Is station data pushed to server?
          * </pre>
          *
-         * <code>bool push_to_server = 8;</code>
+         * <code>bool push_to_server = 9;</code>
          * @return The pushToServer.
          */
         public boolean getPushToServer() {
           return pushToServer_;
         }
 
-        public static final int PUBLISH_DATA_AS_PRIVATE_FIELD_NUMBER = 9;
+        public static final int PUBLISH_DATA_AS_PRIVATE_FIELD_NUMBER = 10;
         private boolean publishDataAsPrivate_;
         /**
          * <pre>
          * Is station data published as private?
          * </pre>
          *
-         * <code>bool publish_data_as_private = 9;</code>
+         * <code>bool publish_data_as_private = 10;</code>
          * @return The publishDataAsPrivate.
          */
         public boolean getPublishDataAsPrivate() {
           return publishDataAsPrivate_;
         }
 
-        public static final int SCRAMBLE_AUDIO_DATA_FIELD_NUMBER = 10;
+        public static final int SCRAMBLE_AUDIO_DATA_FIELD_NUMBER = 11;
         private boolean scrambleAudioData_;
         /**
          * <pre>
          * Is station audio data scrambled?
          * </pre>
          *
-         * <code>bool scramble_audio_data = 10;</code>
+         * <code>bool scramble_audio_data = 11;</code>
          * @return The scrambleAudioData.
          */
         public boolean getScrambleAudioData() {
           return scrambleAudioData_;
         }
 
-        public static final int PROVIDE_BACKFILL_FIELD_NUMBER = 11;
+        public static final int PROVIDE_BACKFILL_FIELD_NUMBER = 12;
         private boolean provideBackfill_;
         /**
          * <pre>
          * Should station backfill unsent data?
          * </pre>
          *
-         * <code>bool provide_backfill = 11;</code>
+         * <code>bool provide_backfill = 12;</code>
          * @return The provideBackfill.
          */
         public boolean getProvideBackfill() {
           return provideBackfill_;
         }
 
-        public static final int REMOVE_SENSOR_DC_OFFSET_FIELD_NUMBER = 12;
+        public static final int REMOVE_SENSOR_DC_OFFSET_FIELD_NUMBER = 13;
         private boolean removeSensorDcOffset_;
         /**
          * <pre>
          * Does station remove DC offset?
          * </pre>
          *
-         * <code>bool remove_sensor_dc_offset = 12;</code>
+         * <code>bool remove_sensor_dc_offset = 13;</code>
          * @return The removeSensorDcOffset.
          */
         public boolean getRemoveSensorDcOffset() {
           return removeSensorDcOffset_;
         }
 
-        public static final int FFT_OVERLAP_FIELD_NUMBER = 13;
+        public static final int FFT_OVERLAP_FIELD_NUMBER = 14;
         private int fftOverlap_;
         /**
          * <pre>
          * Station FFT overlap
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 14;</code>
          * @return The enum numeric value on the wire for fftOverlap.
          */
         public int getFftOverlapValue() {
@@ -9339,7 +9360,7 @@ public final class RedvoxApiM {
          * Station FFT overlap
          * </pre>
          *
-         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 13;</code>
+         * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 14;</code>
          * @return The fftOverlap.
          */
         public io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.FftOverlap getFftOverlap() {
@@ -9348,28 +9369,28 @@ public final class RedvoxApiM {
           return result == null ? io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.FftOverlap.UNRECOGNIZED : result;
         }
 
-        public static final int USE_CUSTOM_TIME_SYNC_SERVER_FIELD_NUMBER = 14;
+        public static final int USE_CUSTOM_TIME_SYNC_SERVER_FIELD_NUMBER = 15;
         private boolean useCustomTimeSyncServer_;
         /**
          * <pre>
          * Should station use custom time synch server?
          * </pre>
          *
-         * <code>bool use_custom_time_sync_server = 14;</code>
+         * <code>bool use_custom_time_sync_server = 15;</code>
          * @return The useCustomTimeSyncServer.
          */
         public boolean getUseCustomTimeSyncServer() {
           return useCustomTimeSyncServer_;
         }
 
-        public static final int TIME_SYNC_SERVER_URL_FIELD_NUMBER = 15;
+        public static final int TIME_SYNC_SERVER_URL_FIELD_NUMBER = 16;
         private volatile java.lang.Object timeSyncServerUrl_;
         /**
          * <pre>
          * URL of custom time synch server
          * </pre>
          *
-         * <code>string time_sync_server_url = 15;</code>
+         * <code>string time_sync_server_url = 16;</code>
          * @return The timeSyncServerUrl.
          */
         public java.lang.String getTimeSyncServerUrl() {
@@ -9389,7 +9410,7 @@ public final class RedvoxApiM {
          * URL of custom time synch server
          * </pre>
          *
-         * <code>string time_sync_server_url = 15;</code>
+         * <code>string time_sync_server_url = 16;</code>
          * @return The bytes for timeSyncServerUrl.
          */
         public com.google.protobuf.ByteString
@@ -9406,28 +9427,28 @@ public final class RedvoxApiM {
           }
         }
 
-        public static final int USE_CUSTOM_DATA_SERVER_FIELD_NUMBER = 16;
+        public static final int USE_CUSTOM_DATA_SERVER_FIELD_NUMBER = 17;
         private boolean useCustomDataServer_;
         /**
          * <pre>
          * Should station use custom data server?
          * </pre>
          *
-         * <code>bool use_custom_data_server = 16;</code>
+         * <code>bool use_custom_data_server = 17;</code>
          * @return The useCustomDataServer.
          */
         public boolean getUseCustomDataServer() {
           return useCustomDataServer_;
         }
 
-        public static final int DATA_SERVER_URL_FIELD_NUMBER = 17;
+        public static final int DATA_SERVER_URL_FIELD_NUMBER = 18;
         private volatile java.lang.Object dataServerUrl_;
         /**
          * <pre>
          * URL of custom data server
          * </pre>
          *
-         * <code>string data_server_url = 17;</code>
+         * <code>string data_server_url = 18;</code>
          * @return The dataServerUrl.
          */
         public java.lang.String getDataServerUrl() {
@@ -9447,7 +9468,7 @@ public final class RedvoxApiM {
          * URL of custom data server
          * </pre>
          *
-         * <code>string data_server_url = 17;</code>
+         * <code>string data_server_url = 18;</code>
          * @return The bytes for dataServerUrl.
          */
         public com.google.protobuf.ByteString
@@ -9464,28 +9485,28 @@ public final class RedvoxApiM {
           }
         }
 
-        public static final int USE_CUSTOM_AUTH_SERVER_FIELD_NUMBER = 18;
+        public static final int USE_CUSTOM_AUTH_SERVER_FIELD_NUMBER = 19;
         private boolean useCustomAuthServer_;
         /**
          * <pre>
          * Should station use custom auth server
          * </pre>
          *
-         * <code>bool use_custom_auth_server = 18;</code>
+         * <code>bool use_custom_auth_server = 19;</code>
          * @return The useCustomAuthServer.
          */
         public boolean getUseCustomAuthServer() {
           return useCustomAuthServer_;
         }
 
-        public static final int AUTH_SERVER_URL_FIELD_NUMBER = 19;
+        public static final int AUTH_SERVER_URL_FIELD_NUMBER = 20;
         private volatile java.lang.Object authServerUrl_;
         /**
          * <pre>
          * URL of custom auth server
          * </pre>
          *
-         * <code>string auth_server_url = 19;</code>
+         * <code>string auth_server_url = 20;</code>
          * @return The authServerUrl.
          */
         public java.lang.String getAuthServerUrl() {
@@ -9505,7 +9526,7 @@ public final class RedvoxApiM {
          * URL of custom auth server
          * </pre>
          *
-         * <code>string auth_server_url = 19;</code>
+         * <code>string auth_server_url = 20;</code>
          * @return The bytes for authServerUrl.
          */
         public com.google.protobuf.ByteString
@@ -9522,105 +9543,105 @@ public final class RedvoxApiM {
           }
         }
 
-        public static final int AUTO_DELETE_DATA_FILES_FIELD_NUMBER = 20;
+        public static final int AUTO_DELETE_DATA_FILES_FIELD_NUMBER = 21;
         private boolean autoDeleteDataFiles_;
         /**
          * <pre>
          * Should station auto delete data?
          * </pre>
          *
-         * <code>bool auto_delete_data_files = 20;</code>
+         * <code>bool auto_delete_data_files = 21;</code>
          * @return The autoDeleteDataFiles.
          */
         public boolean getAutoDeleteDataFiles() {
           return autoDeleteDataFiles_;
         }
 
-        public static final int STORAGE_SPACE_ALLOWANCE_FIELD_NUMBER = 21;
+        public static final int STORAGE_SPACE_ALLOWANCE_FIELD_NUMBER = 22;
         private float storageSpaceAllowance_;
         /**
          * <pre>
          * Station data allowance in bytes
          * </pre>
          *
-         * <code>float storage_space_allowance = 21;</code>
+         * <code>float storage_space_allowance = 22;</code>
          * @return The storageSpaceAllowance.
          */
         public float getStorageSpaceAllowance() {
           return storageSpaceAllowance_;
         }
 
-        public static final int USE_SD_CARD_FOR_DATA_STORAGE_FIELD_NUMBER = 22;
+        public static final int USE_SD_CARD_FOR_DATA_STORAGE_FIELD_NUMBER = 23;
         private boolean useSdCardForDataStorage_;
         /**
          * <pre>
          * Should station use SD card for storage?
          * </pre>
          *
-         * <code>bool use_sd_card_for_data_storage = 22;</code>
+         * <code>bool use_sd_card_for_data_storage = 23;</code>
          * @return The useSdCardForDataStorage.
          */
         public boolean getUseSdCardForDataStorage() {
           return useSdCardForDataStorage_;
         }
 
-        public static final int USE_LOCATION_SERVICES_FIELD_NUMBER = 23;
+        public static final int USE_LOCATION_SERVICES_FIELD_NUMBER = 24;
         private boolean useLocationServices_;
         /**
          * <pre>
          * Should station use location services?
          * </pre>
          *
-         * <code>bool use_location_services = 23;</code>
+         * <code>bool use_location_services = 24;</code>
          * @return The useLocationServices.
          */
         public boolean getUseLocationServices() {
           return useLocationServices_;
         }
 
-        public static final int USE_LATITUDE_FIELD_NUMBER = 24;
+        public static final int USE_LATITUDE_FIELD_NUMBER = 25;
         private double useLatitude_;
         /**
          * <pre>
          * User set latitude decimal degrees
          * </pre>
          *
-         * <code>double use_latitude = 24;</code>
+         * <code>double use_latitude = 25;</code>
          * @return The useLatitude.
          */
         public double getUseLatitude() {
           return useLatitude_;
         }
 
-        public static final int USE_LONGITUDE_FIELD_NUMBER = 25;
+        public static final int USE_LONGITUDE_FIELD_NUMBER = 26;
         private double useLongitude_;
         /**
          * <pre>
          * User set longitude decimal degrees
          * </pre>
          *
-         * <code>double use_longitude = 25;</code>
+         * <code>double use_longitude = 26;</code>
          * @return The useLongitude.
          */
         public double getUseLongitude() {
           return useLongitude_;
         }
 
-        public static final int USE_ALTITUDE_FIELD_NUMBER = 26;
+        public static final int USE_ALTITUDE_FIELD_NUMBER = 27;
         private float useAltitude_;
         /**
          * <pre>
          * User set altitude meters
          * </pre>
          *
-         * <code>float use_altitude = 26;</code>
+         * <code>float use_altitude = 27;</code>
          * @return The useAltitude.
          */
         public float getUseAltitude() {
           return useAltitude_;
         }
 
-        public static final int METADATA_FIELD_NUMBER = 27;
+        public static final int METADATA_FIELD_NUMBER = 28;
         private static final class MetadataDefaultEntryHolder {
           static final com.google.protobuf.MapEntry<
               java.lang.String, java.lang.String> defaultEntry =
@@ -9651,7 +9672,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 27;</code>
+         * <code>map&lt;string, string&gt; metadata = 28;</code>
          */
 
         public boolean containsMetadata(
@@ -9671,7 +9692,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 27;</code>
+         * <code>map&lt;string, string&gt; metadata = 28;</code>
          */
 
         public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -9682,7 +9703,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 27;</code>
+         * <code>map&lt;string, string&gt; metadata = 28;</code>
          */
 
         public java.lang.String getMetadataOrDefault(
@@ -9698,7 +9719,7 @@ public final class RedvoxApiM {
          * A map from string to string for including untyped metadata
          * </pre>
          *
-         * <code>map&lt;string, string&gt; metadata = 27;</code>
+         * <code>map&lt;string, string&gt; metadata = 28;</code>
          */
 
         public java.lang.String getMetadataOrThrow(
@@ -9730,91 +9751,94 @@ public final class RedvoxApiM {
           if (audioSamplingRate_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRate.UNKNOWN_SAMPLING_RATE.getNumber()) {
             output.writeEnum(1, audioSamplingRate_);
           }
+          if (samplesPerWindow_ != 0F) {
+            output.writeFloat(2, samplesPerWindow_);
+          }
           if (audioSourceTuning_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning.UNKNOWN_TUNING.getNumber()) {
-            output.writeEnum(2, audioSourceTuning_);
+            output.writeEnum(3, audioSourceTuning_);
           }
           if (getAdditionalInputSensorsList().size() > 0) {
-            output.writeUInt32NoTag(26);
+            output.writeUInt32NoTag(34);
             output.writeUInt32NoTag(additionalInputSensorsMemoizedSerializedSize);
           }
           for (int i = 0; i < additionalInputSensors_.size(); i++) {
             output.writeEnumNoTag(additionalInputSensors_.get(i));
           }
           if (automaticallyRecord_ != false) {
-            output.writeBool(4, automaticallyRecord_);
+            output.writeBool(5, automaticallyRecord_);
           }
           if (launchAtPowerUp_ != false) {
-            output.writeBool(5, launchAtPowerUp_);
+            output.writeBool(6, launchAtPowerUp_);
           }
           if (!getStationIdBytes().isEmpty()) {
-            com.google.protobuf.GeneratedMessageV3.writeString(output, 6, stationId_);
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 7, stationId_);
           }
           if (!getStationDescriptionBytes().isEmpty()) {
-            com.google.protobuf.GeneratedMessageV3.writeString(output, 7, stationDescription_);
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 8, stationDescription_);
           }
           if (pushToServer_ != false) {
-            output.writeBool(8, pushToServer_);
+            output.writeBool(9, pushToServer_);
           }
           if (publishDataAsPrivate_ != false) {
-            output.writeBool(9, publishDataAsPrivate_);
+            output.writeBool(10, publishDataAsPrivate_);
           }
           if (scrambleAudioData_ != false) {
-            output.writeBool(10, scrambleAudioData_);
+            output.writeBool(11, scrambleAudioData_);
           }
           if (provideBackfill_ != false) {
-            output.writeBool(11, provideBackfill_);
+            output.writeBool(12, provideBackfill_);
           }
           if (removeSensorDcOffset_ != false) {
-            output.writeBool(12, removeSensorDcOffset_);
+            output.writeBool(13, removeSensorDcOffset_);
           }
           if (fftOverlap_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.FftOverlap.UNKNOWN.getNumber()) {
-            output.writeEnum(13, fftOverlap_);
+            output.writeEnum(14, fftOverlap_);
           }
           if (useCustomTimeSyncServer_ != false) {
-            output.writeBool(14, useCustomTimeSyncServer_);
+            output.writeBool(15, useCustomTimeSyncServer_);
           }
           if (!getTimeSyncServerUrlBytes().isEmpty()) {
-            com.google.protobuf.GeneratedMessageV3.writeString(output, 15, timeSyncServerUrl_);
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 16, timeSyncServerUrl_);
           }
           if (useCustomDataServer_ != false) {
-            output.writeBool(16, useCustomDataServer_);
+            output.writeBool(17, useCustomDataServer_);
           }
           if (!getDataServerUrlBytes().isEmpty()) {
-            com.google.protobuf.GeneratedMessageV3.writeString(output, 17, dataServerUrl_);
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 18, dataServerUrl_);
           }
           if (useCustomAuthServer_ != false) {
-            output.writeBool(18, useCustomAuthServer_);
+            output.writeBool(19, useCustomAuthServer_);
           }
           if (!getAuthServerUrlBytes().isEmpty()) {
-            com.google.protobuf.GeneratedMessageV3.writeString(output, 19, authServerUrl_);
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 20, authServerUrl_);
           }
           if (autoDeleteDataFiles_ != false) {
-            output.writeBool(20, autoDeleteDataFiles_);
+            output.writeBool(21, autoDeleteDataFiles_);
           }
           if (storageSpaceAllowance_ != 0F) {
-            output.writeFloat(21, storageSpaceAllowance_);
+            output.writeFloat(22, storageSpaceAllowance_);
           }
           if (useSdCardForDataStorage_ != false) {
-            output.writeBool(22, useSdCardForDataStorage_);
+            output.writeBool(23, useSdCardForDataStorage_);
           }
           if (useLocationServices_ != false) {
-            output.writeBool(23, useLocationServices_);
+            output.writeBool(24, useLocationServices_);
           }
           if (useLatitude_ != 0D) {
-            output.writeDouble(24, useLatitude_);
+            output.writeDouble(25, useLatitude_);
           }
           if (useLongitude_ != 0D) {
-            output.writeDouble(25, useLongitude_);
+            output.writeDouble(26, useLongitude_);
           }
           if (useAltitude_ != 0F) {
-            output.writeFloat(26, useAltitude_);
+            output.writeFloat(27, useAltitude_);
           }
           com.google.protobuf.GeneratedMessageV3
             .serializeStringMapTo(
               output,
               internalGetMetadata(),
               MetadataDefaultEntryHolder.defaultEntry,
-              27);
+              28);
           unknownFields.writeTo(output);
         }
 
@@ -9828,9 +9852,13 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(1, audioSamplingRate_);
           }
+          if (samplesPerWindow_ != 0F) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeFloatSize(2, samplesPerWindow_);
+          }
           if (audioSourceTuning_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning.UNKNOWN_TUNING.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
-              .computeEnumSize(2, audioSourceTuning_);
+              .computeEnumSize(3, audioSourceTuning_);
           }
           {
             int dataSize = 0;
@@ -9846,90 +9874,90 @@ public final class RedvoxApiM {
           }
           if (automaticallyRecord_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(4, automaticallyRecord_);
+              .computeBoolSize(5, automaticallyRecord_);
           }
           if (launchAtPowerUp_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(5, launchAtPowerUp_);
+              .computeBoolSize(6, launchAtPowerUp_);
           }
           if (!getStationIdBytes().isEmpty()) {
-            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, stationId_);
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, stationId_);
           }
           if (!getStationDescriptionBytes().isEmpty()) {
-            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, stationDescription_);
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, stationDescription_);
           }
           if (pushToServer_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(8, pushToServer_);
+              .computeBoolSize(9, pushToServer_);
           }
           if (publishDataAsPrivate_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(9, publishDataAsPrivate_);
+              .computeBoolSize(10, publishDataAsPrivate_);
           }
           if (scrambleAudioData_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(10, scrambleAudioData_);
+              .computeBoolSize(11, scrambleAudioData_);
           }
           if (provideBackfill_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(11, provideBackfill_);
+              .computeBoolSize(12, provideBackfill_);
           }
           if (removeSensorDcOffset_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(12, removeSensorDcOffset_);
+              .computeBoolSize(13, removeSensorDcOffset_);
           }
           if (fftOverlap_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.FftOverlap.UNKNOWN.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
-              .computeEnumSize(13, fftOverlap_);
+              .computeEnumSize(14, fftOverlap_);
           }
           if (useCustomTimeSyncServer_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(14, useCustomTimeSyncServer_);
+              .computeBoolSize(15, useCustomTimeSyncServer_);
           }
           if (!getTimeSyncServerUrlBytes().isEmpty()) {
-            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, timeSyncServerUrl_);
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, timeSyncServerUrl_);
           }
           if (useCustomDataServer_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(16, useCustomDataServer_);
+              .computeBoolSize(17, useCustomDataServer_);
           }
           if (!getDataServerUrlBytes().isEmpty()) {
-            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, dataServerUrl_);
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, dataServerUrl_);
           }
           if (useCustomAuthServer_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(18, useCustomAuthServer_);
+              .computeBoolSize(19, useCustomAuthServer_);
           }
           if (!getAuthServerUrlBytes().isEmpty()) {
-            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, authServerUrl_);
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, authServerUrl_);
           }
           if (autoDeleteDataFiles_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(20, autoDeleteDataFiles_);
+              .computeBoolSize(21, autoDeleteDataFiles_);
           }
           if (storageSpaceAllowance_ != 0F) {
             size += com.google.protobuf.CodedOutputStream
-              .computeFloatSize(21, storageSpaceAllowance_);
+              .computeFloatSize(22, storageSpaceAllowance_);
           }
           if (useSdCardForDataStorage_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(22, useSdCardForDataStorage_);
+              .computeBoolSize(23, useSdCardForDataStorage_);
           }
           if (useLocationServices_ != false) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(23, useLocationServices_);
+              .computeBoolSize(24, useLocationServices_);
           }
           if (useLatitude_ != 0D) {
             size += com.google.protobuf.CodedOutputStream
-              .computeDoubleSize(24, useLatitude_);
+              .computeDoubleSize(25, useLatitude_);
           }
           if (useLongitude_ != 0D) {
             size += com.google.protobuf.CodedOutputStream
-              .computeDoubleSize(25, useLongitude_);
+              .computeDoubleSize(26, useLongitude_);
           }
           if (useAltitude_ != 0F) {
             size += com.google.protobuf.CodedOutputStream
-              .computeFloatSize(26, useAltitude_);
+              .computeFloatSize(27, useAltitude_);
           }
           for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
                : internalGetMetadata().getMap().entrySet()) {
@@ -9939,7 +9967,7 @@ public final class RedvoxApiM {
                 .setValue(entry.getValue())
                 .build();
             size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(27, metadata__);
+                .computeMessageSize(28, metadata__);
           }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
@@ -9957,6 +9985,9 @@ public final class RedvoxApiM {
           io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings other = (io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings) obj;
 
           if (audioSamplingRate_ != other.audioSamplingRate_) return false;
+          if (java.lang.Float.floatToIntBits(getSamplesPerWindow())
+              != java.lang.Float.floatToIntBits(
+                  other.getSamplesPerWindow())) return false;
           if (audioSourceTuning_ != other.audioSourceTuning_) return false;
           if (!additionalInputSensors_.equals(other.additionalInputSensors_)) return false;
           if (getAutomaticallyRecord()
@@ -10023,6 +10054,9 @@ public final class RedvoxApiM {
           hash = (19 * hash) + getDescriptor().hashCode();
           hash = (37 * hash) + AUDIO_SAMPLING_RATE_FIELD_NUMBER;
           hash = (53 * hash) + audioSamplingRate_;
+          hash = (37 * hash) + SAMPLES_PER_WINDOW_FIELD_NUMBER;
+          hash = (53 * hash) + java.lang.Float.floatToIntBits(
+              getSamplesPerWindow());
           hash = (37 * hash) + AUDIO_SOURCE_TUNING_FIELD_NUMBER;
           hash = (53 * hash) + audioSourceTuning_;
           if (getAdditionalInputSensorsCount() > 0) {
@@ -10211,7 +10245,7 @@ public final class RedvoxApiM {
           protected com.google.protobuf.MapField internalGetMapField(
               int number) {
             switch (number) {
-              case 27:
+              case 28:
                 return internalGetMetadata();
               default:
                 throw new RuntimeException(
@@ -10222,7 +10256,7 @@ public final class RedvoxApiM {
           protected com.google.protobuf.MapField internalGetMutableMapField(
               int number) {
             switch (number) {
-              case 27:
+              case 28:
                 return internalGetMutableMetadata();
               default:
                 throw new RuntimeException(
@@ -10256,6 +10290,8 @@ public final class RedvoxApiM {
           public Builder clear() {
             super.clear();
             audioSamplingRate_ = 0;
+
+            samplesPerWindow_ = 0F;
 
             audioSourceTuning_ = 0;
 
@@ -10336,6 +10372,7 @@ public final class RedvoxApiM {
             io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings result = new io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings(this);
             int from_bitField0_ = bitField0_;
             result.audioSamplingRate_ = audioSamplingRate_;
+            result.samplesPerWindow_ = samplesPerWindow_;
             result.audioSourceTuning_ = audioSourceTuning_;
             if (((bitField0_ & 0x00000001) != 0)) {
               additionalInputSensors_ = java.util.Collections.unmodifiableList(additionalInputSensors_);
@@ -10417,6 +10454,9 @@ public final class RedvoxApiM {
             if (other == io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.getDefaultInstance()) return this;
             if (other.audioSamplingRate_ != 0) {
               setAudioSamplingRateValue(other.getAudioSamplingRateValue());
+            }
+            if (other.getSamplesPerWindow() != 0F) {
+              setSamplesPerWindow(other.getSamplesPerWindow());
             }
             if (other.audioSourceTuning_ != 0) {
               setAudioSourceTuningValue(other.getAudioSourceTuningValue());
@@ -10609,13 +10649,43 @@ public final class RedvoxApiM {
             return this;
           }
 
+          private float samplesPerWindow_ ;
+          /**
+           * <code>float samples_per_window = 2;</code>
+           * @return The samplesPerWindow.
+           */
+          public float getSamplesPerWindow() {
+            return samplesPerWindow_;
+          }
+          /**
+           * <code>float samples_per_window = 2;</code>
+           * @param value The samplesPerWindow to set.
+           * @return This builder for chaining.
+           */
+          public Builder setSamplesPerWindow(float value) {
+            
+            samplesPerWindow_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>float samples_per_window = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearSamplesPerWindow() {
+            
+            samplesPerWindow_ = 0F;
+            onChanged();
+            return this;
+          }
+
           private int audioSourceTuning_ = 0;
           /**
            * <pre>
            * The selected audio source tuning
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 2;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 3;</code>
            * @return The enum numeric value on the wire for audioSourceTuning.
            */
           public int getAudioSourceTuningValue() {
@@ -10626,7 +10696,7 @@ public final class RedvoxApiM {
            * The selected audio source tuning
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 2;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 3;</code>
            * @param value The enum numeric value on the wire for audioSourceTuning to set.
            * @return This builder for chaining.
            */
@@ -10640,7 +10710,7 @@ public final class RedvoxApiM {
            * The selected audio source tuning
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 2;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 3;</code>
            * @return The audioSourceTuning.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning getAudioSourceTuning() {
@@ -10653,7 +10723,7 @@ public final class RedvoxApiM {
            * The selected audio source tuning
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 2;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 3;</code>
            * @param value The audioSourceTuning to set.
            * @return This builder for chaining.
            */
@@ -10671,7 +10741,7 @@ public final class RedvoxApiM {
            * The selected audio source tuning
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 2;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning audio_source_tuning = 3;</code>
            * @return This builder for chaining.
            */
           public Builder clearAudioSourceTuning() {
@@ -10694,7 +10764,7 @@ public final class RedvoxApiM {
            * Additional input sensors
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
            * @return A list containing the additionalInputSensors.
            */
           public java.util.List<io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.InputSensor> getAdditionalInputSensorsList() {
@@ -10706,7 +10776,7 @@ public final class RedvoxApiM {
            * Additional input sensors
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
            * @return The count of additionalInputSensors.
            */
           public int getAdditionalInputSensorsCount() {
@@ -10717,7 +10787,7 @@ public final class RedvoxApiM {
            * Additional input sensors
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
            * @param index The index of the element to return.
            * @return The additionalInputSensors at the given index.
            */
@@ -10729,7 +10799,7 @@ public final class RedvoxApiM {
            * Additional input sensors
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
            * @param index The index to set the value at.
            * @param value The additionalInputSensors to set.
            * @return This builder for chaining.
@@ -10749,7 +10819,7 @@ public final class RedvoxApiM {
            * Additional input sensors
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
            * @param value The additionalInputSensors to add.
            * @return This builder for chaining.
            */
@@ -10767,7 +10837,7 @@ public final class RedvoxApiM {
            * Additional input sensors
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
            * @param values The additionalInputSensors to add.
            * @return This builder for chaining.
            */
@@ -10785,7 +10855,7 @@ public final class RedvoxApiM {
            * Additional input sensors
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
            * @return This builder for chaining.
            */
           public Builder clearAdditionalInputSensors() {
@@ -10799,7 +10869,7 @@ public final class RedvoxApiM {
            * Additional input sensors
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
            * @return A list containing the enum numeric values on the wire for additionalInputSensors.
            */
           public java.util.List<java.lang.Integer>
@@ -10811,7 +10881,7 @@ public final class RedvoxApiM {
            * Additional input sensors
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
            * @param index The index of the value to return.
            * @return The enum numeric value on the wire of additionalInputSensors at the given index.
            */
@@ -10823,7 +10893,7 @@ public final class RedvoxApiM {
            * Additional input sensors
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
            * @param index The index of the value to return.
            * @return The enum numeric value on the wire of additionalInputSensors at the given index.
            * @return This builder for chaining.
@@ -10840,7 +10910,7 @@ public final class RedvoxApiM {
            * Additional input sensors
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
            * @param value The enum numeric value on the wire for additionalInputSensors to add.
            * @return This builder for chaining.
            */
@@ -10855,7 +10925,7 @@ public final class RedvoxApiM {
            * Additional input sensors
            * </pre>
            *
-           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 3;</code>
+           * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
            * @param values The enum numeric values on the wire for additionalInputSensors to add.
            * @return This builder for chaining.
            */
@@ -10875,7 +10945,7 @@ public final class RedvoxApiM {
            * Station automatically records on start
            * </pre>
            *
-           * <code>bool automatically_record = 4;</code>
+           * <code>bool automatically_record = 5;</code>
            * @return The automaticallyRecord.
            */
           public boolean getAutomaticallyRecord() {
@@ -10886,7 +10956,7 @@ public final class RedvoxApiM {
            * Station automatically records on start
            * </pre>
            *
-           * <code>bool automatically_record = 4;</code>
+           * <code>bool automatically_record = 5;</code>
            * @param value The automaticallyRecord to set.
            * @return This builder for chaining.
            */
@@ -10901,7 +10971,7 @@ public final class RedvoxApiM {
            * Station automatically records on start
            * </pre>
            *
-           * <code>bool automatically_record = 4;</code>
+           * <code>bool automatically_record = 5;</code>
            * @return This builder for chaining.
            */
           public Builder clearAutomaticallyRecord() {
@@ -10917,7 +10987,7 @@ public final class RedvoxApiM {
            * App automatically starts on station
            * </pre>
            *
-           * <code>bool launch_at_power_up = 5;</code>
+           * <code>bool launch_at_power_up = 6;</code>
            * @return The launchAtPowerUp.
            */
           public boolean getLaunchAtPowerUp() {
@@ -10928,7 +10998,7 @@ public final class RedvoxApiM {
            * App automatically starts on station
            * </pre>
            *
-           * <code>bool launch_at_power_up = 5;</code>
+           * <code>bool launch_at_power_up = 6;</code>
            * @param value The launchAtPowerUp to set.
            * @return This builder for chaining.
            */
@@ -10943,7 +11013,7 @@ public final class RedvoxApiM {
            * App automatically starts on station
            * </pre>
            *
-           * <code>bool launch_at_power_up = 5;</code>
+           * <code>bool launch_at_power_up = 6;</code>
            * @return This builder for chaining.
            */
           public Builder clearLaunchAtPowerUp() {
@@ -10959,7 +11029,7 @@ public final class RedvoxApiM {
            * User selectable station id
            * </pre>
            *
-           * <code>string station_id = 6;</code>
+           * <code>string station_id = 7;</code>
            * @return The stationId.
            */
           public java.lang.String getStationId() {
@@ -10979,7 +11049,7 @@ public final class RedvoxApiM {
            * User selectable station id
            * </pre>
            *
-           * <code>string station_id = 6;</code>
+           * <code>string station_id = 7;</code>
            * @return The bytes for stationId.
            */
           public com.google.protobuf.ByteString
@@ -11000,7 +11070,7 @@ public final class RedvoxApiM {
            * User selectable station id
            * </pre>
            *
-           * <code>string station_id = 6;</code>
+           * <code>string station_id = 7;</code>
            * @param value The stationId to set.
            * @return This builder for chaining.
            */
@@ -11019,7 +11089,7 @@ public final class RedvoxApiM {
            * User selectable station id
            * </pre>
            *
-           * <code>string station_id = 6;</code>
+           * <code>string station_id = 7;</code>
            * @return This builder for chaining.
            */
           public Builder clearStationId() {
@@ -11033,7 +11103,7 @@ public final class RedvoxApiM {
            * User selectable station id
            * </pre>
            *
-           * <code>string station_id = 6;</code>
+           * <code>string station_id = 7;</code>
            * @param value The bytes for stationId to set.
            * @return This builder for chaining.
            */
@@ -11055,7 +11125,7 @@ public final class RedvoxApiM {
            * User selectable station description
            * </pre>
            *
-           * <code>string station_description = 7;</code>
+           * <code>string station_description = 8;</code>
            * @return The stationDescription.
            */
           public java.lang.String getStationDescription() {
@@ -11075,7 +11145,7 @@ public final class RedvoxApiM {
            * User selectable station description
            * </pre>
            *
-           * <code>string station_description = 7;</code>
+           * <code>string station_description = 8;</code>
            * @return The bytes for stationDescription.
            */
           public com.google.protobuf.ByteString
@@ -11096,7 +11166,7 @@ public final class RedvoxApiM {
            * User selectable station description
            * </pre>
            *
-           * <code>string station_description = 7;</code>
+           * <code>string station_description = 8;</code>
            * @param value The stationDescription to set.
            * @return This builder for chaining.
            */
@@ -11115,7 +11185,7 @@ public final class RedvoxApiM {
            * User selectable station description
            * </pre>
            *
-           * <code>string station_description = 7;</code>
+           * <code>string station_description = 8;</code>
            * @return This builder for chaining.
            */
           public Builder clearStationDescription() {
@@ -11129,7 +11199,7 @@ public final class RedvoxApiM {
            * User selectable station description
            * </pre>
            *
-           * <code>string station_description = 7;</code>
+           * <code>string station_description = 8;</code>
            * @param value The bytes for stationDescription to set.
            * @return This builder for chaining.
            */
@@ -11151,7 +11221,7 @@ public final class RedvoxApiM {
            * Is station data pushed to server?
            * </pre>
            *
-           * <code>bool push_to_server = 8;</code>
+           * <code>bool push_to_server = 9;</code>
            * @return The pushToServer.
            */
           public boolean getPushToServer() {
@@ -11162,7 +11232,7 @@ public final class RedvoxApiM {
            * Is station data pushed to server?
            * </pre>
            *
-           * <code>bool push_to_server = 8;</code>
+           * <code>bool push_to_server = 9;</code>
            * @param value The pushToServer to set.
            * @return This builder for chaining.
            */
@@ -11177,7 +11247,7 @@ public final class RedvoxApiM {
            * Is station data pushed to server?
            * </pre>
            *
-           * <code>bool push_to_server = 8;</code>
+           * <code>bool push_to_server = 9;</code>
            * @return This builder for chaining.
            */
           public Builder clearPushToServer() {
@@ -11193,7 +11263,7 @@ public final class RedvoxApiM {
            * Is station data published as private?
            * </pre>
            *
-           * <code>bool publish_data_as_private = 9;</code>
+           * <code>bool publish_data_as_private = 10;</code>
            * @return The publishDataAsPrivate.
            */
           public boolean getPublishDataAsPrivate() {
@@ -11204,7 +11274,7 @@ public final class RedvoxApiM {
            * Is station data published as private?
            * </pre>
            *
-           * <code>bool publish_data_as_private = 9;</code>
+           * <code>bool publish_data_as_private = 10;</code>
            * @param value The publishDataAsPrivate to set.
            * @return This builder for chaining.
            */
@@ -11219,7 +11289,7 @@ public final class RedvoxApiM {
            * Is station data published as private?
            * </pre>
            *
-           * <code>bool publish_data_as_private = 9;</code>
+           * <code>bool publish_data_as_private = 10;</code>
            * @return This builder for chaining.
            */
           public Builder clearPublishDataAsPrivate() {
@@ -11235,7 +11305,7 @@ public final class RedvoxApiM {
            * Is station audio data scrambled?
            * </pre>
            *
-           * <code>bool scramble_audio_data = 10;</code>
+           * <code>bool scramble_audio_data = 11;</code>
            * @return The scrambleAudioData.
            */
           public boolean getScrambleAudioData() {
@@ -11246,7 +11316,7 @@ public final class RedvoxApiM {
            * Is station audio data scrambled?
            * </pre>
            *
-           * <code>bool scramble_audio_data = 10;</code>
+           * <code>bool scramble_audio_data = 11;</code>
            * @param value The scrambleAudioData to set.
            * @return This builder for chaining.
            */
@@ -11261,7 +11331,7 @@ public final class RedvoxApiM {
            * Is station audio data scrambled?
            * </pre>
            *
-           * <code>bool scramble_audio_data = 10;</code>
+           * <code>bool scramble_audio_data = 11;</code>
            * @return This builder for chaining.
            */
           public Builder clearScrambleAudioData() {
@@ -11277,7 +11347,7 @@ public final class RedvoxApiM {
            * Should station backfill unsent data?
            * </pre>
            *
-           * <code>bool provide_backfill = 11;</code>
+           * <code>bool provide_backfill = 12;</code>
            * @return The provideBackfill.
            */
           public boolean getProvideBackfill() {
@@ -11288,7 +11358,7 @@ public final class RedvoxApiM {
            * Should station backfill unsent data?
            * </pre>
            *
-           * <code>bool provide_backfill = 11;</code>
+           * <code>bool provide_backfill = 12;</code>
            * @param value The provideBackfill to set.
            * @return This builder for chaining.
            */
@@ -11303,7 +11373,7 @@ public final class RedvoxApiM {
            * Should station backfill unsent data?
            * </pre>
            *
-           * <code>bool provide_backfill = 11;</code>
+           * <code>bool provide_backfill = 12;</code>
            * @return This builder for chaining.
            */
           public Builder clearProvideBackfill() {
@@ -11319,7 +11389,7 @@ public final class RedvoxApiM {
            * Does station remove DC offset?
            * </pre>
            *
-           * <code>bool remove_sensor_dc_offset = 12;</code>
+           * <code>bool remove_sensor_dc_offset = 13;</code>
            * @return The removeSensorDcOffset.
            */
           public boolean getRemoveSensorDcOffset() {
@@ -11330,7 +11400,7 @@ public final class RedvoxApiM {
            * Does station remove DC offset?
            * </pre>
            *
-           * <code>bool remove_sensor_dc_offset = 12;</code>
+           * <code>bool remove_sensor_dc_offset = 13;</code>
            * @param value The removeSensorDcOffset to set.
            * @return This builder for chaining.
            */
@@ -11345,7 +11415,7 @@ public final class RedvoxApiM {
            * Does station remove DC offset?
            * </pre>
            *
-           * <code>bool remove_sensor_dc_offset = 12;</code>
+           * <code>bool remove_sensor_dc_offset = 13;</code>
            * @return This builder for chaining.
            */
           public Builder clearRemoveSensorDcOffset() {
@@ -11361,7 +11431,7 @@ public final class RedvoxApiM {
            * Station FFT overlap
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 14;</code>
            * @return The enum numeric value on the wire for fftOverlap.
            */
           public int getFftOverlapValue() {
@@ -11372,7 +11442,7 @@ public final class RedvoxApiM {
            * Station FFT overlap
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 14;</code>
            * @param value The enum numeric value on the wire for fftOverlap to set.
            * @return This builder for chaining.
            */
@@ -11386,7 +11456,7 @@ public final class RedvoxApiM {
            * Station FFT overlap
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 14;</code>
            * @return The fftOverlap.
            */
           public io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.FftOverlap getFftOverlap() {
@@ -11399,7 +11469,7 @@ public final class RedvoxApiM {
            * Station FFT overlap
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 14;</code>
            * @param value The fftOverlap to set.
            * @return This builder for chaining.
            */
@@ -11417,7 +11487,7 @@ public final class RedvoxApiM {
            * Station FFT overlap
            * </pre>
            *
-           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 13;</code>
+           * <code>.redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.FftOverlap fft_overlap = 14;</code>
            * @return This builder for chaining.
            */
           public Builder clearFftOverlap() {
@@ -11433,7 +11503,7 @@ public final class RedvoxApiM {
            * Should station use custom time synch server?
            * </pre>
            *
-           * <code>bool use_custom_time_sync_server = 14;</code>
+           * <code>bool use_custom_time_sync_server = 15;</code>
            * @return The useCustomTimeSyncServer.
            */
           public boolean getUseCustomTimeSyncServer() {
@@ -11444,7 +11514,7 @@ public final class RedvoxApiM {
            * Should station use custom time synch server?
            * </pre>
            *
-           * <code>bool use_custom_time_sync_server = 14;</code>
+           * <code>bool use_custom_time_sync_server = 15;</code>
            * @param value The useCustomTimeSyncServer to set.
            * @return This builder for chaining.
            */
@@ -11459,7 +11529,7 @@ public final class RedvoxApiM {
            * Should station use custom time synch server?
            * </pre>
            *
-           * <code>bool use_custom_time_sync_server = 14;</code>
+           * <code>bool use_custom_time_sync_server = 15;</code>
            * @return This builder for chaining.
            */
           public Builder clearUseCustomTimeSyncServer() {
@@ -11475,7 +11545,7 @@ public final class RedvoxApiM {
            * URL of custom time synch server
            * </pre>
            *
-           * <code>string time_sync_server_url = 15;</code>
+           * <code>string time_sync_server_url = 16;</code>
            * @return The timeSyncServerUrl.
            */
           public java.lang.String getTimeSyncServerUrl() {
@@ -11495,7 +11565,7 @@ public final class RedvoxApiM {
            * URL of custom time synch server
            * </pre>
            *
-           * <code>string time_sync_server_url = 15;</code>
+           * <code>string time_sync_server_url = 16;</code>
            * @return The bytes for timeSyncServerUrl.
            */
           public com.google.protobuf.ByteString
@@ -11516,7 +11586,7 @@ public final class RedvoxApiM {
            * URL of custom time synch server
            * </pre>
            *
-           * <code>string time_sync_server_url = 15;</code>
+           * <code>string time_sync_server_url = 16;</code>
            * @param value The timeSyncServerUrl to set.
            * @return This builder for chaining.
            */
@@ -11535,7 +11605,7 @@ public final class RedvoxApiM {
            * URL of custom time synch server
            * </pre>
            *
-           * <code>string time_sync_server_url = 15;</code>
+           * <code>string time_sync_server_url = 16;</code>
            * @return This builder for chaining.
            */
           public Builder clearTimeSyncServerUrl() {
@@ -11549,7 +11619,7 @@ public final class RedvoxApiM {
            * URL of custom time synch server
            * </pre>
            *
-           * <code>string time_sync_server_url = 15;</code>
+           * <code>string time_sync_server_url = 16;</code>
            * @param value The bytes for timeSyncServerUrl to set.
            * @return This builder for chaining.
            */
@@ -11571,7 +11641,7 @@ public final class RedvoxApiM {
            * Should station use custom data server?
            * </pre>
            *
-           * <code>bool use_custom_data_server = 16;</code>
+           * <code>bool use_custom_data_server = 17;</code>
            * @return The useCustomDataServer.
            */
           public boolean getUseCustomDataServer() {
@@ -11582,7 +11652,7 @@ public final class RedvoxApiM {
            * Should station use custom data server?
            * </pre>
            *
-           * <code>bool use_custom_data_server = 16;</code>
+           * <code>bool use_custom_data_server = 17;</code>
            * @param value The useCustomDataServer to set.
            * @return This builder for chaining.
            */
@@ -11597,7 +11667,7 @@ public final class RedvoxApiM {
            * Should station use custom data server?
            * </pre>
            *
-           * <code>bool use_custom_data_server = 16;</code>
+           * <code>bool use_custom_data_server = 17;</code>
            * @return This builder for chaining.
            */
           public Builder clearUseCustomDataServer() {
@@ -11613,7 +11683,7 @@ public final class RedvoxApiM {
            * URL of custom data server
            * </pre>
            *
-           * <code>string data_server_url = 17;</code>
+           * <code>string data_server_url = 18;</code>
            * @return The dataServerUrl.
            */
           public java.lang.String getDataServerUrl() {
@@ -11633,7 +11703,7 @@ public final class RedvoxApiM {
            * URL of custom data server
            * </pre>
            *
-           * <code>string data_server_url = 17;</code>
+           * <code>string data_server_url = 18;</code>
            * @return The bytes for dataServerUrl.
            */
           public com.google.protobuf.ByteString
@@ -11654,7 +11724,7 @@ public final class RedvoxApiM {
            * URL of custom data server
            * </pre>
            *
-           * <code>string data_server_url = 17;</code>
+           * <code>string data_server_url = 18;</code>
            * @param value The dataServerUrl to set.
            * @return This builder for chaining.
            */
@@ -11673,7 +11743,7 @@ public final class RedvoxApiM {
            * URL of custom data server
            * </pre>
            *
-           * <code>string data_server_url = 17;</code>
+           * <code>string data_server_url = 18;</code>
            * @return This builder for chaining.
            */
           public Builder clearDataServerUrl() {
@@ -11687,7 +11757,7 @@ public final class RedvoxApiM {
            * URL of custom data server
            * </pre>
            *
-           * <code>string data_server_url = 17;</code>
+           * <code>string data_server_url = 18;</code>
            * @param value The bytes for dataServerUrl to set.
            * @return This builder for chaining.
            */
@@ -11709,7 +11779,7 @@ public final class RedvoxApiM {
            * Should station use custom auth server
            * </pre>
            *
-           * <code>bool use_custom_auth_server = 18;</code>
+           * <code>bool use_custom_auth_server = 19;</code>
            * @return The useCustomAuthServer.
            */
           public boolean getUseCustomAuthServer() {
@@ -11720,7 +11790,7 @@ public final class RedvoxApiM {
            * Should station use custom auth server
            * </pre>
            *
-           * <code>bool use_custom_auth_server = 18;</code>
+           * <code>bool use_custom_auth_server = 19;</code>
            * @param value The useCustomAuthServer to set.
            * @return This builder for chaining.
            */
@@ -11735,7 +11805,7 @@ public final class RedvoxApiM {
            * Should station use custom auth server
            * </pre>
            *
-           * <code>bool use_custom_auth_server = 18;</code>
+           * <code>bool use_custom_auth_server = 19;</code>
            * @return This builder for chaining.
            */
           public Builder clearUseCustomAuthServer() {
@@ -11751,7 +11821,7 @@ public final class RedvoxApiM {
            * URL of custom auth server
            * </pre>
            *
-           * <code>string auth_server_url = 19;</code>
+           * <code>string auth_server_url = 20;</code>
            * @return The authServerUrl.
            */
           public java.lang.String getAuthServerUrl() {
@@ -11771,7 +11841,7 @@ public final class RedvoxApiM {
            * URL of custom auth server
            * </pre>
            *
-           * <code>string auth_server_url = 19;</code>
+           * <code>string auth_server_url = 20;</code>
            * @return The bytes for authServerUrl.
            */
           public com.google.protobuf.ByteString
@@ -11792,7 +11862,7 @@ public final class RedvoxApiM {
            * URL of custom auth server
            * </pre>
            *
-           * <code>string auth_server_url = 19;</code>
+           * <code>string auth_server_url = 20;</code>
            * @param value The authServerUrl to set.
            * @return This builder for chaining.
            */
@@ -11811,7 +11881,7 @@ public final class RedvoxApiM {
            * URL of custom auth server
            * </pre>
            *
-           * <code>string auth_server_url = 19;</code>
+           * <code>string auth_server_url = 20;</code>
            * @return This builder for chaining.
            */
           public Builder clearAuthServerUrl() {
@@ -11825,7 +11895,7 @@ public final class RedvoxApiM {
            * URL of custom auth server
            * </pre>
            *
-           * <code>string auth_server_url = 19;</code>
+           * <code>string auth_server_url = 20;</code>
            * @param value The bytes for authServerUrl to set.
            * @return This builder for chaining.
            */
@@ -11847,7 +11917,7 @@ public final class RedvoxApiM {
            * Should station auto delete data?
            * </pre>
            *
-           * <code>bool auto_delete_data_files = 20;</code>
+           * <code>bool auto_delete_data_files = 21;</code>
            * @return The autoDeleteDataFiles.
            */
           public boolean getAutoDeleteDataFiles() {
@@ -11858,7 +11928,7 @@ public final class RedvoxApiM {
            * Should station auto delete data?
            * </pre>
            *
-           * <code>bool auto_delete_data_files = 20;</code>
+           * <code>bool auto_delete_data_files = 21;</code>
            * @param value The autoDeleteDataFiles to set.
            * @return This builder for chaining.
            */
@@ -11873,7 +11943,7 @@ public final class RedvoxApiM {
            * Should station auto delete data?
            * </pre>
            *
-           * <code>bool auto_delete_data_files = 20;</code>
+           * <code>bool auto_delete_data_files = 21;</code>
            * @return This builder for chaining.
            */
           public Builder clearAutoDeleteDataFiles() {
@@ -11889,7 +11959,7 @@ public final class RedvoxApiM {
            * Station data allowance in bytes
            * </pre>
            *
-           * <code>float storage_space_allowance = 21;</code>
+           * <code>float storage_space_allowance = 22;</code>
            * @return The storageSpaceAllowance.
            */
           public float getStorageSpaceAllowance() {
@@ -11900,7 +11970,7 @@ public final class RedvoxApiM {
            * Station data allowance in bytes
            * </pre>
            *
-           * <code>float storage_space_allowance = 21;</code>
+           * <code>float storage_space_allowance = 22;</code>
            * @param value The storageSpaceAllowance to set.
            * @return This builder for chaining.
            */
@@ -11915,7 +11985,7 @@ public final class RedvoxApiM {
            * Station data allowance in bytes
            * </pre>
            *
-           * <code>float storage_space_allowance = 21;</code>
+           * <code>float storage_space_allowance = 22;</code>
            * @return This builder for chaining.
            */
           public Builder clearStorageSpaceAllowance() {
@@ -11931,7 +12001,7 @@ public final class RedvoxApiM {
            * Should station use SD card for storage?
            * </pre>
            *
-           * <code>bool use_sd_card_for_data_storage = 22;</code>
+           * <code>bool use_sd_card_for_data_storage = 23;</code>
            * @return The useSdCardForDataStorage.
            */
           public boolean getUseSdCardForDataStorage() {
@@ -11942,7 +12012,7 @@ public final class RedvoxApiM {
            * Should station use SD card for storage?
            * </pre>
            *
-           * <code>bool use_sd_card_for_data_storage = 22;</code>
+           * <code>bool use_sd_card_for_data_storage = 23;</code>
            * @param value The useSdCardForDataStorage to set.
            * @return This builder for chaining.
            */
@@ -11957,7 +12027,7 @@ public final class RedvoxApiM {
            * Should station use SD card for storage?
            * </pre>
            *
-           * <code>bool use_sd_card_for_data_storage = 22;</code>
+           * <code>bool use_sd_card_for_data_storage = 23;</code>
            * @return This builder for chaining.
            */
           public Builder clearUseSdCardForDataStorage() {
@@ -11973,7 +12043,7 @@ public final class RedvoxApiM {
            * Should station use location services?
            * </pre>
            *
-           * <code>bool use_location_services = 23;</code>
+           * <code>bool use_location_services = 24;</code>
            * @return The useLocationServices.
            */
           public boolean getUseLocationServices() {
@@ -11984,7 +12054,7 @@ public final class RedvoxApiM {
            * Should station use location services?
            * </pre>
            *
-           * <code>bool use_location_services = 23;</code>
+           * <code>bool use_location_services = 24;</code>
            * @param value The useLocationServices to set.
            * @return This builder for chaining.
            */
@@ -11999,7 +12069,7 @@ public final class RedvoxApiM {
            * Should station use location services?
            * </pre>
            *
-           * <code>bool use_location_services = 23;</code>
+           * <code>bool use_location_services = 24;</code>
            * @return This builder for chaining.
            */
           public Builder clearUseLocationServices() {
@@ -12015,7 +12085,7 @@ public final class RedvoxApiM {
            * User set latitude decimal degrees
            * </pre>
            *
-           * <code>double use_latitude = 24;</code>
+           * <code>double use_latitude = 25;</code>
            * @return The useLatitude.
            */
           public double getUseLatitude() {
@@ -12026,7 +12096,7 @@ public final class RedvoxApiM {
            * User set latitude decimal degrees
            * </pre>
            *
-           * <code>double use_latitude = 24;</code>
+           * <code>double use_latitude = 25;</code>
            * @param value The useLatitude to set.
            * @return This builder for chaining.
            */
@@ -12041,7 +12111,7 @@ public final class RedvoxApiM {
            * User set latitude decimal degrees
            * </pre>
            *
-           * <code>double use_latitude = 24;</code>
+           * <code>double use_latitude = 25;</code>
            * @return This builder for chaining.
            */
           public Builder clearUseLatitude() {
@@ -12057,7 +12127,7 @@ public final class RedvoxApiM {
            * User set longitude decimal degrees
            * </pre>
            *
-           * <code>double use_longitude = 25;</code>
+           * <code>double use_longitude = 26;</code>
            * @return The useLongitude.
            */
           public double getUseLongitude() {
@@ -12068,7 +12138,7 @@ public final class RedvoxApiM {
            * User set longitude decimal degrees
            * </pre>
            *
-           * <code>double use_longitude = 25;</code>
+           * <code>double use_longitude = 26;</code>
            * @param value The useLongitude to set.
            * @return This builder for chaining.
            */
@@ -12083,7 +12153,7 @@ public final class RedvoxApiM {
            * User set longitude decimal degrees
            * </pre>
            *
-           * <code>double use_longitude = 25;</code>
+           * <code>double use_longitude = 26;</code>
            * @return This builder for chaining.
            */
           public Builder clearUseLongitude() {
@@ -12099,7 +12169,7 @@ public final class RedvoxApiM {
            * User set altitude meters
            * </pre>
            *
-           * <code>float use_altitude = 26;</code>
+           * <code>float use_altitude = 27;</code>
            * @return The useAltitude.
            */
           public float getUseAltitude() {
@@ -12110,7 +12180,7 @@ public final class RedvoxApiM {
            * User set altitude meters
            * </pre>
            *
-           * <code>float use_altitude = 26;</code>
+           * <code>float use_altitude = 27;</code>
            * @param value The useAltitude to set.
            * @return This builder for chaining.
            */
@@ -12125,7 +12195,7 @@ public final class RedvoxApiM {
            * User set altitude meters
            * </pre>
            *
-           * <code>float use_altitude = 26;</code>
+           * <code>float use_altitude = 27;</code>
            * @return This builder for chaining.
            */
           public Builder clearUseAltitude() {
@@ -12166,7 +12236,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 27;</code>
+           * <code>map&lt;string, string&gt; metadata = 28;</code>
            */
 
           public boolean containsMetadata(
@@ -12186,7 +12256,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 27;</code>
+           * <code>map&lt;string, string&gt; metadata = 28;</code>
            */
 
           public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
@@ -12197,7 +12267,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 27;</code>
+           * <code>map&lt;string, string&gt; metadata = 28;</code>
            */
 
           public java.lang.String getMetadataOrDefault(
@@ -12213,7 +12283,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 27;</code>
+           * <code>map&lt;string, string&gt; metadata = 28;</code>
            */
 
           public java.lang.String getMetadataOrThrow(
@@ -12237,7 +12307,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 27;</code>
+           * <code>map&lt;string, string&gt; metadata = 28;</code>
            */
 
           public Builder removeMetadata(
@@ -12260,7 +12330,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 27;</code>
+           * <code>map&lt;string, string&gt; metadata = 28;</code>
            */
           public Builder putMetadata(
               java.lang.String key,
@@ -12276,7 +12346,7 @@ public final class RedvoxApiM {
            * A map from string to string for including untyped metadata
            * </pre>
            *
-           * <code>map&lt;string, string&gt; metadata = 27;</code>
+           * <code>map&lt;string, string&gt; metadata = 28;</code>
            */
 
           public Builder putAllMetadata(
@@ -56771,6 +56841,16 @@ public final class RedvoxApiM {
      * @return The payload.
      */
     com.google.protobuf.ByteString getPayload();
+
+    /**
+     * <pre>
+     * A variable that starts at 0 when the data stream starts and increments by one for each transmission
+     * </pre>
+     *
+     * <code>int64 seq_id = 6;</code>
+     * @return The seqId.
+     */
+    long getSeqId();
   }
   /**
    * <pre>
@@ -56850,6 +56930,11 @@ public final class RedvoxApiM {
             case 42: {
 
               payload_ = input.readBytes();
+              break;
+            }
+            case 48: {
+
+              seqId_ = input.readInt64();
               break;
             }
             default: {
@@ -57014,6 +57099,20 @@ public final class RedvoxApiM {
       return payload_;
     }
 
+    public static final int SEQ_ID_FIELD_NUMBER = 6;
+    private long seqId_;
+    /**
+     * <pre>
+     * A variable that starts at 0 when the data stream starts and increments by one for each transmission
+     * </pre>
+     *
+     * <code>int64 seq_id = 6;</code>
+     * @return The seqId.
+     */
+    public long getSeqId() {
+      return seqId_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -57043,6 +57142,9 @@ public final class RedvoxApiM {
       if (!payload_.isEmpty()) {
         output.writeBytes(5, payload_);
       }
+      if (seqId_ != 0L) {
+        output.writeInt64(6, seqId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -57070,6 +57172,10 @@ public final class RedvoxApiM {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, payload_);
       }
+      if (seqId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, seqId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -57095,6 +57201,8 @@ public final class RedvoxApiM {
           != other.getIsEncrypted()) return false;
       if (!getPayload()
           .equals(other.getPayload())) return false;
+      if (getSeqId()
+          != other.getSeqId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -57118,6 +57226,9 @@ public final class RedvoxApiM {
           getIsEncrypted());
       hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
       hash = (53 * hash) + getPayload().hashCode();
+      hash = (37 * hash) + SEQ_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSeqId());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -57266,6 +57377,8 @@ public final class RedvoxApiM {
 
         payload_ = com.google.protobuf.ByteString.EMPTY;
 
+        seqId_ = 0L;
+
         return this;
       }
 
@@ -57297,6 +57410,7 @@ public final class RedvoxApiM {
         result.checksum_ = checksum_;
         result.isEncrypted_ = isEncrypted_;
         result.payload_ = payload_;
+        result.seqId_ = seqId_;
         onBuilt();
         return result;
       }
@@ -57361,6 +57475,9 @@ public final class RedvoxApiM {
         }
         if (other.getPayload() != com.google.protobuf.ByteString.EMPTY) {
           setPayload(other.getPayload());
+        }
+        if (other.getSeqId() != 0L) {
+          setSeqId(other.getSeqId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -57711,6 +57828,48 @@ public final class RedvoxApiM {
         onChanged();
         return this;
       }
+
+      private long seqId_ ;
+      /**
+       * <pre>
+       * A variable that starts at 0 when the data stream starts and increments by one for each transmission
+       * </pre>
+       *
+       * <code>int64 seq_id = 6;</code>
+       * @return The seqId.
+       */
+      public long getSeqId() {
+        return seqId_;
+      }
+      /**
+       * <pre>
+       * A variable that starts at 0 when the data stream starts and increments by one for each transmission
+       * </pre>
+       *
+       * <code>int64 seq_id = 6;</code>
+       * @param value The seqId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeqId(long value) {
+        
+        seqId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A variable that starts at 0 when the data stream starts and increments by one for each transmission
+       * </pre>
+       *
+       * <code>int64 seq_id = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeqId() {
+        
+        seqId_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -57827,6 +57986,16 @@ public final class RedvoxApiM {
      * @return The resend.
      */
     boolean getResend();
+
+    /**
+     * <pre>
+     * A copy of the seq_id provided in the AcquisitionRequest
+     * </pre>
+     *
+     * <code>int64 seq_id = 5;</code>
+     * @return The seqId.
+     */
+    long getSeqId();
   }
   /**
    * <pre>
@@ -57899,6 +58068,11 @@ public final class RedvoxApiM {
             case 32: {
 
               resend_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              seqId_ = input.readInt64();
               break;
             }
             default: {
@@ -58204,6 +58378,20 @@ public final class RedvoxApiM {
       return resend_;
     }
 
+    public static final int SEQ_ID_FIELD_NUMBER = 5;
+    private long seqId_;
+    /**
+     * <pre>
+     * A copy of the seq_id provided in the AcquisitionRequest
+     * </pre>
+     *
+     * <code>int64 seq_id = 5;</code>
+     * @return The seqId.
+     */
+    public long getSeqId() {
+      return seqId_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -58230,6 +58418,9 @@ public final class RedvoxApiM {
       if (resend_ != false) {
         output.writeBool(4, resend_);
       }
+      if (seqId_ != 0L) {
+        output.writeInt64(5, seqId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -58254,6 +58445,10 @@ public final class RedvoxApiM {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, resend_);
       }
+      if (seqId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, seqId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -58276,6 +58471,8 @@ public final class RedvoxApiM {
           .equals(other.getDetails())) return false;
       if (getResend()
           != other.getResend()) return false;
+      if (getSeqId()
+          != other.getSeqId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -58297,6 +58494,9 @@ public final class RedvoxApiM {
       hash = (37 * hash) + RESEND_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getResend());
+      hash = (37 * hash) + SEQ_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSeqId());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -58442,6 +58642,8 @@ public final class RedvoxApiM {
 
         resend_ = false;
 
+        seqId_ = 0L;
+
         return this;
       }
 
@@ -58472,6 +58674,7 @@ public final class RedvoxApiM {
         result.checksum_ = checksum_;
         result.details_ = details_;
         result.resend_ = resend_;
+        result.seqId_ = seqId_;
         onBuilt();
         return result;
       }
@@ -58532,6 +58735,9 @@ public final class RedvoxApiM {
         }
         if (other.getResend() != false) {
           setResend(other.getResend());
+        }
+        if (other.getSeqId() != 0L) {
+          setSeqId(other.getSeqId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -58813,6 +59019,48 @@ public final class RedvoxApiM {
       public Builder clearResend() {
         
         resend_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long seqId_ ;
+      /**
+       * <pre>
+       * A copy of the seq_id provided in the AcquisitionRequest
+       * </pre>
+       *
+       * <code>int64 seq_id = 5;</code>
+       * @return The seqId.
+       */
+      public long getSeqId() {
+        return seqId_;
+      }
+      /**
+       * <pre>
+       * A copy of the seq_id provided in the AcquisitionRequest
+       * </pre>
+       *
+       * <code>int64 seq_id = 5;</code>
+       * @param value The seqId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeqId(long value) {
+        
+        seqId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A copy of the seq_id provided in the AcquisitionRequest
+       * </pre>
+       *
+       * <code>int64 seq_id = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeqId() {
+        
+        seqId_ = 0L;
         onChanged();
         return this;
       }
@@ -61259,7 +61507,7 @@ public final class RedvoxApiM {
   static {
     java.lang.String[] descriptorData = {
       "\n#src/redvox_api_m/redvox_api_m.proto\022\014r" +
-      "edvox_api_m\"\234o\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
+      "edvox_api_m\"\270o\n\rRedvoxPacketM\022\013\n\003api\030\001 \001" +
       "(\002\022\017\n\007sub_api\030\002 \001(\002\022K\n\023station_informati" +
       "on\030\003 \001(\0132..redvox_api_m.RedvoxPacketM.St" +
       "ationInformation\022I\n\022timing_information\030\004" +
@@ -61270,7 +61518,7 @@ public final class RedvoxApiM {
       "entStream\022;\n\010metadata\030\007 \003(\0132).redvox_api" +
       "_m.RedvoxPacketM.MetadataEntry\032/\n\rMetada" +
       "taEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032" +
-      "\274 \n\022StationInformation\022\n\n\002id\030\001 \001(\t\022\014\n\004uu" +
+      "\330 \n\022StationInformation\022\n\n\002id\030\001 \001(\t\022\014\n\004uu" +
       "id\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\017\n\007auth_id" +
       "\030\004 \001(\t\022\014\n\004make\030\005 \001(\t\022\r\n\005model\030\006 \001(\t\022A\n\002o" +
       "s\030\007 \001(\01625.redvox_api_m.RedvoxPacketM.Sta" +
@@ -61326,315 +61574,317 @@ public final class RedvoxApiM {
       "UNKNOWN\020\000\022\r\n\tEMERGENCY\020\001\022\013\n\007NOMINAL\020\002\022\022\n" +
       "\016OUT_OF_SERVICE\020\003\022\r\n\tPOWER_OFF\020\004\"O\n\nPowe" +
       "rState\022\027\n\023UNKNOWN_POWER_STATE\020\000\022\r\n\tUNPLU" +
-      "GGED\020\001\022\014\n\010CHARGING\020\002\022\013\n\007CHARGED\020\003\032\211\016\n\013Ap" +
+      "GGED\020\001\022\014\n\010CHARGING\020\002\022\013\n\007CHARGED\020\003\032\245\016\n\013Ap" +
       "pSettings\022i\n\023audio_sampling_rate\030\001 \001(\0162L" +
       ".redvox_api_m.RedvoxPacketM.StationInfor" +
-      "mation.AppSettings.AudioSamplingRate\022i\n\023" +
-      "audio_source_tuning\030\002 \001(\0162L.redvox_api_m" +
-      ".RedvoxPacketM.StationInformation.AppSet" +
-      "tings.AudioSourceTuning\022h\n\030additional_in" +
-      "put_sensors\030\003 \003(\0162F.redvox_api_m.RedvoxP" +
-      "acketM.StationInformation.AppSettings.In" +
-      "putSensor\022\034\n\024automatically_record\030\004 \001(\010\022" +
-      "\032\n\022launch_at_power_up\030\005 \001(\010\022\022\n\nstation_i" +
-      "d\030\006 \001(\t\022\033\n\023station_description\030\007 \001(\t\022\026\n\016" +
-      "push_to_server\030\010 \001(\010\022\037\n\027publish_data_as_" +
-      "private\030\t \001(\010\022\033\n\023scramble_audio_data\030\n \001" +
-      "(\010\022\030\n\020provide_backfill\030\013 \001(\010\022\037\n\027remove_s" +
-      "ensor_dc_offset\030\014 \001(\010\022Z\n\013fft_overlap\030\r \001" +
-      "(\0162E.redvox_api_m.RedvoxPacketM.StationI" +
-      "nformation.AppSettings.FftOverlap\022#\n\033use" +
-      "_custom_time_sync_server\030\016 \001(\010\022\034\n\024time_s" +
-      "ync_server_url\030\017 \001(\t\022\036\n\026use_custom_data_" +
-      "server\030\020 \001(\010\022\027\n\017data_server_url\030\021 \001(\t\022\036\n" +
-      "\026use_custom_auth_server\030\022 \001(\010\022\027\n\017auth_se" +
-      "rver_url\030\023 \001(\t\022\036\n\026auto_delete_data_files" +
-      "\030\024 \001(\010\022\037\n\027storage_space_allowance\030\025 \001(\002\022" +
-      "$\n\034use_sd_card_for_data_storage\030\026 \001(\010\022\035\n" +
-      "\025use_location_services\030\027 \001(\010\022\024\n\014use_lati" +
-      "tude\030\030 \001(\001\022\025\n\ruse_longitude\030\031 \001(\001\022\024\n\014use" +
-      "_altitude\030\032 \001(\002\022Z\n\010metadata\030\033 \003(\0132H.redv" +
-      "ox_api_m.RedvoxPacketM.StationInformatio" +
-      "n.AppSettings.MetadataEntry\032/\n\rMetadataE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\n" +
-      "FftOverlap\022\013\n\007UNKNOWN\020\000\022\016\n\nPERCENT_25\020\001\022" +
-      "\016\n\nPERCENT_50\020\002\022\016\n\nPERCENT_75\020\003\"n\n\021Audio" +
-      "SamplingRate\022\031\n\025UNKNOWN_SAMPLING_RATE\020\000\022" +
-      "\t\n\005HZ_80\020\001\022\n\n\006HZ_800\020\002\022\013\n\007HZ_8000\020\003\022\014\n\010H" +
-      "Z_16000\020\004\022\014\n\010HZ_48000\020\005\"f\n\021AudioSourceTu" +
-      "ning\022\022\n\016UNKNOWN_TUNING\020\000\022\025\n\021INFRASOUND_T" +
-      "UNING\020\001\022\024\n\020LOW_AUDIO_TUNING\020\002\022\020\n\014AUDIO_T" +
-      "UNING\020\003\"\263\002\n\013InputSensor\022\022\n\016UNKNOWN_SENSO" +
-      "R\020\000\022\021\n\rACCELEROMETER\020\001\022\027\n\023AMBIENT_TEMPER" +
-      "ATURE\020\002\022\t\n\005AUDIO\020\003\022\024\n\020COMPRESSED_AUDIO\020\004" +
-      "\022\013\n\007GRAVITY\020\005\022\r\n\tGYROSCOPE\020\006\022\t\n\005IMAGE\020\007\022" +
-      "\t\n\005LIGHT\020\010\022\027\n\023LINEAR_ACCELERATION\020\t\022\014\n\010L" +
-      "OCATION\020\n\022\020\n\014MAGNETOMETER\020\013\022\017\n\013ORIENTATI" +
-      "ON\020\014\022\014\n\010PRESSURE\020\r\022\r\n\tPROXIMITY\020\016\022\025\n\021REL" +
-      "ATIVE_HUMIDITY\020\017\022\023\n\017ROTATION_VECTOR\020\020\"O\n" +
-      "\006OsType\022\016\n\nUNKNOWN_OS\020\000\022\013\n\007ANDROID\020\001\022\007\n\003" +
-      "IOS\020\002\022\007\n\003OSX\020\003\022\t\n\005LINUX\020\004\022\013\n\007WINDOWS\020\005\032\300" +
-      "\007\n\021TimingInformation\022!\n\031packet_start_os_" +
-      "timestamp\030\001 \001(\001\022#\n\033packet_start_mach_tim" +
-      "estamp\030\002 \001(\001\022\037\n\027packet_end_os_timestamp\030" +
-      "\003 \001(\001\022!\n\031packet_end_mach_timestamp\030\004 \001(\001" +
-      "\022,\n$server_acquisition_arrival_timestamp" +
-      "\030\005 \001(\001\022 \n\030app_start_mach_timestamp\030\006 \001(\001" +
-      "\022T\n\017synch_exchanges\030\007 \003(\0132;.redvox_api_m" +
-      ".RedvoxPacketM.TimingInformation.SynchEx" +
-      "change\022\024\n\014best_latency\030\010 \001(\002\022\023\n\013best_off" +
-      "set\030\t \001(\002\022\r\n\005score\030\n \001(\002\022U\n\014score_method" +
-      "\030\013 \001(\0162?.redvox_api_m.RedvoxPacketM.Timi" +
-      "ngInformation.TimingScoreMethod\022.\n\004unit\030" +
-      "\014 \001(\0162 .redvox_api_m.RedvoxPacketM.Unit\022" +
-      "M\n\010metadata\030\r \003(\0132;.redvox_api_m.RedvoxP" +
-      "acketM.TimingInformation.MetadataEntry\032/" +
-      "\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\032\225\002\n\rSynchExchange\022\n\n\002a1\030\001 \001(\001\022\n\n" +
-      "\002a2\030\002 \001(\001\022\n\n\002a3\030\003 \001(\001\022\n\n\002b1\030\004 \001(\001\022\n\n\002b2\030" +
-      "\005 \001(\001\022\n\n\002b3\030\006 \001(\001\022.\n\004unit\030\007 \001(\0162 .redvox" +
-      "_api_m.RedvoxPacketM.Unit\022[\n\010metadata\030\010 " +
-      "\003(\0132I.redvox_api_m.RedvoxPacketM.TimingI" +
-      "nformation.SynchExchange.MetadataEntry\032/" +
-      "\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\" \n\021TimingScoreMethod\022\013\n\007UNKNOWN\020" +
-      "\000\032\355/\n\007Sensors\022>\n\raccelerometer\030\001 \001(\0132\'.r" +
-      "edvox_api_m.RedvoxPacketM.Sensors.Xyz\022G\n" +
-      "\023ambient_temperature\030\002 \001(\0132*.redvox_api_" +
-      "m.RedvoxPacketM.Sensors.Single\0228\n\005audio\030" +
-      "\003 \001(\0132).redvox_api_m.RedvoxPacketM.Senso" +
-      "rs.Audio\022M\n\020compressed_audio\030\004 \001(\01323.red" +
-      "vox_api_m.RedvoxPacketM.Sensors.Compress" +
-      "edAudio\0228\n\007gravity\030\005 \001(\0132\'.redvox_api_m." +
-      "RedvoxPacketM.Sensors.Xyz\022:\n\tgyroscope\030\006" +
-      " \001(\0132\'.redvox_api_m.RedvoxPacketM.Sensor" +
-      "s.Xyz\0228\n\005image\030\007 \001(\0132).redvox_api_m.Redv" +
-      "oxPacketM.Sensors.Image\0229\n\005light\030\010 \001(\0132*" +
-      ".redvox_api_m.RedvoxPacketM.Sensors.Sing" +
-      "le\022D\n\023linear_acceleration\030\t \001(\0132\'.redvox" +
-      "_api_m.RedvoxPacketM.Sensors.Xyz\022>\n\010loca" +
-      "tion\030\n \001(\0132,.redvox_api_m.RedvoxPacketM." +
-      "Sensors.Location\022=\n\014magnetometer\030\013 \001(\0132\'" +
-      ".redvox_api_m.RedvoxPacketM.Sensors.Xyz\022" +
-      "<\n\013orientation\030\014 \001(\0132\'.redvox_api_m.Redv" +
-      "oxPacketM.Sensors.Xyz\022<\n\010pressure\030\r \001(\0132" +
-      "*.redvox_api_m.RedvoxPacketM.Sensors.Sin" +
-      "gle\022=\n\tproximity\030\016 \001(\0132*.redvox_api_m.Re" +
-      "dvoxPacketM.Sensors.Single\022E\n\021relative_h" +
-      "umidity\030\017 \001(\0132*.redvox_api_m.RedvoxPacke" +
-      "tM.Sensors.Single\022@\n\017rotation_vector\030\020 \001" +
-      "(\0132\'.redvox_api_m.RedvoxPacketM.Sensors." +
-      "Xyz\022C\n\010metadata\030\021 \003(\01321.redvox_api_m.Red" +
-      "voxPacketM.Sensors.MetadataEntry\032/\n\rMeta" +
-      "dataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\032\323\002\n\005Audio\022\032\n\022sensor_description\030\001 \001(\t\022" +
-      "\036\n\026first_sample_timestamp\030\002 \001(\001\022\023\n\013sampl" +
-      "e_rate\030\003 \001(\002\022\031\n\021bits_of_precision\030\004 \001(\002\022" +
-      "\024\n\014is_scrambled\030\005 \001(\010\022\020\n\010encoding\030\006 \001(\t\022" +
-      ":\n\007samples\030\007 \001(\0132).redvox_api_m.RedvoxPa" +
-      "cketM.SamplePayload\022I\n\010metadata\030\010 \003(\01327." +
-      "redvox_api_m.RedvoxPacketM.Sensors.Audio" +
-      ".MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\215\003\n\017CompressedAu" +
-      "dio\022\032\n\022sensor_description\030\001 \001(\t\022\036\n\026first" +
-      "_sample_timestamp\030\002 \001(\001\022\023\n\013sample_rate\030\003" +
-      " \001(\002\022\024\n\014is_scrambled\030\004 \001(\010\022\023\n\013audio_byte" +
-      "s\030\005 \001(\014\022S\n\013audio_codec\030\006 \001(\0162>.redvox_ap" +
-      "i_m.RedvoxPacketM.Sensors.CompressedAudi" +
-      "o.AudioCodec\022S\n\010metadata\030\007 \003(\0132A.redvox_" +
-      "api_m.RedvoxPacketM.Sensors.CompressedAu" +
-      "dio.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"#\n\nAudioCodec" +
-      "\022\013\n\007UNKNOWN\020\000\022\010\n\004FLAC\020\001\032\234\002\n\006Single\022\032\n\022se" +
-      "nsor_description\030\001 \001(\t\022=\n\ntimestamps\030\002 \001" +
-      "(\0132).redvox_api_m.RedvoxPacketM.TimingPa" +
-      "yload\022:\n\007samples\030\003 \001(\0132).redvox_api_m.Re" +
-      "dvoxPacketM.SamplePayload\022J\n\010metadata\030\004 " +
-      "\003(\01328.redvox_api_m.RedvoxPacketM.Sensors" +
-      ".Single.MetadataEntry\032/\n\rMetadataEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\326\030\n\010Locat" +
-      "ion\022\032\n\022sensor_description\030\001 \001(\t\022=\n\ntimes" +
-      "tamps\030\002 \001(\0132).redvox_api_m.RedvoxPacketM" +
-      ".TimingPayload\022A\n\016timestamps_gps\030\003 \001(\0132)" +
-      ".redvox_api_m.RedvoxPacketM.TimingPayloa" +
-      "d\022I\n\020latitude_samples\030\004 \001(\0132/.redvox_api" +
-      "_m.RedvoxPacketM.DoubleSamplePayload\022J\n\021" +
-      "longitude_samples\030\005 \001(\0132/.redvox_api_m.R" +
-      "edvoxPacketM.DoubleSamplePayload\022C\n\020alti" +
-      "tude_samples\030\006 \001(\0132).redvox_api_m.Redvox" +
-      "PacketM.SamplePayload\022@\n\rspeed_samples\030\007" +
+      "mation.AppSettings.AudioSamplingRate\022\032\n\022" +
+      "samples_per_window\030\002 \001(\002\022i\n\023audio_source" +
+      "_tuning\030\003 \001(\0162L.redvox_api_m.RedvoxPacke" +
+      "tM.StationInformation.AppSettings.AudioS" +
+      "ourceTuning\022h\n\030additional_input_sensors\030" +
+      "\004 \003(\0162F.redvox_api_m.RedvoxPacketM.Stati" +
+      "onInformation.AppSettings.InputSensor\022\034\n" +
+      "\024automatically_record\030\005 \001(\010\022\032\n\022launch_at" +
+      "_power_up\030\006 \001(\010\022\022\n\nstation_id\030\007 \001(\t\022\033\n\023s" +
+      "tation_description\030\010 \001(\t\022\026\n\016push_to_serv" +
+      "er\030\t \001(\010\022\037\n\027publish_data_as_private\030\n \001(" +
+      "\010\022\033\n\023scramble_audio_data\030\013 \001(\010\022\030\n\020provid" +
+      "e_backfill\030\014 \001(\010\022\037\n\027remove_sensor_dc_off" +
+      "set\030\r \001(\010\022Z\n\013fft_overlap\030\016 \001(\0162E.redvox_" +
+      "api_m.RedvoxPacketM.StationInformation.A" +
+      "ppSettings.FftOverlap\022#\n\033use_custom_time" +
+      "_sync_server\030\017 \001(\010\022\034\n\024time_sync_server_u" +
+      "rl\030\020 \001(\t\022\036\n\026use_custom_data_server\030\021 \001(\010" +
+      "\022\027\n\017data_server_url\030\022 \001(\t\022\036\n\026use_custom_" +
+      "auth_server\030\023 \001(\010\022\027\n\017auth_server_url\030\024 \001" +
+      "(\t\022\036\n\026auto_delete_data_files\030\025 \001(\010\022\037\n\027st" +
+      "orage_space_allowance\030\026 \001(\002\022$\n\034use_sd_ca" +
+      "rd_for_data_storage\030\027 \001(\010\022\035\n\025use_locatio" +
+      "n_services\030\030 \001(\010\022\024\n\014use_latitude\030\031 \001(\001\022\025" +
+      "\n\ruse_longitude\030\032 \001(\001\022\024\n\014use_altitude\030\033 " +
+      "\001(\002\022Z\n\010metadata\030\034 \003(\0132H.redvox_api_m.Red" +
+      "voxPacketM.StationInformation.AppSetting" +
+      "s.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\nFftOverlap\022\013" +
+      "\n\007UNKNOWN\020\000\022\016\n\nPERCENT_25\020\001\022\016\n\nPERCENT_5" +
+      "0\020\002\022\016\n\nPERCENT_75\020\003\"n\n\021AudioSamplingRate" +
+      "\022\031\n\025UNKNOWN_SAMPLING_RATE\020\000\022\t\n\005HZ_80\020\001\022\n" +
+      "\n\006HZ_800\020\002\022\013\n\007HZ_8000\020\003\022\014\n\010HZ_16000\020\004\022\014\n" +
+      "\010HZ_48000\020\005\"f\n\021AudioSourceTuning\022\022\n\016UNKN" +
+      "OWN_TUNING\020\000\022\025\n\021INFRASOUND_TUNING\020\001\022\024\n\020L" +
+      "OW_AUDIO_TUNING\020\002\022\020\n\014AUDIO_TUNING\020\003\"\263\002\n\013" +
+      "InputSensor\022\022\n\016UNKNOWN_SENSOR\020\000\022\021\n\rACCEL" +
+      "EROMETER\020\001\022\027\n\023AMBIENT_TEMPERATURE\020\002\022\t\n\005A" +
+      "UDIO\020\003\022\024\n\020COMPRESSED_AUDIO\020\004\022\013\n\007GRAVITY\020" +
+      "\005\022\r\n\tGYROSCOPE\020\006\022\t\n\005IMAGE\020\007\022\t\n\005LIGHT\020\010\022\027" +
+      "\n\023LINEAR_ACCELERATION\020\t\022\014\n\010LOCATION\020\n\022\020\n" +
+      "\014MAGNETOMETER\020\013\022\017\n\013ORIENTATION\020\014\022\014\n\010PRES" +
+      "SURE\020\r\022\r\n\tPROXIMITY\020\016\022\025\n\021RELATIVE_HUMIDI" +
+      "TY\020\017\022\023\n\017ROTATION_VECTOR\020\020\"O\n\006OsType\022\016\n\nU" +
+      "NKNOWN_OS\020\000\022\013\n\007ANDROID\020\001\022\007\n\003IOS\020\002\022\007\n\003OSX" +
+      "\020\003\022\t\n\005LINUX\020\004\022\013\n\007WINDOWS\020\005\032\300\007\n\021TimingInf" +
+      "ormation\022!\n\031packet_start_os_timestamp\030\001 " +
+      "\001(\001\022#\n\033packet_start_mach_timestamp\030\002 \001(\001" +
+      "\022\037\n\027packet_end_os_timestamp\030\003 \001(\001\022!\n\031pac" +
+      "ket_end_mach_timestamp\030\004 \001(\001\022,\n$server_a" +
+      "cquisition_arrival_timestamp\030\005 \001(\001\022 \n\030ap" +
+      "p_start_mach_timestamp\030\006 \001(\001\022T\n\017synch_ex" +
+      "changes\030\007 \003(\0132;.redvox_api_m.RedvoxPacke" +
+      "tM.TimingInformation.SynchExchange\022\024\n\014be" +
+      "st_latency\030\010 \001(\002\022\023\n\013best_offset\030\t \001(\002\022\r\n" +
+      "\005score\030\n \001(\002\022U\n\014score_method\030\013 \001(\0162?.red" +
+      "vox_api_m.RedvoxPacketM.TimingInformatio" +
+      "n.TimingScoreMethod\022.\n\004unit\030\014 \001(\0162 .redv" +
+      "ox_api_m.RedvoxPacketM.Unit\022M\n\010metadata\030" +
+      "\r \003(\0132;.redvox_api_m.RedvoxPacketM.Timin" +
+      "gInformation.MetadataEntry\032/\n\rMetadataEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\225\002\n\r" +
+      "SynchExchange\022\n\n\002a1\030\001 \001(\001\022\n\n\002a2\030\002 \001(\001\022\n\n" +
+      "\002a3\030\003 \001(\001\022\n\n\002b1\030\004 \001(\001\022\n\n\002b2\030\005 \001(\001\022\n\n\002b3\030" +
+      "\006 \001(\001\022.\n\004unit\030\007 \001(\0162 .redvox_api_m.Redvo" +
+      "xPacketM.Unit\022[\n\010metadata\030\010 \003(\0132I.redvox" +
+      "_api_m.RedvoxPacketM.TimingInformation.S" +
+      "ynchExchange.MetadataEntry\032/\n\rMetadataEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\" \n\021T" +
+      "imingScoreMethod\022\013\n\007UNKNOWN\020\000\032\355/\n\007Sensor" +
+      "s\022>\n\raccelerometer\030\001 \001(\0132\'.redvox_api_m." +
+      "RedvoxPacketM.Sensors.Xyz\022G\n\023ambient_tem" +
+      "perature\030\002 \001(\0132*.redvox_api_m.RedvoxPack" +
+      "etM.Sensors.Single\0228\n\005audio\030\003 \001(\0132).redv" +
+      "ox_api_m.RedvoxPacketM.Sensors.Audio\022M\n\020" +
+      "compressed_audio\030\004 \001(\01323.redvox_api_m.Re" +
+      "dvoxPacketM.Sensors.CompressedAudio\0228\n\007g" +
+      "ravity\030\005 \001(\0132\'.redvox_api_m.RedvoxPacket" +
+      "M.Sensors.Xyz\022:\n\tgyroscope\030\006 \001(\0132\'.redvo" +
+      "x_api_m.RedvoxPacketM.Sensors.Xyz\0228\n\005ima" +
+      "ge\030\007 \001(\0132).redvox_api_m.RedvoxPacketM.Se" +
+      "nsors.Image\0229\n\005light\030\010 \001(\0132*.redvox_api_" +
+      "m.RedvoxPacketM.Sensors.Single\022D\n\023linear" +
+      "_acceleration\030\t \001(\0132\'.redvox_api_m.Redvo" +
+      "xPacketM.Sensors.Xyz\022>\n\010location\030\n \001(\0132," +
+      ".redvox_api_m.RedvoxPacketM.Sensors.Loca" +
+      "tion\022=\n\014magnetometer\030\013 \001(\0132\'.redvox_api_" +
+      "m.RedvoxPacketM.Sensors.Xyz\022<\n\013orientati" +
+      "on\030\014 \001(\0132\'.redvox_api_m.RedvoxPacketM.Se" +
+      "nsors.Xyz\022<\n\010pressure\030\r \001(\0132*.redvox_api" +
+      "_m.RedvoxPacketM.Sensors.Single\022=\n\tproxi" +
+      "mity\030\016 \001(\0132*.redvox_api_m.RedvoxPacketM." +
+      "Sensors.Single\022E\n\021relative_humidity\030\017 \001(" +
+      "\0132*.redvox_api_m.RedvoxPacketM.Sensors.S" +
+      "ingle\022@\n\017rotation_vector\030\020 \001(\0132\'.redvox_" +
+      "api_m.RedvoxPacketM.Sensors.Xyz\022C\n\010metad" +
+      "ata\030\021 \003(\01321.redvox_api_m.RedvoxPacketM.S" +
+      "ensors.MetadataEntry\032/\n\rMetadataEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\323\002\n\005Audio\022" +
+      "\032\n\022sensor_description\030\001 \001(\t\022\036\n\026first_sam" +
+      "ple_timestamp\030\002 \001(\001\022\023\n\013sample_rate\030\003 \001(\002" +
+      "\022\031\n\021bits_of_precision\030\004 \001(\002\022\024\n\014is_scramb" +
+      "led\030\005 \001(\010\022\020\n\010encoding\030\006 \001(\t\022:\n\007samples\030\007" +
       " \001(\0132).redvox_api_m.RedvoxPacketM.Sample" +
-      "Payload\022B\n\017bearing_samples\030\010 \001(\0132).redvo" +
-      "x_api_m.RedvoxPacketM.SamplePayload\022N\n\033h" +
-      "orizontal_accuracy_samples\030\t \001(\0132).redvo" +
-      "x_api_m.RedvoxPacketM.SamplePayload\022L\n\031v" +
-      "ertical_accuracy_samples\030\n \001(\0132).redvox_" +
-      "api_m.RedvoxPacketM.SamplePayload\022I\n\026spe" +
-      "ed_accuracy_samples\030\013 \001(\0132).redvox_api_m" +
-      ".RedvoxPacketM.SamplePayload\022K\n\030bearing_" +
-      "accuracy_samples\030\014 \001(\0132).redvox_api_m.Re" +
-      "dvoxPacketM.SamplePayload\022U\n\022last_best_l" +
-      "ocation\030\r \001(\01329.redvox_api_m.RedvoxPacke" +
-      "tM.Sensors.Location.BestLocation\022X\n\025over" +
-      "all_best_location\030\016 \001(\01329.redvox_api_m.R" +
-      "edvoxPacketM.Sensors.Location.BestLocati" +
-      "on\022$\n\034location_permissions_granted\030\017 \001(\010" +
-      "\022#\n\033location_services_requested\030\020 \001(\010\022!\n" +
-      "\031location_services_enabled\030\021 \001(\010\022Y\n\022loca" +
-      "tion_providers\030\022 \003(\0162=.redvox_api_m.Redv" +
-      "oxPacketM.Sensors.Location.LocationProvi" +
-      "der\022L\n\010metadata\030\023 \003(\0132:.redvox_api_m.Red" +
-      "voxPacketM.Sensors.Location.MetadataEntr" +
-      "y\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\032\317\r\n\014BestLocation\022m\n\034latitude_" +
-      "longitude_timestamp\030\001 \001(\0132G.redvox_api_m" +
+      "Payload\022I\n\010metadata\030\010 \003(\01327.redvox_api_m" +
+      ".RedvoxPacketM.Sensors.Audio.MetadataEnt" +
+      "ry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\032\215\003\n\017CompressedAudio\022\032\n\022senso" +
+      "r_description\030\001 \001(\t\022\036\n\026first_sample_time" +
+      "stamp\030\002 \001(\001\022\023\n\013sample_rate\030\003 \001(\002\022\024\n\014is_s" +
+      "crambled\030\004 \001(\010\022\023\n\013audio_bytes\030\005 \001(\014\022S\n\013a" +
+      "udio_codec\030\006 \001(\0162>.redvox_api_m.RedvoxPa" +
+      "cketM.Sensors.CompressedAudio.AudioCodec" +
+      "\022S\n\010metadata\030\007 \003(\0132A.redvox_api_m.Redvox" +
+      "PacketM.Sensors.CompressedAudio.Metadata" +
+      "Entry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"#\n\nAudioCodec\022\013\n\007UNKNOWN\020" +
+      "\000\022\010\n\004FLAC\020\001\032\234\002\n\006Single\022\032\n\022sensor_descrip" +
+      "tion\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132).redvox_" +
+      "api_m.RedvoxPacketM.TimingPayload\022:\n\007sam" +
+      "ples\030\003 \001(\0132).redvox_api_m.RedvoxPacketM." +
+      "SamplePayload\022J\n\010metadata\030\004 \003(\01328.redvox" +
+      "_api_m.RedvoxPacketM.Sensors.Single.Meta" +
+      "dataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\032\326\030\n\010Location\022\032\n\022senso" +
+      "r_description\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132" +
+      ").redvox_api_m.RedvoxPacketM.TimingPaylo" +
+      "ad\022A\n\016timestamps_gps\030\003 \001(\0132).redvox_api_" +
+      "m.RedvoxPacketM.TimingPayload\022I\n\020latitud" +
+      "e_samples\030\004 \001(\0132/.redvox_api_m.RedvoxPac" +
+      "ketM.DoubleSamplePayload\022J\n\021longitude_sa" +
+      "mples\030\005 \001(\0132/.redvox_api_m.RedvoxPacketM" +
+      ".DoubleSamplePayload\022C\n\020altitude_samples" +
+      "\030\006 \001(\0132).redvox_api_m.RedvoxPacketM.Samp" +
+      "lePayload\022@\n\rspeed_samples\030\007 \001(\0132).redvo" +
+      "x_api_m.RedvoxPacketM.SamplePayload\022B\n\017b" +
+      "earing_samples\030\010 \001(\0132).redvox_api_m.Redv" +
+      "oxPacketM.SamplePayload\022N\n\033horizontal_ac" +
+      "curacy_samples\030\t \001(\0132).redvox_api_m.Redv" +
+      "oxPacketM.SamplePayload\022L\n\031vertical_accu" +
+      "racy_samples\030\n \001(\0132).redvox_api_m.Redvox" +
+      "PacketM.SamplePayload\022I\n\026speed_accuracy_" +
+      "samples\030\013 \001(\0132).redvox_api_m.RedvoxPacke" +
+      "tM.SamplePayload\022K\n\030bearing_accuracy_sam" +
+      "ples\030\014 \001(\0132).redvox_api_m.RedvoxPacketM." +
+      "SamplePayload\022U\n\022last_best_location\030\r \001(" +
+      "\01329.redvox_api_m.RedvoxPacketM.Sensors.L" +
+      "ocation.BestLocation\022X\n\025overall_best_loc" +
+      "ation\030\016 \001(\01329.redvox_api_m.RedvoxPacketM" +
+      ".Sensors.Location.BestLocation\022$\n\034locati" +
+      "on_permissions_granted\030\017 \001(\010\022#\n\033location" +
+      "_services_requested\030\020 \001(\010\022!\n\031location_se" +
+      "rvices_enabled\030\021 \001(\010\022Y\n\022location_provide" +
+      "rs\030\022 \003(\0162=.redvox_api_m.RedvoxPacketM.Se" +
+      "nsors.Location.LocationProvider\022L\n\010metad" +
+      "ata\030\023 \003(\0132:.redvox_api_m.RedvoxPacketM.S" +
+      "ensors.Location.MetadataEntry\032/\n\rMetadat" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\317" +
+      "\r\n\014BestLocation\022m\n\034latitude_longitude_ti" +
+      "mestamp\030\001 \001(\0132G.redvox_api_m.RedvoxPacke" +
+      "tM.Sensors.Location.BestLocation.BestTim" +
+      "estamp\022c\n\022altitude_timestamp\030\002 \001(\0132G.red" +
+      "vox_api_m.RedvoxPacketM.Sensors.Location" +
+      ".BestLocation.BestTimestamp\022`\n\017speed_tim" +
+      "estamp\030\003 \001(\0132G.redvox_api_m.RedvoxPacket" +
+      "M.Sensors.Location.BestLocation.BestTime" +
+      "stamp\022b\n\021bearing_timestamp\030\004 \001(\0132G.redvo" +
+      "x_api_m.RedvoxPacketM.Sensors.Location.B" +
+      "estLocation.BestTimestamp\022A\n\027latitude_lo" +
+      "ngitude_unit\030\005 \001(\0162 .redvox_api_m.Redvox" +
+      "PacketM.Unit\0227\n\raltitude_unit\030\006 \001(\0162 .re" +
+      "dvox_api_m.RedvoxPacketM.Unit\0224\n\nspeed_u" +
+      "nit\030\007 \001(\0162 .redvox_api_m.RedvoxPacketM.U" +
+      "nit\0226\n\014bearing_unit\030\010 \001(\0162 .redvox_api_m" +
+      ".RedvoxPacketM.Unit\022@\n\026vertical_accuracy" +
+      "_unit\030\t \001(\0162 .redvox_api_m.RedvoxPacketM" +
+      ".Unit\022B\n\030horizontal_accuracy_unit\030\n \001(\0162" +
+      " .redvox_api_m.RedvoxPacketM.Unit\022=\n\023spe" +
+      "ed_accuracy_unit\030\013 \001(\0162 .redvox_api_m.Re" +
+      "dvoxPacketM.Unit\022?\n\025bearing_accuracy_uni" +
+      "t\030\014 \001(\0162 .redvox_api_m.RedvoxPacketM.Uni" +
+      "t\022\020\n\010latitude\030\r \001(\001\022\021\n\tlongitude\030\016 \001(\001\022\020" +
+      "\n\010altitude\030\017 \001(\002\022\r\n\005speed\030\020 \001(\002\022\017\n\007beari" +
+      "ng\030\021 \001(\002\022\031\n\021vertical_accuracy\030\022 \001(\002\022\033\n\023h" +
+      "orizontal_accuracy\030\023 \001(\002\022\026\n\016speed_accura" +
+      "cy\030\024 \001(\002\022\030\n\020bearing_accuracy\030\025 \001(\002\022\r\n\005sc" +
+      "ore\030\026 \001(\002\022]\n\006method\030\027 \001(\0162M.redvox_api_m" +
       ".RedvoxPacketM.Sensors.Location.BestLoca" +
-      "tion.BestTimestamp\022c\n\022altitude_timestamp" +
-      "\030\002 \001(\0132G.redvox_api_m.RedvoxPacketM.Sens" +
-      "ors.Location.BestLocation.BestTimestamp\022" +
-      "`\n\017speed_timestamp\030\003 \001(\0132G.redvox_api_m." +
-      "RedvoxPacketM.Sensors.Location.BestLocat" +
-      "ion.BestTimestamp\022b\n\021bearing_timestamp\030\004" +
-      " \001(\0132G.redvox_api_m.RedvoxPacketM.Sensor" +
-      "s.Location.BestLocation.BestTimestamp\022A\n" +
-      "\027latitude_longitude_unit\030\005 \001(\0162 .redvox_" +
-      "api_m.RedvoxPacketM.Unit\0227\n\raltitude_uni" +
-      "t\030\006 \001(\0162 .redvox_api_m.RedvoxPacketM.Uni" +
-      "t\0224\n\nspeed_unit\030\007 \001(\0162 .redvox_api_m.Red" +
-      "voxPacketM.Unit\0226\n\014bearing_unit\030\010 \001(\0162 ." +
-      "redvox_api_m.RedvoxPacketM.Unit\022@\n\026verti" +
-      "cal_accuracy_unit\030\t \001(\0162 .redvox_api_m.R" +
-      "edvoxPacketM.Unit\022B\n\030horizontal_accuracy" +
-      "_unit\030\n \001(\0162 .redvox_api_m.RedvoxPacketM" +
-      ".Unit\022=\n\023speed_accuracy_unit\030\013 \001(\0162 .red" +
-      "vox_api_m.RedvoxPacketM.Unit\022?\n\025bearing_" +
-      "accuracy_unit\030\014 \001(\0162 .redvox_api_m.Redvo" +
-      "xPacketM.Unit\022\020\n\010latitude\030\r \001(\001\022\021\n\tlongi" +
-      "tude\030\016 \001(\001\022\020\n\010altitude\030\017 \001(\002\022\r\n\005speed\030\020 " +
-      "\001(\002\022\017\n\007bearing\030\021 \001(\002\022\031\n\021vertical_accurac" +
-      "y\030\022 \001(\002\022\033\n\023horizontal_accuracy\030\023 \001(\002\022\026\n\016" +
-      "speed_accuracy\030\024 \001(\002\022\030\n\020bearing_accuracy" +
-      "\030\025 \001(\002\022\r\n\005score\030\026 \001(\002\022]\n\006method\030\027 \001(\0162M." +
-      "redvox_api_m.RedvoxPacketM.Sensors.Locat" +
-      "ion.BestLocation.LocationScoreMethod\022X\n\021" +
-      "location_provider\030\030 \001(\0162=.redvox_api_m.R" +
-      "edvoxPacketM.Sensors.Location.LocationPr" +
-      "ovider\022Y\n\010metadata\030\031 \003(\0132G.redvox_api_m." +
-      "RedvoxPacketM.Sensors.Location.BestLocat" +
-      "ion.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\364\001\n\rBestTimes" +
-      "tamp\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Redvox" +
-      "PacketM.Unit\022\014\n\004mach\030\002 \001(\001\022\013\n\003gps\030\003 \001(\001\022" +
-      "g\n\010metadata\030\004 \003(\0132U.redvox_api_m.RedvoxP" +
-      "acketM.Sensors.Location.BestLocation.Bes" +
-      "tTimestamp.MetadataEntry\032/\n\rMetadataEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")\n\023Loc" +
-      "ationScoreMethod\022\022\n\016UNKNOWN_METHOD\020\000\"I\n\020" +
-      "LocationProvider\022\013\n\007UNKNOWN\020\000\022\010\n\004NONE\020\001\022" +
-      "\010\n\004USER\020\002\022\007\n\003GPS\020\003\022\013\n\007NETWORK\020\004\032\224\003\n\003Xyz\022" +
-      "\032\n\022sensor_description\030\001 \001(\t\022=\n\ntimestamp" +
-      "s\030\002 \001(\0132).redvox_api_m.RedvoxPacketM.Tim" +
-      "ingPayload\022<\n\tx_samples\030\003 \001(\0132).redvox_a" +
-      "pi_m.RedvoxPacketM.SamplePayload\022<\n\ty_sa" +
-      "mples\030\004 \001(\0132).redvox_api_m.RedvoxPacketM" +
-      ".SamplePayload\022<\n\tz_samples\030\005 \001(\0132).redv" +
-      "ox_api_m.RedvoxPacketM.SamplePayload\022G\n\010" +
-      "metadata\030\006 \003(\01325.redvox_api_m.RedvoxPack" +
-      "etM.Sensors.Xyz.MetadataEntry\032/\n\rMetadat" +
-      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\360" +
-      "\002\n\005Image\022\032\n\022sensor_description\030\001 \001(\t\022=\n\n" +
-      "timestamps\030\002 \001(\0132).redvox_api_m.RedvoxPa" +
-      "cketM.TimingPayload\022\017\n\007samples\030\003 \003(\014\022I\n\013" +
-      "image_codec\030\004 \001(\01624.redvox_api_m.RedvoxP" +
-      "acketM.Sensors.Image.ImageCodec\022I\n\010metad" +
-      "ata\030\005 \003(\01327.redvox_api_m.RedvoxPacketM.S" +
-      "ensors.Image.MetadataEntry\032/\n\rMetadataEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"4\n\nI" +
-      "mageCodec\022\013\n\007UNKNOWN\020\000\022\007\n\003PNG\020\001\022\007\n\003JPG\020\002" +
-      "\022\007\n\003BMP\020\003\032\362\007\n\013EventStream\022\014\n\004name\030\001 \001(\t\022" +
-      "=\n\ntimestamps\030\002 \001(\0132).redvox_api_m.Redvo" +
-      "xPacketM.TimingPayload\022=\n\006events\030\003 \003(\0132-" +
-      ".redvox_api_m.RedvoxPacketM.EventStream." +
-      "Event\022G\n\010metadata\030\004 \003(\01325.redvox_api_m.R" +
-      "edvoxPacketM.EventStream.MetadataEntry\032/" +
-      "\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\032\334\005\n\005Event\022\023\n\013description\030\001 \001(\t\022X" +
-      "\n\016string_payload\030\002 \003(\0132@.redvox_api_m.Re" +
-      "dvoxPacketM.EventStream.Event.StringPayl" +
-      "oadEntry\022Z\n\017numeric_payload\030\003 \003(\0132A.redv" +
-      "ox_api_m.RedvoxPacketM.EventStream.Event" +
-      ".NumericPayloadEntry\022Z\n\017boolean_payload\030" +
-      "\004 \003(\0132A.redvox_api_m.RedvoxPacketM.Event" +
-      "Stream.Event.BooleanPayloadEntry\022T\n\014byte" +
-      "_payload\030\005 \003(\0132>.redvox_api_m.RedvoxPack" +
-      "etM.EventStream.Event.BytePayloadEntry\022M" +
-      "\n\010metadata\030\006 \003(\0132;.redvox_api_m.RedvoxPa" +
-      "cketM.EventStream.Event.MetadataEntry\0324\n" +
-      "\022StringPayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\0325\n\023NumericPayloadEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\001:\0028\001\0325\n\023BooleanPay" +
-      "loadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028" +
-      "\001\0322\n\020BytePayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\014:\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\224\002\n\rSamplePayload" +
-      "\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.RedvoxPack" +
-      "etM.Unit\022\016\n\006values\030\002 \003(\002\022G\n\020value_statis" +
-      "tics\030\003 \001(\0132-.redvox_api_m.RedvoxPacketM." +
-      "SummaryStatistics\022I\n\010metadata\030\004 \003(\01327.re" +
-      "dvox_api_m.RedvoxPacketM.SamplePayload.M" +
+      "tion.LocationScoreMethod\022X\n\021location_pro" +
+      "vider\030\030 \001(\0162=.redvox_api_m.RedvoxPacketM" +
+      ".Sensors.Location.LocationProvider\022Y\n\010me" +
+      "tadata\030\031 \003(\0132G.redvox_api_m.RedvoxPacket" +
+      "M.Sensors.Location.BestLocation.Metadata" +
+      "Entry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\032\364\001\n\rBestTimestamp\022.\n\004unit" +
+      "\030\001 \001(\0162 .redvox_api_m.RedvoxPacketM.Unit" +
+      "\022\014\n\004mach\030\002 \001(\001\022\013\n\003gps\030\003 \001(\001\022g\n\010metadata\030" +
+      "\004 \003(\0132U.redvox_api_m.RedvoxPacketM.Senso" +
+      "rs.Location.BestLocation.BestTimestamp.M" +
       "etadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\240\002\n\023DoubleSamplePa" +
-      "yload\022.\n\004unit\030\001 \001(\0162 .redvox_api_m.Redvo" +
-      "xPacketM.Unit\022\016\n\006values\030\002 \003(\001\022G\n\020value_s" +
-      "tatistics\030\003 \001(\0132-.redvox_api_m.RedvoxPac" +
-      "ketM.SummaryStatistics\022O\n\010metadata\030\004 \003(\013" +
-      "2=.redvox_api_m.RedvoxPacketM.DoubleSamp" +
-      "lePayload.MetadataEntry\032/\n\rMetadataEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321\002\n\rTim" +
-      "ingPayload\022.\n\004unit\030\001 \001(\0162 .redvox_api_m." +
-      "RedvoxPacketM.Unit\022\022\n\ntimestamps\030\002 \003(\001\022K" +
-      "\n\024timestamp_statistics\030\003 \001(\0132-.redvox_ap" +
-      "i_m.RedvoxPacketM.SummaryStatistics\022\030\n\020m" +
-      "ean_sample_rate\030\004 \001(\002\022\031\n\021stdev_sample_ra" +
-      "te\030\005 \001(\002\022I\n\010metadata\030\006 \003(\01327.redvox_api_" +
-      "m.RedvoxPacketM.TimingPayload.MetadataEn" +
-      "try\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\032\365\001\n\021SummaryStatistics\022\r\n\005co" +
-      "unt\030\001 \001(\001\022\014\n\004mean\030\002 \001(\001\022\032\n\022standard_devi" +
-      "ation\030\003 \001(\001\022\013\n\003min\030\004 \001(\001\022\013\n\003max\030\005 \001(\001\022\r\n" +
-      "\005range\030\006 \001(\001\022M\n\010metadata\030\007 \003(\0132;.redvox_" +
-      "api_m.RedvoxPacketM.SummaryStatistics.Me" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")\n\023LocationScoreMe" +
+      "thod\022\022\n\016UNKNOWN_METHOD\020\000\"I\n\020LocationProv" +
+      "ider\022\013\n\007UNKNOWN\020\000\022\010\n\004NONE\020\001\022\010\n\004USER\020\002\022\007\n" +
+      "\003GPS\020\003\022\013\n\007NETWORK\020\004\032\224\003\n\003Xyz\022\032\n\022sensor_de" +
+      "scription\030\001 \001(\t\022=\n\ntimestamps\030\002 \001(\0132).re" +
+      "dvox_api_m.RedvoxPacketM.TimingPayload\022<" +
+      "\n\tx_samples\030\003 \001(\0132).redvox_api_m.RedvoxP" +
+      "acketM.SamplePayload\022<\n\ty_samples\030\004 \001(\0132" +
+      ").redvox_api_m.RedvoxPacketM.SamplePaylo" +
+      "ad\022<\n\tz_samples\030\005 \001(\0132).redvox_api_m.Red" +
+      "voxPacketM.SamplePayload\022G\n\010metadata\030\006 \003" +
+      "(\01325.redvox_api_m.RedvoxPacketM.Sensors." +
+      "Xyz.MetadataEntry\032/\n\rMetadataEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\360\002\n\005Image\022\032\n\022" +
+      "sensor_description\030\001 \001(\t\022=\n\ntimestamps\030\002" +
+      " \001(\0132).redvox_api_m.RedvoxPacketM.Timing" +
+      "Payload\022\017\n\007samples\030\003 \003(\014\022I\n\013image_codec\030" +
+      "\004 \001(\01624.redvox_api_m.RedvoxPacketM.Senso" +
+      "rs.Image.ImageCodec\022I\n\010metadata\030\005 \003(\01327." +
+      "redvox_api_m.RedvoxPacketM.Sensors.Image" +
+      ".MetadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"4\n\nImageCodec\022\013\n" +
+      "\007UNKNOWN\020\000\022\007\n\003PNG\020\001\022\007\n\003JPG\020\002\022\007\n\003BMP\020\003\032\362\007" +
+      "\n\013EventStream\022\014\n\004name\030\001 \001(\t\022=\n\ntimestamp" +
+      "s\030\002 \001(\0132).redvox_api_m.RedvoxPacketM.Tim" +
+      "ingPayload\022=\n\006events\030\003 \003(\0132-.redvox_api_" +
+      "m.RedvoxPacketM.EventStream.Event\022G\n\010met" +
+      "adata\030\004 \003(\01325.redvox_api_m.RedvoxPacketM" +
+      ".EventStream.MetadataEntry\032/\n\rMetadataEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\334\005\n\005" +
+      "Event\022\023\n\013description\030\001 \001(\t\022X\n\016string_pay" +
+      "load\030\002 \003(\0132@.redvox_api_m.RedvoxPacketM." +
+      "EventStream.Event.StringPayloadEntry\022Z\n\017" +
+      "numeric_payload\030\003 \003(\0132A.redvox_api_m.Red" +
+      "voxPacketM.EventStream.Event.NumericPayl" +
+      "oadEntry\022Z\n\017boolean_payload\030\004 \003(\0132A.redv" +
+      "ox_api_m.RedvoxPacketM.EventStream.Event" +
+      ".BooleanPayloadEntry\022T\n\014byte_payload\030\005 \003" +
+      "(\0132>.redvox_api_m.RedvoxPacketM.EventStr" +
+      "eam.Event.BytePayloadEntry\022M\n\010metadata\030\006" +
+      " \003(\0132;.redvox_api_m.RedvoxPacketM.EventS" +
+      "tream.Event.MetadataEntry\0324\n\022StringPaylo" +
+      "adEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032" +
+      "5\n\023NumericPayloadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\001:\0028\001\0325\n\023BooleanPayloadEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001\0322\n\020BytePay" +
+      "loadEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028" +
+      "\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\032\224\002\n\rSamplePayload\022.\n\004unit\030\001 \001" +
+      "(\0162 .redvox_api_m.RedvoxPacketM.Unit\022\016\n\006" +
+      "values\030\002 \003(\002\022G\n\020value_statistics\030\003 \001(\0132-" +
+      ".redvox_api_m.RedvoxPacketM.SummaryStati" +
+      "stics\022I\n\010metadata\030\004 \003(\01327.redvox_api_m.R" +
+      "edvoxPacketM.SamplePayload.MetadataEntry" +
+      "\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\032\240\002\n\023DoubleSamplePayload\022.\n\004uni" +
+      "t\030\001 \001(\0162 .redvox_api_m.RedvoxPacketM.Uni" +
+      "t\022\016\n\006values\030\002 \003(\001\022G\n\020value_statistics\030\003 " +
+      "\001(\0132-.redvox_api_m.RedvoxPacketM.Summary" +
+      "Statistics\022O\n\010metadata\030\004 \003(\0132=.redvox_ap" +
+      "i_m.RedvoxPacketM.DoubleSamplePayload.Me" +
       "tadataEntry\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\203\003\n\004Unit\022\013\n\007UNKNOWN" +
-      "\020\000\022\035\n\031METERS_PER_SECOND_SQUARED\020\001\022\016\n\nKIL" +
-      "OPASCAL\020\002\022\026\n\022RADIANS_PER_SECOND\020\003\022\023\n\017DEC" +
-      "IMAL_DEGREES\020\004\022\n\n\006METERS\020\005\022\025\n\021METERS_PER" +
-      "_SECOND\020\006\022\016\n\nMICROTESLA\020\007\022\031\n\025LSB_PLUS_MI" +
-      "NUS_COUNTS\020\010\022!\n\035MICROSECONDS_SINCE_UNIX_" +
-      "EPOCH\020\t\022\013\n\007DECIBEL\020\n\022\023\n\017DEGREES_CELSIUS\020" +
-      "\013\022\010\n\004BYTE\020\014\022\016\n\nPERCENTAGE\020\r\022\013\n\007RADIANS\020\016" +
-      "\022\020\n\014MICROAMPERES\020\017\022\017\n\013CENTIMETERS\020\020\022\025\n\021N" +
-      "ORMALIZED_COUNTS\020\021\022\007\n\003LUX\020\022\022\014\n\010UNITLESS\020" +
-      "\023\022\007\n\003PCM\020\024\"\254\001\n\026EncryptedRedvoxPacketM\022\016\n" +
-      "\006header\030\001 \001(\014\022\016\n\006packet\030\002 \001(\014\032r\n\006Header\022" +
-      "\022\n\nstation_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(" +
-      "\t\022\022\n\nauth_token\030\003 \001(\t\022\026\n\016firebase_token\030" +
-      "\004 \001(\t\022\022\n\nauth_email\030\005 \001(\t\"y\n\022Acquisition" +
-      "Request\022\022\n\nauth_token\030\001 \001(\t\022\026\n\016firebase_" +
-      "token\030\002 \001(\t\022\020\n\010checksum\030\003 \001(\003\022\024\n\014is_encr" +
-      "ypted\030\004 \001(\010\022\017\n\007payload\030\005 \001(\014\"\345\001\n\023Acquisi" +
-      "tionResponse\022E\n\rresponse_type\030\001 \001(\0162..re" +
-      "dvox_api_m.AcquisitionResponse.ResponseT" +
-      "ype\022\020\n\010checksum\030\002 \001(\003\022\017\n\007details\030\003 \001(\t\022\016" +
-      "\n\006resend\030\004 \001(\010\"T\n\014ResponseType\022\013\n\007UNKNOW" +
-      "N\020\000\022\006\n\002OK\020\001\022\016\n\nAUTH_ERROR\020\002\022\016\n\nDATA_ERRO" +
-      "R\020\003\022\017\n\013OTHER_ERROR\020\004\"\\\n\014SynchRequest\022\022\n\n" +
-      "station_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\016" +
-      "\n\006seq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\"\205\001\n\rS" +
-      "ynchResponse\022\022\n\nstation_id\030\001 \001(\t\022\024\n\014stat" +
-      "ion_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\nsub_se" +
-      "q_id\030\004 \001(\r\022\022\n\nrecv_ts_us\030\005 \001(\004\022\022\n\nsend_t" +
-      "s_us\030\006 \001(\004B\020\n\016io.redvox.apisb\006proto3"
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\321\002\n\rTimingPayload\022." +
+      "\n\004unit\030\001 \001(\0162 .redvox_api_m.RedvoxPacket" +
+      "M.Unit\022\022\n\ntimestamps\030\002 \003(\001\022K\n\024timestamp_" +
+      "statistics\030\003 \001(\0132-.redvox_api_m.RedvoxPa" +
+      "cketM.SummaryStatistics\022\030\n\020mean_sample_r" +
+      "ate\030\004 \001(\002\022\031\n\021stdev_sample_rate\030\005 \001(\002\022I\n\010" +
+      "metadata\030\006 \003(\01327.redvox_api_m.RedvoxPack" +
+      "etM.TimingPayload.MetadataEntry\032/\n\rMetad" +
+      "ataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\032\365\001\n\021SummaryStatistics\022\r\n\005count\030\001 \001(\001\022\014\n" +
+      "\004mean\030\002 \001(\001\022\032\n\022standard_deviation\030\003 \001(\001\022" +
+      "\013\n\003min\030\004 \001(\001\022\013\n\003max\030\005 \001(\001\022\r\n\005range\030\006 \001(\001" +
+      "\022M\n\010metadata\030\007 \003(\0132;.redvox_api_m.Redvox" +
+      "PacketM.SummaryStatistics.MetadataEntry\032" +
+      "/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"\203\003\n\004Unit\022\013\n\007UNKNOWN\020\000\022\035\n\031METERS" +
+      "_PER_SECOND_SQUARED\020\001\022\016\n\nKILOPASCAL\020\002\022\026\n" +
+      "\022RADIANS_PER_SECOND\020\003\022\023\n\017DECIMAL_DEGREES" +
+      "\020\004\022\n\n\006METERS\020\005\022\025\n\021METERS_PER_SECOND\020\006\022\016\n" +
+      "\nMICROTESLA\020\007\022\031\n\025LSB_PLUS_MINUS_COUNTS\020\010" +
+      "\022!\n\035MICROSECONDS_SINCE_UNIX_EPOCH\020\t\022\013\n\007D" +
+      "ECIBEL\020\n\022\023\n\017DEGREES_CELSIUS\020\013\022\010\n\004BYTE\020\014\022" +
+      "\016\n\nPERCENTAGE\020\r\022\013\n\007RADIANS\020\016\022\020\n\014MICROAMP" +
+      "ERES\020\017\022\017\n\013CENTIMETERS\020\020\022\025\n\021NORMALIZED_CO" +
+      "UNTS\020\021\022\007\n\003LUX\020\022\022\014\n\010UNITLESS\020\023\022\007\n\003PCM\020\024\"\254" +
+      "\001\n\026EncryptedRedvoxPacketM\022\016\n\006header\030\001 \001(" +
+      "\014\022\016\n\006packet\030\002 \001(\014\032r\n\006Header\022\022\n\nstation_i" +
+      "d\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\022\n\nauth_to" +
+      "ken\030\003 \001(\t\022\026\n\016firebase_token\030\004 \001(\t\022\022\n\naut" +
+      "h_email\030\005 \001(\t\"\211\001\n\022AcquisitionRequest\022\022\n\n" +
+      "auth_token\030\001 \001(\t\022\026\n\016firebase_token\030\002 \001(\t" +
+      "\022\020\n\010checksum\030\003 \001(\003\022\024\n\014is_encrypted\030\004 \001(\010" +
+      "\022\017\n\007payload\030\005 \001(\014\022\016\n\006seq_id\030\006 \001(\003\"\365\001\n\023Ac" +
+      "quisitionResponse\022E\n\rresponse_type\030\001 \001(\016" +
+      "2..redvox_api_m.AcquisitionResponse.Resp" +
+      "onseType\022\020\n\010checksum\030\002 \001(\003\022\017\n\007details\030\003 " +
+      "\001(\t\022\016\n\006resend\030\004 \001(\010\022\016\n\006seq_id\030\005 \001(\003\"T\n\014R" +
+      "esponseType\022\013\n\007UNKNOWN\020\000\022\006\n\002OK\020\001\022\016\n\nAUTH" +
+      "_ERROR\020\002\022\016\n\nDATA_ERROR\020\003\022\017\n\013OTHER_ERROR\020" +
+      "\004\"\\\n\014SynchRequest\022\022\n\nstation_id\030\001 \001(\t\022\024\n" +
+      "\014station_uuid\030\002 \001(\t\022\016\n\006seq_id\030\003 \001(\r\022\022\n\ns" +
+      "ub_seq_id\030\004 \001(\r\"\205\001\n\rSynchResponse\022\022\n\nsta" +
+      "tion_id\030\001 \001(\t\022\024\n\014station_uuid\030\002 \001(\t\022\016\n\006s" +
+      "eq_id\030\003 \001(\r\022\022\n\nsub_seq_id\030\004 \001(\r\022\022\n\nrecv_" +
+      "ts_us\030\005 \001(\004\022\022\n\nsend_ts_us\030\006 \001(\004B\020\n\016io.re" +
+      "dvox.apisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -61693,7 +61943,7 @@ public final class RedvoxApiM {
     internal_static_redvox_api_m_RedvoxPacketM_StationInformation_AppSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_RedvoxPacketM_StationInformation_AppSettings_descriptor,
-        new java.lang.String[] { "AudioSamplingRate", "AudioSourceTuning", "AdditionalInputSensors", "AutomaticallyRecord", "LaunchAtPowerUp", "StationId", "StationDescription", "PushToServer", "PublishDataAsPrivate", "ScrambleAudioData", "ProvideBackfill", "RemoveSensorDcOffset", "FftOverlap", "UseCustomTimeSyncServer", "TimeSyncServerUrl", "UseCustomDataServer", "DataServerUrl", "UseCustomAuthServer", "AuthServerUrl", "AutoDeleteDataFiles", "StorageSpaceAllowance", "UseSdCardForDataStorage", "UseLocationServices", "UseLatitude", "UseLongitude", "UseAltitude", "Metadata", });
+        new java.lang.String[] { "AudioSamplingRate", "SamplesPerWindow", "AudioSourceTuning", "AdditionalInputSensors", "AutomaticallyRecord", "LaunchAtPowerUp", "StationId", "StationDescription", "PushToServer", "PublishDataAsPrivate", "ScrambleAudioData", "ProvideBackfill", "RemoveSensorDcOffset", "FftOverlap", "UseCustomTimeSyncServer", "TimeSyncServerUrl", "UseCustomDataServer", "DataServerUrl", "UseCustomAuthServer", "AuthServerUrl", "AutoDeleteDataFiles", "StorageSpaceAllowance", "UseSdCardForDataStorage", "UseLocationServices", "UseLatitude", "UseLongitude", "UseAltitude", "Metadata", });
     internal_static_redvox_api_m_RedvoxPacketM_StationInformation_AppSettings_MetadataEntry_descriptor =
       internal_static_redvox_api_m_RedvoxPacketM_StationInformation_AppSettings_descriptor.getNestedTypes().get(0);
     internal_static_redvox_api_m_RedvoxPacketM_StationInformation_AppSettings_MetadataEntry_fieldAccessorTable = new
@@ -61945,13 +62195,13 @@ public final class RedvoxApiM {
     internal_static_redvox_api_m_AcquisitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_AcquisitionRequest_descriptor,
-        new java.lang.String[] { "AuthToken", "FirebaseToken", "Checksum", "IsEncrypted", "Payload", });
+        new java.lang.String[] { "AuthToken", "FirebaseToken", "Checksum", "IsEncrypted", "Payload", "SeqId", });
     internal_static_redvox_api_m_AcquisitionResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_redvox_api_m_AcquisitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_redvox_api_m_AcquisitionResponse_descriptor,
-        new java.lang.String[] { "ResponseType", "Checksum", "Details", "Resend", });
+        new java.lang.String[] { "ResponseType", "Checksum", "Details", "Resend", "SeqId", });
     internal_static_redvox_api_m_SynchRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_redvox_api_m_SynchRequest_fieldAccessorTable = new

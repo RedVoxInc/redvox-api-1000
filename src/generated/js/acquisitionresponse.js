@@ -71,7 +71,8 @@ proto.redvox_api_m.AcquisitionResponse.toObject = function(includeInstance, msg)
     responseType: jspb.Message.getFieldWithDefault(msg, 1, 0),
     checksum: jspb.Message.getFieldWithDefault(msg, 2, 0),
     details: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    resend: jspb.Message.getBooleanFieldWithDefault(msg, 4, false)
+    resend: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
+    seqId: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -123,6 +124,10 @@ proto.redvox_api_m.AcquisitionResponse.deserializeBinaryFromReader = function(ms
     case 4:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setResend(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setSeqId(value);
       break;
     default:
       reader.skipField();
@@ -178,6 +183,13 @@ proto.redvox_api_m.AcquisitionResponse.serializeBinaryToWriter = function(messag
   if (f) {
     writer.writeBool(
       4,
+      f
+    );
+  }
+  f = message.getSeqId();
+  if (f !== 0) {
+    writer.writeInt64(
+      5,
       f
     );
   }
@@ -264,6 +276,24 @@ proto.redvox_api_m.AcquisitionResponse.prototype.getResend = function() {
  */
 proto.redvox_api_m.AcquisitionResponse.prototype.setResend = function(value) {
   return jspb.Message.setProto3BooleanField(this, 4, value);
+};
+
+
+/**
+ * optional int64 seq_id = 5;
+ * @return {number}
+ */
+proto.redvox_api_m.AcquisitionResponse.prototype.getSeqId = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.redvox_api_m.AcquisitionResponse} returns this
+ */
+proto.redvox_api_m.AcquisitionResponse.prototype.setSeqId = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
 };
 
 

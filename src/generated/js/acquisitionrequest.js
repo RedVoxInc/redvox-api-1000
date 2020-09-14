@@ -71,7 +71,8 @@ proto.redvox_api_m.AcquisitionRequest.toObject = function(includeInstance, msg) 
     firebaseToken: jspb.Message.getFieldWithDefault(msg, 2, ""),
     checksum: jspb.Message.getFieldWithDefault(msg, 3, 0),
     isEncrypted: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
-    payload: msg.getPayload_asB64()
+    payload: msg.getPayload_asB64(),
+    seqId: jspb.Message.getFieldWithDefault(msg, 6, 0)
   };
 
   if (includeInstance) {
@@ -127,6 +128,10 @@ proto.redvox_api_m.AcquisitionRequest.deserializeBinaryFromReader = function(msg
     case 5:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setPayload(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setSeqId(value);
       break;
     default:
       reader.skipField();
@@ -189,6 +194,13 @@ proto.redvox_api_m.AcquisitionRequest.serializeBinaryToWriter = function(message
   if (f.length > 0) {
     writer.writeBytes(
       5,
+      f
+    );
+  }
+  f = message.getSeqId();
+  if (f !== 0) {
+    writer.writeInt64(
+      6,
       f
     );
   }
@@ -306,6 +318,24 @@ proto.redvox_api_m.AcquisitionRequest.prototype.getPayload_asU8 = function() {
  */
 proto.redvox_api_m.AcquisitionRequest.prototype.setPayload = function(value) {
   return jspb.Message.setProto3BytesField(this, 5, value);
+};
+
+
+/**
+ * optional int64 seq_id = 6;
+ * @return {number}
+ */
+proto.redvox_api_m.AcquisitionRequest.prototype.getSeqId = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.redvox_api_m.AcquisitionRequest} returns this
+ */
+proto.redvox_api_m.AcquisitionRequest.prototype.setSeqId = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
 };
 
 
