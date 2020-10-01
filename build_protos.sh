@@ -78,3 +78,9 @@ git commit -m"Update API M protobuf docs"
 git push origin master
 cd ${BACK}
 rm -rf ${TMP_DIR}
+
+# Export fully qualified names
+./fqns-bin <src/redvox_api_m/redvox_api_m.min.proto
+mv api_m_fqns.txt src/generated/fqns/.
+mv api_m_fqns.rs src/generated/fqns/.
+mv api_m_fqns.py src/generated/fqns/.

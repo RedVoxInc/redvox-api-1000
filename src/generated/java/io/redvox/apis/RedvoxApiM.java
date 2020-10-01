@@ -4,7 +4,7 @@
 package io.redvox.apis;
 
 public final class RedvoxApiM {
-  public final static float SUB_API = 9.0f;  // redvox-api-1000 -> build_protos.sh -> insert_sub_api.py on 2020-09-14 20:48:24.787143
+  public final static float SUB_API = 9.0f;  // redvox-api-1000 -> build_protos.sh -> insert_sub_api.py on 2020-10-01 23:08:19.110398
 
   private RedvoxApiM() {}
   public static void registerAllExtensions(
