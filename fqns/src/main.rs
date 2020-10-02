@@ -86,12 +86,21 @@ fn main() {
     // Code generation
     let mut rout = std::fs::File::create("api_m_fqns.rs").unwrap();
     let mut pout = std::fs::File::create("api_m_fqns.py").unwrap();
+
+    rout.write_all("pub const METADATA: &str = \"metadata\";\n".as_bytes()).unwrap();
+    pout.write_all("METADATA: str = \"metadata\"\n".as_bytes()).unwrap();
+
     for i in 0..fully_qualified_names.len() {
         let constant = &as_consts[i];
         let fqn = &fully_qualified_names[i];
-        rout.write_all(format!("pub const {}: &str = \"{}\";\n", constant, fqn).as_bytes())
+        rout.write_all(format!("pub const METADATA_{}: &str = \"metadata.{}\";\n", constant, fqn).as_bytes())
             .unwrap();
-        pout.write_all(format!("{}: str = \"{}\"\n", constant, fqn).as_bytes())
+        pout.write_all(format!("METADATA_{}: str = \"metadata.{}\"\n", constant, fqn).as_bytes())
             .unwrap();
     }
+    rout.write_all("pub const ADDITIONAL_METADATA: &str = \"additional_metadata\";\n".as_bytes()).unwrap();
+    rout.write_all("pub const ADDITIONAL_METADATA_DATA_KEY: &str = \"additional_metadata.data_key\";\n".as_bytes()).unwrap();
+
+    pout.write_all("ADDITIONAL_METADATA: str = \"additional_metadata\"\n".as_bytes()).unwrap();
+    pout.write_all("ADDITIONAL_METADATA_DATA_KEY: str = \"additional_metadata.data_key\"\n".as_bytes()).unwrap();
 }
