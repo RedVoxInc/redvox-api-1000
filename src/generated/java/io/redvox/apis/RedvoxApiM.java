@@ -4,7 +4,7 @@
 package io.redvox.apis;
 
 public final class RedvoxApiM {
-  public final static float SUB_API = 9.0f;  // redvox-api-1000 -> build_protos.sh -> insert_sub_api.py on 2020-10-19 20:51:26.298822
+  public final static float SUB_API = 9.0f;  // redvox-api-1000 -> build_protos.sh -> insert_sub_api.py on 2020-10-19 23:30:45.599080
 
   private RedvoxApiM() {}
   public static void registerAllExtensions(
@@ -15381,7 +15381,7 @@ public final class RedvoxApiM {
     /**
      * <pre>
      * Stores timing information and related metrics
-     * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/keeping_time.md
+     * See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/keeping_time.md
      * </pre>
      *
      * Protobuf type {@code redvox_api_m.RedvoxPacketM.TimingInformation}
@@ -17664,7 +17664,7 @@ public final class RedvoxApiM {
       /**
        * <pre>
        * Stores timing information and related metrics
-       * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/keeping_time.md
+       * See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/keeping_time.md
        * </pre>
        *
        * Protobuf type {@code redvox_api_m.RedvoxPacketM.TimingInformation}
@@ -19474,7 +19474,7 @@ public final class RedvoxApiM {
     /**
      * <pre>
      * Collection of available sensor types
-     * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/standard_sensor_units.md
+     * See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/standard_sensor_units.md
      * </pre>
      *
      * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors}
@@ -19955,7 +19955,7 @@ public final class RedvoxApiM {
       /**
        * <pre>
        * This message describes a stable audio channel
-       * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_audio_data.md
+       * See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_audio_data.md
        * </pre>
        *
        * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors.Audio}
@@ -20634,7 +20634,7 @@ public final class RedvoxApiM {
         /**
          * <pre>
          * This message describes a stable audio channel
-         * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_audio_data.md
+         * See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_audio_data.md
          * </pre>
          *
          * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors.Audio}
@@ -23297,7 +23297,7 @@ public final class RedvoxApiM {
       /**
        * <pre>
        * A single channel of data
-       * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_single_channel_data.md
+       * See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_single_channel_data.md
        * </pre>
        *
        * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors.Single}
@@ -23852,7 +23852,7 @@ public final class RedvoxApiM {
         /**
          * <pre>
          * A single channel of data
-         * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_single_channel_data.md
+         * See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_single_channel_data.md
          * </pre>
          *
          * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors.Single}
@@ -25167,7 +25167,7 @@ public final class RedvoxApiM {
       /**
        * <pre>
        * Location channels
-       * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_location_data.md
+       * See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_location_data.md
        * </pre>
        *
        * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors.Location}
@@ -32093,7 +32093,7 @@ public final class RedvoxApiM {
         /**
          * <pre>
          * Location channels
-         * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_location_data.md
+         * See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_location_data.md
          * </pre>
          *
          * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors.Location}
@@ -35270,7 +35270,7 @@ public final class RedvoxApiM {
       /**
        * <pre>
        * Message representing data channels with X, Y, and Z components
-       * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_xyz_channel_data.md
+       * See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_xyz_channel_data.md
        * </pre>
        *
        * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors.Xyz}
@@ -35953,7 +35953,7 @@ public final class RedvoxApiM {
         /**
          * <pre>
          * Message representing data channels with X, Y, and Z components
-         * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_xyz_channel_data.md
+         * See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_xyz_channel_data.md
          * </pre>
          *
          * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors.Xyz}
@@ -37263,7 +37263,7 @@ public final class RedvoxApiM {
       /**
        * <pre>
        * Image/video channel
-       * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_image_data.md
+       * See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_image_data.md
        * </pre>
        *
        * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors.Image}
@@ -37992,7 +37992,7 @@ public final class RedvoxApiM {
         /**
          * <pre>
          * Image/video channel
-         * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_image_data.md
+         * See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_image_data.md
          * </pre>
          *
          * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors.Image}
@@ -39924,7 +39924,7 @@ public final class RedvoxApiM {
       /**
        * <pre>
        * Collection of available sensor types
-       * See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/standard_sensor_units.md
+       * See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/standard_sensor_units.md
        * </pre>
        *
        * Protobuf type {@code redvox_api_m.RedvoxPacketM.Sensors}

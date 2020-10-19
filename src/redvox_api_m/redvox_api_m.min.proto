@@ -2,7 +2,7 @@
 * This file contains the protobuf message definitions for RedVox API 1000 (M) data and network communications.
 *
 * Standards and related documentation for API M is available at:
-*   - https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/README.md
+*   - https://github.com/RedVoxInc/redvox-api-1000
 */
 syntax = "proto3";
 package redvox_api_m;
