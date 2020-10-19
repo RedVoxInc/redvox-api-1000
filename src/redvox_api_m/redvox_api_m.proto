@@ -324,7 +324,7 @@ message RedvoxPacketM {
     }
 
     // Stores timing information and related metrics
-    // See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/keeping_time.md
+    // See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/keeping_time.md
     message TimingInformation {
         // Start timestamp of the packet using the os clock (corresponding to first audio sample)
         double packet_start_os_timestamp = 1;
@@ -388,7 +388,7 @@ message RedvoxPacketM {
     }
 
     // Collection of available sensor types
-    // See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/standard_sensor_units.md
+    // See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/standard_sensor_units.md
     message Sensors {
         // meters/second^2
         Xyz accelerometer = 1;
@@ -442,7 +442,7 @@ message RedvoxPacketM {
         map<string, string> metadata = 17;
 
         // This message describes a stable audio channel
-        // See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_audio_data.md
+        // See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_audio_data.md
         message Audio {
             // The name or description of the audio sensor
             string sensor_description = 1;
@@ -499,7 +499,7 @@ message RedvoxPacketM {
         }
 
         // A single channel of data
-        // See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_single_channel_data.md
+        // See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_single_channel_data.md
         message Single {
             // The name or description of the sensor
             string sensor_description = 1;
@@ -515,7 +515,7 @@ message RedvoxPacketM {
         }
 
         // Location channels
-        // See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_location_data.md
+        // See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_location_data.md
         message Location {
             // The name or description of the sensor
             string sensor_description = 1;
@@ -680,7 +680,7 @@ message RedvoxPacketM {
         }
 
         // Message representing data channels with X, Y, and Z components
-        // See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_xyz_channel_data.md
+        // See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_xyz_channel_data.md
         message Xyz {
             // The name or description of the sensor
             string sensor_description = 1;
@@ -702,7 +702,7 @@ message RedvoxPacketM {
         }
 
         // Image/video channel
-        // See: https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/storing_image_data.md
+        // See: https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/storing_image_data.md
         message Image {
             // The name or description of the sensor
             string sensor_description = 1;
