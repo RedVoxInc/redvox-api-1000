@@ -63,12 +63,13 @@ cat ${SRC} | python3 strip.py > src/redvox_api_m/redvox_api_m.min.proto
 # Here's where we try to keep the rendered API docs up-to-date
 TMP_DIR="/tmp/proto_build"
 rm -rf ${TMP_DIR}
-REPO_ROOT="${TMP_DIR}/redvoxhi.bitbucket.io"
+REPO_ROOT="${TMP_DIR}/RedVoxInc.github.io"
 API_ROOT="${REPO_ROOT}/api-m"
 mkdir -p ${TMP_DIR}
 BACK=$(pwd)
 cd ${TMP_DIR}
-git clone git@bitbucket.org:redvoxhi/redvoxhi.bitbucket.io.git
+git clone git@github.com:RedVoxInc/RedVoxInc.github.io.git
+mkdir -p ${API_ROOT}
 cd ${BACK}
 rm -rf ${API_ROOT}/*
 cp -R docs/api/* ${API_ROOT}/.
