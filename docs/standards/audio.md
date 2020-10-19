@@ -18,6 +18,8 @@ TODO
 
 Audio samples drive the construction and timing of all API M data packets. The packet time window is directly related to the sampling rate of the audio sensor. The following audio sampling rates and constraints are supported under API M.
 
+TODO: _this needs to be updated_
+
 | Audio sampling rate (Hz) | Total audio samples/packet | Total packet length (s) |
 |--------------------------|----------------------------|-------------------------|
 | 80                       | 4,096   (2^12)             | 51.200                  |

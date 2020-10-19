@@ -6,7 +6,7 @@ Sensor samples must be stored using the following units. You will note that API 
 
 All timestamps in API M should be represented as the nummber of microseconds since the Unix epoch.
 
-More information is provided in the [keeping time standard](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/keeping_time.md).
+More information is provided in the [keeping time standard](https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/keeping_time.md).
 
 ### Sample Rates
 

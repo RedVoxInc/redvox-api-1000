@@ -2,7 +2,7 @@
 
 Authentication and authorization to RedVox services is provided through the RedVox Cloud API. 
 
-This service can be interacted with using any HTTP client. Endpoints for the HTTP API can be found [here](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/docs/standards/client_server_comms.md). The rest of this documentation will refer to endpoints using the format `https://host:port/api/v1/...`.
+This service can be interacted with using any HTTP client. Endpoints for the HTTP API can be found [here](https://github.com/RedVoxInc/redvox-api-1000/src/master/docs/standards/client_server_comms.md). The rest of this documentation will refer to endpoints using the format `https://host:port/api/v1/...`.
 
 ### Authenticating with RedVox Services
 
@@ -166,4 +166,4 @@ If the refresh is not successful, the HTTP response code will be something other
 
 ##### Sending the authentication token with every packet transmission
 
-The token is stored along with the [AcquisitionRequest](https://bitbucket.org/redvoxhi/redvox-api-1000/src/master/src/redvox_api_m/redvox_api_m.proto#lines-419). This is a change from API 900 where the token was stored in the packet data itself. This change was made so that the token only needs to be associated with the data directly before being transmitted. 
+The token is stored along with the [AcquisitionRequest](https://github.com/RedVoxInc/redvox-api-1000/src/master/src/redvox_api_m/redvox_api_m.proto#lines-419). This is a change from API 900 where the token was stored in the packet data itself. This change was made so that the token only needs to be associated with the data directly before being transmitted. 
