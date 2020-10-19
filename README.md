@@ -73,8 +73,10 @@ Major changes for API M that are not in API 900 include:
 ### Detailed Documentation Topics
 
 * [Audio Collection](docs/standards/audio.md)
-* [Authenticating with RedVox Servers](docs/standards/authentication.md)
+* [Authentication](docs/standards/authentication.md)
 * [Client/Server Communications](docs/standards/client_server_comms.md)
+* [Compression/Decompression](docs/standards/compression.md)
+* [Image Collection]()
 * [Keeping Time](docs/standards/keeping_time.md)
 * [Movement Detection]()
 * [Sensor Units](docs/standards/standard_sensor_units.md)
