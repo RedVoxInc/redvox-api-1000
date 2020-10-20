@@ -4,6 +4,8 @@ The API M `EventStream` and `Event` message types are used to store the result o
 
 ### Description of the algorithm
 
+This algorithm requires multiple circular buffers for storing the cumulative sum window and the average window.
+
 ### Configuring the Movement Detector
 
 The following fields are required for configuring the movement detector.
