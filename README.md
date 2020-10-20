@@ -78,9 +78,9 @@ Major changes for API M that are not in API 900 include:
 * [Compression/Decompression](docs/standards/compression.md)
 * [End-to-End Encryption](docs/standards/e2e_encryption.md)
 * [Filenames and Directory Structures](docs/standards/filenames_and_directory_structures.md)
-* [Image Collection]()
+* [Image Collection](docs/standards/image_collection.md)
 * [Keeping Time](docs/standards/keeping_time.md)
-* [Movement Detection]()
+* [Movement Detection](docs/standards/movement_detection.md)
 * [Sensor Units](docs/standards/standard_sensor_units.md)
 * [Station Metrics](docs/standards/station_metrics.md)
 
