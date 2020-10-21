@@ -41,12 +41,14 @@ JAVA_OUT=${OUT}/java
 PYTHON_OUT=${OUT}/python
 OBJ_C_OUT=${OUT}/obj_c
 JS_OUT=${OUT}/js
+SWIFT_OUT=${OUT}/swift
 
 # Compile the protobuf
 protoc  --java_out=${JAVA_OUT}                                  \
         --python_out=${PYTHON_OUT} --mypy_out=${PYTHON_OUT}     \
         --objc_out=${OBJ_C_OUT}                                 \
         --js_out=${JS_OUT}                                      \
+        --swift_out=${SWIFT_OUT}                                \
         ${SRC}
 
 # Define sub_api version
