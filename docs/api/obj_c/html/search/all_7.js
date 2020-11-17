@@ -48,12 +48,13 @@ var searchData=
   ['hastimestampstatistics_116',['hasTimestampStatistics',['../interfaceRedvoxPacketM__TimingPayload.html#a2097a0c42e41e028bc5d698898f99ab9',1,'RedvoxPacketM_TimingPayload']]],
   ['hastiminginformation_117',['hasTimingInformation',['../interfaceRedvoxPacketM.html#a5c5c655460d5b7acc1b0630ab70d5eeb',1,'RedvoxPacketM']]],
   ['hasvaluestatistics_118',['hasValueStatistics',['../interfaceRedvoxPacketM__SamplePayload.html#a6ac11bc8abeb608cdec1b4886e66185b',1,'RedvoxPacketM_SamplePayload::hasValueStatistics()'],['../interfaceRedvoxPacketM__DoubleSamplePayload.html#ac536ff6ec9bedc9d6da4e51688da55d9',1,'RedvoxPacketM_DoubleSamplePayload::hasValueStatistics()']]],
-  ['hasverticalaccuracysamples_119',['hasVerticalAccuracySamples',['../interfaceRedvoxPacketM__Sensors__Location.html#ae119a83c6ba9fc79216e3c660cca2368',1,'RedvoxPacketM_Sensors_Location']]],
-  ['hasxsamples_120',['hasXSamples',['../interfaceRedvoxPacketM__Sensors__Xyz.html#a6dafc554e371f923dd63daeb528e4637',1,'RedvoxPacketM_Sensors_Xyz']]],
-  ['hasysamples_121',['hasYSamples',['../interfaceRedvoxPacketM__Sensors__Xyz.html#a66dd72e6aea9fbdac81ac4c6db7bd4c8',1,'RedvoxPacketM_Sensors_Xyz']]],
-  ['haszsamples_122',['hasZSamples',['../interfaceRedvoxPacketM__Sensors__Xyz.html#a880e68ce706a45722559de99a66c37cf',1,'RedvoxPacketM_Sensors_Xyz']]],
-  ['header_123',['header',['../interfaceEncryptedRedvoxPacketM.html#ad816630e00f128177f75a17d08f848fb',1,'EncryptedRedvoxPacketM']]],
-  ['horizontalaccuracy_124',['horizontalAccuracy',['../interfaceRedvoxPacketM__Sensors__Location__BestLocation.html#af4789e263947807f9113b6a4408123bc',1,'RedvoxPacketM_Sensors_Location_BestLocation']]],
-  ['horizontalaccuracysamples_125',['horizontalAccuracySamples',['../interfaceRedvoxPacketM__Sensors__Location.html#a46c6ae3dc3e0cc7f2646f21233b50123',1,'RedvoxPacketM_Sensors_Location']]],
-  ['horizontalaccuracyunit_126',['horizontalAccuracyUnit',['../interfaceRedvoxPacketM__Sensors__Location__BestLocation.html#a76f114a973b4bad9358599e28420aee0',1,'RedvoxPacketM_Sensors_Location_BestLocation']]]
+  ['hasvelocity_119',['hasVelocity',['../interfaceRedvoxPacketM__Sensors.html#a1061df5d91b2ee8291ed6d50ec74635a',1,'RedvoxPacketM_Sensors']]],
+  ['hasverticalaccuracysamples_120',['hasVerticalAccuracySamples',['../interfaceRedvoxPacketM__Sensors__Location.html#ae119a83c6ba9fc79216e3c660cca2368',1,'RedvoxPacketM_Sensors_Location']]],
+  ['hasxsamples_121',['hasXSamples',['../interfaceRedvoxPacketM__Sensors__Xyz.html#a6dafc554e371f923dd63daeb528e4637',1,'RedvoxPacketM_Sensors_Xyz']]],
+  ['hasysamples_122',['hasYSamples',['../interfaceRedvoxPacketM__Sensors__Xyz.html#a66dd72e6aea9fbdac81ac4c6db7bd4c8',1,'RedvoxPacketM_Sensors_Xyz']]],
+  ['haszsamples_123',['hasZSamples',['../interfaceRedvoxPacketM__Sensors__Xyz.html#a880e68ce706a45722559de99a66c37cf',1,'RedvoxPacketM_Sensors_Xyz']]],
+  ['header_124',['header',['../interfaceEncryptedRedvoxPacketM.html#ad816630e00f128177f75a17d08f848fb',1,'EncryptedRedvoxPacketM']]],
+  ['horizontalaccuracy_125',['horizontalAccuracy',['../interfaceRedvoxPacketM__Sensors__Location__BestLocation.html#af4789e263947807f9113b6a4408123bc',1,'RedvoxPacketM_Sensors_Location_BestLocation']]],
+  ['horizontalaccuracysamples_126',['horizontalAccuracySamples',['../interfaceRedvoxPacketM__Sensors__Location.html#a46c6ae3dc3e0cc7f2646f21233b50123',1,'RedvoxPacketM_Sensors_Location']]],
+  ['horizontalaccuracyunit_127',['horizontalAccuracyUnit',['../interfaceRedvoxPacketM__Sensors__Location__BestLocation.html#a76f114a973b4bad9358599e28420aee0',1,'RedvoxPacketM_Sensors_Location_BestLocation']]]
 ];

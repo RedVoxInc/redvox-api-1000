@@ -4,7 +4,7 @@ from typing import List
 
 def read_sub_api() -> float:
     with open("sub_api_version.txt", "r") as fin:
-        line: str = fin.readline(1).strip()
+        line: str = fin.readline().strip()
         return float(line)
 
 
