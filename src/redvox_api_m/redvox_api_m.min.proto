@@ -58,7 +58,7 @@ message RedvoxPacketM {
             repeated PowerState power_state = 11;
             repeated WifiWakeLock wifi_wake_lock = 12;
             repeated ScreenState screen_state = 13;
-            repeated float screen_brightness = 14;
+            SamplePayload screen_brightness = 14;
             map<string, string> metadata = 15;
             enum NetworkType {
                 UNKNOWN_NETWORK = 0;

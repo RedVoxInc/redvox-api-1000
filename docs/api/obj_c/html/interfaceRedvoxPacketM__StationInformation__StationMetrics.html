@@ -131,10 +131,10 @@ Properties</h2></td></tr>
 <tr class="separator:aa23f7e44b2eef10ff128d6dff981b634"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a671e6bcadbe7edc159a7b3f6a743e3fe"><td class="memItemLeft" align="right" valign="top">NSUInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRedvoxPacketM__StationInformation__StationMetrics.html#a671e6bcadbe7edc159a7b3f6a743e3fe">screenStateArray_Count</a></td></tr>
 <tr class="separator:a671e6bcadbe7edc159a7b3f6a743e3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc6e67a25bf0777d37d8dc577311315c"><td class="memItemLeft" align="right" valign="top">GPBFloatArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRedvoxPacketM__StationInformation__StationMetrics.html#afc6e67a25bf0777d37d8dc577311315c">screenBrightnessArray</a></td></tr>
-<tr class="separator:afc6e67a25bf0777d37d8dc577311315c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11e29567c2ecfe1ae7f44dbf20d78eae"><td class="memItemLeft" align="right" valign="top">NSUInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRedvoxPacketM__StationInformation__StationMetrics.html#a11e29567c2ecfe1ae7f44dbf20d78eae">screenBrightnessArray_Count</a></td></tr>
-<tr class="separator:a11e29567c2ecfe1ae7f44dbf20d78eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54d710e27c15e9441708552ea9d8fa71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceRedvoxPacketM__SamplePayload.html">RedvoxPacketM_SamplePayload</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRedvoxPacketM__StationInformation__StationMetrics.html#a54d710e27c15e9441708552ea9d8fa71">screenBrightness</a></td></tr>
+<tr class="separator:a54d710e27c15e9441708552ea9d8fa71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa48a2fc9e2025b0fb87b009ead773208"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRedvoxPacketM__StationInformation__StationMetrics.html#aa48a2fc9e2025b0fb87b009ead773208">hasScreenBrightness</a></td></tr>
+<tr class="separator:aa48a2fc9e2025b0fb87b009ead773208"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43e950fffd83537b3ebf5c090126e621"><td class="memItemLeft" align="right" valign="top">NSMutableDictionary&lt; NSString *, NSString * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRedvoxPacketM__StationInformation__StationMetrics.html#a43e950fffd83537b3ebf5c090126e621">metadata</a></td></tr>
 <tr class="separator:a43e950fffd83537b3ebf5c090126e621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a049ae1602230a796a541f10f8385413a"><td class="memItemLeft" align="right" valign="top">NSUInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRedvoxPacketM__StationInformation__StationMetrics.html#a049ae1602230a796a541f10f8385413a">metadata_Count</a></td></tr>
@@ -442,6 +442,29 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="aa48a2fc9e2025b0fb87b009ead773208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa48a2fc9e2025b0fb87b009ead773208">&#9670;&nbsp;</a></span>hasScreenBrightness</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) hasScreenBrightness</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Test to see if <code>screenBrightness</code> has been set. </p>
+
+</div>
+</div>
 <a id="a0705853d464f3fb36d0f23bff592d7f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0705853d464f3fb36d0f23bff592d7f6">&#9670;&nbsp;</a></span>hasTemperature</h2>
 
@@ -649,8 +672,8 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a id="afc6e67a25bf0777d37d8dc577311315c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc6e67a25bf0777d37d8dc577311315c">&#9670;&nbsp;</a></span>screenBrightnessArray</h2>
+<a id="a54d710e27c15e9441708552ea9d8fa71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54d710e27c15e9441708552ea9d8fa71">&#9670;&nbsp;</a></span>screenBrightness</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -659,7 +682,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">- (GPBFloatArray*) screenBrightnessArray</td>
+          <td class="memname">- (<a class="el" href="interfaceRedvoxPacketM__SamplePayload.html">RedvoxPacketM_SamplePayload</a>*) screenBrightness</td>
         </tr>
       </table>
   </td>
@@ -669,29 +692,6 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Screen brightness as a percentage </p>
-
-</div>
-</div>
-<a id="a11e29567c2ecfe1ae7f44dbf20d78eae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11e29567c2ecfe1ae7f44dbf20d78eae">&#9670;&nbsp;</a></span>screenBrightnessArray_Count</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (NSUInteger) screenBrightnessArray_Count</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The number of items in <code>screenBrightnessArray</code> without causing the array to be created. </p>
 
 </div>
 </div>

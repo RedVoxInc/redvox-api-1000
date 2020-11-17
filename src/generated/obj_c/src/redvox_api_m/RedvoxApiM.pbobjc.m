@@ -639,7 +639,7 @@ typedef struct RedvoxPacketM_StationInformation_ServiceUrls__storage_ {
 @dynamic powerStateArray, powerStateArray_Count;
 @dynamic wifiWakeLockArray, wifiWakeLockArray_Count;
 @dynamic screenStateArray, screenStateArray_Count;
-@dynamic screenBrightnessArray, screenBrightnessArray_Count;
+@dynamic hasScreenBrightness, screenBrightness;
 @dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
@@ -657,7 +657,7 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
   GPBEnumArray *powerStateArray;
   GPBEnumArray *wifiWakeLockArray;
   GPBEnumArray *screenStateArray;
-  GPBFloatArray *screenBrightnessArray;
+  RedvoxPacketM_SamplePayload *screenBrightness;
   NSMutableDictionary *metadata;
 } RedvoxPacketM_StationInformation_StationMetrics__storage_;
 
@@ -785,13 +785,13 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
         .dataType = GPBDataTypeEnum,
       },
       {
-        .name = "screenBrightnessArray",
-        .dataTypeSpecific.clazz = Nil,
-        .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_ScreenBrightnessArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, screenBrightnessArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
-        .dataType = GPBDataTypeFloat,
+        .name = "screenBrightness",
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
+        .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_ScreenBrightness,
+        .hasIndex = 8,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, screenBrightness),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
       {
         .name = "metadata",

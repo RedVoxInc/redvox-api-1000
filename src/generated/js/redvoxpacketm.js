@@ -1264,7 +1264,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.ServiceUrls.prototype.clearM
  * @private {!Array<number>}
  * @const
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.repeatedFields_ = [2,3,11,12,13,14];
+proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.repeatedFields_ = [2,3,11,12,13];
 
 
 
@@ -1310,7 +1310,7 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.toObject = fu
     powerStateList: (f = jspb.Message.getRepeatedField(msg, 11)) == null ? undefined : f,
     wifiWakeLockList: (f = jspb.Message.getRepeatedField(msg, 12)) == null ? undefined : f,
     screenStateList: (f = jspb.Message.getRepeatedField(msg, 13)) == null ? undefined : f,
-    screenBrightnessList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 14)) == null ? undefined : f,
+    screenBrightness: (f = msg.getScreenBrightness()) && proto.redvox_api_m.RedvoxPacketM.SamplePayload.toObject(includeInstance, f),
     metadataMap: (f = msg.getMetadataMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -1409,8 +1409,9 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.deserializeBi
       msg.setScreenStateList(value);
       break;
     case 14:
-      var value = /** @type {!Array<number>} */ (reader.readPackedFloat());
-      msg.setScreenBrightnessList(value);
+      var value = new proto.redvox_api_m.RedvoxPacketM.SamplePayload;
+      reader.readMessage(value,proto.redvox_api_m.RedvoxPacketM.SamplePayload.deserializeBinaryFromReader);
+      msg.setScreenBrightness(value);
       break;
     case 15:
       var value = msg.getMetadataMap();
@@ -1546,11 +1547,12 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.serializeBina
       f
     );
   }
-  f = message.getScreenBrightnessList();
-  if (f.length > 0) {
-    writer.writePackedFloat(
+  f = message.getScreenBrightness();
+  if (f != null) {
+    writer.writeMessage(
       14,
-      f
+      f,
+      proto.redvox_api_m.RedvoxPacketM.SamplePayload.serializeBinaryToWriter
     );
   }
   f = message.getMetadataMap(true);
@@ -2094,39 +2096,39 @@ proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.cle
 
 
 /**
- * repeated float screen_brightness = 14;
- * @return {!Array<number>}
+ * optional SamplePayload screen_brightness = 14;
+ * @return {?proto.redvox_api_m.RedvoxPacketM.SamplePayload}
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.getScreenBrightnessList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 14));
+proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.getScreenBrightness = function() {
+  return /** @type{?proto.redvox_api_m.RedvoxPacketM.SamplePayload} */ (
+    jspb.Message.getWrapperField(this, proto.redvox_api_m.RedvoxPacketM.SamplePayload, 14));
 };
 
 
 /**
- * @param {!Array<number>} value
+ * @param {?proto.redvox_api_m.RedvoxPacketM.SamplePayload|undefined} value
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics} returns this
- */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.setScreenBrightnessList = function(value) {
-  return jspb.Message.setField(this, 14, value || []);
+*/
+proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.setScreenBrightness = function(value) {
+  return jspb.Message.setWrapperField(this, 14, value);
 };
 
 
 /**
- * @param {number} value
- * @param {number=} opt_index
+ * Clears the message field making it undefined.
  * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics} returns this
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.addScreenBrightness = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 14, value, opt_index);
+proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.clearScreenBrightness = function() {
+  return this.setScreenBrightness(undefined);
 };
 
 
 /**
- * Clears the list making it empty but non-null.
- * @return {!proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics} returns this
+ * Returns whether this field is set.
+ * @return {boolean}
  */
-proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.clearScreenBrightnessList = function() {
-  return this.setScreenBrightnessList([]);
+proto.redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.prototype.hasScreenBrightness = function() {
+  return jspb.Message.getField(this, 14) != null;
 };
 
 

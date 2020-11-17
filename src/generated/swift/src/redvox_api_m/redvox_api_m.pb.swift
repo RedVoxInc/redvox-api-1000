@@ -491,10 +491,14 @@ struct RedvoxApiM_RedvoxPacketM {
       }
 
       /// Screen brightness as a percentage
-      var screenBrightness: [Float] {
-        get {return _storage._screenBrightness}
+      var screenBrightness: RedvoxApiM_RedvoxPacketM.SamplePayload {
+        get {return _storage._screenBrightness ?? RedvoxApiM_RedvoxPacketM.SamplePayload()}
         set {_uniqueStorage()._screenBrightness = newValue}
       }
+      /// Returns true if `screenBrightness` has been explicitly set.
+      var hasScreenBrightness: Bool {return _storage._screenBrightness != nil}
+      /// Clears the value of `screenBrightness`. Subsequent reads from it will return its default value.
+      mutating func clearScreenBrightness() {_uniqueStorage()._screenBrightness = nil}
 
       /// A map from string to string for including untyped metadata
       var metadata: Dictionary<String,String> {
@@ -3194,7 +3198,7 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics: SwiftProto
     var _powerState: [RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.PowerState] = []
     var _wifiWakeLock: [RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.WifiWakeLock] = []
     var _screenState: [RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.ScreenState] = []
-    var _screenBrightness: [Float] = []
+    var _screenBrightness: RedvoxApiM_RedvoxPacketM.SamplePayload? = nil
     var _metadata: Dictionary<String,String> = [:]
 
     static let defaultInstance = _StorageClass()
@@ -3248,7 +3252,7 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics: SwiftProto
         case 11: try { try decoder.decodeRepeatedEnumField(value: &_storage._powerState) }()
         case 12: try { try decoder.decodeRepeatedEnumField(value: &_storage._wifiWakeLock) }()
         case 13: try { try decoder.decodeRepeatedEnumField(value: &_storage._screenState) }()
-        case 14: try { try decoder.decodeRepeatedFloatField(value: &_storage._screenBrightness) }()
+        case 14: try { try decoder.decodeSingularMessageField(value: &_storage._screenBrightness) }()
         case 15: try { try decoder.decodeMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: &_storage._metadata) }()
         default: break
         }
@@ -3297,8 +3301,8 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics: SwiftProto
       if !_storage._screenState.isEmpty {
         try visitor.visitPackedEnumField(value: _storage._screenState, fieldNumber: 13)
       }
-      if !_storage._screenBrightness.isEmpty {
-        try visitor.visitPackedFloatField(value: _storage._screenBrightness, fieldNumber: 14)
+      if let v = _storage._screenBrightness {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 14)
       }
       if !_storage._metadata.isEmpty {
         try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: _storage._metadata, fieldNumber: 15)
