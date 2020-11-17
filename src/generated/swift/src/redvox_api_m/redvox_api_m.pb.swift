@@ -319,6 +319,38 @@ struct RedvoxApiM_RedvoxPacketM {
 
     }
 
+    /// Defines how often metrics are collected
+    enum MetricsRate: SwiftProtobuf.Enum {
+      typealias RawValue = Int
+      case unknown // = 0
+      case oncePerSecond // = 1
+      case oncePerPacket // = 2
+      case UNRECOGNIZED(Int)
+
+      init() {
+        self = .unknown
+      }
+
+      init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .unknown
+        case 1: self = .oncePerSecond
+        case 2: self = .oncePerPacket
+        default: self = .UNRECOGNIZED(rawValue)
+        }
+      }
+
+      var rawValue: Int {
+        switch self {
+        case .unknown: return 0
+        case .oncePerSecond: return 1
+        case .oncePerPacket: return 2
+        case .UNRECOGNIZED(let i): return i
+        }
+      }
+
+    }
+
     /// Backend service URLs used in the creation of this packet
     struct ServiceUrls {
       // SwiftProtobuf.Message conformance is added in an extension below. See the
@@ -450,6 +482,18 @@ struct RedvoxApiM_RedvoxPacketM {
       var wifiWakeLock: [RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.WifiWakeLock] {
         get {return _storage._wifiWakeLock}
         set {_uniqueStorage()._wifiWakeLock = newValue}
+      }
+
+      /// The screen state (if available)
+      var screenState: [RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.ScreenState] {
+        get {return _storage._screenState}
+        set {_uniqueStorage()._screenState = newValue}
+      }
+
+      /// Screen brightness as a percentage
+      var screenBrightness: [Float] {
+        get {return _storage._screenBrightness}
+        set {_uniqueStorage()._screenBrightness = newValue}
       }
 
       /// A map from string to string for including untyped metadata
@@ -584,9 +628,17 @@ struct RedvoxApiM_RedvoxPacketM {
       /// The state of power supply to station
       enum PowerState: SwiftProtobuf.Enum {
         typealias RawValue = Int
+
+        /// Station is in an unknown power state
         case unknownPowerState // = 0
+
+        /// Station is unplugged
         case unplugged // = 1
+
+        /// Station is charging
         case charging // = 2
+
+        /// Station is charged
         case charged // = 3
         case UNRECOGNIZED(Int)
 
@@ -610,6 +662,49 @@ struct RedvoxApiM_RedvoxPacketM {
           case .unplugged: return 1
           case .charging: return 2
           case .charged: return 3
+          case .UNRECOGNIZED(let i): return i
+          }
+        }
+
+      }
+
+      /// State of the station's screen
+      enum ScreenState: SwiftProtobuf.Enum {
+        typealias RawValue = Int
+
+        /// Unknown screen state
+        case unknownScreenState // = 0
+
+        /// Screen is turned on
+        case on // = 1
+
+        /// Screen is turned off
+        case off // = 2
+
+        /// Station is running in headless mode and does not utilize a screen
+        case headless // = 3
+        case UNRECOGNIZED(Int)
+
+        init() {
+          self = .unknownScreenState
+        }
+
+        init?(rawValue: Int) {
+          switch rawValue {
+          case 0: self = .unknownScreenState
+          case 1: self = .on
+          case 2: self = .off
+          case 3: self = .headless
+          default: self = .UNRECOGNIZED(rawValue)
+          }
+        }
+
+        var rawValue: Int {
+          switch self {
+          case .unknownScreenState: return 0
+          case .on: return 1
+          case .off: return 2
+          case .headless: return 3
           case .UNRECOGNIZED(let i): return i
           }
         }
@@ -788,6 +883,12 @@ struct RedvoxApiM_RedvoxPacketM {
         set {_uniqueStorage()._useAltitude = newValue}
       }
 
+      /// User defined setting for how often metrics should be collected
+      var metricsRate: RedvoxApiM_RedvoxPacketM.StationInformation.MetricsRate {
+        get {return _storage._metricsRate}
+        set {_uniqueStorage()._metricsRate = newValue}
+      }
+
       /// A map from string to string for including untyped metadata
       var metadata: Dictionary<String,String> {
         get {return _storage._metadata}
@@ -912,21 +1013,26 @@ struct RedvoxApiM_RedvoxPacketM {
         typealias RawValue = Int
         case unknownSensor // = 0
         case accelerometer // = 1
-        case ambientTemperature // = 2
-        case audio // = 3
-        case compressedAudio // = 4
-        case gravity // = 5
-        case gyroscope // = 6
-        case image // = 7
-        case light // = 8
-        case linearAcceleration // = 9
-        case location // = 10
-        case magnetometer // = 11
-        case orientation // = 12
-        case pressure // = 13
-        case proximity // = 14
-        case relativeHumidity // = 15
-        case rotationVector // = 16
+        case accelerometerFast // = 2
+        case ambientTemperature // = 3
+        case audio // = 4
+        case compressedAudio // = 5
+        case gravity // = 6
+        case gyroscope // = 7
+        case gyroscopeFast // = 8
+        case imagePerSecond // = 9
+        case imagePerPacket // = 10
+        case light // = 11
+        case linearAcceleration // = 12
+        case location // = 13
+        case magnetometer // = 14
+        case magnetometerFast // = 15
+        case orientation // = 16
+        case pressure // = 17
+        case proximity // = 18
+        case relativeHumidity // = 19
+        case rotationVector // = 20
+        case velocity // = 21
         case UNRECOGNIZED(Int)
 
         init() {
@@ -937,21 +1043,26 @@ struct RedvoxApiM_RedvoxPacketM {
           switch rawValue {
           case 0: self = .unknownSensor
           case 1: self = .accelerometer
-          case 2: self = .ambientTemperature
-          case 3: self = .audio
-          case 4: self = .compressedAudio
-          case 5: self = .gravity
-          case 6: self = .gyroscope
-          case 7: self = .image
-          case 8: self = .light
-          case 9: self = .linearAcceleration
-          case 10: self = .location
-          case 11: self = .magnetometer
-          case 12: self = .orientation
-          case 13: self = .pressure
-          case 14: self = .proximity
-          case 15: self = .relativeHumidity
-          case 16: self = .rotationVector
+          case 2: self = .accelerometerFast
+          case 3: self = .ambientTemperature
+          case 4: self = .audio
+          case 5: self = .compressedAudio
+          case 6: self = .gravity
+          case 7: self = .gyroscope
+          case 8: self = .gyroscopeFast
+          case 9: self = .imagePerSecond
+          case 10: self = .imagePerPacket
+          case 11: self = .light
+          case 12: self = .linearAcceleration
+          case 13: self = .location
+          case 14: self = .magnetometer
+          case 15: self = .magnetometerFast
+          case 16: self = .orientation
+          case 17: self = .pressure
+          case 18: self = .proximity
+          case 19: self = .relativeHumidity
+          case 20: self = .rotationVector
+          case 21: self = .velocity
           default: self = .UNRECOGNIZED(rawValue)
           }
         }
@@ -960,21 +1071,26 @@ struct RedvoxApiM_RedvoxPacketM {
           switch self {
           case .unknownSensor: return 0
           case .accelerometer: return 1
-          case .ambientTemperature: return 2
-          case .audio: return 3
-          case .compressedAudio: return 4
-          case .gravity: return 5
-          case .gyroscope: return 6
-          case .image: return 7
-          case .light: return 8
-          case .linearAcceleration: return 9
-          case .location: return 10
-          case .magnetometer: return 11
-          case .orientation: return 12
-          case .pressure: return 13
-          case .proximity: return 14
-          case .relativeHumidity: return 15
-          case .rotationVector: return 16
+          case .accelerometerFast: return 2
+          case .ambientTemperature: return 3
+          case .audio: return 4
+          case .compressedAudio: return 5
+          case .gravity: return 6
+          case .gyroscope: return 7
+          case .gyroscopeFast: return 8
+          case .imagePerSecond: return 9
+          case .imagePerPacket: return 10
+          case .light: return 11
+          case .linearAcceleration: return 12
+          case .location: return 13
+          case .magnetometer: return 14
+          case .magnetometerFast: return 15
+          case .orientation: return 16
+          case .pressure: return 17
+          case .proximity: return 18
+          case .relativeHumidity: return 19
+          case .rotationVector: return 20
+          case .velocity: return 21
           case .UNRECOGNIZED(let i): return i
           }
         }
@@ -1263,6 +1379,16 @@ struct RedvoxApiM_RedvoxPacketM {
     var hasRotationVector: Bool {return _storage._rotationVector != nil}
     /// Clears the value of `rotationVector`. Subsequent reads from it will return its default value.
     mutating func clearRotationVector() {_uniqueStorage()._rotationVector = nil}
+
+    /// m/s
+    var velocity: RedvoxApiM_RedvoxPacketM.Sensors.Xyz {
+      get {return _storage._velocity ?? RedvoxApiM_RedvoxPacketM.Sensors.Xyz()}
+      set {_uniqueStorage()._velocity = newValue}
+    }
+    /// Returns true if `velocity` has been explicitly set.
+    var hasVelocity: Bool {return _storage._velocity != nil}
+    /// Clears the value of `velocity`. Subsequent reads from it will return its default value.
+    mutating func clearVelocity() {_uniqueStorage()._velocity = nil}
 
     /// A map from string to string for including untyped metadata
     var metadata: Dictionary<String,String> {
@@ -2272,6 +2398,15 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.OsType: CaseIterable {
   ]
 }
 
+extension RedvoxApiM_RedvoxPacketM.StationInformation.MetricsRate: CaseIterable {
+  // The compiler won't synthesize support with the UNRECOGNIZED case.
+  static var allCases: [RedvoxApiM_RedvoxPacketM.StationInformation.MetricsRate] = [
+    .unknown,
+    .oncePerSecond,
+    .oncePerPacket,
+  ]
+}
+
 extension RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.NetworkType: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
   static var allCases: [RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.NetworkType] = [
@@ -2314,6 +2449,16 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.PowerState:
   ]
 }
 
+extension RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.ScreenState: CaseIterable {
+  // The compiler won't synthesize support with the UNRECOGNIZED case.
+  static var allCases: [RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.ScreenState] = [
+    .unknownScreenState,
+    .on,
+    .off,
+    .headless,
+  ]
+}
+
 extension RedvoxApiM_RedvoxPacketM.StationInformation.AppSettings.FftOverlap: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
   static var allCases: [RedvoxApiM_RedvoxPacketM.StationInformation.AppSettings.FftOverlap] = [
@@ -2351,21 +2496,26 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.AppSettings.InputSensor: C
   static var allCases: [RedvoxApiM_RedvoxPacketM.StationInformation.AppSettings.InputSensor] = [
     .unknownSensor,
     .accelerometer,
+    .accelerometerFast,
     .ambientTemperature,
     .audio,
     .compressedAudio,
     .gravity,
     .gyroscope,
-    .image,
+    .gyroscopeFast,
+    .imagePerSecond,
+    .imagePerPacket,
     .light,
     .linearAcceleration,
     .location,
     .magnetometer,
+    .magnetometerFast,
     .orientation,
     .pressure,
     .proximity,
     .relativeHumidity,
     .rotationVector,
+    .velocity,
   ]
 }
 
@@ -2952,6 +3102,14 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.OsType: SwiftProtobuf._Pro
   ]
 }
 
+extension RedvoxApiM_RedvoxPacketM.StationInformation.MetricsRate: SwiftProtobuf._ProtoNameProviding {
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    0: .same(proto: "UNKNOWN"),
+    1: .same(proto: "ONCE_PER_SECOND"),
+    2: .same(proto: "ONCE_PER_PACKET"),
+  ]
+}
+
 extension RedvoxApiM_RedvoxPacketM.StationInformation.ServiceUrls: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = RedvoxApiM_RedvoxPacketM.StationInformation.protoMessageName + ".ServiceUrls"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
@@ -3017,7 +3175,9 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics: SwiftProto
     10: .standard(proto: "cpu_utilization"),
     11: .standard(proto: "power_state"),
     12: .standard(proto: "wifi_wake_lock"),
-    13: .same(proto: "metadata"),
+    13: .standard(proto: "screen_state"),
+    14: .standard(proto: "screen_brightness"),
+    15: .same(proto: "metadata"),
   ]
 
   fileprivate class _StorageClass {
@@ -3033,6 +3193,8 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics: SwiftProto
     var _cpuUtilization: RedvoxApiM_RedvoxPacketM.SamplePayload? = nil
     var _powerState: [RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.PowerState] = []
     var _wifiWakeLock: [RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.WifiWakeLock] = []
+    var _screenState: [RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.ScreenState] = []
+    var _screenBrightness: [Float] = []
     var _metadata: Dictionary<String,String> = [:]
 
     static let defaultInstance = _StorageClass()
@@ -3052,6 +3214,8 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics: SwiftProto
       _cpuUtilization = source._cpuUtilization
       _powerState = source._powerState
       _wifiWakeLock = source._wifiWakeLock
+      _screenState = source._screenState
+      _screenBrightness = source._screenBrightness
       _metadata = source._metadata
     }
   }
@@ -3083,7 +3247,9 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics: SwiftProto
         case 10: try { try decoder.decodeSingularMessageField(value: &_storage._cpuUtilization) }()
         case 11: try { try decoder.decodeRepeatedEnumField(value: &_storage._powerState) }()
         case 12: try { try decoder.decodeRepeatedEnumField(value: &_storage._wifiWakeLock) }()
-        case 13: try { try decoder.decodeMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: &_storage._metadata) }()
+        case 13: try { try decoder.decodeRepeatedEnumField(value: &_storage._screenState) }()
+        case 14: try { try decoder.decodeRepeatedFloatField(value: &_storage._screenBrightness) }()
+        case 15: try { try decoder.decodeMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: &_storage._metadata) }()
         default: break
         }
       }
@@ -3128,8 +3294,14 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics: SwiftProto
       if !_storage._wifiWakeLock.isEmpty {
         try visitor.visitPackedEnumField(value: _storage._wifiWakeLock, fieldNumber: 12)
       }
+      if !_storage._screenState.isEmpty {
+        try visitor.visitPackedEnumField(value: _storage._screenState, fieldNumber: 13)
+      }
+      if !_storage._screenBrightness.isEmpty {
+        try visitor.visitPackedFloatField(value: _storage._screenBrightness, fieldNumber: 14)
+      }
       if !_storage._metadata.isEmpty {
-        try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: _storage._metadata, fieldNumber: 13)
+        try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: _storage._metadata, fieldNumber: 15)
       }
     }
     try unknownFields.traverse(visitor: &visitor)
@@ -3152,6 +3324,8 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics: SwiftProto
         if _storage._cpuUtilization != rhs_storage._cpuUtilization {return false}
         if _storage._powerState != rhs_storage._powerState {return false}
         if _storage._wifiWakeLock != rhs_storage._wifiWakeLock {return false}
+        if _storage._screenState != rhs_storage._screenState {return false}
+        if _storage._screenBrightness != rhs_storage._screenBrightness {return false}
         if _storage._metadata != rhs_storage._metadata {return false}
         return true
       }
@@ -3200,6 +3374,15 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.PowerState:
   ]
 }
 
+extension RedvoxApiM_RedvoxPacketM.StationInformation.StationMetrics.ScreenState: SwiftProtobuf._ProtoNameProviding {
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    0: .same(proto: "UNKNOWN_SCREEN_STATE"),
+    1: .same(proto: "ON"),
+    2: .same(proto: "OFF"),
+    3: .same(proto: "HEADLESS"),
+  ]
+}
+
 extension RedvoxApiM_RedvoxPacketM.StationInformation.AppSettings: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = RedvoxApiM_RedvoxPacketM.StationInformation.protoMessageName + ".AppSettings"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
@@ -3230,7 +3413,8 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.AppSettings: SwiftProtobuf
     25: .standard(proto: "use_latitude"),
     26: .standard(proto: "use_longitude"),
     27: .standard(proto: "use_altitude"),
-    28: .same(proto: "metadata"),
+    28: .standard(proto: "metrics_rate"),
+    29: .same(proto: "metadata"),
   ]
 
   fileprivate class _StorageClass {
@@ -3261,6 +3445,7 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.AppSettings: SwiftProtobuf
     var _useLatitude: Double = 0
     var _useLongitude: Double = 0
     var _useAltitude: Float = 0
+    var _metricsRate: RedvoxApiM_RedvoxPacketM.StationInformation.MetricsRate = .unknown
     var _metadata: Dictionary<String,String> = [:]
 
     static let defaultInstance = _StorageClass()
@@ -3295,6 +3480,7 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.AppSettings: SwiftProtobuf
       _useLatitude = source._useLatitude
       _useLongitude = source._useLongitude
       _useAltitude = source._useAltitude
+      _metricsRate = source._metricsRate
       _metadata = source._metadata
     }
   }
@@ -3341,7 +3527,8 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.AppSettings: SwiftProtobuf
         case 25: try { try decoder.decodeSingularDoubleField(value: &_storage._useLatitude) }()
         case 26: try { try decoder.decodeSingularDoubleField(value: &_storage._useLongitude) }()
         case 27: try { try decoder.decodeSingularFloatField(value: &_storage._useAltitude) }()
-        case 28: try { try decoder.decodeMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: &_storage._metadata) }()
+        case 28: try { try decoder.decodeSingularEnumField(value: &_storage._metricsRate) }()
+        case 29: try { try decoder.decodeMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: &_storage._metadata) }()
         default: break
         }
       }
@@ -3431,8 +3618,11 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.AppSettings: SwiftProtobuf
       if _storage._useAltitude != 0 {
         try visitor.visitSingularFloatField(value: _storage._useAltitude, fieldNumber: 27)
       }
+      if _storage._metricsRate != .unknown {
+        try visitor.visitSingularEnumField(value: _storage._metricsRate, fieldNumber: 28)
+      }
       if !_storage._metadata.isEmpty {
-        try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: _storage._metadata, fieldNumber: 28)
+        try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: _storage._metadata, fieldNumber: 29)
       }
     }
     try unknownFields.traverse(visitor: &visitor)
@@ -3470,6 +3660,7 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.AppSettings: SwiftProtobuf
         if _storage._useLatitude != rhs_storage._useLatitude {return false}
         if _storage._useLongitude != rhs_storage._useLongitude {return false}
         if _storage._useAltitude != rhs_storage._useAltitude {return false}
+        if _storage._metricsRate != rhs_storage._metricsRate {return false}
         if _storage._metadata != rhs_storage._metadata {return false}
         return true
       }
@@ -3513,21 +3704,26 @@ extension RedvoxApiM_RedvoxPacketM.StationInformation.AppSettings.InputSensor: S
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "UNKNOWN_SENSOR"),
     1: .same(proto: "ACCELEROMETER"),
-    2: .same(proto: "AMBIENT_TEMPERATURE"),
-    3: .same(proto: "AUDIO"),
-    4: .same(proto: "COMPRESSED_AUDIO"),
-    5: .same(proto: "GRAVITY"),
-    6: .same(proto: "GYROSCOPE"),
-    7: .same(proto: "IMAGE"),
-    8: .same(proto: "LIGHT"),
-    9: .same(proto: "LINEAR_ACCELERATION"),
-    10: .same(proto: "LOCATION"),
-    11: .same(proto: "MAGNETOMETER"),
-    12: .same(proto: "ORIENTATION"),
-    13: .same(proto: "PRESSURE"),
-    14: .same(proto: "PROXIMITY"),
-    15: .same(proto: "RELATIVE_HUMIDITY"),
-    16: .same(proto: "ROTATION_VECTOR"),
+    2: .same(proto: "ACCELEROMETER_FAST"),
+    3: .same(proto: "AMBIENT_TEMPERATURE"),
+    4: .same(proto: "AUDIO"),
+    5: .same(proto: "COMPRESSED_AUDIO"),
+    6: .same(proto: "GRAVITY"),
+    7: .same(proto: "GYROSCOPE"),
+    8: .same(proto: "GYROSCOPE_FAST"),
+    9: .same(proto: "IMAGE_PER_SECOND"),
+    10: .same(proto: "IMAGE_PER_PACKET"),
+    11: .same(proto: "LIGHT"),
+    12: .same(proto: "LINEAR_ACCELERATION"),
+    13: .same(proto: "LOCATION"),
+    14: .same(proto: "MAGNETOMETER"),
+    15: .same(proto: "MAGNETOMETER_FAST"),
+    16: .same(proto: "ORIENTATION"),
+    17: .same(proto: "PRESSURE"),
+    18: .same(proto: "PROXIMITY"),
+    19: .same(proto: "RELATIVE_HUMIDITY"),
+    20: .same(proto: "ROTATION_VECTOR"),
+    21: .same(proto: "VELOCITY"),
   ]
 }
 
@@ -3734,7 +3930,8 @@ extension RedvoxApiM_RedvoxPacketM.Sensors: SwiftProtobuf.Message, SwiftProtobuf
     14: .same(proto: "proximity"),
     15: .standard(proto: "relative_humidity"),
     16: .standard(proto: "rotation_vector"),
-    17: .same(proto: "metadata"),
+    17: .same(proto: "velocity"),
+    18: .same(proto: "metadata"),
   ]
 
   fileprivate class _StorageClass {
@@ -3754,6 +3951,7 @@ extension RedvoxApiM_RedvoxPacketM.Sensors: SwiftProtobuf.Message, SwiftProtobuf
     var _proximity: RedvoxApiM_RedvoxPacketM.Sensors.Single? = nil
     var _relativeHumidity: RedvoxApiM_RedvoxPacketM.Sensors.Single? = nil
     var _rotationVector: RedvoxApiM_RedvoxPacketM.Sensors.Xyz? = nil
+    var _velocity: RedvoxApiM_RedvoxPacketM.Sensors.Xyz? = nil
     var _metadata: Dictionary<String,String> = [:]
 
     static let defaultInstance = _StorageClass()
@@ -3777,6 +3975,7 @@ extension RedvoxApiM_RedvoxPacketM.Sensors: SwiftProtobuf.Message, SwiftProtobuf
       _proximity = source._proximity
       _relativeHumidity = source._relativeHumidity
       _rotationVector = source._rotationVector
+      _velocity = source._velocity
       _metadata = source._metadata
     }
   }
@@ -3812,7 +4011,8 @@ extension RedvoxApiM_RedvoxPacketM.Sensors: SwiftProtobuf.Message, SwiftProtobuf
         case 14: try { try decoder.decodeSingularMessageField(value: &_storage._proximity) }()
         case 15: try { try decoder.decodeSingularMessageField(value: &_storage._relativeHumidity) }()
         case 16: try { try decoder.decodeSingularMessageField(value: &_storage._rotationVector) }()
-        case 17: try { try decoder.decodeMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: &_storage._metadata) }()
+        case 17: try { try decoder.decodeSingularMessageField(value: &_storage._velocity) }()
+        case 18: try { try decoder.decodeMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: &_storage._metadata) }()
         default: break
         }
       }
@@ -3869,8 +4069,11 @@ extension RedvoxApiM_RedvoxPacketM.Sensors: SwiftProtobuf.Message, SwiftProtobuf
       if let v = _storage._rotationVector {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 16)
       }
+      if let v = _storage._velocity {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 17)
+      }
       if !_storage._metadata.isEmpty {
-        try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: _storage._metadata, fieldNumber: 17)
+        try visitor.visitMapField(fieldType: SwiftProtobuf._ProtobufMap<SwiftProtobuf.ProtobufString,SwiftProtobuf.ProtobufString>.self, value: _storage._metadata, fieldNumber: 18)
       }
     }
     try unknownFields.traverse(visitor: &visitor)
@@ -3897,6 +4100,7 @@ extension RedvoxApiM_RedvoxPacketM.Sensors: SwiftProtobuf.Message, SwiftProtobuf
         if _storage._proximity != rhs_storage._proximity {return false}
         if _storage._relativeHumidity != rhs_storage._relativeHumidity {return false}
         if _storage._rotationVector != rhs_storage._rotationVector {return false}
+        if _storage._velocity != rhs_storage._velocity {return false}
         if _storage._metadata != rhs_storage._metadata {return false}
         return true
       }

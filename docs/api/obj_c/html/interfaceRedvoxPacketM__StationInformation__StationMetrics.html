@@ -127,6 +127,14 @@ Properties</h2></td></tr>
 <tr class="separator:a85881f4b42682c946bad2fe7bec79a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf81f7f21c22b04495205dcd9de1bba5"><td class="memItemLeft" align="right" valign="top">NSUInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRedvoxPacketM__StationInformation__StationMetrics.html#acf81f7f21c22b04495205dcd9de1bba5">wifiWakeLockArray_Count</a></td></tr>
 <tr class="separator:acf81f7f21c22b04495205dcd9de1bba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa23f7e44b2eef10ff128d6dff981b634"><td class="memItemLeft" align="right" valign="top">GPBEnumArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRedvoxPacketM__StationInformation__StationMetrics.html#aa23f7e44b2eef10ff128d6dff981b634">screenStateArray</a></td></tr>
+<tr class="separator:aa23f7e44b2eef10ff128d6dff981b634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a671e6bcadbe7edc159a7b3f6a743e3fe"><td class="memItemLeft" align="right" valign="top">NSUInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRedvoxPacketM__StationInformation__StationMetrics.html#a671e6bcadbe7edc159a7b3f6a743e3fe">screenStateArray_Count</a></td></tr>
+<tr class="separator:a671e6bcadbe7edc159a7b3f6a743e3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc6e67a25bf0777d37d8dc577311315c"><td class="memItemLeft" align="right" valign="top">GPBFloatArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRedvoxPacketM__StationInformation__StationMetrics.html#afc6e67a25bf0777d37d8dc577311315c">screenBrightnessArray</a></td></tr>
+<tr class="separator:afc6e67a25bf0777d37d8dc577311315c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11e29567c2ecfe1ae7f44dbf20d78eae"><td class="memItemLeft" align="right" valign="top">NSUInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRedvoxPacketM__StationInformation__StationMetrics.html#a11e29567c2ecfe1ae7f44dbf20d78eae">screenBrightnessArray_Count</a></td></tr>
+<tr class="separator:a11e29567c2ecfe1ae7f44dbf20d78eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43e950fffd83537b3ebf5c090126e621"><td class="memItemLeft" align="right" valign="top">NSMutableDictionary&lt; NSString *, NSString * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRedvoxPacketM__StationInformation__StationMetrics.html#a43e950fffd83537b3ebf5c090126e621">metadata</a></td></tr>
 <tr class="separator:a43e950fffd83537b3ebf5c090126e621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a049ae1602230a796a541f10f8385413a"><td class="memItemLeft" align="right" valign="top">NSUInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRedvoxPacketM__StationInformation__StationMetrics.html#a049ae1602230a796a541f10f8385413a">metadata_Count</a></td></tr>
@@ -638,6 +646,98 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The number of items in <code>powerStateArray</code> without causing the array to be created. </p>
+
+</div>
+</div>
+<a id="afc6e67a25bf0777d37d8dc577311315c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc6e67a25bf0777d37d8dc577311315c">&#9670;&nbsp;</a></span>screenBrightnessArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (GPBFloatArray*) screenBrightnessArray</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Screen brightness as a percentage </p>
+
+</div>
+</div>
+<a id="a11e29567c2ecfe1ae7f44dbf20d78eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11e29567c2ecfe1ae7f44dbf20d78eae">&#9670;&nbsp;</a></span>screenBrightnessArray_Count</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSUInteger) screenBrightnessArray_Count</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The number of items in <code>screenBrightnessArray</code> without causing the array to be created. </p>
+
+</div>
+</div>
+<a id="aa23f7e44b2eef10ff128d6dff981b634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa23f7e44b2eef10ff128d6dff981b634">&#9670;&nbsp;</a></span>screenStateArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (GPBEnumArray*) screenStateArray</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The screen state (if available) </p>
+
+</div>
+</div>
+<a id="a671e6bcadbe7edc159a7b3f6a743e3fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a671e6bcadbe7edc159a7b3f6a743e3fe">&#9670;&nbsp;</a></span>screenStateArray_Count</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSUInteger) screenStateArray_Count</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The number of items in <code>screenStateArray</code> without causing the array to be created. </p>
 
 </div>
 </div>

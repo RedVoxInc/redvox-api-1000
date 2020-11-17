@@ -42,7 +42,7 @@ Major changes for API M that are not in API 900 include:
     * Manage location permissions
     * Provide location providers (i.e. Network, GPS, etc)
 * Sensors are expanded and specialized as their own Message types
-    * Xyz (3-channel sensors) (accelerometer, gravity, gyroscope, linear acceleration, magnetometer, orientation, rotation vector)
+    * Xyz (3-channel sensors) (accelerometer, gravity, gyroscope, linear acceleration, magnetometer, orientation, rotation vector, velocity)
     * Single (1-channel sensors) (ambient temperature, light, pressure, proximity, relative humidity)
     * Audio (Audio sensor)
     * CompressedAudio (Compressed audio sensor)
@@ -87,6 +87,7 @@ Major changes for API M that are not in API 900 include:
 
 ### Changelog
 
+* v10.0 - 17 Nov 2020 - Add acceleration sensor. Continue expanding stored app settings.
 * v9.0 - 14 Sep 2020 - Add seq_id to AcquisitionReq/Resp. Expand app settings to match app changes.
 * v8.0 - 11 Aug 2020 - Fix typo with lat/lng/alt in AppSettings.
 * v7.0 - 11 Aug 2020 - Convert AppSettings lat/lng to double. Convert statistics to double.

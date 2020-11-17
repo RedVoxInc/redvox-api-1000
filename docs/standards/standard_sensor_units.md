@@ -40,6 +40,7 @@ All sample rates and associated statistics are to be represented in Hz.
 | Proximity                      | 0 (off) or 1 (on) or cm      |                                                                                                     |
 | Relative Humidity              | percentage                   |                                                                                                     |
 | Rotation Vector                | Unitless                     |                                                                                                     |
+| Velocity                       | meters/second                |                                                                                                     |
 
 ### Station metric units
 

@@ -8,7 +8,7 @@
 #endif
 
 #if GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS
- #import <protobuf/GPBProtocolBuffers_RuntimeSupport.h>
+ #import <Protobuf/GPBProtocolBuffers_RuntimeSupport.h>
 #else
  #import "GPBProtocolBuffers_RuntimeSupport.h"
 #endif
@@ -20,6 +20,35 @@
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+#pragma clang diagnostic ignored "-Wdollar-in-identifier-extension"
+
+#pragma mark - Objective C Class declarations
+// Forward declarations of Objective C classes that we can use as
+// static values in struct initializers.
+// We don't use [Foo class] because it is not a static value.
+GPBObjCClassDeclaration(EncryptedRedvoxPacketM);
+GPBObjCClassDeclaration(RedvoxPacketM);
+GPBObjCClassDeclaration(RedvoxPacketM_DoubleSamplePayload);
+GPBObjCClassDeclaration(RedvoxPacketM_EventStream);
+GPBObjCClassDeclaration(RedvoxPacketM_EventStream_Event);
+GPBObjCClassDeclaration(RedvoxPacketM_SamplePayload);
+GPBObjCClassDeclaration(RedvoxPacketM_Sensors);
+GPBObjCClassDeclaration(RedvoxPacketM_Sensors_Audio);
+GPBObjCClassDeclaration(RedvoxPacketM_Sensors_CompressedAudio);
+GPBObjCClassDeclaration(RedvoxPacketM_Sensors_Image);
+GPBObjCClassDeclaration(RedvoxPacketM_Sensors_Location);
+GPBObjCClassDeclaration(RedvoxPacketM_Sensors_Location_BestLocation);
+GPBObjCClassDeclaration(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp);
+GPBObjCClassDeclaration(RedvoxPacketM_Sensors_Single);
+GPBObjCClassDeclaration(RedvoxPacketM_Sensors_Xyz);
+GPBObjCClassDeclaration(RedvoxPacketM_StationInformation);
+GPBObjCClassDeclaration(RedvoxPacketM_StationInformation_AppSettings);
+GPBObjCClassDeclaration(RedvoxPacketM_StationInformation_ServiceUrls);
+GPBObjCClassDeclaration(RedvoxPacketM_StationInformation_StationMetrics);
+GPBObjCClassDeclaration(RedvoxPacketM_SummaryStatistics);
+GPBObjCClassDeclaration(RedvoxPacketM_TimingInformation);
+GPBObjCClassDeclaration(RedvoxPacketM_TimingInformation_SynchExchange);
+GPBObjCClassDeclaration(RedvoxPacketM_TimingPayload);
 
 #pragma mark - RedvoxApiMRoot
 
@@ -75,25 +104,25 @@ typedef struct RedvoxPacketM__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "api",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_FieldNumber_Api,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM__storage_, api),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "subApi",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_FieldNumber_SubApi,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM__storage_, subApi),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "stationInformation",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_StationInformation),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_StationInformation),
         .number = RedvoxPacketM_FieldNumber_StationInformation,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM__storage_, stationInformation),
@@ -102,7 +131,7 @@ typedef struct RedvoxPacketM__storage_ {
       },
       {
         .name = "timingInformation",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_TimingInformation),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_TimingInformation),
         .number = RedvoxPacketM_FieldNumber_TimingInformation,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM__storage_, timingInformation),
@@ -111,7 +140,7 @@ typedef struct RedvoxPacketM__storage_ {
       },
       {
         .name = "sensors",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors),
         .number = RedvoxPacketM_FieldNumber_Sensors,
         .hasIndex = 4,
         .offset = (uint32_t)offsetof(RedvoxPacketM__storage_, sensors),
@@ -120,7 +149,7 @@ typedef struct RedvoxPacketM__storage_ {
       },
       {
         .name = "eventStreamsArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_EventStream),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_EventStream),
         .number = RedvoxPacketM_FieldNumber_EventStreamsArray,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM__storage_, eventStreamsArray),
@@ -129,7 +158,7 @@ typedef struct RedvoxPacketM__storage_ {
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM__storage_, metadata),
@@ -144,7 +173,7 @@ typedef struct RedvoxPacketM__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -278,56 +307,56 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "id_p",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_FieldNumber_Id_p,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, id_p),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "uuid",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_FieldNumber_Uuid,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, uuid),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "description_p",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_FieldNumber_Description_p,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, description_p),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "authId",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_FieldNumber_AuthId,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, authId),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "make",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_FieldNumber_Make,
         .hasIndex = 4,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, make),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "model",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_FieldNumber_Model,
         .hasIndex = 5,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, model),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
@@ -336,39 +365,39 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
         .number = RedvoxPacketM_StationInformation_FieldNumber_Os,
         .hasIndex = 6,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, os),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "osVersion",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_FieldNumber_OsVersion,
         .hasIndex = 7,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, osVersion),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "appVersion",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_FieldNumber_AppVersion,
         .hasIndex = 8,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, appVersion),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "isPrivate",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_FieldNumber_IsPrivate,
         .hasIndex = 9,
         .offset = 10,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "appSettings",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_StationInformation_AppSettings),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_StationInformation_AppSettings),
         .number = RedvoxPacketM_StationInformation_FieldNumber_AppSettings,
         .hasIndex = 11,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, appSettings),
@@ -377,7 +406,7 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
       },
       {
         .name = "stationMetrics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_StationInformation_StationMetrics),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_StationInformation_StationMetrics),
         .number = RedvoxPacketM_StationInformation_FieldNumber_StationMetrics,
         .hasIndex = 12,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, stationMetrics),
@@ -386,7 +415,7 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
       },
       {
         .name = "serviceUrls",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_StationInformation_ServiceUrls),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_StationInformation_ServiceUrls),
         .number = RedvoxPacketM_StationInformation_FieldNumber_ServiceUrls,
         .hasIndex = 13,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, serviceUrls),
@@ -395,7 +424,7 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation__storage_, metadata),
@@ -410,8 +439,8 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_StationInformation__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -425,13 +454,13 @@ typedef struct RedvoxPacketM_StationInformation__storage_ {
 int32_t RedvoxPacketM_StationInformation_Os_RawValue(RedvoxPacketM_StationInformation *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_StationInformation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_StationInformation_FieldNumber_Os];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_StationInformation_Os_RawValue(RedvoxPacketM_StationInformation *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_StationInformation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_StationInformation_FieldNumber_Os];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 #pragma mark - Enum RedvoxPacketM_StationInformation_OsType
@@ -477,6 +506,43 @@ BOOL RedvoxPacketM_StationInformation_OsType_IsValidValue(int32_t value__) {
   }
 }
 
+#pragma mark - Enum RedvoxPacketM_StationInformation_MetricsRate
+
+GPBEnumDescriptor *RedvoxPacketM_StationInformation_MetricsRate_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "Unknown\000OncePerSecond\000OncePerPacket\000";
+    static const int32_t values[] = {
+        RedvoxPacketM_StationInformation_MetricsRate_Unknown,
+        RedvoxPacketM_StationInformation_MetricsRate_OncePerSecond,
+        RedvoxPacketM_StationInformation_MetricsRate_OncePerPacket,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_StationInformation_MetricsRate)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:RedvoxPacketM_StationInformation_MetricsRate_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL RedvoxPacketM_StationInformation_MetricsRate_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case RedvoxPacketM_StationInformation_MetricsRate_Unknown:
+    case RedvoxPacketM_StationInformation_MetricsRate_OncePerSecond:
+    case RedvoxPacketM_StationInformation_MetricsRate_OncePerPacket:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
 #pragma mark - RedvoxPacketM_StationInformation_ServiceUrls
 
 @implementation RedvoxPacketM_StationInformation_ServiceUrls
@@ -502,34 +568,34 @@ typedef struct RedvoxPacketM_StationInformation_ServiceUrls__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "authServer",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_ServiceUrls_FieldNumber_AuthServer,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_ServiceUrls__storage_, authServer),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "synchServer",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_ServiceUrls_FieldNumber_SynchServer,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_ServiceUrls__storage_, synchServer),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "acquisitionServer",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_ServiceUrls_FieldNumber_AcquisitionServer,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_ServiceUrls__storage_, acquisitionServer),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_ServiceUrls_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_ServiceUrls__storage_, metadata),
@@ -544,8 +610,8 @@ typedef struct RedvoxPacketM_StationInformation_ServiceUrls__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_StationInformation_ServiceUrls__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_StationInformation)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM_StationInformation)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -572,6 +638,8 @@ typedef struct RedvoxPacketM_StationInformation_ServiceUrls__storage_ {
 @dynamic hasCpuUtilization, cpuUtilization;
 @dynamic powerStateArray, powerStateArray_Count;
 @dynamic wifiWakeLockArray, wifiWakeLockArray_Count;
+@dynamic screenStateArray, screenStateArray_Count;
+@dynamic screenBrightnessArray, screenBrightnessArray_Count;
 @dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
@@ -588,6 +656,8 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
   RedvoxPacketM_SamplePayload *cpuUtilization;
   GPBEnumArray *powerStateArray;
   GPBEnumArray *wifiWakeLockArray;
+  GPBEnumArray *screenStateArray;
+  GPBFloatArray *screenBrightnessArray;
   NSMutableDictionary *metadata;
 } RedvoxPacketM_StationInformation_StationMetrics__storage_;
 
@@ -599,7 +669,7 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "timestamps",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_TimingPayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_TimingPayload),
         .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_Timestamps,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, timestamps),
@@ -626,7 +696,7 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
       },
       {
         .name = "networkStrength",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_NetworkStrength,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, networkStrength),
@@ -635,7 +705,7 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
       },
       {
         .name = "temperature",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_Temperature,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, temperature),
@@ -644,7 +714,7 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
       },
       {
         .name = "battery",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_Battery,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, battery),
@@ -653,7 +723,7 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
       },
       {
         .name = "batteryCurrent",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_BatteryCurrent,
         .hasIndex = 4,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, batteryCurrent),
@@ -662,7 +732,7 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
       },
       {
         .name = "availableRam",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_AvailableRam,
         .hasIndex = 5,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, availableRam),
@@ -671,7 +741,7 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
       },
       {
         .name = "availableDisk",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_AvailableDisk,
         .hasIndex = 6,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, availableDisk),
@@ -680,7 +750,7 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
       },
       {
         .name = "cpuUtilization",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_CpuUtilization,
         .hasIndex = 7,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, cpuUtilization),
@@ -706,8 +776,26 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
         .dataType = GPBDataTypeEnum,
       },
       {
+        .name = "screenStateArray",
+        .dataTypeSpecific.enumDescFunc = RedvoxPacketM_StationInformation_StationMetrics_ScreenState_EnumDescriptor,
+        .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_ScreenStateArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, screenStateArray),
+        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "screenBrightnessArray",
+        .dataTypeSpecific.clazz = Nil,
+        .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_ScreenBrightnessArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, screenBrightnessArray),
+        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
+        .dataType = GPBDataTypeFloat,
+      },
+      {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_StationMetrics_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_StationMetrics__storage_, metadata),
@@ -722,8 +810,8 @@ typedef struct RedvoxPacketM_StationInformation_StationMetrics__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_StationInformation_StationMetrics__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_StationInformation)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM_StationInformation)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -897,6 +985,45 @@ BOOL RedvoxPacketM_StationInformation_StationMetrics_PowerState_IsValidValue(int
   }
 }
 
+#pragma mark - Enum RedvoxPacketM_StationInformation_StationMetrics_ScreenState
+
+GPBEnumDescriptor *RedvoxPacketM_StationInformation_StationMetrics_ScreenState_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "UnknownScreenState\000On\000Off\000Headless\000";
+    static const int32_t values[] = {
+        RedvoxPacketM_StationInformation_StationMetrics_ScreenState_UnknownScreenState,
+        RedvoxPacketM_StationInformation_StationMetrics_ScreenState_On,
+        RedvoxPacketM_StationInformation_StationMetrics_ScreenState_Off,
+        RedvoxPacketM_StationInformation_StationMetrics_ScreenState_Headless,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_StationInformation_StationMetrics_ScreenState)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:RedvoxPacketM_StationInformation_StationMetrics_ScreenState_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL RedvoxPacketM_StationInformation_StationMetrics_ScreenState_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case RedvoxPacketM_StationInformation_StationMetrics_ScreenState_UnknownScreenState:
+    case RedvoxPacketM_StationInformation_StationMetrics_ScreenState_On:
+    case RedvoxPacketM_StationInformation_StationMetrics_ScreenState_Off:
+    case RedvoxPacketM_StationInformation_StationMetrics_ScreenState_Headless:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
 #pragma mark - RedvoxPacketM_StationInformation_AppSettings
 
 @implementation RedvoxPacketM_StationInformation_AppSettings
@@ -928,6 +1055,7 @@ BOOL RedvoxPacketM_StationInformation_StationMetrics_PowerState_IsValidValue(int
 @dynamic useLatitude;
 @dynamic useLongitude;
 @dynamic useAltitude;
+@dynamic metricsRate;
 @dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
@@ -938,6 +1066,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
   RedvoxPacketM_StationInformation_AppSettings_FftOverlap fftOverlap;
   float storageSpaceAllowance;
   float useAltitude;
+  RedvoxPacketM_StationInformation_MetricsRate metricsRate;
   GPBEnumArray *additionalInputSensorsArray;
   NSString *stationId;
   NSString *stationDescription;
@@ -961,16 +1090,16 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_AudioSamplingRate,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, audioSamplingRate),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "samplesPerWindow",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_SamplesPerWindow,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, samplesPerWindow),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
@@ -979,7 +1108,7 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_AudioSourceTuning,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, audioSourceTuning),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
@@ -993,83 +1122,83 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
       },
       {
         .name = "automaticallyRecord",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_AutomaticallyRecord,
         .hasIndex = 3,
         .offset = 4,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "launchAtPowerUp",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_LaunchAtPowerUp,
         .hasIndex = 5,
         .offset = 6,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "stationId",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_StationId,
         .hasIndex = 7,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, stationId),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "stationDescription",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_StationDescription,
         .hasIndex = 8,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, stationDescription),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "pushToServer",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_PushToServer,
         .hasIndex = 9,
         .offset = 10,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "publishDataAsPrivate",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_PublishDataAsPrivate,
         .hasIndex = 11,
         .offset = 12,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "scrambleAudioData",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_ScrambleAudioData,
         .hasIndex = 13,
         .offset = 14,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "provideBackfill",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_ProvideBackfill,
         .hasIndex = 15,
         .offset = 16,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "removeSensorDcOffset",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_RemoveSensorDcOffset,
         .hasIndex = 17,
         .offset = 18,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
@@ -1078,129 +1207,138 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_FftOverlap,
         .hasIndex = 19,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, fftOverlap),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "useCustomTimeSyncServer",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseCustomTimeSyncServer,
         .hasIndex = 20,
         .offset = 21,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "timeSyncServerURL",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_TimeSyncServerURL,
         .hasIndex = 22,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, timeSyncServerURL),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "useCustomDataServer",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseCustomDataServer,
         .hasIndex = 23,
         .offset = 24,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "dataServerURL",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_DataServerURL,
         .hasIndex = 25,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, dataServerURL),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "useCustomAuthServer",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseCustomAuthServer,
         .hasIndex = 26,
         .offset = 27,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "authServerURL",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_AuthServerURL,
         .hasIndex = 28,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, authServerURL),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "autoDeleteDataFiles",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_AutoDeleteDataFiles,
         .hasIndex = 29,
         .offset = 30,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "storageSpaceAllowance",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_StorageSpaceAllowance,
         .hasIndex = 31,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, storageSpaceAllowance),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "useSdCardForDataStorage",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseSdCardForDataStorage,
         .hasIndex = 32,
         .offset = 33,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "useLocationServices",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseLocationServices,
         .hasIndex = 34,
         .offset = 35,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "useLatitude",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseLatitude,
         .hasIndex = 36,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, useLatitude),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "useLongitude",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseLongitude,
         .hasIndex = 37,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, useLongitude),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "useAltitude",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_UseAltitude,
         .hasIndex = 38,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, useAltitude),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
+        .name = "metricsRate",
+        .dataTypeSpecific.enumDescFunc = RedvoxPacketM_StationInformation_MetricsRate_EnumDescriptor,
+        .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_MetricsRate,
+        .hasIndex = 39,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, metricsRate),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_StationInformation_AppSettings_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_StationInformation_AppSettings__storage_, metadata),
@@ -1215,13 +1353,13 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_StationInformation_AppSettings__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
         "\003\020\004\244\246\241!!\000\022\004\246\241!!\000\024\004\246\241!!\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_StationInformation)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM_StationInformation)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -1235,37 +1373,49 @@ typedef struct RedvoxPacketM_StationInformation_AppSettings__storage_ {
 int32_t RedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_RawValue(RedvoxPacketM_StationInformation_AppSettings *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_StationInformation_AppSettings descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_StationInformation_AppSettings_FieldNumber_AudioSamplingRate];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_StationInformation_AppSettings_AudioSamplingRate_RawValue(RedvoxPacketM_StationInformation_AppSettings *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_StationInformation_AppSettings descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_StationInformation_AppSettings_FieldNumber_AudioSamplingRate];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 int32_t RedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_RawValue(RedvoxPacketM_StationInformation_AppSettings *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_StationInformation_AppSettings descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_StationInformation_AppSettings_FieldNumber_AudioSourceTuning];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_StationInformation_AppSettings_AudioSourceTuning_RawValue(RedvoxPacketM_StationInformation_AppSettings *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_StationInformation_AppSettings descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_StationInformation_AppSettings_FieldNumber_AudioSourceTuning];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 int32_t RedvoxPacketM_StationInformation_AppSettings_FftOverlap_RawValue(RedvoxPacketM_StationInformation_AppSettings *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_StationInformation_AppSettings descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_StationInformation_AppSettings_FieldNumber_FftOverlap];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_StationInformation_AppSettings_FftOverlap_RawValue(RedvoxPacketM_StationInformation_AppSettings *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_StationInformation_AppSettings descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_StationInformation_AppSettings_FieldNumber_FftOverlap];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
+}
+
+int32_t RedvoxPacketM_StationInformation_AppSettings_MetricsRate_RawValue(RedvoxPacketM_StationInformation_AppSettings *message) {
+  GPBDescriptor *descriptor = [RedvoxPacketM_StationInformation_AppSettings descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_StationInformation_AppSettings_FieldNumber_MetricsRate];
+  return GPBGetMessageRawEnumField(message, field);
+}
+
+void SetRedvoxPacketM_StationInformation_AppSettings_MetricsRate_RawValue(RedvoxPacketM_StationInformation_AppSettings *message, int32_t value) {
+  GPBDescriptor *descriptor = [RedvoxPacketM_StationInformation_AppSettings descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_StationInformation_AppSettings_FieldNumber_MetricsRate];
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 #pragma mark - Enum RedvoxPacketM_StationInformation_AppSettings_FftOverlap
@@ -1401,30 +1551,37 @@ GPBEnumDescriptor *RedvoxPacketM_StationInformation_AppSettings_InputSensor_Enum
   static _Atomic(GPBEnumDescriptor*) descriptor = nil;
   if (!descriptor) {
     static const char *valueNames =
-        "UnknownSensor\000Accelerometer\000AmbientTempe"
-        "rature\000Audio\000CompressedAudio\000Gravity\000Gyr"
-        "oscope\000Image\000Light\000LinearAcceleration\000Lo"
-        "cation\000Magnetometer\000Orientation\000Pressure"
-        "\000Proximity\000RelativeHumidity\000RotationVect"
-        "or\000";
+        "UnknownSensor\000Accelerometer\000Acceleromete"
+        "rFast\000AmbientTemperature\000Audio\000Compresse"
+        "dAudio\000Gravity\000Gyroscope\000GyroscopeFast\000I"
+        "magePerSecond\000ImagePerPacket\000Light\000Linea"
+        "rAcceleration\000Location\000Magnetometer\000Magn"
+        "etometerFast\000Orientation\000Pressure\000Proxim"
+        "ity\000RelativeHumidity\000RotationVector\000Velo"
+        "city\000";
     static const int32_t values[] = {
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_UnknownSensor,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_Accelerometer,
+        RedvoxPacketM_StationInformation_AppSettings_InputSensor_AccelerometerFast,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_AmbientTemperature,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_Audio,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_CompressedAudio,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_Gravity,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_Gyroscope,
-        RedvoxPacketM_StationInformation_AppSettings_InputSensor_Image,
+        RedvoxPacketM_StationInformation_AppSettings_InputSensor_GyroscopeFast,
+        RedvoxPacketM_StationInformation_AppSettings_InputSensor_ImagePerSecond,
+        RedvoxPacketM_StationInformation_AppSettings_InputSensor_ImagePerPacket,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_Light,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_LinearAcceleration,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_Location,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_Magnetometer,
+        RedvoxPacketM_StationInformation_AppSettings_InputSensor_MagnetometerFast,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_Orientation,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_Pressure,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_Proximity,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_RelativeHumidity,
         RedvoxPacketM_StationInformation_AppSettings_InputSensor_RotationVector,
+        RedvoxPacketM_StationInformation_AppSettings_InputSensor_Velocity,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(RedvoxPacketM_StationInformation_AppSettings_InputSensor)
@@ -1444,21 +1601,26 @@ BOOL RedvoxPacketM_StationInformation_AppSettings_InputSensor_IsValidValue(int32
   switch (value__) {
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_UnknownSensor:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Accelerometer:
+    case RedvoxPacketM_StationInformation_AppSettings_InputSensor_AccelerometerFast:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_AmbientTemperature:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Audio:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_CompressedAudio:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Gravity:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Gyroscope:
-    case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Image:
+    case RedvoxPacketM_StationInformation_AppSettings_InputSensor_GyroscopeFast:
+    case RedvoxPacketM_StationInformation_AppSettings_InputSensor_ImagePerSecond:
+    case RedvoxPacketM_StationInformation_AppSettings_InputSensor_ImagePerPacket:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Light:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_LinearAcceleration:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Location:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Magnetometer:
+    case RedvoxPacketM_StationInformation_AppSettings_InputSensor_MagnetometerFast:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Orientation:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Pressure:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Proximity:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_RelativeHumidity:
     case RedvoxPacketM_StationInformation_AppSettings_InputSensor_RotationVector:
+    case RedvoxPacketM_StationInformation_AppSettings_InputSensor_Velocity:
       return YES;
     default:
       return NO;
@@ -1508,61 +1670,61 @@ typedef struct RedvoxPacketM_TimingInformation__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "packetStartOsTimestamp",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_FieldNumber_PacketStartOsTimestamp,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation__storage_, packetStartOsTimestamp),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "packetStartMachTimestamp",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_FieldNumber_PacketStartMachTimestamp,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation__storage_, packetStartMachTimestamp),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "packetEndOsTimestamp",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_FieldNumber_PacketEndOsTimestamp,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation__storage_, packetEndOsTimestamp),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "packetEndMachTimestamp",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_FieldNumber_PacketEndMachTimestamp,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation__storage_, packetEndMachTimestamp),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "serverAcquisitionArrivalTimestamp",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_FieldNumber_ServerAcquisitionArrivalTimestamp,
         .hasIndex = 4,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation__storage_, serverAcquisitionArrivalTimestamp),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "appStartMachTimestamp",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_FieldNumber_AppStartMachTimestamp,
         .hasIndex = 5,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation__storage_, appStartMachTimestamp),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "synchExchangesArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_TimingInformation_SynchExchange),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_TimingInformation_SynchExchange),
         .number = RedvoxPacketM_TimingInformation_FieldNumber_SynchExchangesArray,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation__storage_, synchExchangesArray),
@@ -1571,29 +1733,29 @@ typedef struct RedvoxPacketM_TimingInformation__storage_ {
       },
       {
         .name = "bestLatency",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_FieldNumber_BestLatency,
         .hasIndex = 6,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation__storage_, bestLatency),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "bestOffset",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_FieldNumber_BestOffset,
         .hasIndex = 7,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation__storage_, bestOffset),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "score",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_FieldNumber_Score,
         .hasIndex = 8,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation__storage_, score),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
@@ -1602,7 +1764,7 @@ typedef struct RedvoxPacketM_TimingInformation__storage_ {
         .number = RedvoxPacketM_TimingInformation_FieldNumber_ScoreMethod,
         .hasIndex = 9,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation__storage_, scoreMethod),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
@@ -1611,12 +1773,12 @@ typedef struct RedvoxPacketM_TimingInformation__storage_ {
         .number = RedvoxPacketM_TimingInformation_FieldNumber_Unit,
         .hasIndex = 10,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation__storage_, unit),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation__storage_, metadata),
@@ -1631,8 +1793,8 @@ typedef struct RedvoxPacketM_TimingInformation__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_TimingInformation__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -1646,25 +1808,25 @@ typedef struct RedvoxPacketM_TimingInformation__storage_ {
 int32_t RedvoxPacketM_TimingInformation_ScoreMethod_RawValue(RedvoxPacketM_TimingInformation *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_TimingInformation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_TimingInformation_FieldNumber_ScoreMethod];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_TimingInformation_ScoreMethod_RawValue(RedvoxPacketM_TimingInformation *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_TimingInformation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_TimingInformation_FieldNumber_ScoreMethod];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 int32_t RedvoxPacketM_TimingInformation_Unit_RawValue(RedvoxPacketM_TimingInformation *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_TimingInformation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_TimingInformation_FieldNumber_Unit];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_TimingInformation_Unit_RawValue(RedvoxPacketM_TimingInformation *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_TimingInformation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_TimingInformation_FieldNumber_Unit];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 #pragma mark - Enum RedvoxPacketM_TimingInformation_TimingScoreMethod
@@ -1733,56 +1895,56 @@ typedef struct RedvoxPacketM_TimingInformation_SynchExchange__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "a1",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_SynchExchange_FieldNumber_A1,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation_SynchExchange__storage_, a1),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "a2",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_SynchExchange_FieldNumber_A2,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation_SynchExchange__storage_, a2),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "a3",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_SynchExchange_FieldNumber_A3,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation_SynchExchange__storage_, a3),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "b1",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_SynchExchange_FieldNumber_B1,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation_SynchExchange__storage_, b1),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "b2",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_SynchExchange_FieldNumber_B2,
         .hasIndex = 4,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation_SynchExchange__storage_, b2),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "b3",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_SynchExchange_FieldNumber_B3,
         .hasIndex = 5,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation_SynchExchange__storage_, b3),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
@@ -1791,12 +1953,12 @@ typedef struct RedvoxPacketM_TimingInformation_SynchExchange__storage_ {
         .number = RedvoxPacketM_TimingInformation_SynchExchange_FieldNumber_Unit,
         .hasIndex = 6,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation_SynchExchange__storage_, unit),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingInformation_SynchExchange_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingInformation_SynchExchange__storage_, metadata),
@@ -1811,8 +1973,8 @@ typedef struct RedvoxPacketM_TimingInformation_SynchExchange__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_TimingInformation_SynchExchange__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_TimingInformation)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM_TimingInformation)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -1826,13 +1988,13 @@ typedef struct RedvoxPacketM_TimingInformation_SynchExchange__storage_ {
 int32_t RedvoxPacketM_TimingInformation_SynchExchange_Unit_RawValue(RedvoxPacketM_TimingInformation_SynchExchange *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_TimingInformation_SynchExchange descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_TimingInformation_SynchExchange_FieldNumber_Unit];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_TimingInformation_SynchExchange_Unit_RawValue(RedvoxPacketM_TimingInformation_SynchExchange *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_TimingInformation_SynchExchange descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_TimingInformation_SynchExchange_FieldNumber_Unit];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 #pragma mark - RedvoxPacketM_Sensors
@@ -1855,6 +2017,7 @@ void SetRedvoxPacketM_TimingInformation_SynchExchange_Unit_RawValue(RedvoxPacket
 @dynamic hasProximity, proximity;
 @dynamic hasRelativeHumidity, relativeHumidity;
 @dynamic hasRotationVector, rotationVector;
+@dynamic hasVelocity, velocity;
 @dynamic metadata, metadata_Count;
 
 typedef struct RedvoxPacketM_Sensors__storage_ {
@@ -1875,6 +2038,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
   RedvoxPacketM_Sensors_Single *proximity;
   RedvoxPacketM_Sensors_Single *relativeHumidity;
   RedvoxPacketM_Sensors_Xyz *rotationVector;
+  RedvoxPacketM_Sensors_Xyz *velocity;
   NSMutableDictionary *metadata;
 } RedvoxPacketM_Sensors__storage_;
 
@@ -1886,7 +2050,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "accelerometer",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Xyz),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Xyz),
         .number = RedvoxPacketM_Sensors_FieldNumber_Accelerometer,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, accelerometer),
@@ -1895,7 +2059,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "ambientTemperature",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Single),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Single),
         .number = RedvoxPacketM_Sensors_FieldNumber_AmbientTemperature,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, ambientTemperature),
@@ -1904,7 +2068,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "audio",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Audio),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Audio),
         .number = RedvoxPacketM_Sensors_FieldNumber_Audio,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, audio),
@@ -1913,7 +2077,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "compressedAudio",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_CompressedAudio),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_CompressedAudio),
         .number = RedvoxPacketM_Sensors_FieldNumber_CompressedAudio,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, compressedAudio),
@@ -1922,7 +2086,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "gravity",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Xyz),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Xyz),
         .number = RedvoxPacketM_Sensors_FieldNumber_Gravity,
         .hasIndex = 4,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, gravity),
@@ -1931,7 +2095,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "gyroscope",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Xyz),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Xyz),
         .number = RedvoxPacketM_Sensors_FieldNumber_Gyroscope,
         .hasIndex = 5,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, gyroscope),
@@ -1940,7 +2104,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "image",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Image),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Image),
         .number = RedvoxPacketM_Sensors_FieldNumber_Image,
         .hasIndex = 6,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, image),
@@ -1949,7 +2113,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "light",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Single),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Single),
         .number = RedvoxPacketM_Sensors_FieldNumber_Light,
         .hasIndex = 7,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, light),
@@ -1958,7 +2122,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "linearAcceleration",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Xyz),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Xyz),
         .number = RedvoxPacketM_Sensors_FieldNumber_LinearAcceleration,
         .hasIndex = 8,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, linearAcceleration),
@@ -1967,7 +2131,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "location",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Location),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Location),
         .number = RedvoxPacketM_Sensors_FieldNumber_Location,
         .hasIndex = 9,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, location),
@@ -1976,7 +2140,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "magnetometer",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Xyz),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Xyz),
         .number = RedvoxPacketM_Sensors_FieldNumber_Magnetometer,
         .hasIndex = 10,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, magnetometer),
@@ -1985,7 +2149,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "orientation",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Xyz),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Xyz),
         .number = RedvoxPacketM_Sensors_FieldNumber_Orientation,
         .hasIndex = 11,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, orientation),
@@ -1994,7 +2158,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "pressure",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Single),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Single),
         .number = RedvoxPacketM_Sensors_FieldNumber_Pressure,
         .hasIndex = 12,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, pressure),
@@ -2003,7 +2167,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "proximity",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Single),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Single),
         .number = RedvoxPacketM_Sensors_FieldNumber_Proximity,
         .hasIndex = 13,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, proximity),
@@ -2012,7 +2176,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "relativeHumidity",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Single),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Single),
         .number = RedvoxPacketM_Sensors_FieldNumber_RelativeHumidity,
         .hasIndex = 14,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, relativeHumidity),
@@ -2021,7 +2185,7 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
       },
       {
         .name = "rotationVector",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Xyz),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Xyz),
         .number = RedvoxPacketM_Sensors_FieldNumber_RotationVector,
         .hasIndex = 15,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, rotationVector),
@@ -2029,8 +2193,17 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
+        .name = "velocity",
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Xyz),
+        .number = RedvoxPacketM_Sensors_FieldNumber_Velocity,
+        .hasIndex = 16,
+        .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, velocity),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors__storage_, metadata),
@@ -2045,8 +2218,8 @@ typedef struct RedvoxPacketM_Sensors__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_Sensors__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -2089,61 +2262,61 @@ typedef struct RedvoxPacketM_Sensors_Audio__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "sensorDescription",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Audio_FieldNumber_SensorDescription,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Audio__storage_, sensorDescription),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "firstSampleTimestamp",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Audio_FieldNumber_FirstSampleTimestamp,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Audio__storage_, firstSampleTimestamp),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "sampleRate",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Audio_FieldNumber_SampleRate,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Audio__storage_, sampleRate),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "bitsOfPrecision",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Audio_FieldNumber_BitsOfPrecision,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Audio__storage_, bitsOfPrecision),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "isScrambled",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Audio_FieldNumber_IsScrambled,
         .hasIndex = 4,
         .offset = 5,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "encoding",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Audio_FieldNumber_Encoding,
         .hasIndex = 6,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Audio__storage_, encoding),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "samples",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Audio_FieldNumber_Samples,
         .hasIndex = 7,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Audio__storage_, samples),
@@ -2152,7 +2325,7 @@ typedef struct RedvoxPacketM_Sensors_Audio__storage_ {
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Audio_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Audio__storage_, metadata),
@@ -2167,8 +2340,8 @@ typedef struct RedvoxPacketM_Sensors_Audio__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_Sensors_Audio__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM_Sensors)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -2209,47 +2382,47 @@ typedef struct RedvoxPacketM_Sensors_CompressedAudio__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "sensorDescription",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_CompressedAudio_FieldNumber_SensorDescription,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_CompressedAudio__storage_, sensorDescription),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "firstSampleTimestamp",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_CompressedAudio_FieldNumber_FirstSampleTimestamp,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_CompressedAudio__storage_, firstSampleTimestamp),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "sampleRate",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_CompressedAudio_FieldNumber_SampleRate,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_CompressedAudio__storage_, sampleRate),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "isScrambled",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_CompressedAudio_FieldNumber_IsScrambled,
         .hasIndex = 3,
         .offset = 4,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "audioBytes",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_CompressedAudio_FieldNumber_AudioBytes,
         .hasIndex = 5,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_CompressedAudio__storage_, audioBytes),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBytes,
       },
       {
@@ -2258,12 +2431,12 @@ typedef struct RedvoxPacketM_Sensors_CompressedAudio__storage_ {
         .number = RedvoxPacketM_Sensors_CompressedAudio_FieldNumber_AudioCodec,
         .hasIndex = 6,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_CompressedAudio__storage_, audioCodec),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_CompressedAudio_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_CompressedAudio__storage_, metadata),
@@ -2278,8 +2451,8 @@ typedef struct RedvoxPacketM_Sensors_CompressedAudio__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_Sensors_CompressedAudio__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM_Sensors)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -2293,13 +2466,13 @@ typedef struct RedvoxPacketM_Sensors_CompressedAudio__storage_ {
 int32_t RedvoxPacketM_Sensors_CompressedAudio_AudioCodec_RawValue(RedvoxPacketM_Sensors_CompressedAudio *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_CompressedAudio descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_CompressedAudio_FieldNumber_AudioCodec];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_Sensors_CompressedAudio_AudioCodec_RawValue(RedvoxPacketM_Sensors_CompressedAudio *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_CompressedAudio descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_CompressedAudio_FieldNumber_AudioCodec];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 #pragma mark - Enum RedvoxPacketM_Sensors_CompressedAudio_AudioCodec
@@ -2362,16 +2535,16 @@ typedef struct RedvoxPacketM_Sensors_Single__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "sensorDescription",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Single_FieldNumber_SensorDescription,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Single__storage_, sensorDescription),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "timestamps",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_TimingPayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_TimingPayload),
         .number = RedvoxPacketM_Sensors_Single_FieldNumber_Timestamps,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Single__storage_, timestamps),
@@ -2380,7 +2553,7 @@ typedef struct RedvoxPacketM_Sensors_Single__storage_ {
       },
       {
         .name = "samples",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Single_FieldNumber_Samples,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Single__storage_, samples),
@@ -2389,7 +2562,7 @@ typedef struct RedvoxPacketM_Sensors_Single__storage_ {
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Single_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Single__storage_, metadata),
@@ -2404,8 +2577,8 @@ typedef struct RedvoxPacketM_Sensors_Single__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_Sensors_Single__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM_Sensors)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -2468,16 +2641,16 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "sensorDescription",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_SensorDescription,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, sensorDescription),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "timestamps",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_TimingPayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_TimingPayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_Timestamps,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, timestamps),
@@ -2486,7 +2659,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "timestampsGps",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_TimingPayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_TimingPayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_TimestampsGps,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, timestampsGps),
@@ -2495,7 +2668,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "latitudeSamples",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_DoubleSamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_DoubleSamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LatitudeSamples,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, latitudeSamples),
@@ -2504,7 +2677,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "longitudeSamples",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_DoubleSamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_DoubleSamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LongitudeSamples,
         .hasIndex = 4,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, longitudeSamples),
@@ -2513,7 +2686,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "altitudeSamples",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_AltitudeSamples,
         .hasIndex = 5,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, altitudeSamples),
@@ -2522,7 +2695,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "speedSamples",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_SpeedSamples,
         .hasIndex = 6,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, speedSamples),
@@ -2531,7 +2704,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "bearingSamples",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_BearingSamples,
         .hasIndex = 7,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, bearingSamples),
@@ -2540,7 +2713,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "horizontalAccuracySamples",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_HorizontalAccuracySamples,
         .hasIndex = 8,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, horizontalAccuracySamples),
@@ -2549,7 +2722,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "verticalAccuracySamples",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_VerticalAccuracySamples,
         .hasIndex = 9,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, verticalAccuracySamples),
@@ -2558,7 +2731,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "speedAccuracySamples",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_SpeedAccuracySamples,
         .hasIndex = 10,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, speedAccuracySamples),
@@ -2567,7 +2740,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "bearingAccuracySamples",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_BearingAccuracySamples,
         .hasIndex = 11,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, bearingAccuracySamples),
@@ -2576,7 +2749,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "lastBestLocation",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Location_BestLocation),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Location_BestLocation),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LastBestLocation,
         .hasIndex = 12,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, lastBestLocation),
@@ -2585,7 +2758,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "overallBestLocation",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Location_BestLocation),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Location_BestLocation),
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_OverallBestLocation,
         .hasIndex = 13,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, overallBestLocation),
@@ -2594,29 +2767,29 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "locationPermissionsGranted",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LocationPermissionsGranted,
         .hasIndex = 14,
         .offset = 15,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "locationServicesRequested",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesRequested,
         .hasIndex = 16,
         .offset = 17,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "locationServicesEnabled",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_LocationServicesEnabled,
         .hasIndex = 18,
         .offset = 19,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
@@ -2630,7 +2803,7 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location__storage_, metadata),
@@ -2645,8 +2818,8 @@ typedef struct RedvoxPacketM_Sensors_Location__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_Sensors_Location__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM_Sensors)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -2765,7 +2938,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "latitudeLongitudeTimestamp",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp),
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_LatitudeLongitudeTimestamp,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, latitudeLongitudeTimestamp),
@@ -2774,7 +2947,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
       },
       {
         .name = "altitudeTimestamp",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp),
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_AltitudeTimestamp,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, altitudeTimestamp),
@@ -2783,7 +2956,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
       },
       {
         .name = "speedTimestamp",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp),
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedTimestamp,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, speedTimestamp),
@@ -2792,7 +2965,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
       },
       {
         .name = "bearingTimestamp",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp),
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingTimestamp,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, bearingTimestamp),
@@ -2805,7 +2978,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_LatitudeLongitudeUnit,
         .hasIndex = 4,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, latitudeLongitudeUnit),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
@@ -2814,7 +2987,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_AltitudeUnit,
         .hasIndex = 5,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, altitudeUnit),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
@@ -2823,7 +2996,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedUnit,
         .hasIndex = 6,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, speedUnit),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
@@ -2832,7 +3005,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingUnit,
         .hasIndex = 7,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, bearingUnit),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
@@ -2841,7 +3014,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_VerticalAccuracyUnit,
         .hasIndex = 8,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, verticalAccuracyUnit),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
@@ -2850,7 +3023,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_HorizontalAccuracyUnit,
         .hasIndex = 9,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, horizontalAccuracyUnit),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
@@ -2859,7 +3032,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedAccuracyUnit,
         .hasIndex = 10,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, speedAccuracyUnit),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
@@ -2868,97 +3041,97 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingAccuracyUnit,
         .hasIndex = 11,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, bearingAccuracyUnit),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "latitude",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Latitude,
         .hasIndex = 12,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, latitude),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "longitude",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Longitude,
         .hasIndex = 13,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, longitude),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "altitude",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Altitude,
         .hasIndex = 14,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, altitude),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "speed",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Speed,
         .hasIndex = 15,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, speed),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "bearing",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Bearing,
         .hasIndex = 16,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, bearing),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "verticalAccuracy",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_VerticalAccuracy,
         .hasIndex = 17,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, verticalAccuracy),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "horizontalAccuracy",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_HorizontalAccuracy,
         .hasIndex = 18,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, horizontalAccuracy),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "speedAccuracy",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedAccuracy,
         .hasIndex = 19,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, speedAccuracy),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "bearingAccuracy",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingAccuracy,
         .hasIndex = 20,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, bearingAccuracy),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "score",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Score,
         .hasIndex = 21,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, score),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
@@ -2967,7 +3140,7 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Method,
         .hasIndex = 22,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, method),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
@@ -2976,12 +3149,12 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_LocationProvider,
         .hasIndex = 23,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, locationProvider),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation__storage_, metadata),
@@ -2996,8 +3169,8 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_Sensors_Location_BestLocation__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors_Location)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM_Sensors_Location)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -3011,121 +3184,121 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation__storage_ {
 int32_t RedvoxPacketM_Sensors_Location_BestLocation_LatitudeLongitudeUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_LatitudeLongitudeUnit];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_Sensors_Location_BestLocation_LatitudeLongitudeUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_LatitudeLongitudeUnit];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 int32_t RedvoxPacketM_Sensors_Location_BestLocation_AltitudeUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_AltitudeUnit];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_Sensors_Location_BestLocation_AltitudeUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_AltitudeUnit];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 int32_t RedvoxPacketM_Sensors_Location_BestLocation_SpeedUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedUnit];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_Sensors_Location_BestLocation_SpeedUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedUnit];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 int32_t RedvoxPacketM_Sensors_Location_BestLocation_BearingUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingUnit];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_Sensors_Location_BestLocation_BearingUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingUnit];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 int32_t RedvoxPacketM_Sensors_Location_BestLocation_VerticalAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_VerticalAccuracyUnit];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_Sensors_Location_BestLocation_VerticalAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_VerticalAccuracyUnit];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 int32_t RedvoxPacketM_Sensors_Location_BestLocation_HorizontalAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_HorizontalAccuracyUnit];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_Sensors_Location_BestLocation_HorizontalAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_HorizontalAccuracyUnit];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 int32_t RedvoxPacketM_Sensors_Location_BestLocation_SpeedAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedAccuracyUnit];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_Sensors_Location_BestLocation_SpeedAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_SpeedAccuracyUnit];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 int32_t RedvoxPacketM_Sensors_Location_BestLocation_BearingAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingAccuracyUnit];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_Sensors_Location_BestLocation_BearingAccuracyUnit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_BearingAccuracyUnit];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 int32_t RedvoxPacketM_Sensors_Location_BestLocation_Method_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Method];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_Sensors_Location_BestLocation_Method_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_Method];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 int32_t RedvoxPacketM_Sensors_Location_BestLocation_LocationProvider_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_LocationProvider];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_Sensors_Location_BestLocation_LocationProvider_RawValue(RedvoxPacketM_Sensors_Location_BestLocation *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_FieldNumber_LocationProvider];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 #pragma mark - Enum RedvoxPacketM_Sensors_Location_BestLocation_LocationScoreMethod
@@ -3190,30 +3363,30 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp__storag
         .number = RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_FieldNumber_Unit,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp__storage_, unit),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "mach",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_FieldNumber_Mach,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp__storage_, mach),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "gps",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_FieldNumber_Gps,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp__storage_, gps),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp__storage_, metadata),
@@ -3228,8 +3401,8 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp__storag
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors_Location_BestLocation)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM_Sensors_Location_BestLocation)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -3243,13 +3416,13 @@ typedef struct RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp__storag
 int32_t RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_Unit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_FieldNumber_Unit];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_Unit_RawValue(RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Location_BestLocation_BestTimestamp_FieldNumber_Unit];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 #pragma mark - RedvoxPacketM_Sensors_Xyz
@@ -3281,16 +3454,16 @@ typedef struct RedvoxPacketM_Sensors_Xyz__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "sensorDescription",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Xyz_FieldNumber_SensorDescription,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Xyz__storage_, sensorDescription),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "timestamps",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_TimingPayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_TimingPayload),
         .number = RedvoxPacketM_Sensors_Xyz_FieldNumber_Timestamps,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Xyz__storage_, timestamps),
@@ -3299,7 +3472,7 @@ typedef struct RedvoxPacketM_Sensors_Xyz__storage_ {
       },
       {
         .name = "xSamples",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Xyz_FieldNumber_XSamples,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Xyz__storage_, xSamples),
@@ -3308,7 +3481,7 @@ typedef struct RedvoxPacketM_Sensors_Xyz__storage_ {
       },
       {
         .name = "ySamples",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Xyz_FieldNumber_YSamples,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Xyz__storage_, ySamples),
@@ -3317,7 +3490,7 @@ typedef struct RedvoxPacketM_Sensors_Xyz__storage_ {
       },
       {
         .name = "zSamples",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SamplePayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SamplePayload),
         .number = RedvoxPacketM_Sensors_Xyz_FieldNumber_ZSamples,
         .hasIndex = 4,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Xyz__storage_, zSamples),
@@ -3326,7 +3499,7 @@ typedef struct RedvoxPacketM_Sensors_Xyz__storage_ {
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Xyz_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Xyz__storage_, metadata),
@@ -3341,8 +3514,8 @@ typedef struct RedvoxPacketM_Sensors_Xyz__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_Sensors_Xyz__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM_Sensors)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -3380,16 +3553,16 @@ typedef struct RedvoxPacketM_Sensors_Image__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "sensorDescription",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Image_FieldNumber_SensorDescription,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Image__storage_, sensorDescription),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "timestamps",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_TimingPayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_TimingPayload),
         .number = RedvoxPacketM_Sensors_Image_FieldNumber_Timestamps,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Image__storage_, timestamps),
@@ -3398,7 +3571,7 @@ typedef struct RedvoxPacketM_Sensors_Image__storage_ {
       },
       {
         .name = "samplesArray",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Image_FieldNumber_SamplesArray,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Image__storage_, samplesArray),
@@ -3411,12 +3584,12 @@ typedef struct RedvoxPacketM_Sensors_Image__storage_ {
         .number = RedvoxPacketM_Sensors_Image_FieldNumber_ImageCodec,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Image__storage_, imageCodec),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_Sensors_Image_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_Sensors_Image__storage_, metadata),
@@ -3431,8 +3604,8 @@ typedef struct RedvoxPacketM_Sensors_Image__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_Sensors_Image__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_Sensors)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM_Sensors)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -3446,13 +3619,13 @@ typedef struct RedvoxPacketM_Sensors_Image__storage_ {
 int32_t RedvoxPacketM_Sensors_Image_ImageCodec_RawValue(RedvoxPacketM_Sensors_Image *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Image descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Image_FieldNumber_ImageCodec];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_Sensors_Image_ImageCodec_RawValue(RedvoxPacketM_Sensors_Image *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_Sensors_Image descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_Sensors_Image_FieldNumber_ImageCodec];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 #pragma mark - Enum RedvoxPacketM_Sensors_Image_ImageCodec
@@ -3519,16 +3692,16 @@ typedef struct RedvoxPacketM_EventStream__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "name",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_EventStream_FieldNumber_Name,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_EventStream__storage_, name),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "timestamps",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_TimingPayload),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_TimingPayload),
         .number = RedvoxPacketM_EventStream_FieldNumber_Timestamps,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_EventStream__storage_, timestamps),
@@ -3537,7 +3710,7 @@ typedef struct RedvoxPacketM_EventStream__storage_ {
       },
       {
         .name = "eventsArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_EventStream_Event),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_EventStream_Event),
         .number = RedvoxPacketM_EventStream_FieldNumber_EventsArray,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_EventStream__storage_, eventsArray),
@@ -3546,7 +3719,7 @@ typedef struct RedvoxPacketM_EventStream__storage_ {
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_EventStream_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_EventStream__storage_, metadata),
@@ -3561,8 +3734,8 @@ typedef struct RedvoxPacketM_EventStream__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_EventStream__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -3602,16 +3775,16 @@ typedef struct RedvoxPacketM_EventStream_Event__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "description_p",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_EventStream_Event_FieldNumber_Description_p,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_EventStream_Event__storage_, description_p),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "stringPayload",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_EventStream_Event_FieldNumber_StringPayload,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_EventStream_Event__storage_, stringPayload),
@@ -3620,7 +3793,7 @@ typedef struct RedvoxPacketM_EventStream_Event__storage_ {
       },
       {
         .name = "numericPayload",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_EventStream_Event_FieldNumber_NumericPayload,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_EventStream_Event__storage_, numericPayload),
@@ -3629,7 +3802,7 @@ typedef struct RedvoxPacketM_EventStream_Event__storage_ {
       },
       {
         .name = "booleanPayload",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_EventStream_Event_FieldNumber_BooleanPayload,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_EventStream_Event__storage_, booleanPayload),
@@ -3638,7 +3811,7 @@ typedef struct RedvoxPacketM_EventStream_Event__storage_ {
       },
       {
         .name = "bytePayload",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_EventStream_Event_FieldNumber_BytePayload,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_EventStream_Event__storage_, bytePayload),
@@ -3647,7 +3820,7 @@ typedef struct RedvoxPacketM_EventStream_Event__storage_ {
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_EventStream_Event_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_EventStream_Event__storage_, metadata),
@@ -3662,8 +3835,8 @@ typedef struct RedvoxPacketM_EventStream_Event__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_EventStream_Event__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM_EventStream)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM_EventStream)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -3703,12 +3876,12 @@ typedef struct RedvoxPacketM_SamplePayload__storage_ {
         .number = RedvoxPacketM_SamplePayload_FieldNumber_Unit,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SamplePayload__storage_, unit),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "valuesArray",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_SamplePayload_FieldNumber_ValuesArray,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SamplePayload__storage_, valuesArray),
@@ -3717,7 +3890,7 @@ typedef struct RedvoxPacketM_SamplePayload__storage_ {
       },
       {
         .name = "valueStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SummaryStatistics),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SummaryStatistics),
         .number = RedvoxPacketM_SamplePayload_FieldNumber_ValueStatistics,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SamplePayload__storage_, valueStatistics),
@@ -3726,7 +3899,7 @@ typedef struct RedvoxPacketM_SamplePayload__storage_ {
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_SamplePayload_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SamplePayload__storage_, metadata),
@@ -3741,8 +3914,8 @@ typedef struct RedvoxPacketM_SamplePayload__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_SamplePayload__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -3756,13 +3929,13 @@ typedef struct RedvoxPacketM_SamplePayload__storage_ {
 int32_t RedvoxPacketM_SamplePayload_Unit_RawValue(RedvoxPacketM_SamplePayload *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_SamplePayload descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_SamplePayload_FieldNumber_Unit];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_SamplePayload_Unit_RawValue(RedvoxPacketM_SamplePayload *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_SamplePayload descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_SamplePayload_FieldNumber_Unit];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 #pragma mark - RedvoxPacketM_DoubleSamplePayload
@@ -3794,12 +3967,12 @@ typedef struct RedvoxPacketM_DoubleSamplePayload__storage_ {
         .number = RedvoxPacketM_DoubleSamplePayload_FieldNumber_Unit,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_DoubleSamplePayload__storage_, unit),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "valuesArray",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_DoubleSamplePayload_FieldNumber_ValuesArray,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_DoubleSamplePayload__storage_, valuesArray),
@@ -3808,7 +3981,7 @@ typedef struct RedvoxPacketM_DoubleSamplePayload__storage_ {
       },
       {
         .name = "valueStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SummaryStatistics),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SummaryStatistics),
         .number = RedvoxPacketM_DoubleSamplePayload_FieldNumber_ValueStatistics,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_DoubleSamplePayload__storage_, valueStatistics),
@@ -3817,7 +3990,7 @@ typedef struct RedvoxPacketM_DoubleSamplePayload__storage_ {
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_DoubleSamplePayload_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_DoubleSamplePayload__storage_, metadata),
@@ -3832,8 +4005,8 @@ typedef struct RedvoxPacketM_DoubleSamplePayload__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_DoubleSamplePayload__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -3847,13 +4020,13 @@ typedef struct RedvoxPacketM_DoubleSamplePayload__storage_ {
 int32_t RedvoxPacketM_DoubleSamplePayload_Unit_RawValue(RedvoxPacketM_DoubleSamplePayload *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_DoubleSamplePayload descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_DoubleSamplePayload_FieldNumber_Unit];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_DoubleSamplePayload_Unit_RawValue(RedvoxPacketM_DoubleSamplePayload *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_DoubleSamplePayload descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_DoubleSamplePayload_FieldNumber_Unit];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 #pragma mark - RedvoxPacketM_TimingPayload
@@ -3889,12 +4062,12 @@ typedef struct RedvoxPacketM_TimingPayload__storage_ {
         .number = RedvoxPacketM_TimingPayload_FieldNumber_Unit,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingPayload__storage_, unit),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "timestampsArray",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingPayload_FieldNumber_TimestampsArray,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingPayload__storage_, timestampsArray),
@@ -3903,7 +4076,7 @@ typedef struct RedvoxPacketM_TimingPayload__storage_ {
       },
       {
         .name = "timestampStatistics",
-        .dataTypeSpecific.className = GPBStringifySymbol(RedvoxPacketM_SummaryStatistics),
+        .dataTypeSpecific.clazz = GPBObjCClass(RedvoxPacketM_SummaryStatistics),
         .number = RedvoxPacketM_TimingPayload_FieldNumber_TimestampStatistics,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingPayload__storage_, timestampStatistics),
@@ -3912,25 +4085,25 @@ typedef struct RedvoxPacketM_TimingPayload__storage_ {
       },
       {
         .name = "meanSampleRate",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingPayload_FieldNumber_MeanSampleRate,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingPayload__storage_, meanSampleRate),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "stdevSampleRate",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingPayload_FieldNumber_StdevSampleRate,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingPayload__storage_, stdevSampleRate),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_TimingPayload_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_TimingPayload__storage_, metadata),
@@ -3945,8 +4118,8 @@ typedef struct RedvoxPacketM_TimingPayload__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_TimingPayload__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -3960,13 +4133,13 @@ typedef struct RedvoxPacketM_TimingPayload__storage_ {
 int32_t RedvoxPacketM_TimingPayload_Unit_RawValue(RedvoxPacketM_TimingPayload *message) {
   GPBDescriptor *descriptor = [RedvoxPacketM_TimingPayload descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_TimingPayload_FieldNumber_Unit];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetRedvoxPacketM_TimingPayload_Unit_RawValue(RedvoxPacketM_TimingPayload *message, int32_t value) {
   GPBDescriptor *descriptor = [RedvoxPacketM_TimingPayload descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:RedvoxPacketM_TimingPayload_FieldNumber_Unit];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 #pragma mark - RedvoxPacketM_SummaryStatistics
@@ -4000,61 +4173,61 @@ typedef struct RedvoxPacketM_SummaryStatistics__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "count",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_SummaryStatistics_FieldNumber_Count,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, count),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "mean",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_SummaryStatistics_FieldNumber_Mean,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, mean),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "standardDeviation",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_SummaryStatistics_FieldNumber_StandardDeviation,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, standardDeviation),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "min",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_SummaryStatistics_FieldNumber_Min,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, min),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "max",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_SummaryStatistics_FieldNumber_Max,
         .hasIndex = 4,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, max),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "range",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_SummaryStatistics_FieldNumber_Range,
         .hasIndex = 5,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, range),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "metadata",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = RedvoxPacketM_SummaryStatistics_FieldNumber_Metadata,
         .hasIndex = GPBNoHasBit,
         .offset = (uint32_t)offsetof(RedvoxPacketM_SummaryStatistics__storage_, metadata),
@@ -4069,8 +4242,8 @@ typedef struct RedvoxPacketM_SummaryStatistics__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RedvoxPacketM_SummaryStatistics__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(RedvoxPacketM)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(RedvoxPacketM)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -4102,20 +4275,20 @@ typedef struct EncryptedRedvoxPacketM__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "header",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = EncryptedRedvoxPacketM_FieldNumber_Header,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(EncryptedRedvoxPacketM__storage_, header),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBytes,
       },
       {
         .name = "packet",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = EncryptedRedvoxPacketM_FieldNumber_Packet,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(EncryptedRedvoxPacketM__storage_, packet),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBytes,
       },
     };
@@ -4126,7 +4299,7 @@ typedef struct EncryptedRedvoxPacketM__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(EncryptedRedvoxPacketM__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -4164,47 +4337,47 @@ typedef struct EncryptedRedvoxPacketM_Header__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "stationId",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = EncryptedRedvoxPacketM_Header_FieldNumber_StationId,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(EncryptedRedvoxPacketM_Header__storage_, stationId),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "stationUuid",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = EncryptedRedvoxPacketM_Header_FieldNumber_StationUuid,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(EncryptedRedvoxPacketM_Header__storage_, stationUuid),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "authToken",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = EncryptedRedvoxPacketM_Header_FieldNumber_AuthToken,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(EncryptedRedvoxPacketM_Header__storage_, authToken),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "firebaseToken",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = EncryptedRedvoxPacketM_Header_FieldNumber_FirebaseToken,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(EncryptedRedvoxPacketM_Header__storage_, firebaseToken),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "authEmail",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = EncryptedRedvoxPacketM_Header_FieldNumber_AuthEmail,
         .hasIndex = 4,
         .offset = (uint32_t)offsetof(EncryptedRedvoxPacketM_Header__storage_, authEmail),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
     };
@@ -4215,8 +4388,8 @@ typedef struct EncryptedRedvoxPacketM_Header__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(EncryptedRedvoxPacketM_Header__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    [localDescriptor setupContainingMessageClassName:GPBStringifySymbol(EncryptedRedvoxPacketM)];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    [localDescriptor setupContainingMessageClass:GPBObjCClass(EncryptedRedvoxPacketM)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -4255,56 +4428,56 @@ typedef struct AcquisitionRequest__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "authToken",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = AcquisitionRequest_FieldNumber_AuthToken,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(AcquisitionRequest__storage_, authToken),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "firebaseToken",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = AcquisitionRequest_FieldNumber_FirebaseToken,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(AcquisitionRequest__storage_, firebaseToken),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "checksum",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = AcquisitionRequest_FieldNumber_Checksum,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(AcquisitionRequest__storage_, checksum),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "isEncrypted",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = AcquisitionRequest_FieldNumber_IsEncrypted,
         .hasIndex = 3,
         .offset = 4,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "payload",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = AcquisitionRequest_FieldNumber_Payload,
         .hasIndex = 5,
         .offset = (uint32_t)offsetof(AcquisitionRequest__storage_, payload),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBytes,
       },
       {
         .name = "seqId",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = AcquisitionRequest_FieldNumber_SeqId,
         .hasIndex = 6,
         .offset = (uint32_t)offsetof(AcquisitionRequest__storage_, seqId),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeInt64,
       },
     };
@@ -4315,7 +4488,7 @@ typedef struct AcquisitionRequest__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(AcquisitionRequest__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -4356,43 +4529,43 @@ typedef struct AcquisitionResponse__storage_ {
         .number = AcquisitionResponse_FieldNumber_ResponseType,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(AcquisitionResponse__storage_, responseType),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
       },
       {
         .name = "checksum",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = AcquisitionResponse_FieldNumber_Checksum,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(AcquisitionResponse__storage_, checksum),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "details",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = AcquisitionResponse_FieldNumber_Details,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(AcquisitionResponse__storage_, details),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "resend",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = AcquisitionResponse_FieldNumber_Resend,
         .hasIndex = 3,
         .offset = 4,  // Stored in _has_storage_ to save space.
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeBool,
       },
       {
         .name = "seqId",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = AcquisitionResponse_FieldNumber_SeqId,
         .hasIndex = 5,
         .offset = (uint32_t)offsetof(AcquisitionResponse__storage_, seqId),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeInt64,
       },
     };
@@ -4403,7 +4576,7 @@ typedef struct AcquisitionResponse__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(AcquisitionResponse__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -4417,13 +4590,13 @@ typedef struct AcquisitionResponse__storage_ {
 int32_t AcquisitionResponse_ResponseType_RawValue(AcquisitionResponse *message) {
   GPBDescriptor *descriptor = [AcquisitionResponse descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:AcquisitionResponse_FieldNumber_ResponseType];
-  return GPBGetMessageInt32Field(message, field);
+  return GPBGetMessageRawEnumField(message, field);
 }
 
 void SetAcquisitionResponse_ResponseType_RawValue(AcquisitionResponse *message, int32_t value) {
   GPBDescriptor *descriptor = [AcquisitionResponse descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:AcquisitionResponse_FieldNumber_ResponseType];
-  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+  GPBSetMessageRawEnumField(message, field, value);
 }
 
 #pragma mark - Enum AcquisitionResponse_ResponseType
@@ -4493,38 +4666,38 @@ typedef struct SynchRequest__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "stationId",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = SynchRequest_FieldNumber_StationId,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(SynchRequest__storage_, stationId),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "stationUuid",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = SynchRequest_FieldNumber_StationUuid,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(SynchRequest__storage_, stationUuid),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "seqId",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = SynchRequest_FieldNumber_SeqId,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(SynchRequest__storage_, seqId),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeUInt32,
       },
       {
         .name = "subSeqId",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = SynchRequest_FieldNumber_SubSeqId,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(SynchRequest__storage_, subSeqId),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeUInt32,
       },
     };
@@ -4535,7 +4708,7 @@ typedef struct SynchRequest__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(SynchRequest__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG
@@ -4575,56 +4748,56 @@ typedef struct SynchResponse__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "stationId",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = SynchResponse_FieldNumber_StationId,
         .hasIndex = 0,
         .offset = (uint32_t)offsetof(SynchResponse__storage_, stationId),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "stationUuid",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = SynchResponse_FieldNumber_StationUuid,
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(SynchResponse__storage_, stationUuid),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeString,
       },
       {
         .name = "seqId",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = SynchResponse_FieldNumber_SeqId,
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(SynchResponse__storage_, seqId),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeUInt32,
       },
       {
         .name = "subSeqId",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = SynchResponse_FieldNumber_SubSeqId,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(SynchResponse__storage_, subSeqId),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeUInt32,
       },
       {
         .name = "recvTsUs",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = SynchResponse_FieldNumber_RecvTsUs,
         .hasIndex = 4,
         .offset = (uint32_t)offsetof(SynchResponse__storage_, recvTsUs),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeUInt64,
       },
       {
         .name = "sendTsUs",
-        .dataTypeSpecific.className = NULL,
+        .dataTypeSpecific.clazz = Nil,
         .number = SynchResponse_FieldNumber_SendTsUs,
         .hasIndex = 5,
         .offset = (uint32_t)offsetof(SynchResponse__storage_, sendTsUs),
-        .flags = GPBFieldOptional,
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeUInt64,
       },
     };
@@ -4635,7 +4808,7 @@ typedef struct SynchResponse__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(SynchResponse__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG

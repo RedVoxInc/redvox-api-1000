@@ -57,7 +57,9 @@ message RedvoxPacketM {
             SamplePayload cpu_utilization = 10;
             repeated PowerState power_state = 11;
             repeated WifiWakeLock wifi_wake_lock = 12;
-            map<string, string> metadata = 13;
+            repeated ScreenState screen_state = 13;
+            repeated float screen_brightness = 14;
+            map<string, string> metadata = 15;
             enum NetworkType {
                 UNKNOWN_NETWORK = 0;
                 NO_NETWORK = 1;
@@ -83,6 +85,12 @@ message RedvoxPacketM {
                 UNPLUGGED = 1;
                 CHARGING = 2;
                 CHARGED = 3;
+            }
+            enum ScreenState {
+                UNKNOWN_SCREEN_STATE = 0;
+                ON = 1;
+                OFF = 2;
+                HEADLESS = 3;
             }
         }
         message AppSettings {
@@ -113,7 +121,8 @@ message RedvoxPacketM {
             double use_latitude = 25;
             double use_longitude = 26;
             float use_altitude = 27;
-            map<string, string> metadata = 28;
+            MetricsRate metrics_rate = 28;
+            map<string, string> metadata = 29;
             enum FftOverlap {
                 UNKNOWN = 0;
                 PERCENT_25 = 1;
@@ -137,22 +146,32 @@ message RedvoxPacketM {
             enum InputSensor {
                 UNKNOWN_SENSOR = 0;
                 ACCELEROMETER = 1;
-                AMBIENT_TEMPERATURE = 2;
-                AUDIO = 3;
-                COMPRESSED_AUDIO = 4;
-                GRAVITY = 5;
-                GYROSCOPE = 6;
-                IMAGE = 7;
-                LIGHT = 8;
-                LINEAR_ACCELERATION = 9;
-                LOCATION = 10;
-                MAGNETOMETER = 11;
-                ORIENTATION = 12;
-                PRESSURE = 13;
-                PROXIMITY = 14;
-                RELATIVE_HUMIDITY = 15;
-                ROTATION_VECTOR = 16;
+                ACCELEROMETER_FAST = 2;
+                AMBIENT_TEMPERATURE = 3;
+                AUDIO = 4;
+                COMPRESSED_AUDIO = 5;
+                GRAVITY = 6;
+                GYROSCOPE = 7;
+                GYROSCOPE_FAST = 8;
+                IMAGE_PER_SECOND = 9;
+                IMAGE_PER_PACKET = 10;
+                LIGHT = 11;
+                LINEAR_ACCELERATION = 12;
+                LOCATION = 13;
+                MAGNETOMETER = 14;
+                MAGNETOMETER_FAST = 15;
+                ORIENTATION = 16;
+                PRESSURE = 17;
+                PROXIMITY = 18;
+                RELATIVE_HUMIDITY = 19;
+                ROTATION_VECTOR = 20;
+                VELOCITY = 21;
             }
+        }
+        enum MetricsRate {
+            UNKNOWN = 0;
+            ONCE_PER_SECOND = 1;
+            ONCE_PER_PACKET = 2;
         }
     }
     message TimingInformation {
@@ -200,7 +219,8 @@ message RedvoxPacketM {
         Single proximity =14;
         Single relative_humidity = 15;
         Xyz rotation_vector = 16;
-        map<string, string> metadata = 17;
+        Xyz velocity = 17;
+        map<string, string> metadata = 18;
         message Audio {
             string sensor_description = 1;
             double first_sample_timestamp = 2;
