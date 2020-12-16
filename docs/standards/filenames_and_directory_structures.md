@@ -30,10 +30,11 @@ where
 
 API M utilizes a standardized directory structure and layout for API data. This structure is utilized in several places on the station and in cloud services. It is also the standard structure used when distributing API M data sets. This structure will be referred to in other parts of the documentation as `[STANDARD_DIR_STRUCTURE]`.
 
-The standard directory structure is: `api1000/YYYY/MM/DD/`, where: 
+The standard directory structure is: `api1000/YYYY/MM/DD/HH`, where: 
 * `YYYY` is replaced with the year as 4 characters
 * `MM` is replaced with the month as 2 characters (possibly 0 padded)
 * `DD` is replaced with the date as 2 characters (possibly 0 padded)
+* `HH` is replaced with the hour as 2 characters (00 - 23)
 * The date parts are from `RedvoxPacketM.TimingInformation.packet_start_mach_timestamp`
 
 ### Station Directory Structure
@@ -60,7 +61,7 @@ Data that has not yet been sent to data acquistiion should be stored in:
 ##### Configuration Data
 
 * Configuration data should be provided as JSON
-* Configuration data should be stored at `RedVox/configuration`
+* Configuration data should be stored at `RedVox/settings`
 
 ##### Event Data
 
