@@ -9,7 +9,7 @@ __redvox.io__
 | Data acquisition API M     | wss://redvox.io/acquisition/v1000   |
 | Data acquisition API M E2E | wss://redvox.io/acquisition/x/v1000 |
 | Synch exchanges v3         | wss://redvox.io/synch/v3            |
-| Authentication             | https://redvox.io:8080/api/v1/auth  |
+| Authentication             | https://redvox.io:8080/api/v2/auth  |
 
 __Testing / Pre-Release__
 
@@ -18,7 +18,7 @@ __Testing / Pre-Release__
 | Data acquisition API M     | wss://milton.soest.hawaii.edu:8000/acquisition/v1000   |
 | Data acquisition API M E2E | wss://milton.soest.hawaii.edu:8000/acquisition/x/v1000 |
 | Synch exchanges v3         | wss://milton.soest.hawaii.edu:8000/synch/v3            |
-| Authentication             | https://milton.soest.hawaii.edu:8088/api/v1/auth       |
+| Authentication             | https://milton.soest.hawaii.edu:8088/api/v2/auth       |
 | Auth Refresh               |https://milton.soest.hawaii.edu:8088/api/v1/auth/refresh|
 
 
