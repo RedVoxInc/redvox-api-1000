@@ -5,11 +5,6 @@ if ! [[ -x "$(command -v protoc)" ]]; then
   exit 1
 fi
 
-if ! [[ -x "$(command -v protoc-gen-mypy)" ]]; then
-  echo 'Error: protoc-gen-mypy is not installed.' >&2
-  exit 1
-fi
-
 if ! [[ -x "$(command -v javadoc)" ]]; then
   echo 'Error: javadoc is not installed.' >&2
   exit 1
@@ -40,14 +35,12 @@ OUT=src/generated
 JAVA_OUT=${OUT}/java
 PYTHON_OUT=${OUT}/python
 OBJ_C_OUT=${OUT}/obj_c
-JS_OUT=${OUT}/js
 SWIFT_OUT=${OUT}/swift
 
 # Compile the protobuf
 protoc  --java_out=${JAVA_OUT}                                  \
-        --python_out=${PYTHON_OUT} --mypy_out=${PYTHON_OUT}     \
+        --python_out=${PYTHON_OUT} --pyi_out=${PYTHON_OUT}      \
         --objc_out=${OBJ_C_OUT}                                 \
-        --js_out=${JS_OUT}                                      \
         --swift_out=${SWIFT_OUT}                                \
         ${SRC}
 
@@ -55,7 +48,9 @@ protoc  --java_out=${JAVA_OUT}                                  \
 python3 insert_sub_api.py
 
 # Generate API docs
-javadoc -sourcepath ${JAVA_OUT} -d docs/api/java io.redvox.apis
+# Ensure you have the protobuf java library that matches your protoc version https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/
+PROTOC_VERSION=$(protoc --version | awk '{print $2}')
+javadoc -classpath protobuf-java-${PROTOC_VERSION}.jar -sourcepath ${JAVA_OUT} -d docs/api/java io.redvox.apis
 pdoc3 ${PYTHON_OUT}/src/redvox_api_m/redvox_api_m_pb2.py --overwrite --html --html-dir docs/api/python -c show_type_annotations=True
 doxygen Doxyfile
 

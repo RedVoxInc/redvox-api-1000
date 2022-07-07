@@ -4,7 +4,7 @@
 package io.redvox.apis;
 
 public final class RedvoxApiM {
-  public final static float SUB_API = 10.0f;  // redvox-api-1000 -> build_protos.sh -> insert_sub_api.py on 2020-11-17 22:21:03.656757
+  public final static float SUB_API = 10.0f;  // redvox-api-1000 -> build_protos.sh -> insert_sub_api.py on 2022-07-07 23:25:48.321520
 
   private RedvoxApiM() {}
   public static void registerAllExtensions(
@@ -205,9 +205,11 @@ public final class RedvoxApiM {
      * <code>map&lt;string, string&gt; metadata = 7;</code>
      */
 
-    java.lang.String getMetadataOrDefault(
+    /* nullable */
+java.lang.String getMetadataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue);
+        /* nullable */
+java.lang.String defaultValue);
     /**
      * <pre>
      * A map from string to string for including untyped metadata
@@ -352,6 +354,8 @@ public final class RedvoxApiM {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -985,9 +989,11 @@ public final class RedvoxApiM {
        * <code>map&lt;string, string&gt; metadata = 14;</code>
        */
 
-      java.lang.String getMetadataOrDefault(
+      /* nullable */
+java.lang.String getMetadataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue);
+          /* nullable */
+java.lang.String defaultValue);
       /**
        * <pre>
        * A map from string to string for including untyped metadata
@@ -1180,6 +1186,8 @@ public final class RedvoxApiM {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -1586,9 +1594,11 @@ public final class RedvoxApiM {
          * <code>map&lt;string, string&gt; metadata = 4;</code>
          */
 
-        java.lang.String getMetadataOrDefault(
+        /* nullable */
+java.lang.String getMetadataOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue);
+            /* nullable */
+java.lang.String defaultValue);
         /**
          * <pre>
          * A map from string to string for including untyped metadata
@@ -1695,6 +1705,8 @@ public final class RedvoxApiM {
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -1903,7 +1915,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -1938,7 +1950,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1954,7 +1966,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -1977,13 +1989,13 @@ public final class RedvoxApiM {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getAuthServerBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authServer_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authServer_);
           }
-          if (!getSynchServerBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(synchServer_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 2, synchServer_);
           }
-          if (!getAcquisitionServerBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(acquisitionServer_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 3, acquisitionServer_);
           }
           com.google.protobuf.GeneratedMessageV3
@@ -2001,13 +2013,13 @@ public final class RedvoxApiM {
           if (size != -1) return size;
 
           size = 0;
-          if (!getAuthServerBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authServer_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authServer_);
           }
-          if (!getSynchServerBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(synchServer_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, synchServer_);
           }
-          if (!getAcquisitionServerBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(acquisitionServer_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, acquisitionServer_);
           }
           for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -2679,7 +2691,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetMetadata().getMap().containsKey(key);
           }
           /**
@@ -2714,7 +2726,7 @@ public final class RedvoxApiM {
           public java.lang.String getMetadataOrDefault(
               java.lang.String key,
               java.lang.String defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2730,7 +2742,7 @@ public final class RedvoxApiM {
 
           public java.lang.String getMetadataOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             if (!map.containsKey(key)) {
@@ -2754,7 +2766,7 @@ public final class RedvoxApiM {
 
           public Builder removeMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableMetadata().getMutableMap()
                 .remove(key);
             return this;
@@ -2777,8 +2789,11 @@ public final class RedvoxApiM {
           public Builder putMetadata(
               java.lang.String key,
               java.lang.String value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
-            if (value == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
+            if (value == null) {
+  throw new NullPointerException("map value");
+}
+
             internalGetMutableMetadata().getMutableMap()
                 .put(key, value);
             return this;
@@ -3382,9 +3397,11 @@ public final class RedvoxApiM {
          * <code>map&lt;string, string&gt; metadata = 15;</code>
          */
 
-        java.lang.String getMetadataOrDefault(
+        /* nullable */
+java.lang.String getMetadataOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue);
+            /* nullable */
+java.lang.String defaultValue);
         /**
          * <pre>
          * A map from string to string for including untyped metadata
@@ -3707,6 +3724,8 @@ public final class RedvoxApiM {
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -5296,7 +5315,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -5331,7 +5350,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5347,7 +5366,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -6470,8 +6489,8 @@ public final class RedvoxApiM {
            * </pre>
            *
            * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.NetworkType network_type = 2;</code>
-           * @param index The index of the value to return.
-           * @return The enum numeric value on the wire of networkType at the given index.
+           * @param index The index to set the value at.
+           * @param value The enum numeric value on the wire for networkType to set.
            * @return This builder for chaining.
            */
           public Builder setNetworkTypeValue(
@@ -6658,8 +6677,8 @@ public final class RedvoxApiM {
            * </pre>
            *
            * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.CellServiceState cell_service_state = 3;</code>
-           * @param index The index of the value to return.
-           * @return The enum numeric value on the wire of cellServiceState at the given index.
+           * @param index The index to set the value at.
+           * @param value The enum numeric value on the wire for cellServiceState to set.
            * @return This builder for chaining.
            */
           public Builder setCellServiceStateValue(
@@ -7931,8 +7950,8 @@ public final class RedvoxApiM {
            * </pre>
            *
            * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.PowerState power_state = 11;</code>
-           * @param index The index of the value to return.
-           * @return The enum numeric value on the wire of powerState at the given index.
+           * @param index The index to set the value at.
+           * @param value The enum numeric value on the wire for powerState to set.
            * @return This builder for chaining.
            */
           public Builder setPowerStateValue(
@@ -8119,8 +8138,8 @@ public final class RedvoxApiM {
            * </pre>
            *
            * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.WifiWakeLock wifi_wake_lock = 12;</code>
-           * @param index The index of the value to return.
-           * @return The enum numeric value on the wire of wifiWakeLock at the given index.
+           * @param index The index to set the value at.
+           * @param value The enum numeric value on the wire for wifiWakeLock to set.
            * @return This builder for chaining.
            */
           public Builder setWifiWakeLockValue(
@@ -8307,8 +8326,8 @@ public final class RedvoxApiM {
            * </pre>
            *
            * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.StationMetrics.ScreenState screen_state = 13;</code>
-           * @param index The index of the value to return.
-           * @return The enum numeric value on the wire of screenState at the given index.
+           * @param index The index to set the value at.
+           * @param value The enum numeric value on the wire for screenState to set.
            * @return This builder for chaining.
            */
           public Builder setScreenStateValue(
@@ -8544,7 +8563,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetMetadata().getMap().containsKey(key);
           }
           /**
@@ -8579,7 +8598,7 @@ public final class RedvoxApiM {
           public java.lang.String getMetadataOrDefault(
               java.lang.String key,
               java.lang.String defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -8595,7 +8614,7 @@ public final class RedvoxApiM {
 
           public java.lang.String getMetadataOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             if (!map.containsKey(key)) {
@@ -8619,7 +8638,7 @@ public final class RedvoxApiM {
 
           public Builder removeMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableMetadata().getMutableMap()
                 .remove(key);
             return this;
@@ -8642,8 +8661,11 @@ public final class RedvoxApiM {
           public Builder putMetadata(
               java.lang.String key,
               java.lang.String value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
-            if (value == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
+            if (value == null) {
+  throw new NullPointerException("map value");
+}
+
             internalGetMutableMetadata().getMutableMap()
                 .put(key, value);
             return this;
@@ -9160,9 +9182,11 @@ public final class RedvoxApiM {
          * <code>map&lt;string, string&gt; metadata = 29;</code>
          */
 
-        java.lang.String getMetadataOrDefault(
+        /* nullable */
+java.lang.String getMetadataOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue);
+            /* nullable */
+java.lang.String defaultValue);
         /**
          * <pre>
          * A map from string to string for including untyped metadata
@@ -9425,6 +9449,8 @@ public final class RedvoxApiM {
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -10880,7 +10906,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -10915,7 +10941,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -10931,7 +10957,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -10958,7 +10984,7 @@ public final class RedvoxApiM {
           if (audioSamplingRate_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSamplingRate.UNKNOWN_SAMPLING_RATE.getNumber()) {
             output.writeEnum(1, audioSamplingRate_);
           }
-          if (samplesPerWindow_ != 0F) {
+          if (java.lang.Float.floatToRawIntBits(samplesPerWindow_) != 0) {
             output.writeFloat(2, samplesPerWindow_);
           }
           if (audioSourceTuning_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.AppSettings.AudioSourceTuning.UNKNOWN_TUNING.getNumber()) {
@@ -10977,10 +11003,10 @@ public final class RedvoxApiM {
           if (launchAtPowerUp_ != false) {
             output.writeBool(6, launchAtPowerUp_);
           }
-          if (!getStationIdBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationId_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 7, stationId_);
           }
-          if (!getStationDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationDescription_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 8, stationDescription_);
           }
           if (pushToServer_ != false) {
@@ -11004,25 +11030,25 @@ public final class RedvoxApiM {
           if (useCustomTimeSyncServer_ != false) {
             output.writeBool(15, useCustomTimeSyncServer_);
           }
-          if (!getTimeSyncServerUrlBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeSyncServerUrl_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 16, timeSyncServerUrl_);
           }
           if (useCustomDataServer_ != false) {
             output.writeBool(17, useCustomDataServer_);
           }
-          if (!getDataServerUrlBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataServerUrl_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 18, dataServerUrl_);
           }
           if (useCustomAuthServer_ != false) {
             output.writeBool(19, useCustomAuthServer_);
           }
-          if (!getAuthServerUrlBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authServerUrl_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 20, authServerUrl_);
           }
           if (autoDeleteDataFiles_ != false) {
             output.writeBool(21, autoDeleteDataFiles_);
           }
-          if (storageSpaceAllowance_ != 0F) {
+          if (java.lang.Float.floatToRawIntBits(storageSpaceAllowance_) != 0) {
             output.writeFloat(22, storageSpaceAllowance_);
           }
           if (useSdCardForDataStorage_ != false) {
@@ -11031,13 +11057,13 @@ public final class RedvoxApiM {
           if (useLocationServices_ != false) {
             output.writeBool(24, useLocationServices_);
           }
-          if (useLatitude_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(useLatitude_) != 0) {
             output.writeDouble(25, useLatitude_);
           }
-          if (useLongitude_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(useLongitude_) != 0) {
             output.writeDouble(26, useLongitude_);
           }
-          if (useAltitude_ != 0F) {
+          if (java.lang.Float.floatToRawIntBits(useAltitude_) != 0) {
             output.writeFloat(27, useAltitude_);
           }
           if (metricsRate_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.MetricsRate.UNKNOWN.getNumber()) {
@@ -11062,7 +11088,7 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(1, audioSamplingRate_);
           }
-          if (samplesPerWindow_ != 0F) {
+          if (java.lang.Float.floatToRawIntBits(samplesPerWindow_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeFloatSize(2, samplesPerWindow_);
           }
@@ -11090,10 +11116,10 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(6, launchAtPowerUp_);
           }
-          if (!getStationIdBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationId_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, stationId_);
           }
-          if (!getStationDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationDescription_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, stationDescription_);
           }
           if (pushToServer_ != false) {
@@ -11124,28 +11150,28 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(15, useCustomTimeSyncServer_);
           }
-          if (!getTimeSyncServerUrlBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeSyncServerUrl_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, timeSyncServerUrl_);
           }
           if (useCustomDataServer_ != false) {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(17, useCustomDataServer_);
           }
-          if (!getDataServerUrlBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataServerUrl_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, dataServerUrl_);
           }
           if (useCustomAuthServer_ != false) {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(19, useCustomAuthServer_);
           }
-          if (!getAuthServerUrlBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authServerUrl_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, authServerUrl_);
           }
           if (autoDeleteDataFiles_ != false) {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(21, autoDeleteDataFiles_);
           }
-          if (storageSpaceAllowance_ != 0F) {
+          if (java.lang.Float.floatToRawIntBits(storageSpaceAllowance_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeFloatSize(22, storageSpaceAllowance_);
           }
@@ -11157,15 +11183,15 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(24, useLocationServices_);
           }
-          if (useLatitude_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(useLatitude_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(25, useLatitude_);
           }
-          if (useLongitude_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(useLongitude_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(26, useLongitude_);
           }
-          if (useAltitude_ != 0F) {
+          if (java.lang.Float.floatToRawIntBits(useAltitude_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeFloatSize(27, useAltitude_);
           }
@@ -12122,8 +12148,8 @@ public final class RedvoxApiM {
            * </pre>
            *
            * <code>repeated .redvox_api_m.RedvoxPacketM.StationInformation.AppSettings.InputSensor additional_input_sensors = 4;</code>
-           * @param index The index of the value to return.
-           * @return The enum numeric value on the wire of additionalInputSensors at the given index.
+           * @param index The index to set the value at.
+           * @param value The enum numeric value on the wire for additionalInputSensors to set.
            * @return This builder for chaining.
            */
           public Builder setAdditionalInputSensorsValue(
@@ -13563,7 +13589,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetMetadata().getMap().containsKey(key);
           }
           /**
@@ -13598,7 +13624,7 @@ public final class RedvoxApiM {
           public java.lang.String getMetadataOrDefault(
               java.lang.String key,
               java.lang.String defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -13614,7 +13640,7 @@ public final class RedvoxApiM {
 
           public java.lang.String getMetadataOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             if (!map.containsKey(key)) {
@@ -13638,7 +13664,7 @@ public final class RedvoxApiM {
 
           public Builder removeMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableMetadata().getMutableMap()
                 .remove(key);
             return this;
@@ -13661,8 +13687,11 @@ public final class RedvoxApiM {
           public Builder putMetadata(
               java.lang.String key,
               java.lang.String value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
-            if (value == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
+            if (value == null) {
+  throw new NullPointerException("map value");
+}
+
             internalGetMutableMetadata().getMutableMap()
                 .put(key, value);
             return this;
@@ -14295,7 +14324,7 @@ public final class RedvoxApiM {
       @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetadata().getMap().containsKey(key);
       }
       /**
@@ -14330,7 +14359,7 @@ public final class RedvoxApiM {
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -14346,7 +14375,7 @@ public final class RedvoxApiM {
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         if (!map.containsKey(key)) {
@@ -14369,31 +14398,31 @@ public final class RedvoxApiM {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
         }
-        if (!getUuidBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uuid_);
         }
-        if (!getDescriptionBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
         }
-        if (!getAuthIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, authId_);
         }
-        if (!getMakeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(make_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 5, make_);
         }
-        if (!getModelBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 6, model_);
         }
         if (os_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.OsType.UNKNOWN_OS.getNumber()) {
           output.writeEnum(7, os_);
         }
-        if (!getOsVersionBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(osVersion_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 8, osVersion_);
         }
-        if (!getAppVersionBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(appVersion_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 9, appVersion_);
         }
         if (isPrivate_ != false) {
@@ -14423,32 +14452,32 @@ public final class RedvoxApiM {
         if (size != -1) return size;
 
         size = 0;
-        if (!getIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
         }
-        if (!getUuidBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uuid_);
         }
-        if (!getDescriptionBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
         }
-        if (!getAuthIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, authId_);
         }
-        if (!getMakeBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(make_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, make_);
         }
-        if (!getModelBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, model_);
         }
         if (os_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.StationInformation.OsType.UNKNOWN_OS.getNumber()) {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(7, os_);
         }
-        if (!getOsVersionBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(osVersion_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, osVersion_);
         }
-        if (!getAppVersionBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(appVersion_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, appVersion_);
         }
         if (isPrivate_ != false) {
@@ -16342,7 +16371,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -16377,7 +16406,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -16393,7 +16422,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -16417,7 +16446,7 @@ public final class RedvoxApiM {
 
         public Builder removeMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           internalGetMutableMetadata().getMutableMap()
               .remove(key);
           return this;
@@ -16440,8 +16469,11 @@ public final class RedvoxApiM {
         public Builder putMetadata(
             java.lang.String key,
             java.lang.String value) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          if (value == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) {
+  throw new NullPointerException("map value");
+}
+
           internalGetMutableMetadata().getMutableMap()
               .put(key, value);
           return this;
@@ -16729,9 +16761,11 @@ public final class RedvoxApiM {
        * <code>map&lt;string, string&gt; metadata = 13;</code>
        */
 
-      java.lang.String getMetadataOrDefault(
+      /* nullable */
+java.lang.String getMetadataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue);
+          /* nullable */
+java.lang.String defaultValue);
       /**
        * <pre>
        * A map from string to string for including untyped metadata
@@ -16887,6 +16921,8 @@ public final class RedvoxApiM {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -17125,9 +17161,11 @@ public final class RedvoxApiM {
          * <code>map&lt;string, string&gt; metadata = 8;</code>
          */
 
-        java.lang.String getMetadataOrDefault(
+        /* nullable */
+java.lang.String getMetadataOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue);
+            /* nullable */
+java.lang.String defaultValue);
         /**
          * <pre>
          * A map from string to string for including untyped metadata
@@ -17250,6 +17288,8 @@ public final class RedvoxApiM {
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -17413,7 +17453,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -17448,7 +17488,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -17464,7 +17504,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -17487,22 +17527,22 @@ public final class RedvoxApiM {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (a1_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(a1_) != 0) {
             output.writeDouble(1, a1_);
           }
-          if (a2_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(a2_) != 0) {
             output.writeDouble(2, a2_);
           }
-          if (a3_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(a3_) != 0) {
             output.writeDouble(3, a3_);
           }
-          if (b1_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(b1_) != 0) {
             output.writeDouble(4, b1_);
           }
-          if (b2_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(b2_) != 0) {
             output.writeDouble(5, b2_);
           }
-          if (b3_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(b3_) != 0) {
             output.writeDouble(6, b3_);
           }
           if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
@@ -17523,27 +17563,27 @@ public final class RedvoxApiM {
           if (size != -1) return size;
 
           size = 0;
-          if (a1_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(a1_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(1, a1_);
           }
-          if (a2_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(a2_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(2, a2_);
           }
-          if (a3_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(a3_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(3, a3_);
           }
-          if (b1_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(b1_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(4, b1_);
           }
-          if (b2_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(b2_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(5, b2_);
           }
-          if (b3_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(b3_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(6, b3_);
           }
@@ -18240,7 +18280,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetMetadata().getMap().containsKey(key);
           }
           /**
@@ -18275,7 +18315,7 @@ public final class RedvoxApiM {
           public java.lang.String getMetadataOrDefault(
               java.lang.String key,
               java.lang.String defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -18291,7 +18331,7 @@ public final class RedvoxApiM {
 
           public java.lang.String getMetadataOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             if (!map.containsKey(key)) {
@@ -18315,7 +18355,7 @@ public final class RedvoxApiM {
 
           public Builder removeMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableMetadata().getMutableMap()
                 .remove(key);
             return this;
@@ -18338,8 +18378,11 @@ public final class RedvoxApiM {
           public Builder putMetadata(
               java.lang.String key,
               java.lang.String value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
-            if (value == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
+            if (value == null) {
+  throw new NullPointerException("map value");
+}
+
             internalGetMutableMetadata().getMutableMap()
                 .put(key, value);
             return this;
@@ -18697,7 +18740,7 @@ public final class RedvoxApiM {
       @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetadata().getMap().containsKey(key);
       }
       /**
@@ -18732,7 +18775,7 @@ public final class RedvoxApiM {
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -18748,7 +18791,7 @@ public final class RedvoxApiM {
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         if (!map.containsKey(key)) {
@@ -18771,34 +18814,34 @@ public final class RedvoxApiM {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (packetStartOsTimestamp_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(packetStartOsTimestamp_) != 0) {
           output.writeDouble(1, packetStartOsTimestamp_);
         }
-        if (packetStartMachTimestamp_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(packetStartMachTimestamp_) != 0) {
           output.writeDouble(2, packetStartMachTimestamp_);
         }
-        if (packetEndOsTimestamp_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(packetEndOsTimestamp_) != 0) {
           output.writeDouble(3, packetEndOsTimestamp_);
         }
-        if (packetEndMachTimestamp_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(packetEndMachTimestamp_) != 0) {
           output.writeDouble(4, packetEndMachTimestamp_);
         }
-        if (serverAcquisitionArrivalTimestamp_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(serverAcquisitionArrivalTimestamp_) != 0) {
           output.writeDouble(5, serverAcquisitionArrivalTimestamp_);
         }
-        if (appStartMachTimestamp_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(appStartMachTimestamp_) != 0) {
           output.writeDouble(6, appStartMachTimestamp_);
         }
         for (int i = 0; i < synchExchanges_.size(); i++) {
           output.writeMessage(7, synchExchanges_.get(i));
         }
-        if (bestLatency_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(bestLatency_) != 0) {
           output.writeFloat(8, bestLatency_);
         }
-        if (bestOffset_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(bestOffset_) != 0) {
           output.writeFloat(9, bestOffset_);
         }
-        if (score_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(score_) != 0) {
           output.writeFloat(10, score_);
         }
         if (scoreMethod_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.TimingInformation.TimingScoreMethod.UNKNOWN.getNumber()) {
@@ -18822,27 +18865,27 @@ public final class RedvoxApiM {
         if (size != -1) return size;
 
         size = 0;
-        if (packetStartOsTimestamp_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(packetStartOsTimestamp_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(1, packetStartOsTimestamp_);
         }
-        if (packetStartMachTimestamp_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(packetStartMachTimestamp_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(2, packetStartMachTimestamp_);
         }
-        if (packetEndOsTimestamp_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(packetEndOsTimestamp_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(3, packetEndOsTimestamp_);
         }
-        if (packetEndMachTimestamp_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(packetEndMachTimestamp_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(4, packetEndMachTimestamp_);
         }
-        if (serverAcquisitionArrivalTimestamp_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(serverAcquisitionArrivalTimestamp_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(5, serverAcquisitionArrivalTimestamp_);
         }
-        if (appStartMachTimestamp_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(appStartMachTimestamp_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(6, appStartMachTimestamp_);
         }
@@ -18850,15 +18893,15 @@ public final class RedvoxApiM {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(7, synchExchanges_.get(i));
         }
-        if (bestLatency_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(bestLatency_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(8, bestLatency_);
         }
-        if (bestOffset_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(bestOffset_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(9, bestOffset_);
         }
-        if (score_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(score_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(10, score_);
         }
@@ -20240,7 +20283,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -20275,7 +20318,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -20291,7 +20334,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -20315,7 +20358,7 @@ public final class RedvoxApiM {
 
         public Builder removeMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           internalGetMutableMetadata().getMutableMap()
               .remove(key);
           return this;
@@ -20338,8 +20381,11 @@ public final class RedvoxApiM {
         public Builder putMetadata(
             java.lang.String key,
             java.lang.String value) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          if (value == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) {
+  throw new NullPointerException("map value");
+}
+
           internalGetMutableMetadata().getMutableMap()
               .put(key, value);
           return this;
@@ -20914,9 +20960,11 @@ public final class RedvoxApiM {
        * <code>map&lt;string, string&gt; metadata = 18;</code>
        */
 
-      java.lang.String getMetadataOrDefault(
+      /* nullable */
+java.lang.String getMetadataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue);
+          /* nullable */
+java.lang.String defaultValue);
       /**
        * <pre>
        * A map from string to string for including untyped metadata
@@ -21224,6 +21272,8 @@ public final class RedvoxApiM {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -21408,9 +21458,11 @@ public final class RedvoxApiM {
          * <code>map&lt;string, string&gt; metadata = 8;</code>
          */
 
-        java.lang.String getMetadataOrDefault(
+        /* nullable */
+java.lang.String getMetadataOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue);
+            /* nullable */
+java.lang.String defaultValue);
         /**
          * <pre>
          * A map from string to string for including untyped metadata
@@ -21544,6 +21596,8 @@ public final class RedvoxApiM {
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -21804,7 +21858,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -21839,7 +21893,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -21855,7 +21909,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -21878,22 +21932,22 @@ public final class RedvoxApiM {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getSensorDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sensorDescription_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sensorDescription_);
           }
-          if (firstSampleTimestamp_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(firstSampleTimestamp_) != 0) {
             output.writeDouble(2, firstSampleTimestamp_);
           }
-          if (sampleRate_ != 0F) {
+          if (java.lang.Float.floatToRawIntBits(sampleRate_) != 0) {
             output.writeFloat(3, sampleRate_);
           }
-          if (bitsOfPrecision_ != 0F) {
+          if (java.lang.Float.floatToRawIntBits(bitsOfPrecision_) != 0) {
             output.writeFloat(4, bitsOfPrecision_);
           }
           if (isScrambled_ != false) {
             output.writeBool(5, isScrambled_);
           }
-          if (!getEncodingBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encoding_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 6, encoding_);
           }
           if (samples_ != null) {
@@ -21914,18 +21968,18 @@ public final class RedvoxApiM {
           if (size != -1) return size;
 
           size = 0;
-          if (!getSensorDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sensorDescription_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sensorDescription_);
           }
-          if (firstSampleTimestamp_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(firstSampleTimestamp_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(2, firstSampleTimestamp_);
           }
-          if (sampleRate_ != 0F) {
+          if (java.lang.Float.floatToRawIntBits(sampleRate_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeFloatSize(3, sampleRate_);
           }
-          if (bitsOfPrecision_ != 0F) {
+          if (java.lang.Float.floatToRawIntBits(bitsOfPrecision_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeFloatSize(4, bitsOfPrecision_);
           }
@@ -21933,7 +21987,7 @@ public final class RedvoxApiM {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(5, isScrambled_);
           }
-          if (!getEncodingBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encoding_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, encoding_);
           }
           if (samples_ != null) {
@@ -22900,7 +22954,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetMetadata().getMap().containsKey(key);
           }
           /**
@@ -22935,7 +22989,7 @@ public final class RedvoxApiM {
           public java.lang.String getMetadataOrDefault(
               java.lang.String key,
               java.lang.String defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -22951,7 +23005,7 @@ public final class RedvoxApiM {
 
           public java.lang.String getMetadataOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             if (!map.containsKey(key)) {
@@ -22975,7 +23029,7 @@ public final class RedvoxApiM {
 
           public Builder removeMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableMetadata().getMutableMap()
                 .remove(key);
             return this;
@@ -22998,8 +23052,11 @@ public final class RedvoxApiM {
           public Builder putMetadata(
               java.lang.String key,
               java.lang.String value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
-            if (value == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
+            if (value == null) {
+  throw new NullPointerException("map value");
+}
+
             internalGetMutableMetadata().getMutableMap()
                 .put(key, value);
             return this;
@@ -23194,9 +23251,11 @@ public final class RedvoxApiM {
          * <code>map&lt;string, string&gt; metadata = 7;</code>
          */
 
-        java.lang.String getMetadataOrDefault(
+        /* nullable */
+java.lang.String getMetadataOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue);
+            /* nullable */
+java.lang.String defaultValue);
         /**
          * <pre>
          * A map from string to string for including untyped metadata
@@ -23313,6 +23372,8 @@ public final class RedvoxApiM {
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -23628,7 +23689,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -23663,7 +23724,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -23679,7 +23740,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -23702,13 +23763,13 @@ public final class RedvoxApiM {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getSensorDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sensorDescription_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sensorDescription_);
           }
-          if (firstSampleTimestamp_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(firstSampleTimestamp_) != 0) {
             output.writeDouble(2, firstSampleTimestamp_);
           }
-          if (sampleRate_ != 0F) {
+          if (java.lang.Float.floatToRawIntBits(sampleRate_) != 0) {
             output.writeFloat(3, sampleRate_);
           }
           if (isScrambled_ != false) {
@@ -23735,14 +23796,14 @@ public final class RedvoxApiM {
           if (size != -1) return size;
 
           size = 0;
-          if (!getSensorDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sensorDescription_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sensorDescription_);
           }
-          if (firstSampleTimestamp_ != 0D) {
+          if (java.lang.Double.doubleToRawLongBits(firstSampleTimestamp_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(2, firstSampleTimestamp_);
           }
-          if (sampleRate_ != 0F) {
+          if (java.lang.Float.floatToRawIntBits(sampleRate_) != 0) {
             size += com.google.protobuf.CodedOutputStream
               .computeFloatSize(3, sampleRate_);
           }
@@ -24512,7 +24573,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetMetadata().getMap().containsKey(key);
           }
           /**
@@ -24547,7 +24608,7 @@ public final class RedvoxApiM {
           public java.lang.String getMetadataOrDefault(
               java.lang.String key,
               java.lang.String defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -24563,7 +24624,7 @@ public final class RedvoxApiM {
 
           public java.lang.String getMetadataOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             if (!map.containsKey(key)) {
@@ -24587,7 +24648,7 @@ public final class RedvoxApiM {
 
           public Builder removeMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableMetadata().getMutableMap()
                 .remove(key);
             return this;
@@ -24610,8 +24671,11 @@ public final class RedvoxApiM {
           public Builder putMetadata(
               java.lang.String key,
               java.lang.String value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
-            if (value == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
+            if (value == null) {
+  throw new NullPointerException("map value");
+}
+
             internalGetMutableMetadata().getMutableMap()
                 .put(key, value);
             return this;
@@ -24801,9 +24865,11 @@ public final class RedvoxApiM {
          * <code>map&lt;string, string&gt; metadata = 4;</code>
          */
 
-        java.lang.String getMetadataOrDefault(
+        /* nullable */
+java.lang.String getMetadataOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue);
+            /* nullable */
+java.lang.String defaultValue);
         /**
          * <pre>
          * A map from string to string for including untyped metadata
@@ -24923,6 +24989,8 @@ public final class RedvoxApiM {
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -25115,7 +25183,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -25150,7 +25218,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -25166,7 +25234,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -25189,7 +25257,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getSensorDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sensorDescription_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sensorDescription_);
           }
           if (timestamps_ != null) {
@@ -25213,7 +25281,7 @@ public final class RedvoxApiM {
           if (size != -1) return size;
 
           size = 0;
-          if (!getSensorDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sensorDescription_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sensorDescription_);
           }
           if (timestamps_ != null) {
@@ -26036,7 +26104,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetMetadata().getMap().containsKey(key);
           }
           /**
@@ -26071,7 +26139,7 @@ public final class RedvoxApiM {
           public java.lang.String getMetadataOrDefault(
               java.lang.String key,
               java.lang.String defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -26087,7 +26155,7 @@ public final class RedvoxApiM {
 
           public java.lang.String getMetadataOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             if (!map.containsKey(key)) {
@@ -26111,7 +26179,7 @@ public final class RedvoxApiM {
 
           public Builder removeMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableMetadata().getMutableMap()
                 .remove(key);
             return this;
@@ -26134,8 +26202,11 @@ public final class RedvoxApiM {
           public Builder putMetadata(
               java.lang.String key,
               java.lang.String value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
-            if (value == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
+            if (value == null) {
+  throw new NullPointerException("map value");
+}
+
             internalGetMutableMetadata().getMutableMap()
                 .put(key, value);
             return this;
@@ -26689,9 +26760,11 @@ public final class RedvoxApiM {
          * <code>map&lt;string, string&gt; metadata = 19;</code>
          */
 
-        java.lang.String getMetadataOrDefault(
+        /* nullable */
+java.lang.String getMetadataOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue);
+            /* nullable */
+java.lang.String defaultValue);
         /**
          * <pre>
          * A map from string to string for including untyped metadata
@@ -26993,6 +27066,8 @@ public final class RedvoxApiM {
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -27602,9 +27677,11 @@ public final class RedvoxApiM {
            * <code>map&lt;string, string&gt; metadata = 25;</code>
            */
 
-          java.lang.String getMetadataOrDefault(
+          /* nullable */
+java.lang.String getMetadataOrDefault(
               java.lang.String key,
-              java.lang.String defaultValue);
+              /* nullable */
+java.lang.String defaultValue);
           /**
            * <pre>
            * A map from string to string for including untyped metadata
@@ -27858,6 +27935,8 @@ public final class RedvoxApiM {
               }
             } catch (com.google.protobuf.InvalidProtocolBufferException e) {
               throw e.setUnfinishedMessage(this);
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
             } catch (java.io.IOException e) {
               throw new com.google.protobuf.InvalidProtocolBufferException(
                   e).setUnfinishedMessage(this);
@@ -28077,9 +28156,11 @@ public final class RedvoxApiM {
              * <code>map&lt;string, string&gt; metadata = 4;</code>
              */
 
-            java.lang.String getMetadataOrDefault(
+            /* nullable */
+java.lang.String getMetadataOrDefault(
                 java.lang.String key,
-                java.lang.String defaultValue);
+                /* nullable */
+java.lang.String defaultValue);
             /**
              * <pre>
              * A map from string to string for including untyped metadata
@@ -28182,6 +28263,8 @@ public final class RedvoxApiM {
                 }
               } catch (com.google.protobuf.InvalidProtocolBufferException e) {
                 throw e.setUnfinishedMessage(this);
+              } catch (com.google.protobuf.UninitializedMessageException e) {
+                throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
               } catch (java.io.IOException e) {
                 throw new com.google.protobuf.InvalidProtocolBufferException(
                     e).setUnfinishedMessage(this);
@@ -28309,7 +28392,7 @@ public final class RedvoxApiM {
             @java.lang.Override
             public boolean containsMetadata(
                 java.lang.String key) {
-              if (key == null) { throw new java.lang.NullPointerException(); }
+              if (key == null) { throw new NullPointerException("map key"); }
               return internalGetMetadata().getMap().containsKey(key);
             }
             /**
@@ -28344,7 +28427,7 @@ public final class RedvoxApiM {
             public java.lang.String getMetadataOrDefault(
                 java.lang.String key,
                 java.lang.String defaultValue) {
-              if (key == null) { throw new java.lang.NullPointerException(); }
+              if (key == null) { throw new NullPointerException("map key"); }
               java.util.Map<java.lang.String, java.lang.String> map =
                   internalGetMetadata().getMap();
               return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -28360,7 +28443,7 @@ public final class RedvoxApiM {
 
             public java.lang.String getMetadataOrThrow(
                 java.lang.String key) {
-              if (key == null) { throw new java.lang.NullPointerException(); }
+              if (key == null) { throw new NullPointerException("map key"); }
               java.util.Map<java.lang.String, java.lang.String> map =
                   internalGetMetadata().getMap();
               if (!map.containsKey(key)) {
@@ -28386,10 +28469,10 @@ public final class RedvoxApiM {
               if (unit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
                 output.writeEnum(1, unit_);
               }
-              if (mach_ != 0D) {
+              if (java.lang.Double.doubleToRawLongBits(mach_) != 0) {
                 output.writeDouble(2, mach_);
               }
-              if (gps_ != 0D) {
+              if (java.lang.Double.doubleToRawLongBits(gps_) != 0) {
                 output.writeDouble(3, gps_);
               }
               com.google.protobuf.GeneratedMessageV3
@@ -28411,11 +28494,11 @@ public final class RedvoxApiM {
                 size += com.google.protobuf.CodedOutputStream
                   .computeEnumSize(1, unit_);
               }
-              if (mach_ != 0D) {
+              if (java.lang.Double.doubleToRawLongBits(mach_) != 0) {
                 size += com.google.protobuf.CodedOutputStream
                   .computeDoubleSize(2, mach_);
               }
-              if (gps_ != 0D) {
+              if (java.lang.Double.doubleToRawLongBits(gps_) != 0) {
                 size += com.google.protobuf.CodedOutputStream
                   .computeDoubleSize(3, gps_);
               }
@@ -28960,7 +29043,7 @@ public final class RedvoxApiM {
               @java.lang.Override
               public boolean containsMetadata(
                   java.lang.String key) {
-                if (key == null) { throw new java.lang.NullPointerException(); }
+                if (key == null) { throw new NullPointerException("map key"); }
                 return internalGetMetadata().getMap().containsKey(key);
               }
               /**
@@ -28995,7 +29078,7 @@ public final class RedvoxApiM {
               public java.lang.String getMetadataOrDefault(
                   java.lang.String key,
                   java.lang.String defaultValue) {
-                if (key == null) { throw new java.lang.NullPointerException(); }
+                if (key == null) { throw new NullPointerException("map key"); }
                 java.util.Map<java.lang.String, java.lang.String> map =
                     internalGetMetadata().getMap();
                 return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -29011,7 +29094,7 @@ public final class RedvoxApiM {
 
               public java.lang.String getMetadataOrThrow(
                   java.lang.String key) {
-                if (key == null) { throw new java.lang.NullPointerException(); }
+                if (key == null) { throw new NullPointerException("map key"); }
                 java.util.Map<java.lang.String, java.lang.String> map =
                     internalGetMetadata().getMap();
                 if (!map.containsKey(key)) {
@@ -29035,7 +29118,7 @@ public final class RedvoxApiM {
 
               public Builder removeMetadata(
                   java.lang.String key) {
-                if (key == null) { throw new java.lang.NullPointerException(); }
+                if (key == null) { throw new NullPointerException("map key"); }
                 internalGetMutableMetadata().getMutableMap()
                     .remove(key);
                 return this;
@@ -29058,8 +29141,11 @@ public final class RedvoxApiM {
               public Builder putMetadata(
                   java.lang.String key,
                   java.lang.String value) {
-                if (key == null) { throw new java.lang.NullPointerException(); }
-                if (value == null) { throw new java.lang.NullPointerException(); }
+                if (key == null) { throw new NullPointerException("map key"); }
+                if (value == null) {
+  throw new NullPointerException("map value");
+}
+
                 internalGetMutableMetadata().getMutableMap()
                     .put(key, value);
                 return this;
@@ -29732,7 +29818,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetMetadata().getMap().containsKey(key);
           }
           /**
@@ -29767,7 +29853,7 @@ public final class RedvoxApiM {
           public java.lang.String getMetadataOrDefault(
               java.lang.String key,
               java.lang.String defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -29783,7 +29869,7 @@ public final class RedvoxApiM {
 
           public java.lang.String getMetadataOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             if (!map.containsKey(key)) {
@@ -29842,34 +29928,34 @@ public final class RedvoxApiM {
             if (bearingAccuracyUnit_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Unit.UNKNOWN.getNumber()) {
               output.writeEnum(12, bearingAccuracyUnit_);
             }
-            if (latitude_ != 0D) {
+            if (java.lang.Double.doubleToRawLongBits(latitude_) != 0) {
               output.writeDouble(13, latitude_);
             }
-            if (longitude_ != 0D) {
+            if (java.lang.Double.doubleToRawLongBits(longitude_) != 0) {
               output.writeDouble(14, longitude_);
             }
-            if (altitude_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(altitude_) != 0) {
               output.writeFloat(15, altitude_);
             }
-            if (speed_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(speed_) != 0) {
               output.writeFloat(16, speed_);
             }
-            if (bearing_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(bearing_) != 0) {
               output.writeFloat(17, bearing_);
             }
-            if (verticalAccuracy_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(verticalAccuracy_) != 0) {
               output.writeFloat(18, verticalAccuracy_);
             }
-            if (horizontalAccuracy_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(horizontalAccuracy_) != 0) {
               output.writeFloat(19, horizontalAccuracy_);
             }
-            if (speedAccuracy_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(speedAccuracy_) != 0) {
               output.writeFloat(20, speedAccuracy_);
             }
-            if (bearingAccuracy_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(bearingAccuracy_) != 0) {
               output.writeFloat(21, bearingAccuracy_);
             }
-            if (score_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(score_) != 0) {
               output.writeFloat(22, score_);
             }
             if (method_ != io.redvox.apis.RedvoxApiM.RedvoxPacketM.Sensors.Location.BestLocation.LocationScoreMethod.UNKNOWN_METHOD.getNumber()) {
@@ -29941,43 +30027,43 @@ public final class RedvoxApiM {
               size += com.google.protobuf.CodedOutputStream
                 .computeEnumSize(12, bearingAccuracyUnit_);
             }
-            if (latitude_ != 0D) {
+            if (java.lang.Double.doubleToRawLongBits(latitude_) != 0) {
               size += com.google.protobuf.CodedOutputStream
                 .computeDoubleSize(13, latitude_);
             }
-            if (longitude_ != 0D) {
+            if (java.lang.Double.doubleToRawLongBits(longitude_) != 0) {
               size += com.google.protobuf.CodedOutputStream
                 .computeDoubleSize(14, longitude_);
             }
-            if (altitude_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(altitude_) != 0) {
               size += com.google.protobuf.CodedOutputStream
                 .computeFloatSize(15, altitude_);
             }
-            if (speed_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(speed_) != 0) {
               size += com.google.protobuf.CodedOutputStream
                 .computeFloatSize(16, speed_);
             }
-            if (bearing_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(bearing_) != 0) {
               size += com.google.protobuf.CodedOutputStream
                 .computeFloatSize(17, bearing_);
             }
-            if (verticalAccuracy_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(verticalAccuracy_) != 0) {
               size += com.google.protobuf.CodedOutputStream
                 .computeFloatSize(18, verticalAccuracy_);
             }
-            if (horizontalAccuracy_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(horizontalAccuracy_) != 0) {
               size += com.google.protobuf.CodedOutputStream
                 .computeFloatSize(19, horizontalAccuracy_);
             }
-            if (speedAccuracy_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(speedAccuracy_) != 0) {
               size += com.google.protobuf.CodedOutputStream
                 .computeFloatSize(20, speedAccuracy_);
             }
-            if (bearingAccuracy_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(bearingAccuracy_) != 0) {
               size += com.google.protobuf.CodedOutputStream
                 .computeFloatSize(21, bearingAccuracy_);
             }
-            if (score_ != 0F) {
+            if (java.lang.Float.floatToRawIntBits(score_) != 0) {
               size += com.google.protobuf.CodedOutputStream
                 .computeFloatSize(22, score_);
             }
@@ -32405,7 +32491,7 @@ public final class RedvoxApiM {
             @java.lang.Override
             public boolean containsMetadata(
                 java.lang.String key) {
-              if (key == null) { throw new java.lang.NullPointerException(); }
+              if (key == null) { throw new NullPointerException("map key"); }
               return internalGetMetadata().getMap().containsKey(key);
             }
             /**
@@ -32440,7 +32526,7 @@ public final class RedvoxApiM {
             public java.lang.String getMetadataOrDefault(
                 java.lang.String key,
                 java.lang.String defaultValue) {
-              if (key == null) { throw new java.lang.NullPointerException(); }
+              if (key == null) { throw new NullPointerException("map key"); }
               java.util.Map<java.lang.String, java.lang.String> map =
                   internalGetMetadata().getMap();
               return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -32456,7 +32542,7 @@ public final class RedvoxApiM {
 
             public java.lang.String getMetadataOrThrow(
                 java.lang.String key) {
-              if (key == null) { throw new java.lang.NullPointerException(); }
+              if (key == null) { throw new NullPointerException("map key"); }
               java.util.Map<java.lang.String, java.lang.String> map =
                   internalGetMetadata().getMap();
               if (!map.containsKey(key)) {
@@ -32480,7 +32566,7 @@ public final class RedvoxApiM {
 
             public Builder removeMetadata(
                 java.lang.String key) {
-              if (key == null) { throw new java.lang.NullPointerException(); }
+              if (key == null) { throw new NullPointerException("map key"); }
               internalGetMutableMetadata().getMutableMap()
                   .remove(key);
               return this;
@@ -32503,8 +32589,11 @@ public final class RedvoxApiM {
             public Builder putMetadata(
                 java.lang.String key,
                 java.lang.String value) {
-              if (key == null) { throw new java.lang.NullPointerException(); }
-              if (value == null) { throw new java.lang.NullPointerException(); }
+              if (key == null) { throw new NullPointerException("map key"); }
+              if (value == null) {
+  throw new NullPointerException("map value");
+}
+
               internalGetMutableMetadata().getMutableMap()
                   .put(key, value);
               return this;
@@ -33264,7 +33353,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -33299,7 +33388,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -33315,7 +33404,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -33339,7 +33428,7 @@ public final class RedvoxApiM {
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
           getSerializedSize();
-          if (!getSensorDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sensorDescription_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sensorDescription_);
           }
           if (timestamps_ != null) {
@@ -33412,7 +33501,7 @@ public final class RedvoxApiM {
           if (size != -1) return size;
 
           size = 0;
-          if (!getSensorDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sensorDescription_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sensorDescription_);
           }
           if (timestamps_ != null) {
@@ -36515,8 +36604,8 @@ public final class RedvoxApiM {
            * </pre>
            *
            * <code>repeated .redvox_api_m.RedvoxPacketM.Sensors.Location.LocationProvider location_providers = 18;</code>
-           * @param index The index of the value to return.
-           * @return The enum numeric value on the wire of locationProviders at the given index.
+           * @param index The index to set the value at.
+           * @param value The enum numeric value on the wire for locationProviders to set.
            * @return This builder for chaining.
            */
           public Builder setLocationProvidersValue(
@@ -36597,7 +36686,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetMetadata().getMap().containsKey(key);
           }
           /**
@@ -36632,7 +36721,7 @@ public final class RedvoxApiM {
           public java.lang.String getMetadataOrDefault(
               java.lang.String key,
               java.lang.String defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -36648,7 +36737,7 @@ public final class RedvoxApiM {
 
           public java.lang.String getMetadataOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             if (!map.containsKey(key)) {
@@ -36672,7 +36761,7 @@ public final class RedvoxApiM {
 
           public Builder removeMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableMetadata().getMutableMap()
                 .remove(key);
             return this;
@@ -36695,8 +36784,11 @@ public final class RedvoxApiM {
           public Builder putMetadata(
               java.lang.String key,
               java.lang.String value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
-            if (value == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
+            if (value == null) {
+  throw new NullPointerException("map value");
+}
+
             internalGetMutableMetadata().getMutableMap()
                 .put(key, value);
             return this;
@@ -36940,9 +37032,11 @@ public final class RedvoxApiM {
          * <code>map&lt;string, string&gt; metadata = 6;</code>
          */
 
-        java.lang.String getMetadataOrDefault(
+        /* nullable */
+java.lang.String getMetadataOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue);
+            /* nullable */
+java.lang.String defaultValue);
         /**
          * <pre>
          * A map from string to string for including untyped metadata
@@ -37088,6 +37182,8 @@ public final class RedvoxApiM {
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -37356,7 +37452,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -37391,7 +37487,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -37407,7 +37503,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -37430,7 +37526,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getSensorDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sensorDescription_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sensorDescription_);
           }
           if (timestamps_ != null) {
@@ -37460,7 +37556,7 @@ public final class RedvoxApiM {
           if (size != -1) return size;
 
           size = 0;
-          if (!getSensorDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sensorDescription_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sensorDescription_);
           }
           if (timestamps_ != null) {
@@ -38647,7 +38743,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetMetadata().getMap().containsKey(key);
           }
           /**
@@ -38682,7 +38778,7 @@ public final class RedvoxApiM {
           public java.lang.String getMetadataOrDefault(
               java.lang.String key,
               java.lang.String defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -38698,7 +38794,7 @@ public final class RedvoxApiM {
 
           public java.lang.String getMetadataOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             if (!map.containsKey(key)) {
@@ -38722,7 +38818,7 @@ public final class RedvoxApiM {
 
           public Builder removeMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableMetadata().getMutableMap()
                 .remove(key);
             return this;
@@ -38745,8 +38841,11 @@ public final class RedvoxApiM {
           public Builder putMetadata(
               java.lang.String key,
               java.lang.String value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
-            if (value == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
+            if (value == null) {
+  throw new NullPointerException("map value");
+}
+
             internalGetMutableMetadata().getMutableMap()
                 .put(key, value);
             return this;
@@ -38957,9 +39056,11 @@ public final class RedvoxApiM {
          * <code>map&lt;string, string&gt; metadata = 5;</code>
          */
 
-        java.lang.String getMetadataOrDefault(
+        /* nullable */
+java.lang.String getMetadataOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue);
+            /* nullable */
+java.lang.String defaultValue);
         /**
          * <pre>
          * A map from string to string for including untyped metadata
@@ -39082,6 +39183,8 @@ public final class RedvoxApiM {
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -39435,7 +39538,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -39470,7 +39573,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -39486,7 +39589,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -39509,7 +39612,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getSensorDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sensorDescription_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sensorDescription_);
           }
           if (timestamps_ != null) {
@@ -39536,7 +39639,7 @@ public final class RedvoxApiM {
           if (size != -1) return size;
 
           size = 0;
-          if (!getSensorDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sensorDescription_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sensorDescription_);
           }
           if (timestamps_ != null) {
@@ -40409,7 +40512,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetMetadata().getMap().containsKey(key);
           }
           /**
@@ -40444,7 +40547,7 @@ public final class RedvoxApiM {
           public java.lang.String getMetadataOrDefault(
               java.lang.String key,
               java.lang.String defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -40460,7 +40563,7 @@ public final class RedvoxApiM {
 
           public java.lang.String getMetadataOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             if (!map.containsKey(key)) {
@@ -40484,7 +40587,7 @@ public final class RedvoxApiM {
 
           public Builder removeMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableMetadata().getMutableMap()
                 .remove(key);
             return this;
@@ -40507,8 +40610,11 @@ public final class RedvoxApiM {
           public Builder putMetadata(
               java.lang.String key,
               java.lang.String value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
-            if (value == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
+            if (value == null) {
+  throw new NullPointerException("map value");
+}
+
             internalGetMutableMetadata().getMutableMap()
                 .put(key, value);
             return this;
@@ -41263,7 +41369,7 @@ public final class RedvoxApiM {
       @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetadata().getMap().containsKey(key);
       }
       /**
@@ -41298,7 +41404,7 @@ public final class RedvoxApiM {
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -41314,7 +41420,7 @@ public final class RedvoxApiM {
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         if (!map.containsKey(key)) {
@@ -44846,7 +44952,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -44881,7 +44987,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -44897,7 +45003,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -44921,7 +45027,7 @@ public final class RedvoxApiM {
 
         public Builder removeMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           internalGetMutableMetadata().getMutableMap()
               .remove(key);
           return this;
@@ -44944,8 +45050,11 @@ public final class RedvoxApiM {
         public Builder putMetadata(
             java.lang.String key,
             java.lang.String value) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          if (value == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) {
+  throw new NullPointerException("map value");
+}
+
           internalGetMutableMetadata().getMutableMap()
               .put(key, value);
           return this;
@@ -45152,9 +45261,11 @@ public final class RedvoxApiM {
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
-      java.lang.String getMetadataOrDefault(
+      /* nullable */
+java.lang.String getMetadataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue);
+          /* nullable */
+java.lang.String defaultValue);
       /**
        * <pre>
        * A map from string to string for including untyped metadata
@@ -45270,6 +45381,8 @@ public final class RedvoxApiM {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -45370,9 +45483,11 @@ public final class RedvoxApiM {
          * <code>map&lt;string, string&gt; string_payload = 2;</code>
          */
 
-        java.lang.String getStringPayloadOrDefault(
+        /* nullable */
+java.lang.String getStringPayloadOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue);
+            /* nullable */
+java.lang.String defaultValue);
         /**
          * <pre>
          * Key-pairs of type string to string
@@ -45536,9 +45651,11 @@ public final class RedvoxApiM {
          * <code>map&lt;string, bytes&gt; byte_payload = 5;</code>
          */
 
-        com.google.protobuf.ByteString getBytePayloadOrDefault(
+        /* nullable */
+com.google.protobuf.ByteString getBytePayloadOrDefault(
             java.lang.String key,
-            com.google.protobuf.ByteString defaultValue);
+            /* nullable */
+com.google.protobuf.ByteString defaultValue);
         /**
          * <pre>
          * Key-pairs of type string to bytes.
@@ -45591,9 +45708,11 @@ public final class RedvoxApiM {
          * <code>map&lt;string, string&gt; metadata = 6;</code>
          */
 
-        java.lang.String getMetadataOrDefault(
+        /* nullable */
+java.lang.String getMetadataOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue);
+            /* nullable */
+java.lang.String defaultValue);
         /**
          * <pre>
          * A map from string to string for including untyped metadata
@@ -45734,6 +45853,8 @@ public final class RedvoxApiM {
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -45858,7 +45979,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsStringPayload(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetStringPayload().getMap().containsKey(key);
         }
         /**
@@ -45893,7 +46014,7 @@ public final class RedvoxApiM {
         public java.lang.String getStringPayloadOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetStringPayload().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -45909,7 +46030,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getStringPayloadOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetStringPayload().getMap();
           if (!map.containsKey(key)) {
@@ -45955,7 +46076,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsNumericPayload(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetNumericPayload().getMap().containsKey(key);
         }
         /**
@@ -45990,7 +46111,7 @@ public final class RedvoxApiM {
         public double getNumericPayloadOrDefault(
             java.lang.String key,
             double defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.Double> map =
               internalGetNumericPayload().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -46006,7 +46127,7 @@ public final class RedvoxApiM {
 
         public double getNumericPayloadOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.Double> map =
               internalGetNumericPayload().getMap();
           if (!map.containsKey(key)) {
@@ -46052,7 +46173,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsBooleanPayload(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetBooleanPayload().getMap().containsKey(key);
         }
         /**
@@ -46087,7 +46208,7 @@ public final class RedvoxApiM {
         public boolean getBooleanPayloadOrDefault(
             java.lang.String key,
             boolean defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.Boolean> map =
               internalGetBooleanPayload().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -46103,7 +46224,7 @@ public final class RedvoxApiM {
 
         public boolean getBooleanPayloadOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.Boolean> map =
               internalGetBooleanPayload().getMap();
           if (!map.containsKey(key)) {
@@ -46150,7 +46271,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsBytePayload(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetBytePayload().getMap().containsKey(key);
         }
         /**
@@ -46187,7 +46308,7 @@ public final class RedvoxApiM {
         public com.google.protobuf.ByteString getBytePayloadOrDefault(
             java.lang.String key,
             com.google.protobuf.ByteString defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
               internalGetBytePayload().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -46204,7 +46325,7 @@ public final class RedvoxApiM {
 
         public com.google.protobuf.ByteString getBytePayloadOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
               internalGetBytePayload().getMap();
           if (!map.containsKey(key)) {
@@ -46250,7 +46371,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -46285,7 +46406,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -46301,7 +46422,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -46324,7 +46445,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
           }
           com.google.protobuf.GeneratedMessageV3
@@ -46366,7 +46487,7 @@ public final class RedvoxApiM {
           if (size != -1) return size;
 
           size = 0;
-          if (!getDescriptionBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
           }
           for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -46920,7 +47041,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsStringPayload(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetStringPayload().getMap().containsKey(key);
           }
           /**
@@ -46955,7 +47076,7 @@ public final class RedvoxApiM {
           public java.lang.String getStringPayloadOrDefault(
               java.lang.String key,
               java.lang.String defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetStringPayload().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -46971,7 +47092,7 @@ public final class RedvoxApiM {
 
           public java.lang.String getStringPayloadOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetStringPayload().getMap();
             if (!map.containsKey(key)) {
@@ -46995,7 +47116,7 @@ public final class RedvoxApiM {
 
           public Builder removeStringPayload(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableStringPayload().getMutableMap()
                 .remove(key);
             return this;
@@ -47018,8 +47139,11 @@ public final class RedvoxApiM {
           public Builder putStringPayload(
               java.lang.String key,
               java.lang.String value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
-            if (value == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
+            if (value == null) {
+  throw new NullPointerException("map value");
+}
+
             internalGetMutableStringPayload().getMutableMap()
                 .put(key, value);
             return this;
@@ -47076,7 +47200,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsNumericPayload(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetNumericPayload().getMap().containsKey(key);
           }
           /**
@@ -47111,7 +47235,7 @@ public final class RedvoxApiM {
           public double getNumericPayloadOrDefault(
               java.lang.String key,
               double defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.Double> map =
                 internalGetNumericPayload().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -47127,7 +47251,7 @@ public final class RedvoxApiM {
 
           public double getNumericPayloadOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.Double> map =
                 internalGetNumericPayload().getMap();
             if (!map.containsKey(key)) {
@@ -47151,7 +47275,7 @@ public final class RedvoxApiM {
 
           public Builder removeNumericPayload(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableNumericPayload().getMutableMap()
                 .remove(key);
             return this;
@@ -47174,7 +47298,7 @@ public final class RedvoxApiM {
           public Builder putNumericPayload(
               java.lang.String key,
               double value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             
             internalGetMutableNumericPayload().getMutableMap()
                 .put(key, value);
@@ -47232,7 +47356,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsBooleanPayload(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetBooleanPayload().getMap().containsKey(key);
           }
           /**
@@ -47267,7 +47391,7 @@ public final class RedvoxApiM {
           public boolean getBooleanPayloadOrDefault(
               java.lang.String key,
               boolean defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.Boolean> map =
                 internalGetBooleanPayload().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -47283,7 +47407,7 @@ public final class RedvoxApiM {
 
           public boolean getBooleanPayloadOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.Boolean> map =
                 internalGetBooleanPayload().getMap();
             if (!map.containsKey(key)) {
@@ -47307,7 +47431,7 @@ public final class RedvoxApiM {
 
           public Builder removeBooleanPayload(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableBooleanPayload().getMutableMap()
                 .remove(key);
             return this;
@@ -47330,7 +47454,7 @@ public final class RedvoxApiM {
           public Builder putBooleanPayload(
               java.lang.String key,
               boolean value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             
             internalGetMutableBooleanPayload().getMutableMap()
                 .put(key, value);
@@ -47389,7 +47513,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsBytePayload(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetBytePayload().getMap().containsKey(key);
           }
           /**
@@ -47426,7 +47550,7 @@ public final class RedvoxApiM {
           public com.google.protobuf.ByteString getBytePayloadOrDefault(
               java.lang.String key,
               com.google.protobuf.ByteString defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
                 internalGetBytePayload().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -47443,7 +47567,7 @@ public final class RedvoxApiM {
 
           public com.google.protobuf.ByteString getBytePayloadOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
                 internalGetBytePayload().getMap();
             if (!map.containsKey(key)) {
@@ -47468,7 +47592,7 @@ public final class RedvoxApiM {
 
           public Builder removeBytePayload(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableBytePayload().getMutableMap()
                 .remove(key);
             return this;
@@ -47492,8 +47616,11 @@ public final class RedvoxApiM {
           public Builder putBytePayload(
               java.lang.String key,
               com.google.protobuf.ByteString value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
-            if (value == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
+            if (value == null) {
+  throw new NullPointerException("map value");
+}
+
             internalGetMutableBytePayload().getMutableMap()
                 .put(key, value);
             return this;
@@ -47551,7 +47678,7 @@ public final class RedvoxApiM {
           @java.lang.Override
           public boolean containsMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             return internalGetMetadata().getMap().containsKey(key);
           }
           /**
@@ -47586,7 +47713,7 @@ public final class RedvoxApiM {
           public java.lang.String getMetadataOrDefault(
               java.lang.String key,
               java.lang.String defaultValue) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -47602,7 +47729,7 @@ public final class RedvoxApiM {
 
           public java.lang.String getMetadataOrThrow(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetMetadata().getMap();
             if (!map.containsKey(key)) {
@@ -47626,7 +47753,7 @@ public final class RedvoxApiM {
 
           public Builder removeMetadata(
               java.lang.String key) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
             internalGetMutableMetadata().getMutableMap()
                 .remove(key);
             return this;
@@ -47649,8 +47776,11 @@ public final class RedvoxApiM {
           public Builder putMetadata(
               java.lang.String key,
               java.lang.String value) {
-            if (key == null) { throw new java.lang.NullPointerException(); }
-            if (value == null) { throw new java.lang.NullPointerException(); }
+            if (key == null) { throw new NullPointerException("map key"); }
+            if (value == null) {
+  throw new NullPointerException("map value");
+}
+
             internalGetMutableMetadata().getMutableMap()
                 .put(key, value);
             return this;
@@ -47903,7 +48033,7 @@ public final class RedvoxApiM {
       @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetadata().getMap().containsKey(key);
       }
       /**
@@ -47938,7 +48068,7 @@ public final class RedvoxApiM {
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -47954,7 +48084,7 @@ public final class RedvoxApiM {
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         if (!map.containsKey(key)) {
@@ -47977,7 +48107,7 @@ public final class RedvoxApiM {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
         }
         if (timestamps_ != null) {
@@ -48001,7 +48131,7 @@ public final class RedvoxApiM {
         if (size != -1) return size;
 
         size = 0;
-        if (!getNameBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
         }
         if (timestamps_ != null) {
@@ -49005,7 +49135,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -49040,7 +49170,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -49056,7 +49186,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -49080,7 +49210,7 @@ public final class RedvoxApiM {
 
         public Builder removeMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           internalGetMutableMetadata().getMutableMap()
               .remove(key);
           return this;
@@ -49103,8 +49233,11 @@ public final class RedvoxApiM {
         public Builder putMetadata(
             java.lang.String key,
             java.lang.String value) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          if (value == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) {
+  throw new NullPointerException("map value");
+}
+
           internalGetMutableMetadata().getMutableMap()
               .put(key, value);
           return this;
@@ -49295,9 +49428,11 @@ public final class RedvoxApiM {
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
-      java.lang.String getMetadataOrDefault(
+      /* nullable */
+java.lang.String getMetadataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue);
+          /* nullable */
+java.lang.String defaultValue);
       /**
        * <pre>
        * A map from string to string for including untyped metadata
@@ -49426,6 +49561,8 @@ public final class RedvoxApiM {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -49604,7 +49741,7 @@ public final class RedvoxApiM {
       @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetadata().getMap().containsKey(key);
       }
       /**
@@ -49639,7 +49776,7 @@ public final class RedvoxApiM {
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -49655,7 +49792,7 @@ public final class RedvoxApiM {
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         if (!map.containsKey(key)) {
@@ -50466,7 +50603,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -50501,7 +50638,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -50517,7 +50654,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -50541,7 +50678,7 @@ public final class RedvoxApiM {
 
         public Builder removeMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           internalGetMutableMetadata().getMutableMap()
               .remove(key);
           return this;
@@ -50564,8 +50701,11 @@ public final class RedvoxApiM {
         public Builder putMetadata(
             java.lang.String key,
             java.lang.String value) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          if (value == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) {
+  throw new NullPointerException("map value");
+}
+
           internalGetMutableMetadata().getMutableMap()
               .put(key, value);
           return this;
@@ -50756,9 +50896,11 @@ public final class RedvoxApiM {
        * <code>map&lt;string, string&gt; metadata = 4;</code>
        */
 
-      java.lang.String getMetadataOrDefault(
+      /* nullable */
+java.lang.String getMetadataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue);
+          /* nullable */
+java.lang.String defaultValue);
       /**
        * <pre>
        * A map from string to string for including untyped metadata
@@ -50886,6 +51028,8 @@ public final class RedvoxApiM {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -51064,7 +51208,7 @@ public final class RedvoxApiM {
       @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetadata().getMap().containsKey(key);
       }
       /**
@@ -51099,7 +51243,7 @@ public final class RedvoxApiM {
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -51115,7 +51259,7 @@ public final class RedvoxApiM {
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         if (!map.containsKey(key)) {
@@ -51925,7 +52069,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -51960,7 +52104,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -51976,7 +52120,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -52000,7 +52144,7 @@ public final class RedvoxApiM {
 
         public Builder removeMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           internalGetMutableMetadata().getMutableMap()
               .remove(key);
           return this;
@@ -52023,8 +52167,11 @@ public final class RedvoxApiM {
         public Builder putMetadata(
             java.lang.String key,
             java.lang.String value) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          if (value == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) {
+  throw new NullPointerException("map value");
+}
+
           internalGetMutableMetadata().getMutableMap()
               .put(key, value);
           return this;
@@ -52235,9 +52382,11 @@ public final class RedvoxApiM {
        * <code>map&lt;string, string&gt; metadata = 6;</code>
        */
 
-      java.lang.String getMetadataOrDefault(
+      /* nullable */
+java.lang.String getMetadataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue);
+          /* nullable */
+java.lang.String defaultValue);
       /**
        * <pre>
        * A map from string to string for including untyped metadata
@@ -52376,6 +52525,8 @@ public final class RedvoxApiM {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -52584,7 +52735,7 @@ public final class RedvoxApiM {
       @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetadata().getMap().containsKey(key);
       }
       /**
@@ -52619,7 +52770,7 @@ public final class RedvoxApiM {
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -52635,7 +52786,7 @@ public final class RedvoxApiM {
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         if (!map.containsKey(key)) {
@@ -52672,10 +52823,10 @@ public final class RedvoxApiM {
         if (timestampStatistics_ != null) {
           output.writeMessage(3, getTimestampStatistics());
         }
-        if (meanSampleRate_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(meanSampleRate_) != 0) {
           output.writeFloat(4, meanSampleRate_);
         }
-        if (stdevSampleRate_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(stdevSampleRate_) != 0) {
           output.writeFloat(5, stdevSampleRate_);
         }
         com.google.protobuf.GeneratedMessageV3
@@ -52712,11 +52863,11 @@ public final class RedvoxApiM {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getTimestampStatistics());
         }
-        if (meanSampleRate_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(meanSampleRate_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(4, meanSampleRate_);
         }
-        if (stdevSampleRate_ != 0F) {
+        if (java.lang.Float.floatToRawIntBits(stdevSampleRate_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(5, stdevSampleRate_);
         }
@@ -53570,7 +53721,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -53605,7 +53756,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -53621,7 +53772,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -53645,7 +53796,7 @@ public final class RedvoxApiM {
 
         public Builder removeMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           internalGetMutableMetadata().getMutableMap()
               .remove(key);
           return this;
@@ -53668,8 +53819,11 @@ public final class RedvoxApiM {
         public Builder putMetadata(
             java.lang.String key,
             java.lang.String value) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          if (value == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) {
+  throw new NullPointerException("map value");
+}
+
           internalGetMutableMetadata().getMutableMap()
               .put(key, value);
           return this;
@@ -53845,9 +53999,11 @@ public final class RedvoxApiM {
        * <code>map&lt;string, string&gt; metadata = 7;</code>
        */
 
-      java.lang.String getMetadataOrDefault(
+      /* nullable */
+java.lang.String getMetadataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue);
+          /* nullable */
+java.lang.String defaultValue);
       /**
        * <pre>
        * A map from string to string for including untyped metadata
@@ -53963,6 +54119,8 @@ public final class RedvoxApiM {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -54123,7 +54281,7 @@ public final class RedvoxApiM {
       @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetadata().getMap().containsKey(key);
       }
       /**
@@ -54158,7 +54316,7 @@ public final class RedvoxApiM {
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -54174,7 +54332,7 @@ public final class RedvoxApiM {
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         if (!map.containsKey(key)) {
@@ -54197,22 +54355,22 @@ public final class RedvoxApiM {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (count_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(count_) != 0) {
           output.writeDouble(1, count_);
         }
-        if (mean_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(mean_) != 0) {
           output.writeDouble(2, mean_);
         }
-        if (standardDeviation_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(standardDeviation_) != 0) {
           output.writeDouble(3, standardDeviation_);
         }
-        if (min_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(min_) != 0) {
           output.writeDouble(4, min_);
         }
-        if (max_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(max_) != 0) {
           output.writeDouble(5, max_);
         }
-        if (range_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(range_) != 0) {
           output.writeDouble(6, range_);
         }
         com.google.protobuf.GeneratedMessageV3
@@ -54230,27 +54388,27 @@ public final class RedvoxApiM {
         if (size != -1) return size;
 
         size = 0;
-        if (count_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(count_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(1, count_);
         }
-        if (mean_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(mean_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(2, mean_);
         }
-        if (standardDeviation_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(standardDeviation_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(3, standardDeviation_);
         }
-        if (min_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(min_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(4, min_);
         }
-        if (max_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(max_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(5, max_);
         }
-        if (range_ != 0D) {
+        if (java.lang.Double.doubleToRawLongBits(range_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(6, range_);
         }
@@ -54932,7 +55090,7 @@ public final class RedvoxApiM {
         @java.lang.Override
         public boolean containsMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           return internalGetMetadata().getMap().containsKey(key);
         }
         /**
@@ -54967,7 +55125,7 @@ public final class RedvoxApiM {
         public java.lang.String getMetadataOrDefault(
             java.lang.String key,
             java.lang.String defaultValue) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -54983,7 +55141,7 @@ public final class RedvoxApiM {
 
         public java.lang.String getMetadataOrThrow(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetMetadata().getMap();
           if (!map.containsKey(key)) {
@@ -55007,7 +55165,7 @@ public final class RedvoxApiM {
 
         public Builder removeMetadata(
             java.lang.String key) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
           internalGetMutableMetadata().getMutableMap()
               .remove(key);
           return this;
@@ -55030,8 +55188,11 @@ public final class RedvoxApiM {
         public Builder putMetadata(
             java.lang.String key,
             java.lang.String value) {
-          if (key == null) { throw new java.lang.NullPointerException(); }
-          if (value == null) { throw new java.lang.NullPointerException(); }
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) {
+  throw new NullPointerException("map value");
+}
+
           internalGetMutableMetadata().getMutableMap()
               .put(key, value);
           return this;
@@ -55344,7 +55505,7 @@ public final class RedvoxApiM {
     @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetMetadata().getMap().containsKey(key);
     }
     /**
@@ -55379,7 +55540,7 @@ public final class RedvoxApiM {
     public java.lang.String getMetadataOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetadata().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -55395,7 +55556,7 @@ public final class RedvoxApiM {
 
     public java.lang.String getMetadataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetadata().getMap();
       if (!map.containsKey(key)) {
@@ -55418,10 +55579,10 @@ public final class RedvoxApiM {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (api_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(api_) != 0) {
         output.writeFloat(1, api_);
       }
-      if (subApi_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(subApi_) != 0) {
         output.writeFloat(2, subApi_);
       }
       if (stationInformation_ != null) {
@@ -55451,11 +55612,11 @@ public final class RedvoxApiM {
       if (size != -1) return size;
 
       size = 0;
-      if (api_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(api_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(1, api_);
       }
-      if (subApi_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(subApi_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(2, subApi_);
       }
@@ -56827,7 +56988,7 @@ public final class RedvoxApiM {
       @java.lang.Override
       public boolean containsMetadata(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetadata().getMap().containsKey(key);
       }
       /**
@@ -56862,7 +57023,7 @@ public final class RedvoxApiM {
       public java.lang.String getMetadataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -56878,7 +57039,7 @@ public final class RedvoxApiM {
 
       public java.lang.String getMetadataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetadata().getMap();
         if (!map.containsKey(key)) {
@@ -56902,7 +57063,7 @@ public final class RedvoxApiM {
 
       public Builder removeMetadata(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableMetadata().getMutableMap()
             .remove(key);
         return this;
@@ -56925,8 +57086,11 @@ public final class RedvoxApiM {
       public Builder putMetadata(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableMetadata().getMutableMap()
             .put(key, value);
         return this;
@@ -57099,6 +57263,8 @@ public final class RedvoxApiM {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -57315,6 +57481,8 @@ public final class RedvoxApiM {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -57580,19 +57748,19 @@ public final class RedvoxApiM {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getStationIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stationId_);
         }
-        if (!getStationUuidBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationUuid_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stationUuid_);
         }
-        if (!getAuthTokenBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authToken_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, authToken_);
         }
-        if (!getFirebaseTokenBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firebaseToken_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, firebaseToken_);
         }
-        if (!getAuthEmailBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authEmail_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 5, authEmail_);
         }
         unknownFields.writeTo(output);
@@ -57604,19 +57772,19 @@ public final class RedvoxApiM {
         if (size != -1) return size;
 
         size = 0;
-        if (!getStationIdBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stationId_);
         }
-        if (!getStationUuidBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationUuid_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stationUuid_);
         }
-        if (!getAuthTokenBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authToken_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, authToken_);
         }
-        if (!getFirebaseTokenBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firebaseToken_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, firebaseToken_);
         }
-        if (!getAuthEmailBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authEmail_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, authEmail_);
         }
         size += unknownFields.getSerializedSize();
@@ -59150,6 +59318,8 @@ public final class RedvoxApiM {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -59337,10 +59507,10 @@ public final class RedvoxApiM {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAuthTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authToken_);
       }
-      if (!getFirebaseTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firebaseToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, firebaseToken_);
       }
       if (checksum_ != 0L) {
@@ -59364,10 +59534,10 @@ public final class RedvoxApiM {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAuthTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authToken_);
       }
-      if (!getFirebaseTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firebaseToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, firebaseToken_);
       }
       if (checksum_ != 0L) {
@@ -60300,6 +60470,8 @@ public final class RedvoxApiM {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -60635,7 +60807,7 @@ public final class RedvoxApiM {
       if (checksum_ != 0L) {
         output.writeInt64(2, checksum_);
       }
-      if (!getDetailsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(details_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, details_);
       }
       if (resend_ != false) {
@@ -60661,7 +60833,7 @@ public final class RedvoxApiM {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, checksum_);
       }
-      if (!getDetailsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(details_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, details_);
       }
       if (resend_ != false) {
@@ -61493,6 +61665,8 @@ public final class RedvoxApiM {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -61650,10 +61824,10 @@ public final class RedvoxApiM {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getStationIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stationId_);
       }
-      if (!getStationUuidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationUuid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stationUuid_);
       }
       if (seqId_ != 0) {
@@ -61671,10 +61845,10 @@ public final class RedvoxApiM {
       if (size != -1) return size;
 
       size = 0;
-      if (!getStationIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stationId_);
       }
-      if (!getStationUuidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationUuid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stationUuid_);
       }
       if (seqId_ != 0) {
@@ -62497,6 +62671,8 @@ public final class RedvoxApiM {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -62684,10 +62860,10 @@ public final class RedvoxApiM {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getStationIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stationId_);
       }
-      if (!getStationUuidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationUuid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stationUuid_);
       }
       if (seqId_ != 0) {
@@ -62711,10 +62887,10 @@ public final class RedvoxApiM {
       if (size != -1) return size;
 
       size = 0;
-      if (!getStationIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stationId_);
       }
-      if (!getStationUuidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationUuid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stationUuid_);
       }
       if (seqId_ != 0) {
