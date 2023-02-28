@@ -7,6 +7,7 @@
 syntax = "proto3";
 package redvox_api_m;
 option java_package = "io.redvox.apis";
+option go_package = "redvox.io/redvoxpb";
 message RedvoxPacketM {
     float api = 1;
     float sub_api = 2;
