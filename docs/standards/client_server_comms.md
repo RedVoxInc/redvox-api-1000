@@ -13,13 +13,15 @@ __redvox.io__
 
 __Testing / Pre-Release__
 
-| Service                    | Endpoint                                               |
-|----------------------------|--------------------------------------------------------|
-| Data acquisition API M     | wss://milton.soest.hawaii.edu:8000/acquisition/v1000   |
-| Data acquisition API M E2E | wss://milton.soest.hawaii.edu:8000/acquisition/x/v1000 |
-| Synch exchanges v3         | wss://milton.soest.hawaii.edu:8000/synch/v3            |
-| Authentication             | https://milton.soest.hawaii.edu:8088/api/v2/auth       |
-| Auth Refresh               |https://milton.soest.hawaii.edu:8088/api/v1/auth/refresh|
+| Service                    | Endpoint                                                |
+|----------------------------|---------------------------------------------------------|
+| Data acquisition API M     | wss://milton.soest.hawaii.edu:8000/acquisition/v1000    |
+| Data acquisition API M E2E | wss://milton.soest.hawaii.edu:8000/acquisition/x/v1000  |
+| Synch exchanges v3         | wss://milton.soest.hawaii.edu:8000/synch/v3             |
+| Authentication             | https://milton.soest.hawaii.edu:8088/api/v2/auth        |
+| Auth Refresh               | https://milton.soest.hawaii.edu:8088/api/v1/auth/refresh|
+| C2 Station                 | wss://milton.soest.hawaii.edu:8000/cc_station           |
+| C2 Client                  | https://milton.soest.hawaii.edu:8088/cc_client          |
 
 
 #### Communicating with the data acquisition server
